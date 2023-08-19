@@ -48,7 +48,7 @@ export default function Nav() {
   const router = useRouter();
 
   return (
-    <Box as="nav" py="5" bgColor="#05010c" pos="sticky" top={0} zIndex="999">
+    <Box as="nav" py="5" bgColor="#05010c" pos="sticky" top={0} zIndex="9999">
       <Container maxW="1400px">
         <HStack justifyContent="space-between">
           <Logo />
