@@ -33,7 +33,7 @@ export const navItems = [
   {
     id: 4,
     label: "NFT Marketplace",
-    href: "/nft-marketplace",
+    href: "/marketplace",
   },
   // {
   //   id: 5,
