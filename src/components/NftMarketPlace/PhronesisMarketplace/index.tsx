@@ -90,7 +90,7 @@ export default function PhronesisMarketplace() {
                 </Text>
 
                 <Text
-                  as="h2"
+                  as="h1"
                   fontSize={{ base: "4xl", md: "6xl" }}
                   lineHeight={{ base: "40px", md: "60px" }}
                   fontWeight={500}
@@ -120,6 +120,7 @@ export default function PhronesisMarketplace() {
             <Box>
               <Fade right>
                 <Image
+                  className="infinit-move-1"
                   src="/assets/marketplace-img.png"
                   alt="marketplace-img"
                   width={307}

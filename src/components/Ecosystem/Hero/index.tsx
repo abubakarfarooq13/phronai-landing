@@ -62,7 +62,7 @@ export default function EcosystemHero() {
           <VStack
             w={{ base: "100%", lg: "50%" }}
             align={{ base: "center", lg: "start" }}
-            zIndex={99999}
+            zIndex={999}
           >
             <Fade left>
               <Text

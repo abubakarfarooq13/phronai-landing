@@ -23,7 +23,7 @@ export default defineStyleConfig({
         // bgColor: "transparent",
         // border: "1px solid #fff",
         // color: "#fff",
-        backgroundPosition: { base: "200%", lg: "150%" },
+        backgroundPosition: { base: "200%", lg: "170%" },
         color: "#fff",
         textDecor: "none",
       },
