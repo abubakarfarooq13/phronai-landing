@@ -11,6 +11,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import Logo from "../Logo";
 import { navItems } from ".";
 
@@ -22,6 +23,7 @@ interface MobileDrawerProps {
 
 export default function MobileDrawer(props: MobileDrawerProps) {
   const { isOpen, onClose, onOpen } = props;
+  const router = useRouter();
   return (
     <>
       <Drawer isOpen={isOpen} placement="right" onClose={onClose}>
@@ -44,8 +46,9 @@ export default function MobileDrawer(props: MobileDrawerProps) {
                   key={item.id}
                   href={item.href}
                   _hover={{
-                    color: "#c1c1c1",
+                    color: router.pathname === item.href ? "#fff" : "#6317fe",
                   }}
+                  color={router.pathname === item.href ? "#6317fe" : ""}
                 >
                   {item.label}
                 </Text>

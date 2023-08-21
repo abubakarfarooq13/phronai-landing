@@ -125,6 +125,7 @@ export default function EcosystemHero() {
                 width={lockImgWidth}
                 height={172}
                 alt="lock"
+                priority
               />
             </Fade>
           </Box>
@@ -135,6 +136,7 @@ export default function EcosystemHero() {
                 width={cubeImgWidth}
                 height={146}
                 alt="cube"
+                priority
               />
             </Fade>
           </Box>
@@ -145,6 +147,7 @@ export default function EcosystemHero() {
                 width={rocketImgWidth}
                 height={240}
                 alt="rocket"
+                priority
               />
             </Fade>
           </Box>
@@ -155,6 +158,7 @@ export default function EcosystemHero() {
                 width={fanImgWidth}
                 height={130}
                 alt="laptop-fan"
+                priority
               />
             </Fade>
           </Box>

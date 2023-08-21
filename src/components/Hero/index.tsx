@@ -50,6 +50,7 @@ export default function Hero() {
               height={349}
               alt="game-remote"
               className="infinit-move-1"
+              priority
             />
           </Fade>
 

@@ -7,7 +7,13 @@ export default function Logo() {
   return (
     <Box maxW="200px">
       <Link href="/">
-        <Image src="/assets/logo.png" width={253} height={44} alt="logo" />
+        <Image
+          src="/assets/logo.png"
+          width={253}
+          height={44}
+          alt="logo"
+          priority
+        />
       </Link>
     </Box>
   );
