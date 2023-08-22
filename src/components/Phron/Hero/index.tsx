@@ -51,7 +51,7 @@ export default function PhronesisMarketplace() {
           >
             <VStack
               zIndex={1}
-              pt={{ base: "40px", md: "200px" }}
+              pt={{ base: "40px", xl: "200px" }}
               w={{ base: "full", md: "50%" }}
               align="start"
             >
@@ -75,7 +75,7 @@ export default function PhronesisMarketplace() {
                   make a simple transaction, and so on.
                 </Text>
 
-                <Button
+                {/* <Button
                   as={Link}
                   href={`mailto:${PHRON_INFO_EMAIL}`}
                   variant="primary"
@@ -84,7 +84,7 @@ export default function PhronesisMarketplace() {
                   rounded="full"
                 >
                   Contact Us
-                </Button>
+                </Button> */}
               </Fade>
             </VStack>
 
@@ -96,7 +96,7 @@ export default function PhronesisMarketplace() {
               h={{ base: "full", md: "auto" }}
             /> */}
 
-            <Box>
+            <Box w={{ base: "full", md: "50%", xl: "60%" }}>
               <Fade right>
                 <Image
                   className="infinit-move-1"

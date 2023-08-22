@@ -16,14 +16,14 @@ import MobileDrawer from "./Drawer";
 
 export const navItems = [
   {
-    id: 1,
-    label: "Phron: The GamePad",
+    id: 2,
+    label: "Phronesis Chain",
     href: "/",
   },
   {
-    id: 2,
-    label: "Phronesis Chain",
-    href: "/chain",
+    id: 1,
+    label: "Phron: The GamePad",
+    href: "/gamepad",
   },
   {
     id: 3,

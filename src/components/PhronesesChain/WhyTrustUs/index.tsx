@@ -61,14 +61,14 @@ export default function WhyUs() {
                 less than
               </Text>
               <Text
-                background="linear-gradient(180deg, rgba(105,46,164,1) 0%, rgba(0,0,0,1) 94%)"
+                background="linear-gradient(180deg, rgba(105,46,164,1) 0%, rgba(0,0,0,1) 100%)"
                 backgroundClip="text"
                 fontSize={{ base: "7xl", md: "9xl" }}
                 lineHeight="114px"
                 fontWeight={700}
                 textAlign="center"
               >
-                1/6 $
+                0.00001 $
               </Text>
             </Fade>
           </VStack>
@@ -94,14 +94,14 @@ export default function WhyUs() {
               </Text>
               {/* </HStack> */}
               <Text
-                background="linear-gradient(180deg, rgba(105,46,164,1) 0%, rgba(0,0,0,1) 94%)"
+                background="linear-gradient(180deg, rgba(105,46,164,1) 0%, rgba(0,0,0,1) 100%)"
                 backgroundClip="text"
                 fontSize={{ base: "4xl", md: "7xl" }}
                 lineHeight={{ base: "50px", md: "114px" }}
                 fontWeight={500}
                 textAlign="center"
               >
-                30,000 TPS, 2 seconds
+                31,000+ TPS, 2 seconds
               </Text>
             </Fade>
           </VStack>

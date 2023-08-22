@@ -7,8 +7,10 @@ import {
   VStack,
   Grid,
   GridItem,
+  Link,
 } from "@chakra-ui/react";
 import Card from "./Card";
+import { PHRON_INFO_EMAIL } from "@/constant";
 const Fade = require("react-reveal/Fade");
 
 export default function PhronFeatures() {
@@ -73,9 +75,16 @@ export default function PhronFeatures() {
             </GridItem>
           </Grid>
 
-          {/* <Button variant="primary" px="8" py="5" rounded="full">
+          <Button
+            as={Link}
+            href={`mailto:${PHRON_INFO_EMAIL}`}
+            variant="primary"
+            px="8"
+            py="5"
+            rounded="full"
+          >
             Contact Us
-          </Button> */}
+          </Button>
         </VStack>
       </Container>
     </Box>
