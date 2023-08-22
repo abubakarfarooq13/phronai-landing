@@ -14,7 +14,13 @@ const Fade = require("react-reveal/Fade");
 export default function OurEcosystem() {
   return (
     <Box bgImage="/assets/blockchain-network-bg.jpg">
-      <Container id="ecosystem" maxW="1160px" py="100px">
+      <Container
+        id="ecosystem"
+        maxW="1160px"
+        pt={{ base: "100px", md: "0px" }}
+        mt={{ md: "-100px" }}
+        pb="100px"
+      >
         <VStack>
           <Fade top>
             <Text
