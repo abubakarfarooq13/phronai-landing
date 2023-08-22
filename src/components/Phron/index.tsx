@@ -15,8 +15,19 @@ export default function NftMarketPlace() {
         bgRepeat="no-repeat"
         bgPos="top"
         bgSize="cover"
+        pos="relative"
+        _after={{
+          content: `''`,
+          backgroundColor: "#000",
+          width: "100%",
+          height: "100%",
+          position: "absolute",
+          top: 0,
+          left: 0,
+          opacity: "0.5",
+        }}
       >
-        <Box transform="translateY(-150px)">
+        <Box transform="translateY(-150px)" pos="relative" zIndex="10">
           <PhronFeatures />
         </Box>
         <NodeCreation />

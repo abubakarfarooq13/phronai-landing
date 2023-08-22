@@ -18,6 +18,7 @@ export default function NodeCreation() {
       overflow="hidden"
       mt={{ base: "-150px", md: "0px" }}
       pb="100px"
+      zIndex="10"
     >
       <Container maxW="1160px">
         <VStack>
