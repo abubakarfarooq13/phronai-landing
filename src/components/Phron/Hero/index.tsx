@@ -63,7 +63,7 @@ export default function PhronesisMarketplace() {
                   PHRON: The Coin
                 </Text>
 
-                <Text textTransform="uppercase" mb="3">
+                <Text textTransform="uppercase" mb="3" fontWeight={300}>
                   Fastest EVM Layer 1 Blockchain in the World
                 </Text>
 
