@@ -94,6 +94,7 @@ export default function PhronesisMarketplace() {
                   alt="marketplace-img"
                   width={800}
                   height={800}
+                  priority
                 />
               </Fade>
             </Box>
