@@ -32,7 +32,13 @@ export default function NodeCreation() {
             >
               Node Creation
             </Text>
-            <Text maxW="700px" mx="auto" textAlign="center" mb="50px">
+            <Text
+              maxW="700px"
+              mx="auto"
+              textAlign="center"
+              mb="50px"
+              fontSize="lg"
+            >
               Creating a Node with PHRON allows you to take part on 50% of the
               profit generated from the revenue stream of the platform
             </Text>
