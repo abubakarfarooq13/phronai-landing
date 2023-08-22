@@ -3,6 +3,7 @@ export { default as CHome } from "./Home";
 export { default as Ecosystem } from "./Ecosystem";
 export { default as NftMarketPlace } from "./NftMarketPlace";
 export { default as PhronesesChain } from "./PhronesesChain";
+export { default as CPhron } from "./Phron";
 
 export { default as Hero } from "./Hero";
 

@@ -35,6 +35,11 @@ export const navItems = [
     label: "NFT Marketplace",
     href: "/marketplace",
   },
+  {
+    id: 5,
+    label: "PHRON",
+    href: "/phron",
+  },
   // {
   //   id: 5,
   //   label: "PHRON",
