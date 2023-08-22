@@ -39,10 +39,10 @@ export default function NodeCreation() {
 
           <Fade bottom>
             <Image
-              src="/assets/phron/bag.png"
-              width={440}
-              height={420}
-              alt="a bag"
+              src="/assets/phron/bag-with-coins.png"
+              width={400}
+              height={410}
+              alt="an open bag with coins"
               className="infinit-move-1"
             />
           </Fade>
