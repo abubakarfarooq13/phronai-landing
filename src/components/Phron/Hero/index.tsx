@@ -7,7 +7,10 @@ import {
   VStack,
   Text,
   Image as CImage,
+  Button,
+  Link,
 } from "@chakra-ui/react";
+import { PHRON_INFO_EMAIL } from "@/constant";
 
 const Fade = require("react-reveal/Fade");
 
@@ -72,9 +75,16 @@ export default function PhronesisMarketplace() {
                   make a simple transaction, and so on.
                 </Text>
 
-                {/* <Button variant="primary" px="8" py="4" rounded="full">
+                <Button
+                  as={Link}
+                  href={`mailto:${PHRON_INFO_EMAIL}`}
+                  variant="primary"
+                  px="8"
+                  py="4"
+                  rounded="full"
+                >
                   Contact Us
-                </Button> */}
+                </Button>
               </Fade>
             </VStack>
 

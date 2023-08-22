@@ -11,10 +11,12 @@ import {
   Grid,
   GridItem,
   Image as CImage,
+  Link,
 } from "@chakra-ui/react";
 import { BsShieldFillCheck } from "react-icons/bs";
 import { AiTwotoneThunderbolt } from "react-icons/ai";
 import { ImSun } from "react-icons/im";
+import { PHRON_INFO_EMAIL } from "@/constant";
 
 const Fade = require("react-reveal/Fade");
 
@@ -85,6 +87,8 @@ export default function WhyTrustUs() {
                   rounded="full"
                   px="8"
                   py="4"
+                  as={Link}
+                  href={`mailto:${PHRON_INFO_EMAIL}`}
                 >
                   Contact Us
                 </Button>
