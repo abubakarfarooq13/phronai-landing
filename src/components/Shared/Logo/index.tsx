@@ -1,19 +1,12 @@
 import React from "react";
-import { Box } from "@chakra-ui/react";
-import Image from "next/image";
+import { Box, Image as CImage } from "@chakra-ui/react";
 import Link from "next/link";
 
 export default function Logo() {
   return (
-    <Box maxW="200px">
+    <Box maxW={{ base: "160px", md: "250px" }}>
       <Link href="/">
-        <Image
-          src="/assets/logo.png"
-          width={253}
-          height={44}
-          alt="logo"
-          priority
-        />
+        <CImage src="/assets/logo.svg" alt="logo" w="full" />
       </Link>
     </Box>
   );

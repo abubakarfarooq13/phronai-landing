@@ -53,15 +53,28 @@ export default function MobileDrawer(props: MobileDrawerProps) {
                   {item.label}
                 </Text>
               ))}
-              <Button
-                w="full"
-                variant="primary"
-                borderRadius="full"
-                px="8"
-                py="5"
-              >
-                Whitepaper
-              </Button>
+              <VStack w="full" mt="30px" spacing="5">
+                <Button
+                  as={Link}
+                  href="/phron"
+                  variant="primary-purple"
+                  borderRadius="full"
+                  px="8"
+                  py="5"
+                  w="full"
+                >
+                  PHRON
+                </Button>
+                <Button
+                  variant="primary"
+                  borderRadius="full"
+                  px="8"
+                  py="5"
+                  w="full"
+                >
+                  Whitepaper
+                </Button>
+              </VStack>
             </VStack>
           </DrawerBody>
         </DrawerContent>

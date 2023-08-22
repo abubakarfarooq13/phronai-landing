@@ -15,16 +15,16 @@ import Image from "next/image";
 const Fade = require("react-reveal/Fade");
 
 export default function EcosystemHero() {
-  const lockImgWidth = useBreakpointValue({ base: 50, md: 95, "3xl": 155 });
-  const cubeImgWidth = useBreakpointValue({ base: 50, md: 100, "3xl": 135 });
-  const rocketImgWidth = useBreakpointValue({ base: 50, md: 95, "3xl": 125 });
-  const fanImgWidth = useBreakpointValue({ base: 50, md: 95, "3xl": 145 });
+  const lockImgWidth = useBreakpointValue({ base: 70, md: 95, "3xl": 155 });
+  const cubeImgWidth = useBreakpointValue({ base: 70, md: 100, "3xl": 135 });
+  const rocketImgWidth = useBreakpointValue({ base: 70, md: 95, "3xl": 125 });
+  const fanImgWidth = useBreakpointValue({ base: 70, md: 95, "3xl": 145 });
   return (
     <Box
-      // backgroundImage="/assets/hero-bg.png"
-      bgPos={{ base: "right", xl: "right", "3xl": "top" }}
-      bgSize={{ base: "contain", xl: "contain", "3xl": "cover" }}
-      minH="1000px"
+      backgroundImage={{ base: "/assets/header-background.jpg", md: "" }}
+      bgPos={{ base: "bottom", xl: "right", "3xl": "top" }}
+      bgSize="cover"
+      minH={{ base: "800px", md: "1000px" }}
       bgRepeat="no-repeat"
       pos="relative"
       overflow="hidden"
@@ -54,15 +54,80 @@ export default function EcosystemHero() {
         display={{ base: "none", xl: "flex" }}
       />
 
-      <Container maxW="1160px">
+      <Box
+        pos="relative"
+        backgroundImage="/assets/top-header-ball.png"
+        bgPos="center"
+        bgSize="cover"
+        h="400px"
+        display={{ base: "flex", md: "none" }}
+        mt="50px"
+      >
+        <Box
+          className="infinit-move-1"
+          pos="absolute"
+          top="10%"
+          left={{ base: "10%", sm: "30%" }}
+        >
+          <Fade>
+            <Image
+              src="/assets/lock.png"
+              width={lockImgWidth}
+              height={172}
+              alt="lock"
+              priority
+            />
+          </Fade>
+        </Box>
+        <Box pos="absolute" className="infinit-move-2" top="0" left="45%">
+          <Fade>
+            <Image
+              src="/assets/cube.png"
+              width={cubeImgWidth}
+              height={146}
+              alt="cube"
+              priority
+            />
+          </Fade>
+        </Box>
+        <Box
+          pos="absolute"
+          className="infinit-move-3"
+          right={{ base: "10%", sm: "30%" }}
+          top="20%"
+        >
+          <Fade>
+            <Image
+              src="/assets/rocket.png"
+              width={rocketImgWidth}
+              height={240}
+              alt="rocket"
+              priority
+            />
+          </Fade>
+        </Box>
+        <Box pos="absolute" className="infinit-move-4" bottom="40%" left="35%">
+          <Fade>
+            <Image
+              src="/assets/laptop-fan.png"
+              width={fanImgWidth}
+              height={130}
+              alt="laptop-fan"
+              priority
+            />
+          </Fade>
+        </Box>
+      </Box>
+
+      <Container maxW="1160px" my="50px">
         <Stack
           direction={{ base: "row" }}
-          pt={{ base: "400px", lg: "200px", "3xl": "400px" }}
+          pt={{ base: "0px", md: "400px", lg: "200px", "3xl": "400px" }}
         >
           <VStack
             w={{ base: "100%", lg: "50%" }}
             align={{ base: "center", lg: "start" }}
-            zIndex={999}
+            zIndex={99}
           >
             <Fade left>
               <Text
@@ -117,7 +182,11 @@ export default function EcosystemHero() {
         w={{ base: "250%", md: "160%", xl: "full" }}
       >
         <Box pos="relative">
-          <CImage src="/assets/header-background-with-ball.jpg" />
+          <CImage
+            display={{ base: "none", md: "flex" }}
+            src="/assets/header-background-with-ball.jpg"
+          />
+
           <Box className="infinit-move-1" pos="absolute" top="40%" left="38%">
             <Fade>
               <Image
@@ -128,6 +197,7 @@ export default function EcosystemHero() {
                 priority
               />
             </Fade>
+            C C
           </Box>
           <Box pos="absolute" top="36%" right="47%" className="infinit-move-2">
             <Fade>

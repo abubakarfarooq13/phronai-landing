@@ -47,15 +47,30 @@ export default function PhronesisMarketplace() {
   );
 
   return (
-    <Box id="nft-marketplace" pos="relative" overflow="hidden">
+    <Box
+      id="nft-marketplace"
+      pos="relative"
+      overflow="hidden"
+      _after={{
+        content: `''`,
+        pos: "absolute",
+        width: "100%",
+        height: "100%",
+        backgroundColor: "#000",
+        top: "0px",
+        left: "0px",
+        opacity: ".5",
+        displace: { base: "block", lg: "none" },
+      }}
+    >
       <CImage
         src="/assets/marketplace-bg-shadow.png"
         pos="absolute"
         top={{ base: "-300px", md: "0px" }}
-        left={{ base: "0", md: "0px" }}
+        left={{ base: "0px", md: "0px" }}
         h={{ base: "full", md: "auto" }}
         zIndex="1"
-        // display={{ base: "none", lg: "block" }}
+        display={{ base: "none", lg: "block" }}
       />
       <Box
         bgImage="/assets/marketplace-bg.png"
@@ -67,13 +82,14 @@ export default function PhronesisMarketplace() {
         <Container maxW="1160px">
           <Stack
             direction={{ base: "column", md: "row" }}
-            py="100px"
+            pt={{ base: "50px", md: "100px" }}
+            pb="100px"
             justifyContent="space-between"
             spacing="20"
           >
             <VStack
               zIndex={1}
-              pt={{ md: "100px" }}
+              pt={{ lg: "100px" }}
               w={{ base: "full", md: "50%" }}
               align="start"
               spacing="6"
@@ -117,7 +133,7 @@ export default function PhronesisMarketplace() {
               h={{ base: "full", md: "auto" }}
             /> */}
 
-            <Box>
+            <Box zIndex="1">
               <Fade right>
                 <Image
                   className="infinit-move-1"

@@ -52,8 +52,8 @@ export default function WhyTrustUs() {
                     style={{
                       position: "absolute",
                       zIndex: -1,
-                      top: "0px",
-                      left: "0px",
+                      bottom: "-60px",
+                      left: "60px",
                     }}
                   />
                   <Image

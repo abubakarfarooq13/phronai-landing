@@ -4,13 +4,10 @@ import {
   Box,
   Button,
   Container,
-  HStack,
   Stack,
   VStack,
   Text,
   Image as CImage,
-  Grid,
-  GridItem,
 } from "@chakra-ui/react";
 
 const Fade = require("react-reveal/Fade");
@@ -29,7 +26,8 @@ export default function Chain() {
         <Container maxW="1160px">
           <Stack
             direction={{ base: "column", md: "row" }}
-            py="100px"
+            pt={{ base: "40px", md: "100px" }}
+            pb="100px"
             justifyContent="space-between"
             spacing="20"
           >

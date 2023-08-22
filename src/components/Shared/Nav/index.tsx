@@ -35,11 +35,11 @@ export const navItems = [
     label: "NFT Marketplace",
     href: "/marketplace",
   },
-  {
-    id: 5,
-    label: "PHRON",
-    href: "/phron",
-  },
+  // {
+  //   id: 5,
+  //   label: "PHRON",
+  //   href: "/phron",
+  // },
   // {
   //   id: 5,
   //   label: "PHRON",
@@ -78,15 +78,28 @@ export default function Nav() {
               </Link>
             ))}
 
-            <Button
-              ml="40px"
-              variant="primary"
-              borderRadius="full"
-              px="8"
-              py="5"
-            >
-              Whitepaper
-            </Button>
+            <HStack ml="40px" spacing="5">
+              <Button
+                as={Link}
+                href="/phron"
+                variant="primary-purple"
+                borderRadius="full"
+                px="8"
+                py="5"
+                w="full"
+              >
+                PHRON
+              </Button>
+              <Button
+                variant="primary"
+                borderRadius="full"
+                px="8"
+                py="5"
+                w="full"
+              >
+                Whitepaper
+              </Button>
+            </HStack>
           </HStack>
         </HStack>
       </Container>

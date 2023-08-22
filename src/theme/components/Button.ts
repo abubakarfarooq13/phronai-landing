@@ -7,6 +7,30 @@ export default defineStyleConfig({
   sizes: {},
   // Styles for the visual style variations
   variants: {
+    "primary-purple": {
+      // bgColor: "#fff",
+      // border: "1px solid #fff",
+      color: "#fff",
+      border: "3px solid #6317fe",
+      backgroundImage: "linear-gradient(30deg, #6317fe 80%, transparent 50%)",
+
+      backgroundSize: "500px",
+      backgroundRepeat: "no-repeat",
+      backgroundPosition: "0%",
+      transition: "all 500ms ease-in-out",
+      _hover: {
+        // backgroundPosition: "100%",
+        // bgColor: "transparent",
+        // border: "1px solid #fff",
+        // color: "#fff",
+        backgroundPosition: { base: "200%", lg: "170%" },
+        color: "#6317fe",
+        textDecor: "none",
+      },
+      _active: {
+        boxShadow: "0 0 5px 0 #6317fe inset, 0 0 10px 2px",
+      },
+    },
     primary: {
       // bgColor: "#fff",
       // border: "1px solid #fff",

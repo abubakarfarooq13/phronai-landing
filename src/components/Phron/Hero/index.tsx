@@ -48,7 +48,7 @@ export default function PhronesisMarketplace() {
           >
             <VStack
               zIndex={1}
-              pt={{ base: "100px", md: "200px" }}
+              pt={{ base: "40px", md: "200px" }}
               w={{ base: "full", md: "50%" }}
               align="start"
             >
@@ -58,9 +58,13 @@ export default function PhronesisMarketplace() {
                   fontSize={{ base: "4xl", md: "5xl" }}
                   lineHeight={{ base: "40px", md: "60px" }}
                   fontWeight={500}
-                  mb="3"
+                  mb="1"
                 >
                   PHRON: The Coin
+                </Text>
+
+                <Text textTransform="uppercase" mb="3">
+                  Fastest EVM Layer 1 Blockchain in the World
                 </Text>
 
                 <Text color="#c1c1c1">

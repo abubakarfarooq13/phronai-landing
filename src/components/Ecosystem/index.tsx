@@ -9,7 +9,7 @@ export default function CHome() {
     <>
       <Nav />
       <EcosystemHero />
-      <TopThirdPartyAPIs />
+      {/* <TopThirdPartyAPIs /> */}
       <OurEcosystem />
       <Footer />
     </>

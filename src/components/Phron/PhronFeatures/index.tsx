@@ -31,7 +31,7 @@ export default function PhronFeatures() {
               <Fade bottom>
                 <Card
                   imgSrc="/assets/phron/cart.png"
-                  title="Buy Games"
+                  title="Buy your favorite Games!"
                   description="Lorem Lorem"
                   buttonHref="#"
                   buttonText="Learn more"
@@ -46,7 +46,7 @@ export default function PhronFeatures() {
               <Fade bottom delay={300}>
                 <Card
                   imgSrc="/assets/phron/game-assets.png"
-                  title="Transfer in-game items"
+                  title="Enjoy your gameplay with the best items"
                   description="Lorem Lorem"
                   buttonHref="#"
                   buttonText="Learn more"
@@ -61,7 +61,7 @@ export default function PhronFeatures() {
               <Fade bottom delay={400}>
                 <Card
                   imgSrc="/assets/phron/robots-shaking-hands.png"
-                  title="Simple Transactions"
+                  title="Make simple transactions among your friends"
                   description="Lorem Lorem"
                   buttonHref="#"
                   buttonText="Learn more"
@@ -73,9 +73,9 @@ export default function PhronFeatures() {
             </GridItem>
           </Grid>
 
-          <Button variant="primary" px="8" py="5" rounded="full">
+          {/* <Button variant="primary" px="8" py="5" rounded="full">
             Contact Us
-          </Button>
+          </Button> */}
         </VStack>
       </Container>
     </Box>

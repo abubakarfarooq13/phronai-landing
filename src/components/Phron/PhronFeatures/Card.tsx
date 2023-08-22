@@ -35,7 +35,7 @@ export default function EcoSystemCard(props: EcoSystemCardProps) {
       px="5"
       pb="10"
       textAlign="center"
-      // className="infinit-move-hover"
+      className="infinit-move-hover"
       h="full"
       minH="310px"
     >
@@ -99,13 +99,13 @@ export default function EcoSystemCard(props: EcoSystemCardProps) {
           </>
         )}
       </Box>
-      <Text as="h3" fontSize="2xl" fontWeight={500}>
+      <Text as="h3" fontSize="xl" fontWeight={500} mt="3">
         {title}
       </Text>
-      <Text color="#c1c1c1" mb="6">
+      {/* <Text color="#c1c1c1" mb="6">
         {description}
-      </Text>
-      <Button
+      </Text> */}
+      {/* <Button
         as={Link}
         variant="primary-outline"
         rounded="full"
@@ -115,7 +115,7 @@ export default function EcoSystemCard(props: EcoSystemCardProps) {
         href={buttonHref}
       >
         {buttonText}
-      </Button>
+      </Button> */}
     </VStack>
   );
 }
