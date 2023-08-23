@@ -11,7 +11,7 @@ import {
 import { useRouter } from "next/router";
 import { Logo } from "../..";
 import { Link } from "@chakra-ui/next-js";
-import { GiHamburgerMenu } from "react-icons/gi";
+import { CgMenuRightAlt } from "react-icons/cg";
 import MobileDrawer from "./Drawer";
 
 export const navItems = [
@@ -61,7 +61,7 @@ export default function Nav() {
           <MobileDrawer isOpen={isOpen} onOpen={onOpen} onClose={onClose} />
 
           <Box display={{ base: "flex", xl: "none" }} onClick={onOpen}>
-            <GiHamburgerMenu size="30px" />
+            <CgMenuRightAlt size="30px" />
           </Box>
 
           <HStack spacing="30px" display={{ base: "none", xl: "flex" }}>

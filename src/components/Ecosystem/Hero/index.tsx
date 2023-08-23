@@ -15,19 +15,20 @@ import Image from "next/image";
 const Fade = require("react-reveal/Fade");
 
 export default function EcosystemHero() {
-  const lockImgWidth = useBreakpointValue({ base: 70, md: 95, "3xl": 155 });
-  const cubeImgWidth = useBreakpointValue({ base: 70, md: 100, "3xl": 135 });
-  const rocketImgWidth = useBreakpointValue({ base: 70, md: 95, "3xl": 125 });
-  const fanImgWidth = useBreakpointValue({ base: 70, md: 95, "3xl": 145 });
+  const lockImgWidth = useBreakpointValue({ base: 60, md: 95, "3xl": 155 });
+  const cubeImgWidth = useBreakpointValue({ base: 60, md: 100, "3xl": 135 });
+  const rocketImgWidth = useBreakpointValue({ base: 60, md: 95, "3xl": 125 });
+  const fanImgWidth = useBreakpointValue({ base: 60, md: 95, "3xl": 145 });
   return (
     <Box
-      backgroundImage={{ base: "/assets/header-background.jpg", md: "" }}
+      backgroundImage={{ base: "/assets/header-background-mobile.jpg", md: "" }}
       bgPos={{ base: "bottom", xl: "right", "3xl": "top" }}
       bgSize="cover"
       minH={{ base: "800px", md: "1000px" }}
       bgRepeat="no-repeat"
       pos="relative"
       overflow="hidden"
+      mt={{ base: "-130px", md: "0px" }}
     >
       <CImage
         src="/assets/header-left-shadow.png"
@@ -59,15 +60,16 @@ export default function EcosystemHero() {
         backgroundImage="/assets/top-header-ball.png"
         bgPos="center"
         bgSize="cover"
-        h="400px"
+        bgRepeat="no-repeat"
+        h={{ base: "280px", sm: "400px" }}
         display={{ base: "flex", md: "none" }}
-        mt="50px"
+        mt="200px"
       >
         <Box
           className="infinit-move-1"
           pos="absolute"
           top="10%"
-          left={{ base: "10%", sm: "30%" }}
+          left={{ base: "18%", sm: "30%" }}
         >
           <Fade>
             <Image
@@ -93,7 +95,7 @@ export default function EcosystemHero() {
         <Box
           pos="absolute"
           className="infinit-move-3"
-          right={{ base: "10%", sm: "30%" }}
+          right={{ base: "18%", sm: "30%" }}
           top="20%"
         >
           <Fade>
@@ -119,7 +121,7 @@ export default function EcosystemHero() {
         </Box>
       </Box>
 
-      <Container maxW="1160px" my="50px">
+      <Container maxW="1160px" mt="0px" mb="50px">
         <Stack
           direction={{ base: "row" }}
           pt={{ base: "0px", md: "400px", lg: "200px", "3xl": "400px" }}
@@ -132,9 +134,11 @@ export default function EcosystemHero() {
             <Fade left>
               <Text
                 textTransform="uppercase"
-                fontSize="lg"
+                fontSize={{ base: "xs", md: "sm", lg: "lg" }}
                 lineHeight="15px"
                 pl="1"
+                fontWeight={300}
+                letterSpacing="2px"
               >
                 Discover Our
               </Text>
@@ -149,21 +153,25 @@ export default function EcosystemHero() {
                 Phronesis <br /> Ecosystem
               </Text>
 
-              <Text pt="6" textAlign={{ base: "center", lg: "left" }}>
+              <Text
+                pt="3"
+                fontSize={{ base: "sm", md: "base" }}
+                textAlign={{ base: "center", lg: "left" }}
+              >
                 The best gadgets for the best Web 3.0 experience
               </Text>
 
               <Stack
                 direction={{ base: "column", lg: "row" }}
-                pt="8"
+                pt="3"
                 spacing="5"
                 w="full"
               >
                 <Button
                   w="full"
                   variant="primary"
-                  px="10"
-                  py="5"
+                  px={{ base: "7", md: "10" }}
+                  py={{ base: "2", md: "5" }}
                   rounded="full"
                 >
                   Learn more
@@ -197,7 +205,6 @@ export default function EcosystemHero() {
                 priority
               />
             </Fade>
-            C C
           </Box>
           <Box pos="absolute" top="36%" right="47%" className="infinit-move-2">
             <Fade>
