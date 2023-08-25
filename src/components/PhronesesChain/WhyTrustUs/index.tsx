@@ -61,7 +61,7 @@ export default function WhyUs() {
                 less than
               </Text>
               <Text
-                background="linear-gradient(180deg, rgba(105,46,164,1) 0%, rgba(0,0,0,1) 100%)"
+                background="linear-gradient(180deg, #8644c8 0%, #1f0935 100%)"
                 backgroundClip="text"
                 fontSize={{ base: "7xl", md: "9xl" }}
                 lineHeight="114px"
@@ -94,7 +94,7 @@ export default function WhyUs() {
               </Text>
               {/* </HStack> */}
               <Text
-                background="linear-gradient(180deg, rgba(105,46,164,1) 0%, rgba(0,0,0,1) 100%)"
+                background="linear-gradient(180deg, #8644c8 0%, #1f0935 100%)"
                 backgroundClip="text"
                 fontSize={{ base: "4xl", md: "7xl" }}
                 lineHeight={{ base: "50px", md: "114px" }}
@@ -118,7 +118,7 @@ export default function WhyUs() {
             >
               <GridItem>
                 <VStack
-                  backgroundImage="linear-gradient(148deg, rgba(41,20,82,1) 0%, rgba(0,0,0,1) 94%);"
+                  backgroundImage="linear-gradient(148deg, rgba(41,20,82,1) 0%, #1f0935 94%);"
                   rounded="27px"
                   border="3px solid #261250"
                   py="10"
@@ -142,7 +142,7 @@ export default function WhyUs() {
               </GridItem>
               <GridItem>
                 <VStack
-                  backgroundImage="linear-gradient(148deg, rgba(41,20,82,1) 0%, rgba(0,0,0,1) 94%);"
+                  backgroundImage="linear-gradient(148deg, rgba(41,20,82,1) 0%, #1f0935 94%);"
                   rounded="27px"
                   border="3px solid #261250"
                   py="10"
@@ -166,7 +166,7 @@ export default function WhyUs() {
               </GridItem>
               <GridItem>
                 <VStack
-                  backgroundImage="linear-gradient(148deg, rgba(41,20,82,1) 0%, rgba(0,0,0,1) 94%);"
+                  backgroundImage="linear-gradient(148deg, rgba(41,20,82,1) 0%, #1f0935 94%);"
                   rounded="27px"
                   border="3px solid #261250"
                   py="10"
