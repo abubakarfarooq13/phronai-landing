@@ -15,3 +15,4 @@ export { default as GameCommunities } from "./GameCommunities";
 export { default as Logo } from "./Shared/Logo";
 export { default as Nav } from "./Shared/Nav";
 export { default as Footer } from "./Shared/Footer";
+export { default as PageLoadingIndicator } from "./Shared/PageLoadingIndicator";

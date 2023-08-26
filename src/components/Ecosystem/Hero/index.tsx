@@ -24,7 +24,7 @@ export default function EcosystemHero() {
       backgroundImage={{ base: "/assets/header-background-mobile.jpg", md: "" }}
       bgPos={{ base: "bottom", xl: "right", "3xl": "top" }}
       bgSize="cover"
-      minH={{ base: "800px", md: "1000px" }}
+      minH={{ base: "800px", md: "1000px", "3xl": "1400px" }}
       bgRepeat="no-repeat"
       pos="relative"
       overflow="hidden"
@@ -33,8 +33,8 @@ export default function EcosystemHero() {
       <CImage
         src="/assets/header-left-shadow.png"
         pos="absolute"
-        left="0px"
-        display={{ base: "none", xl: "flex" }}
+        left={{ lg: "-200px", xl: "0px" }}
+        display={{ base: "none", lg: "flex" }}
       />
 
       <CImage
@@ -42,7 +42,7 @@ export default function EcosystemHero() {
         pos="absolute"
         top="0px"
         left="0px"
-        display={{ base: "none", xl: "flex" }}
+        display={{ base: "none", lg: "flex" }}
       />
 
       <CImage
@@ -52,7 +52,7 @@ export default function EcosystemHero() {
         left="0px"
         w="full"
         maxW="50%"
-        display={{ base: "none", xl: "flex" }}
+        display={{ base: "none", lg: "flex" }}
       />
 
       <Box
@@ -124,7 +124,7 @@ export default function EcosystemHero() {
       <Container maxW="1160px" mt="0px" mb="50px">
         <Stack
           direction={{ base: "row" }}
-          pt={{ base: "0px", md: "400px", lg: "200px", "3xl": "400px" }}
+          pt={{ base: "0px", md: "400px", lg: "200px", "3xl": "300px" }}
         >
           <VStack
             w={{ base: "100%", lg: "50%" }}
@@ -184,7 +184,8 @@ export default function EcosystemHero() {
 
       <Box
         pos="absolute"
-        top={{ base: "-150px", md: "-400px", lg: "-400px", "3xl": "-700px" }}
+        top="0"
+        // top={{ base: "-150px", md: "-400px", lg: "-400px", "3xl": "-700px" }}
         right={{ base: "-300px", md: "-250px", lg: "-450px", xl: "-300px" }}
         zIndex={-1}
         w={{ base: "250%", md: "160%", xl: "full" }}
@@ -192,10 +193,10 @@ export default function EcosystemHero() {
         <Box pos="relative">
           <CImage
             display={{ base: "none", md: "flex" }}
-            src="/assets/header-background-with-ball.jpg"
+            src="/assets/_header-background-with-ball.jpg"
           />
 
-          <Box className="infinit-move-1" pos="absolute" top="40%" left="38%">
+          <Box className="infinit-move-1" pos="absolute" top="16%" left="38%">
             <Fade>
               <Image
                 src="/assets/lock.png"
@@ -206,7 +207,7 @@ export default function EcosystemHero() {
               />
             </Fade>
           </Box>
-          <Box pos="absolute" top="36%" right="47%" className="infinit-move-2">
+          <Box pos="absolute" top="10%" right="47%" className="infinit-move-2">
             <Fade>
               <Image
                 src="/assets/cube.png"
@@ -217,7 +218,7 @@ export default function EcosystemHero() {
               />
             </Fade>
           </Box>
-          <Box pos="absolute" className="infinit-move-3" top="41%" right="38%">
+          <Box pos="absolute" className="infinit-move-3" top="16%" right="38%">
             <Fade>
               <Image
                 src="/assets/rocket.png"
@@ -228,7 +229,7 @@ export default function EcosystemHero() {
               />
             </Fade>
           </Box>
-          <Box pos="absolute" className="infinit-move-4" top="51%" right="50%">
+          <Box pos="absolute" className="infinit-move-4" top="30%" right="50%">
             <Fade>
               <Image
                 src="/assets/laptop-fan.png"

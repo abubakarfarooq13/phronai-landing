@@ -34,7 +34,7 @@ export default function Home() {
         <title>Phronesis Chain</title>
         <meta
           name="description"
-          content="By applying AI statistical algorithms, Phronesis Chain provides the fastest Layer 1 Blockchain with the best Web 3.0 infrastructure game developers."
+          content="By applying AI statistical algorithms, Phronesis Chain provides the fastest Layer 1 Blockchain with the best Web 3.0 infrastructure for game developers"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/assets/favicon.png" />

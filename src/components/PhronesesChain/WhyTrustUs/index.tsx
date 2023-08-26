@@ -54,7 +54,7 @@ export default function WhyUs() {
                   height={10}
                 />
                 <Text fontSize="2xl" lineHeight="10px">
-                  Low cost, forever:
+                  Low cost, forever
                 </Text>
               </HStack>
               <Text fontSize="sm" color="#777">
@@ -90,7 +90,7 @@ export default function WhyUs() {
                     marginRight: "10px",
                   }}
                 />
-                <Text as="span">Faster than ever before:</Text>
+                <Text as="span">Faster than ever before</Text>
               </Text>
               {/* </HStack> */}
               <Text
@@ -101,7 +101,7 @@ export default function WhyUs() {
                 fontWeight={500}
                 textAlign="center"
               >
-                31,000+ TPS, 2 seconds
+                31,000+ TPS, 0.9 seconds
               </Text>
             </Fade>
           </VStack>
@@ -132,7 +132,7 @@ export default function WhyUs() {
                       <BsShieldFillCheck />
                     </Box>
                     <Text fontSize="2xl" lineHeight="28px" textAlign="center">
-                      Making security our priority:
+                      Making security our priority
                     </Text>
                   </HStack>
                   <Text color="#c1c1c1" fontSize="sm" textAlign="center">
@@ -156,7 +156,7 @@ export default function WhyUs() {
                       <AiTwotoneThunderbolt />
                     </Box>
                     <Text fontSize="2xl" lineHeight="28px" textAlign="center">
-                      Lightning-fast like transfers:
+                      Transactions: Faster than ever
                     </Text>
                   </HStack>
                   <Text color="#c1c1c1" textAlign="center">
@@ -179,7 +179,7 @@ export default function WhyUs() {
                       <ImSun />
                     </Box>
                     <Text fontSize="2xl" lineHeight="28px" textAlign="center">
-                      Decentralized and unstoppable:
+                      Decentralized and unstoppable
                     </Text>
                   </HStack>
                   <Text color="#c1c1c1" textAlign="center">

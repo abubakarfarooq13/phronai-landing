@@ -62,7 +62,7 @@ export default function Chain() {
                 <Text color="#c1c1c1">
                   By applying AI statistical algorithms, Phronesis Chain
                   provides the fastest Layer 1 Blockchain with the best Web 3.0
-                  infrastructure game developers.
+                  infrastructure for game developers.
                 </Text>
 
                 <Button variant="primary" px="8" py="4" rounded="full">
