@@ -161,7 +161,7 @@ export default function EcosystemHero() {
                 The best gadgets for the best Web 3.0 experience
               </Text>
 
-              <Stack
+              {/* <Stack
                 direction={{ base: "column", lg: "row" }}
                 pt="3"
                 spacing="5"
@@ -176,7 +176,7 @@ export default function EcosystemHero() {
                 >
                   Learn more
                 </Button>
-              </Stack>
+              </Stack> */}
             </Fade>
           </VStack>
         </Stack>
