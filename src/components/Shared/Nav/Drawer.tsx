@@ -9,6 +9,7 @@ import {
   Button,
   VStack,
   Text,
+  Link as CLink,
 } from "@chakra-ui/react";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -66,6 +67,9 @@ export default function MobileDrawer(props: MobileDrawerProps) {
                   PHRON
                 </Button>
                 <Button
+                  as={CLink}
+                  href="https://phron.ai/whitepaper.pdf"
+                  target="_blank"
                   variant="primary"
                   borderRadius="full"
                   px="8"

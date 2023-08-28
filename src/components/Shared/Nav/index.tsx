@@ -7,6 +7,7 @@ import {
   HStack,
   Container,
   useDisclosure,
+  Link as CLink,
 } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import { Logo } from "../..";
@@ -93,6 +94,9 @@ export default function Nav() {
                 PHRON
               </Button>
               <Button
+                as={CLink}
+                href="https://phron.ai/whitepaper.pdf"
+                target="_blank"
                 variant="primary"
                 borderRadius="full"
                 px="8"

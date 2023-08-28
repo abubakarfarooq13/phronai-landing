@@ -8,6 +8,7 @@ import {
   VStack,
   Text,
   Image as CImage,
+  Link as CLink,
 } from "@chakra-ui/react";
 
 const Fade = require("react-reveal/Fade");
@@ -66,6 +67,9 @@ export default function Chain() {
                 </Text>
 
                 <Button
+                  as={CLink}
+                  href="https://phron.ai/whitepaper.pdf"
+                  target="_blank"
                   variant="primary"
                   px="8"
                   py="4"
