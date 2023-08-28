@@ -17,14 +17,14 @@ export default function OurEcosystem() {
       <Container
         id="ecosystem"
         maxW="1160px"
-        pt={{ base: "100px", md: "0px" }}
-        mt={{
-          md: "-100px",
-          lg: "-300px",
-          xl: "-250px",
-          "3xl": "-600px",
-          "4xl": "-400px",
-        }}
+        pt="100px"
+        // mt={{
+        //   md: "-100px",
+        //   lg: "-300px",
+        //   xl: "-250px",
+        //   "3xl": "-600px",
+        //   "4xl": "-400px",
+        // }}
         pb="100px"
       >
         <VStack>

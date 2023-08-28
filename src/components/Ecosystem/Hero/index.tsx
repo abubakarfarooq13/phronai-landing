@@ -24,8 +24,10 @@ export default function EcosystemHero() {
       backgroundImage={{ base: "/assets/header-background-mobile.jpg", md: "" }}
       bgPos={{ base: "bottom", xl: "right", "3xl": "top" }}
       bgSize="cover"
-      minH={{ base: "800px", md: "1000px", "3xl": "1400px" }}
+      // minH="70vh"
+      // minH={{ base: "800px", md: "1000px", "3xl": "1400px", "4xl": "1600px" }}
       bgRepeat="no-repeat"
+      pb={{ base: "100px", md: "300px", "2660px": "500px", "3400px": "700px" }}
       pos="relative"
       overflow="hidden"
       mt={{ base: "-130px", md: "0px" }}
@@ -34,7 +36,7 @@ export default function EcosystemHero() {
         src="/assets/header-left-shadow.png"
         pos="absolute"
         left={{ lg: "-200px", xl: "0px" }}
-        display={{ base: "none", lg: "flex" }}
+        display={{ base: "none", lg: "flex", "3400px": "none" }}
       />
 
       <CImage
@@ -186,7 +188,12 @@ export default function EcosystemHero() {
         pos="absolute"
         top="0"
         // top={{ base: "-150px", md: "-400px", lg: "-400px", "3xl": "-700px" }}
-        right={{ base: "-300px", md: "-250px", lg: "-450px", xl: "-300px" }}
+        right={{
+          base: "-300px",
+          md: "-250px",
+          lg: "-450px",
+          xl: "-300px",
+        }}
         zIndex={-1}
         w={{ base: "250%", md: "160%", xl: "full" }}
       >
