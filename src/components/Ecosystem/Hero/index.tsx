@@ -27,7 +27,7 @@ export default function EcosystemHero() {
       // minH="70vh"
       // minH={{ base: "800px", md: "1000px", "3xl": "1400px", "4xl": "1600px" }}
       bgRepeat="no-repeat"
-      pb={{ base: "100px", md: "300px", "2560px": "500px", "3400px": "700px" }}
+      pb={{ base: "100px", md: "300px", "2560px": "500px", "3400px": "800px" }}
       pos="relative"
       overflow="hidden"
       mt={{ base: "-130px", md: "0px" }}
@@ -192,7 +192,7 @@ export default function EcosystemHero() {
           base: "-300px",
           md: "-250px",
           lg: "-450px",
-          xl: "-300px",
+          xl: "-10%",
         }}
         zIndex={-1}
         w={{ base: "250%", md: "160%", xl: "full" }}

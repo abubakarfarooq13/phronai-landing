@@ -76,6 +76,7 @@ export default function PhronesisMarketplace() {
         bgImage="/assets/marketplace-bg.png"
         bgPos="right"
         bgRepeat="no-repeat"
+        bgSize={{ "2560px": "cover" }}
         pos="relative"
         id="phronesis-marketplace"
       >
