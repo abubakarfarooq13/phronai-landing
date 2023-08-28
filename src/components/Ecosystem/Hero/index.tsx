@@ -29,9 +29,13 @@ export default function EcosystemHero() {
       bgRepeat="no-repeat"
       pb={{
         base: "70px",
-        lg: "200px",
-        xl: "300px",
-        "2560px": "500px",
+        lg: "150px",
+        "1200px": "250px",
+        "1280px": "100px",
+        "2xl": "300px",
+        "3xl": "200px",
+        "4xl": "300px",
+        "2520px": "500px",
         "3400px": "800px",
       }}
       pos="relative"
