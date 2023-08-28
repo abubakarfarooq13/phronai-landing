@@ -15,7 +15,7 @@ import Image from "next/image";
 const Fade = require("react-reveal/Fade");
 
 export default function EcosystemHero() {
-  const lockImgWidth = useBreakpointValue({ base: 60, md: 95, "3xl": 155 });
+  const lockImgWidth = useBreakpointValue({ base: 60, md: 95, "3xl": 135 });
   const cubeImgWidth = useBreakpointValue({ base: 60, md: 100, "3xl": 135 });
   const rocketImgWidth = useBreakpointValue({ base: 60, md: 95, "3xl": 125 });
   const fanImgWidth = useBreakpointValue({ base: 60, md: 95, "3xl": 145 });
