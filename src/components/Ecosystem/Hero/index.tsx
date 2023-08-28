@@ -15,22 +15,28 @@ import Image from "next/image";
 const Fade = require("react-reveal/Fade");
 
 export default function EcosystemHero() {
-  const lockImgWidth = useBreakpointValue({ base: 60, md: 95, "3xl": 135 });
-  const cubeImgWidth = useBreakpointValue({ base: 60, md: 100, "3xl": 135 });
-  const rocketImgWidth = useBreakpointValue({ base: 60, md: 95, "3xl": 125 });
-  const fanImgWidth = useBreakpointValue({ base: 60, md: 95, "3xl": 145 });
+  const lockImgWidth = useBreakpointValue({ base: 60, sm: 95, "3xl": 135 });
+  const cubeImgWidth = useBreakpointValue({ base: 60, sm: 100, "3xl": 135 });
+  const rocketImgWidth = useBreakpointValue({ base: 60, sm: 95, "3xl": 125 });
+  const fanImgWidth = useBreakpointValue({ base: 60, sm: 95, "3xl": 145 });
   return (
     <Box
-      backgroundImage={{ base: "/assets/header-background-mobile.jpg", md: "" }}
+      backgroundImage={{ base: "/assets/header-background-mobile.jpg", lg: "" }}
       bgPos={{ base: "bottom", xl: "right", "3xl": "top" }}
       bgSize="cover"
       // minH="70vh"
       // minH={{ base: "800px", md: "1000px", "3xl": "1400px", "4xl": "1600px" }}
       bgRepeat="no-repeat"
-      pb={{ base: "100px", md: "300px", "2560px": "500px", "3400px": "800px" }}
+      pb={{
+        base: "70px",
+        lg: "200px",
+        xl: "300px",
+        "2560px": "500px",
+        "3400px": "800px",
+      }}
       pos="relative"
       overflow="hidden"
-      mt={{ base: "-130px", md: "0px" }}
+      mt={{ base: "-130px", lg: "0px" }}
     >
       <CImage
         src="/assets/header-left-shadow.png"
@@ -63,9 +69,9 @@ export default function EcosystemHero() {
         bgPos="center"
         bgSize="cover"
         bgRepeat="no-repeat"
-        h={{ base: "280px", sm: "400px" }}
-        display={{ base: "flex", md: "none" }}
-        mt="200px"
+        h={{ base: "280px", sm: "400px", md: "600px" }}
+        display={{ base: "flex", lg: "none" }}
+        mt={{ base: "200px" }}
       >
         <Box
           className="infinit-move-1"
@@ -128,7 +134,7 @@ export default function EcosystemHero() {
           direction={{ base: "row" }}
           pt={{
             base: "0px",
-            md: "400px",
+            // md: "400px",
             lg: "200px",
             "3xl": "300px",
           }}

@@ -17,7 +17,7 @@ export default function OurEcosystem() {
       <Container
         id="ecosystem"
         maxW="1160px"
-        pt="100px"
+        pt={{ base: "70px", md: "100px" }}
         // mt={{
         //   md: "-100px",
         //   lg: "-300px",
