@@ -73,7 +73,7 @@ export default function EcosystemHero() {
         bgPos="center"
         bgSize="cover"
         bgRepeat="no-repeat"
-        h={{ base: "280px", sm: "400px", md: "600px" }}
+        h={{ base: "280px", sm: "400px", md: "550px" }}
         display={{ base: "flex", lg: "none" }}
         mt={{ base: "200px" }}
       >
