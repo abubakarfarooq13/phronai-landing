@@ -31,8 +31,8 @@ export default function OurEcosystem() {
           <Fade top>
             <Text
               as="h2"
-              fontSize={{ base: "4xl", md: "5xl" }}
-              lineHeight={{ base: "50px", md: "60px" }}
+              fontSize={{ base: "4xl", md: "5xl", "3000px": "6xl" }}
+              lineHeight={{ base: "50px", md: "60px", "3000px": "70px" }}
               fontWeight={500}
               textAlign="center"
             >

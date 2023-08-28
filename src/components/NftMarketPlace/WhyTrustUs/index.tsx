@@ -74,10 +74,15 @@ export default function WhyTrustUs() {
               pr={{ md: "100px" }}
             >
               <Fade right>
-                <Text as="h3" fontWeight={500} fontSize="3xl">
+                <Text
+                  as="h3"
+                  fontWeight={500}
+                  fontSize={{ base: "3xl", "3000px": "4xl" }}
+                  lineHeight="40px"
+                >
                   As decentralized as possible
                 </Text>
-                <Text color="#777">
+                <Text color="#777" fontSize={{ base: "base", "3000px": "xl" }}>
                   With your NFT, you decide. Trade them without complications in
                   a safe environment.
                 </Text>
@@ -109,11 +114,16 @@ export default function WhyTrustUs() {
               pr={{ md: "100px" }}
             >
               <Fade left>
-                <Text as="h3" fontWeight={500} fontSize="3xl" lineHeight="40px">
+                <Text
+                  as="h3"
+                  fontWeight={500}
+                  fontSize={{ base: "3xl", "3000px": "4xl" }}
+                  lineHeight="40px"
+                >
                   It&apos;s all about the
                   <br /> smart contract
                 </Text>
-                <Text color="#777">
+                <Text color="#777" fontSize={{ base: "base", "3000px": "xl" }}>
                   NFTs will be the key to games, and the method for in-game
                   items. Always yours, until you decide to change.
                 </Text>

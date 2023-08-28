@@ -42,7 +42,7 @@ export default function Chain() {
                 <Text
                   textTransform="uppercase"
                   fontSize="xs"
-                  lineHeight="15px"
+                  lineHeight={{ base: "15px", "3000px": "20px" }}
                   pl="1"
                   fontWeight={300}
                 >
@@ -51,21 +51,27 @@ export default function Chain() {
 
                 <Text
                   as="h1"
-                  fontSize={{ base: "4xl", md: "6xl" }}
-                  lineHeight={{ base: "40px", md: "60px" }}
+                  fontSize={{ base: "4xl", md: "6xl", "3000px": "7xl" }}
+                  lineHeight={{ base: "40px", md: "60px", "3000px": "70px" }}
                   fontWeight={500}
                 >
                   Phronesis <br />
                   Chain
                 </Text>
 
-                <Text color="#c1c1c1">
+                <Text color="#c1c1c1" fontSize={{ "3000px": "20px" }}>
                   By applying AI statistical algorithms, Phronesis Chain
                   provides the fastest Layer 1 Blockchain with the best Web 3.0
                   infrastructure for game developers.
                 </Text>
 
-                <Button variant="primary" px="8" py="4" rounded="full">
+                <Button
+                  variant="primary"
+                  px="8"
+                  py="4"
+                  rounded="full"
+                  fontSize={{ "3000px": "lg" }}
+                >
                   Check our Whitepaper
                 </Button>
               </Fade>

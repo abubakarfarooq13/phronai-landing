@@ -21,7 +21,7 @@ export default function GameCommunities() {
         left="50%"
         transform="translateX(-50%)"
         textAlign="center"
-        maxW={{ base: "full", md: "500px", lg: "900px" }}
+        maxW={{ base: "full", md: "500px", lg: "900px", "3000px": "1200px" }}
         w="full"
         // spacing={{ base: "2", lg: "1" }}
         zIndex="99"
@@ -32,9 +32,14 @@ export default function GameCommunities() {
         </Fade> */}
         <Fade bottom>
           <Text
-            fontSize={{ base: "2xl", sm: "4xl", md: "5xl" }}
+            fontSize={{ base: "2xl", sm: "4xl", md: "5xl", "3000px": "7xl" }}
             fontWeight={500}
-            lineHeight={{ base: "30px", sm: "40px", md: "50px" }}
+            lineHeight={{
+              base: "30px",
+              sm: "40px",
+              md: "50px",
+              "3000px": "70px",
+            }}
           >
             Allowing game developers{" "}
             <Box as="br" display={{ base: "none", xl: "block" }} /> to Share

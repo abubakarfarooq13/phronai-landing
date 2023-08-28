@@ -135,7 +135,11 @@ export default function WhyUs() {
                       Making security our priority
                     </Text>
                   </HStack>
-                  <Text color="#c1c1c1" fontSize="sm" textAlign="center">
+                  <Text
+                    color="#c1c1c1"
+                    fontSize={{ base: "sm", "3000px": "lg" }}
+                    textAlign="center"
+                  >
                     We promise your assets are safe with us.
                   </Text>
                 </VStack>
@@ -159,7 +163,11 @@ export default function WhyUs() {
                       Transactions: Faster than ever
                     </Text>
                   </HStack>
-                  <Text color="#c1c1c1" textAlign="center">
+                  <Text
+                    color="#c1c1c1"
+                    fontSize={{ base: "sm", "3000px": "lg" }}
+                    textAlign="center"
+                  >
                     Processed within a human breath.
                   </Text>
                 </VStack>
@@ -182,7 +190,11 @@ export default function WhyUs() {
                       Decentralized and unstoppable
                     </Text>
                   </HStack>
-                  <Text color="#c1c1c1" textAlign="center">
+                  <Text
+                    color="#c1c1c1"
+                    fontSize={{ base: "sm", "3000px": "lg" }}
+                    textAlign="center"
+                  >
                     censorship resistant.
                   </Text>
                 </VStack>

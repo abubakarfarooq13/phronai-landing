@@ -40,7 +40,7 @@ export default function EcoSystemCard(props: EcoSystemCardProps) {
       maxW="360px"
       w="full"
       spacing="5"
-      h="350px"
+      minH="350px"
     >
       <Box mt="-80px" pos="relative" className={`infinit-move-${index}`}>
         <Box
@@ -60,7 +60,12 @@ export default function EcoSystemCard(props: EcoSystemCardProps) {
         />
         <Image src={imgSrc} alt="chain" width={imgWidth} height={imgHeight} />
       </Box>
-      <Text pt="5" color="#c1c1c1" mb="3" fontSize="lg">
+      <Text
+        pt="5"
+        color="#c1c1c1"
+        mb="3"
+        fontSize={{ base: "lg", "3000px": "22px" }}
+      >
         {description}
       </Text>
       <Text as="h3" fontSize="4xl" lineHeight="40px" fontWeight={500}>

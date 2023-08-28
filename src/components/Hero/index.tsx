@@ -55,11 +55,25 @@ export default function Hero() {
           </Fade>
 
           <Fade bottom>
-            <Text textTransform="uppercase">Welcome to</Text>
-            <Text as="h1" fontSize="5xl" lineHeight="50px" fontWeight={500}>
+            <Text
+              textTransform="uppercase"
+              fontSize={{ base: "base", "3000px": "2xl" }}
+            >
+              Welcome to
+            </Text>
+            <Text
+              as="h1"
+              fontSize={{ base: "5xl", "3000px": "7xl" }}
+              lineHeight={{ base: "50px", "3000px": "70px" }}
+              fontWeight={500}
+            >
               Phron: The GamePad
             </Text>
-            <Text color={{ base: "#fff", md: "#c1c1c1" }} mb="5" fontSize="xl">
+            <Text
+              color={{ base: "#fff", md: "#c1c1c1" }}
+              mb="5"
+              fontSize={{ base: "xl", "3000px": "2xl" }}
+            >
               Truly Decentralizing the Gaming Sector
             </Text>
             {/* <Button variant="primary" rounded="full" px="10" py="5">

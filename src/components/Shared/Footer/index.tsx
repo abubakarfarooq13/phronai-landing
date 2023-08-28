@@ -22,7 +22,11 @@ export default function Footer() {
         >
           <VStack align="start" spacing="5" zIndex={9999}>
             <Logo />
-            <Text color="#c1c1c1" display={{ base: "none", md: "flex" }}>
+            <Text
+              color="#c1c1c1"
+              display={{ base: "none", md: "flex" }}
+              fontSize={{ base: "base", "3000px": "xl" }}
+            >
               &copy; {new Date().getFullYear()} Phronesis
             </Text>
           </VStack>
@@ -35,6 +39,7 @@ export default function Footer() {
                 transition: "all .3s",
                 color: "rgba(105,46,164,1)",
               }}
+              fontSize={{ "3000px": "35px" }}
             >
               <AiFillMediumSquare />
             </Text>
@@ -46,6 +51,7 @@ export default function Footer() {
                 transition: "all .3s",
                 color: "rgba(105,46,164,1)",
               }}
+              fontSize={{ "3000px": "35px" }}
             >
               <AiOutlineTwitter />
             </Text>
@@ -58,6 +64,7 @@ export default function Footer() {
                 transition: "all .3s",
                 color: "rgba(105,46,164,1)",
               }}
+              fontSize={{ "3000px": "35px" }}
             >
               <FaTelegramPlane />
             </Text>
@@ -69,6 +76,7 @@ export default function Footer() {
                 transition: "all .3s",
                 color: "rgba(105,46,164,1)",
               }}
+              fontSize={{ "3000px": "35px" }}
             >
               <IoLogoDiscord />
             </Text>
@@ -77,7 +85,9 @@ export default function Footer() {
             <Text color="#c1c1c1" display={{ base: "flex", md: "none" }}>
               &copy; {new Date().getFullYear()} Phronesis
             </Text>
-            <Text color="#c1c1c1">All rights reserved.</Text>
+            <Text color="#c1c1c1" fontSize={{ base: "base", "3000px": "xl" }}>
+              All rights reserved.
+            </Text>
           </Box>
         </Stack>
       </Container>

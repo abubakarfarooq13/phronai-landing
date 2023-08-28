@@ -19,6 +19,7 @@ const theme = extendTheme({
     "3xl": "1550px",
     "4xl": "1700px",
     "2560px": "2560px",
+    "3000px": "3000px",
     "3400px": "3400px",
     "4000px": "4000px",
   },

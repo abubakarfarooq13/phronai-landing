@@ -82,6 +82,7 @@ export default function PhronFeatures() {
             px="8"
             py="5"
             rounded="full"
+            fontSize={{ "3000px": "lg" }}
           >
             Contact Us
           </Button>

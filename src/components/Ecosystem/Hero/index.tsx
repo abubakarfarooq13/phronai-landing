@@ -160,16 +160,16 @@ export default function EcosystemHero() {
               <Text
                 as="h1"
                 textAlign={{ base: "center", lg: "left" }}
-                fontSize={{ base: "5xl", md: "6xl" }}
+                fontSize={{ base: "5xl", md: "6xl", "3000px": "7xl" }}
                 fontWeight={500}
-                lineHeight={{ base: "50px", md: "60px" }}
+                lineHeight={{ base: "50px", md: "60px", "3000px": "70px" }}
               >
                 Phronesis <br /> Ecosystem
               </Text>
 
               <Text
                 pt="3"
-                fontSize={{ base: "sm", md: "base" }}
+                fontSize={{ base: "sm", md: "base", "3000px": "xl" }}
                 textAlign={{ base: "center", lg: "left" }}
               >
                 The best gadgets for the best Web 3.0 experience

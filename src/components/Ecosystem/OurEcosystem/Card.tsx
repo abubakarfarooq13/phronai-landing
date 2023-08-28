@@ -40,10 +40,10 @@ export default function EcoSystemCard(props: EcoSystemCardProps) {
       <Box mt="-80px" className={`infinit-move-${index}`}>
         <Image src={imgSrc} alt="chain" width={imgWidth} height={imgHeight} />
       </Box>
-      <Text as="h3" fontSize="2xl" fontWeight={500}>
+      <Text as="h3" fontSize={{ base: "2xl" }} fontWeight={500}>
         {title}
       </Text>
-      <Text color="#c1c1c1" mb="3">
+      <Text color="#c1c1c1" mb="3" fontSize={{ base: "base", "3000px": "xl" }}>
         {description}
       </Text>
       {/* <Button

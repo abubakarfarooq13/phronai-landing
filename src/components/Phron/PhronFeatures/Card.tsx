@@ -37,7 +37,7 @@ export default function EcoSystemCard(props: EcoSystemCardProps) {
       textAlign="center"
       className="infinit-move-hover"
       h="full"
-      minH="310px"
+      minH={{ base: "310px", "3000px": "340px" }}
     >
       <Box h="160px" pos="relative" className={`infinit-move-${index}`}>
         <Image
@@ -99,7 +99,12 @@ export default function EcoSystemCard(props: EcoSystemCardProps) {
           </>
         )}
       </Box>
-      <Text as="h3" fontSize="xl" fontWeight={500} mt="3">
+      <Text
+        as="h3"
+        fontSize={{ base: "xl", "3000px": "2xl" }}
+        fontWeight={500}
+        mt="3"
+      >
         {title}
       </Text>
       {/* <Text color="#c1c1c1" mb="6">

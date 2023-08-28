@@ -58,19 +58,27 @@ export default function PhronesisMarketplace() {
               <Fade left>
                 <Text
                   as="h1"
-                  fontSize={{ base: "4xl", md: "5xl" }}
-                  lineHeight={{ base: "40px", md: "60px" }}
+                  fontSize={{ base: "4xl", md: "5xl", "3000px": "7xl" }}
+                  lineHeight={{ base: "40px", md: "60px", "3000px": "70px" }}
                   fontWeight={500}
-                  mb="1"
+                  mb={{ base: "1", "3000px": "3" }}
                 >
                   PHRON: The Coin
                 </Text>
 
-                <Text textTransform="uppercase" mb="3" fontWeight={300}>
+                <Text
+                  textTransform="uppercase"
+                  mb="3"
+                  fontWeight={300}
+                  fontSize={{ "3000px": "lg" }}
+                >
                   Fastest EVM Layer 1 Blockchain in the World
                 </Text>
 
-                <Text color="#c1c1c1">
+                <Text
+                  color="#c1c1c1"
+                  fontSize={{ base: "base", "3000px": "xl" }}
+                >
                   The main fuel for Phron. Buy games, transfer In-game items,
                   make a simple transaction, and so on.
                 </Text>

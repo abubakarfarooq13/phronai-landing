@@ -73,6 +73,7 @@ export default function Nav() {
                   color: router.pathname === item.href ? "#fff" : "#6317fe",
                 }}
                 color={router.pathname === item.href ? "#6317fe" : ""}
+                fontSize={{ "3000px": "lg" }}
               >
                 {item.label}
               </Link>
@@ -87,6 +88,7 @@ export default function Nav() {
                 px="8"
                 py="5"
                 w="full"
+                fontSize={{ "3000px": "lg" }}
               >
                 PHRON
               </Button>
@@ -96,6 +98,7 @@ export default function Nav() {
                 px="8"
                 py="5"
                 w="full"
+                fontSize={{ "3000px": "lg" }}
               >
                 Whitepaper
               </Button>

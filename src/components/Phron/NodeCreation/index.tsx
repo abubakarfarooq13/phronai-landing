@@ -25,10 +25,10 @@ export default function NodeCreation() {
           <Fade bottom>
             <Text
               as="h2"
-              fontSize={{ base: "4xl", md: "6xl" }}
-              lineHeight={{ base: "40px", md: "60px" }}
+              fontSize={{ base: "4xl", md: "6xl", "3000px": "7xl" }}
+              lineHeight={{ base: "40px", md: "60px", "3000px": "70px" }}
               fontWeight={500}
-              mb="3"
+              mb={{ base: "3", "3000px": "5" }}
             >
               Node Creation
             </Text>
@@ -37,7 +37,7 @@ export default function NodeCreation() {
               mx="auto"
               textAlign="center"
               mb="50px"
-              fontSize="lg"
+              fontSize={{ base: "lg", "3000px": "xl" }}
             >
               Creating a Node with PHRON allows you to take part on 50% of the
               profit generated from the revenue stream of the platform

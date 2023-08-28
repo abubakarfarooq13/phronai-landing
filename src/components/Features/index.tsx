@@ -7,7 +7,7 @@ const Fade = require("react-reveal/Fade");
 
 export default function PhronPadDashboard() {
   return (
-    <Box pos="relative" mt="-50px" zIndex="10">
+    <Box pos="relative" mt={{ base: "-50px", "3000px": "-100px" }} zIndex="10">
       <Container maxW="1160px">
         <Stack
           direction={{ base: "column", md: "row" }}

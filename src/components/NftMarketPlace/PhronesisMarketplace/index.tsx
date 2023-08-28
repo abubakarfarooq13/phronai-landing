@@ -98,8 +98,8 @@ export default function PhronesisMarketplace() {
               <Fade left>
                 <Text
                   textTransform="uppercase"
-                  fontSize="xs"
-                  lineHeight="15px"
+                  fontSize={{ base: "xs", "3000px": "lg" }}
+                  lineHeight={{ base: "15px" }}
                   pl="1"
                   fontWeight={300}
                 >
@@ -108,14 +108,17 @@ export default function PhronesisMarketplace() {
 
                 <Text
                   as="h1"
-                  fontSize={{ base: "4xl", md: "6xl" }}
-                  lineHeight={{ base: "40px", md: "60px" }}
+                  fontSize={{ base: "4xl", md: "6xl", "3000px": "7xl" }}
+                  lineHeight={{ base: "40px", md: "60px", "3000px": "70px" }}
                   fontWeight={500}
                 >
                   NFT Marketplace
                 </Text>
 
-                <Text color="#c1c1c1">
+                <Text
+                  color="#c1c1c1"
+                  fontSize={{ base: "base", "3000px": "xl" }}
+                >
                   By owning your NFTs, you decide. Keep them, trade them, sell
                   them. Everything you want in the same place.
                 </Text>
