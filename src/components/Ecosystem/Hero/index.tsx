@@ -126,11 +126,23 @@ export default function EcosystemHero() {
       <Container maxW="1160px" mt="0px" mb="50px">
         <Stack
           direction={{ base: "row" }}
-          pt={{ base: "0px", md: "400px", lg: "200px", "3xl": "300px" }}
+          pt={{
+            base: "0px",
+            md: "400px",
+            lg: "200px",
+            "3xl": "300px",
+          }}
         >
           <VStack
             w={{ base: "100%", lg: "50%" }}
             align={{ base: "center", lg: "start" }}
+            h="100%"
+            pt={{
+              base: "0px",
+              "2560px": "100px",
+              "3400px": "250px",
+              "4000px": "300px",
+            }}
             zIndex={99}
           >
             <Fade left>

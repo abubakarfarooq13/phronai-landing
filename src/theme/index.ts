@@ -20,6 +20,7 @@ const theme = extendTheme({
     "4xl": "1700px",
     "2560px": "2560px",
     "3400px": "3400px",
+    "4000px": "4000px",
   },
   components: {
     Button,
