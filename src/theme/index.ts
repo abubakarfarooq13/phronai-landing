@@ -18,7 +18,7 @@ const theme = extendTheme({
   breakpoints: {
     "3xl": "1550px",
     "4xl": "1700px",
-    "2660px": "2660px",
+    "2560px": "2560px",
     "3400px": "3400px",
   },
   components: {
