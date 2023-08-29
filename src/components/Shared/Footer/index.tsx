@@ -10,7 +10,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <Box py="10" bgColor="#05010c">
+    <Box as="footer" py="10" bgColor="#05010c">
       <Container maxW="1400px">
         <Stack
           direction="row"
