@@ -82,7 +82,8 @@ export default function Hero() {
             <HStack fontSize="30px" spacing="5" color="#fff">
               <Text
                 as={Link}
-                href="#"
+                href="https://medium.com/@phron_ai"
+                target="_blank"
                 transition="all .3s"
                 _hover={{
                   transition: "all .3s",
@@ -93,7 +94,8 @@ export default function Hero() {
               </Text>
               <Text
                 as={Link}
-                href="#"
+                href="https://twitter.com/Phron_ai"
+                target="_blank"
                 transition="all .3s"
                 _hover={{
                   transition: "all .3s",

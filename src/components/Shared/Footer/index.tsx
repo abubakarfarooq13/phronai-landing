@@ -33,7 +33,8 @@ export default function Footer() {
           <HStack fontSize="30px" spacing="5" color="#c1c1c1">
             <Text
               as={Link}
-              href="#"
+              href="https://medium.com/@phron_ai"
+              target="_blank"
               transition="all .3s"
               _hover={{
                 transition: "all .3s",
@@ -45,7 +46,8 @@ export default function Footer() {
             </Text>
             <Text
               as={Link}
-              href="#"
+              href="https://twitter.com/Phron_ai"
+              target="_blank"
               transition="all .3s"
               _hover={{
                 transition: "all .3s",
