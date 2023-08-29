@@ -53,11 +53,10 @@ export default function Chain() {
                 <Text
                   as="h1"
                   fontSize={{ base: "4xl", md: "6xl", "3000px": "7xl" }}
-                  lineHeight={{ base: "40px", md: "60px", "3000px": "70px" }}
+                  lineHeight={{ base: "40px", md: "70px", "3000px": "70px" }}
                   fontWeight={500}
                 >
-                  Phronesis <br />
-                  Chain
+                  Phronesis: <br /> The Chain
                 </Text>
 
                 <Text color="#c1c1c1" fontSize={{ "3000px": "20px" }}>

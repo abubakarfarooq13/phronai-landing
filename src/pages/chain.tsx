@@ -1,6 +1,6 @@
 import Head from "next/head";
 import localFont from "next/font/local";
-import { CHome } from "@/components";
+import { CHome, Ecosystem, NftMarketPlace, PhronesesChain } from "@/components";
 
 const FormularFont = localFont({
   src: [
@@ -31,16 +31,16 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Phron: The GamePad</title>
+        <title>Phronesis: The Chain</title>
         <meta
           name="description"
-          content="Truly Decentralizing the Gaming Sector"
+          content="By applying AI statistical algorithms, Phronesis Chain provides the fastest Layer 1 Blockchain with the best Web 3.0 infrastructure for game developers"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/assets/favicon.png" />
       </Head>
       <main className={FormularFont.className}>
-        <CHome />
+        <PhronesesChain />
       </main>
     </>
   );

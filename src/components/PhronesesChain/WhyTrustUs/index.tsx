@@ -135,13 +135,13 @@ export default function WhyUs() {
                       Making security our priority
                     </Text>
                   </HStack>
-                  <Text
+                  {/* <Text
                     color="#c1c1c1"
                     fontSize={{ base: "sm", "3000px": "lg" }}
                     textAlign="center"
                   >
                     We promise your assets are safe with us.
-                  </Text>
+                  </Text> */}
                 </VStack>
               </GridItem>
               <GridItem>
@@ -163,13 +163,13 @@ export default function WhyUs() {
                       Transactions: Faster than ever
                     </Text>
                   </HStack>
-                  <Text
+                  {/* <Text
                     color="#c1c1c1"
                     fontSize={{ base: "sm", "3000px": "lg" }}
                     textAlign="center"
                   >
                     Processed within a human breath.
-                  </Text>
+                  </Text> */}
                 </VStack>
               </GridItem>
               <GridItem>
@@ -190,13 +190,13 @@ export default function WhyUs() {
                       Decentralized and unstoppable
                     </Text>
                   </HStack>
-                  <Text
-                    color="#c1c1c1"
+                  {/* <Text
+                    color="#c1c1c1" 
                     fontSize={{ base: "sm", "3000px": "lg" }}
                     textAlign="center"
                   >
                     censorship resistant.
-                  </Text>
+                  </Text> */}
                 </VStack>
               </GridItem>
             </Grid>
