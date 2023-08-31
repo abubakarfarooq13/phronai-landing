@@ -67,15 +67,6 @@ export default function PhronesisMarketplace() {
                 </Text>
 
                 <Text
-                  textTransform="uppercase"
-                  mb="3"
-                  fontWeight={300}
-                  fontSize={{ "3000px": "lg" }}
-                >
-                  Fastest EVM Layer 1 Blockchain in the World
-                </Text>
-
-                <Text
                   color="#c1c1c1"
                   fontSize={{ base: "base", "3000px": "xl" }}
                 >
