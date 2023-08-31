@@ -107,7 +107,8 @@ export default function Hero() {
 
               <Text
                 as={Link}
-                href="#"
+                href="https://t.me/+PY-fgOj0ymQ4Mjhk"
+                target="_blank"
                 transition="all .3s"
                 _hover={{
                   transition: "all .3s",
@@ -118,7 +119,8 @@ export default function Hero() {
               </Text>
               <Text
                 as={Link}
-                href="#"
+                href="https://discord.gg/bXUCxwnK"
+                target="_blank"
                 transition="all .3s"
                 _hover={{
                   transition: "all .3s",
