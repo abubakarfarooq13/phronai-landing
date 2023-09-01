@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { Box, Text, Button, VStack } from "@chakra-ui/react";
+import { Box, Text, Button, VStack, Image as CImage } from "@chakra-ui/react";
 import Link from "next/link";
 
 interface EcoSystemCardProps {
@@ -38,7 +38,47 @@ export default function EcoSystemCard(props: EcoSystemCardProps) {
       minH="310px"
     >
       <Box mt="-80px" className={`infinit-move-${index}`}>
-        <Image src={imgSrc} alt="chain" width={imgWidth} height={imgHeight} />
+        <Image src={imgSrc} alt="chain" width={imgWidth} height={imgHeight} />{" "}
+        {index === 1 ? (
+          <CImage
+            display={{ base: "none", sm: "block" }}
+            src="/assets/phron/arm-shadow.png"
+            pos="absolute"
+            top="-40px"
+            right="-40px"
+            zIndex={-1}
+          />
+        ) : index === 2 ? (
+          <>
+            <CImage
+              display={{ base: "none", sm: "block" }}
+              src="/assets/phron/cart-shadow.png"
+              pos="absolute"
+              top="-20px"
+              left="-40px"
+              zIndex={-1}
+            />
+            <CImage
+              display={{ base: "none", sm: "block" }}
+              src="/assets/phron/game-assets-shadow-bottom.png"
+              pos="absolute"
+              bottom="-20px"
+              left="0px"
+              zIndex={-1}
+            />
+          </>
+        ) : (
+          <>
+            <CImage
+              display={{ base: "none", sm: "block" }}
+              src="/assets/phron/cart-shadow.png"
+              pos="absolute"
+              top="-20px"
+              left="0px"
+              zIndex={-1}
+            />
+          </>
+        )}
       </Box>
       <Text as="h3" fontSize={{ base: "2xl" }} fontWeight={500}>
         {title}

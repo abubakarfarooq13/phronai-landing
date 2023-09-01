@@ -13,7 +13,7 @@ export default function NftMarketPlace() {
       <Box
         bgImage="/assets/phron/node-creation-bg.png"
         bgRepeat="no-repeat"
-        bgPos="top"
+        bgPos={{ base: "top", "4xl": "center" }}
         bgSize="cover"
         pos="relative"
         _after={{

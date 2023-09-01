@@ -34,6 +34,7 @@ export default function EcosystemHero() {
         "1280px": "100px",
         "2xl": "300px",
         "3xl": "200px",
+        "1400px": "200px",
         "4xl": "300px",
         "2520px": "500px",
         "3400px": "800px",

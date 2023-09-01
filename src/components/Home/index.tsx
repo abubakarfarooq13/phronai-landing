@@ -17,10 +17,11 @@ export default function CHome() {
       <Box
         bgImage="/assets/phrone-pad/gamepad-background.png"
         bgSize="cover"
-        bgPos="top"
+        bgPos={{ base: "center", "2340px": "center" }}
         bgRepeat="no-repeat"
         mt="-490px"
         pos="relative"
+        pb={{ "2340px": "600px" }}
       >
         <PhronPadDashboard />
       </Box>

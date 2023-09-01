@@ -18,16 +18,18 @@ export default function PhronPadDashboard() {
               // bgColor="#382253"
               rounded="3xl"
             />
-            <Image
-              src="/assets/phrone-pad/gamepad-dashboard.png"
-              width={1160}
-              height={1000}
-              alt="gamepad-dashboard"
-              style={{
-                zIndex: 1,
-                position: "relative",
-              }}
-            />
+            <Box mt={{ "2340px": "300px" }}>
+              <Image
+                src="/assets/phrone-pad/gamepad-dashboard.png"
+                width={1160}
+                height={1000}
+                alt="gamepad-dashboard"
+                style={{
+                  zIndex: 1,
+                  position: "relative",
+                }}
+              />
+            </Box>
           </Box>
         </Fade>
 

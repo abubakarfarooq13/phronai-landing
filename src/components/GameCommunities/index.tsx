@@ -6,9 +6,11 @@ const Fade = require("react-reveal/Fade");
 export default function GameCommunities() {
   return (
     <Box
-      bgImage="/assets/phrone-pad/_games-community-background.webp"
+      // bgImage="/assets/phrone-pad/_games-community-background.webp"
+
+      // bgImage="/assets/phrone-pad/game-community-image.png"
       bgPos="top"
-      bgSize={{ base: "cover", md: "contain", lg: "cover" }}
+      bgSize={{ base: "contain", md: "contain", lg: "contain" }}
       bgRepeat="no-repeat"
       mt={{ base: "50px", md: "-200px", lg: "-300px" }}
       pt={{ base: "100px", md: "0px" }}
@@ -56,21 +58,22 @@ export default function GameCommunities() {
         </Fade> */}
       </VStack>
 
-      <Fade>
+      {/* <Fade>
         <CImage
           src="/assets/phrone-pad/man-playing-game.png"
           alt="man-playing-game"
           w="full"
           pt={{ base: "0px", md: "200px", lg: "400px" }}
         />
-      </Fade>
+      </Fade> */}
 
-      <CImage
+      <CImage src="/assets/phrone-pad/game-community-image.jpg" w="full" />
+      {/* <CImage
         src="/assets/phrone-pad/games-community-shadow.png"
         pos="absolute"
         top="500px"
         w="full"
-      />
+      /> */}
     </Box>
   );
 }
