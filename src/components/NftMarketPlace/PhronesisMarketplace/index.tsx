@@ -63,7 +63,7 @@ export default function PhronesisMarketplace() {
         displace: { base: "block", lg: "none" },
       }}
     >
-      <CImage
+      {/* <CImage
         src="/assets/marketplace-bg-shadow.png"
         pos="absolute"
         top={{ base: "-300px", md: "0px" }}
@@ -71,10 +71,10 @@ export default function PhronesisMarketplace() {
         h={{ base: "full", md: "auto" }}
         zIndex="1"
         display={{ base: "none", lg: "block" }}
-      />
+      /> */}
       <Box
-        bgImage="/assets/marketplace-bg.png"
-        bgPos="right"
+        bgImage="/assets/nft-marketplace/bg-image.jpg"
+        bgPos={{ base: "center", md: "left" }}
         bgRepeat="no-repeat"
         bgSize={{ "2560px": "cover" }}
         pos="relative"

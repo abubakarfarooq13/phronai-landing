@@ -37,7 +37,7 @@ export default function Phron() {
           content="Fastest EVM Layer 1 Blockchain in the World. The main fuel for Phron. Buy games, transfer In-game items, make a simple transaction, and so on."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/assets/favicon.png" />
+        <link rel="icon" href="/assets/logo_black.png" />
       </Head>
       <main className={FormularFont.className}>
         <CPhron />

@@ -37,7 +37,7 @@ export default function Home() {
           content="By owning your NFTs, you decide. Keep them, trade them, sell them. Everything you want in the same place."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/assets/favicon.png" />
+        <link rel="icon" href="/assets/logo_black.png" />
       </Head>
       <main className={FormularFont.className}>
         <NftMarketPlace />

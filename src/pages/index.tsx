@@ -37,7 +37,7 @@ export default function Home() {
           content="Truly Decentralizing the Gaming Sector"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/assets/favicon.png" />
+        <link rel="icon" href="/assets/logo_black.png" />
       </Head>
       <main className={FormularFont.className}>
         <CHome />
