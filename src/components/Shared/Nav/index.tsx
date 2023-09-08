@@ -33,8 +33,8 @@ export const navItems = [
   },
   {
     id: 5,
-    label: "PHRON",
-    href: "/phron",
+    label: "Phron: The GamePad",
+    href: "/gamepad",
   },
   // {
   //   id: 5,
@@ -90,8 +90,9 @@ export default function Nav() {
                 py="5"
                 w="full"
                 fontSize={{ "3000px": "lg" }}
+                textTransform="uppercase"
               >
-                Phron: The GamePad
+                Phron
               </Button>
               <Button
                 as={CLink}
