@@ -34,7 +34,7 @@ export default function News() {
           display={{ base: "none", lg: "flex" }}
           zIndex={-1}
         />
-        <Box textAlign="center" mt="70px" mb="70px">
+        <Box textAlign="center" mt={{ base: "40px", md: "70px" }} mb="70px">
           <Text
             as="h1"
             mb="3"
