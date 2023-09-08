@@ -33,7 +33,7 @@ export default function ArticalCard(props: EcoSystemCardProps) {
       spacing="6"
       align="start"
     >
-      <Link href={buttonHref}>
+      <Link href={buttonHref} style={{ width: "100%" }}>
         <Image
           src={imageUrl}
           width={394}
@@ -41,6 +41,7 @@ export default function ArticalCard(props: EcoSystemCardProps) {
           alt="artical image"
           style={{
             borderRadius: "20px",
+            width: "100%",
           }}
         />
       </Link>
