@@ -66,13 +66,13 @@ export default function Nav() {
 
           <MobileDrawer isOpen={isOpen} onOpen={onOpen} onClose={onClose} />
 
-          <Box display={{ base: "flex", xl: "none" }} onClick={onOpen}>
+          <Box display={{ base: "flex", "1350px": "none" }} onClick={onOpen}>
             <CgMenuRightAlt size="30px" />
           </Box>
 
           <HStack
             spacing={{ base: "20px", "2xl": "30px" }}
-            display={{ base: "none", xl: "flex" }}
+            display={{ base: "none", "1350px": "flex" }}
           >
             {navItems.map((item) => (
               <Link
