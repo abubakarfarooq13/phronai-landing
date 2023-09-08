@@ -57,14 +57,15 @@ export default function MobileDrawer(props: MobileDrawerProps) {
               <VStack w="full" mt="30px" spacing="5">
                 <Button
                   as={Link}
-                  href="/phron"
+                  href="/gamepad"
                   variant="primary-purple"
                   borderRadius="full"
                   px="8"
                   py="5"
                   w="full"
+                  fontSize={{ "3000px": "lg" }}
                 >
-                  PHRON
+                  Phron: The GamePad
                 </Button>
                 <Button
                   as={CLink}

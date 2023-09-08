@@ -84,7 +84,7 @@ export default function OurEcosystem() {
                 <Card
                   imgSrc="/assets/our-ecosystem/3.png"
                   title="Phronesis Smart Wallet"
-                  description="An integrated wallet for all your gaming-related purchases."
+                  description="An integrated wallet for all your transactions and purchases."
                   buttonHref="#"
                   buttonText="Learn more"
                   imgHeight={235}

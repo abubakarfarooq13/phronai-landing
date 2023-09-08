@@ -17,14 +17,9 @@ import MobileDrawer from "./Drawer";
 
 export const navItems = [
   {
-    id: 1,
-    label: "Phron: The GamePad",
-    href: "/",
-  },
-  {
     id: 2,
     label: "Phronesis: The Chain",
-    href: "/chain",
+    href: "/",
   },
   {
     id: 3,
@@ -35,6 +30,11 @@ export const navItems = [
     id: 4,
     label: "NFT Marketplace",
     href: "/marketplace",
+  },
+  {
+    id: 5,
+    label: "PHRON",
+    href: "/phron",
   },
   // {
   //   id: 5,
@@ -83,15 +83,15 @@ export default function Nav() {
             <HStack ml="40px" spacing="5">
               <Button
                 as={Link}
-                href="/phron"
+                href="/gamepad"
                 variant="primary-purple"
                 borderRadius="full"
-                px="8"
+                px="10"
                 py="5"
                 w="full"
                 fontSize={{ "3000px": "lg" }}
               >
-                PHRON
+                Phron: The GamePad
               </Button>
               <Button
                 as={CLink}
