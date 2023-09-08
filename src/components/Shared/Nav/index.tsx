@@ -36,6 +36,11 @@ export const navItems = [
     label: "Phron: The GamePad",
     href: "/gamepad",
   },
+  {
+    id: 5,
+    label: "News",
+    href: "/news",
+  },
   // {
   //   id: 5,
   //   label: "PHRON",
@@ -65,7 +70,10 @@ export default function Nav() {
             <CgMenuRightAlt size="30px" />
           </Box>
 
-          <HStack spacing="30px" display={{ base: "none", xl: "flex" }}>
+          <HStack
+            spacing={{ base: "20px", "2xl": "30px" }}
+            display={{ base: "none", xl: "flex" }}
+          >
             {navItems.map((item) => (
               <Link
                 key={item.id}
@@ -83,7 +91,7 @@ export default function Nav() {
             <HStack ml="40px" spacing="5">
               <Button
                 as={Link}
-                href="/gamepad"
+                href="/phon"
                 variant="primary-purple"
                 borderRadius="full"
                 px="10"
