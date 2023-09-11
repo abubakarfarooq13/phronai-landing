@@ -1,6 +1,15 @@
 import React from "react";
 import Image from "next/image";
-import { Box, Text, Container, Grid, GridItem, VStack } from "@chakra-ui/react";
+import {
+  Box,
+  Text,
+  Container,
+  Grid,
+  WrapItem,
+  VStack,
+  Wrap,
+  HStack,
+} from "@chakra-ui/react";
 
 const Fade = require("react-reveal/Fade");
 
@@ -34,18 +43,14 @@ export default function PhronesisEquals() {
             Phronesis=
           </Text>
         </Fade>
-        <Grid
-          templateColumns={{
-            base: "repeat(1, 1fr)",
-            md: "repeat(2, 1fr)",
-            lg: "repeat(3, 1fr)",
-          }}
-          placeContent="space-between"
-          rowGap="50px"
+        <Wrap
+          w="full"
+          spacing={{ base: "28", md: "10" }}
+          justify={{ base: "center", lg: "space-between" }}
         >
-          <GridItem>
-            <Fade bottom>
-              <VStack spacing="10">
+          <WrapItem w="full" maxW={{ base: "full", md: "300px" }}>
+            <VStack spacing="10" w="full" justify="center" pos="relative">
+              <Fade bottom>
                 <Box maxH="210px" overflow="hidden">
                   <Image
                     src="/assets/chain/shophia.png"
@@ -60,14 +65,27 @@ export default function PhronesisEquals() {
                   fontSize="lg"
                   maxW="260px"
                 >
-                  Sophia: Artificial Intelligence StaAsAcal Consensus Mechanism
+                  Sophia: Artificial Intelligence Statistical Consensus
+                  Mechanism
                 </Text>
-              </VStack>
-            </Fade>
-          </GridItem>
-          <GridItem>
-            <Fade bottom delay={200}>
-              <VStack spacing="10">
+              </Fade>
+              <Box
+                pos="absolute"
+                right={{ base: "47%", md: "-50px" }}
+                top={{ base: "110%", md: "70px" }}
+              >
+                <Image
+                  src="/assets/chain/plus-icon.png"
+                  width="30"
+                  height="30"
+                  alt="plus icon"
+                />
+              </Box>
+            </VStack>
+          </WrapItem>
+          <WrapItem w="full" maxW={{ base: "full", md: "300px" }}>
+            <VStack spacing="10" w="full" justify="center" pos="relative">
+              <Fade bottom delay={200}>
                 <Box pt="5">
                   <Image
                     src="/assets/chain/protocol.png"
@@ -77,14 +95,27 @@ export default function PhronesisEquals() {
                   />
                 </Box>
                 <Text fontWeight={500} textAlign="center" fontSize="lg">
-                  Indirect <br /> - LTFM Protocol
+                  Indirect -<br /> LTFM Protocol
                 </Text>
-              </VStack>
-            </Fade>
-          </GridItem>
-          <GridItem>
-            <Fade bottom delay={300}>
-              <VStack spacing="10">
+              </Fade>
+              <Box
+                pos="absolute"
+                right={{ base: "47%", md: "-70px" }}
+                top={{ base: "110%", md: "70px" }}
+                display={{ base: "none", sm: "block", md: "none", lg: "block" }}
+              >
+                <Image
+                  src="/assets/chain/plus-icon.png"
+                  width="30"
+                  height="30"
+                  alt="plus icon"
+                />
+              </Box>
+            </VStack>
+          </WrapItem>
+          <WrapItem w="full" maxW={{ base: "full", md: "300px" }}>
+            <VStack spacing="10" w="full" justify="center" pos="relative">
+              <Fade bottom delay={300}>
                 <Box maxH="210px" overflow="hidden">
                   <Image
                     src="/assets/chain/hand.png"
@@ -96,10 +127,23 @@ export default function PhronesisEquals() {
                 <Text fontWeight={500} textAlign="center" fontSize="lg">
                   Lucky Transactions <br /> Protocol
                 </Text>
-              </VStack>
-            </Fade>
-          </GridItem>
-        </Grid>
+              </Fade>
+              <Box
+                pos="absolute"
+                right={{ base: "40%" }}
+                top="-70px"
+                display={{ base: "block", sm: "none", md: "block", lg: "none" }}
+              >
+                <Image
+                  src="/assets/chain/plus-icon.png"
+                  width="30"
+                  height="30"
+                  alt="plus icon"
+                />
+              </Box>
+            </VStack>
+          </WrapItem>
+        </Wrap>
       </Container>
     </Box>
   );

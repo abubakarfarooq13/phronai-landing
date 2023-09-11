@@ -9,8 +9,9 @@ import {
   Button,
   HStack,
   Grid,
-  GridItem,
+  WrapItem,
   Image as CImage,
+  Wrap,
 } from "@chakra-ui/react";
 import { BsShieldFillCheck } from "react-icons/bs";
 import { AiTwotoneThunderbolt } from "react-icons/ai";
@@ -107,16 +108,8 @@ export default function WhyUs() {
           </VStack>
 
           <Fade bottom>
-            <Grid
-              templateColumns={{
-                base: "repeat(1, 1fr)",
-                md: "repeat(2, 1fr)",
-                lg: "repeat(3, 1fr)",
-              }}
-              gap="10"
-              mt="10"
-            >
-              <GridItem>
+            <Wrap w="full" spacing="5" justify={{ base: "center" }}>
+              <WrapItem w="full" maxW={{ base: "full", md: "340px" }}>
                 <VStack
                   backgroundImage="linear-gradient(148deg, rgba(41,20,82,1) 0%, #1f0935 94%);"
                   rounded="27px"
@@ -143,8 +136,8 @@ export default function WhyUs() {
                     We promise your assets are safe with us.
                   </Text> */}
                 </VStack>
-              </GridItem>
-              <GridItem>
+              </WrapItem>
+              <WrapItem w="full" maxW={{ base: "full", md: "340px" }}>
                 <VStack
                   backgroundImage="linear-gradient(148deg, rgba(41,20,82,1) 0%, #1f0935 94%);"
                   rounded="27px"
@@ -171,8 +164,8 @@ export default function WhyUs() {
                     Processed within a human breath.
                   </Text> */}
                 </VStack>
-              </GridItem>
-              <GridItem>
+              </WrapItem>
+              <WrapItem w="full" maxW={{ base: "full", md: "340px" }}>
                 <VStack
                   backgroundImage="linear-gradient(148deg, rgba(41,20,82,1) 0%, #1f0935 94%);"
                   rounded="27px"
@@ -181,6 +174,7 @@ export default function WhyUs() {
                   px="8"
                   alignItems="center"
                   spacing="5"
+                  w="full"
                 >
                   <HStack justifyContent="center" alignItems="flex-start">
                     <Box mt="1">
@@ -198,8 +192,8 @@ export default function WhyUs() {
                     censorship resistant.
                   </Text> */}
                 </VStack>
-              </GridItem>
-            </Grid>
+              </WrapItem>
+            </Wrap>
           </Fade>
         </Container>
       </Box>

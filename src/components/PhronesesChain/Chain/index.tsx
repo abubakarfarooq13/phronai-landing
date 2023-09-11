@@ -60,9 +60,10 @@ export default function Chain() {
                 </Text>
 
                 <Text color="#c1c1c1" fontSize={{ "3000px": "20px" }}>
-                  By applying AI statistical algorithms, Phronesis Chain
-                  provides the fastest Layer 1 Blockchain with the best Web 3.0
-                  infrastructure for developers.
+                  Phronesis is the first EVM, Proof-of-Stake, Layer 1 blockchain
+                  that uses the Sophia Protocol (ArAficial Intelligence
+                  StaAsAcal Consensus Mechanism) and Indirect-LTFM (Low
+                  TransacAon Fee Management) Protocol.
                 </Text>
 
                 <Button
