@@ -17,14 +17,14 @@ export default function Chain() {
   return (
     <Box id="nft-marketplace" pos="relative" overflow="hidden">
       <Box
-        bgImage="/assets/chain/chain-bg.png"
-        bgPos="center"
-        bgRepeat="no-repeat"
-        bgSize="cover"
+        // bgImage="/assets/chain/chain-bg.png"
+        // bgPos="center"
+        // bgRepeat="no-repeat"
+        // bgSize="cover"
         pos="relative"
         id="phronesis-marketplace"
       >
-        <Container maxW="1160px">
+        <Container maxW="1160px" zIndex={1} position="relative">
           <Stack
             direction={{ base: "column", md: "row" }}
             pt={{ base: "40px", md: "100px" }}
