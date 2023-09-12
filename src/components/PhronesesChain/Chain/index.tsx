@@ -27,7 +27,7 @@ export default function Chain() {
         <Container maxW="1160px" zIndex={1} position="relative">
           <Stack
             direction={{ base: "column", md: "row" }}
-            pt={{ base: "40px", md: "100px" }}
+            pt={{ base: "40px", lg: "100px" }}
             pb="100px"
             justifyContent="space-between"
             spacing="20"
