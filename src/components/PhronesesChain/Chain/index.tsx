@@ -57,13 +57,13 @@ export default function Chain() {
                 <Text
                   as="h1"
                   fontSize={{
-                    base: "2xl",
+                    base: "27px",
                     sm: "4xl",
                     md: "6xl",
                     "3000px": "7xl",
                   }}
                   lineHeight={{
-                    base: "30px",
+                    base: "39px",
                     sm: "40px",
                     md: "70px",
                     "3000px": "70px",
