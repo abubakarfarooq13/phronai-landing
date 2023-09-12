@@ -80,7 +80,7 @@ export default function Chain() {
                   mt={{ base: "3", md: "0" }}
                   textAlign={{ base: "center", md: "start" }}
                   color="#c1c1c1"
-                  fontSize={{ base: "lg", "3000px": "20px" }}
+                  fontSize={{ base: "lg", md: "20px" }}
                 >
                   Blockchain + AI = No barriers
                 </Text>
@@ -120,10 +120,10 @@ export default function Chain() {
           <Text
             textAlign="center"
             color="#c1c1c1"
-            fontSize={{ "3000px": "20px" }}
             maxW="700px"
             mx="auto"
             mt="32"
+            fontSize="lg"
           >
             Phronesis is the first EVM, Proof-of-Stake, Layer 1 blockchain that
             uses the Sophia Protocol (ArAficial Intelligence StaAsAcal Consensus
