@@ -27,14 +27,14 @@ export default function Chain() {
         <Container maxW="1160px" zIndex={1} position="relative">
           <Stack
             direction={{ base: "column", md: "row" }}
-            pt={{ base: "40px", lg: "100px" }}
+            pt={{ base: "40px", md: "100px" }}
             pb="100px"
             justifyContent="space-between"
             spacing="20"
           >
             <VStack
               zIndex={1}
-              pt={{ md: "100px" }}
+              pt={{ md: "20px", lg: "100px" }}
               w={{ base: "full", md: "50%" }}
               align="start"
               spacing="6"
