@@ -80,7 +80,7 @@ export default function Chain() {
                   mt={{ base: "3", md: "0" }}
                   textAlign={{ base: "center", md: "start" }}
                   color="#c1c1c1"
-                  fontSize={{ base: "lg", md: "20px" }}
+                  fontSize="20px"
                 >
                   Blockchain + AI = No barriers
                 </Text>
