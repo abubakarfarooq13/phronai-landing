@@ -24,11 +24,15 @@ export default function Chain() {
         pos="relative"
         id="phronesis-marketplace"
       >
-        <Container maxW="1160px" zIndex={1} position="relative">
+        <Container
+          maxW="1160px"
+          zIndex={1}
+          position="relative"
+          pb={{ base: "0px", md: "100px" }}
+        >
           <Stack
             direction={{ base: "column", md: "row" }}
             pt={{ base: "40px", md: "100px" }}
-            pb="100px"
             justifyContent="space-between"
             spacing="20"
           >
@@ -36,8 +40,8 @@ export default function Chain() {
               zIndex={1}
               pt={{ md: "20px", lg: "100px" }}
               w={{ base: "full", md: "50%" }}
-              align="start"
-              spacing="6"
+              align={{ base: "center", md: "start" }}
+              spacing={{ base: "3", md: "6" }}
             >
               <Fade left>
                 <Text
@@ -52,21 +56,37 @@ export default function Chain() {
 
                 <Text
                   as="h1"
-                  fontSize={{ base: "4xl", md: "6xl", "3000px": "7xl" }}
-                  lineHeight={{ base: "40px", md: "70px", "3000px": "70px" }}
+                  fontSize={{
+                    base: "2xl",
+                    sm: "4xl",
+                    md: "6xl",
+                    "3000px": "7xl",
+                  }}
+                  lineHeight={{
+                    base: "30px",
+                    sm: "40px",
+                    md: "70px",
+                    "3000px": "70px",
+                  }}
                   fontWeight={500}
+                  textAlign={{ base: "center", md: "start" }}
                 >
-                  Phronesis: <br /> The Chain
+                  Phronesis:{" "}
+                  <Box as="br" display={{ base: "none", md: "block" }} /> The
+                  Chain
                 </Text>
 
-                <Text color="#c1c1c1" fontSize={{ "3000px": "20px" }}>
-                  Phronesis is the first EVM, Proof-of-Stake, Layer 1 blockchain
-                  that uses the Sophia Protocol (ArAficial Intelligence
-                  StaAsAcal Consensus Mechanism) and Indirect-LTFM (Low
-                  TransacAon Fee Management) Protocol.
+                <Text
+                  mt={{ base: "3", md: "0" }}
+                  textAlign={{ base: "center", md: "start" }}
+                  color="#c1c1c1"
+                  fontSize={{ base: "lg", "3000px": "20px" }}
+                >
+                  Blockchain + AI = No barriers
                 </Text>
 
                 <Button
+                  mt={{ base: "5", md: "0" }}
                   as={CLink}
                   href="https://phron.ai/whitepaper.pdf"
                   target="_blank"
@@ -83,18 +103,33 @@ export default function Chain() {
 
             <Box>
               <Fade right>
-                <Image
-                  className="infinit-move-1"
-                  src="/assets/chain/chain.png"
-                  alt="marketplace-img"
-                  width={500}
-                  height={708}
-                />
+                <VStack align="center">
+                  <Box maxW={{ base: "300px", md: "full" }}>
+                    <Image
+                      className="infinit-move-1"
+                      src="/assets/chain/chain.png"
+                      alt="marketplace-img"
+                      width={500}
+                      height={708}
+                    />
+                  </Box>
+                </VStack>
               </Fade>
             </Box>
           </Stack>
-
-          {/* Connecting NFT marketplace with Metaverse */}
+          <Text
+            textAlign="center"
+            color="#c1c1c1"
+            fontSize={{ "3000px": "20px" }}
+            maxW="700px"
+            mx="auto"
+            mt="32"
+          >
+            Phronesis is the first EVM, Proof-of-Stake, Layer 1 blockchain that
+            uses the Sophia Protocol (ArAficial Intelligence StaAsAcal Consensus
+            Mechanism) and Indirect-LTFM (Low TransacAon Fee Management)
+            Protocol.
+          </Text>
         </Container>
       </Box>
     </Box>
