@@ -5,8 +5,8 @@ import {
   Text,
   Button,
   VStack,
-  Grid,
-  GridItem,
+  Wrap,
+  WrapItem,
   Link,
 } from "@chakra-ui/react";
 import Card from "./Card";
@@ -18,18 +18,14 @@ export default function PhronFeatures() {
     <Box>
       <Container id="phron-features" maxW="1160px" pb="100px">
         <VStack>
-          <Grid
+          <Wrap
             mt="100px"
             mb="30px"
-            templateColumns={{
-              base: "repeat(1, 1fr)",
-              md: "repeat(2, 1fr)",
-              lg: "repeat(3, 1fr)",
-            }}
-            columnGap="50px"
-            rowGap={{ base: "100px", lg: "50px" }}
+            spacing="10"
+            justify="center"
+            spacingY="50px"
           >
-            <GridItem>
+            <WrapItem w="full" maxW={{ base: "full", sm: "293px" }}>
               <Fade bottom>
                 <Card
                   imgSrc="/assets/phron/cart.png"
@@ -43,8 +39,8 @@ export default function PhronFeatures() {
                   mt="-100px"
                 />
               </Fade>
-            </GridItem>
-            <GridItem>
+            </WrapItem>
+            <WrapItem w="full" maxW={{ base: "full", sm: "293px" }}>
               <Fade bottom delay={300}>
                 <Card
                   imgSrc="/assets/phron/game-assets.png"
@@ -58,8 +54,8 @@ export default function PhronFeatures() {
                   mt="-50px"
                 />
               </Fade>
-            </GridItem>
-            <GridItem>
+            </WrapItem>
+            <WrapItem w="full" maxW={{ base: "full", sm: "293px" }}>
               <Fade bottom delay={400}>
                 <Card
                   imgSrc="/assets/phron/robots-shaking-hands.png"
@@ -72,8 +68,8 @@ export default function PhronFeatures() {
                   index={3}
                 />
               </Fade>
-            </GridItem>
-          </Grid>
+            </WrapItem>
+          </Wrap>
 
           <Button
             as={Link}

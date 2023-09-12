@@ -164,6 +164,7 @@ export default function EcosystemHero() {
                 pl="1"
                 fontWeight={300}
                 letterSpacing="2px"
+                textAlign={{ base: "center", lg: "left" }}
               >
                 Discover Our
               </Text>

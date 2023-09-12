@@ -7,6 +7,8 @@ import {
   VStack,
   Grid,
   GridItem,
+  Wrap,
+  WrapItem,
 } from "@chakra-ui/react";
 import Card from "./Card";
 const Fade = require("react-reveal/Fade");
@@ -25,6 +27,7 @@ export default function OurEcosystem() {
         //   "3xl": "-600px",
         //   "4xl": "-400px",
         // }}
+
         pb="100px"
       >
         <VStack>
@@ -40,18 +43,15 @@ export default function OurEcosystem() {
             </Text>
           </Fade>
 
-          <Grid
+          <Wrap
             mt="100px"
             mb="30px"
-            templateColumns={{
-              base: "repeat(1, 1fr)",
-              sm: "repeat(2, 1fr)",
-              lg: "repeat(3, 1fr)",
-            }}
-            columnGap="50px"
-            rowGap={{ base: "100px", lg: "50px" }}
+            spacing="10"
+            justify="center"
+            spacingY="100px"
+            w="full"
           >
-            <GridItem>
+            <WrapItem w="full" maxW="345px">
               <Fade bottom>
                 <Card
                   imgSrc="/assets/our-ecosystem/1.png"
@@ -64,8 +64,8 @@ export default function OurEcosystem() {
                   index={1}
                 />
               </Fade>
-            </GridItem>
-            <GridItem>
+            </WrapItem>
+            <WrapItem w="full" maxW="345px">
               <Fade bottom delay={300}>
                 <Card
                   imgSrc="/assets/our-ecosystem/2.png"
@@ -78,8 +78,8 @@ export default function OurEcosystem() {
                   index={2}
                 />
               </Fade>
-            </GridItem>
-            <GridItem>
+            </WrapItem>
+            <WrapItem w="full" maxW="345px">
               <Fade bottom delay={400}>
                 <Card
                   imgSrc="/assets/our-ecosystem/3.png"
@@ -92,8 +92,8 @@ export default function OurEcosystem() {
                   index={3}
                 />
               </Fade>
-            </GridItem>
-          </Grid>
+            </WrapItem>
+          </Wrap>
 
           {/* <Button variant="primary" px="8" py="5" rounded="full">
           Contact Us

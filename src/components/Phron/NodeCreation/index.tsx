@@ -21,7 +21,7 @@ export default function NodeCreation() {
       zIndex="10"
     >
       <Container maxW="1160px">
-        <VStack>
+        <VStack align="center">
           <Fade bottom>
             <Text
               as="h2"
@@ -29,6 +29,7 @@ export default function NodeCreation() {
               lineHeight={{ base: "40px", md: "60px", "3000px": "70px" }}
               fontWeight={500}
               mb={{ base: "3", "3000px": "5" }}
+              textAlign="center"
             >
               Node Creation
             </Text>
@@ -45,13 +46,15 @@ export default function NodeCreation() {
           </Fade>
 
           <Fade bottom>
-            <Image
-              src="/assets/phron/bag-with-coins.png"
-              width={400}
-              height={410}
-              alt="an open bag with coins"
-              className="infinit-move-1"
-            />
+            <VStack>
+              <Image
+                src="/assets/phron/bag-with-coins.png"
+                width={400}
+                height={410}
+                alt="an open bag with coins"
+                className="infinit-move-1"
+              />
+            </VStack>
           </Fade>
         </VStack>
       </Container>

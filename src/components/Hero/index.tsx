@@ -44,14 +44,16 @@ export default function Hero() {
           textAlign="center"
         >
           <Fade bottom>
-            <Image
-              src="/assets/phrone-pad/game-remote.png"
-              width={596}
-              height={349}
-              alt="game-remote"
-              className="infinit-move-1"
-              priority
-            />
+            <VStack>
+              <Image
+                src="/assets/phrone-pad/game-remote.png"
+                width={596}
+                height={349}
+                alt="game-remote"
+                className="infinit-move-1"
+                priority
+              />
+            </VStack>
           </Fade>
 
           <Fade bottom>
@@ -79,7 +81,12 @@ export default function Hero() {
             {/* <Button variant="primary" rounded="full" px="10" py="5">
               Contact Us
             </Button> */}
-            <HStack fontSize="30px" spacing="5" color="#fff">
+            <HStack
+              fontSize="30px"
+              spacing="5"
+              color="#fff"
+              justifyContent="center"
+            >
               <Text
                 as={Link}
                 href="https://medium.com/@phron_ai"

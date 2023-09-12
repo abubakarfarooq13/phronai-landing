@@ -3,6 +3,8 @@ import Image from "next/image";
 import { Box, Text, Button, VStack, Image as CImage } from "@chakra-ui/react";
 import Link from "next/link";
 
+const Fade = require("react-reveal/Fade");
+
 interface EcoSystemCardProps {
   imgSrc: string;
   title: string;
@@ -38,6 +40,7 @@ export default function EcoSystemCard(props: EcoSystemCardProps) {
       className="infinit-move-hover"
       h="full"
       minH={{ base: "310px", "3000px": "340px" }}
+      w="full"
     >
       <Box h="160px" pos="relative" className={`infinit-move-${index}`}>
         <Image
@@ -107,6 +110,7 @@ export default function EcoSystemCard(props: EcoSystemCardProps) {
       >
         {title}
       </Text>
+
       {/* <Text color="#c1c1c1" mb="6">
         {description}
       </Text> */}

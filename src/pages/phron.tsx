@@ -39,7 +39,7 @@ export default function Phron() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/assets/logo_black.png" />
       </Head>
-      <main className={FormularFont.className}>
+      <main id="phron-page" className={FormularFont.className}>
         <CPhron />
       </main>
     </>

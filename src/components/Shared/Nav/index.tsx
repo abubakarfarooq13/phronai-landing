@@ -91,7 +91,7 @@ export default function Nav() {
             <HStack ml="40px" spacing="5">
               <Button
                 as={Link}
-                href="/phon"
+                href="/phron"
                 variant="primary-purple"
                 borderRadius="full"
                 px="10"

@@ -1,5 +1,6 @@
 import Head from "next/head";
 import localFont from "next/font/local";
+import { Box } from "@chakra-ui/react";
 import { CHome, Ecosystem, NftMarketPlace, PhronesesChain } from "@/components";
 
 const FormularFont = localFont({
@@ -39,9 +40,9 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/assets/logo_black.png" />
       </Head>
-      <main className={FormularFont.className}>
+      <Box as="main" minH="100vh" className={FormularFont.className}>
         <PhronesesChain />
-      </main>
+      </Box>
     </>
   );
 }

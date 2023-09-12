@@ -61,3 +61,7 @@ a:hover {
 .infinit-move-hover:hover {
     animation: infinitMove2 2s infinite alternate;
 }
+
+#ecosystem-page .react-reveal, #phron-page .react-reveal {
+    width: 100%;
+}
