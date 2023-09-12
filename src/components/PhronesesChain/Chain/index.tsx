@@ -123,7 +123,7 @@ export default function Chain() {
             maxW="700px"
             mx="auto"
             mt="32"
-            fontSize="lg"
+            fontSize={{ base: "base", md: "lg" }}
           >
             Phronesis is the first EVM, Proof-of-Stake, Layer 1 blockchain that
             uses the Sophia Protocol (ArAficial Intelligence StaAsAcal Consensus
