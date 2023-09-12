@@ -45,7 +45,10 @@ export default function WhyTrustUs() {
           >
             <Box w={{ base: "full", md: "50%" }} pos="relative" px="50px">
               <Fade left>
-                <Box className="infinit-move-1">
+                <VStack
+                  align={{ base: "center", md: "start" }}
+                  className="infinit-move-1"
+                >
                   <Image
                     src="/assets/cube-shadow.png"
                     width={600}
@@ -64,25 +67,31 @@ export default function WhyTrustUs() {
                     width={350}
                     height={300}
                   />
-                </Box>
+                </VStack>
               </Fade>
             </Box>
             <VStack
               w={{ base: "full", md: "50%" }}
-              align="start"
+              align={{ base: "center", md: "start" }}
               spacing="5"
               pr={{ md: "100px" }}
+              mt={{ base: "5", md: "0" }}
             >
               <Fade right>
                 <Text
                   as="h3"
                   fontWeight={500}
-                  fontSize={{ base: "3xl", "3000px": "4xl" }}
-                  lineHeight="40px"
+                  fontSize={{ base: "2xl", md: "3xl", "3000px": "4xl" }}
+                  textAlign={{ base: "center", md: "start" }}
+                  lineHeight={{ base: "28px", md: "40px" }}
                 >
                   As decentralized as possible
                 </Text>
-                <Text color="#777" fontSize={{ base: "base", "3000px": "xl" }}>
+                <Text
+                  textAlign={{ base: "center", md: "start" }}
+                  color="#777"
+                  fontSize={{ base: "base", "3000px": "xl" }}
+                >
                   With your NFT, you decide. Trade them without complications in
                   a safe environment.
                 </Text>
@@ -109,9 +118,10 @@ export default function WhyTrustUs() {
           >
             <VStack
               w={{ base: "full", md: "50%" }}
-              align="start"
+              align={{ base: "center", md: "start" }}
               spacing="5"
               pr={{ md: "100px" }}
+              mt={{ base: "5", md: "0" }}
             >
               <Fade left>
                 <Text
@@ -119,11 +129,16 @@ export default function WhyTrustUs() {
                   fontWeight={500}
                   fontSize={{ base: "3xl", "3000px": "4xl" }}
                   lineHeight="40px"
+                  textAlign={{ base: "center", md: "start" }}
                 >
                   It&apos;s all about the
                   <br /> smart contract
                 </Text>
-                <Text color="#777" fontSize={{ base: "base", "3000px": "xl" }}>
+                <Text
+                  color="#777"
+                  fontSize={{ base: "base", "3000px": "xl" }}
+                  textAlign={{ base: "center", md: "start" }}
+                >
                   NFTs will be the key to games, and the method for in-game
                   items. Always yours, until you decide to change.
                 </Text>
@@ -140,14 +155,17 @@ export default function WhyTrustUs() {
             </VStack>
             <Box w={{ base: "full", md: "50%" }} pos="relative" px="50px">
               <Fade right>
-                <Box className="infinit-move-2">
+                <VStack
+                  align={{ base: "center", md: "start" }}
+                  className="infinit-move-2"
+                >
                   <Image
                     src="/assets/why-us/notepad.png"
                     alt="cube"
                     width={450}
                     height={400}
                   />
-                </Box>
+                </VStack>
               </Fade>
             </Box>
           </Stack>
