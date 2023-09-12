@@ -45,10 +45,10 @@ export default function PhronesisEquals() {
         </Fade>
         <Wrap
           w="full"
-          spacing={{ base: "28", md: "10" }}
-          justify={{ base: "center", lg: "space-between" }}
+          spacing={{ base: "28", md: "9" }}
+          justify={{ base: "center", xl: "space-between" }}
         >
-          <WrapItem w="full" maxW={{ base: "full", md: "300px" }}>
+          <WrapItem w="full" maxW={{ base: "full", md: "296px" }}>
             <VStack spacing="10" w="full" justify="center" pos="relative">
               <Fade bottom>
                 <Box maxH="210px" overflow="hidden">
@@ -83,7 +83,7 @@ export default function PhronesisEquals() {
               </Box>
             </VStack>
           </WrapItem>
-          <WrapItem w="full" maxW={{ base: "full", md: "300px" }}>
+          <WrapItem w="full" maxW={{ base: "full", md: "296px" }}>
             <VStack spacing="10" w="full" justify="center" pos="relative">
               <Fade bottom delay={200}>
                 <Box pt="5">
@@ -100,8 +100,9 @@ export default function PhronesisEquals() {
               </Fade>
               <Box
                 pos="absolute"
-                right={{ base: "47%", md: "-70px" }}
-                top={{ base: "110%", md: "70px" }}
+                right={{ base: "50%", md: "-70px" }}
+                transform={{ base: "translateX(50%)", lg: "auto" }}
+                top={{ base: "115%", md: "70px" }}
                 display={{ base: "none", sm: "block", md: "none", lg: "block" }}
               >
                 <Image
@@ -113,7 +114,7 @@ export default function PhronesisEquals() {
               </Box>
             </VStack>
           </WrapItem>
-          <WrapItem w="full" maxW={{ base: "full", md: "300px" }}>
+          <WrapItem w="full" maxW={{ base: "full", md: "296px" }}>
             <VStack spacing="10" w="full" justify="center" pos="relative">
               <Fade bottom delay={300}>
                 <Box maxH="210px" overflow="hidden">
@@ -130,9 +131,10 @@ export default function PhronesisEquals() {
               </Fade>
               <Box
                 pos="absolute"
-                right={{ base: "40%" }}
-                top="-70px"
-                display={{ base: "block", sm: "none", md: "block", lg: "none" }}
+                right={{ base: "50%" }}
+                transform={{ base: "translateX(50%)" }}
+                top="-60px"
+                display={{ base: "block", sm: "none" }}
               >
                 <Image
                   src="/assets/chain/plus-icon.png"
