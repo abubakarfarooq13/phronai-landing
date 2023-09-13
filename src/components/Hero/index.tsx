@@ -114,7 +114,7 @@ export default function Hero() {
 
               <Text
                 as={Link}
-                href="https://t.me/+PY-fgOj0ymQ4Mjhk"
+                href="https://t.me/+-DVxm6qfco1mNDRk"
                 target="_blank"
                 transition="all .3s"
                 _hover={{
