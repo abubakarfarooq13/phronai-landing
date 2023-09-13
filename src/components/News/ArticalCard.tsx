@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { Text, Button, VStack } from "@chakra-ui/react";
-import Link from "next/link";
+import { Text, Button, VStack, Link } from "@chakra-ui/react";
 
 interface EcoSystemCardProps {
   imageUrl: string;
@@ -31,9 +30,9 @@ export default function ArticalCard(props: EcoSystemCardProps) {
       className="infinit-move-hover"
       h="full"
       spacing="6"
-      align="start"
+      align="center"
     >
-      <Link href={buttonHref} style={{ width: "100%" }}>
+      <Link href={buttonHref} target="_blank" style={{ width: "100%" }}>
         <Image
           src={imageUrl}
           width={394}
@@ -45,12 +44,12 @@ export default function ArticalCard(props: EcoSystemCardProps) {
           }}
         />
       </Link>
-      <Link href={buttonHref}>
+      {/* <Link href={buttonHref} target="_blank">
         <Text fontSize="lg">{title}</Text>
       </Link>
       <Text color="#c1c1c1" fontSize="sm">
         {description}
-      </Text>
+      </Text> */}
       <Button
         as={Link}
         href={buttonHref}
@@ -60,6 +59,9 @@ export default function ArticalCard(props: EcoSystemCardProps) {
         fontSize="sm"
         fontWeight={400}
         px="4"
+        target="_blank"
+        maxW="160px"
+        w="full"
       >
         {buttonText}
       </Button>
