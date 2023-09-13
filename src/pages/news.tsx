@@ -32,7 +32,7 @@ export default function News() {
     <>
       <Head>
         <title>Phronesis News</title>
-        <meta name="description" content="Phronesis news." />
+        <meta name="description" content="Phronesis News and Partnerships." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/assets/logo_black.png" />
       </Head>
