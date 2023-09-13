@@ -53,7 +53,7 @@ export default function Home() {
         <title>Phronesis: The Chain</title>
         <meta
           name="description"
-          content="By applying AI statistical algorithms, Phronesis Chain provides the fastest Layer 1 Blockchain with the best Web 3.0 infrastructure for game developers"
+          content="Phronesis is the first EVM, Proof-of-Stake, Layer 1 blockchain that uses the Sophia Protocol (ArAficial Intelligence StaAsAcal Consensus Mechanism) and Indirect-LTFM (Low TransacAon Fee Management) Protocol."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/assets/logo_black.png" />
