@@ -31,6 +31,23 @@ export default function News() {
   return (
     <>
       <Head>
+        {/* eslint-disable-next-line @next/next/next-script-for-ga */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-B3SKQRMJ1F"
+        ></script>
+        <script
+          id="google-tags"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){window.dataLayer.push(arguments);}
+              gtag('js', new Date());
+      
+              gtag('config', 'G-B3SKQRMJ1F');
+              `,
+          }}
+        ></script>
         <title>Phronesis News</title>
         <meta name="description" content="Phronesis News and Partnerships." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />

@@ -25,7 +25,7 @@ export default function PhronFeatures() {
             justify="center"
             spacingY="50px"
           >
-            <WrapItem w="full" maxW={{ base: "full", sm: "293px" }}>
+            <WrapItem w="full" maxW={{ base: "full", sm: "290px" }}>
               <Fade bottom>
                 <Card
                   imgSrc="/assets/phron/cart.png"
@@ -40,7 +40,7 @@ export default function PhronFeatures() {
                 />
               </Fade>
             </WrapItem>
-            <WrapItem w="full" maxW={{ base: "full", sm: "293px" }}>
+            <WrapItem w="full" maxW={{ base: "full", sm: "290px" }}>
               <Fade bottom delay={300}>
                 <Card
                   imgSrc="/assets/phron/game-assets.png"
@@ -55,7 +55,7 @@ export default function PhronFeatures() {
                 />
               </Fade>
             </WrapItem>
-            <WrapItem w="full" maxW={{ base: "full", sm: "293px" }}>
+            <WrapItem w="full" maxW={{ base: "full", sm: "290px" }}>
               <Fade bottom delay={400}>
                 <Card
                   imgSrc="/assets/phron/robots-shaking-hands.png"
