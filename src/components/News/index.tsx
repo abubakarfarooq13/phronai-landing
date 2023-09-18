@@ -123,23 +123,23 @@ export default function News() {
               justifyContent="center"
               spacing="14"
             >
-              <Link href="https://chordis.io/" target="_blank" rel="noreferrer">
+              {/* <Link href="https://chordis.io/" target="_blank" rel="noreferrer">
                 <Image
-                  src="/assets/news/solid_proof_logo.png"
-                  width="200"
-                  height="62"
+                  src="/assets/news/chordis_logo.png"
+                  width="190"
+                  height="44"
                   alt="chordis logo"
                 />
-              </Link>
+              </Link> */}
               <Link
                 href="https://solidproof.io/"
                 target="_blank"
                 rel="noreferrer"
               >
                 <Image
-                  src="/assets/news/chordis_logo.png"
-                  width="190"
-                  height="44"
+                  src="/assets/news/solid_proof_logo.png"
+                  width="200"
+                  height="62"
                   alt="chordis logo"
                 />
               </Link>
