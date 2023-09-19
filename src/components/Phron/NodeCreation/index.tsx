@@ -34,14 +34,16 @@ export default function NodeCreation() {
               Node Creation
             </Text>
             <Text
-              maxW="700px"
+              maxW="800px"
               mx="auto"
               textAlign="center"
               mb="50px"
               fontSize={{ base: "lg", "3000px": "xl" }}
             >
-              Creating a Node with PHRON allows you to take part on 50% of the
-              profit generated from the revenue stream of the platform
+              With low metrics as inputs, there might be a chance of switching
+              categories from super node to fast node or average node. Due to
+              this, Phronesis encourages validators to participate in the
+              network by block processing including maximum transactions.
             </Text>
           </Fade>
 

@@ -153,8 +153,6 @@ export default function News() {
                 <Fade bottom>
                   <ArticalCard
                     buttonHref={d.articalLink}
-                    description="Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem"
-                    title="Lorem ipsum upum ipopun impus"
                     imageUrl={d.imageUrl}
                   />
                 </Fade>

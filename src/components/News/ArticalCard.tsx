@@ -4,8 +4,8 @@ import { Text, Button, VStack, Link } from "@chakra-ui/react";
 
 interface EcoSystemCardProps {
   imageUrl: string;
-  title: string;
-  description: string;
+  title?: string;
+  description?: string;
   buttonText?: string;
   buttonHref: string;
 }

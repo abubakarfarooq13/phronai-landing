@@ -51,7 +51,7 @@ export default function Phron() {
         <title>Phronesis PHRON</title>
         <meta
           name="description"
-          content="Fastest EVM Layer 1 Blockchain in the World. The main fuel for Phron. Buy games, transfer In-game items, make a simple transaction, and so on."
+          content="Phronesis introduces a new proprietary consensus layer alongside Machine Learning Algorithms that aims to push blockchain technology to a point of having no barriers."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/assets/logo_black.png" />

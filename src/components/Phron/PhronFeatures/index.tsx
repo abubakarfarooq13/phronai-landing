@@ -29,7 +29,7 @@ export default function PhronFeatures() {
               <Fade bottom>
                 <Card
                   imgSrc="/assets/phron/cart.png"
-                  title="Buy your favorite Games!"
+                  title="Experience the power of fast and affordable NFTs transfers."
                   description="Lorem Lorem"
                   buttonHref="#"
                   buttonText="Learn more"
@@ -44,7 +44,7 @@ export default function PhronFeatures() {
               <Fade bottom delay={300}>
                 <Card
                   imgSrc="/assets/phron/game-assets.png"
-                  title="Enjoy your gameplay with the best items"
+                  title="Access the power of fast blockchain interactions."
                   description="Lorem Lorem"
                   buttonHref="#"
                   buttonText="Learn more"
@@ -59,7 +59,7 @@ export default function PhronFeatures() {
               <Fade bottom delay={400}>
                 <Card
                   imgSrc="/assets/phron/robots-shaking-hands.png"
-                  title="Make simple transactions among your friends"
+                  title="Join a blockchain community that you can trust."
                   description="Lorem Lorem"
                   buttonHref="#"
                   buttonText="Learn more"

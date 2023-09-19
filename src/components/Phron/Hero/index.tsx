@@ -70,8 +70,9 @@ export default function PhronesisMarketplace() {
                   color="#c1c1c1"
                   fontSize={{ base: "base", "3000px": "xl" }}
                 >
-                  The main fuel for Phron. Buy games, transfer In-game items,
-                  make a simple transaction, and so on.
+                  Phronesis introduces a new proprietary consensus layer
+                  alongside Machine Learning Algorithms that aims to push
+                  blockchain technology to a point of having no barriers.
                 </Text>
 
                 {/* <Button
