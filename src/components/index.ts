@@ -5,6 +5,7 @@ export { default as NftMarketPlace } from "./NftMarketPlace";
 export { default as PhronesesChain } from "./PhronesesChain";
 export { default as CPhron } from "./Phron";
 export { default as CNews } from "./News";
+export { default as CDubaiExpo2023 } from "./DubaiExpo2023";
 
 export { default as Hero } from "./Hero";
 
