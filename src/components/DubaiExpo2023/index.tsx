@@ -113,7 +113,6 @@ export default function DubaiExpo2023() {
           id="phron-features"
           maxW="1160px"
           pt={{ base: "50px", md: "400px" }}
-          pb="100px"
         >
           <Box
             backgroundImage="linear-gradient(148deg, rgba(41,20,82,1) 0%, #03020b 50%);"
@@ -181,13 +180,13 @@ export default function DubaiExpo2023() {
               >
                 <Box w={{ base: "full", md: "50%" }}>
                   <Text fontSize="2xl" fontWeight={500} mb="5">
-                    Lorem ispum lorem upum
+                    Phronesis Booth
                   </Text>
                   <Text color="#c1c1c1" fontSize="15px">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    We applied our design team&apos;s masterwork to our booth
+                    inside Dubai Crypto Expo 2023. Such a high level of artwork,
+                    we believe strongly that it is part of our success, allowing
+                    us to convey our mission in style.
                   </Text>
                 </Box>
 
@@ -223,37 +222,19 @@ export default function DubaiExpo2023() {
                 </Box>
                 <Box w={{ base: "full", md: "50%" }}>
                   <Text fontSize="2xl" fontWeight={500} mb="5">
-                    Lorem ispum lorem upum
+                    Receiving an Award
                   </Text>
                   <Text color="#c1c1c1" fontSize="15px">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Phronesis propriety layer 1 technology, utilization of
+                    artificial intelligence, and introductions of three new
+                    protocols were highly appreciated at the Dubai Crypto Expo
+                    2023. As a result, we received an award that motivates us to
+                    continue with the level of innovation we are reaching in the
+                    blockchain industry.
                   </Text>
                 </Box>
               </Stack>
             </Box>
-
-            <Text fontSize="2xl" fontWeight={500} textAlign="center" mb="5">
-              Lorem ispum lorem upum
-            </Text>
-            <Text color="#c1c1c1" textAlign="center" fontSize="15px">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est
-              laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </Text>
           </Box>
         </Container>
       </Box>

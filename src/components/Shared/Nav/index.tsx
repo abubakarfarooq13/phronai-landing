@@ -112,7 +112,7 @@ export default function Nav() {
                   as={Link}
                   px="5"
                   pb="2"
-                  href="/dubai-expo-2023"
+                  href="/dubai-crypto-expo-2023"
                   _hover={{
                     color: "#6317fe",
                     outline: "none",
@@ -125,7 +125,9 @@ export default function Nav() {
                     boxShadow: "none",
                   }}
                   color={
-                    router.pathname === "/dubai-expo-2023" ? "#6317fe" : ""
+                    router.pathname === "/dubai-crypto-expo-2023"
+                      ? "#6317fe"
+                      : ""
                   }
                   fontSize={{ "3000px": "lg" }}
                   fontWeight={500}

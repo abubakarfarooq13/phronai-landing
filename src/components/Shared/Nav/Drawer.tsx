@@ -64,7 +64,7 @@ export default function MobileDrawer(props: MobileDrawerProps) {
                   as={Text}
                   color={
                     router.pathname === "/news" ||
-                    router.pathname === "/dubai-expo-2023"
+                    router.pathname === "/dubai-crypto-expo-2023"
                       ? "#6317fe"
                       : ""
                   }
@@ -76,7 +76,7 @@ export default function MobileDrawer(props: MobileDrawerProps) {
                   <MenuItem
                     bgColor="#6317fe"
                     as={Link}
-                    href="/dubai-expo-2023"
+                    href="/dubai-crypto-expo-2023"
                     _hover={{
                       color: "#03020b",
                       outline: "none",
@@ -89,7 +89,9 @@ export default function MobileDrawer(props: MobileDrawerProps) {
                       boxShadow: "none",
                     }}
                     color={
-                      router.pathname === "/dubai-expo-2023" ? "#03020b" : ""
+                      router.pathname === "/dubai-crypto-expo-2023"
+                        ? "#03020b"
+                        : ""
                     }
                     fontSize={{ "3000px": "lg" }}
                   >

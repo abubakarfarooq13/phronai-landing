@@ -48,8 +48,11 @@ export default function News() {
               `,
           }}
         ></script>
-        <title>Dubai Expo 2023</title>
-        <meta name="description" content="Dubai Expo 2023." />
+        <title>Dubai Crypto Expo 2023</title>
+        <meta
+          name="description"
+          content="Dubai Crypto Expo 2023 “Most Innovative Blockchain 2023” Award"
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/assets/logo_black.png" />
       </Head>
