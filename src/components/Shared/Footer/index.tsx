@@ -73,7 +73,7 @@ export default function Footer() {
             </Text>
             <Text
               as={Link}
-              href="https://discord.gg/bXUCxwnK"
+              href="https://discord.gg/wy4gFtmTsK"
               target="_blank"
               transition="all .3s"
               _hover={{
