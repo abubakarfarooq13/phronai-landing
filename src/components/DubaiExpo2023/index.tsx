@@ -117,11 +117,11 @@ export default function DubaiExpo2023() {
         >
           <Box
             backgroundImage="linear-gradient(148deg, rgba(41,20,82,1) 0%, #03020b 50%);"
-            py="16"
+            py="12"
             px={{ base: "4", md: "16" }}
             borderRadius="30px"
           >
-            <Text
+            {/* <Text
               textAlign="center"
               fontWeight={300}
               textTransform="uppercase"
@@ -129,15 +129,15 @@ export default function DubaiExpo2023() {
               fontSize="sm"
             >
               News
-            </Text>
+            </Text> */}
             <Text
               textAlign="center"
               fontSize={{ base: "2xl", md: "4xl" }}
               mb="3"
             >
-              Dubai Expo 2023
+              Crypto
             </Text>
-            <HStack justifyContent="center" spacing="5">
+            {/* <HStack justifyContent="center" spacing="5">
               <Box
                 width="30px"
                 height="30px"
@@ -147,7 +147,7 @@ export default function DubaiExpo2023() {
               <Text color="#c1c1c1" fontSize="sm">
                 George &nbsp;&nbsp; | &nbsp;&nbsp; 2 min read
               </Text>
-            </HStack>
+            </HStack> */}
             <Box my="10">
               <Image
                 src="/assets/dubai-expo-2023/stage-img.jpg"
