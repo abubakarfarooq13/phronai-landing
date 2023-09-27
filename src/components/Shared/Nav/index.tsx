@@ -111,28 +111,6 @@ export default function Nav() {
                   bgColor="#05010c"
                   as={Link}
                   px="5"
-                  href="/news"
-                  _hover={{
-                    color: "#6317fe",
-                    outline: "none",
-                    boxShadow: "none",
-                  }}
-                  _active={{
-                    boxShadow: "none",
-                  }}
-                  _focus={{
-                    boxShadow: "none",
-                  }}
-                  color={router.pathname === "/news" ? "#6317fe" : ""}
-                  fontSize={{ "3000px": "lg" }}
-                  fontWeight={500}
-                >
-                  Articles
-                </MenuItem>
-                <MenuItem
-                  bgColor="#05010c"
-                  as={Link}
-                  px="5"
                   pb="2"
                   href="/dubai-expo-2023"
                   _hover={{
@@ -153,6 +131,28 @@ export default function Nav() {
                   fontWeight={500}
                 >
                   Dubai Crypto Expo 2023
+                </MenuItem>
+                <MenuItem
+                  bgColor="#05010c"
+                  as={Link}
+                  px="5"
+                  href="/news"
+                  _hover={{
+                    color: "#6317fe",
+                    outline: "none",
+                    boxShadow: "none",
+                  }}
+                  _active={{
+                    boxShadow: "none",
+                  }}
+                  _focus={{
+                    boxShadow: "none",
+                  }}
+                  color={router.pathname === "/news" ? "#6317fe" : ""}
+                  fontSize={{ "3000px": "lg" }}
+                  fontWeight={500}
+                >
+                  Articles
                 </MenuItem>
               </MenuList>
             </Menu>

@@ -76,26 +76,6 @@ export default function MobileDrawer(props: MobileDrawerProps) {
                   <MenuItem
                     bgColor="#6317fe"
                     as={Link}
-                    href="/news"
-                    _hover={{
-                      color: "#03020b",
-                      outline: "none",
-                      boxShadow: "none",
-                    }}
-                    _active={{
-                      boxShadow: "none",
-                    }}
-                    _focus={{
-                      boxShadow: "none",
-                    }}
-                    color={router.pathname === "/news" ? "#03020b" : ""}
-                    fontSize={{ "3000px": "lg" }}
-                  >
-                    Articles
-                  </MenuItem>
-                  <MenuItem
-                    bgColor="#6317fe"
-                    as={Link}
                     href="/dubai-expo-2023"
                     _hover={{
                       color: "#03020b",
@@ -114,6 +94,26 @@ export default function MobileDrawer(props: MobileDrawerProps) {
                     fontSize={{ "3000px": "lg" }}
                   >
                     Dubai Crypto Expo 2023
+                  </MenuItem>
+                  <MenuItem
+                    bgColor="#6317fe"
+                    as={Link}
+                    href="/news"
+                    _hover={{
+                      color: "#03020b",
+                      outline: "none",
+                      boxShadow: "none",
+                    }}
+                    _active={{
+                      boxShadow: "none",
+                    }}
+                    _focus={{
+                      boxShadow: "none",
+                    }}
+                    color={router.pathname === "/news" ? "#03020b" : ""}
+                    fontSize={{ "3000px": "lg" }}
+                  >
+                    Articles
                   </MenuItem>
                 </MenuList>
               </Menu>
