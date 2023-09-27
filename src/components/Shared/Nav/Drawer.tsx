@@ -10,6 +10,10 @@ import {
   VStack,
   Text,
   Link as CLink,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
 } from "@chakra-ui/react";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -54,6 +58,66 @@ export default function MobileDrawer(props: MobileDrawerProps) {
                   {item.label}
                 </Text>
               ))}
+
+              <Menu>
+                <MenuButton
+                  as={Text}
+                  color={
+                    router.pathname === "/news" ||
+                    router.pathname === "/dubai-expo-2023"
+                      ? "#6317fe"
+                      : ""
+                  }
+                >
+                  News/Updates
+                </MenuButton>
+
+                <MenuList bgColor="#6317fe" border="none" mt="5">
+                  <MenuItem
+                    bgColor="#6317fe"
+                    as={Link}
+                    href="/news"
+                    _hover={{
+                      color: "#03020b",
+                      outline: "none",
+                      boxShadow: "none",
+                    }}
+                    _active={{
+                      boxShadow: "none",
+                    }}
+                    _focus={{
+                      boxShadow: "none",
+                    }}
+                    color={router.pathname === "/news" ? "#03020b" : ""}
+                    fontSize={{ "3000px": "lg" }}
+                  >
+                    Articles
+                  </MenuItem>
+                  <MenuItem
+                    bgColor="#6317fe"
+                    as={Link}
+                    href="/dubai-expo-2023"
+                    _hover={{
+                      color: "#03020b",
+                      outline: "none",
+                      boxShadow: "none",
+                    }}
+                    _active={{
+                      boxShadow: "none",
+                    }}
+                    _focus={{
+                      boxShadow: "none",
+                    }}
+                    color={
+                      router.pathname === "/dubai-expo-2023" ? "#03020b" : ""
+                    }
+                    fontSize={{ "3000px": "lg" }}
+                  >
+                    Dubai Crypto Expo 2023
+                  </MenuItem>
+                </MenuList>
+              </Menu>
+
               <VStack w="full" mt="30px" spacing="5">
                 <Button
                   as={Link}

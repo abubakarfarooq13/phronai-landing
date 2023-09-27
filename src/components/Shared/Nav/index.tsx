@@ -8,6 +8,10 @@ import {
   Container,
   useDisclosure,
   Link as CLink,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
 } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import { Logo } from "../..";
@@ -36,11 +40,11 @@ export const navItems = [
     label: "Phron: The GamePad",
     href: "/gamepad",
   },
-  {
-    id: 5,
-    label: "News",
-    href: "/news",
-  },
+  // {
+  //   id: 5,
+  //   label: "News",
+  //   href: "/news",
+  // },
   // {
   //   id: 5,
   //   label: "PHRON",
@@ -73,6 +77,7 @@ export default function Nav() {
           <HStack
             spacing={{ base: "20px", "2xl": "30px" }}
             display={{ base: "none", "1350px": "flex" }}
+            fontSize={{ base: "15px", "2xl": "base" }}
           >
             {navItems.map((item) => (
               <Link
@@ -87,6 +92,70 @@ export default function Nav() {
                 {item.label}
               </Link>
             ))}
+            <Menu>
+              <MenuButton
+                as={Text}
+                color={
+                  router.pathname === "/news" ||
+                  router.pathname === "/dubai-expo-2023"
+                    ? "#6317fe"
+                    : ""
+                }
+                cursor="pointer"
+              >
+                News/Updates
+              </MenuButton>
+
+              <MenuList bgColor="#05010c" border="none" mt="5">
+                <MenuItem
+                  bgColor="#05010c"
+                  as={Link}
+                  px="5"
+                  href="/news"
+                  _hover={{
+                    color: "#6317fe",
+                    outline: "none",
+                    boxShadow: "none",
+                  }}
+                  _active={{
+                    boxShadow: "none",
+                  }}
+                  _focus={{
+                    boxShadow: "none",
+                  }}
+                  color={router.pathname === "/news" ? "#6317fe" : ""}
+                  fontSize={{ "3000px": "lg" }}
+                  fontWeight={500}
+                >
+                  Articles
+                </MenuItem>
+                <MenuItem
+                  bgColor="#05010c"
+                  as={Link}
+                  px="5"
+                  pb="2"
+                  href="/dubai-expo-2023"
+                  _hover={{
+                    color: "#6317fe",
+                    outline: "none",
+                    boxShadow: "none",
+                  }}
+                  _active={{
+                    boxShadow: "none",
+                  }}
+                  _focus={{
+                    boxShadow: "none",
+                  }}
+                  color={
+                    router.pathname === "/dubai-expo-2023" ? "#6317fe" : ""
+                  }
+                  fontSize={{ "3000px": "lg" }}
+                  fontWeight={500}
+                >
+                  Dubai Crypto Expo 2023
+                </MenuItem>
+              </MenuList>
+            </Menu>
 
             <HStack ml="40px" spacing="5">
               <Button
