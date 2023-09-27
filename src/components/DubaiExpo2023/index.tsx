@@ -170,7 +170,7 @@ export default function DubaiExpo2023() {
               Transaction Fee Management) Protocol.
             </Text>
 
-            <Box py="100px">
+            <Box pt="100px" pb="50px">
               <Stack
                 direction={{ base: "column-reverse", md: "row" }}
                 alignItems="center"
