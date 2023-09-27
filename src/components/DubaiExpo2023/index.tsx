@@ -135,7 +135,7 @@ export default function DubaiExpo2023() {
               fontSize={{ base: "2xl", md: "4xl" }}
               mb="3"
             >
-              Dubai Cyrpto Expo 2023
+              Dubai Crypto Expo 2023
             </Text>
             {/* <HStack justifyContent="center" spacing="5">
               <Box
