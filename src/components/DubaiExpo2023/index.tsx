@@ -135,7 +135,7 @@ export default function DubaiExpo2023() {
               fontSize={{ base: "2xl", md: "4xl" }}
               mb="3"
             >
-              Crypto
+              Dubai Cyrpto Expo 2023
             </Text>
             {/* <HStack justifyContent="center" spacing="5">
               <Box
@@ -160,16 +160,15 @@ export default function DubaiExpo2023() {
               />
             </Box>
             <Text fontSize="2xl" fontWeight={500} textAlign="center" mb="5">
-              Lorem ispum lorem upum
+              Most Innovative Blockchain 2023
             </Text>
             <Text color="#c1c1c1" textAlign="center" fontSize="15px">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
+              Phronesis received the award of the “Most Innovative Blockchain
+              2023” at the Dubai Crypto Expo 2023. The reason for the above is
+              the fact that Phronesis is the first EVM, Proof-of-Stake, Layer 1
+              blockchain that uses the Sophia Protocol (Artificial Intelligence
+              Statistical Consensus Mechanism) and Indirect-LTFM (Low
+              Transaction Fee Management) Protocol.
             </Text>
 
             <Box py="100px">
