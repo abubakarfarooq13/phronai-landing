@@ -40,7 +40,7 @@ export default function ArticalCard(props: EcoSystemCardProps) {
           alt="artical image"
           style={{
             borderRadius: "20px",
-            width: "100%",
+            // width: "100%",
           }}
         />
       </Link>

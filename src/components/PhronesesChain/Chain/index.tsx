@@ -127,7 +127,7 @@ export default function Chain() {
           >
             Phronesis is the first EVM, Proof-of-Stake, Layer 1 blockchain that
             uses the Sophia Protocol (Artificial Intelligence Statistical
-            Consensus Mechanism) and Indirect-LTFM (Low TransacAon Fee
+            Consensus Mechanism) and Indirect-LTFM (Low Transaction Fee
             Management) Protocol.
           </Text>
         </Container>
