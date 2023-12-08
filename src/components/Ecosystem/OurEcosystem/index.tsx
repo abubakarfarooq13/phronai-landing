@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import {
   Box,
   Container,
@@ -42,7 +43,7 @@ export default function OurEcosystem() {
               Phronesis Ecosystem
             </Text>
           </Fade>
-
+          {/* 
           <Wrap
             mt="100px"
             mb="30px"
@@ -93,7 +94,58 @@ export default function OurEcosystem() {
                 />
               </Fade>
             </WrapItem>
-          </Wrap>
+          </Wrap> */}
+
+          <VStack
+            w="full"
+            bgImage="/assets/our-ecosystem/section-bg-small.png"
+            bgRepeat="no-repeat"
+            bgSize="100% 100%"
+            bgPos="center"
+            p="10"
+            // rounded="40px"
+            textAlign="center"
+            mt="10"
+            spacing="10"
+          >
+            <Image
+              src="/assets/our-ecosystem/1.png"
+              alt="chain icon"
+              width={150}
+              height={150}
+            />
+            <Box>
+              <Text fontSize="2xl" fontWeight={500}>
+                Phronesis Decentralized Exchange
+              </Text>
+
+              <Text fontWeight={300} color="#c1c1c1">
+                Enjoy a seamless transition between PHRON and your favorite
+                token
+              </Text>
+            </Box>
+
+            <Text letterSpacing="7px">
+              <Text as="span" color="#6317fe">
+                $PHRONESIS
+              </Text>{" "}
+              SWAP
+            </Text>
+
+            <Image
+              src="/assets/our-ecosystem/swap.jpg"
+              alt="our ecosystem swap"
+              width={900}
+              height={500}
+              style={{ borderRadius: "20px" }}
+            />
+
+            <Button variant="primary-outline" rounded="full">
+              Learn More
+            </Button>
+
+            {/* <Image src="/our-ecosystem/bridge.jpg" alt="bridge" /> */}
+          </VStack>
 
           {/* <Button variant="primary" px="8" py="5" rounded="full">
           Contact Us
