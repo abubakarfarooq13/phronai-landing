@@ -6,12 +6,10 @@ import {
   Text,
   Button,
   VStack,
-  Grid,
-  GridItem,
-  Wrap,
-  WrapItem,
+  Stack,
+  Image as CImage,
 } from "@chakra-ui/react";
-import Card from "./Card";
+
 const Fade = require("react-reveal/Fade");
 
 export default function OurEcosystem() {
@@ -21,14 +19,6 @@ export default function OurEcosystem() {
         id="ecosystem"
         maxW="1160px"
         pt={{ base: "70px", md: "100px" }}
-        // mt={{
-        //   md: "-100px",
-        //   lg: "-300px",
-        //   xl: "-250px",
-        //   "3xl": "-600px",
-        //   "4xl": "-400px",
-        // }}
-
         pb="100px"
       >
         <VStack>
@@ -43,113 +33,265 @@ export default function OurEcosystem() {
               Phronesis Ecosystem
             </Text>
           </Fade>
-          {/* 
-          <Wrap
-            mt="100px"
-            mb="30px"
-            spacing="10"
-            justify="center"
-            spacingY="100px"
-            w="full"
-          >
-            <WrapItem w="full" maxW="345px">
-              <Fade bottom>
-                <Card
-                  imgSrc="/assets/our-ecosystem/1.png"
-                  title="Phronesis Decentralized Exchange"
-                  description="Enjoy a seamless transition between PHRON and your favorite token."
-                  buttonHref="#"
-                  buttonText="Learn more"
-                  imgHeight={235}
-                  imgWidth={220}
-                  index={1}
-                />
-              </Fade>
-            </WrapItem>
-            <WrapItem w="full" maxW="345px">
-              <Fade bottom delay={300}>
-                <Card
-                  imgSrc="/assets/our-ecosystem/2.png"
-                  title="Phronesis Cross-Chain Bridge"
-                  description="Bridge your assets with ease from one chain to another."
-                  buttonHref="#"
-                  buttonText="Learn more"
-                  imgHeight={235}
-                  imgWidth={220}
-                  index={2}
-                />
-              </Fade>
-            </WrapItem>
-            <WrapItem w="full" maxW="345px">
-              <Fade bottom delay={400}>
-                <Card
-                  imgSrc="/assets/our-ecosystem/3.png"
-                  title="Phronesis Smart Wallet"
-                  description="An integrated wallet for all your transactions and purchases."
-                  buttonHref="#"
-                  buttonText="Learn more"
-                  imgHeight={235}
-                  imgWidth={179}
-                  index={3}
-                />
-              </Fade>
-            </WrapItem>
-          </Wrap> */}
 
           <VStack
             w="full"
-            bgImage="/assets/our-ecosystem/section-bg-small.png"
+            bgImage="/assets/our-ecosystem/section-bg.png"
             bgRepeat="no-repeat"
             bgSize="100% 100%"
             bgPos="center"
-            p="10"
-            // rounded="40px"
+            py="10"
+            px={{ base: "4", lg: "20" }}
             textAlign="center"
             mt="10"
             spacing="10"
           >
-            <Image
-              src="/assets/our-ecosystem/1.png"
-              alt="chain icon"
-              width={150}
-              height={150}
-            />
+            <Box ml={{ base: "0px", md: "-30px" }} mb="-50px">
+              <Fade top>
+                <Image
+                  src="/assets/our-ecosystem/chain.png"
+                  alt="chain icon"
+                  width={200}
+                  height={150}
+                  className="infinit-move-1"
+                />
+              </Fade>
+            </Box>
             <Box>
-              <Text fontSize="2xl" fontWeight={500}>
-                Phronesis Decentralized Exchange
-              </Text>
+              <Fade top>
+                <Text fontSize="2xl" fontWeight={500}>
+                  Phronesis Decentralized Exchange
+                </Text>
 
-              <Text fontWeight={300} color="#c1c1c1">
-                Enjoy a seamless transition between PHRON and your favorite
-                token
-              </Text>
+                <Text fontWeight={300} color="#c1c1c1">
+                  Enjoy a seamless transition between PHRON and your favorite
+                  token
+                </Text>
+              </Fade>
             </Box>
 
-            <Text letterSpacing="7px">
-              <Text as="span" color="#6317fe">
-                $PHRONESIS
-              </Text>{" "}
-              SWAP
-            </Text>
+            <Fade bottom>
+              <Text letterSpacing="7px">
+                <Text as="span" color="#a156ee">
+                  $PHRONESIS
+                </Text>{" "}
+                SWAP
+              </Text>
+            </Fade>
 
-            <Image
-              src="/assets/our-ecosystem/swap.jpg"
-              alt="our ecosystem swap"
-              width={900}
-              height={500}
-              style={{ borderRadius: "20px" }}
-            />
-
-            <Button variant="primary-outline" rounded="full">
-              Learn More
-            </Button>
-
-            {/* <Image src="/our-ecosystem/bridge.jpg" alt="bridge" /> */}
+            <Box>
+              <Fade bottom>
+                <Image
+                  src="/assets/our-ecosystem/swap.jpg"
+                  alt="our ecosystem swap"
+                  width={900}
+                  height={500}
+                  style={{ borderRadius: "20px" }}
+                />
+              </Fade>
+            </Box>
+            <Fade bottom>
+              <Button variant="primary-outline" rounded="full" px="10">
+                Learn More
+              </Button>
+            </Fade>
           </VStack>
 
-          {/* <Button variant="primary" px="8" py="5" rounded="full">
-          Contact Us
-        </Button> */}
+          <Box
+            w="full"
+            bgImage="/assets/our-ecosystem/section-bg.png"
+            bgRepeat="no-repeat"
+            bgSize="100% 100%"
+            bgPos="center"
+            px={{ base: "4", md: "20" }}
+            pt="20"
+            pb="10"
+            mt="10"
+          >
+            <Stack
+              direction={{ base: "column", lg: "row" }}
+              spacing={{ base: "10", lg: "150px" }}
+              alignItems="center"
+            >
+              <VStack spacing="6">
+                <Box>
+                  <Fade left>
+                    <Image
+                      src="/assets/logo.png"
+                      alt="logo"
+                      width={150}
+                      height={50}
+                    />
+                  </Fade>
+                </Box>
+                <Fade left>
+                  <Text
+                    textTransform="uppercase"
+                    letterSpacing="5px"
+                    fontWeight={300}
+                    textAlign="center"
+                  >
+                    Cross-Chain Bridge
+                  </Text>
+                </Fade>
+                <Box>
+                  <Fade left>
+                    <Image
+                      src="/assets/our-ecosystem/bridge.jpg"
+                      alt="phronesis bridge"
+                      width={400}
+                      height={600}
+                      style={{
+                        borderRadius: "20px",
+                      }}
+                    />
+                  </Fade>
+                </Box>
+                <Fade left>
+                  <Text
+                    fontWeight={300}
+                    fontSize="sm"
+                    textAlign="center"
+                    color="#777"
+                  >
+                    If you have not add Relativity Chain network{" "}
+                    <Box as="br" display={{ base: "none", lg: "block" }} /> in
+                    your MetaMask yet, please click{" "}
+                    <Text as="span" color="#452eaa">
+                      Add Network
+                    </Text>{" "}
+                    and continue
+                  </Text>
+                </Fade>
+              </VStack>
+
+              <VStack
+                align={{ base: "center", lg: "start" }}
+                textAlign={{ base: "center", lg: "start" }}
+              >
+                <Box ml={{ base: "0px", lg: "-65px" }}>
+                  <Fade right>
+                    <Image
+                      src="/assets/our-ecosystem/cube.png"
+                      alt="chain icon"
+                      width={250}
+                      height={150}
+                      className="infinit-move-1"
+                    />
+                  </Fade>
+                </Box>
+
+                <Fade right>
+                  <Text fontSize="2xl" fontWeight={500}>
+                    View your transactions{" "}
+                    <Box as="br" display={{ base: "none", lg: "block" }} />{" "}
+                    Phronesis Cross-Chain Bridge
+                  </Text>
+                  <Text color="#c1c1c1">
+                    Bridge your assets with ease from{" "}
+                    <Box as="br" display={{ base: "none", lg: "block" }} /> one
+                    chain to another
+                  </Text>
+                </Fade>
+              </VStack>
+            </Stack>
+            <Fade right>
+              <VStack align={{ base: "center", lg: "flex-end" }} mt="10">
+                <Button variant="primary-outline" px="10" rounded="full">
+                  Learn More
+                </Button>
+              </VStack>
+            </Fade>
+          </Box>
+
+          <Box
+            w="full"
+            bgImage="/assets/our-ecosystem/section-bg.png"
+            bgRepeat="no-repeat"
+            bgSize="100% 100%"
+            bgPos="center"
+            mt="10"
+            pb="10"
+          >
+            <Box mt="10" display={{ base: "block", lg: "none" }}>
+              <Fade left>
+                <Image
+                  src="/assets/our-ecosystem/phronesis-explorer.jpg"
+                  alt="phronesis bridge"
+                  width={600}
+                  height={600}
+                  style={{
+                    borderRight: "20px solid #05010c",
+                    borderTop: "20px solid #05010c",
+                  }}
+                />
+              </Fade>
+            </Box>
+            <Stack
+              direction={{ base: "column", lg: "row" }}
+              spacing={{ base: "5", lg: "100px" }}
+              alignItems="center"
+              pl={{ base: "4", md: "20", lg: "0" }}
+              pt={{ base: "5", lg: "20" }}
+              pr={{ base: "4", md: "20" }}
+            >
+              <Box mt="10" display={{ base: "none", lg: "block" }}>
+                <Fade left>
+                  <Image
+                    src="/assets/our-ecosystem/phronesis-explorer.jpg"
+                    alt="phronesis bridge"
+                    width={600}
+                    height={600}
+                    style={{
+                      borderRight: "20px solid #05010c",
+                      borderTop: "20px solid #05010c",
+                    }}
+                  />
+                </Fade>
+              </Box>
+
+              <VStack
+                align={{ base: "center", lg: "start" }}
+                textAlign={{ base: "center", lg: "start" }}
+                pr={{ base: "0", md: "0", lg: "20" }}
+              >
+                <Box ml={{ base: "0px", lg: "-35px" }} mb="15px">
+                  <Fade right>
+                    <Image
+                      src="/assets/our-ecosystem/phronesis-explorer-side-img.png"
+                      alt="chain icon"
+                      width={250}
+                      height={150}
+                      className="infinit-move-1"
+                    />
+                  </Fade>
+                </Box>
+
+                <Fade right>
+                  <Text fontSize="2xl" fontWeight={500}>
+                    Phronesis Explorer
+                  </Text>
+                  <Text color="#c1c1c1">
+                    Check out all the information{" "}
+                    <Box as="br" display={{ base: "none", md: "block" }} /> our
+                    blockchain provides
+                  </Text>
+                </Fade>
+              </VStack>
+            </Stack>
+
+            <Fade right>
+              <VStack
+                align={{ base: "center", lg: "flex-end" }}
+                mt="10"
+                pr={{ lg: "20" }}
+              >
+                <Button variant="primary-outline" px="10" rounded="full">
+                  Learn More
+                </Button>
+              </VStack>
+            </Fade>
+          </Box>
         </VStack>
       </Container>
     </Box>

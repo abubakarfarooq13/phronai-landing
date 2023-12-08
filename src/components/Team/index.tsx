@@ -10,6 +10,7 @@ import {
   Button,
   useBreakpointValue,
   Link as CLink,
+  Image as CImage,
 } from "@chakra-ui/react";
 import { Nav } from "..";
 import { PHRON_INFO_EMAIL } from "@/constant";
@@ -29,7 +30,12 @@ export default function Team() {
       bgRepeat="no-repeat"
     >
       <Nav />
-
+      <CImage
+        src="/assets/purple-shadow-header-top-small.png"
+        alt="purple-shadow-header-top-small"
+        pos="absolute"
+        left="0px"
+      />
       <Container maxW="1160px" pt="70px" pb="100px">
         <Fade bottom>
           <Text
