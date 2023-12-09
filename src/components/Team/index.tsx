@@ -109,7 +109,7 @@ export default function Team() {
                 />
                 <Image
                   src="/assets/team/guillermo-bg.png"
-                  alt="Guillermo Guimaraes Co Founder"
+                  alt="Guillermo Guimaraes Co Founder background"
                   width={350}
                   height={270}
                   priority
@@ -141,7 +141,7 @@ export default function Team() {
                 />
                 <Image
                   src="/assets/team/igor-bg.png"
-                  alt="Guillermo Guimaraes Co Founder"
+                  alt="Guillermo Guimaraes Co Founder background"
                   width={350}
                   height={270}
                   priority
@@ -173,7 +173,7 @@ export default function Team() {
                 />
                 <Image
                   src="/assets/team/rehan-bg.png"
-                  alt="Rehan Shams Head of blockchain"
+                  alt="Rehan Shams Head of blockchain background"
                   width={350}
                   height={270}
                 />
@@ -193,7 +193,7 @@ export default function Team() {
               <VStack pos="relative">
                 <Image
                   src="/assets/team/richard.png"
-                  alt="Rehan Shams Head of blockchain"
+                  alt="Richard Rodrigues Public Relations Department"
                   width={300}
                   height={400}
                   style={{
@@ -203,16 +203,16 @@ export default function Team() {
                 />
                 <Image
                   src="/assets/team/richard-bg.png"
-                  alt="Rehan Shams Head of blockchain"
+                  alt="Richard Rodrigues Public Relations Department background"
                   width={350}
                   height={270}
                 />
                 <VStack spacing="2" mt="-100px" textAlign="center" zIndex={99}>
                   <Text fontWeight={500} fontSize="lg">
-                    Richard
+                    Richard Rodrigues
                   </Text>
                   <Text color="#c1c1c1" textTransform="uppercase" fontSize="sm">
-                    Head of Legal Department
+                    Public Relations Department
                   </Text>
                 </VStack>
               </VStack>
@@ -233,7 +233,7 @@ export default function Team() {
                 />
                 <Image
                   src="/assets/team/jacob-bg.png"
-                  alt="Jacob Slimakh Head of Graphics"
+                  alt="Jacob Slimakh Head of Graphics background"
                   width={350}
                   height={270}
                 />

@@ -90,11 +90,11 @@ export default function OurEcosystem() {
                 />
               </Fade>
             </Box>
-            <Fade bottom>
+            {/* <Fade bottom>
               <Button variant="primary-outline" rounded="full" px="10">
                 Learn More
               </Button>
-            </Fade>
+            </Fade> */}
           </VStack>
 
           <Box
@@ -154,7 +154,7 @@ export default function OurEcosystem() {
                     textAlign="center"
                     color="#777"
                   >
-                    If you have not add Relativity Chain network{" "}
+                    If you have not add Phronesis Chain network{" "}
                     <Box as="br" display={{ base: "none", lg: "block" }} /> in
                     your MetaMask yet, please click{" "}
                     <Text as="span" color="#452eaa">
@@ -195,13 +195,13 @@ export default function OurEcosystem() {
                 </Fade>
               </VStack>
             </Stack>
-            <Fade right>
+            {/* <Fade right>
               <VStack align={{ base: "center", lg: "flex-end" }} mt="10">
                 <Button variant="primary-outline" px="10" rounded="full">
                   Learn More
                 </Button>
               </VStack>
-            </Fade>
+            </Fade> */}
           </Box>
 
           <Box
@@ -213,7 +213,7 @@ export default function OurEcosystem() {
             mt="10"
             pb="10"
           >
-            <Box mt="10" display={{ base: "block", lg: "none" }}>
+            {/* <Box display={{ base: "block", lg: "none" }}>
               <Fade left>
                 <Image
                   src="/assets/our-ecosystem/phronesis-explorer.jpg"
@@ -226,27 +226,32 @@ export default function OurEcosystem() {
                   }}
                 />
               </Fade>
-            </Box>
+            </Box> */}
             <Stack
               direction={{ base: "column", lg: "row" }}
               spacing={{ base: "5", lg: "100px" }}
               alignItems="center"
               pl={{ base: "4", md: "20", lg: "0" }}
-              pt={{ base: "5", lg: "20" }}
+              pt={{ base: "5", lg: "10" }}
+              pb={{ base: "5", lg: "10" }}
               pr={{ base: "4", md: "20" }}
+              overflow="hidden"
             >
-              <Box mt="10" display={{ base: "none", lg: "block" }}>
+              <Box mt="10">
                 <Fade left>
-                  <Image
-                    src="/assets/our-ecosystem/phronesis-explorer.jpg"
-                    alt="phronesis bridge"
-                    width={600}
-                    height={600}
-                    style={{
-                      borderRight: "20px solid #05010c",
-                      borderTop: "20px solid #05010c",
-                    }}
-                  />
+                  <Box ml={{ lg: "-20px" }}>
+                    <Image
+                      src="/assets/our-ecosystem/phronesis-explorer.jpg"
+                      alt="phronesis bridge"
+                      width={600}
+                      height={600}
+                      style={{
+                        borderLeft: "20px solid #05010c",
+                        borderRight: "20px solid #05010c",
+                        borderTop: "20px solid #05010c",
+                      }}
+                    />
+                  </Box>
                 </Fade>
               </Box>
 
@@ -280,7 +285,7 @@ export default function OurEcosystem() {
               </VStack>
             </Stack>
 
-            <Fade right>
+            {/* <Fade right>
               <VStack
                 align={{ base: "center", lg: "flex-end" }}
                 mt="10"
@@ -290,7 +295,7 @@ export default function OurEcosystem() {
                   Learn More
                 </Button>
               </VStack>
-            </Fade>
+            </Fade> */}
           </Box>
         </VStack>
       </Container>
