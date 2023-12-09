@@ -61,7 +61,18 @@ export default function Team() {
           mt="40"
           mb="20"
         >
-          <GridItem>
+          <GridItem
+            _active={{
+              marginTop: "0px !important",
+              cursor: "pointer",
+            }}
+            _hover={{
+              marginTop: "-20px",
+              transform: "translateY(-20px)",
+              cursor: "pointer",
+            }}
+            transition="all .3s"
+          >
             <Fade bottom delay={300}>
               <VStack pos="relative">
                 <Image
@@ -93,7 +104,18 @@ export default function Team() {
               </VStack>
             </Fade>
           </GridItem>
-          <GridItem>
+          <GridItem
+            _active={{
+              marginTop: "0px !important",
+              cursor: "pointer",
+            }}
+            _hover={{
+              marginTop: "-20px",
+              transform: "translateY(-20px)",
+              cursor: "pointer",
+            }}
+            transition="all .3s"
+          >
             <Fade bottom delay={600}>
               <VStack pos="relative">
                 <Image
@@ -125,7 +147,18 @@ export default function Team() {
               </VStack>
             </Fade>
           </GridItem>
-          <GridItem>
+          <GridItem
+            _active={{
+              marginTop: "0px !important",
+              cursor: "pointer",
+            }}
+            _hover={{
+              marginTop: "-20px",
+              transform: "translateY(-20px)",
+              cursor: "pointer",
+            }}
+            transition="all .3s"
+          >
             <Fade bottom delay={900}>
               <VStack pos="relative">
                 <Image
@@ -158,7 +191,18 @@ export default function Team() {
               </VStack>
             </Fade>
           </GridItem>
-          <GridItem>
+          <GridItem
+            _active={{
+              marginTop: "0px !important",
+              cursor: "pointer",
+            }}
+            _hover={{
+              marginTop: "-20px",
+              transform: "translateY(-20px)",
+              cursor: "pointer",
+            }}
+            transition="all .3s"
+          >
             <Fade bottom delay={300}>
               <VStack pos="relative">
                 <Image
@@ -188,7 +232,18 @@ export default function Team() {
               </VStack>
             </Fade>
           </GridItem>
-          <GridItem>
+          <GridItem
+            _active={{
+              marginTop: "0px !important",
+              cursor: "pointer",
+            }}
+            _hover={{
+              marginTop: "-20px",
+              transform: "translateY(-20px)",
+              cursor: "pointer",
+            }}
+            transition="all .3s"
+          >
             <Fade bottom delay={600}>
               <VStack pos="relative">
                 <Image
@@ -218,7 +273,18 @@ export default function Team() {
               </VStack>
             </Fade>
           </GridItem>
-          <GridItem>
+          <GridItem
+            _active={{
+              marginTop: "0px !important",
+              cursor: "pointer",
+            }}
+            _hover={{
+              marginTop: "-20px",
+              transform: "translateY(-20px)",
+              cursor: "pointer",
+            }}
+            transition="all .3s"
+          >
             <Fade bottom delay={900}>
               <VStack pos="relative">
                 <Image
