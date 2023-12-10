@@ -1,6 +1,7 @@
 import Head from "next/head";
 import localFont from "next/font/local";
 import { CNews } from "@/components";
+import { Box } from "@chakra-ui/react";
 
 const FormularFont = localFont({
   src: [
@@ -53,9 +54,11 @@ export default function News() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/assets/logo_black.png" />
       </Head>
-      <main className={FormularFont.className}>
-        <CNews />
-      </main>
+      <Box bgColor="#03020b" color="#fff">
+        <main className={FormularFont.className}>
+          <CNews />
+        </main>
+      </Box>
     </>
   );
 }

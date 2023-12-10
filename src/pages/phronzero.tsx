@@ -1,8 +1,9 @@
 import React from "react";
 import Head from "next/head";
 import localFont from "next/font/local";
-import { CRoadMap, Footer, Nav } from "@/components";
-import { Box } from "@chakra-ui/react";
+import { Nav, Footer, CPhronZero } from "@/components";
+import LightNav from "@/components/Shared/Nav/LightNav";
+import LightFooter from "@/components/Shared/Footer/LightFooter";
 
 const FormularFont = localFont({
   src: [
@@ -26,10 +27,15 @@ const FormularFont = localFont({
       weight: "700",
       style: "normal",
     },
+    {
+      path: "../assets/fonts/Formular-Black.woff",
+      weight: "900",
+      style: "normal",
+    },
   ],
 });
 
-export default function RoadMap() {
+export default function PhronZero() {
   return (
     <>
       <Head>
@@ -50,21 +56,20 @@ export default function RoadMap() {
             `,
           }}
         ></script>
-        <title>Phronesis Roadmap</title>
-        <meta name="description" content="Phronesis Road Map and Vision." />
+        <title>Phronesis PhronZero</title>
+        <meta
+          name="description"
+          content="From static to dynamic. One step beyond."
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/assets/logo_black.png" />
       </Head>
+      <LightNav />
+      <main id="phron-page" className={FormularFont.className}>
+        <CPhronZero />
+      </main>
 
-      <Nav />
-
-      <Box bgColor="#03020b" color="#fff">
-        <main id="phron-page" className={FormularFont.className}>
-          <CRoadMap />
-        </main>
-      </Box>
-
-      <Footer />
+      <LightFooter />
     </>
   );
 }

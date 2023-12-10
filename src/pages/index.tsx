@@ -58,7 +58,13 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/assets/logo_black.png" />
       </Head>
-      <Box as="main" minH="100vh" className={FormularFont.className}>
+      <Box
+        bgColor="#03020b"
+        color="#fff"
+        as="main"
+        minH="100vh"
+        className={FormularFont.className}
+      >
         <PhronesesChain />
       </Box>
     </>

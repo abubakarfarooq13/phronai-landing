@@ -14,10 +14,10 @@ import {
   MenuItem,
 } from "@chakra-ui/react";
 import { useRouter } from "next/router";
-import { Logo } from "../..";
+import DarkLogo from "../Logo/DarkLogo";
 import { Link } from "@chakra-ui/next-js";
 import { CgMenuRightAlt } from "react-icons/cg";
-import MobileDrawer from "./Drawer";
+import MobileDrawer from "./LightDrawer";
 
 export const navItems = [
   {
@@ -67,24 +67,16 @@ export const navItems = [
   // },
 ];
 
-export default function Nav() {
+export default function LightNav() {
   const { onOpen, isOpen, onClose } = useDisclosure();
 
   const router = useRouter();
 
   return (
-    <Box
-      as="nav"
-      py="5"
-      bgColor="#05010c"
-      color="#fff"
-      pos="sticky"
-      top={0}
-      zIndex="999"
-    >
+    <Box as="nav" py="5" bgColor="#fff" pos="sticky" top={0} zIndex="999">
       <Container maxW="1400px">
         <HStack justifyContent="space-between">
-          <Logo />
+          <DarkLogo />
 
           <MobileDrawer isOpen={isOpen} onOpen={onOpen} onClose={onClose} />
 
@@ -111,11 +103,11 @@ export default function Nav() {
                 Phronesis AI Foundation
               </MenuButton>
 
-              <MenuList bgColor="#05010c" border="none" mt="5" boxShadow="xl">
+              <MenuList bgColor="#fff" border="none" mt="5" boxShadow="xl">
                 {navItems.map((item) => (
                   <MenuItem
                     key={item.id}
-                    bgColor="#05010c"
+                    bgColor="#fff"
                     as={Link}
                     px="5"
                     pb="2"
@@ -131,7 +123,7 @@ export default function Nav() {
                     _focus={{
                       boxShadow: "none",
                     }}
-                    color={router.pathname === item.href ? "#6317fe" : ""}
+                    color={router.pathname === item.href ? "#6317fe" : "#000"}
                     fontSize={{ "3000px": "lg" }}
                     fontWeight={500}
                   >
@@ -147,16 +139,17 @@ export default function Nav() {
                   router.pathname === "/news" ||
                   router.pathname === "/dubai-expo-2023"
                     ? "#6317fe"
-                    : ""
+                    : "#000"
                 }
                 cursor="pointer"
+                fontWeight={500}
               >
                 News/Updates
               </MenuButton>
 
-              <MenuList bgColor="#05010c" border="none" mt="5">
+              <MenuList bgColor="#fff" border="none" mt="5" boxShadow="xl">
                 <MenuItem
-                  bgColor="#05010c"
+                  bgColor="#fff"
                   as={Link}
                   px="5"
                   pb="2"
@@ -175,7 +168,7 @@ export default function Nav() {
                   color={
                     router.pathname === "/dubai-crypto-expo-2023"
                       ? "#6317fe"
-                      : ""
+                      : "#000"
                   }
                   fontSize={{ "3000px": "lg" }}
                   fontWeight={500}
@@ -183,7 +176,7 @@ export default function Nav() {
                   Dubai Crypto Expo 2023
                 </MenuItem>
                 <MenuItem
-                  bgColor="#05010c"
+                  bgColor="#fff"
                   as={Link}
                   px="5"
                   href="/news"
@@ -198,7 +191,7 @@ export default function Nav() {
                   _focus={{
                     boxShadow: "none",
                   }}
-                  color={router.pathname === "/news" ? "#6317fe" : ""}
+                  color={router.pathname === "/news" ? "#6317fe" : "#000"}
                   fontSize={{ "3000px": "lg" }}
                   fontWeight={500}
                 >
@@ -238,7 +231,7 @@ export default function Nav() {
                 as={CLink}
                 href="https://phron.ai/whitepaper.pdf"
                 target="_blank"
-                variant="primary"
+                variant="purple-outline"
                 borderRadius="full"
                 px="8"
                 py="5"

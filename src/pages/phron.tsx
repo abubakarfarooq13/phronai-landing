@@ -1,6 +1,7 @@
 import Head from "next/head";
 import localFont from "next/font/local";
 import { CPhron } from "@/components";
+import { Box } from "@chakra-ui/react";
 
 const FormularFont = localFont({
   src: [
@@ -56,9 +57,11 @@ export default function Phron() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/assets/logo_black.png" />
       </Head>
-      <main id="phron-page" className={FormularFont.className}>
-        <CPhron />
-      </main>
+      <Box bgColor="#03020b" color="#fff">
+        <main id="phron-page" className={FormularFont.className}>
+          <CPhron />
+        </main>
+      </Box>
     </>
   );
 }
