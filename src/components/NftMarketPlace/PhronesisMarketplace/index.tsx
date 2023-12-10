@@ -96,7 +96,7 @@ export default function PhronesisMarketplace() {
               spacing="6"
             >
               <Fade left>
-                <Text
+                {/* <Text
                   textTransform="uppercase"
                   fontSize={{ base: "xs", "3000px": "lg" }}
                   lineHeight={{ base: "15px" }}
@@ -104,7 +104,7 @@ export default function PhronesisMarketplace() {
                   fontWeight={300}
                 >
                   Ownership: The new gaming standard
-                </Text>
+                </Text> */}
 
                 <Text
                   as="h1"

@@ -139,8 +139,11 @@ export default function WhyTrustUs() {
                   fontSize={{ base: "base", "3000px": "xl" }}
                   textAlign={{ base: "center", md: "start" }}
                 >
-                  NFTs will be the key to games, and the method for in-game
-                  items. Always yours, until you decide to change.
+                  {/* NFTs will be the key to games, and the method for in-game
+                  items. Always yours, until you decide to change. */}
+                  NFTs are the ultimate proof of ownership. Backed up by a
+                  perfect middleman, smart contracts hold the integrity of NFTs
+                  for future purposes
                 </Text>
                 {/* <Button
                   variant="primary-outline"
