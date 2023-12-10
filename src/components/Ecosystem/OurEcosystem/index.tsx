@@ -137,7 +137,7 @@ export default function OurEcosystem() {
                 <Box>
                   <Fade left>
                     <Image
-                      src="/assets/our-ecosystem/bridge.jpg"
+                      src="/assets/our-ecosystem/bridge.png"
                       alt="phronesis bridge"
                       width={400}
                       height={600}
