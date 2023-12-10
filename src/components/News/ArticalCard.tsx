@@ -15,7 +15,7 @@ export default function ArticalCard(props: EcoSystemCardProps) {
     imageUrl,
     title,
     description,
-    buttonText = "View Artical",
+    buttonText = "View Article",
     buttonHref,
   } = props;
   return (
