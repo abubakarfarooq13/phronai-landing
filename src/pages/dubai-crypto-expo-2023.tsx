@@ -1,5 +1,6 @@
 import Head from "next/head";
 import localFont from "next/font/local";
+import { Box } from "@chakra-ui/react";
 import { CDubaiExpo2023 } from "../components";
 
 const FormularFont = localFont({
@@ -56,9 +57,11 @@ export default function News() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/assets/logo_black.png" />
       </Head>
-      <main className={FormularFont.className}>
-        <CDubaiExpo2023 />
-      </main>
+      <Box bgColor="#03020b" color="#fff">
+        <main className={FormularFont.className}>
+          <CDubaiExpo2023 />
+        </main>
+      </Box>
     </>
   );
 }

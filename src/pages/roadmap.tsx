@@ -2,6 +2,7 @@ import React from "react";
 import Head from "next/head";
 import localFont from "next/font/local";
 import { CRoadMap, Footer, Nav } from "@/components";
+import { Box } from "@chakra-ui/react";
 
 const FormularFont = localFont({
   src: [
@@ -50,16 +51,18 @@ export default function RoadMap() {
           }}
         ></script>
         <title>Phronesis Roadmap</title>
-        <meta name="description" content="Phronesis Roadmap." />
+        <meta name="description" content="Phronesis Road Map and Vision." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/assets/logo_black.png" />
       </Head>
 
       <Nav />
 
-      <main id="phron-page" className={FormularFont.className}>
-        <CRoadMap />
-      </main>
+      <Box bgColor="#03020b" color="#fff">
+        <main id="phron-page" className={FormularFont.className}>
+          <CRoadMap />
+        </main>
+      </Box>
 
       <Footer />
     </>

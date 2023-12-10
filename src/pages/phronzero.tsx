@@ -2,6 +2,8 @@ import React from "react";
 import Head from "next/head";
 import localFont from "next/font/local";
 import { Nav, Footer, CPhronZero } from "@/components";
+import LightNav from "@/components/Shared/Nav/LightNav";
+import LightFooter from "@/components/Shared/Footer/LightFooter";
 
 const FormularFont = localFont({
   src: [
@@ -23,6 +25,11 @@ const FormularFont = localFont({
     {
       path: "../assets/fonts/Formular-Bold.woff",
       weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../assets/fonts/Formular-Black.woff",
+      weight: "900",
       style: "normal",
     },
   ],
@@ -49,17 +56,20 @@ export default function PhronZero() {
             `,
           }}
         ></script>
-        <title>Phronesis Team</title>
-        <meta name="description" content="Phronesis team." />
+        <title>Phronesis PhronZero</title>
+        <meta
+          name="description"
+          content="From static to dynamic. One step beyond."
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/assets/logo_black.png" />
       </Head>
-      <Nav />
+      <LightNav />
       <main id="phron-page" className={FormularFont.className}>
         <CPhronZero />
       </main>
 
-      <Footer />
+      <LightFooter />
     </>
   );
 }

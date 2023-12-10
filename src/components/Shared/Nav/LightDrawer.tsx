@@ -17,7 +17,7 @@ import {
 } from "@chakra-ui/react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import Logo from "../Logo";
+import DarkLogo from "../Logo/DarkLogo";
 import { navItems } from ".";
 
 interface MobileDrawerProps {
@@ -26,22 +26,21 @@ interface MobileDrawerProps {
   onOpen: () => void;
 }
 
-export default function MobileDrawer(props: MobileDrawerProps) {
+export default function LightDrawer(props: MobileDrawerProps) {
   const { isOpen, onClose, onOpen } = props;
   const router = useRouter();
-
   return (
     <>
       <Drawer isOpen={isOpen} placement="right" onClose={onClose}>
         <DrawerOverlay />
-        <DrawerContent bgColor="#03020b" color="#fff">
+        <DrawerContent bgColor="#fff">
           <DrawerCloseButton
             _focus={{
               boxShadow: "none",
             }}
           />
           <DrawerHeader p="5">
-            <Logo />
+            <DarkLogo />
           </DrawerHeader>
 
           <DrawerBody>
@@ -50,21 +49,23 @@ export default function MobileDrawer(props: MobileDrawerProps) {
                 <MenuButton
                   as={Text}
                   color={
-                    navItems.find((item) => item.href === router.pathname)
+                    router.pathname === "/news" ||
+                    router.pathname === "/dubai-crypto-expo-2023"
                       ? "#6317fe"
                       : ""
                   }
+                  fontWeight={500}
                 >
                   Phronesis AI Foundation
                 </MenuButton>
 
-                <MenuList bgColor="#6317fe" border="none">
+                <MenuList bgColor="#fff" border="none" boxShadow="xl">
                   {navItems.map((item) => (
                     <MenuItem
                       key={item.id}
-                      bgColor="#6317fe"
+                      bgColor="#fff"
                       as={Link}
-                      href="/dubai-crypto-expo-2023"
+                      href={item.href}
                       _hover={{
                         color: "#03020b",
                         outline: "none",
@@ -94,13 +95,14 @@ export default function MobileDrawer(props: MobileDrawerProps) {
                       ? "#6317fe"
                       : ""
                   }
+                  fontWeight={500}
                 >
                   News/Updates
                 </MenuButton>
 
-                <MenuList bgColor="#6317fe" border="none">
+                <MenuList bgColor="#fff" border="none" boxShadow="xl">
                   <MenuItem
-                    bgColor="#6317fe"
+                    bgColor="#fff"
                     as={Link}
                     href="/dubai-crypto-expo-2023"
                     _hover={{
@@ -124,7 +126,7 @@ export default function MobileDrawer(props: MobileDrawerProps) {
                     Dubai Crypto Expo 2023
                   </MenuItem>
                   <MenuItem
-                    bgColor="#6317fe"
+                    bgColor="#fff"
                     as={Link}
                     href="/news"
                     _hover={{
@@ -177,7 +179,7 @@ export default function MobileDrawer(props: MobileDrawerProps) {
                   as={CLink}
                   href="https://phron.ai/whitepaper.pdf"
                   target="_blank"
-                  variant="primary"
+                  variant="purple-outline"
                   borderRadius="full"
                   px="8"
                   py="5"

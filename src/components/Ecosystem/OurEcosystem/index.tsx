@@ -241,7 +241,7 @@ export default function OurEcosystem() {
                 <Fade left>
                   <Box ml={{ lg: "-20px" }}>
                     <Image
-                      src="/assets/our-ecosystem/phronesis-explorer.jpg"
+                      src="/assets/our-ecosystem/_phronesis-explorer.jpg"
                       alt="phronesis bridge"
                       width={600}
                       height={600}
