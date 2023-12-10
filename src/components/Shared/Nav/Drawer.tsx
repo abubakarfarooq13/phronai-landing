@@ -19,6 +19,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import Logo from "../Logo";
 import { navItems } from ".";
+import { IoIosArrowDown } from "react-icons/io";
 
 interface MobileDrawerProps {
   isOpen: boolean;
@@ -45,15 +46,19 @@ export default function MobileDrawer(props: MobileDrawerProps) {
           </DrawerHeader>
 
           <DrawerBody>
-            <VStack w="full" align="start">
+            <VStack w="full" align="start" spacing="5">
               <Menu>
                 <MenuButton
-                  as={Text}
+                  as={Button}
+                  variant="unstyled"
                   color={
                     navItems.find((item) => item.href === router.pathname)
                       ? "#6317fe"
                       : ""
                   }
+                  display="flex"
+                  alignItems="center"
+                  rightIcon={<IoIosArrowDown />}
                 >
                   Phronesis AI Foundation
                 </MenuButton>
@@ -64,7 +69,7 @@ export default function MobileDrawer(props: MobileDrawerProps) {
                       key={item.id}
                       bgColor="#6317fe"
                       as={Link}
-                      href="/dubai-crypto-expo-2023"
+                      href={item.href}
                       _hover={{
                         color: "#03020b",
                         outline: "none",
@@ -85,15 +90,34 @@ export default function MobileDrawer(props: MobileDrawerProps) {
                 </MenuList>
               </Menu>
 
+              <Button
+                as={Link}
+                href="/phron"
+                variant="primary-purple"
+                borderRadius="full"
+                px="8"
+                py="5"
+                w="full"
+                fontSize={{ "3000px": "lg" }}
+                textTransform="uppercase"
+              >
+                Phron
+              </Button>
+
               <Menu>
                 <MenuButton
-                  as={Text}
+                  as={Button}
+                  variant="unstyled"
+                  justifyContent="space-between"
                   color={
                     router.pathname === "/news" ||
                     router.pathname === "/dubai-crypto-expo-2023"
                       ? "#6317fe"
                       : ""
                   }
+                  display="flex"
+                  alignItems="center"
+                  rightIcon={<IoIosArrowDown />}
                 >
                   News/Updates
                 </MenuButton>
@@ -149,21 +173,8 @@ export default function MobileDrawer(props: MobileDrawerProps) {
               <VStack w="full" mt="30px">
                 <Button
                   as={Link}
-                  href="/phron"
-                  variant="primary-purple"
-                  borderRadius="full"
-                  px="8"
-                  py="5"
-                  w="full"
-                  fontSize={{ "3000px": "lg" }}
-                  textTransform="uppercase"
-                >
-                  Phron
-                </Button>
-                <Button
-                  as={Link}
                   href="/phronzero"
-                  variant="primary-purple"
+                  variant="primary"
                   borderRadius="full"
                   px="8"
                   py="5"
@@ -177,7 +188,7 @@ export default function MobileDrawer(props: MobileDrawerProps) {
                   as={CLink}
                   href="https://phron.ai/whitepaper.pdf"
                   target="_blank"
-                  variant="primary"
+                  variant="primary-purple"
                   borderRadius="full"
                   px="8"
                   py="5"

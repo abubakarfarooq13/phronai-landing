@@ -18,6 +18,7 @@ import DarkLogo from "../Logo/DarkLogo";
 import { Link } from "@chakra-ui/next-js";
 import { CgMenuRightAlt } from "react-icons/cg";
 import MobileDrawer from "./LightDrawer";
+import { IoIosArrowDown } from "react-icons/io";
 
 export const navItems = [
   {
@@ -34,6 +35,11 @@ export const navItems = [
     id: 5,
     label: "Team",
     href: "/team",
+  },
+  {
+    id: 10,
+    label: "PHRON",
+    href: "/phron",
   },
   {
     id: 3,
@@ -55,11 +61,7 @@ export const navItems = [
   //   label: "News",
   //   href: "/news",
   // },
-  // {
-  //   id: 5,
-  //   label: "PHRON",
-  //   href: "/phron",
-  // },
+
   // {
   //   id: 5,
   //   label: "PHRON",
@@ -84,14 +86,21 @@ export default function LightNav() {
             <CgMenuRightAlt size="30px" />
           </Box>
 
+          {/* <HStack
+            spacing={{ base: "20px", "2xl": "30px" }}
+            display={{ base: "none", "1350px": "flex" }}
+            fontSize={{ base: "15px", "2xl": "base" }}
+          > */}
           <HStack
+            ml="100px"
             spacing={{ base: "20px", "2xl": "30px" }}
             display={{ base: "none", "1350px": "flex" }}
             fontSize={{ base: "15px", "2xl": "base" }}
           >
             <Menu>
               <MenuButton
-                as={Text}
+                as={Button}
+                variant="unstyled"
                 color={
                   navItems.find((item) => item.href === router.pathname)
                     ? "#6317fe"
@@ -99,6 +108,9 @@ export default function LightNav() {
                 }
                 cursor="pointer"
                 fontWeight={500}
+                display="flex"
+                alignItems="center"
+                rightIcon={<IoIosArrowDown />}
               >
                 Phronesis AI Foundation
               </MenuButton>
@@ -134,7 +146,8 @@ export default function LightNav() {
             </Menu>
             <Menu>
               <MenuButton
-                as={Text}
+                as={Button}
+                variant="unstyled"
                 color={
                   router.pathname === "/news" ||
                   router.pathname === "/dubai-expo-2023"
@@ -143,6 +156,9 @@ export default function LightNav() {
                 }
                 cursor="pointer"
                 fontWeight={500}
+                display="flex"
+                alignItems="center"
+                rightIcon={<IoIosArrowDown />}
               >
                 News/Updates
               </MenuButton>
@@ -199,22 +215,26 @@ export default function LightNav() {
                 </MenuItem>
               </MenuList>
             </Menu>
+          </HStack>
 
-            <HStack ml="40px">
-              <Button
-                as={Link}
-                href="/phronzero"
-                variant="primary-purple"
-                borderRadius="full"
-                px="10"
-                py="5"
-                w="full"
-                fontSize={{ "3000px": "lg" }}
-                textTransform="uppercase"
-              >
-                PhronZero
-              </Button>
-              <Button
+          <HStack
+            display={{ base: "none", "1350px": "flex" }}
+            fontSize={{ base: "15px", "2xl": "base" }}
+          >
+            <Button
+              as={Link}
+              href="/phronzero"
+              variant="purple-outline"
+              borderRadius="full"
+              px="10"
+              py="5"
+              w="full"
+              fontSize={{ "3000px": "lg" }}
+              textTransform="uppercase"
+            >
+              PhronZero
+            </Button>
+            {/* <Button
                 as={Link}
                 href="/phron"
                 variant="primary-purple"
@@ -226,22 +246,22 @@ export default function LightNav() {
                 textTransform="uppercase"
               >
                 Phron
-              </Button>
-              <Button
-                as={CLink}
-                href="https://phron.ai/whitepaper.pdf"
-                target="_blank"
-                variant="purple-outline"
-                borderRadius="full"
-                px="8"
-                py="5"
-                w="full"
-                fontSize={{ "3000px": "lg" }}
-              >
-                Whitepaper
-              </Button>
-            </HStack>
+              </Button> */}
+            <Button
+              as={CLink}
+              href="https://phron.ai/whitepaper.pdf"
+              target="_blank"
+              variant="primary-purple"
+              borderRadius="full"
+              px="8"
+              py="5"
+              w="full"
+              fontSize={{ "3000px": "lg" }}
+            >
+              Whitepaper
+            </Button>
           </HStack>
+          {/* </HStack> */}
         </HStack>
       </Container>
     </Box>
