@@ -21,7 +21,10 @@ export default function EcosystemHero() {
   const fanImgWidth = useBreakpointValue({ base: 60, sm: 95, "3xl": 145 });
   return (
     <Box
-      backgroundImage={{ base: "/assets/header-background-mobile.jpg", lg: "" }}
+      backgroundImage={{
+        base: "/assets/header-background-mobile.jpg",
+        lg: "",
+      }}
       bgPos={{ base: "bottom", xl: "right", "3xl": "top" }}
       bgSize="cover"
       // minH="70vh"
@@ -46,6 +49,7 @@ export default function EcosystemHero() {
       <CImage
         src="/assets/header-left-shadow.png"
         pos="absolute"
+        zIndex={9}
         left={{ lg: "-200px", xl: "0px" }}
         display={{ base: "none", lg: "flex", "3400px": "none" }}
       />
@@ -55,6 +59,7 @@ export default function EcosystemHero() {
         pos="absolute"
         top="0px"
         left="0px"
+        zIndex={9}
         display={{ base: "none", lg: "flex" }}
       />
 
@@ -64,6 +69,7 @@ export default function EcosystemHero() {
         top="0px"
         left="0px"
         w="full"
+        zIndex={9}
         maxW="50%"
         display={{ base: "none", lg: "flex" }}
       />
@@ -218,7 +224,7 @@ export default function EcosystemHero() {
           lg: "-450px",
           xl: "-10%",
         }}
-        zIndex={-1}
+        // zIndex={-1}
         w={{ base: "250%", md: "160%", xl: "full" }}
       >
         <Box pos="relative">

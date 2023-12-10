@@ -88,7 +88,7 @@ export default function DubaiExpo2023() {
           src="/assets/dubai-expo-2023/phronesis_exhibition_new.png"
           w="full"
           pos="absolute"
-          zIndex={-1}
+          zIndex={1}
         />
         <CImage
           src="/assets/purple-shadow-header-top.png"
