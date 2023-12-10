@@ -87,7 +87,7 @@ export default function CPhronZero() {
             Applying the AI concept used for Phronesis Chain, an infrastructure
             has been designed to unveil the power{" "}
             <Box as="br" display={{ base: "none", md: "block" }} />
-            provided from dynamic Layer Zero, to the chains that arebenth it.
+            provided from dynamic Layer Zero, to the chains that are beneath it.
             The concept allows multiple chains to gain advantage{" "}
             <Box as="br" display={{ base: "none", md: "block" }} /> from the
             technology in a simpler way.
@@ -112,37 +112,47 @@ export default function CPhronZero() {
 
       <Container maxW="1160px">
         <Tabs variant="soft-rounded" colorScheme="green">
-          <Fade bottom>
-            <TabList justifyContent="center" flexWrap="wrap">
-              <Tab
-                px="10"
-                _selected={{
-                  bgColor: "#5b28ac",
-                  color: "#fff",
-                }}
-              >
-                Internal Infrastructure
-              </Tab>
-              <Tab
-                px="10"
-                _selected={{
-                  bgColor: "#5b28ac",
-                  color: "#fff",
-                }}
-              >
-                External Infrastructure
-              </Tab>
-              <Tab
-                px="10"
-                _selected={{
-                  bgColor: "#5b28ac",
-                  color: "#fff",
-                }}
-              >
-                Zero Chains
-              </Tab>
-            </TabList>
-          </Fade>
+          <TabList
+            w="full"
+            justifyContent={{ md: "center" }}
+            overflow="auto"
+            p="2"
+          >
+            <Tab
+              // px="10"
+              minW={{ base: "200px", md: "auto" }}
+              _selected={{
+                bgColor: "#5b28ac",
+                color: "#fff",
+              }}
+              textAlign="center"
+            >
+              Internal Infrastructure
+            </Tab>
+            <Tab
+              // px="10"
+              minW={{ base: "200px", md: "auto" }}
+              _selected={{
+                bgColor: "#5b28ac",
+                color: "#fff",
+              }}
+              textAlign="center"
+            >
+              External Infrastructure
+            </Tab>
+            <Tab
+              // px="10"
+              minW={{ base: "200px", md: "auto" }}
+              _selected={{
+                bgColor: "#5b28ac",
+                color: "#fff",
+              }}
+              textAlign="center"
+            >
+              Zero Chains
+            </Tab>
+          </TabList>
+
           <TabPanels>
             <TabPanel px="0" pt={{ base: "5", md: "10" }}>
               <VStack>

@@ -111,6 +111,7 @@ export default function LightNav() {
                 display="flex"
                 alignItems="center"
                 rightIcon={<IoIosArrowDown />}
+                fontSize="17px"
               >
                 Phronesis AI Foundation
               </MenuButton>
@@ -159,6 +160,7 @@ export default function LightNav() {
                 display="flex"
                 alignItems="center"
                 rightIcon={<IoIosArrowDown />}
+                fontSize="17px"
               >
                 News/Updates
               </MenuButton>

@@ -82,7 +82,7 @@ export default function OurEcosystem() {
             <Box>
               <Fade bottom>
                 <Image
-                  src="/assets/our-ecosystem/swap.jpg"
+                  src="/assets/our-ecosystem/swap.png"
                   alt="our ecosystem swap"
                   width={900}
                   height={500}
@@ -154,7 +154,7 @@ export default function OurEcosystem() {
                     textAlign="center"
                     color="#777"
                   >
-                    If you have not add Phronesis Chain network{" "}
+                    If you have not added Phronesis Chain network{" "}
                     <Box as="br" display={{ base: "none", lg: "block" }} /> in
                     your MetaMask yet, please click{" "}
                     <Text as="span" color="#452eaa">
@@ -183,9 +183,9 @@ export default function OurEcosystem() {
 
                 <Fade right>
                   <Text fontSize="2xl" fontWeight={500}>
-                    View your transactions{" "}
-                    <Box as="br" display={{ base: "none", lg: "block" }} />{" "}
-                    Phronesis Cross-Chain Bridge
+                    {/* View your transactions{" "} */}
+                    {/* <Box as="br" display={{ base: "none", lg: "block" }} />{" "} */}
+                    Phronesis Cross Chain Bridge
                   </Text>
                   <Text color="#c1c1c1">
                     Bridge your assets with ease from{" "}

@@ -219,7 +219,7 @@ export default function RoadMap() {
               <Text fontSize="13px" opacity=".7">
                 Using the data gathered across the different types of
                 transactions and deployments that trained the Machine Learning
-                initial code, parameters are tuned into the Coder-Decoder CNN
+                initial code, parameters are tuned into the Encoder-Decoder CNN
                 while implementing new inputs and outputs.
               </Text>
             </Box>

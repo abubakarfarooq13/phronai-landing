@@ -114,6 +114,7 @@ export default function Nav() {
                 alignItems="center"
                 fontWeight={500}
                 rightIcon={<IoIosArrowDown />}
+                fontSize="17px"
               >
                 Phronesis AI Foundation
               </MenuButton>
@@ -161,6 +162,7 @@ export default function Nav() {
                 display="flex"
                 alignItems="center"
                 rightIcon={<IoIosArrowDown />}
+                fontSize="17px"
               >
                 News/Updates
               </MenuButton>
