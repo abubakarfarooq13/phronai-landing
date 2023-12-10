@@ -46,7 +46,7 @@ export default function MobileDrawer(props: MobileDrawerProps) {
           </DrawerHeader>
 
           <DrawerBody>
-            <VStack w="full" align="start" spacing="5">
+            <VStack w="full" align="start">
               <Menu>
                 <MenuButton
                   as={Button}
@@ -89,20 +89,6 @@ export default function MobileDrawer(props: MobileDrawerProps) {
                   ))}
                 </MenuList>
               </Menu>
-
-              <Button
-                as={Link}
-                href="/phron"
-                variant="primary-purple"
-                borderRadius="full"
-                px="8"
-                py="5"
-                w="full"
-                fontSize={{ "3000px": "lg" }}
-                textTransform="uppercase"
-              >
-                Phron
-              </Button>
 
               <Menu>
                 <MenuButton
@@ -169,34 +155,33 @@ export default function MobileDrawer(props: MobileDrawerProps) {
                   </MenuItem>
                 </MenuList>
               </Menu>
-
-              <VStack w="full" mt="30px">
-                <Button
-                  as={Link}
-                  href="/phronzero"
-                  variant="primary"
-                  borderRadius="full"
-                  px="8"
-                  py="5"
-                  w="full"
-                  fontSize={{ "3000px": "lg" }}
-                  textTransform="uppercase"
-                >
-                  PhronZero
-                </Button>
-                <Button
-                  as={CLink}
-                  href="https://phron.ai/whitepaper.pdf"
-                  target="_blank"
-                  variant="primary-purple"
-                  borderRadius="full"
-                  px="8"
-                  py="5"
-                  w="full"
-                >
-                  Whitepaper
-                </Button>
-              </VStack>
+            </VStack>
+            <VStack w="full" mt="30px" spacing="4">
+              <Button
+                as={Link}
+                href="/phronzero"
+                variant="primary"
+                borderRadius="full"
+                px="8"
+                py="5"
+                w="full"
+                fontSize={{ "3000px": "lg" }}
+                textTransform="uppercase"
+              >
+                PhronZero
+              </Button>
+              <Button
+                as={CLink}
+                href="https://phron.ai/whitepaper.pdf"
+                target="_blank"
+                variant="primary-purple"
+                borderRadius="full"
+                px="8"
+                py="5"
+                w="full"
+              >
+                Whitepaper
+              </Button>
             </VStack>
           </DrawerBody>
         </DrawerContent>
