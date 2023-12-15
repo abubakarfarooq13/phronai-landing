@@ -20,7 +20,7 @@ export default function Footer() {
           flexWrap="wrap"
           spacing="10"
         >
-          <VStack align="start" spacing="5" zIndex={9999}>
+          <VStack align="start" spacing="5" zIndex={99}>
             <Logo />
             <Text
               color="#c1c1c1"

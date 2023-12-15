@@ -4,9 +4,9 @@ import Link from "next/link";
 
 export default function Logo() {
   return (
-    <Box maxW={{ base: "160px", md: "250px" }}>
+    <Box maxW={{ base: "160px", md: "230px" }} w="full">
       <Link href="/">
-        <CImage src="/assets/logo-black.png" alt="logo" w="full" />
+        <CImage src="/assets/phron-logo-black.svg" alt="logo" w="full" />
       </Link>
     </Box>
   );
