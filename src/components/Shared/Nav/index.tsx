@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   Box,
   Text,
@@ -19,6 +19,9 @@ import { Link } from "@chakra-ui/next-js";
 import { CgMenuRightAlt } from "react-icons/cg";
 import MobileDrawer from "./Drawer";
 import { IoIosArrowDown } from "react-icons/io";
+import SingleMenu from "./SingleMenu";
+
+const Fade = require("react-reveal/Fade");
 
 export const navItems = [
   {
@@ -69,20 +72,78 @@ export const navItems = [
   // },
 ];
 
+export const newsItems = [
+  {
+    id: 1,
+    label: "Dubai Crypto Expo 2023",
+    href: "/dubai-crypto-expo-2023",
+  },
+  {
+    id: 2,
+    label: "Articles",
+    href: "/news",
+  },
+];
+
+export const menu = ["Phronesis AI Foundation", "News / Updates"];
+
 export default function Nav() {
   const { onOpen, isOpen, onClose } = useDisclosure();
 
+  const [currentMenu, setCurrentMenu] = useState("Phronesis AI Foundation");
+
   const router = useRouter();
+
+  useEffect(() => {
+    if (newsItems.find((item) => item.href === router.pathname)) {
+      setCurrentMenu("News / Updates");
+    }
+
+    if (navItems.find((item) => item.href === router.pathname)) {
+      setCurrentMenu("Phronesis AI Foundation");
+    }
+
+    const body = document.body;
+    let lastScroll = 0;
+
+    window.addEventListener("scroll", () => {
+      const currentScroll = window.pageYOffset;
+
+      if (currentScroll <= 0) {
+        body.classList.remove("scroll-up");
+        return;
+      }
+
+      if (
+        currentScroll > lastScroll &&
+        !body.classList.contains("scroll-down")
+      ) {
+        body.classList.remove("scroll-up");
+        body.classList.add("scroll-down");
+      } else if (
+        currentScroll < lastScroll &&
+        body.classList.contains("scroll-down")
+      ) {
+        body.classList.remove("scroll-down");
+        body.classList.add("scroll-up");
+      }
+      lastScroll = currentScroll;
+    });
+  }, []);
 
   return (
     <Box
       as="nav"
-      py="5"
+      pt="5"
+      pb={{ base: "5", "1350px": "0" }}
       bgColor="#05010c"
       color="#fff"
-      pos="sticky"
+      pos="fixed"
       top={0}
-      zIndex="999"
+      left={0}
+      w="full"
+      zIndex={99}
+      transition="all 300ms ease-in-out"
     >
       <Container maxW="1400px">
         <HStack justifyContent="space-between">
@@ -100,125 +161,22 @@ export default function Nav() {
             fontSize={{ base: "15px", "2xl": "base" }}
             ml="100px"
           >
-            <Menu>
-              <MenuButton
-                as={Button}
+            {menu.map((item) => (
+              <Button
+                key={item}
                 variant="unstyled"
-                color={
-                  navItems.find((item) => item.href === router.pathname)
-                    ? "#6317fe"
-                    : ""
-                }
+                color={item === currentMenu ? "#6317fe" : ""}
                 cursor="pointer"
                 display="flex"
                 alignItems="center"
                 fontWeight={500}
-                rightIcon={<IoIosArrowDown />}
+                rightIcon={item === currentMenu ? <IoIosArrowDown /> : <></>}
                 fontSize="17px"
+                onClick={() => setCurrentMenu(item)}
               >
-                Phronesis AI Foundation
-              </MenuButton>
-
-              <MenuList bgColor="#05010c" border="none" mt="5" boxShadow="xl">
-                {navItems.map((item) => (
-                  <MenuItem
-                    key={item.id}
-                    bgColor="#05010c"
-                    as={Link}
-                    px="5"
-                    pb="2"
-                    href={item.href}
-                    _hover={{
-                      color: "#6317fe",
-                      outline: "none",
-                      boxShadow: "none",
-                    }}
-                    _active={{
-                      boxShadow: "none",
-                    }}
-                    _focus={{
-                      boxShadow: "none",
-                    }}
-                    color={router.pathname === item.href ? "#6317fe" : ""}
-                    fontSize={{ "3000px": "lg" }}
-                    fontWeight={500}
-                  >
-                    {item.label}
-                  </MenuItem>
-                ))}
-              </MenuList>
-            </Menu>
-            <Menu>
-              <MenuButton
-                as={Button}
-                variant="unstyled"
-                color={
-                  router.pathname === "/news" ||
-                  router.pathname === "/dubai-expo-2023"
-                    ? "#6317fe"
-                    : ""
-                }
-                cursor="pointer"
-                display="flex"
-                alignItems="center"
-                rightIcon={<IoIosArrowDown />}
-                fontSize="17px"
-              >
-                News/Updates
-              </MenuButton>
-
-              <MenuList bgColor="#05010c" border="none" mt="5">
-                <MenuItem
-                  bgColor="#05010c"
-                  as={Link}
-                  px="5"
-                  pb="2"
-                  href="/dubai-crypto-expo-2023"
-                  _hover={{
-                    color: "#6317fe",
-                    outline: "none",
-                    boxShadow: "none",
-                  }}
-                  _active={{
-                    boxShadow: "none",
-                  }}
-                  _focus={{
-                    boxShadow: "none",
-                  }}
-                  color={
-                    router.pathname === "/dubai-crypto-expo-2023"
-                      ? "#6317fe"
-                      : ""
-                  }
-                  fontSize={{ "3000px": "lg" }}
-                  fontWeight={500}
-                >
-                  Dubai Crypto Expo 2023
-                </MenuItem>
-                <MenuItem
-                  bgColor="#05010c"
-                  as={Link}
-                  px="5"
-                  href="/news"
-                  _hover={{
-                    color: "#6317fe",
-                    outline: "none",
-                    boxShadow: "none",
-                  }}
-                  _active={{
-                    boxShadow: "none",
-                  }}
-                  _focus={{
-                    boxShadow: "none",
-                  }}
-                  color={router.pathname === "/news" ? "#6317fe" : ""}
-                  fontSize={{ "3000px": "lg" }}
-                  fontWeight={500}
-                >
-                  Articles
-                </MenuItem>
-              </MenuList>
-            </Menu>
+                {item}
+              </Button>
+            ))}
           </HStack>
 
           <HStack
@@ -267,6 +225,108 @@ export default function Nav() {
           </HStack>
         </HStack>
       </Container>
+
+      {currentMenu === "Phronesis AI Foundation" ? (
+        <Fade>
+          <Box
+            display={{ base: "none", "1350px": "block" }}
+            bgColor="#5900d7"
+            mt="5"
+            borderTopColor="#26124f"
+            borderBottomColor="#26124f"
+            borderTopWidth="2px"
+            borderBottomWidth="2px"
+          >
+            <Container maxW="1400px">
+              <Stack
+                direction="row"
+                flexWrap="wrap"
+                justifyContent="flex-end"
+                alignItems="center"
+                spacing="0px"
+              >
+                {navItems.map((item) => (
+                  <Text
+                    key={item.id}
+                    as={Link}
+                    href={item.href}
+                    py="5"
+                    px="5"
+                    _hover={{
+                      bgColor: "#0e0023",
+                      outline: "none",
+                      boxShadow: "none",
+                    }}
+                    _active={{
+                      boxShadow: "none",
+                    }}
+                    _focus={{
+                      boxShadow: "none",
+                    }}
+                    bgColor={router.pathname === item.href ? "#0e0023" : "none"}
+                    color="#fff"
+                    fontSize={{ "3000px": "lg" }}
+                    fontWeight={500}
+                  >
+                    {item.label}
+                  </Text>
+                ))}
+              </Stack>
+            </Container>
+          </Box>
+        </Fade>
+      ) : null}
+
+      {currentMenu === "News / Updates" ? (
+        <Fade>
+          <Box
+            display={{ base: "none", "1350px": "block" }}
+            bgColor="#5900d7"
+            mt="5"
+            borderTopColor="#26124f"
+            borderBottomColor="#26124f"
+            borderTopWidth="2px"
+            borderBottomWidth="2px"
+          >
+            <Container maxW="1400px">
+              <Stack
+                direction="row"
+                flexWrap="wrap"
+                justifyContent="flex-end"
+                alignItems="center"
+                spacing="0px"
+              >
+                {newsItems.map((item) => (
+                  <Text
+                    key={item.id}
+                    as={Link}
+                    href={item.href}
+                    py="5"
+                    px="5"
+                    _hover={{
+                      bgColor: "#0e0023",
+                      outline: "none",
+                      boxShadow: "none",
+                    }}
+                    _active={{
+                      boxShadow: "none",
+                    }}
+                    _focus={{
+                      boxShadow: "none",
+                    }}
+                    bgColor={router.pathname === item.href ? "#0e0023" : "none"}
+                    color="#fff"
+                    fontSize={{ "3000px": "lg" }}
+                    fontWeight={500}
+                  >
+                    {item.label}
+                  </Text>
+                ))}
+              </Stack>
+            </Container>
+          </Box>
+        </Fade>
+      ) : null}
     </Box>
   );
 }

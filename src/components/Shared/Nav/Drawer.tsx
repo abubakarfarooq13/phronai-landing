@@ -1,24 +1,29 @@
 import {
   Drawer,
   DrawerBody,
-  DrawerFooter,
   DrawerHeader,
   DrawerOverlay,
   DrawerContent,
   DrawerCloseButton,
   Button,
   VStack,
-  Text,
   Link as CLink,
   Menu,
   MenuButton,
   MenuList,
   MenuItem,
+  Accordion,
+  AccordionItem,
+  AccordionButton,
+  AccordionPanel,
+  AccordionIcon,
+  HStack,
+  Text,
 } from "@chakra-ui/react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import Logo from "../Logo";
-import { navItems } from ".";
+import { navItems, newsItems } from ".";
 import { IoIosArrowDown } from "react-icons/io";
 
 interface MobileDrawerProps {
@@ -46,116 +51,88 @@ export default function MobileDrawer(props: MobileDrawerProps) {
           </DrawerHeader>
 
           <DrawerBody>
-            <VStack w="full" align="start">
-              <Menu>
-                <MenuButton
-                  as={Button}
-                  variant="unstyled"
-                  color={
-                    navItems.find((item) => item.href === router.pathname)
-                      ? "#6317fe"
-                      : ""
-                  }
-                  display="flex"
-                  alignItems="center"
-                  rightIcon={<IoIosArrowDown />}
-                >
-                  Phronesis AI Foundation
-                </MenuButton>
-
-                <MenuList bgColor="#6317fe" border="none">
-                  {navItems.map((item) => (
-                    <MenuItem
-                      key={item.id}
-                      bgColor="#6317fe"
-                      as={Link}
-                      href={item.href}
-                      _hover={{
-                        color: "#03020b",
-                        outline: "none",
-                        boxShadow: "none",
-                      }}
-                      _active={{
-                        boxShadow: "none",
-                      }}
-                      _focus={{
-                        boxShadow: "none",
-                      }}
-                      color={router.pathname === item.href ? "#03020b" : ""}
-                      fontSize={{ "3000px": "lg" }}
-                    >
-                      {item.label}
-                    </MenuItem>
-                  ))}
-                </MenuList>
-              </Menu>
-
-              <Menu>
-                <MenuButton
-                  as={Button}
-                  variant="unstyled"
-                  justifyContent="space-between"
-                  color={
-                    router.pathname === "/news" ||
-                    router.pathname === "/dubai-crypto-expo-2023"
-                      ? "#6317fe"
-                      : ""
-                  }
-                  display="flex"
-                  alignItems="center"
-                  rightIcon={<IoIosArrowDown />}
-                >
-                  News/Updates
-                </MenuButton>
-
-                <MenuList bgColor="#6317fe" border="none">
-                  <MenuItem
-                    bgColor="#6317fe"
-                    as={Link}
-                    href="/dubai-crypto-expo-2023"
-                    _hover={{
-                      color: "#03020b",
-                      outline: "none",
-                      boxShadow: "none",
-                    }}
-                    _active={{
-                      boxShadow: "none",
-                    }}
-                    _focus={{
-                      boxShadow: "none",
-                    }}
-                    color={
-                      router.pathname === "/dubai-crypto-expo-2023"
-                        ? "#03020b"
-                        : ""
-                    }
-                    fontSize={{ "3000px": "lg" }}
+            <Accordion allowMultiple w="full">
+              <AccordionItem border="0px">
+                <h2>
+                  <AccordionButton
+                    fontWeight={500}
+                    px="0"
+                    justifyContent="space-between"
                   >
-                    Dubai Crypto Expo 2023
-                  </MenuItem>
-                  <MenuItem
-                    bgColor="#6317fe"
-                    as={Link}
-                    href="/news"
-                    _hover={{
-                      color: "#03020b",
-                      outline: "none",
-                      boxShadow: "none",
-                    }}
-                    _active={{
-                      boxShadow: "none",
-                    }}
-                    _focus={{
-                      boxShadow: "none",
-                    }}
-                    color={router.pathname === "/news" ? "#03020b" : ""}
-                    fontSize={{ "3000px": "lg" }}
+                    Phronesis AI Foundation
+                    <AccordionIcon />
+                  </AccordionButton>
+                </h2>
+
+                <AccordionPanel px="0" py="10px">
+                  <VStack w="full">
+                    {navItems.map((item) => (
+                      <Text
+                        w="full"
+                        key={item.id}
+                        as={Link}
+                        href={item.href}
+                        // py="5"
+                        px="10px"
+                        _active={{
+                          boxShadow: "none",
+                        }}
+                        _focus={{
+                          boxShadow: "none",
+                        }}
+                        bgColor={
+                          router.pathname === item.href ? "#5900d7" : "none"
+                        }
+                        color={router.pathname === item.href ? "#fff" : "none"}
+                        fontSize={{ "3000px": "lg" }}
+                      >
+                        {item.label}
+                      </Text>
+                    ))}
+                  </VStack>
+                </AccordionPanel>
+              </AccordionItem>
+              <AccordionItem border="0px">
+                <h2>
+                  <AccordionButton
+                    fontWeight={500}
+                    px="0"
+                    justifyContent="space-between"
                   >
-                    Articles
-                  </MenuItem>
-                </MenuList>
-              </Menu>
-            </VStack>
+                    News / Updates
+                    <AccordionIcon />
+                  </AccordionButton>
+                </h2>
+
+                <AccordionPanel px="0" py="10px">
+                  <VStack w="full">
+                    {newsItems.map((item) => (
+                      <Text
+                        w="full"
+                        key={item.id}
+                        as={Link}
+                        href={item.href}
+                        // py="5"
+                        px="10px"
+                        _active={{
+                          boxShadow: "none",
+                        }}
+                        _focus={{
+                          boxShadow: "none",
+                        }}
+                        bgColor={
+                          router.pathname === item.href ? "#5900d7" : "none"
+                        }
+                        color={router.pathname === item.href ? "#fff" : "none"}
+                        fontSize={{ "3000px": "lg" }}
+                      >
+                        {item.label}
+                      </Text>
+                    ))}
+                  </VStack>
+                </AccordionPanel>
+              </AccordionItem>
+            </Accordion>
             <VStack w="full" mt="30px" spacing="4">
               <Button
                 as={Link}

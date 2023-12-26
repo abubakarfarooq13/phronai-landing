@@ -56,9 +56,9 @@ export default function Home() {
           content="Phronesis is the first EVM, Proof-of-Stake, Layer 1 blockchain that uses the Sophia Protocol (Artificial Intelligence Statistical Consensus Mechanism) and Indirect-LTFM (Low Transaction Fee Management) Protocol."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/assets/logo_black.png" />
       </Head>
       <Box
+        pt={{ base: "70px", "1350px": "120px" }}
         bgColor="#03020b"
         color="#fff"
         as="main"

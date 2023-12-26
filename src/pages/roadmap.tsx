@@ -53,12 +53,15 @@ export default function RoadMap() {
         <title>Phronesis Roadmap</title>
         <meta name="description" content="Phronesis Road Map and Vision." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/assets/logo_black.png" />
       </Head>
 
       <Nav />
 
-      <Box bgColor="#03020b" color="#fff">
+      <Box
+        pt={{ base: "70px", "1350px": "120px" }}
+        bgColor="#03020b"
+        color="#fff"
+      >
         <main id="phron-page" className={FormularFont.className}>
           <CRoadMap />
         </main>

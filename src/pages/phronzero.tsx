@@ -1,5 +1,6 @@
 import React from "react";
 import Head from "next/head";
+import { Box } from "@chakra-ui/react";
 import localFont from "next/font/local";
 import { Nav, Footer, CPhronZero } from "@/components";
 import LightNav from "@/components/Shared/Nav/LightNav";
@@ -62,12 +63,14 @@ export default function PhronZero() {
           content="From static to dynamic. One step beyond."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/assets/logo_black.png" />
       </Head>
       <LightNav />
-      <main id="phron-page" className={FormularFont.className}>
-        <CPhronZero />
-      </main>
+
+      <Box pt={{ base: "70px", "1350px": "120px" }}>
+        <main id="phron-page" className={FormularFont.className}>
+          <CPhronZero />
+        </main>
+      </Box>
 
       <LightFooter />
     </>

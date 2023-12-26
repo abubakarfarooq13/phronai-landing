@@ -55,9 +55,12 @@ export default function Home() {
           content="The best gadgets for the best Web 3.0 experience"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/assets/logo_black.png" />
       </Head>
-      <Box bgColor="#03020b" color="#fff">
+      <Box
+        pt={{ base: "70px", "1350px": "120px" }}
+        bgColor="#03020b"
+        color="#fff"
+      >
         <main id="ecosystem-page" className={FormularFont.className}>
           <Ecosystem />
         </main>

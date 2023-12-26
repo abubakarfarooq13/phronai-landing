@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Box,
   Text,
@@ -19,6 +19,9 @@ import { Link } from "@chakra-ui/next-js";
 import { CgMenuRightAlt } from "react-icons/cg";
 import MobileDrawer from "./LightDrawer";
 import { IoIosArrowDown } from "react-icons/io";
+import { menu, newsItems } from ".";
+
+const Fade = require("react-reveal/Fade");
 
 export const navItems = [
   {
@@ -72,10 +75,23 @@ export const navItems = [
 export default function LightNav() {
   const { onOpen, isOpen, onClose } = useDisclosure();
 
+  const [currentMenu, setCurrentMenu] = useState("Phronesis AI Foundation");
+
   const router = useRouter();
 
   return (
-    <Box as="nav" py="5" bgColor="#fff" pos="sticky" top={0} zIndex="999">
+    <Box
+      as="nav"
+      pt="5"
+      pb={{ base: "5", "1350px": "0" }}
+      bgColor="#fff"
+      pos="fixed"
+      top={0}
+      left={0}
+      zIndex="99"
+      w="full"
+      transition="all 300ms ease-in-out"
+    >
       <Container maxW="1400px">
         <HStack justifyContent="space-between">
           <DarkLogo />
@@ -97,126 +113,22 @@ export default function LightNav() {
             display={{ base: "none", "1350px": "flex" }}
             fontSize={{ base: "15px", "2xl": "base" }}
           >
-            <Menu>
-              <MenuButton
-                as={Button}
+            {menu.map((item) => (
+              <Button
+                key={item}
                 variant="unstyled"
-                color={
-                  navItems.find((item) => item.href === router.pathname)
-                    ? "#6317fe"
-                    : ""
-                }
+                color={item === currentMenu ? "#6317fe" : ""}
                 cursor="pointer"
-                fontWeight={500}
                 display="flex"
                 alignItems="center"
-                rightIcon={<IoIosArrowDown />}
-                fontSize="17px"
-              >
-                Phronesis AI Foundation
-              </MenuButton>
-
-              <MenuList bgColor="#fff" border="none" mt="5" boxShadow="xl">
-                {navItems.map((item) => (
-                  <MenuItem
-                    key={item.id}
-                    bgColor="#fff"
-                    as={Link}
-                    px="5"
-                    pb="2"
-                    href={item.href}
-                    _hover={{
-                      color: "#6317fe",
-                      outline: "none",
-                      boxShadow: "none",
-                    }}
-                    _active={{
-                      boxShadow: "none",
-                    }}
-                    _focus={{
-                      boxShadow: "none",
-                    }}
-                    color={router.pathname === item.href ? "#6317fe" : "#000"}
-                    fontSize={{ "3000px": "lg" }}
-                    fontWeight={500}
-                  >
-                    {item.label}
-                  </MenuItem>
-                ))}
-              </MenuList>
-            </Menu>
-            <Menu>
-              <MenuButton
-                as={Button}
-                variant="unstyled"
-                color={
-                  router.pathname === "/news" ||
-                  router.pathname === "/dubai-expo-2023"
-                    ? "#6317fe"
-                    : "#000"
-                }
-                cursor="pointer"
                 fontWeight={500}
-                display="flex"
-                alignItems="center"
-                rightIcon={<IoIosArrowDown />}
+                rightIcon={item === currentMenu ? <IoIosArrowDown /> : <></>}
                 fontSize="17px"
+                onClick={() => setCurrentMenu(item)}
               >
-                News/Updates
-              </MenuButton>
-
-              <MenuList bgColor="#fff" border="none" mt="5" boxShadow="xl">
-                <MenuItem
-                  bgColor="#fff"
-                  as={Link}
-                  px="5"
-                  pb="2"
-                  href="/dubai-crypto-expo-2023"
-                  _hover={{
-                    color: "#6317fe",
-                    outline: "none",
-                    boxShadow: "none",
-                  }}
-                  _active={{
-                    boxShadow: "none",
-                  }}
-                  _focus={{
-                    boxShadow: "none",
-                  }}
-                  color={
-                    router.pathname === "/dubai-crypto-expo-2023"
-                      ? "#6317fe"
-                      : "#000"
-                  }
-                  fontSize={{ "3000px": "lg" }}
-                  fontWeight={500}
-                >
-                  Dubai Crypto Expo 2023
-                </MenuItem>
-                <MenuItem
-                  bgColor="#fff"
-                  as={Link}
-                  px="5"
-                  href="/news"
-                  _hover={{
-                    color: "#6317fe",
-                    outline: "none",
-                    boxShadow: "none",
-                  }}
-                  _active={{
-                    boxShadow: "none",
-                  }}
-                  _focus={{
-                    boxShadow: "none",
-                  }}
-                  color={router.pathname === "/news" ? "#6317fe" : "#000"}
-                  fontSize={{ "3000px": "lg" }}
-                  fontWeight={500}
-                >
-                  Articles
-                </MenuItem>
-              </MenuList>
-            </Menu>
+                {item}
+              </Button>
+            ))}
           </HStack>
 
           <HStack
@@ -266,6 +178,108 @@ export default function LightNav() {
           {/* </HStack> */}
         </HStack>
       </Container>
+
+      {currentMenu === "Phronesis AI Foundation" ? (
+        <Fade>
+          <Box
+            display={{ base: "none", "1350px": "block" }}
+            bgColor="#5900d7"
+            mt="5"
+            borderTopColor="#26124f"
+            borderBottomColor="#26124f"
+            borderTopWidth="2px"
+            borderBottomWidth="2px"
+          >
+            <Container maxW="1400px">
+              <Stack
+                direction="row"
+                flexWrap="wrap"
+                justifyContent="flex-end"
+                alignItems="center"
+                spacing="0px"
+              >
+                {navItems.map((item) => (
+                  <Text
+                    key={item.id}
+                    as={Link}
+                    href={item.href}
+                    py="5"
+                    px="5"
+                    _hover={{
+                      bgColor: "#0e0023",
+                      outline: "none",
+                      boxShadow: "none",
+                    }}
+                    _active={{
+                      boxShadow: "none",
+                    }}
+                    _focus={{
+                      boxShadow: "none",
+                    }}
+                    bgColor={router.pathname === item.href ? "#0e0023" : "none"}
+                    color="#fff"
+                    fontSize={{ "3000px": "lg" }}
+                    fontWeight={500}
+                  >
+                    {item.label}
+                  </Text>
+                ))}
+              </Stack>
+            </Container>
+          </Box>
+        </Fade>
+      ) : null}
+
+      {currentMenu === "News / Updates" ? (
+        <Fade>
+          <Box
+            display={{ base: "none", "1350px": "block" }}
+            bgColor="#5900d7"
+            mt="5"
+            borderTopColor="#26124f"
+            borderBottomColor="#26124f"
+            borderTopWidth="2px"
+            borderBottomWidth="2px"
+          >
+            <Container maxW="1400px">
+              <Stack
+                direction="row"
+                flexWrap="wrap"
+                justifyContent="flex-end"
+                alignItems="center"
+                spacing="0px"
+              >
+                {newsItems.map((item) => (
+                  <Text
+                    key={item.id}
+                    as={Link}
+                    href={item.href}
+                    py="5"
+                    px="5"
+                    _hover={{
+                      bgColor: "#0e0023",
+                      outline: "none",
+                      boxShadow: "none",
+                    }}
+                    _active={{
+                      boxShadow: "none",
+                    }}
+                    _focus={{
+                      boxShadow: "none",
+                    }}
+                    bgColor={router.pathname === item.href ? "#0e0023" : "none"}
+                    color="#fff"
+                    fontSize={{ "3000px": "lg" }}
+                    fontWeight={500}
+                  >
+                    {item.label}
+                  </Text>
+                ))}
+              </Stack>
+            </Container>
+          </Box>
+        </Fade>
+      ) : null}
     </Box>
   );
 }

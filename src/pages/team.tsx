@@ -53,10 +53,13 @@ export default function Teams() {
         <title>Phronesis Team</title>
         <meta name="description" content="Phronesis Team." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/assets/logo_black.png" />
       </Head>
 
-      <Box bgColor="#03020b" color="#fff">
+      <Box
+        pt={{ base: "70px", "1350px": "120px" }}
+        bgColor="#03020b"
+        color="#fff"
+      >
         <main id="phron-page" className={FormularFont.className}>
           <CTeam />
         </main>
