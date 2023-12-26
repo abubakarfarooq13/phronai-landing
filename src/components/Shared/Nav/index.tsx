@@ -142,7 +142,7 @@ export default function Nav() {
       top={0}
       left={0}
       w="full"
-      zIndex={99}
+      zIndex={999}
       transition="all 300ms ease-in-out"
     >
       <Container maxW="1400px">
