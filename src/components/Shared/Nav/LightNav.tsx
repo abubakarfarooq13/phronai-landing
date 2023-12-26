@@ -117,7 +117,7 @@ export default function LightNav() {
               <Button
                 key={item}
                 variant="unstyled"
-                color={item === currentMenu ? "#6317fe" : ""}
+                // color={item === currentMenu ? "#6317fe" : ""}
                 cursor="pointer"
                 display="flex"
                 alignItems="center"

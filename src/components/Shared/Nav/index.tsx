@@ -165,7 +165,6 @@ export default function Nav() {
               <Button
                 key={item}
                 variant="unstyled"
-                color={item === currentMenu ? "#6317fe" : ""}
                 cursor="pointer"
                 display="flex"
                 alignItems="center"
