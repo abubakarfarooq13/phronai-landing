@@ -75,7 +75,7 @@ a:hover {
 
 .scroll-up {
 	nav {
-		filter: drop-shadow(0 -10px 20px rgb(170, 170, 170));
+		filter: drop-shadow(0 -10px 20px #5900d7);
 	}
 }
 
