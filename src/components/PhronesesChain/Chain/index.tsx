@@ -83,7 +83,8 @@ export default function Chain() {
                   color="#c1c1c1"
                   fontSize="20px"
                 >
-                  Blockchain + AI = No barriers
+                  {/* Blockchain + AI = No barriers */}
+                  From Static, to Dynamic
                 </Text>
 
                 <Button

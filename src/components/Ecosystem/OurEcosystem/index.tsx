@@ -197,14 +197,15 @@ export default function OurEcosystem() {
                 <Fade left>
                   <Box ml={{ lg: "-20px" }}>
                     <Image
-                      src="/assets/our-ecosystem/_phronesis-explorer.jpg"
+                      src="/assets/our-ecosystem/_phronesis-explorer-new.jpg"
                       alt="Phron AI bridge"
-                      width={600}
-                      height={600}
+                      width={1920}
+                      height={800}
                       style={{
                         borderLeft: "20px solid #05010c",
                         borderRight: "20px solid #05010c",
                         borderTop: "20px solid #05010c",
+                        maxWidth: "600px",
                       }}
                     />
                   </Box>
