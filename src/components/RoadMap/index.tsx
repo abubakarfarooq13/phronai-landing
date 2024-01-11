@@ -29,7 +29,7 @@ export default function RoadMap() {
       <Container maxW="1160px" pb="70px" pos="relative">
         <CImage
           display={{ base: "none", md: "block" }}
-          src="/assets/roadmap/arrow-1.png"
+          src="/assets/roadmap/arrow-new-1.png"
           alt="arrow 1"
           pos="absolute"
           w="100px"
@@ -39,7 +39,7 @@ export default function RoadMap() {
         />
         <CImage
           display={{ base: "none", md: "block" }}
-          src="/assets/roadmap/arrow-2.png"
+          src="/assets/roadmap/arrow-new-2.png"
           alt="arrow 1"
           pos="absolute"
           w="100px"
@@ -49,7 +49,7 @@ export default function RoadMap() {
         />
         <CImage
           display={{ base: "none", md: "block" }}
-          src="/assets/roadmap/arrow-3.png"
+          src="/assets/roadmap/arrow-new-3.png"
           alt="arrow 1"
           pos="absolute"
           w="100px"
@@ -59,7 +59,7 @@ export default function RoadMap() {
         />
         <CImage
           display={{ base: "none", md: "block" }}
-          src="/assets/roadmap/arrow-4.png"
+          src="/assets/roadmap/arrow-new-4.png"
           alt="arrow 1"
           pos="absolute"
           w="100px"
@@ -69,7 +69,7 @@ export default function RoadMap() {
         />
         <CImage
           display={{ base: "none", md: "block" }}
-          src="/assets/roadmap/arrow-5.png"
+          src="/assets/roadmap/arrow-new-5.png"
           alt="arrow 1"
           pos="absolute"
           w="100px"
@@ -130,7 +130,7 @@ export default function RoadMap() {
                 mb="4"
                 opacity=".9"
               >
-                Development Process: <br /> Phronesis - The Chain
+                Development Process: <br /> Phron AI - The Chain
               </Text>
 
               <Text fontSize="13px" opacity=".7">
@@ -162,7 +162,7 @@ export default function RoadMap() {
               </Text>
 
               <Text fontSize="13px" opacity=".7" mb="4">
-                The first version of the Testnet for Phronesis The Chain is
+                The first version of the Testnet for Phron AI The Chain is
                 implemented. This will provide real data from transactions and
                 usage from the public to check the system&apos;s efficiency
                 through Telemetry.
@@ -281,7 +281,7 @@ export default function RoadMap() {
                 mb="4"
                 opacity=".9"
               >
-                Phronesis: The Chain Mainnet Launch
+                Phron AI: The Chain Mainnet Launch
               </Text>
 
               <Text fontSize="13px" opacity=".7">
@@ -302,7 +302,7 @@ export default function RoadMap() {
 
               <Text fontSize="13px" opacity=".7">
                 By having available Mainnet, the official version of the PHRON
-                token in Phronesis: The Chain is publicly launched and made
+                token in Phron AI: The Chain is publicly launched and made
                 available to the public to work transactions, smart contract
                 development, and NFT Mints, among others.
               </Text>

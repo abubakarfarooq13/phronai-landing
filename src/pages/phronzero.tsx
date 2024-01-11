@@ -57,7 +57,7 @@ export default function PhronZero() {
             `,
           }}
         ></script>
-        <title>Phronesis PhronZero</title>
+        <title>Phron AI PhronZero</title>
         <meta
           name="description"
           content="From static to dynamic. One step beyond."

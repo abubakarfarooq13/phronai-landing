@@ -49,7 +49,7 @@ export default function Home() {
               `,
           }}
         ></script>
-        <title>Phronesis Ecosystem</title>
+        <title>Phron AI Ecosystem</title>
         <meta
           name="description"
           content="The best gadgets for the best Web 3.0 experience"

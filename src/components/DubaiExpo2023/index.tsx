@@ -162,9 +162,9 @@ export default function DubaiExpo2023() {
               Most Innovative Blockchain 2023
             </Text>
             <Text color="#c1c1c1" textAlign="center" fontSize="15px">
-              Phronesis received the award of the “Most Innovative Blockchain
+              Phron AI received the award of the “Most Innovative Blockchain
               2023” at the Dubai Crypto Expo 2023. The reason for the above is
-              the fact that Phronesis is the first EVM, Proof-of-Stake, Layer 1
+              the fact that Phron AI is the first EVM, Proof-of-Stake, Layer 1
               blockchain that uses the Sophia Protocol (Artificial Intelligence
               Statistical Consensus Mechanism) and Indirect-LTFM (Low
               Transaction Fee Management) Protocol.
@@ -180,7 +180,7 @@ export default function DubaiExpo2023() {
               >
                 <Box w={{ base: "full", md: "50%" }}>
                   <Text fontSize="2xl" fontWeight={500} mb="5">
-                    Phronesis Booth
+                    Phron AI Booth
                   </Text>
                   <Text color="#c1c1c1" fontSize="15px">
                     We applied our design team&apos;s masterwork to our booth
@@ -225,7 +225,7 @@ export default function DubaiExpo2023() {
                     Receiving an Award
                   </Text>
                   <Text color="#c1c1c1" fontSize="15px">
-                    Phronesis propriety layer 1 technology, utilization of
+                    Phron AI propriety layer 1 technology, utilization of
                     artificial intelligence, and introductions of three new
                     protocols were highly appreciated at the Dubai Crypto Expo
                     2023. As a result, we received an award that motivates us to

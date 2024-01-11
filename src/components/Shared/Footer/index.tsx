@@ -27,7 +27,7 @@ export default function Footer() {
               display={{ base: "none", md: "flex" }}
               fontSize={{ base: "base", "3000px": "xl" }}
             >
-              &copy; {new Date().getFullYear()} Phronesis
+              &copy; {new Date().getFullYear()} Phron AI
             </Text>
           </VStack>
           <HStack fontSize="30px" spacing="5" color="#c1c1c1">
@@ -87,7 +87,7 @@ export default function Footer() {
           </HStack>
           <Box>
             <Text color="#c1c1c1" display={{ base: "flex", md: "none" }}>
-              &copy; {new Date().getFullYear()} Phronesis
+              &copy; {new Date().getFullYear()} Phron AI
             </Text>
             <Text color="#c1c1c1" fontSize={{ base: "base", "3000px": "xl" }}>
               All rights reserved.

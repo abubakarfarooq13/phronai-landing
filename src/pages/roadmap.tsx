@@ -50,8 +50,8 @@ export default function RoadMap() {
             `,
           }}
         ></script>
-        <title>Phronesis Roadmap</title>
-        <meta name="description" content="Phronesis Road Map and Vision." />
+        <title>Phron AI Roadmap</title>
+        <meta name="description" content="Phron AI Road Map and Vision." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 

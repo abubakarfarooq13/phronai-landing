@@ -141,7 +141,7 @@ export default function PhronesisMarketplace() {
               <Fade right>
                 <Image
                   className="infinit-move-1"
-                  src="/assets/marketplace-img.png"
+                  src="/assets/market-img.png"
                   alt="marketplace-img"
                   width={307}
                   height={354}

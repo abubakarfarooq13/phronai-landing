@@ -26,7 +26,7 @@ const Fade = require("react-reveal/Fade");
 export const navItems = [
   {
     id: 2,
-    label: "Phronesis: The Chain",
+    label: "Phron AI: The Chain",
     href: "/",
   },
   {
@@ -85,12 +85,12 @@ export const newsItems = [
   },
 ];
 
-export const menu = ["Phronesis AI Foundation", "News / Updates"];
+export const menu = ["Phron AI Foundation", "News / Updates"];
 
 export default function Nav() {
   const { onOpen, isOpen, onClose } = useDisclosure();
 
-  const [currentMenu, setCurrentMenu] = useState("Phronesis AI Foundation");
+  const [currentMenu, setCurrentMenu] = useState("Phron AI Foundation");
 
   const router = useRouter();
 
@@ -100,7 +100,7 @@ export default function Nav() {
     }
 
     if (navItems.find((item) => item.href === router.pathname)) {
-      setCurrentMenu("Phronesis AI Foundation");
+      setCurrentMenu("Phron AI Foundation");
     }
 
     const body = document.body;
@@ -225,7 +225,7 @@ export default function Nav() {
         </HStack>
       </Container>
 
-      {currentMenu === "Phronesis AI Foundation" ? (
+      {currentMenu === "Phron AI Foundation" ? (
         <Fade>
           <Box
             display={{ base: "none", "1350px": "block" }}

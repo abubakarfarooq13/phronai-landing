@@ -49,8 +49,8 @@ export default function News() {
               `,
           }}
         ></script>
-        <title>Phronesis News</title>
-        <meta name="description" content="Phronesis News and Partnerships." />
+        <title>Phron AI News</title>
+        <meta name="description" content="Phron AI News and Partnerships." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <Box

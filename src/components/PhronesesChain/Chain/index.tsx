@@ -71,7 +71,8 @@ export default function Chain() {
                   fontWeight={500}
                   textAlign={{ base: "center", md: "start" }}
                 >
-                  Phronesis:{" "}
+                  {/* Phronesis:{" "} */}
+                  Phron AI:{" "}
                   <Box as="br" display={{ base: "none", md: "block" }} /> The
                   Chain
                 </Text>
@@ -125,7 +126,7 @@ export default function Chain() {
             mt="32"
             fontSize={{ base: "base", md: "lg" }}
           >
-            Phronesis is the first EVM, Proof-of-Stake, Layer 1 blockchain that
+            Phron AI is the first EVM, Proof-of-Stake, Layer 1 blockchain that
             uses the Sophia Protocol (Artificial Intelligence Statistical
             Consensus Mechanism) and Indirect-LTFM (Low Transaction Fee
             Management) Protocol.

@@ -130,7 +130,7 @@ export default function EcosystemHero() {
         <Box pos="absolute" className="infinit-move-4" bottom="40%" left="35%">
           <Fade>
             <Image
-              src="/assets/laptop-fan.png"
+              src="/assets/phron-wallet-new.png"
               width={fanImgWidth}
               height={130}
               alt="laptop-fan"
@@ -182,7 +182,7 @@ export default function EcosystemHero() {
                 fontWeight={500}
                 lineHeight={{ base: "50px", md: "60px", "3000px": "70px" }}
               >
-                Phronesis <br /> Ecosystem
+                Phron AI <br /> Ecosystem
               </Text>
 
               <Text
@@ -269,7 +269,7 @@ export default function EcosystemHero() {
           <Box pos="absolute" className="infinit-move-4" top="30%" right="50%">
             <Fade>
               <Image
-                src="/assets/laptop-fan.png"
+                src="/assets/phron-wallet-new.png"
                 width={fanImgWidth}
                 height={130}
                 alt="laptop-fan"

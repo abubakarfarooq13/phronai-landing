@@ -49,10 +49,10 @@ export default function Phron() {
               `,
           }}
         ></script>
-        <title>Phronesis PHRON</title>
+        <title>Phron AI PHRON</title>
         <meta
           name="description"
-          content="Phronesis introduces a new proprietary consensus layer alongside Machine Learning Algorithms that aims to push blockchain technology to a point of having no barriers."
+          content="Phron AI introduces a new proprietary consensus layer alongside Machine Learning Algorithms that aims to push blockchain technology to a point of having no barriers."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>

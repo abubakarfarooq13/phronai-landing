@@ -50,10 +50,10 @@ export default function Home() {
         }}
       ></script>
       <Head>
-        <title>Phronesis: The Chain</title>
+        <title>Phron AI: The Chain</title>
         <meta
           name="description"
-          content="Phronesis is the first EVM, Proof-of-Stake, Layer 1 blockchain that uses the Sophia Protocol (Artificial Intelligence Statistical Consensus Mechanism) and Indirect-LTFM (Low Transaction Fee Management) Protocol."
+          content="Phron AI is the first EVM, Proof-of-Stake, Layer 1 blockchain that uses the Sophia Protocol (Artificial Intelligence Statistical Consensus Mechanism) and Indirect-LTFM (Low Transaction Fee Management) Protocol."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>

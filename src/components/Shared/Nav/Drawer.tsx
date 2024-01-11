@@ -59,7 +59,7 @@ export default function MobileDrawer(props: MobileDrawerProps) {
                     px="0"
                     justifyContent="space-between"
                   >
-                    Phronesis AI Foundation
+                    Phron AI Foundation
                     <AccordionIcon />
                   </AccordionButton>
                 </h2>

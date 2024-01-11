@@ -50,8 +50,8 @@ export default function Teams() {
             `,
           }}
         ></script>
-        <title>Phronesis Team</title>
-        <meta name="description" content="Phronesis Team." />
+        <title>Phron AI Team</title>
+        <meta name="description" content="Phron AI Team." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 

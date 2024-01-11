@@ -26,7 +26,7 @@ const Fade = require("react-reveal/Fade");
 export const navItems = [
   {
     id: 2,
-    label: "Phronesis: The Chain",
+    label: "Phron: The Chain",
     href: "/",
   },
   {
@@ -75,7 +75,7 @@ export const navItems = [
 export default function LightNav() {
   const { onOpen, isOpen, onClose } = useDisclosure();
 
-  const [currentMenu, setCurrentMenu] = useState("Phronesis AI Foundation");
+  const [currentMenu, setCurrentMenu] = useState("Phron AI Foundation");
 
   const router = useRouter();
 
@@ -179,7 +179,7 @@ export default function LightNav() {
         </HStack>
       </Container>
 
-      {currentMenu === "Phronesis AI Foundation" ? (
+      {currentMenu === "Phron AI Foundation" ? (
         <Fade>
           <Box
             display={{ base: "none", "1350px": "block" }}

@@ -30,7 +30,7 @@ export default function OurEcosystem() {
               fontWeight={500}
               textAlign="center"
             >
-              Phronesis Ecosystem
+              Phron AI Ecosystem
             </Text>
           </Fade>
 
@@ -40,7 +40,8 @@ export default function OurEcosystem() {
             bgRepeat="no-repeat"
             bgSize="100% 100%"
             bgPos="center"
-            py="10"
+            pt="10"
+            pb="14"
             px={{ base: "4", lg: "20" }}
             textAlign="center"
             mt="10"
@@ -60,7 +61,7 @@ export default function OurEcosystem() {
             <Box>
               <Fade top>
                 <Text fontSize="2xl" fontWeight={500}>
-                  Phronesis Decentralized Exchange
+                  Phron AI Decentralized Exchange
                 </Text>
 
                 <Text fontWeight={300} color="#c1c1c1">
@@ -70,19 +71,10 @@ export default function OurEcosystem() {
               </Fade>
             </Box>
 
-            <Fade bottom>
-              <Text letterSpacing="7px">
-                <Text as="span" color="#a156ee">
-                  $PHRONESIS
-                </Text>{" "}
-                SWAP
-              </Text>
-            </Fade>
-
             <Box>
               <Fade bottom>
                 <Image
-                  src="/assets/our-ecosystem/swap.png"
+                  src="/assets/our-ecosystem/swap-new.png"
                   alt="our ecosystem swap"
                   width={900}
                   height={500}
@@ -99,12 +91,12 @@ export default function OurEcosystem() {
 
           <Box
             w="full"
-            bgImage="/assets/our-ecosystem/section-bg.png"
+            bgImage="/assets/our-ecosystem/section-2-bg.png"
             bgRepeat="no-repeat"
             bgSize="100% 100%"
             bgPos="center"
             px={{ base: "4", md: "20" }}
-            pt="20"
+            pt="60px"
             pb="10"
             mt="10"
           >
@@ -117,28 +109,8 @@ export default function OurEcosystem() {
                 <Box>
                   <Fade left>
                     <Image
-                      src="/assets/logo.png"
-                      alt="logo"
-                      width={150}
-                      height={50}
-                    />
-                  </Fade>
-                </Box>
-                <Fade left>
-                  <Text
-                    textTransform="uppercase"
-                    letterSpacing="5px"
-                    fontWeight={300}
-                    textAlign="center"
-                  >
-                    Cross-Chain Bridge
-                  </Text>
-                </Fade>
-                <Box>
-                  <Fade left>
-                    <Image
-                      src="/assets/our-ecosystem/bridge.png"
-                      alt="phronesis bridge"
+                      src="/assets/our-ecosystem/bridge-new.png"
+                      alt="Phron AI bridge"
                       width={400}
                       height={600}
                       style={{
@@ -147,22 +119,6 @@ export default function OurEcosystem() {
                     />
                   </Fade>
                 </Box>
-                <Fade left>
-                  <Text
-                    fontWeight={300}
-                    fontSize="sm"
-                    textAlign="center"
-                    color="#777"
-                  >
-                    If you have not added Phronesis Chain network{" "}
-                    <Box as="br" display={{ base: "none", lg: "block" }} /> in
-                    your MetaMask yet, please click{" "}
-                    <Text as="span" color="#452eaa">
-                      Add Network
-                    </Text>{" "}
-                    and continue
-                  </Text>
-                </Fade>
               </VStack>
 
               <VStack
@@ -185,7 +141,7 @@ export default function OurEcosystem() {
                   <Text fontSize="2xl" fontWeight={500}>
                     {/* View your transactions{" "} */}
                     {/* <Box as="br" display={{ base: "none", lg: "block" }} />{" "} */}
-                    Phronesis Cross Chain Bridge
+                    Phron AI Cross Chain Bridge
                   </Text>
                   <Text color="#c1c1c1">
                     Bridge your assets with ease from{" "}
@@ -206,7 +162,7 @@ export default function OurEcosystem() {
 
           <Box
             w="full"
-            bgImage="/assets/our-ecosystem/section-bg.png"
+            bgImage="/assets/our-ecosystem/section-3-bg.png"
             bgRepeat="no-repeat"
             bgSize="100% 100%"
             bgPos="center"
@@ -242,7 +198,7 @@ export default function OurEcosystem() {
                   <Box ml={{ lg: "-20px" }}>
                     <Image
                       src="/assets/our-ecosystem/_phronesis-explorer.jpg"
-                      alt="phronesis bridge"
+                      alt="Phron AI bridge"
                       width={600}
                       height={600}
                       style={{
@@ -274,7 +230,7 @@ export default function OurEcosystem() {
 
                 <Fade right>
                   <Text fontSize="2xl" fontWeight={500}>
-                    Phronesis Explorer
+                    Phron Explorer
                   </Text>
                   <Text color="#c1c1c1">
                     Check out all the information{" "}

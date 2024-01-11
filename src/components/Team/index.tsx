@@ -184,8 +184,7 @@ export default function Team() {
                     Igor Bershadsky
                   </Text>
                   <Text color="#c1c1c1" textTransform="uppercase" fontSize="sm">
-                    Chief Business <br />
-                    Developer Officer
+                    Business Growth Advisor
                   </Text>
                 </VStack>
               </VStack>

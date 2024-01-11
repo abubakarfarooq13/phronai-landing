@@ -70,7 +70,7 @@ export default function PhronesisMarketplace() {
                   color="#c1c1c1"
                   fontSize={{ base: "base", "3000px": "xl" }}
                 >
-                  Phronesis introduces a new proprietary consensus layer
+                  Phron AI introduces a new proprietary consensus layer
                   alongside Machine Learning Algorithms that aims to push
                   blockchain technology to a point of having no barriers.
                 </Text>
@@ -100,7 +100,7 @@ export default function PhronesisMarketplace() {
               <Fade right>
                 <Image
                   className="infinit-move-1"
-                  src="/assets/phron/coin.png"
+                  src="/assets/phron/coin-new.png"
                   alt="marketplace-img"
                   width={800}
                   height={800}

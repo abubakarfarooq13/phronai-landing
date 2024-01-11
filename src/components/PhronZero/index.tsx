@@ -31,7 +31,7 @@ export default function CPhronZero() {
               mb="2"
               color="#5b28ac"
             >
-              <Fade bottom>Phronesis</Fade>
+              <Fade bottom>Phron AI</Fade>
             </Text>
             <Text
               as="h1"
@@ -84,7 +84,7 @@ export default function CPhronZero() {
 
         <Fade bottom>
           <Text textAlign="center">
-            Applying the AI concept used for Phronesis Chain, an infrastructure
+            Applying the AI concept used for Phron AI Chain, an infrastructure
             has been designed to unveil the power{" "}
             <Box as="br" display={{ base: "none", md: "block" }} />
             provided from dynamic Layer Zero, to the chains that are beneath it.
