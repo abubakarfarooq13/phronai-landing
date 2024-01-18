@@ -261,44 +261,51 @@ export default function CProjects() {
         minH="100vh"
       >
         <Container maxW="1400px" pt="100px">
-          <Text
-            as="h1"
-            fontSize={{ base: "3xl", md: "6xl" }}
-            textAlign="center"
-            fontWeight={500}
-          >
-            PhronAI Projects
-          </Text>
-          <Text textAlign="center" mb="50px">
-            The best gadgets for the best Web 3.0 experience
-          </Text>
+          <Fade bottom>
+            <Text
+              as="h1"
+              fontSize={{ base: "3xl", md: "6xl" }}
+              textAlign="center"
+              fontWeight={500}
+            >
+              PhronAI Projects
+            </Text>
+          </Fade>
+
+          <Fade bottom>
+            <Text textAlign="center" mb="50px">
+              The best gadgets for the best Web 3.0 experience
+            </Text>
+          </Fade>
 
           <Tabs pb="100px" variant="soft-rounded">
-            <TabList
-              w="full"
-              flexWrap="wrap"
-              p="0"
-              pb="4"
-              justifyContent="center"
-            >
-              {projectTabs.map((tab) => (
-                <Tab
-                  fontWeight={400}
-                  minW={{ base: "fit-content", lg: "auto" }}
-                  color="brand.grayText"
-                  _selected={{
-                    bg: "none",
-                    borderBottomWidth: "1px",
-                    color: "#fff",
-                  }}
-                  rounded="none"
-                  key={tab.id}
-                  fontSize="base"
-                >
-                  {tab.label}
-                </Tab>
-              ))}
-            </TabList>
+            <Fade bottom>
+              <TabList
+                w="full"
+                flexWrap="wrap"
+                p="0"
+                pb="4"
+                justifyContent="center"
+              >
+                {projectTabs.map((tab) => (
+                  <Tab
+                    fontWeight={400}
+                    minW={{ base: "fit-content", lg: "auto" }}
+                    color="brand.grayText"
+                    _selected={{
+                      bg: "none",
+                      borderBottomWidth: "1px",
+                      color: "#fff",
+                    }}
+                    rounded="none"
+                    key={tab.id}
+                    fontSize="base"
+                  >
+                    {tab.label}
+                  </Tab>
+                ))}
+              </TabList>
+            </Fade>
 
             <TabPanels mt="30px">
               <TabPanel p="0">
