@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { Canvas } from "@react-three/fiber";
 import {
   Box,
   Button,
@@ -10,6 +11,7 @@ import {
   Image as CImage,
   Link as CLink,
 } from "@chakra-ui/react";
+import CanvasContainer from "@/components/3d/Chain";
 
 const Fade = require("react-reveal/Fade");
 
@@ -103,8 +105,15 @@ export default function Chain() {
               </Fade>
             </VStack>
 
-            <Box>
-              <Fade right>
+            <Box
+              h="700px"
+              w="50%"
+              position="absolute"
+              top="100px"
+              right="0px"
+              className="infinit-move-1"
+            >
+              {/* <Fade right>
                 <VStack align="center">
                   <Box maxW={{ base: "300px", md: "full" }}>
                     <Image
@@ -116,7 +125,9 @@ export default function Chain() {
                     />
                   </Box>
                 </VStack>
-              </Fade>
+              </Fade> */}
+
+              <CanvasContainer />
             </Box>
           </Stack>
           <Text
@@ -124,7 +135,7 @@ export default function Chain() {
             color="#c1c1c1"
             maxW="700px"
             mx="auto"
-            mt="32"
+            mt="96"
             fontSize={{ base: "base", md: "lg" }}
           >
             Phron AI is the first EVM, Proof-of-Stake, Layer 1 blockchain that
