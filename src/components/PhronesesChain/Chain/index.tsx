@@ -106,12 +106,12 @@ export default function Chain() {
             </VStack>
 
             <Box
-              h="700px"
-              w="50%"
-              position="absolute"
-              top="100px"
-              right="0px"
-              className="infinit-move-1"
+              h={{ base: "500px", md: "500px", xl: "700px" }}
+              w={{ base: "full", md: "50%" }}
+              // position="absolute"
+              // top="100px"
+              // right="0px"
+              // className="infinit-move-1"
             >
               {/* <Fade right>
                 <VStack align="center">
@@ -126,7 +126,6 @@ export default function Chain() {
                   </Box>
                 </VStack>
               </Fade> */}
-
               <CanvasContainer />
             </Box>
           </Stack>

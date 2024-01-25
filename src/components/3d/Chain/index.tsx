@@ -1,14 +1,16 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
-import { OrbitControls, Center, useTexture } from "@react-three/drei";
+import {
+  OrbitControls,
+  Center,
+  useTexture,
+  useCursor,
+} from "@react-three/drei";
 import { fragmentShader } from "../glsl/frag";
 import { vertexShader } from "../glsl/vert";
 import { randFloat } from "three/src/math/MathUtils.js";
 import gsap from "gsap";
 import { useControls } from "leva";
-// import { Vector3 } from "three";
-
-import RepulsiveParticles from "../Repulsive";
 
 function ParticlesGrid() {
   const [nbLines, setNbLines] = useState(20 * 18);
@@ -29,6 +31,8 @@ function ParticlesGrid() {
 
   const texture = useTexture("/assets/chain/chain.png");
 
+  const { viewport } = useThree();
+
   const vertices = useMemo(() => {
     const _vertices = [];
     const _initPosition = [];
@@ -43,19 +47,19 @@ function ParticlesGrid() {
         const point = [i, y, 0.0]; // coordinates of each points
 
         // appear from side
-        let initPoint = [
-          i / 3 -
-            halfLines +
-            randFloat(halfLines, halfLines + offsetTransition),
-          (y -
-            halfColumn -
-            randFloat(halfColumn, halfColumn + offsetTransition)) /
-            3,
-          randFloat(-50, 50),
-        ];
+        // let initPoint = [
+        //   i / 3 -
+        //     halfLines +
+        //     randFloat(halfLines, halfLines + offsetTransition),
+        //   (y -
+        //     halfColumn -
+        //     randFloat(halfColumn, halfColumn + offsetTransition)) /
+        //     3,
+        //   randFloat(-50, 50),
+        // ];
 
         // appear from z index
-        // const initPoint = [i, y, randFloat(0, 500)];
+        const initPoint = [i, y, -randFloat(0, 500)];
 
         _vertices.push(...point); // spread the coordinates for Float32Array
         _initPosition.push(...initPoint);
@@ -70,7 +74,7 @@ function ParticlesGrid() {
 
   const shaderRef: any = useRef();
 
-  const ref: any = useRef();
+  const meshRef: any = useRef();
 
   useEffect(() => {
     gsap.fromTo(
@@ -79,7 +83,7 @@ function ParticlesGrid() {
         progress: 0,
       },
       {
-        progress: 1,
+        progress: 0.98,
         duration: 2.5,
         ease: "Power4.easeOut",
         onUpdate: () => {
@@ -97,9 +101,7 @@ function ParticlesGrid() {
     );
   }, []);
 
-  useFrame((state, delta) => {
-    shaderRef.current.uniforms.uTime.value = state.clock.oldTime / 100;
-  });
+  console.log(viewport);
 
   return (
     <>
@@ -107,7 +109,7 @@ function ParticlesGrid() {
       <directionalLight color="red" position={[0, 0, 5]} />
 
       <Center>
-        <points ref={ref} position={[0, 0, 0]}>
+        <points ref={meshRef}>
           <bufferGeometry attach="geometry">
             <bufferAttribute
               attach="attributes-position"
@@ -158,14 +160,14 @@ function ParticlesGrid() {
         </points>
       </Center>
 
-      <OrbitControls enableZoom={false} />
+      <OrbitControls />
     </>
   );
 }
 
 export default function Main() {
   return (
-    <Canvas camera={{ position: [0, 0, 400] }}>
+    <Canvas camera={{ position: [0, 0, 500] }}>
       <ParticlesGrid />;
     </Canvas>
   );

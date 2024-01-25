@@ -40,6 +40,7 @@ export const fragmentShader = /* glsl */ `
   uniform float uNbLines;
   uniform float uNbColumns;
   uniform vec3 color;
+  uniform float uOpacity;
 
   float circle(vec2 uv, float border) {
     float radius = 0.5;

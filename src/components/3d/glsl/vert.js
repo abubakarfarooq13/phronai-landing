@@ -3,6 +3,7 @@ export const vertexShader = /* glsl */ `
   uniform float uProgress;
   uniform float uFrequency;
   uniform float uTime;
+  uniform vec3 uMousePos;
 
   varying vec2 vTexCoords;
 
@@ -17,8 +18,8 @@ export const vertexShader = /* glsl */ `
     transformed = initPosition + ((position - initPosition) * uProgress);
     
     // wave effect
-    transformed.z += sin(transformed.x * uFrequency + uTime) * amplitude;
-    transformed.z += sin(transformed.y * uFrequency + uTime) * amplitude;
+    // transformed.z += sin(transformed.x * uFrequency + uTime) * amplitude;
+    // transformed.z += sin(transformed.y * uFrequency + uTime) * amplitude;
    
     #include <project_vertex>
 
