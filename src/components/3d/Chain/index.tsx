@@ -160,7 +160,7 @@ function ParticlesGrid() {
         </points>
       </Center>
 
-      <OrbitControls />
+      {/* <OrbitControls /> */}
     </>
   );
 }
