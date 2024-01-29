@@ -106,7 +106,7 @@ export default function Chain() {
             </VStack>
 
             <Box
-              h={{ base: "500px", md: "500px", xl: "700px" }}
+              h={{ base: "500px", md: "500px", xl: "800px" }}
               w={{ base: "full", md: "50%" }}
               // position="absolute"
               // top="100px"
@@ -134,7 +134,7 @@ export default function Chain() {
             color="#c1c1c1"
             maxW="700px"
             mx="auto"
-            mt="96"
+            mt="40px"
             fontSize={{ base: "base", md: "lg" }}
           >
             Phron AI is the first EVM, Proof-of-Stake, Layer 1 blockchain that

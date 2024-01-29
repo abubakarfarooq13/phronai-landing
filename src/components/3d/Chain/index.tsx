@@ -76,6 +76,13 @@ function ParticlesGrid() {
 
   const meshRef: any = useRef();
 
+  // useFrame((state, delta) => {
+  //   const time = state.clock.getElapsedTime();
+
+  //   meshRef.current.rotation.x = Math.sin(time / 4);
+  //   meshRef.current.rotation.y = Math.sin(time / 2);
+  // });
+
   useEffect(() => {
     gsap.fromTo(
       set,
