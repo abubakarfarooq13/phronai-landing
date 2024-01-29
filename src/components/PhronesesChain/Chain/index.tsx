@@ -106,14 +106,14 @@ export default function Chain() {
             </VStack>
 
             <Box
-              h={{ base: "500px", md: "500px", xl: "800px" }}
-              w={{ base: "full", md: "50%" }}
+              // h={{ base: "500px", md: "500px", xl: "800px" }}
+              // w={{ base: "full", md: "50%" }}
               // position="absolute"
               // top="100px"
               // right="0px"
-              // className="infinit-move-1"
+              className="infinit-move-1"
             >
-              {/* <Fade right>
+              <Fade right>
                 <VStack align="center">
                   <Box maxW={{ base: "300px", md: "full" }}>
                     <Image
@@ -125,8 +125,8 @@ export default function Chain() {
                     />
                   </Box>
                 </VStack>
-              </Fade> */}
-              <CanvasContainer />
+              </Fade>
+              {/* <CanvasContainer /> */}
             </Box>
           </Stack>
           <Text
