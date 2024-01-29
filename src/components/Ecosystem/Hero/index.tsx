@@ -15,10 +15,10 @@ import Image from "next/image";
 const Fade = require("react-reveal/Fade");
 
 export default function EcosystemHero() {
-  const lockImgWidth = useBreakpointValue({ base: 60, sm: 95, "3xl": 135 });
+  const lockImgWidth = useBreakpointValue({ base: 60, sm: 80, "3xl": 135 });
   const cubeImgWidth = useBreakpointValue({ base: 60, sm: 100, "3xl": 135 });
-  const rocketImgWidth = useBreakpointValue({ base: 60, sm: 95, "3xl": 125 });
-  const fanImgWidth = useBreakpointValue({ base: 60, sm: 95, "3xl": 145 });
+  const rocketImgWidth = useBreakpointValue({ base: 60, sm: 80, "3xl": 125 });
+  const fanImgWidth = useBreakpointValue({ base: 60, sm: 80, "3xl": 145 });
   return (
     <Box
       backgroundImage={{
@@ -44,7 +44,7 @@ export default function EcosystemHero() {
       }}
       pos="relative"
       overflow="hidden"
-      mt={{ base: "-130px", lg: "0px" }}
+      mt={{ base: "-130px", md: "0px" }}
     >
       <CImage
         src="/assets/header-left-shadow.png"
@@ -88,7 +88,7 @@ export default function EcosystemHero() {
           className="infinit-move-1"
           pos="absolute"
           top="10%"
-          left={{ base: "18%", sm: "30%" }}
+          left={{ base: "18%", sm: "20%" }}
         >
           <Fade>
             <Image
@@ -114,7 +114,7 @@ export default function EcosystemHero() {
         <Box
           pos="absolute"
           className="infinit-move-3"
-          right={{ base: "18%", sm: "30%" }}
+          right={{ base: "18%", sm: "20%" }}
           top="20%"
         >
           <Fade>
