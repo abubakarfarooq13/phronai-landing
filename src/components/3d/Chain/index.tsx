@@ -11,12 +11,13 @@ import { vertexShader } from "../glsl/vert";
 import { randFloat } from "three/src/math/MathUtils.js";
 import gsap from "gsap";
 import { useControls } from "leva";
+import { Vector2, Vector3 } from "three";
 
 function ParticlesGrid() {
   const [nbLines, setNbLines] = useState(20 * 18);
   const [nbColumns, setNbColumns] = useState(32 * 18);
 
-  const [{ frequency, progress }, set] = useControls(() => ({
+  const [{ frequency, progress, opacity }, set] = useControls(() => ({
     frequency: {
       min: 0,
       max: 1,
@@ -27,11 +28,14 @@ function ParticlesGrid() {
       max: 1,
       value: 0,
     },
+    opacity: {
+      min: 0,
+      max: 1,
+      value: 1,
+    },
   }));
 
   const texture = useTexture("/assets/chain/chain.png");
-
-  const { viewport } = useThree();
 
   const vertices = useMemo(() => {
     const _vertices = [];
@@ -76,13 +80,6 @@ function ParticlesGrid() {
 
   const meshRef: any = useRef();
 
-  // useFrame((state, delta) => {
-  //   const time = state.clock.getElapsedTime();
-
-  //   meshRef.current.rotation.x = Math.sin(time / 4);
-  //   meshRef.current.rotation.y = Math.sin(time / 2);
-  // });
-
   useEffect(() => {
     gsap.fromTo(
       set,
@@ -108,32 +105,43 @@ function ParticlesGrid() {
     );
   }, []);
 
-  console.log(viewport);
-
   return (
     <>
       <ambientLight intensity={0.5} />
       <directionalLight color="red" position={[0, 0, 5]} />
 
       <Center>
-        <points ref={meshRef}>
+        <points
+          ref={meshRef}
+          onPointerMove={(e) => {
+            console.log(e);
+            shaderRef.current.uniforms.uMousePos.value.x = e.x;
+            shaderRef.current.uniforms.uMousePos.value.y = e.y;
+          }}
+          onPointerLeave={(e) => {
+            shaderRef.current.uniforms.uMousePos.value.x = -150;
+            shaderRef.current.uniforms.uMousePos.value.y = -150;
+          }}
+        >
           <bufferGeometry attach="geometry">
             <bufferAttribute
               attach="attributes-position"
               count={vertices.vertices.length / 3}
               array={vertices.vertices}
               itemSize={3}
+              onUpdate={(self) => (self.needsUpdate = true)}
             />
             <bufferAttribute
               attach="attributes-initPosition"
               count={vertices.initPosition.length / 3}
               array={vertices.initPosition}
               itemSize={3}
+              onUpdate={(self) => (self.needsUpdate = true)}
             />
           </bufferGeometry>
 
           <shaderMaterial
-            key={`${frequency} ${progress}`}
+            key={`${frequency} ${progress} ${opacity}`}
             ref={shaderRef}
             vertexShader={vertexShader}
             fragmentShader={fragmentShader}
@@ -159,6 +167,9 @@ function ParticlesGrid() {
               uTime: {
                 value: 0,
               },
+              uMousePos: {
+                value: new Vector3(),
+              },
             }}
             transparent={true}
             depthTest={false}
@@ -167,7 +178,7 @@ function ParticlesGrid() {
         </points>
       </Center>
 
-      {/* <OrbitControls /> */}
+      <OrbitControls enableDamping />
     </>
   );
 }

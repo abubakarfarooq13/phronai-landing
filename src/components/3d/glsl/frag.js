@@ -40,7 +40,10 @@ export const fragmentShader = /* glsl */ `
   uniform float uNbLines;
   uniform float uNbColumns;
   uniform vec3 color;
-  uniform float uOpacity;
+
+  varying float uOpacity;
+
+  varying float vOpacity;
 
   float circle(vec2 uv, float border) {
     float radius = 0.5;
@@ -70,6 +73,8 @@ export const fragmentShader = /* glsl */ `
 
     gl_FragColor = texture;
 
-    gl_FragColor.a *= circle(gl_PointCoord, 0.2);
+    // gl_FragColor = vec4(texture.rgb, texture.a * vOpacity);
+
+    gl_FragColor.a *= circle(gl_PointCoord, .2);
   }
 `;
