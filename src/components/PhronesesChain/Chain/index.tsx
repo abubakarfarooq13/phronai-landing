@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import { Canvas } from "@react-three/fiber";
 import {
   Box,
   Button,
@@ -11,7 +10,6 @@ import {
   Image as CImage,
   Link as CLink,
 } from "@chakra-ui/react";
-import CanvasContainer from "@/components/3d/Chain";
 
 const Fade = require("react-reveal/Fade");
 
@@ -108,13 +106,9 @@ export default function Chain() {
             <Box
               h={{ base: "500px", md: "500px", xl: "800px" }}
               w={{ base: "full", md: "50%" }}
-              // position="absolute"
-              // top="100px"
-              // right="0px"
-              // className="infinit-move-1"
             >
-              {/* <Fade right>
-                <VStack align="center">
+              <Fade right>
+                <VStack align="center" display={{ base: "flex", lg: "none" }}>
                   <Box maxW={{ base: "300px", md: "full" }}>
                     <Image
                       className="infinit-move-1"
@@ -125,8 +119,16 @@ export default function Chain() {
                     />
                   </Box>
                 </VStack>
-              </Fade> */}
-              <CanvasContainer />
+              </Fade>
+
+              <Box
+                as="canvas"
+                display={{
+                  base: "none",
+                  lg: "block",
+                }}
+                id="chain"
+              ></Box>
             </Box>
           </Stack>
           <Text
