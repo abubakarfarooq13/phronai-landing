@@ -233,7 +233,13 @@ export default function EcosystemHero() {
             src="/assets/_header-background-with-ball.jpg"
           />
 
-          <Box className="infinit-move-1" pos="absolute" top="16%" left="38%">
+          <Box
+            className="infinit-move-1"
+            pos="absolute"
+            top="16%"
+            left="38%"
+            display={{ base: "none", md: "block" }}
+          >
             <Fade>
               <Image
                 src="/assets/lock.png"
@@ -244,7 +250,13 @@ export default function EcosystemHero() {
               />
             </Fade>
           </Box>
-          <Box pos="absolute" top="10%" right="47%" className="infinit-move-2">
+          <Box
+            pos="absolute"
+            top="10%"
+            right="47%"
+            className="infinit-move-2"
+            display={{ base: "none", md: "block" }}
+          >
             <Fade>
               <Image
                 src="/assets/cube.png"
@@ -255,7 +267,13 @@ export default function EcosystemHero() {
               />
             </Fade>
           </Box>
-          <Box pos="absolute" className="infinit-move-3" top="16%" right="38%">
+          <Box
+            pos="absolute"
+            className="infinit-move-3"
+            top="16%"
+            right="38%"
+            display={{ base: "none", md: "block" }}
+          >
             <Fade>
               <Image
                 src="/assets/rocket.png"
@@ -266,7 +284,13 @@ export default function EcosystemHero() {
               />
             </Fade>
           </Box>
-          <Box pos="absolute" className="infinit-move-4" top="30%" right="50%">
+          <Box
+            pos="absolute"
+            className="infinit-move-4"
+            top="30%"
+            right="50%"
+            display={{ base: "none", md: "block" }}
+          >
             <Fade>
               <Image
                 src="/assets/phron-wallet-new.png"

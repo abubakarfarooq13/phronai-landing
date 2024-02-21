@@ -1,6 +1,5 @@
-import React from "react";
-import Image from "next/image";
-import { Canvas } from "@react-three/fiber";
+import React, { useEffect, useRef } from "react";
+import NextImage from "next/image";
 import {
   Box,
   Button,
@@ -11,11 +10,170 @@ import {
   Image as CImage,
   Link as CLink,
 } from "@chakra-ui/react";
-import CanvasContainer from "@/components/3d/Chain";
 
 const Fade = require("react-reveal/Fade");
 
 export default function Chain() {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+
+  useEffect(() => {
+    // const canvas = document.querySelector("canvas#chain");
+
+    if (canvasRef.current) {
+      const ctx = canvasRef.current.getContext("2d");
+
+      const img = new Image();
+      img.src = "/assets/chain/chain.png";
+
+      const PARTICLE_DIAMETER = 4;
+      const particles: any[] = [];
+      const darkeningFactor = 0.9; // This will darken the color by 20%
+
+      img.addEventListener("load", () => {
+        if (canvasRef.current && ctx) {
+          // making canvas size same as image
+          canvasRef.current.width = img.width;
+          canvasRef.current.height = img.height;
+
+          // drawing image on canvas
+          ctx.drawImage(img, 0, 0);
+
+          // getting image data
+
+          // 0,0 are top-left coordinates on the canvas
+          const imageData = ctx.getImageData(0, 0, img.width, img.height).data;
+
+          const numRows = Math.round(img.height / PARTICLE_DIAMETER);
+          const numColumns = Math.round(img.width / PARTICLE_DIAMETER);
+
+          for (let row = 0; row < numRows; row++) {
+            for (let column = 0; column < numColumns; column++) {
+              const pixelIndex =
+                (row * PARTICLE_DIAMETER * img.width +
+                  column * PARTICLE_DIAMETER) *
+                4;
+
+              const red = imageData[pixelIndex];
+              const green = imageData[pixelIndex + 1];
+              const blue = imageData[pixelIndex + 2];
+              const alpha = imageData[pixelIndex + 3];
+
+              if (Math.random() > 0.2) {
+                particles.push({
+                  x: Math.floor(Math.random() * numColumns * PARTICLE_DIAMETER),
+                  y: Math.floor(Math.random() * numRows * PARTICLE_DIAMETER),
+                  originX: column * PARTICLE_DIAMETER + PARTICLE_DIAMETER / 2,
+                  originY: row * PARTICLE_DIAMETER + PARTICLE_DIAMETER / 2,
+                  // color: `rgba(${67}, ${46}, ${100}, ${alpha / 255})`,
+                  color: `rgba(${red * darkeningFactor}, ${
+                    green * darkeningFactor
+                  }, ${blue * darkeningFactor}, ${alpha / 255})`,
+                  //   color: `#381B82`,
+                });
+              }
+            }
+          }
+
+          drawParticles();
+        }
+      });
+
+      // @ts-ignore
+      function drawParticles() {
+        if (canvasRef.current && ctx) {
+          ctx.clearRect(
+            0,
+            0,
+            canvasRef.current.width,
+            canvasRef.current.height
+          );
+
+          particles.forEach((particle) => {
+            ctx.beginPath();
+            ctx.arc(
+              particle.x,
+              particle.y,
+              PARTICLE_DIAMETER / 2,
+              0,
+              Math.PI * 2
+            );
+            ctx.fillStyle = particle.color;
+            ctx.fill();
+          });
+
+          requestAnimationFrame(drawParticles);
+        }
+        updateParticles();
+      }
+
+      let mouseX = Infinity;
+      let mouseY = Infinity;
+
+      if (canvasRef.current) {
+        canvasRef.current.addEventListener("mousemove", function (event) {
+          mouseX = event.offsetX;
+          mouseY = event.offsetY;
+        });
+
+        canvasRef.current.addEventListener("mouseleave", function () {
+          mouseX = Infinity;
+          mouseY = Infinity;
+        });
+      }
+
+      // @ts-ignore
+      function updateParticles() {
+        const REPEL_RADIUS = 60;
+        const REPEL_SPEED = 10;
+        const REPEL_RETURN_SPEED = 0.05;
+        const DISPLACEMENT_AMOUNT = 1.5; // Adjust this value as needed
+
+        particles.forEach((particle) => {
+          const distanceFromMouseX = mouseX - particle.x;
+          const distanceFromMouseY = mouseY - particle.y;
+          const distanceFromMouse = Math.sqrt(
+            distanceFromMouseX ** 2 + distanceFromMouseY ** 2
+          );
+
+          if (distanceFromMouse < REPEL_RADIUS) {
+            const angle = Math.atan2(distanceFromMouseY, distanceFromMouseX);
+            const force = (REPEL_RADIUS - distanceFromMouse) / REPEL_RADIUS;
+
+            // Invert the direction of movement
+            const moveX = -Math.cos(angle) * force;
+            const moveY = -Math.sin(angle) * force;
+
+            particle.x += moveX * REPEL_SPEED; // Use addition instead of subtraction
+            particle.y += moveY * REPEL_SPEED; // Use addition instead of subtraction
+          } else if (
+            particle.x !== particle.originX ||
+            particle.y !== particle.originY
+          ) {
+            const distanceFromOriginX = particle.originX - particle.x;
+            const distanceFromOriginY = particle.originY - particle.y;
+
+            const distanceFromOrigin = Math.sqrt(
+              distanceFromOriginX ** 2 + distanceFromOriginY ** 2
+            );
+
+            const angle = Math.atan2(distanceFromOriginY, distanceFromOriginX);
+            const moveX =
+              Math.cos(angle) * distanceFromOrigin * REPEL_RETURN_SPEED;
+            const moveY =
+              Math.sin(angle) * distanceFromOrigin * REPEL_RETURN_SPEED;
+
+            particle.x += moveX;
+            particle.y += moveY;
+
+            // Add small random displacement when returning to original position
+            particle.x += (Math.random() - 0.5) * DISPLACEMENT_AMOUNT;
+            particle.y += (Math.random() - 0.5) * DISPLACEMENT_AMOUNT;
+          }
+        });
+      }
+    }
+  }, []);
+
   return (
     <Box id="nft-marketplace" pos="relative" overflow="hidden">
       <Box
@@ -106,17 +264,13 @@ export default function Chain() {
             </VStack>
 
             <Box
-              // h={{ base: "500px", md: "500px", xl: "800px" }}
-              // w={{ base: "full", md: "50%" }}
-              // position="absolute"
-              // top="100px"
-              // right="0px"
-              className="infinit-move-1"
+              h={{ base: "500px", md: "500px", xl: "800px" }}
+              w={{ base: "full", md: "50%" }}
             >
               <Fade right>
-                <VStack align="center">
+                <VStack align="center" display={{ base: "flex", lg: "none" }}>
                   <Box maxW={{ base: "300px", md: "full" }}>
-                    <Image
+                    <NextImage
                       className="infinit-move-1"
                       src="/assets/chain/chain.png"
                       alt="marketplace-img"
@@ -126,7 +280,16 @@ export default function Chain() {
                   </Box>
                 </VStack>
               </Fade>
-              {/* <CanvasContainer /> */}
+
+              <Box
+                ref={canvasRef}
+                as="canvas"
+                display={{
+                  base: "none",
+                  lg: "block",
+                }}
+                id="chain"
+              ></Box>
             </Box>
           </Stack>
           <Text

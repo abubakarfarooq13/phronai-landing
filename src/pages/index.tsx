@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import { Box } from "@chakra-ui/react";
 import { CHome, Ecosystem, NftMarketPlace, PhronesesChain } from "@/components";
 import Script from "next/script";
+import { useEffect } from "react";
 
 const FormularFont = localFont({
   src: [
@@ -32,12 +33,11 @@ const FormularFont = localFont({
 export default function Home() {
   return (
     <>
-      {/* eslint-disable-next-line @next/next/next-script-for-ga */}
-      <script
+      <Script
         async
         src="https://www.googletagmanager.com/gtag/js?id=G-B3SKQRMJ1F"
-      ></script>
-      <script
+      ></Script>
+      <Script
         id="google-tags"
         dangerouslySetInnerHTML={{
           __html: `
@@ -48,7 +48,8 @@ export default function Home() {
               gtag('config', 'G-B3SKQRMJ1F');
               `,
         }}
-      ></script>
+      ></Script>
+      {/* <Script defer type="module" src="/canvas.js"></Script> */}
       <Head>
         <title>Phron AI: The Chain</title>
         <meta
