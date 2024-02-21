@@ -34,11 +34,11 @@ export const navItems = [
     label: "RoadMap",
     href: "/roadmap",
   },
-  {
-    id: 5,
-    label: "Team",
-    href: "/team",
-  },
+  // {
+  //   id: 5,
+  //   label: "Team",
+  //   href: "/team",
+  // },
   {
     id: 10,
     label: "PHRON",

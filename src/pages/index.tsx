@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import { Box } from "@chakra-ui/react";
 import { CHome, Ecosystem, NftMarketPlace, PhronesesChain } from "@/components";
 import Script from "next/script";
+import { useEffect } from "react";
 
 const FormularFont = localFont({
   src: [
@@ -48,7 +49,7 @@ export default function Home() {
               `,
         }}
       ></Script>
-      <Script src="/canvas.js"></Script>
+      {/* <Script defer type="module" src="/canvas.js"></Script> */}
       <Head>
         <title>Phron AI: The Chain</title>
         <meta
