@@ -25,7 +25,7 @@ export default function Chain() {
       const img = new Image();
       img.src = "/assets/chain/chain.png";
 
-      const PARTICLE_DIAMETER = 5;
+      const PARTICLE_DIAMETER = 6;
       const particles: any[] = [];
       const darkeningFactor = 0.9; // This will darken the color by 20%
       const REPEL_RADIUS = 60;
@@ -79,9 +79,9 @@ export default function Chain() {
                 originX: column * PARTICLE_DIAMETER + PARTICLE_DIAMETER / 2,
                 originY: row * PARTICLE_DIAMETER + PARTICLE_DIAMETER / 2,
                 // color: `rgba(${128}, ${0}, ${128}, ${alpha / 255})`,
-                color: `rgba(${sharpenedR}, ${sharpenedG}, ${sharpenedB}, ${
-                  alpha / 255
-                })`,
+                color: `rgba(${sharpenedR + 3}, ${sharpenedG + 3}, ${
+                  sharpenedB + 3
+                }, ${alpha / 255})`,
                 //   color: `#381B82`,
               });
             }
