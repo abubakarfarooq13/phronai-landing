@@ -66,12 +66,12 @@ export default function Chain() {
 
               // }
               // Calculate the average intensity
-              let intensity = (red + green + blue) / 3;
+              // let intensity = (red + green + blue) / 3;
 
-              // Adjust saturation and brightness
-              let sharpenedR = red + (intensity - red) * 0.3;
-              let sharpenedG = green + (intensity - green) * 0.3;
-              let sharpenedB = blue + (intensity - blue) * 0.3;
+              // // Adjust saturation and brightness
+              // let sharpenedR = red + (intensity - red) * 0.3;
+              // let sharpenedG = green + (intensity - green) * 0.3;
+              // let sharpenedB = blue + (intensity - blue) * 0.3;
 
               particles.push({
                 x: Math.floor(Math.random() * numColumns * PARTICLE_DIAMETER),
@@ -79,9 +79,7 @@ export default function Chain() {
                 originX: column * PARTICLE_DIAMETER + PARTICLE_DIAMETER / 2,
                 originY: row * PARTICLE_DIAMETER + PARTICLE_DIAMETER / 2,
                 // color: `rgba(${128}, ${0}, ${128}, ${alpha / 255})`,
-                color: `rgba(${sharpenedR + 3}, ${sharpenedG + 3}, ${
-                  sharpenedB + 3
-                }, ${alpha / 255})`,
+                color: `rgba(${red}, ${green}, ${blue}, ${alpha / 255})`,
                 //   color: `#381B82`,
               });
             }
