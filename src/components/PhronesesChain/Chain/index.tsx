@@ -31,7 +31,7 @@ export default function Chain() {
       const REPEL_RADIUS = 60;
       const REPEL_SPEED = 10;
       const REPEL_RETURN_SPEED = 0.15;
-      const DISPLACEMENT_AMOUNT = 0.8; // Adjust this value as needed
+      const DISPLACEMENT_AMOUNT = 1.5; // Adjust this value as needed
 
       img.addEventListener("load", () => {
         if (canvasRef.current && ctx) {
