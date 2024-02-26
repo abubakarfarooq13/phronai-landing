@@ -30,7 +30,7 @@ export default function Chain() {
       const darkeningFactor = 0.9; // This will darken the color by 20%
       const REPEL_RADIUS = 60;
       const REPEL_SPEED = 10;
-      const REPEL_RETURN_SPEED = 0.18;
+      const REPEL_RETURN_SPEED = 0.15;
       const DISPLACEMENT_AMOUNT = 0.8; // Adjust this value as needed
 
       img.addEventListener("load", () => {
