@@ -25,9 +25,13 @@ export default function Chain() {
       const img = new Image();
       img.src = "/assets/chain/chain.png";
 
-      const PARTICLE_DIAMETER = 4;
+      const PARTICLE_DIAMETER = 5;
       const particles: any[] = [];
       const darkeningFactor = 0.9; // This will darken the color by 20%
+      const REPEL_RADIUS = 60;
+      const REPEL_SPEED = 10;
+      const REPEL_RETURN_SPEED = 0.15;
+      const DISPLACEMENT_AMOUNT = 1.5; // Adjust this value as needed
 
       img.addEventListener("load", () => {
         if (canvasRef.current && ctx) {
@@ -58,19 +62,28 @@ export default function Chain() {
               const blue = imageData[pixelIndex + 2];
               const alpha = imageData[pixelIndex + 3];
 
-              if (Math.random() > 0.2) {
-                particles.push({
-                  x: Math.floor(Math.random() * numColumns * PARTICLE_DIAMETER),
-                  y: Math.floor(Math.random() * numRows * PARTICLE_DIAMETER),
-                  originX: column * PARTICLE_DIAMETER + PARTICLE_DIAMETER / 2,
-                  originY: row * PARTICLE_DIAMETER + PARTICLE_DIAMETER / 2,
-                  // color: `rgba(${67}, ${46}, ${100}, ${alpha / 255})`,
-                  color: `rgba(${red * darkeningFactor}, ${
-                    green * darkeningFactor
-                  }, ${blue * darkeningFactor}, ${alpha / 255})`,
-                  //   color: `#381B82`,
-                });
-              }
+              // if (Math.random() > 0.5) {
+
+              // }
+              // Calculate the average intensity
+              let intensity = (red + green + blue) / 3;
+
+              // Adjust saturation and brightness
+              let sharpenedR = red + (intensity - red) * 0.3;
+              let sharpenedG = green + (intensity - green) * 0.3;
+              let sharpenedB = blue + (intensity - blue) * 0.3;
+
+              particles.push({
+                x: Math.floor(Math.random() * numColumns * PARTICLE_DIAMETER),
+                y: Math.floor(Math.random() * numRows * PARTICLE_DIAMETER),
+                originX: column * PARTICLE_DIAMETER + PARTICLE_DIAMETER / 2,
+                originY: row * PARTICLE_DIAMETER + PARTICLE_DIAMETER / 2,
+                // color: `rgba(${128}, ${0}, ${128}, ${alpha / 255})`,
+                color: `rgba(${sharpenedR}, ${sharpenedG}, ${sharpenedB}, ${
+                  alpha / 255
+                })`,
+                //   color: `#381B82`,
+              });
             }
           }
 
@@ -123,11 +136,6 @@ export default function Chain() {
 
       // @ts-ignore
       function updateParticles() {
-        const REPEL_RADIUS = 60;
-        const REPEL_SPEED = 10;
-        const REPEL_RETURN_SPEED = 0.05;
-        const DISPLACEMENT_AMOUNT = 1.5; // Adjust this value as needed
-
         particles.forEach((particle) => {
           const distanceFromMouseX = mouseX - particle.x;
           const distanceFromMouseY = mouseY - particle.y;
