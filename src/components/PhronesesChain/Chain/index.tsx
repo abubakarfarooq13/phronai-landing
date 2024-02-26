@@ -25,7 +25,7 @@ export default function Chain() {
       const img = new Image();
       img.src = "/assets/chain/chain.png";
 
-      const PARTICLE_DIAMETER = 4;
+      const PARTICLE_DIAMETER = 3;
       const particles: any[] = [];
       const darkeningFactor = 0.9; // This will darken the color by 20%
       const REPEL_RADIUS = 60;
