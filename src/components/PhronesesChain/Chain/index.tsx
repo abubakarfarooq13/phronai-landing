@@ -174,8 +174,8 @@ export default function Chain() {
             particle.y += moveY;
 
             // Add small random displacement when returning to original position
-            particle.x += (Math.random() - 0.5) * DISPLACEMENT_AMOUNT;
-            particle.y += (Math.random() - 0.5) * DISPLACEMENT_AMOUNT;
+            // particle.x += (Math.random() - 0.5) * DISPLACEMENT_AMOUNT;
+            // particle.y += (Math.random() - 0.5) * DISPLACEMENT_AMOUNT;
           }
         });
       }
