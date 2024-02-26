@@ -102,16 +102,23 @@ export default function Chain() {
           );
 
           particles.forEach((particle) => {
-            ctx.beginPath();
-            ctx.arc(
-              particle.x,
-              particle.y,
-              PARTICLE_DIAMETER / 2,
-              0,
-              Math.PI * 2
-            );
+            // ctx.beginPath();
+            // ctx.arc(
+            //   particle.x,
+            //   particle.y,
+            //   PARTICLE_DIAMETER / 2,
+            //   0,
+            //   Math.PI * 2
+            // );
+            // ctx.fillStyle = particle.color;
+            // ctx.fill();
             ctx.fillStyle = particle.color;
-            ctx.fill();
+            ctx.fillRect(
+              particle.x - PARTICLE_DIAMETER / 2, // x-coordinate of the top-left corner
+              particle.y - PARTICLE_DIAMETER / 2, // y-coordinate of the top-left corner
+              PARTICLE_DIAMETER, // width of the rectangle
+              PARTICLE_DIAMETER // height of the rectangle
+            );
           });
 
           requestAnimationFrame(drawParticles);
