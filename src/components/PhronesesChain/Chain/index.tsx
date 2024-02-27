@@ -36,8 +36,10 @@ export default function Chain() {
       img.addEventListener("load", () => {
         if (canvasRef.current && ctx) {
           // making canvas size same as image
-          canvasRef.current.width = img.width;
-          canvasRef.current.height = img.height;
+          // canvasRef.current.width = img.width;
+          // canvasRef.current.height = img.height;
+          canvasRef.current.width = 700;
+          canvasRef.current.height = 900;
 
           // drawing image on canvas
           ctx.drawImage(img, 0, 0);
@@ -175,8 +177,8 @@ export default function Chain() {
             const moveY =
               Math.sin(angle) * distanceFromOrigin * REPEL_RETURN_SPEED;
 
-            particle.x += moveX;
-            particle.y += moveY;
+            particle.x += moveX + 15;
+            particle.y += moveY + 13;
 
             // Add small random displacement when returning to original position
             // particle.x += (Math.random() - 0.5) * DISPLACEMENT_AMOUNT;
@@ -295,6 +297,8 @@ export default function Chain() {
               </Fade>
 
               <Box
+                mt="-100px"
+                ml="-100px"
                 ref={canvasRef}
                 as="canvas"
                 display={{
