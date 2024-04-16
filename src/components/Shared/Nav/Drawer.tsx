@@ -134,7 +134,7 @@ export default function MobileDrawer(props: MobileDrawerProps) {
               </AccordionItem>
             </Accordion>
             <VStack w="full" mt="30px" spacing="4">
-              <Button
+              {/* <Button
                 as={Link}
                 href="/phronzero"
                 variant="primary"
@@ -146,7 +146,7 @@ export default function MobileDrawer(props: MobileDrawerProps) {
                 textTransform="uppercase"
               >
                 PhronZero
-              </Button>
+              </Button> */}
               <Button
                 as={CLink}
                 href="https://phron.ai/whitepaper.pdf"

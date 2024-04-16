@@ -238,7 +238,9 @@ export default function Team() {
             </Text>
           </Button> */}
 
-          <a className="btn">{/* Contact Us Button */}</a>
+          <a className="btn" href="mailto:info@phron.ai">
+            {/* Contact Us Button */}
+          </a>
         </VStack>
 
         <VStack mt="20">
@@ -292,9 +294,9 @@ export default function Team() {
               type="email"
             />
             <Button
-              as={CLink}
-              href="https://phron.ai/whitepaper.pdf"
-              target="_blank"
+              // as={CLink}
+              // href="https://phron.ai/whitepaper.pdf"
+              // target="_blank"
               variant="primary"
               px="6"
               py="3"

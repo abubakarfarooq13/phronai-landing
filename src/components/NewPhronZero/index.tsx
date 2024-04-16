@@ -33,7 +33,7 @@ export default function CPhronZero() {
             direction={{ base: "column-reverse", lg: "row" }}
             justifyContent="space-between"
             alignItems="center"
-            spacing={{ base: "10", lg: "20" }}
+            spacing={{ base: "10", lg: "10" }}
           >
             <VStack
               zIndex={1}
@@ -48,13 +48,13 @@ export default function CPhronZero() {
                   fontSize={{ base: "2xl", md: "4xl" }}
                   textTransform="uppercase"
                   fontWeight={300}
-                  textAlign={{ base: "center", md: "start" }}
+                  textAlign={{ base: "center", lg: "start" }}
                   letterSpacing="1px"
                 >
                   One Step Beyond <br /> With Artificial <br /> Intelligence
                 </Text>
 
-                <Button
+                {/* <Button
                   mt={{ base: "5", md: "0" }}
                   as={CLink}
                   href="https://phron.ai/whitepaper.pdf"
@@ -68,16 +68,18 @@ export default function CPhronZero() {
                   <Text as="span" pr="2">
                     Get Started
                   </Text>
-                </Button>
+                </Button> */}
               </Fade>
             </VStack>
-            <Image
-              className="infinit-move-1"
-              src="/assets/phronzero/hero-image.png"
-              alt="marketplace-img"
-              width={800}
-              height={654}
-            />
+            <Box maxW={{ base: "550px", xl: "900px" }}>
+              <Image
+                className="infinit-move-1"
+                src="/assets/phronzero/hero-image.png"
+                alt="marketplace-img"
+                width={1500}
+                height={1054}
+              />
+            </Box>
           </Stack>
 
           {/* --------------------- */}
@@ -629,9 +631,9 @@ export default function CPhronZero() {
                 type="email"
               />
               <Button
-                as={CLink}
-                href="https://phron.ai/whitepaper.pdf"
-                target="_blank"
+                // as={CLink}
+                // href="https://phron.ai/whitepaper.pdf"
+                // target="_blank"
                 variant="primary"
                 px="6"
                 py="3"
