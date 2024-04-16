@@ -78,6 +78,9 @@ export default function CPhronZero() {
                 alt="marketplace-img"
                 width={1500}
                 height={1054}
+                style={{
+                  marginLeft: "-14px",
+                }}
               />
             </Box>
           </Stack>
