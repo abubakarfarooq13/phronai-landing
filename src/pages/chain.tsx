@@ -52,13 +52,14 @@ export default function Home() {
       ></Script>
       {/* <Script defer type="module" src="/canvas.js"></Script> */}
       <Head>
-        <title>Welcome to PhronZero</title>
+        <title>Phron AI: The Chain</title>
         <meta
           name="description"
-          content="One step beyond with artificial intelligence."
+          content="From static to dynamic. One step beyond."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
+
       <Box
         pt={{ base: "70px", "1350px": "120px" }}
         bgColor="#03020b"
@@ -67,8 +68,7 @@ export default function Home() {
         minH="100vh"
         className={FormularFont.className}
       >
-        {/* <PhronesesChain /> */}
-        <NewPhronZero />
+        <PhronesesChain />
       </Box>
     </>
   );

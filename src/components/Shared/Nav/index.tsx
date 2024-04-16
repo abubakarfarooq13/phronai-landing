@@ -26,8 +26,13 @@ const Fade = require("react-reveal/Fade");
 export const navItems = [
   {
     id: 2,
-    label: "Phron AI: The Chain",
+    label: "PhronZero",
     href: "/",
+  },
+  {
+    id: 2,
+    label: "Phron AI: The Chain",
+    href: "/chain",
   },
   {
     id: 5,
@@ -53,6 +58,11 @@ export const navItems = [
     id: 4,
     label: "NFT Marketplace",
     href: "/marketplace",
+  },
+  {
+    id: 4,
+    label: "Our Team",
+    href: "/team",
   },
   // {
   //   id: 14,
@@ -164,7 +174,7 @@ export default function Nav() {
             spacing={{ base: "20px", "2xl": "30px" }}
             display={{ base: "none", "1350px": "flex" }}
             fontSize={{ base: "15px", "2xl": "base" }}
-            ml="100px"
+            ml="0px"
           >
             {menu.map((item) => (
               <Button
@@ -187,7 +197,7 @@ export default function Nav() {
             display={{ base: "none", "1350px": "flex" }}
             fontSize={{ base: "15px", "2xl": "base" }}
           >
-            <Button
+            {/* <Button
               as={Link}
               href="/phronzero"
               variant="primary"
@@ -199,7 +209,7 @@ export default function Nav() {
               textTransform="uppercase"
             >
               PhronZero
-            </Button>
+            </Button> */}
             {/* <Button
                 as={Link}
                 href="/phron"

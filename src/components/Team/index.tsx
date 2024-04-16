@@ -3,23 +3,20 @@ import Image from "next/image";
 import {
   Box,
   Text,
-  Grid,
-  GridItem,
   Container,
   VStack,
   Button,
-  useBreakpointValue,
   Link as CLink,
-  Image as CImage,
-  HStack,
   WrapItem,
   Wrap,
+  Stack,
+  Input,
 } from "@chakra-ui/react";
 import { Nav } from "..";
-import { PHRON_INFO_EMAIL } from "@/constant";
 import Link from "next/link";
 import { FaLinkedin } from "react-icons/fa";
 import { BsArrowRightCircleFill } from "react-icons/bs";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 const Fade = require("react-reveal/Fade");
 
@@ -116,83 +113,93 @@ export default function Team() {
         </Fade>
 
         <Wrap mt="10" mb="20" spacing="8" justify="center">
-          {team.map((member) => (
+          {team.map((member, i) => (
             <WrapItem
-              key={member.id}
-              transition="all .3s"
-              bgImage="/assets/team/background.png"
-              backgroundSize="100% 100%"
-              overflow="hidden"
-              rounded="xl"
-              minH="250px"
+              maxW={{ base: "430px", md: "350px", lg: "430px" }}
               position="relative"
               w="full"
-              maxW="430px"
+              rounded="xl"
+              key={member.id}
+              minH={{ base: "300px", sm: "250px" }}
               mb="5"
+              overflow="hidden"
             >
-              <Image
-                src={member.image}
-                alt={member.name + " image "}
-                width={member.imageWidth}
-                height={member.imageHeight}
-                style={{
-                  position: "absolute",
-                  bottom: "0px",
-                }}
-              />
-              <VStack
-                position="absolute"
-                top="45%"
-                left="190px"
-                align="flex-start"
-                spacing="2"
-                mt="-50px"
-              >
-                <Image
-                  src="/assets/team/text-logo.png"
-                  alt="text logo"
-                  width={80}
-                  height={40}
-                  style={{
-                    marginBottom: "10px",
-                  }}
-                />
-                <Text fontSize="lg" textTransform="uppercase">
-                  {member.name}
-                </Text>
-                <Text color="#777" maxW="200px">
-                  {member.role}
-                </Text>
-              </VStack>
-              <Text
-                as={Link}
-                href={member.linkedinUrl}
-                position="absolute"
-                bottom="4"
-                right="4"
-                display="flex"
-                alignItems="center"
-                justifyContent="center"
-                border="1px"
-                borderColor="rgba(169, 76, 203, .3)"
-                rounded="full"
-                px="5"
-                py="2"
-                _hover={{
-                  background: "rgba(169, 76, 203, .3)",
-                }}
-              >
-                <Text as="span" fontSize="sm" fontWeight={700}>
-                  Linked
-                </Text>{" "}
-                <FaLinkedin fontSize="16px" />{" "}
-                <BsArrowRightCircleFill
-                  fontSize="18px"
-                  style={{
-                    marginLeft: "10px",
-                  }}
-                />
-              </Text>
+              <Fade bottom delay={i * 100}>
+                <Box
+                  transition="all .3s"
+                  bgImage="/assets/team/background.png"
+                  backgroundSize="100% 100%"
+                  rounded="2xl"
+                  minH={{ base: "300px", sm: "250px" }}
+                  maxW="430px"
+                  overflow="hidden"
+                >
+                  <Image
+                    src={member.image}
+                    alt={member.name + " image "}
+                    width={member.imageWidth}
+                    height={member.imageHeight}
+                    style={{
+                      position: "absolute",
+                      bottom: "0px",
+                    }}
+                  />
+                  <VStack
+                    position="absolute"
+                    top={{ base: "45%", md: "35%", lg: "45%" }}
+                    left="190px"
+                    align="flex-start"
+                    spacing="2"
+                    mt="-50px"
+                    pr="5"
+                  >
+                    <Image
+                      src="/assets/team/text-logo.png"
+                      alt="text logo"
+                      width={80}
+                      height={40}
+                      style={{
+                        marginBottom: "10px",
+                      }}
+                    />
+                    <Text fontSize="lg" textTransform="uppercase">
+                      {member.name}
+                    </Text>
+                    <Text color="#777" maxW="200px">
+                      {member.role}
+                    </Text>
+                  </VStack>
+                  <Text
+                    as={Link}
+                    href={member.linkedinUrl}
+                    position="absolute"
+                    bottom="4"
+                    right="4"
+                    display="flex"
+                    alignItems="center"
+                    justifyContent="center"
+                    border="1px"
+                    borderColor="rgba(169, 76, 203, .3)"
+                    rounded="full"
+                    px="5"
+                    py="2"
+                    _hover={{
+                      background: "rgba(169, 76, 203, .3)",
+                    }}
+                  >
+                    <Text as="span" fontSize="sm" fontWeight={700}>
+                      Linked
+                    </Text>{" "}
+                    <FaLinkedin fontSize="16px" />{" "}
+                    <BsArrowRightCircleFill
+                      fontSize="18px"
+                      style={{
+                        marginLeft: "10px",
+                      }}
+                    />
+                  </Text>
+                </Box>
+              </Fade>
             </WrapItem>
           ))}
         </Wrap>
@@ -235,12 +242,72 @@ export default function Team() {
         </VStack>
 
         <VStack mt="20">
-          <Image
-            src="/assets/logo-icon.png"
-            alt="logo icon"
-            width={80}
-            height={80}
-          />
+          <Box mb="4">
+            <Image
+              src="/assets/phronzero-logo-2.png"
+              alt="phronzero logo"
+              width={300}
+              height={400}
+            />
+          </Box>
+
+          <Text
+            as="h2"
+            fontSize="2xl"
+            textTransform="uppercase"
+            letterSpacing="1px"
+            fontWeight={300}
+            mb="5"
+          >
+            SignUp For The Portal Newsletter
+          </Text>
+
+          <Stack
+            // bgImage="/assets/phronzero/input-bg.png"
+            // bgSize="cover"
+            // bgPos="center"
+            px="2"
+            py="2"
+            bgColor="rgba(21, 9, 44, .5)"
+            rounded={{ base: "12px", sm: "full" }}
+            border="1px"
+            borderColor="rgba(75, 66, 97, .5)"
+            w="full"
+            maxW="400px"
+            h={{ sm: "45px" }}
+            direction={{ base: "column", sm: "row" }}
+            alignItems={{ sm: "center" }}
+          >
+            <Input
+              border="0px"
+              _focus={{
+                boxShadow: "none",
+              }}
+              placeholder="EMAIL"
+              _placeholder={{
+                color: "#4b4261",
+              }}
+              fontFamily="inherit"
+              bg="transparent"
+              type="email"
+            />
+            <Button
+              as={CLink}
+              href="https://phron.ai/whitepaper.pdf"
+              target="_blank"
+              variant="primary"
+              px="6"
+              py="3"
+              rounded="full"
+              rightIcon={<FaArrowRightLong />}
+              fontWeight={400}
+              size="sm"
+            >
+              <Text as="span" pr="2">
+                Sign Up
+              </Text>
+            </Button>
+          </Stack>
         </VStack>
       </Container>
     </Box>

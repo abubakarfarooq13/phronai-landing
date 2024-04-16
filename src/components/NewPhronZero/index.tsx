@@ -1,0 +1,654 @@
+import React from "react";
+import Image from "next/image";
+import {
+  Container,
+  Text,
+  VStack,
+  Box,
+  Tabs,
+  TabList,
+  TabPanels,
+  Tab,
+  TabPanel,
+  Button,
+  Stack,
+  Link as CLink,
+  Grid,
+  GridItem,
+  Input,
+  HStack,
+} from "@chakra-ui/react";
+import { Footer, Nav } from "..";
+import { FaArrowRightLong } from "react-icons/fa6";
+
+const Fade = require("react-reveal/Fade");
+
+export default function CPhronZero() {
+  return (
+    <>
+      <Nav />
+      <Box>
+        <Container maxW="1300px" pt={{ base: "50px", md: "100px" }} mb="100px">
+          <Stack
+            direction={{ base: "column-reverse", lg: "row" }}
+            justifyContent="space-between"
+            alignItems="center"
+            spacing={{ base: "10", lg: "20" }}
+          >
+            <VStack
+              zIndex={1}
+              pt={{ md: "20px", lg: "100px" }}
+              w={{ base: "full", md: "50%" }}
+              align={{ base: "center", md: "start" }}
+              spacing={{ base: "3", md: "6" }}
+            >
+              <Fade left>
+                <Text
+                  as="h1"
+                  fontSize={{ base: "2xl", md: "4xl" }}
+                  textTransform="uppercase"
+                  fontWeight={300}
+                  textAlign={{ base: "center", md: "start" }}
+                  letterSpacing="1px"
+                >
+                  One Step Beyond <br /> With Artificial <br /> Intelligence
+                </Text>
+
+                <Button
+                  mt={{ base: "5", md: "0" }}
+                  as={CLink}
+                  href="https://phron.ai/whitepaper.pdf"
+                  target="_blank"
+                  variant="primary"
+                  px="6"
+                  py="4"
+                  rounded="full"
+                  rightIcon={<FaArrowRightLong />}
+                >
+                  <Text as="span" pr="2">
+                    Get Started
+                  </Text>
+                </Button>
+              </Fade>
+            </VStack>
+            <Image
+              className="infinit-move-1"
+              src="/assets/phronzero/hero-image.png"
+              alt="marketplace-img"
+              width={800}
+              height={654}
+            />
+          </Stack>
+
+          {/* --------------------- */}
+
+          <Tabs variant="soft-rounded" colorScheme="green">
+            <TabList
+              w="full"
+              justifyContent={{ md: "center" }}
+              overflow="auto"
+              p="2"
+              mt="24"
+            >
+              <Tab
+                // px="10"
+                minW={{ base: "200px", md: "auto" }}
+                _selected={{
+                  color: "#fff",
+                  background: "linear-gradient(to right, #a159b7, #1245d9)",
+                }}
+                textAlign="center"
+                textTransform="uppercase"
+                fontWeight={300}
+                className="btn"
+                _before={{
+                  content: `'Adaptive AI Staking'`,
+                  fontSize: "16px",
+                }}
+                backgroundImage="linear-gradient(to right, #4A5568, #4A5568)"
+                width="100%"
+                height="50px"
+              >
+                Adaptive AI Staking
+              </Tab>
+              {/* <Tab
+                // px="10"
+                minW={{ base: "200px", md: "auto" }}
+                _selected={{
+                  color: "#fff",
+                  background: "linear-gradient(to right, #a159b7, #1245d9)",
+                }}
+                textAlign="center"
+                textTransform="uppercase"
+                fontWeight={300}
+                className="btn"
+                _before={{
+                  content: `'Nomination Pools'`,
+                  fontSize: "16px",
+                }}
+                backgroundImage="linear-gradient(to right, #4A5568, #4A5568)"
+                width="100%"
+                height="50px"
+                mx="4"
+              >
+                Nomination Pools
+              </Tab> */}
+              <Tab
+                // px="10"
+                minW={{ base: "200px", md: "auto" }}
+                _selected={{
+                  color: "#fff",
+                  background: "linear-gradient(to right, #a159b7, #1245d9)",
+                }}
+                textAlign="center"
+                textTransform="uppercase"
+                fontWeight={300}
+                className="btn"
+                _before={{
+                  content: `'Node Black Sharing'`,
+                  fontSize: "16px",
+                }}
+                backgroundImage="linear-gradient(to right, #4A5568, #4A5568)"
+                width="100%"
+                height="50px"
+                mx="4"
+              >
+                Node Black Sharing
+              </Tab>
+              <Tab
+                // px="10"
+                minW={{ base: "200px", md: "auto" }}
+                _selected={{
+                  color: "#fff",
+                  background: "linear-gradient(to right, #a159b7, #1245d9)",
+                }}
+                textAlign="center"
+                textTransform="uppercase"
+                fontWeight={300}
+                className="btn"
+                _before={{
+                  content: `'Layer 1 Minter'`,
+                  fontSize: "16px",
+                }}
+                backgroundImage="linear-gradient(to right, #4A5568, #4A5568)"
+                width="100%"
+                height="50px"
+              >
+                Layer 1 Minter
+              </Tab>
+            </TabList>
+
+            <TabPanels>
+              <TabPanel px="0" pt="10">
+                <VStack>
+                  <Image
+                    src="/assets/phronzero-text.png"
+                    alt="phronzero text"
+                    width={200}
+                    height={150}
+                  />
+                  <Text
+                    as="h2"
+                    fontSize="4xl"
+                    textTransform="uppercase"
+                    letterSpacing="1px"
+                    fontWeight={300}
+                    mb="5"
+                    textAlign="center"
+                  >
+                    Adaptive Ai Staking
+                  </Text>
+                  <Text
+                    textAlign="center"
+                    color="#838383"
+                    fontSize={{ base: "base", md: "xl" }}
+                  >
+                    Staking to the most efficient nodes.
+                  </Text>
+                  <Text
+                    textAlign="center"
+                    color="#838383"
+                    fontSize={{ base: "base", md: "xl" }}
+                    mb="5"
+                  >
+                    Creating the best value fo stakers and node providers.
+                  </Text>
+
+                  <Box maxW={{ base: "80px", md: "200px" }}>
+                    <Image
+                      src="/assets/phronzero/box.png"
+                      alt="box"
+                      width={200}
+                      height={200}
+                      style={{
+                        // maxWidth: "200px",
+                        zIndex: 10,
+                        position: "relative",
+                      }}
+                      className="infinit-move-1"
+                    />
+                  </Box>
+
+                  <Box
+                    maxWidth="900px"
+                    marginTop={{ base: "-50px", md: "-120px" }}
+                  >
+                    <Image
+                      src="/assets/phronzero/adaptive-ai-staking.png"
+                      alt="adaptive ai staking image"
+                      width={2700}
+                      height={1900}
+                      style={{}}
+                    />
+                  </Box>
+                </VStack>
+              </TabPanel>
+              {/* <TabPanel px="0" pt="10"></TabPanel> */}
+              <TabPanel px="0" pt="10">
+                <VStack>
+                  <Image
+                    src="/assets/phronzero-text.png"
+                    alt="phronzero text"
+                    width={200}
+                    height={150}
+                  />
+                  <Text
+                    as="h2"
+                    fontSize="4xl"
+                    textTransform="uppercase"
+                    letterSpacing="1px"
+                    fontWeight={300}
+                    mb="5"
+                    textAlign="center"
+                  >
+                    Node Block Sharing
+                  </Text>
+                  <Text
+                    color="#838383"
+                    fontSize={{ base: "base", md: "xl" }}
+                    mb="5"
+                    textAlign="center"
+                  >
+                    Optimize Node usage between different Layer&apos;s!
+                  </Text>
+                  <Box maxW={{ base: "100px", md: "300px" }}>
+                    <Image
+                      src="/assets/phronzero/3-boxes.png"
+                      alt="box"
+                      width={300}
+                      height={300}
+                      style={{
+                        // maxWidth: "300px",
+                        zIndex: 10,
+                        position: "relative",
+                      }}
+                      className="infinit-move-1"
+                    />
+                  </Box>
+
+                  <Box
+                    maxWidth="900px"
+                    marginTop={{ base: "-50px", md: "-120px" }}
+                  >
+                    <Image
+                      src="/assets/phronzero/node-black-sharing.png"
+                      alt="node black sharing"
+                      width={2700}
+                      height={1900}
+                    />
+                  </Box>
+                </VStack>
+              </TabPanel>
+              <TabPanel px="0" pt="10">
+                <VStack>
+                  <Image
+                    src="/assets/phronzero-text.png"
+                    alt="phronzero text"
+                    width={200}
+                    height={150}
+                  />
+                  <Text
+                    as="h2"
+                    fontSize="4xl"
+                    textTransform="uppercase"
+                    letterSpacing="1px"
+                    fontWeight={300}
+                    mb="5"
+                  >
+                    Layer 1 Minter
+                  </Text>
+
+                  <Box maxWidth={{ base: "100px", md: "200px" }}>
+                    <Image
+                      src="/assets/phronzero/layer-1-minter.png"
+                      alt="box"
+                      width={400}
+                      height={400}
+                      style={{
+                        zIndex: 10,
+                        position: "relative",
+                      }}
+                      className="infinit-move-1"
+                    />
+                  </Box>
+
+                  <Grid
+                    gridTemplateColumns={{
+                      base: "repeat(1, 1fr)",
+                      sm: "repeat(2, 1fr)",
+                    }}
+                    bgImage="/assets/phronzero/black-blur-bg.png"
+                    bgSize="100% 100%"
+                    px={{ base: "4", md: "10" }}
+                    pb={{ base: "4", md: "10" }}
+                    pt="28"
+                    bgPos="center"
+                    w="full"
+                    maxW="1000px"
+                    gap="5"
+                    position="relative"
+                    mt={{ base: "-80px", md: "-110px" }}
+                    rounded="2xl"
+                  >
+                    <GridItem
+                      bgImage="/assets/phronzero/card-black-bg.png"
+                      bgSize="100% 100%"
+                      bgPos="center"
+                      px="10"
+                      py="12"
+                      position="relative"
+                      rounded="2xl"
+                    >
+                      <VStack
+                        align={{ base: "center", lg: "flex-start" }}
+                        textAlign={{ base: "center", lg: "left" }}
+                      >
+                        <Box
+                          maxWidth="100px"
+                          display={{ base: "block", lg: "none" }}
+                        >
+                          <Image
+                            className="infinit-move-4"
+                            src="/assets/phronzero/card-1-img.png"
+                            alt="card 1 image"
+                            width={200}
+                            height={200}
+                          />
+                        </Box>
+                        <Text
+                          mb={{ lg: "3" }}
+                          fontSize="18px"
+                          letterSpacing="1px"
+                          textTransform="uppercase"
+                          opacity=".7"
+                        >
+                          Less Time Layer 1
+                        </Text>
+                        <Text opacity=".5" letterSpacing=".5px">
+                          Create your Layer 1 in Minutes
+                        </Text>
+                      </VStack>
+
+                      <Box
+                        maxWidth="100px"
+                        position="absolute"
+                        top="20px"
+                        right="20px"
+                        display={{ base: "none", lg: "flex" }}
+                      >
+                        <Image
+                          className="infinit-move-4"
+                          src="/assets/phronzero/card-1-img.png"
+                          alt="card 1 image"
+                          width={200}
+                          height={200}
+                        />
+                      </Box>
+                    </GridItem>
+                    <GridItem
+                      bgImage="/assets/phronzero/card-black-bg.png"
+                      bgSize="100% 100%"
+                      bgPos="center"
+                      px="10"
+                      py="12"
+                      position="relative"
+                      rounded="2xl"
+                    >
+                      <VStack
+                        align={{ base: "center", lg: "flex-start" }}
+                        textAlign={{ base: "center", lg: "left" }}
+                      >
+                        <Box
+                          maxWidth="100px"
+                          display={{ base: "block", lg: "none" }}
+                        >
+                          <Image
+                            className="infinit-move-2"
+                            src="/assets/phronzero/card-2-img.png"
+                            alt="card 2 image"
+                            width={200}
+                            height={200}
+                          />
+                        </Box>
+                        <Text
+                          mb={{ lg: "3" }}
+                          fontSize="18px"
+                          letterSpacing="1px"
+                          textTransform="uppercase"
+                          opacity=".7"
+                        >
+                          AI Enhancement
+                        </Text>
+                        <Text opacity=".5" letterSpacing=".5px">
+                          Select AI parameters for the best performance
+                        </Text>
+                      </VStack>
+
+                      <Box
+                        maxWidth="100px"
+                        position="absolute"
+                        top="20px"
+                        right="20px"
+                        display={{ base: "none", lg: "block" }}
+                      >
+                        <Image
+                          className="infinit-move-2"
+                          src="/assets/phronzero/card-2-img.png"
+                          alt="card 2 image"
+                          width={200}
+                          height={200}
+                        />
+                      </Box>
+                    </GridItem>
+                    <GridItem
+                      bgImage="/assets/phronzero/card-black-bg.png"
+                      bgSize="100% 100%"
+                      bgPos="center"
+                      px="10"
+                      py="12"
+                      position="relative"
+                      rounded="2xl"
+                    >
+                      <VStack
+                        align={{ base: "center", lg: "flex-start" }}
+                        textAlign={{ base: "center", lg: "left" }}
+                      >
+                        <Box
+                          maxWidth="100px"
+                          display={{ base: "block", lg: "none" }}
+                        >
+                          <Image
+                            className="infinit-move-3"
+                            src="/assets/phronzero/card-3-img.png"
+                            alt="card 3 image"
+                            width={200}
+                            height={200}
+                          />
+                        </Box>
+                        <Text
+                          mb={{ lg: "3" }}
+                          fontSize="18px"
+                          letterSpacing="1px"
+                          textTransform="uppercase"
+                          opacity=".7"
+                        >
+                          Shared Nodes
+                        </Text>
+                        <Text opacity=".5" letterSpacing=".5px">
+                          Get shared Nodes for an initial low cost
+                          initialization
+                        </Text>
+                      </VStack>
+
+                      <Box
+                        maxWidth="100px"
+                        position="absolute"
+                        top="20px"
+                        right="20px"
+                        display={{ base: "none", lg: "block" }}
+                      >
+                        <Image
+                          className="infinit-move-3"
+                          src="/assets/phronzero/card-3-img.png"
+                          alt="card 3 image"
+                          width={200}
+                          height={200}
+                        />
+                      </Box>
+                    </GridItem>
+                    <GridItem
+                      bgImage="/assets/phronzero/card-black-bg.png"
+                      bgSize="100% 100%"
+                      bgPos="center"
+                      px="10"
+                      py="12"
+                      position="relative"
+                      rounded="2xl"
+                    >
+                      <VStack
+                        align={{ base: "center", lg: "flex-start" }}
+                        textAlign={{ base: "center", lg: "left" }}
+                      >
+                        <Box
+                          maxWidth="60px"
+                          display={{ base: "block", lg: "none" }}
+                        >
+                          <Image
+                            className="infinit-move-4"
+                            src="/assets/phronzero/card-4-img.png"
+                            alt="card 4 image"
+                            width={150}
+                            height={150}
+                          />
+                        </Box>
+                        <Text
+                          mb={{ lg: "3" }}
+                          fontSize="18px"
+                          letterSpacing="1px"
+                          textTransform="uppercase"
+                          opacity=".7"
+                        >
+                          Audit +
+                        </Text>
+                        <Text opacity=".5" letterSpacing=".5px">
+                          Receive an automated auditing report for your freshly
+                          minted L1!
+                        </Text>
+                      </VStack>
+
+                      <Box
+                        maxWidth="60px"
+                        position="absolute"
+                        top="20px"
+                        right="20px"
+                        display={{ base: "none", lg: "block" }}
+                      >
+                        <Image
+                          className="infinit-move-4"
+                          src="/assets/phronzero/card-4-img.png"
+                          alt="card 4 image"
+                          width={150}
+                          height={150}
+                        />
+                      </Box>
+                    </GridItem>
+                  </Grid>
+                </VStack>
+              </TabPanel>
+            </TabPanels>
+          </Tabs>
+
+          <VStack mt="20">
+            <Box mb="4">
+              <Image
+                src="/assets/phronzero-logo-2.png"
+                alt="phronzero logo"
+                width={300}
+                height={400}
+              />
+            </Box>
+
+            <Text
+              as="h2"
+              fontSize="2xl"
+              textTransform="uppercase"
+              letterSpacing="1px"
+              fontWeight={300}
+              mb="5"
+            >
+              SignUp For The Portal Newsletter
+            </Text>
+
+            <Stack
+              // bgImage="/assets/phronzero/input-bg.png"
+              // bgSize="cover"
+              // bgPos="center"
+              px="2"
+              py="2"
+              bgColor="rgba(21, 9, 44, .5)"
+              rounded={{ base: "12px", sm: "full" }}
+              border="1px"
+              borderColor="rgba(75, 66, 97, .5)"
+              w="full"
+              maxW="400px"
+              h={{ sm: "45px" }}
+              direction={{ base: "column", sm: "row" }}
+              alignItems={{ sm: "center" }}
+            >
+              <Input
+                border="0px"
+                _focus={{
+                  boxShadow: "none",
+                }}
+                placeholder="EMAIL"
+                _placeholder={{
+                  color: "#4b4261",
+                }}
+                fontFamily="inherit"
+                bg="transparent"
+                type="email"
+              />
+              <Button
+                as={CLink}
+                href="https://phron.ai/whitepaper.pdf"
+                target="_blank"
+                variant="primary"
+                px="6"
+                py="3"
+                rounded="full"
+                rightIcon={<FaArrowRightLong />}
+                fontWeight={400}
+                size="sm"
+              >
+                <Text as="span" pr="2">
+                  Sign Up
+                </Text>
+              </Button>
+            </Stack>
+          </VStack>
+        </Container>
+      </Box>
+      <Footer />
+    </>
+  );
+}

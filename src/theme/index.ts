@@ -9,10 +9,10 @@ const theme = extendTheme({
       html: {
         scrollBehavior: "smooth !important",
       },
-      // body: {
-      //   bgColor: "#03020b",
-      //   color: "#fff",
-      // },
+      body: {
+        bgColor: "#03020b",
+        color: "#fff",
+      },
     },
   },
   breakpoints: {
