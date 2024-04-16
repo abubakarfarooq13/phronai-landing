@@ -1,101 +1,16 @@
 import React from "react";
 import Image from "next/image";
-import {
-  Box,
-  Text,
-  Grid,
-  GridItem,
-  Container,
-  VStack,
-  Button,
-  useBreakpointValue,
-  Link as CLink,
-  Image as CImage,
-  HStack,
-  WrapItem,
-  Wrap,
-} from "@chakra-ui/react";
+import { Box, Text, Container, VStack, WrapItem, Wrap } from "@chakra-ui/react";
 import { Nav } from "..";
-import { PHRON_INFO_EMAIL } from "@/constant";
 import Link from "next/link";
 import { FaLinkedin } from "react-icons/fa";
 import { BsArrowRightCircleFill } from "react-icons/bs";
-
 const Fade = require("react-reveal/Fade");
-
-export const team = [
-  {
-    id: "01",
-    name: "Marwan Alzarouni",
-    role: "Strategic Partner and Advisor",
-    image: "/assets/team/marwan.png",
-    linkedinUrl: "#",
-    imageWidth: 180,
-    imageHeight: 208,
-  },
-  {
-    id: "02",
-    name: "Igor Bershadsky",
-    role: "Leading AI Advisor",
-    image: "/assets/team/adel-crop.png",
-    linkedinUrl: "#",
-    imageWidth: 180,
-    imageHeight: 220,
-  },
-  {
-    id: "03",
-    name: "Dr Stylianos Kampakis, CStat",
-    role: "Tokenomics Advisor",
-    image: "/assets/team/stylianos-crop.png",
-    linkedinUrl: "#",
-    imageWidth: 250,
-    imageHeight: 230,
-  },
-  {
-    id: "04",
-    name: "Igor Bershadsky",
-    role: "Chief of Business Development",
-    image: "/assets/team/igor-crop.png",
-    linkedinUrl: "#",
-    imageWidth: 200,
-    imageHeight: 208,
-  },
-  {
-    id: "05",
-    name: "Guillermo Guimaraes",
-    role: "Co-Founder",
-    image: "/assets/team/guillermo-crop.png",
-    linkedinUrl: "#",
-    imageWidth: 170,
-    imageHeight: 230,
-  },
-  {
-    id: "06",
-    name: "Noah J.",
-    role: "Chief of Security",
-    image: "/assets/team/noah-crop.png",
-    linkedinUrl: "#",
-    imageWidth: 200,
-    imageHeight: 220,
-  },
-  {
-    id: "07",
-    name: "rehan shams",
-    role: "Head of Solidity",
-    image: "/assets/team/rehan-crop.png",
-    linkedinUrl: "#",
-    imageWidth: 190,
-    imageHeight: 240,
-  },
-];
+import { team } from ".";
 
 export default function Team() {
   return (
-    <Box
-      backgroundImage="/assets/new-background.png"
-      bgPos="center"
-      bgSize="cover"
-    >
+    <Box bgPos="bottom" bgSize="100% 100%" bgRepeat="no-repeat">
       <Nav />
       <Container maxW="1460px" pt="70px" pb="100px">
         <Fade bottom>
@@ -199,48 +114,38 @@ export default function Team() {
 
         <VStack>
           {/* <Button
-            // variant="primary"
-            rounded="full"
-            px="10"
-            py="10"
-            as={CLink}
-            href={`mailto:${PHRON_INFO_EMAIL}`}
-            backgroundImage="linear-gradient(90deg, rgba(169, 76, 203, 1) 20%, rgba(78, 60, 141, 1) 80%)"
-            color="#fff"
-            position="relative"
-            _after={{
-              content: `' '`,
-              bgColor: "#03020b",
-              position: "absolute",
-              top: "50%",
-              left: "50%",
-              transform: "translate(-50%, -50%)",
-              width: "100%",
-              height: "100%",
-              rounded: "full",
-            }}
-          >
-            <Text
-              as="span"
+              // variant="primary"
+              rounded="full"
+              px="10"
+              py="10"
+              as={CLink}
+              href={`mailto:${PHRON_INFO_EMAIL}`}
+              backgroundImage="linear-gradient(90deg, rgba(169, 76, 203, 1) 20%, rgba(78, 60, 141, 1) 80%)"
+              color="#fff"
               position="relative"
-              zIndex="10"
-              textTransform="uppercase"
-              fontSize="2xl"
+              _after={{
+                content: `' '`,
+                bgColor: "#03020b",
+                position: "absolute",
+                top: "50%",
+                left: "50%",
+                transform: "translate(-50%, -50%)",
+                width: "100%",
+                height: "100%",
+                rounded: "full",
+              }}
             >
-              Contact Us
-            </Text>
-          </Button> */}
-
-          <a className="btn">{/* Contact Us Button */}</a>
-        </VStack>
-
-        <VStack mt="20">
-          <Image
-            src="/assets/logo-icon.png"
-            alt="logo icon"
-            width={80}
-            height={80}
-          />
+              <Text
+                as="span"
+                position="relative"
+                zIndex="10"
+                textTransform="uppercase"
+                fontSize="2xl"
+              >
+                Contact Us
+              </Text>
+            </Button> */}
+          <a className="btn"></a>
         </VStack>
       </Container>
     </Box>

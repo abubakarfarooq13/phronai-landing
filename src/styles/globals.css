@@ -86,3 +86,38 @@ a:hover {
 		filter: none;
 	}
 }
+
+.btn {
+    padding: 20px 80px;
+    border: none;
+    outline: none;
+    position: relative;
+    border-radius: 50px;
+    background: linear-gradient(to right, #a159b7, #1245d9);
+    cursor: pointer;
+    width: 100%;
+    max-width: 249px;
+    height: 73px;
+    font-family: inherit;
+    letter-spacing: 1px;
+}
+
+.btn::before {
+    content: "Contact Us";
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    bottom: 1px;
+    left: 1px;
+    background-color: #03020b;
+    border-radius: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+    text-transform: uppercase;
+}
+
+.btn:hover {
+    background: linear-gradient(to right,#1245d9, #a159b7);
+}

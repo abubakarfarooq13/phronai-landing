@@ -39,7 +39,7 @@ export default function LightDrawer(props: MobileDrawerProps) {
     <>
       <Drawer isOpen={isOpen} placement="right" onClose={onClose}>
         <DrawerOverlay />
-        <DrawerContent bgColor="#fff">
+        <DrawerContent bgColor="#03020b">
           <DrawerCloseButton
             _focus={{
               boxShadow: "none",

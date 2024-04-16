@@ -1,10 +1,8 @@
 import React from "react";
 import Head from "next/head";
-import { Box } from "@chakra-ui/react";
 import localFont from "next/font/local";
-import { Nav, Footer, CPhronZero } from "@/components";
-import LightNav from "@/components/Shared/Nav/LightNav";
-import LightFooter from "@/components/Shared/Footer/LightFooter";
+import { CRoadMap, CTeam, Footer, Nav } from "@/components";
+import { Box } from "@chakra-ui/react";
 
 const FormularFont = localFont({
   src: [
@@ -28,15 +26,10 @@ const FormularFont = localFont({
       weight: "700",
       style: "normal",
     },
-    {
-      path: "../assets/fonts/Formular-Black.woff",
-      weight: "900",
-      style: "normal",
-    },
   ],
 });
 
-export default function PhronZero() {
+export default function RoadMap() {
   return (
     <>
       <Head>
@@ -57,14 +50,12 @@ export default function PhronZero() {
             `,
           }}
         ></script>
-        <title>Phron AI PhronZero</title>
-        <meta
-          name="description"
-          content="From static to dynamic. One step beyond."
-        />
+        <title>Phron AI Team</title>
+        <meta name="description" content="Phron AI Road Map and Vision." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <LightNav />
+
+      <Nav />
 
       <Box
         pt={{ base: "70px", "1350px": "120px" }}
@@ -72,11 +63,11 @@ export default function PhronZero() {
         color="#fff"
       >
         <main id="phron-page" className={FormularFont.className}>
-          <CPhronZero />
+          <CTeam />
         </main>
       </Box>
 
-      <LightFooter />
+      <Footer />
     </>
   );
 }

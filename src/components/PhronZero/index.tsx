@@ -20,41 +20,43 @@ export default function CPhronZero() {
       <Box bgImage="linear-gradient(180deg, rgba(0,0,0,0) 33%, rgba(99,23,254,0.2) 70%)">
         <Container maxW="1160px" pt={{ base: "50px", md: "100px" }} mb="100px">
           <VStack spacing="2" align="center">
-            <Text
-              textTransform="uppercase"
-              fontSize={{ base: "xs", md: "sm", lg: "lg" }}
-              lineHeight="15px"
-              pl="1"
-              fontWeight={400}
-              letterSpacing="2px"
-              textAlign={{ base: "center", lg: "left" }}
-              mb="2"
-              color="#5b28ac"
-            >
-              <Fade bottom>Phron AI</Fade>
-            </Text>
-            <Text
-              as="h1"
-              textAlign={{ base: "center", lg: "left" }}
-              fontSize={{ base: "5xl", md: "6xl", "3000px": "7xl" }}
-              fontWeight={900}
-              lineHeight={{ base: "50px", md: "60px", "3000px": "70px" }}
-            >
-              <Fade bottom>PhronZero</Fade>
-            </Text>
-
-            <Text
-              fontSize={{ base: "sm", md: "lg", "3000px": "xl" }}
-              textAlign="center"
-            >
-              <Fade bottom>
+            <Fade bottom>
+              <Text
+                textTransform="uppercase"
+                fontSize={{ base: "xs", md: "sm", lg: "lg" }}
+                lineHeight="15px"
+                pl="1"
+                fontWeight={400}
+                letterSpacing="2px"
+                textAlign="center"
+                mb="2"
+                color="#5b28ac"
+              >
+                Phron AI
+              </Text>
+            </Fade>
+            <Fade bottom>
+              <Text
+                as="h1"
+                textAlign="center"
+                fontSize={{ base: "5xl", md: "6xl", "3000px": "7xl" }}
+                fontWeight={900}
+                lineHeight={{ base: "50px", md: "60px", "3000px": "70px" }}
+              >
+                PhronZero
+              </Text>
+            </Fade>
+            <Fade bottom>
+              <Text
+                fontSize={{ base: "sm", md: "lg", "3000px": "xl" }}
+                textAlign="center"
+              >
                 <span>
                   From Static to Dynamic <br />
                   One Step Beyond
                 </span>
-              </Fade>
-            </Text>
-
+              </Text>
+            </Fade>
             <Box>
               <Fade bottom>
                 <Image
