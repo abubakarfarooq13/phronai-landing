@@ -146,7 +146,7 @@ export default function Team() {
                   />
                   <VStack
                     position="absolute"
-                    top={{ base: "45%", md: "35%", lg: "45%" }}
+                    top={{ base: "28%", sm: "40%", md: "30%", lg: "45%" }}
                     left="190px"
                     align="flex-start"
                     spacing="2"
@@ -173,7 +173,7 @@ export default function Team() {
                     as={Link}
                     href={member.linkedinUrl}
                     position="absolute"
-                    bottom="4"
+                    bottom={{ base: "4", md: "2", lg: "4" }}
                     right="4"
                     display="flex"
                     alignItems="center"
