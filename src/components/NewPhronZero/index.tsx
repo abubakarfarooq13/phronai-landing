@@ -109,6 +109,7 @@ export default function CPhronZero() {
                 _before={{
                   content: `'Adaptive AI Staking'`,
                   fontSize: "16px",
+                  px: "4",
                 }}
                 backgroundImage="linear-gradient(to right, #4A5568, #4A5568)"
                 width="100%"
@@ -130,6 +131,7 @@ export default function CPhronZero() {
                 _before={{
                   content: `'Nomination Pools'`,
                   fontSize: "16px",
+                px: '4'
                 }}
                 backgroundImage="linear-gradient(to right, #4A5568, #4A5568)"
                 width="100%"
@@ -152,6 +154,7 @@ export default function CPhronZero() {
                 _before={{
                   content: `'Node Black Sharing'`,
                   fontSize: "16px",
+                  px: "4",
                 }}
                 backgroundImage="linear-gradient(to right, #4A5568, #4A5568)"
                 width="100%"
@@ -174,6 +177,7 @@ export default function CPhronZero() {
                 _before={{
                   content: `'Layer 1 Minter'`,
                   fontSize: "16px",
+                  px: "4",
                 }}
                 backgroundImage="linear-gradient(to right, #4A5568, #4A5568)"
                 width="100%"
