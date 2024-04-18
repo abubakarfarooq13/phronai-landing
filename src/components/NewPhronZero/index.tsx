@@ -17,6 +17,7 @@ import {
   GridItem,
   Input,
   HStack,
+  Image as CImage,
 } from "@chakra-ui/react";
 import { Footer, Nav } from "..";
 import { FaArrowRightLong } from "react-icons/fa6";
@@ -27,7 +28,11 @@ export default function CPhronZero() {
   return (
     <>
       <Nav />
-      <Box>
+      <Box
+        backgroundImage="/assets/phronzero/background.png"
+        bgSize="100% 100%"
+        bgPos="center"
+      >
         <Container maxW="1300px" pt={{ base: "50px", md: "100px" }} mb="100px">
           <Stack
             direction={{ base: "column-reverse", lg: "row" }}
@@ -107,6 +112,28 @@ export default function CPhronZero() {
                 fontWeight={300}
                 className="btn"
                 _before={{
+                  content: `'Layer 1 Minter'`,
+                  fontSize: "16px",
+                  px: "4",
+                }}
+                backgroundImage="linear-gradient(to right, #4A5568, #4A5568)"
+                width="100%"
+                height="50px"
+              >
+                Layer 1 Minter
+              </Tab>
+              <Tab
+                // px="10"
+                minW={{ base: "200px", md: "auto" }}
+                _selected={{
+                  color: "#fff",
+                  background: "linear-gradient(to right, #a159b7, #1245d9)",
+                }}
+                textAlign="center"
+                textTransform="uppercase"
+                fontWeight={300}
+                className="btn"
+                _before={{
                   content: `'Adaptive AI Staking'`,
                   fontSize: "16px",
                   px: "4",
@@ -114,6 +141,7 @@ export default function CPhronZero() {
                 backgroundImage="linear-gradient(to right, #4A5568, #4A5568)"
                 width="100%"
                 height="50px"
+                mx="4"
               >
                 Adaptive AI Staking
               </Tab>
@@ -152,30 +180,7 @@ export default function CPhronZero() {
                 fontWeight={300}
                 className="btn"
                 _before={{
-                  content: `'Node Black Sharing'`,
-                  fontSize: "16px",
-                  px: "4",
-                }}
-                backgroundImage="linear-gradient(to right, #4A5568, #4A5568)"
-                width="100%"
-                height="50px"
-                mx="4"
-              >
-                Node Black Sharing
-              </Tab>
-              <Tab
-                // px="10"
-                minW={{ base: "200px", md: "auto" }}
-                _selected={{
-                  color: "#fff",
-                  background: "linear-gradient(to right, #a159b7, #1245d9)",
-                }}
-                textAlign="center"
-                textTransform="uppercase"
-                fontWeight={300}
-                className="btn"
-                _before={{
-                  content: `'Layer 1 Minter'`,
+                  content: `'Node Block Sharing'`,
                   fontSize: "16px",
                   px: "4",
                 }}
@@ -183,131 +188,11 @@ export default function CPhronZero() {
                 width="100%"
                 height="50px"
               >
-                Layer 1 Minter
+                Node Block Sharing
               </Tab>
             </TabList>
 
             <TabPanels>
-              <TabPanel px="0" pt="10">
-                <VStack>
-                  <Image
-                    src="/assets/phronzero-text.png"
-                    alt="phronzero text"
-                    width={200}
-                    height={150}
-                  />
-                  <Text
-                    as="h2"
-                    fontSize="4xl"
-                    textTransform="uppercase"
-                    letterSpacing="1px"
-                    fontWeight={300}
-                    mb="5"
-                    textAlign="center"
-                  >
-                    Adaptive Ai Staking
-                  </Text>
-                  <Text
-                    textAlign="center"
-                    color="#838383"
-                    fontSize={{ base: "base", md: "xl" }}
-                  >
-                    Staking to the most efficient nodes.
-                  </Text>
-                  <Text
-                    textAlign="center"
-                    color="#838383"
-                    fontSize={{ base: "base", md: "xl" }}
-                    mb="5"
-                  >
-                    Creating the best value fo stakers and node providers.
-                  </Text>
-
-                  <Box maxW={{ base: "80px", md: "200px" }}>
-                    <Image
-                      src="/assets/phronzero/box.png"
-                      alt="box"
-                      width={200}
-                      height={200}
-                      style={{
-                        // maxWidth: "200px",
-                        zIndex: 10,
-                        position: "relative",
-                      }}
-                      className="infinit-move-1"
-                    />
-                  </Box>
-
-                  <Box
-                    maxWidth="900px"
-                    marginTop={{ base: "-50px", md: "-120px" }}
-                  >
-                    <Image
-                      src="/assets/phronzero/adaptive-ai-staking.png"
-                      alt="adaptive ai staking image"
-                      width={2700}
-                      height={1900}
-                      style={{}}
-                    />
-                  </Box>
-                </VStack>
-              </TabPanel>
-              {/* <TabPanel px="0" pt="10"></TabPanel> */}
-              <TabPanel px="0" pt="10">
-                <VStack>
-                  <Image
-                    src="/assets/phronzero-text.png"
-                    alt="phronzero text"
-                    width={200}
-                    height={150}
-                  />
-                  <Text
-                    as="h2"
-                    fontSize="4xl"
-                    textTransform="uppercase"
-                    letterSpacing="1px"
-                    fontWeight={300}
-                    mb="5"
-                    textAlign="center"
-                  >
-                    Node Block Sharing
-                  </Text>
-                  <Text
-                    color="#838383"
-                    fontSize={{ base: "base", md: "xl" }}
-                    mb="5"
-                    textAlign="center"
-                  >
-                    Optimize Node usage between different Layer&apos;s!
-                  </Text>
-                  <Box maxW={{ base: "100px", md: "300px" }}>
-                    <Image
-                      src="/assets/phronzero/3-boxes.png"
-                      alt="box"
-                      width={300}
-                      height={300}
-                      style={{
-                        // maxWidth: "300px",
-                        zIndex: 10,
-                        position: "relative",
-                      }}
-                      className="infinit-move-1"
-                    />
-                  </Box>
-
-                  <Box
-                    maxWidth="900px"
-                    marginTop={{ base: "-50px", md: "-120px" }}
-                  >
-                    <Image
-                      src="/assets/phronzero/node-black-sharing.png"
-                      alt="node black sharing"
-                      width={2700}
-                      height={1900}
-                    />
-                  </Box>
-                </VStack>
-              </TabPanel>
               <TabPanel px="0" pt="10">
                 <VStack>
                   <Image
@@ -582,6 +467,389 @@ export default function CPhronZero() {
                       </Box>
                     </GridItem>
                   </Grid>
+                </VStack>
+              </TabPanel>
+              <TabPanel px="0" pt="10">
+                <Image
+                  src="/assets/phronzero-text.png"
+                  alt="phronzero text"
+                  width={200}
+                  height={150}
+                  style={{
+                    margin: "0 auto",
+                  }}
+                />
+                <Text
+                  as="h2"
+                  fontSize={{ base: "2xl", md: "4xl" }}
+                  textTransform="uppercase"
+                  letterSpacing="1px"
+                  fontWeight={300}
+                  mb="5"
+                  mt="2"
+                  textAlign="center"
+                >
+                  Adaptive Ai Staking
+                </Text>
+                <Text
+                  textAlign="center"
+                  color="#838383"
+                  fontSize={{ base: "base", md: "xl" }}
+                >
+                  Staking to the most efficient nodes.
+                </Text>
+                <Text
+                  textAlign="center"
+                  color="#838383"
+                  fontSize={{ base: "base", md: "xl" }}
+                  mb="5"
+                >
+                  Creating the best value fo stakers and node providers.
+                </Text>
+
+                <Box maxW={{ base: "100px", md: "200px" }} mx="auto">
+                  <Image
+                    src="/assets/phronzero/box.png"
+                    alt="box"
+                    width={200}
+                    height={200}
+                    style={{
+                      // maxWidth: "200px",
+                      zIndex: 10,
+                      position: "relative",
+                      margin: "0 auto",
+                    }}
+                    className="infinit-move-1"
+                  />
+                </Box>
+                <VStack
+                  maxW="950px"
+                  rounded="3xl"
+                  border="1px"
+                  borderColor="rgba(75, 66, 97, .5)"
+                  mx="auto"
+                  p="10"
+                  bgColor="rgba(0,0,0,1)"
+                  mt={{ base: "-50px", md: "-120px" }}
+                >
+                  <HStack justifyContent="space-between" w="full" mb="5">
+                    <Text
+                      textTransform="uppercase"
+                      fontSize={{ base: "xs", md: "xl" }}
+                      opacity=".7"
+                      fontWeight={300}
+                      letterSpacing="1px"
+                    >
+                      Performance <br />
+                      Leader board
+                    </Text>
+                    <Text
+                      textTransform="uppercase"
+                      fontSize={{ base: "xs", md: "xl" }}
+                      opacity=".7"
+                      fontWeight={300}
+                      letterSpacing="1px"
+                      textAlign="right"
+                    >
+                      Runtime <br />
+                      Leader board
+                    </Text>
+                  </HStack>
+                  <video width="900" height="900" autoPlay loop muted>
+                    <source
+                      src="/assets/phronzero/ai-staking-images/staking-video.mp4"
+                      type="video/mp4"
+                    />
+                  </video>
+                </VStack>
+              </TabPanel>
+              <TabPanel px="0" pt="10">
+                <Image
+                  src="/assets/phronzero-text.png"
+                  alt="phronzero text"
+                  width={200}
+                  height={150}
+                  style={{
+                    margin: "0 auto",
+                  }}
+                />
+                <Text
+                  as="h2"
+                  fontSize={{ base: "2xl", md: "4xl" }}
+                  textTransform="uppercase"
+                  letterSpacing="1px"
+                  fontWeight={300}
+                  mb="5"
+                  mt="2"
+                  textAlign="center"
+                >
+                  Node Block Sharing
+                </Text>
+                <Text
+                  color="#838383"
+                  fontSize={{ base: "base", md: "xl" }}
+                  mb="5"
+                  textAlign="center"
+                >
+                  Optimize Node usage between different Layer&apos;s!
+                </Text>
+                <Box maxW={{ base: "100px", md: "300px" }} mx="auto">
+                  <Image
+                    src="/assets/phronzero/3-boxes.png"
+                    alt="box"
+                    width={300}
+                    height={300}
+                    style={{
+                      // maxWidth: "300px",
+                      zIndex: 10,
+                      position: "relative",
+                    }}
+                    className="infinit-move-1"
+                  />
+                </Box>
+                <VStack
+                  bgColor="rgba(0,0,0,1)"
+                  position="relative"
+                  maxW="950px"
+                  mx="auto"
+                  pt={{ base: "10", md: "32" }}
+                  px={{ base: "5", md: "10" }}
+                  pb={{ base: "5", md: "10" }}
+                  border="1px"
+                  borderColor="rgba(75, 66, 97, .5)"
+                  rounded="3xl"
+                  mt={{ base: "-50px", md: "-120px" }}
+                >
+                  <video width="900" height="900" autoPlay loop muted>
+                    <source
+                      src="/assets/phronzero/node-blocks/nodes-video-crop.mp4"
+                      type="video/mp4"
+                    />
+                  </video>
+                  <>
+                    {/* <Image
+                      src="/assets/phronzero/node-black-sharing.png"
+                      alt="node black sharing"
+                      width={2700}
+                      height={1900}
+                    /> */}
+                    {/* <CImage
+                      className="node-n-layers"
+                      src="/assets/phronzero/node-blocks/layer-n3.png"
+                      alt="layer n3"
+                      width="193px"
+                      height="75px"
+                      position="absolute"
+                      // top="121px"
+                      // left="33px"
+                      objectFit="contain"
+                    />
+                    <CImage
+                      className="node-n-layers"
+                      src="/assets/phronzero/node-blocks/node-3.png"
+                      alt="node 3"
+                      width="120px"
+                      height="136px"
+                      position="absolute"
+                      // top="294px"
+                      // left="138px"
+                      objectFit="contain"
+                    />
+                    <CImage
+                      className="node-n-layers"
+                      src="/assets/phronzero/node-blocks/node-1.png"
+                      alt="node 1"
+                      // top="106px"
+                      // left="295px"
+                      width="153px"
+                      height="178px"
+                      objectFit="contain"
+                      position="absolute"
+                    />
+
+                    <CImage
+                      className="node-n-layers"
+                      src="/assets/phronzero/node-blocks/layer-n2.png"
+                      alt="layer n2"
+                      width="194px"
+                      height="77px"
+                      position="absolute"
+                      // top="120px"
+                      // right="241px"
+                    />
+                    <CImage
+                      className="node-n-layers"
+                      src="/assets/phronzero/node-blocks/layer-n5.png"
+                      alt="layer n5"
+                      width="194px"
+                      height="77px"
+                      position="absolute"
+                      // top="120px"
+                      // right="23px"
+                    />
+                    <CImage
+                      className="node-n-layers"
+                      src="/assets/phronzero/node-blocks/layer-n1.png"
+                      alt="layer n1"
+                      width="194px"
+                      height="77px"
+                      position="absolute"
+                      // bottom="36px"
+                      // right="241px"
+                    />
+                    <CImage
+                      className="node-n-layers"
+                      src="/assets/phronzero/node-blocks/layer-n4.png"
+                      alt="layer n4"
+                      width="194px"
+                      height="77px"
+                      position="absolute"
+                      // bottom="36px"
+                      // right="23px"
+                    />
+                    <CImage
+                      className="node-n-layers"
+                      src="/assets/phronzero/node-blocks/node-2.png"
+                      alt="node 2"
+                      objectFit="contain"
+                      width="124px"
+                      height="139px"
+                      position="absolute"
+                      // top="229px"
+                      // right="177px"
+                    />
+                    <CImage
+                      src="/assets/phronzero/node-blocks/circle-arrows.png"
+                      alt="circle arrows"
+                      objectFit="contain"
+                      width="220px"
+                      height="222px"
+                      top="94px"
+                      left="262px"
+                      position="absolute"
+                      className="circles-arrow"
+                    />
+                    <CImage
+                      src="/assets/phronzero/node-blocks/dashed-line.png"
+                      alt="dashed line"
+                      objectFit="contain"
+                      width="1px"
+                      height="66px"
+                      position="absolute"
+                      top="149px"
+                      left="258px"
+                      transform="rotate(107deg)"
+                      className="line"
+                    />
+                    <CImage
+                      src="/assets/phronzero/node-blocks/dashed-line.png"
+                      alt="dashed line"
+                      objectFit="contain"
+                      width="1px"
+                      height="66px"
+                      position="absolute"
+                      top="148px"
+                      left="481px"
+                      transform="rotate(254deg)"
+                      className="line"
+                    />
+                    <CImage
+                      src="/assets/phronzero/node-blocks/solid-line.png"
+                      alt="solid line"
+                      objectFit="contain"
+                      width="1px"
+                      height="111px"
+                      position="absolute"
+                      top="184px"
+                      transform="rotate(164deg)"
+                      left="170px"
+                      className="line"
+                    />
+                    <CImage
+                      src="/assets/phronzero/node-blocks/dashed-line.png"
+                      alt="dashed line"
+                      objectFit="contain"
+                      width="1px"
+                      height="234px"
+                      position="absolute"
+                      bottom="-22px"
+                      transform="rotate(102deg)"
+                      left="384px"
+                      className="line"
+                    />
+                    <CImage
+                      src="/assets/phronzero/node-blocks/solid-line.png"
+                      alt="solid line"
+                      objectFit="contain"
+                      width="1px"
+                      height="193px"
+                      position="absolute"
+                      left="508px"
+                      transform="rotate(134deg)"
+                      bottom="82px"
+                      className="line"
+                    />
+                    <CImage
+                      src="/assets/phronzero/node-blocks/solid-line.png"
+                      alt="solid line"
+                      objectFit="contain"
+                      width="1px"
+                      height="78px"
+                      right="298px"
+                      position="absolute"
+                      transform="rotate(141deg)"
+                      top="182px"
+                      className="line"
+                    />
+                    <CImage
+                      src="/assets/phronzero/node-blocks/dashed-line.png"
+                      alt="dashed line"
+                      objectFit="contain"
+                      width="1px"
+                      height="100px"
+                      position="absolute"
+                      right="147px"
+                      transform="rotate(228deg)"
+                      top="180px"
+                      className="line"
+                    />
+                    <CImage
+                      src="/assets/phronzero/node-blocks/dashed-line.png"
+                      alt="dashed line"
+                      objectFit="contain"
+                      width="1px"
+                      height="80px"
+                      position="absolute"
+                      right="316px"
+                      bottom="82px"
+                      transform="rotate(228deg)"
+                      className="line"
+                    />
+                    <CImage
+                      src="/assets/phronzero/node-blocks/dashed-line.png"
+                      alt="dashed line"
+                      objectFit="contain"
+                      width="1px"
+                      height="100px"
+                      position="absolute"
+                      right="147px"
+                      bottom="73px"
+                      transform="rotate(132deg)"
+                      className="dashed-line-placeholder line"
+                    />
+                    <CImage
+                      src="/assets/phronzero/node-blocks/solid-line.png"
+                      alt="solid line"
+                      objectFit="contain"
+                      width="1px"
+                      height="100px"
+                      position="absolute"
+                      right="147px"
+                      bottom="73px"
+                      transform="rotate(132deg)"
+                      className="line solid-line-placeholder"
+                    /> */}
+                  </>
                 </VStack>
               </TabPanel>
             </TabPanels>
