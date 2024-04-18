@@ -559,7 +559,14 @@ export default function CPhronZero() {
                       Leader board
                     </Text>
                   </HStack>
-                  <video width="900" height="900" autoPlay loop muted>
+                  <video
+                    width="900"
+                    height="900"
+                    autoPlay
+                    playsInline
+                    muted
+                    loop
+                  >
                     <source
                       src="/assets/phronzero/ai-staking-images/staking-video.mp4"
                       type="video/mp4"
@@ -626,7 +633,14 @@ export default function CPhronZero() {
                   rounded="3xl"
                   mt={{ base: "-50px", md: "-120px" }}
                 >
-                  <video width="900" height="900" autoPlay loop muted>
+                  <video
+                    width="900"
+                    height="900"
+                    autoPlay
+                    playsInline
+                    muted
+                    loop
+                  >
                     <source
                       src="/assets/phronzero/node-blocks/nodes-video-crop.mp4"
                       type="video/mp4"
