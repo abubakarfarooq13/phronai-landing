@@ -528,7 +528,7 @@ export default function CPhronZero() {
                   border="1px"
                   borderColor="rgba(75, 66, 97, .5)"
                   mx="auto"
-                  p="10"
+                  p={{ base: "5", md: "10" }}
                   bgColor="rgba(0,0,0,1)"
                   mt={{ base: "-50px", md: "-120px" }}
                 >
