@@ -240,7 +240,7 @@ export default function Nav() {
         </HStack>
       </Container>
 
-      {/* {currentMenu === "Phron AI Foundation" ? (
+      {currentMenu === "Phron AI Foundation" ? (
         <Fade>
           <Box
             display={{ base: "none", "1350px": "block" }}
@@ -289,9 +289,9 @@ export default function Nav() {
             </Container>
           </Box>
         </Fade>
-      ) : null} */}
+      ) : null}
 
-      {/* {currentMenu === "News / Updates" ? (
+      {currentMenu === "News / Updates" ? (
         <Fade>
           <Box
             display={{ base: "none", "1350px": "block" }}
@@ -340,7 +340,7 @@ export default function Nav() {
             </Container>
           </Box>
         </Fade>
-      ) : null} */}
+      ) : null}
     </Box>
   );
 }
