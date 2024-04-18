@@ -195,15 +195,17 @@ export default function CPhronZero() {
             <TabPanels>
               <TabPanel px="0" pt="10">
                 <VStack>
-                  <Image
-                    src="/assets/phronzero-text.png"
-                    alt="phronzero text"
-                    width={200}
-                    height={150}
-                  />
+                  <Box mx="auto" maxW={{ base: "100px", md: "200px" }}>
+                    <Image
+                      src="/assets/phronzero-text.png"
+                      alt="phronzero text"
+                      width={200}
+                      height={150}
+                    />
+                  </Box>
                   <Text
                     as="h2"
-                    fontSize="4xl"
+                    fontSize={{ base: "2xl", md: "4xl" }}
                     textTransform="uppercase"
                     letterSpacing="1px"
                     fontWeight={300}
@@ -470,15 +472,17 @@ export default function CPhronZero() {
                 </VStack>
               </TabPanel>
               <TabPanel px="0" pt="10">
-                <Image
-                  src="/assets/phronzero-text.png"
-                  alt="phronzero text"
-                  width={200}
-                  height={150}
-                  style={{
-                    margin: "0 auto",
-                  }}
-                />
+                <Box mx="auto" maxW={{ base: "100px", md: "200px" }}>
+                  <Image
+                    src="/assets/phronzero-text.png"
+                    alt="phronzero text"
+                    width={200}
+                    height={150}
+                    style={{
+                      margin: "0 auto",
+                    }}
+                  />
+                </Box>
                 <Text
                   as="h2"
                   fontSize={{ base: "2xl", md: "4xl" }}
@@ -564,15 +568,17 @@ export default function CPhronZero() {
                 </VStack>
               </TabPanel>
               <TabPanel px="0" pt="10">
-                <Image
-                  src="/assets/phronzero-text.png"
-                  alt="phronzero text"
-                  width={200}
-                  height={150}
-                  style={{
-                    margin: "0 auto",
-                  }}
-                />
+                <Box mx="auto" maxW={{ base: "100px", md: "200px" }}>
+                  <Image
+                    src="/assets/phronzero-text.png"
+                    alt="phronzero text"
+                    width={200}
+                    height={150}
+                    style={{
+                      margin: "0 auto",
+                    }}
+                  />
+                </Box>
                 <Text
                   as="h2"
                   fontSize={{ base: "2xl", md: "4xl" }}
