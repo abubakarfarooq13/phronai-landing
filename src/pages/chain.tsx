@@ -52,7 +52,7 @@ export default function Home() {
       ></Script>
       {/* <Script defer type="module" src="/canvas.js"></Script> */}
       <Head>
-        <title>Phron AI: The Chain</title>
+        <title>Phron AI: Layer 1</title>
         <meta
           name="description"
           content="From static to dynamic. One step beyond."

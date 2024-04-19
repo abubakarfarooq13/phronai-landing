@@ -248,8 +248,8 @@ export default function Chain() {
                 >
                   {/* Phronesis:{" "} */}
                   Phron AI:{" "}
-                  <Box as="br" display={{ base: "none", md: "block" }} /> The
-                  Chain
+                  <Box as="br" display={{ base: "none", md: "block" }} /> Layer
+                  1
                 </Text>
 
                 <Text

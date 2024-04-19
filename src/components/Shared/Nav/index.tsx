@@ -31,7 +31,7 @@ export const navItems = [
   },
   {
     id: 2,
-    label: "Phron AI: The Chain",
+    label: "Phron AI: Layer 1",
     href: "/chain",
   },
   {

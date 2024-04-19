@@ -130,7 +130,7 @@ export default function RoadMap() {
                 mb="4"
                 opacity=".9"
               >
-                Development Process: <br /> Phron AI - The Chain
+                Development Process: <br /> Phron AI - Layer 1
               </Text>
 
               <Text fontSize="13px" opacity=".7">
@@ -162,7 +162,7 @@ export default function RoadMap() {
               </Text>
 
               <Text fontSize="13px" opacity=".7" mb="4">
-                The first version of the Testnet for Phron AI The Chain is
+                The first version of the Testnet for Phron AI Layer 1 is
                 implemented. This will provide real data from transactions and
                 usage from the public to check the system&apos;s efficiency
                 through Telemetry.
@@ -281,7 +281,7 @@ export default function RoadMap() {
                 mb="4"
                 opacity=".9"
               >
-                Phron AI: The Chain Mainnet Launch
+                Phron AI: Layer 1 Mainnet Launch
               </Text>
 
               <Text fontSize="13px" opacity=".7">
@@ -302,7 +302,7 @@ export default function RoadMap() {
 
               <Text fontSize="13px" opacity=".7">
                 By having available Mainnet, the official version of the PHRON
-                token in Phron AI: The Chain is publicly launched and made
+                token in Phron AI: Layer 1 is publicly launched and made
                 available to the public to work transactions, smart contract
                 development, and NFT Mints, among others.
               </Text>

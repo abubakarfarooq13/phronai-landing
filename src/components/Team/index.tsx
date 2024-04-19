@@ -21,21 +21,21 @@ import { FaArrowRightLong } from "react-icons/fa6";
 const Fade = require("react-reveal/Fade");
 
 export const team = [
-  {
-    id: "01",
-    name: "Marwan Alzarouni",
-    role: "Strategic Partner and Advisor",
-    image: "/assets/team/marwan.png",
-    linkedinUrl: "#",
-    imageWidth: 180,
-    imageHeight: 208,
-  },
+  // {
+  //   id: "01",
+  //   name: "Marwan Alzarouni",
+  //   role: "Strategic Partner and Advisor",
+  //   image: "/assets/team/marwan.png",
+  //   linkedinUrl: "https://www.linkedin.com/in/drmarwan/",
+  //   imageWidth: 180,
+  //   imageHeight: 208,
+  // },
   {
     id: "02",
-    name: "Igor Bershadsky",
+    name: "Adel Elmessiry, Ph.D.",
     role: "Leading AI Advisor",
     image: "/assets/team/adel-crop.png",
-    linkedinUrl: "#",
+    linkedinUrl: "https://www.linkedin.com/in/adelelmessiry/",
     imageWidth: 180,
     imageHeight: 220,
   },
@@ -44,17 +44,18 @@ export const team = [
     name: "Dr Stylianos Kampakis, CStat",
     role: "Tokenomics Advisor",
     image: "/assets/team/stylianos-crop.png",
-    linkedinUrl: "#",
+    linkedinUrl:
+      "https://www.linkedin.com/in/dr-stylianos-kampakis-ai-data-science-tokenomics/",
     imageWidth: 250,
     imageHeight: 230,
   },
   {
     id: "04",
     name: "Igor Bershadsky",
-    role: "Chief of Business Development",
-    image: "/assets/team/igor-crop.png",
-    linkedinUrl: "#",
-    imageWidth: 200,
+    role: "Co - Founder and Business Developer Officer",
+    image: "/assets/team/igor-old-cropped.png",
+    linkedinUrl: "https://www.linkedin.com/in/igorbershadsky/",
+    imageWidth: 210,
     imageHeight: 208,
   },
   {
@@ -62,7 +63,7 @@ export const team = [
     name: "Guillermo Guimaraes",
     role: "Co-Founder",
     image: "/assets/team/guillermo-crop.png",
-    linkedinUrl: "#",
+    linkedinUrl: "https://www.linkedin.com/in/guillermoguimaraes/",
     imageWidth: 170,
     imageHeight: 230,
   },
@@ -71,16 +72,16 @@ export const team = [
     name: "Noah J.",
     role: "Chief of Security",
     image: "/assets/team/noah-crop.png",
-    linkedinUrl: "#",
+    linkedinUrl: "https://www.linkedin.com/in/njelich/",
     imageWidth: 200,
     imageHeight: 220,
   },
   {
     id: "07",
     name: "rehan shams",
-    role: "Head of Solidity",
+    role: "Head of Development",
     image: "/assets/team/rehan-crop.png",
-    linkedinUrl: "#",
+    linkedinUrl: "https://www.linkedin.com/in/rehanshamas/",
     imageWidth: 190,
     imageHeight: 240,
   },
@@ -123,6 +124,10 @@ export default function Team() {
               minH={{ base: "300px", sm: "250px" }}
               mb="5"
               overflow="hidden"
+              transition="transform .3s"
+              _hover={{
+                transform: "translateY(-10px)",
+              }}
             >
               <Fade bottom delay={i * 100}>
                 <Box
@@ -146,8 +151,8 @@ export default function Team() {
                   />
                   <VStack
                     position="absolute"
-                    top={{ base: "28%", sm: "40%", md: "30%", lg: "45%" }}
-                    left="190px"
+                    top={{ base: "28%", sm: "40%", md: "30%", lg: "43%" }}
+                    left="210px"
                     align="flex-start"
                     spacing="2"
                     mt="-50px"
@@ -172,6 +177,7 @@ export default function Team() {
                   <Text
                     as={Link}
                     href={member.linkedinUrl}
+                    target="_blank"
                     position="absolute"
                     bottom={{ base: "4", md: "2", lg: "4" }}
                     right="4"
