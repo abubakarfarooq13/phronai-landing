@@ -60,7 +60,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <Box
-        pt={{ base: "70px", "1350px": "120px" }}
+        pt={{ base: "70px", "1350px": "80px" }}
         bgColor="#03020b"
         color="#fff"
         as="main"

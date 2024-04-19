@@ -260,7 +260,7 @@ nav {
     }
 }
 
-.line {
+#block-animation-section .line {
     opacity: 0;
     animation: opacityAnimation 1s ease-in 2s, dropShadowLines 2s ease-in 2s infinite;
     animation-fill-mode: forwards;
@@ -616,6 +616,19 @@ nav {
     }
 } */
 
+#page-title-1, #page-title-2, #page-title-3 {
+    line-height: 125%;
+}
 
+#page-title-1 .line1,#page-title-2 .line2,#page-title-3 .line3 {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
 
+.char {
+    visibility: hidden;
+    transition: all .5s;
+}
 
+.line1,.line2,.line3 {
+    display: none;
+}

@@ -149,8 +149,7 @@ export default function Nav() {
   return (
     <Box
       as="nav"
-      pt="5"
-      pb={{ base: "5", "1350px": "0" }}
+      py="5"
       bgColor="#05010c"
       color="#fff"
       pos="fixed"
@@ -240,7 +239,7 @@ export default function Nav() {
         </HStack>
       </Container>
 
-      {currentMenu === "Phron AI Foundation" ? (
+      {/* {currentMenu === "Phron AI Foundation" ? (
         <Fade>
           <Box
             display={{ base: "none", "1350px": "block" }}
@@ -289,9 +288,9 @@ export default function Nav() {
             </Container>
           </Box>
         </Fade>
-      ) : null}
+      ) : null} */}
 
-      {currentMenu === "News / Updates" ? (
+      {/* {currentMenu === "News / Updates" ? (
         <Fade>
           <Box
             display={{ base: "none", "1350px": "block" }}
@@ -340,7 +339,7 @@ export default function Nav() {
             </Container>
           </Box>
         </Fade>
-      ) : null}
+      ) : null} */}
     </Box>
   );
 }

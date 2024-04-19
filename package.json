@@ -13,6 +13,7 @@
     "@chakra-ui/react": "^2.8.0",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
+    "@gsap/react": "^2.1.0",
     "@react-three/drei": "^9.96.1",
     "@react-three/fiber": "^8.15.14",
     "@types/node": "20.5.0",
@@ -30,6 +31,7 @@
     "react-dom": "18.2.0",
     "react-icons": "^4.10.1",
     "react-reveal": "^1.2.2",
+    "split-type": "^0.3.4",
     "three": "^0.160.0",
     "typescript": "5.1.6"
   }

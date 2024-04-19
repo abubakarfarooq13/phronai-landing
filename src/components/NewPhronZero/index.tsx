@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import Image from "next/image";
 import {
   Container,
@@ -21,24 +21,107 @@ import {
 } from "@chakra-ui/react";
 import { Footer, Nav } from "..";
 import { FaArrowRightLong } from "react-icons/fa6";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import SplitType from "split-type";
 
 const Fade = require("react-reveal/Fade");
 
+gsap.registerPlugin(useGSAP);
+
 export default function CPhronZero() {
+  const container = useRef<any>();
+
+  useGSAP(
+    () => {
+      // gsap code here...
+      // gsap.to(".box", { x: 360 }); // <-- automatically reverted
+      // gsap.to(".char", {
+      //   y: 0,
+      //   stagger: 0.05,
+      //   delay: 0.2,
+      //   duration: 0.1,
+      // });
+    },
+    { scope: container }
+  ); // <-- scope is for selector text (optional)
+
+  useEffect(() => {
+    const splitTextOne = new SplitType("#page-title-1", {
+      lineClass: "line1",
+    });
+    const splitTextTwo = new SplitType("#page-title-2", {
+      lineClass: "line2",
+    });
+    const splitTextThree = new SplitType("#page-title-3", {
+      lineClass: "line3",
+    });
+
+    const tl = gsap.timeline({
+      defaults: {
+        duration: 0.5,
+      },
+      repeat: -1,
+    });
+
+    tl.to(".line1 .char", {
+      visibility: "visible",
+      stagger: 0.08,
+      delay: 0.5,
+      duration: 0.1,
+    })
+      .to(".line1 .char", {
+        visibility: "hidden",
+        stagger: -0.08,
+        delay: 0.5,
+        duration: 0.1,
+      })
+      .to(".line2 .char", {
+        visibility: "visible",
+        stagger: 0.08,
+        delay: 0.5,
+        duration: 0.1,
+      })
+      .to(".line2 .char", {
+        visibility: "hidden",
+        stagger: -0.08,
+        delay: 0.5,
+        duration: 0.1,
+      })
+      .to(".line3 .char", {
+        visibility: "visible",
+        stagger: 0.08,
+        delay: 0.5,
+        duration: 0.1,
+      })
+      .to(".line3 .char", {
+        visibility: "hidden",
+        stagger: -0.08,
+        delay: 0.5,
+        duration: 0.1,
+      });
+  }, []);
+
   return (
     <>
       <Nav />
+
       <Box
         backgroundImage="/assets/phronzero/background.png"
         bgSize="100% 100%"
         bgPos="center"
       >
-        <Container maxW="1300px" pt={{ base: "50px", md: "100px" }} mb="100px">
+        <Container
+          ref={container}
+          maxW="1300px"
+          pt={{ base: "50px", md: "100px" }}
+          mb="100px"
+        >
           <Stack
             direction={{ base: "column-reverse", lg: "row" }}
             justifyContent="space-between"
             alignItems="center"
-            spacing={{ base: "10", lg: "10" }}
+            spacing={{ base: "10" }}
           >
             <VStack
               zIndex={1}
@@ -47,16 +130,39 @@ export default function CPhronZero() {
               align={{ base: "center", md: "start" }}
               spacing={{ base: "3", md: "6" }}
             >
-              <Fade left>
+              <Fade>
                 <Text
-                  as="h1"
-                  fontSize={{ base: "2xl", md: "4xl" }}
-                  textTransform="uppercase"
+                  fontSize={{ base: "2xl", md: "3xl" }}
+                  // textTransform="uppercase"
                   fontWeight={300}
                   textAlign={{ base: "center", lg: "start" }}
                   letterSpacing="1px"
+                  id="page-title-1"
+                  mt="-100px"
                 >
-                  One Step Beyond <br /> With Artificial <br /> Intelligence
+                  Introducing the first AI Layer Zero.
+                </Text>
+                <Text
+                  fontSize={{ base: "2xl", md: "3xl" }}
+                  // textTransform="uppercase"
+                  fontWeight={300}
+                  textAlign={{ base: "center", lg: "start" }}
+                  letterSpacing="1px"
+                  id="page-title-2"
+                  mt="-125px"
+                >
+                  Create your own L1 Blockchain in minutes.
+                </Text>
+                <Text
+                  fontSize={{ base: "2xl", md: "3xl" }}
+                  // textTransform="uppercase"
+                  fontWeight={300}
+                  textAlign={{ base: "center", lg: "start" }}
+                  letterSpacing="1px"
+                  id="page-title-3"
+                  mt="-150px"
+                >
+                  Democratising Blockchain Infrastructure.
                 </Text>
 
                 {/* <Button
@@ -76,7 +182,7 @@ export default function CPhronZero() {
                 </Button> */}
               </Fade>
             </VStack>
-            <Box maxW={{ base: "550px", xl: "900px" }}>
+            <Box maxW={{ base: "550px", xl: "650px" }}>
               <Image
                 className="infinit-move-1"
                 src="/assets/phronzero/hero-image.png"
@@ -245,6 +351,7 @@ export default function CPhronZero() {
                     position="relative"
                     mt={{ base: "-80px", md: "-110px" }}
                     rounded="2xl"
+                    id="block-animation-section"
                   >
                     <GridItem
                       bgImage="/assets/phronzero/card-black-bg.png"
@@ -945,6 +1052,7 @@ export default function CPhronZero() {
           </VStack>
         </Container>
       </Box>
+
       <Footer />
     </>
   );
