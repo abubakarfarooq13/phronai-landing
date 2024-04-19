@@ -35,6 +35,11 @@ export const navItems = [
     href: "/chain",
   },
   {
+    id: 4,
+    label: "Our Team",
+    href: "/team",
+  },
+  {
     id: 5,
     label: "RoadMap",
     href: "/roadmap",
@@ -59,11 +64,7 @@ export const navItems = [
     label: "NFT Marketplace",
     href: "/marketplace",
   },
-  {
-    id: 4,
-    label: "Our Team",
-    href: "/team",
-  },
+
   // {
   //   id: 14,
   //   label: "Phron AI: Projects",
@@ -149,7 +150,8 @@ export default function Nav() {
   return (
     <Box
       as="nav"
-      py="5"
+      pt="5"
+      pb={{ base: "5", md: "0" }}
       bgColor="#05010c"
       color="#fff"
       pos="fixed"
@@ -239,7 +241,7 @@ export default function Nav() {
         </HStack>
       </Container>
 
-      {/* {currentMenu === "Phron AI Foundation" ? (
+      {currentMenu === "Phron AI Foundation" ? (
         <Fade>
           <Box
             display={{ base: "none", "1350px": "block" }}
@@ -288,9 +290,9 @@ export default function Nav() {
             </Container>
           </Box>
         </Fade>
-      ) : null} */}
+      ) : null}
 
-      {/* {currentMenu === "News / Updates" ? (
+      {currentMenu === "News / Updates" ? (
         <Fade>
           <Box
             display={{ base: "none", "1350px": "block" }}
@@ -339,7 +341,7 @@ export default function Nav() {
             </Container>
           </Box>
         </Fade>
-      ) : null} */}
+      ) : null}
     </Box>
   );
 }

@@ -24,10 +24,39 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import SplitType from "split-type";
+import localFont from "next/font/local";
+
+import { Bona_Nova } from "next/font/google";
 
 const Fade = require("react-reveal/Fade");
 
 gsap.registerPlugin(useGSAP);
+
+const videoFont = localFont({
+  src: [
+    {
+      path: "../../assets/fonts/Video-Bold.woff",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../../assets/fonts/Video-SemiBold.woff",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../../assets/fonts/Video-Regular.woff",
+      weight: "400",
+      style: "normal",
+    },
+  ],
+});
+
+// const bona_nova = Bona_Nova({
+//   weight: ["400"],
+//   subsets: ["latin"],
+//   style: "italic",
+// });
 
 export default function CPhronZero() {
   const container = useRef<any>();
@@ -129,43 +158,53 @@ export default function CPhronZero() {
               w={{ base: "full", md: "50%" }}
               align={{ base: "center", md: "start" }}
               spacing={{ base: "3", md: "6" }}
+              pos="relative"
+              minH="200px"
             >
-              <Fade>
-                <Text
-                  fontSize={{ base: "2xl", md: "3xl" }}
-                  // textTransform="uppercase"
-                  fontWeight={300}
-                  textAlign={{ base: "center", lg: "start" }}
-                  letterSpacing="1px"
-                  id="page-title-1"
-                  mt="-100px"
-                >
-                  Introducing the first AI Layer Zero.
-                </Text>
-                <Text
-                  fontSize={{ base: "2xl", md: "3xl" }}
-                  // textTransform="uppercase"
-                  fontWeight={300}
-                  textAlign={{ base: "center", lg: "start" }}
-                  letterSpacing="1px"
-                  id="page-title-2"
-                  mt="-125px"
-                >
-                  Create your own L1 Blockchain in minutes.
-                </Text>
-                <Text
-                  fontSize={{ base: "2xl", md: "3xl" }}
-                  // textTransform="uppercase"
-                  fontWeight={300}
-                  textAlign={{ base: "center", lg: "start" }}
-                  letterSpacing="1px"
-                  id="page-title-3"
-                  mt="-150px"
-                >
-                  Democratising Blockchain Infrastructure.
-                </Text>
+              <Text
+                fontSize={{ base: "3xl", md: "50px" }}
+                // textTransform="uppercase"
+                fontWeight={400}
+                maxW="500px"
+                textAlign={{ base: "center", lg: "start" }}
+                letterSpacing="1px"
+                position="absolute"
+                top={{ base: "0px", lg: "-50px" }}
+                id="page-title-1"
+                style={videoFont.style}
+              >
+                Introducing the first AI Layer Zero.
+              </Text>
+              <Text
+                fontSize={{ base: "3xl", md: "50px" }}
+                // textTransform="uppercase"
+                fontWeight={400}
+                maxW="500px"
+                textAlign={{ base: "center", lg: "start" }}
+                letterSpacing="1px"
+                position="absolute"
+                top={{ base: "0px", lg: "-50px" }}
+                id="page-title-2"
+                style={videoFont.style}
+              >
+                Create your own L1 Blockchain in minutes.
+              </Text>
+              <Text
+                fontSize={{ base: "3xl", md: "50px" }}
+                // textTransform="uppercase"
+                fontWeight={400}
+                maxW="500px"
+                textAlign={{ base: "center", lg: "start" }}
+                letterSpacing="1px"
+                position="absolute"
+                top={{ base: "0px", lg: "-50px" }}
+                id="page-title-3"
+                style={videoFont.style}
+              >
+                Democratising Blockchain Infrastructure.
+              </Text>
 
-                {/* <Button
+              {/* <Button
                   mt={{ base: "5", md: "0" }}
                   as={CLink}
                   href="https://phron.ai/whitepaper.pdf"
@@ -180,9 +219,8 @@ export default function CPhronZero() {
                     Get Started
                   </Text>
                 </Button> */}
-              </Fade>
             </VStack>
-            <Box maxW={{ base: "550px", xl: "650px" }}>
+            <Box maxW={{ base: "550px", xl: "700px" }}>
               <Image
                 className="infinit-move-1"
                 src="/assets/phronzero/hero-image.png"
