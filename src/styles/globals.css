@@ -618,6 +618,7 @@ nav {
 
 #page-title-1, #page-title-2, #page-title-3 {
     line-height: 125%;
+    visibility: hidden;
 }
 
 #page-title-1 .line1,#page-title-2 .line2,#page-title-3 .line3 {
