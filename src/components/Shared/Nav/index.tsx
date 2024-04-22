@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
   Box,
   Text,
@@ -8,10 +8,10 @@ import {
   Container,
   useDisclosure,
   Link as CLink,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
+  // Menu,
+  // MenuButton,
+  // MenuList,
+  // MenuItem,
 } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import { Logo } from "../..";
@@ -20,6 +20,29 @@ import { CgMenuRightAlt } from "react-icons/cg";
 import MobileDrawer from "./Drawer";
 import { IoIosArrowDown } from "react-icons/io";
 import SingleMenu from "./SingleMenu";
+
+// import {
+//   Popover,
+//   PopoverTrigger,
+//   PopoverContent,
+//   PopoverHeader,
+//   PopoverBody,
+//   PopoverFooter,
+//   PopoverArrow,
+//   PopoverCloseButton,
+//   PopoverAnchor,
+// } from "@chakra-ui/react";
+
+import {
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  MenuItemOption,
+  MenuGroup,
+  MenuOptionGroup,
+  MenuDivider,
+} from "@chakra-ui/react";
 
 const Fade = require("react-reveal/Fade");
 
@@ -64,7 +87,22 @@ export const navItems = [
     label: "NFT Marketplace",
     href: "/marketplace",
   },
-
+  {
+    id: 22,
+    label: "News / Updates",
+    subMenu: [
+      {
+        id: 1,
+        label: "Dubai Crypto Expo 2023",
+        href: "/dubai-crypto-expo-2023",
+      },
+      {
+        id: 2,
+        label: "Articles",
+        href: "/news",
+      },
+    ],
+  },
   // {
   //   id: 14,
   //   label: "Phron AI: Projects",
@@ -105,6 +143,13 @@ export const menu = ["Phron AI Foundation", "News / Updates"];
 
 export default function Nav() {
   const { onOpen, isOpen, onClose } = useDisclosure();
+  const {
+    onOpen: onMenuOpen,
+    isOpen: isMenuOpen,
+    onClose: onMenuClose,
+  } = useDisclosure();
+
+  const navRef = useRef<HTMLDivElement>(null);
 
   const [currentMenu, setCurrentMenu] = useState("Phron AI Foundation");
 
@@ -123,36 +168,41 @@ export default function Nav() {
     let lastScroll = 0;
 
     window.addEventListener("scroll", () => {
-      const currentScroll = window.pageYOffset;
+      const currentScroll = window.scrollY;
 
-      if (currentScroll <= 0) {
-        body.classList.remove("scroll-up");
+      if (currentScroll > 0 && navRef.current) {
+        navRef.current.style.backgroundColor = "#05010c";
+      }
+
+      if (currentScroll <= 0 && navRef.current) {
+        navRef.current.style.backgroundColor = "transparent";
         return;
       }
-
-      if (
-        currentScroll > lastScroll &&
-        !body.classList.contains("scroll-down")
-      ) {
-        body.classList.remove("scroll-up");
-        body.classList.add("scroll-down");
-      } else if (
-        currentScroll < lastScroll &&
-        body.classList.contains("scroll-down")
-      ) {
-        body.classList.remove("scroll-down");
-        body.classList.add("scroll-up");
-      }
-      lastScroll = currentScroll;
+      // if (
+      //   currentScroll > lastScroll &&
+      //   !body.classList.contains("scroll-down")
+      // ) {
+      //   body.classList.remove("scroll-up");
+      //   body.classList.add("scroll-down");
+      // } else if (
+      //   currentScroll < lastScroll &&
+      //   body.classList.contains("scroll-down")
+      // ) {
+      //   body.classList.remove("scroll-down");
+      //   body.classList.add("scroll-up");
+      // }
+      // lastScroll = currentScroll;
     });
   }, []);
 
   return (
     <Box
       as="nav"
+      ref={navRef}
       pt="5"
-      pb={{ base: "5", md: "0" }}
-      bgColor="#05010c"
+      pb={{ base: "5", md: "5" }}
+      // bgColor="#05010c"
+      bgColor="transparent"
       color="#fff"
       pos="fixed"
       top={0}
@@ -161,7 +211,7 @@ export default function Nav() {
       zIndex={999}
       transition="all 300ms ease-in-out"
     >
-      <Container maxW="1400px">
+      <Container maxW="1440px" px={{ base: "4", xl: "0" }}>
         <HStack justifyContent="space-between">
           <Logo />
 
@@ -172,12 +222,12 @@ export default function Nav() {
           </Box>
 
           <HStack
-            spacing={{ base: "20px", "2xl": "30px" }}
+            spacing={{ base: "20px", "2xl": "24px" }}
             display={{ base: "none", "1350px": "flex" }}
             fontSize={{ base: "15px", "2xl": "base" }}
             ml="0px"
           >
-            {menu.map((item) => (
+            {/* {menu.map((item) => (
               <Button
                 key={item}
                 variant="unstyled"
@@ -191,7 +241,89 @@ export default function Nav() {
               >
                 {item}
               </Button>
-            ))}
+            ))} */}
+            {navItems.map((item) =>
+              item.subMenu ? (
+                <Menu key={item.id} isOpen={isMenuOpen} onClose={onMenuClose}>
+                  <MenuButton
+                    onMouseOver={onMenuOpen}
+                    as={Button}
+                    _hover={{
+                      // bgColor: "#0e0023",
+                      color: "#9e5aff",
+                      outline: "none",
+                      boxShadow: "none",
+                    }}
+                    _active={{
+                      boxShadow: "none",
+                    }}
+                    _focus={{
+                      boxShadow: "none",
+                    }}
+                    color={router.pathname === item.href ? "#9e5aff" : "#fff"}
+                    fontWeight={500}
+                    rightIcon={<IoIosArrowDown />}
+                    colorScheme="ghost"
+                    px="0"
+                  >
+                    {item.label}
+                  </MenuButton>
+                  <MenuList bg="black" borderColor="rgba(255,255,255,0.1)">
+                    {item.subMenu.map((link) => (
+                      <MenuItem
+                        bg="black"
+                        key={link.id}
+                        as={Link}
+                        href={link.href}
+                        _hover={{
+                          // bgColor: "#0e0023",
+                          color: "#9e5aff",
+                          outline: "none",
+                          boxShadow: "none",
+                        }}
+                        _active={{
+                          boxShadow: "none",
+                        }}
+                        _focus={{
+                          boxShadow: "none",
+                        }}
+                        color={
+                          router.pathname === item.href ? "#9e5aff" : "#fff"
+                        }
+                        fontWeight={500}
+                        colorScheme="ghost"
+                      >
+                        {link.label}
+                      </MenuItem>
+                    ))}
+                  </MenuList>
+                </Menu>
+              ) : (
+                <Text
+                  key={item.id}
+                  as={Link}
+                  href={item.href}
+                  // py="5"
+                  // px="5"
+                  _hover={{
+                    // bgColor: "#0e0023",
+                    color: "#9e5aff",
+                    outline: "none",
+                    boxShadow: "none",
+                  }}
+                  _active={{
+                    boxShadow: "none",
+                  }}
+                  _focus={{
+                    boxShadow: "none",
+                  }}
+                  color={router.pathname === item.href ? "#9e5aff" : "#fff"}
+                  fontWeight={500}
+                >
+                  {item.label}
+                </Text>
+              )
+            )}
           </HStack>
 
           <HStack
@@ -211,37 +343,35 @@ export default function Nav() {
             >
               PhronZero
             </Button> */}
-            {/* <Button
-                as={Link}
-                href="/phron"
-                variant="primary-purple"
-                borderRadius="full"
-                px="10"
-                py="5"
-                w="full"
-                fontSize={{ "3000px": "lg" }}
-                textTransform="uppercase"
-              >
-                Phron
-              </Button> */}
+
             <Button
               as={CLink}
               href="https://phron.ai/whitepaper.pdf"
               target="_blank"
               variant="primary-purple"
               borderRadius="full"
-              px="8"
-              py="5"
+              padding="5px 20px"
               w="full"
-              fontSize={{ "3000px": "lg" }}
+              fontSize={{ base: "sm", "3000px": "lg" }}
             >
               Whitepaper
+            </Button>
+            <Button
+              as={Link}
+              href="https://phron.ai/tokenomics.pdf"
+              variant="primary-outline"
+              borderRadius="full"
+              padding="5px 20px"
+              w="full"
+              fontSize={{ base: "sm", "3000px": "lg" }}
+            >
+              Tokenomics
             </Button>
           </HStack>
         </HStack>
       </Container>
 
-      {currentMenu === "Phron AI Foundation" ? (
+      {/* {currentMenu === "Phron AI Foundation" ? (
         <Fade>
           <Box
             display={{ base: "none", "1350px": "block" }}
@@ -341,7 +471,7 @@ export default function Nav() {
             </Container>
           </Box>
         </Fade>
-      ) : null}
+      ) : null} */}
     </Box>
   );
 }

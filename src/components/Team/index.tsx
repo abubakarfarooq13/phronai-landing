@@ -249,7 +249,7 @@ export default function Team() {
           </a>
         </VStack>
 
-        <VStack mt="20">
+        {/* <VStack mt="20">
           <Box mb="4">
             <Image
               src="/assets/phronzero-logo-2.png"
@@ -316,7 +316,7 @@ export default function Team() {
               </Text>
             </Button>
           </Stack>
-        </VStack>
+        </VStack> */}
       </Container>
     </Box>
   );

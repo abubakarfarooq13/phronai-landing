@@ -66,29 +66,33 @@ export default function MobileDrawer(props: MobileDrawerProps) {
 
                 <AccordionPanel px="0" py="10px">
                   <VStack w="full">
-                    {navItems.map((item) => (
-                      <Text
-                        w="full"
-                        key={item.id}
-                        as={Link}
-                        href={item.href}
-                        // py="5"
-                        px="10px"
-                        _active={{
-                          boxShadow: "none",
-                        }}
-                        _focus={{
-                          boxShadow: "none",
-                        }}
-                        bgColor={
-                          router.pathname === item.href ? "#5900d7" : "none"
-                        }
-                        color={router.pathname === item.href ? "#fff" : "none"}
-                        fontSize={{ "3000px": "lg" }}
-                      >
-                        {item.label}
-                      </Text>
-                    ))}
+                    {navItems.map((item) =>
+                      !item.href ? null : (
+                        <Text
+                          w="full"
+                          key={item.id}
+                          as={Link}
+                          href={item.href}
+                          // py="5"
+                          px="10px"
+                          _active={{
+                            boxShadow: "none",
+                          }}
+                          _focus={{
+                            boxShadow: "none",
+                          }}
+                          bgColor={
+                            router.pathname === item.href ? "#5900d7" : "none"
+                          }
+                          color={
+                            router.pathname === item.href ? "#fff" : "none"
+                          }
+                          fontSize={{ "3000px": "lg" }}
+                        >
+                          {item.label}
+                        </Text>
+                      )
+                    )}
                   </VStack>
                 </AccordionPanel>
               </AccordionItem>

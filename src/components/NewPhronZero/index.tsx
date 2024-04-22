@@ -140,12 +140,7 @@ export default function CPhronZero() {
         bgSize="100% 100%"
         bgPos="center"
       >
-        <Container
-          ref={container}
-          maxW="1300px"
-          pt={{ base: "50px", md: "100px" }}
-          mb="100px"
-        >
+        <Container ref={container} maxW="1300px" pt="100px" mb="100px">
           <Stack
             direction={{ base: "column-reverse", lg: "row" }}
             justifyContent="space-between"
@@ -242,7 +237,7 @@ export default function CPhronZero() {
               justifyContent={{ md: "center" }}
               overflow="auto"
               p="2"
-              mt="24"
+              mt={{ base: "0px", md: "24" }}
             >
               <Tab
                 // px="10"
@@ -1020,7 +1015,7 @@ export default function CPhronZero() {
             </TabPanels>
           </Tabs>
 
-          <VStack mt="20">
+          {/* <VStack mt="20">
             <Box mb="4">
               <Image
                 src="/assets/phronzero-logo-2.png"
@@ -1087,7 +1082,7 @@ export default function CPhronZero() {
                 </Text>
               </Button>
             </Stack>
-          </VStack>
+          </VStack> */}
         </Container>
       </Box>
 
