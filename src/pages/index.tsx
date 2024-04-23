@@ -55,7 +55,7 @@ export default function Home() {
         <title>Welcome to PhronZero</title>
         <meta
           name="description"
-          content="One step beyond with artificial intelligence."
+          content="One step beyond with artificial intelligence, bringing the first AI Layer 0 Platform. Create your Layer 1 Blockchain in minutes."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
