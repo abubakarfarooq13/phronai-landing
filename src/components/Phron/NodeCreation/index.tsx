@@ -31,7 +31,8 @@ export default function NodeCreation() {
               mb={{ base: "3", "3000px": "5" }}
               textAlign="center"
             >
-              Node Creation
+              {/* Node Creation */}
+              Node Validators
             </Text>
             <Text
               maxW="800px"
@@ -40,10 +41,15 @@ export default function NodeCreation() {
               mb="50px"
               fontSize={{ base: "lg", "3000px": "xl" }}
             >
-              With low metrics as inputs, there might be a chance of switching
+              {/* With low metrics as inputs, there might be a chance of switching
               categories from super node to fast node or average node. Due to
               this, Phron AI encourages validators to participate in the network
-              by block processing including maximum transactions.
+              by block processing including maximum transactions. */}
+              An initial reward curve is applied to reward node validators,
+              providing a high incentive to motivate a higher decentralization
+              level at early stages of the project. This model will be later on
+              applied to PhronZero nodes as well in order to keep the security
+              of the platform
             </Text>
           </Fade>
 

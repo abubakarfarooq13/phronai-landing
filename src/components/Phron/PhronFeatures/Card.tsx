@@ -35,7 +35,7 @@ export default function EcoSystemCard(props: EcoSystemCardProps) {
       rounded="27px"
       border="3px solid #261250"
       px="5"
-      pb="10"
+      pb="5"
       textAlign="center"
       className="infinit-move-hover"
       h="full"
@@ -111,9 +111,9 @@ export default function EcoSystemCard(props: EcoSystemCardProps) {
         {title}
       </Text>
 
-      {/* <Text color="#c1c1c1" mb="6">
+      <Text color="#c1c1c1" fontSize="sm">
         {description}
-      </Text> */}
+      </Text>
       {/* <Button
         as={Link}
         variant="primary-outline"

@@ -29,8 +29,9 @@ export default function PhronFeatures() {
               <Fade bottom>
                 <Card
                   imgSrc="/assets/phron/cart.png"
-                  title="Experience the power of fast and affordable NFTs transfers."
-                  description="Lorem Lorem"
+                  // title="Experience the power of fast and affordable NFTs transfers."
+                  title="Deflationary Mechanism."
+                  description="A portion of the Transaction and AI Services fees will be destined to burn PHRON, reducing the overall total supply over time."
                   buttonHref="#"
                   buttonText="Learn more"
                   imgHeight={235}
@@ -44,8 +45,9 @@ export default function PhronFeatures() {
               <Fade bottom delay={300}>
                 <Card
                   imgSrc="/assets/phron/game-assets.png"
-                  title="Access the power of fast blockchain interactions."
-                  description="Lorem Lorem"
+                  // title="Access the power of fast blockchain interactions."
+                  title="Incentives"
+                  description="Adaptive AI Staking and Node Validation is implemented to reward users for their contributions to the network"
                   buttonHref="#"
                   buttonText="Learn more"
                   imgWidth={221}
@@ -59,8 +61,11 @@ export default function PhronFeatures() {
               <Fade bottom delay={400}>
                 <Card
                   imgSrc="/assets/phron/robots-shaking-hands.png"
-                  title="Join a blockchain community that you can trust."
-                  description="Lorem Lorem"
+                  // title="Join a blockchain community that you can trust."
+                  // description="Lorem Lorem"
+
+                  title="Governance"
+                  description="PhronAI introduces an on-chain governance model, predicated on a vote-escrowed mechanism."
                   buttonHref="#"
                   buttonText="Learn more"
                   imgWidth={313}
@@ -71,7 +76,7 @@ export default function PhronFeatures() {
             </WrapItem>
           </Wrap>
 
-          <Button
+          {/* <Button
             as={Link}
             href={`mailto:${PHRON_INFO_EMAIL}`}
             variant="primary"
@@ -81,7 +86,7 @@ export default function PhronFeatures() {
             fontSize={{ "3000px": "lg" }}
           >
             Contact Us
-          </Button>
+          </Button> */}
         </VStack>
       </Container>
     </Box>

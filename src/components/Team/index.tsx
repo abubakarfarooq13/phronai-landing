@@ -98,7 +98,7 @@ export default function Team() {
       <Container maxW="1460px" pt="100px" pb="100px">
         <Fade bottom>
           <Text textAlign="center" fontSize="3xl" fontWeight={300} opacity=".8">
-            PhronAI
+            Phron AI
           </Text>
           <Text
             as="h1"

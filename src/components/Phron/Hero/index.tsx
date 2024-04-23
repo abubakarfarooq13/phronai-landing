@@ -52,7 +52,7 @@ export default function PhronesisMarketplace() {
             <VStack
               zIndex={1}
               pt={{ base: "40px", xl: "200px" }}
-              w={{ base: "full", md: "50%" }}
+              w={{ base: "full", md: "55%" }}
               align="start"
             >
               <Fade left>
@@ -70,9 +70,11 @@ export default function PhronesisMarketplace() {
                   color="#c1c1c1"
                   fontSize={{ base: "base", "3000px": "xl" }}
                 >
-                  Phron AI introduces a new proprietary consensus layer
-                  alongside Machine Learning Algorithms that aims to push
-                  blockchain technology to a point of having no barriers.
+                  The token model aims to ensure the sustainability, growth, and
+                  decentralized governance of the ecosystem and is constructed
+                  to incentivize participation, secure the network, and
+                  facilitate a vibrant economy centered around AI and blockchain
+                  synergy.
                 </Text>
 
                 {/* <Button

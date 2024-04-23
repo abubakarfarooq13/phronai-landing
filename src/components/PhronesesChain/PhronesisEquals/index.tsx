@@ -40,7 +40,7 @@ export default function PhronesisEquals() {
             textAlign="center"
             mb={{ base: "20", lg: "10" }}
           >
-            Phron AI=
+            Phron AI Chain
           </Text>
         </Fade>
         <Wrap

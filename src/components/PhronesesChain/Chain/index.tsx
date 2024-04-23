@@ -226,7 +226,7 @@ export default function Chain() {
                   pl="1"
                   fontWeight={300}
                 >
-                  READY TO EMBRACE THE FUTURE
+                  Proof-of-Concept
                 </Text>
 
                 <Text
@@ -312,15 +312,21 @@ export default function Chain() {
           <Text
             textAlign="center"
             color="#c1c1c1"
-            maxW="700px"
+            maxW="884px"
             mx="auto"
             mt="40px"
             fontSize={{ base: "base", md: "lg" }}
           >
-            Phron AI is the first EVM, Proof-of-Stake, Layer 1 blockchain that
+            {/* Phron AI is the first EVM, Proof-of-Stake, Layer 1 blockchain that
             uses the Sophia Protocol (Artificial Intelligence Statistical
             Consensus Mechanism) and Indirect-LTFM (Low Transaction Fee
-            Management) Protocol.
+            Management) Protocol. */}
+            Unlike conventional blockchain architectures, which rely solely on
+            static rules and consensus mechanisms, the Phron AI Chain harnesses
+            the power of AI to adapt and optimize its operations in real-time.
+            This dynamic approach not only enhances the efficiency and
+            responsiveness of the network but also fortifies its security
+            against evolving threats
           </Text>
         </Container>
       </Box>
