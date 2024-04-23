@@ -7,8 +7,11 @@ import { FaTelegramPlane } from "react-icons/fa";
 import { IoLogoDiscord } from "react-icons/io5";
 import { BsYoutube } from "react-icons/bs";
 import Link from "next/link";
+import { useRouter } from "next/router";
+import PhronZeroLogo from "../PhronZeroLogo";
 
 export default function Footer() {
+  const router = useRouter();
   return (
     <Box as="footer" py="10" bgColor="#05010c">
       <Container maxW="1440px" px={{ base: "4", xl: "4" }}>
@@ -21,7 +24,7 @@ export default function Footer() {
           spacing="10"
         >
           <VStack align="start" spacing="5" zIndex={99}>
-            <Logo />
+            {router.pathname === "/" ? <PhronZeroLogo /> : <Logo />}
             <Text
               color="#c1c1c1"
               display={{ base: "none", md: "flex" }}

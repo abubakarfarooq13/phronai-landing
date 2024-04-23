@@ -6,7 +6,11 @@ export default function PhronZeroLogo() {
   return (
     <Box maxW={{ base: "160px", md: "200px" }} w="full">
       <Link href="/">
-        <CImage src="/assets/phronai-logo.svg" alt="phronai logo" w="full" />
+        <CImage
+          src="/assets/phronzero/phronzero-logo.png"
+          alt="phronai logo"
+          w="full"
+        />
       </Link>
     </Box>
   );
