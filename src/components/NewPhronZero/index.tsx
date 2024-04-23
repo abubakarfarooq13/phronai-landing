@@ -405,10 +405,10 @@ export default function CPhronZero() {
                         >
                           <Image
                             className="infinit-move-4"
-                            src="/assets/phronzero/card-1-img.png"
-                            alt="card 1 image"
-                            width={200}
-                            height={200}
+                            src="/assets/phronzero/clock1.png"
+                            alt="clock1 image"
+                            width={150}
+                            height={150}
                           />
                         </Box>
                         <Text
@@ -434,10 +434,10 @@ export default function CPhronZero() {
                       >
                         <Image
                           className="infinit-move-4"
-                          src="/assets/phronzero/card-1-img.png"
+                          src="/assets/phronzero/clock1.png"
                           alt="card 1 image"
-                          width={200}
-                          height={200}
+                          width={150}
+                          height={150}
                         />
                       </Box>
                     </GridItem>
