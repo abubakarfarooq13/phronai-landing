@@ -163,6 +163,17 @@ export default function MobileDrawer(props: MobileDrawerProps) {
               >
                 Whitepaper
               </Button>
+              <Button
+                as={Link}
+                href="https://phron.ai/tokenomics.pdf"
+                variant="primary-outline"
+                borderRadius="full"
+                px="8"
+                py="5"
+                w="full"
+              >
+                Tokenomics
+              </Button>
             </VStack>
           </DrawerBody>
         </DrawerContent>

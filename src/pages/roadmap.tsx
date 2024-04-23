@@ -58,7 +58,7 @@ export default function RoadMap() {
       <Nav />
 
       <Box
-        pt={{ base: "70px", "1350px": "120px" }}
+        // pt={{ base: "70px", "1350px": "120px" }}
         bgColor="#03020b"
         color="#fff"
       >

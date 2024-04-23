@@ -79,6 +79,7 @@ export default function PhronesisMarketplace() {
         bgSize={{ "2560px": "cover" }}
         pos="relative"
         id="phronesis-marketplace"
+        pt="50px"
       >
         <Container maxW="1160px">
           <Stack

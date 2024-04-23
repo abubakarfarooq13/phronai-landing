@@ -70,7 +70,7 @@ export const team = [
   {
     id: "06",
     name: "Noah J.",
-    role: "Chief of Security",
+    role: "Chief Security Officer",
     image: "/assets/team/noah-crop.png",
     linkedinUrl: "https://www.linkedin.com/in/njelich/",
     imageWidth: 200,
@@ -95,7 +95,7 @@ export default function Team() {
       bgSize="cover"
     >
       <Nav />
-      <Container maxW="1460px" pt="70px" pb="100px">
+      <Container maxW="1460px" pt="100px" pb="100px">
         <Fade bottom>
           <Text textAlign="center" fontSize="3xl" fontWeight={300} opacity=".8">
             PhronZero
