@@ -61,6 +61,7 @@ export default function PhronesisMarketplace() {
                   fontSize={{ base: "4xl", md: "5xl", "3000px": "7xl" }}
                   lineHeight={{ base: "40px", md: "60px", "3000px": "70px" }}
                   fontWeight={500}
+                  textAlign={{ base: "center", md: "left" }}
                   mb={{ base: "1", "3000px": "3" }}
                 >
                   PHRON: The Coin
@@ -69,6 +70,7 @@ export default function PhronesisMarketplace() {
                 <Text
                   color="#c1c1c1"
                   fontSize={{ base: "base", "3000px": "xl" }}
+                  textAlign={{ base: "center", md: "left" }}
                 >
                   The token model aims to ensure the sustainability, growth, and
                   decentralized governance of the ecosystem and is constructed
