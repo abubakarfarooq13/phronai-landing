@@ -97,11 +97,11 @@ export const navItems = [
         label: "Dubai Crypto Expo 2023",
         href: "/dubai-crypto-expo-2023",
       },
-      {
-        id: 2,
-        label: "Articles",
-        href: "/news",
-      },
+      // {
+      //   id: 2,
+      //   label: "Articles",
+      //   href: "/news",
+      // },
     ],
   },
   // {
@@ -133,11 +133,11 @@ export const newsItems = [
     label: "Dubai Crypto Expo 2023",
     href: "/dubai-crypto-expo-2023",
   },
-  {
-    id: 2,
-    label: "Articles",
-    href: "/news",
-  },
+  // {
+  //   id: 2,
+  //   label: "Articles",
+  //   href: "/news",
+  // },
 ];
 
 export const menu = ["Phron AI Foundation", "News / Updates"];
