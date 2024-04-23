@@ -152,7 +152,7 @@ export default function CPhronZero() {
             <VStack
               zIndex={1}
               pt={{ md: "20px", lg: "100px" }}
-              w={{ base: "full", lg: "50%" }}
+              w={{ base: "full", lg: "60%" }}
               align={{ base: "center", lg: "start" }}
               spacing={{ base: "3", md: "6" }}
               pos="relative"
@@ -237,7 +237,7 @@ export default function CPhronZero() {
                   </Text>
                 </Button> */}
             </VStack>
-            <Box maxW={{ base: "550px", xl: "700px" }}>
+            <Box maxW={{ base: "550px", xl: "650px" }}>
               <Image
                 className="infinit-move-1"
                 src="/assets/phronzero/hero-image.png"
