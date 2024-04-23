@@ -43,6 +43,7 @@ import {
   MenuOptionGroup,
   MenuDivider,
 } from "@chakra-ui/react";
+import PhronZeroLogo from "../PhronZeroLogo";
 
 const Fade = require("react-reveal/Fade");
 
@@ -82,11 +83,11 @@ export const navItems = [
     label: "Ecosystem",
     href: "/ecosystem",
   },
-  {
-    id: 4,
-    label: "NFT Marketplace",
-    href: "/marketplace",
-  },
+  // {
+  //   id: 4,
+  //   label: "NFT Marketplace",
+  //   href: "/marketplace",
+  // },
   {
     id: 22,
     label: "News / Updates",
@@ -211,9 +212,9 @@ export default function Nav() {
       zIndex={999}
       transition="all 300ms ease-in-out"
     >
-      <Container maxW="1440px" px={{ base: "4", xl: "0" }}>
+      <Container maxW="1440px" px={{ base: "4", xl: "4" }}>
         <HStack justifyContent="space-between">
-          <Logo />
+          {router.pathname === "/" ? <PhronZeroLogo /> : <Logo />}
 
           <MobileDrawer isOpen={isOpen} onOpen={onOpen} onClose={onClose} />
 
@@ -348,11 +349,12 @@ export default function Nav() {
               as={CLink}
               href="https://phron.ai/whitepaper.pdf"
               target="_blank"
-              variant="primary-purple"
+              variant="primary"
               borderRadius="full"
               padding="5px 20px"
               w="full"
               fontSize={{ base: "sm", "3000px": "lg" }}
+              color="#5900d7"
             >
               Whitepaper
             </Button>
@@ -360,7 +362,7 @@ export default function Nav() {
               as={Link}
               target="_blank"
               href="https://phron.ai/tokenomics.pdf"
-              variant="primary-outline"
+              variant="primary-purple"
               borderRadius="full"
               padding="5px 20px"
               w="full"

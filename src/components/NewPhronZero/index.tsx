@@ -18,6 +18,7 @@ import {
   Input,
   HStack,
   Image as CImage,
+  Icon,
 } from "@chakra-ui/react";
 import { Footer, Nav } from "..";
 import { FaArrowRightLong } from "react-icons/fa6";
@@ -25,6 +26,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import SplitType from "split-type";
 import localFont from "next/font/local";
+import { FaCircle } from "react-icons/fa";
 
 import { Bona_Nova } from "next/font/google";
 
@@ -95,37 +97,37 @@ export default function CPhronZero() {
 
     tl.to(".line1 .char", {
       visibility: "visible",
-      stagger: 0.08,
+      stagger: 0.02,
       delay: 0.5,
       duration: 0.1,
     })
       .to(".line1 .char", {
         visibility: "hidden",
-        stagger: -0.08,
+        stagger: -0.02,
         delay: 0.5,
         duration: 0.1,
       })
       .to(".line2 .char", {
         visibility: "visible",
-        stagger: 0.08,
+        stagger: 0.02,
         delay: 0.5,
         duration: 0.1,
       })
       .to(".line2 .char", {
         visibility: "hidden",
-        stagger: -0.08,
+        stagger: -0.02,
         delay: 0.5,
         duration: 0.1,
       })
       .to(".line3 .char", {
         visibility: "visible",
-        stagger: 0.08,
+        stagger: 0.02,
         delay: 0.5,
         duration: 0.1,
       })
       .to(".line3 .char", {
         visibility: "hidden",
-        stagger: -0.08,
+        stagger: -0.02,
         delay: 0.5,
         duration: 0.1,
       });
@@ -145,54 +147,74 @@ export default function CPhronZero() {
             direction={{ base: "column-reverse", lg: "row" }}
             justifyContent="space-between"
             alignItems="center"
-            spacing={{ base: "10" }}
+            spacing={{ base: "20", lg: "10" }}
           >
             <VStack
               zIndex={1}
               pt={{ md: "20px", lg: "100px" }}
-              w={{ base: "full", md: "50%" }}
-              align={{ base: "center", md: "start" }}
+              w={{ base: "full", lg: "50%" }}
+              align={{ base: "center", lg: "start" }}
               spacing={{ base: "3", md: "6" }}
               pos="relative"
               minH="200px"
             >
+              <HStack
+                position="absolute"
+                w="full"
+                justifyContent={{ base: "center", lg: "flex-start" }}
+                top="-50px"
+                spacing="3"
+              >
+                <Image
+                  src="/assets/chain/shophia.png"
+                  width={40}
+                  height={40}
+                  alt="sophia image"
+                />
+                <Text fontSize="lg">Sophia :</Text>
+              </HStack>
+
               <Text
-                fontSize={{ base: "3xl", md: "50px" }}
+                fontSize={{ base: "3xl", md: "40px" }}
                 // textTransform="uppercase"
                 fontWeight={400}
                 maxW="500px"
-                textAlign={{ base: "center", lg: "start" }}
+                textAlign={{ base: "center", lg: "left" }}
                 letterSpacing="1px"
                 position="absolute"
-                top={{ base: "0px", lg: "-50px" }}
+                top={{ base: "0px", lg: "-10px" }}
+                left={{ lg: "52px" }}
                 id="page-title-1"
                 style={videoFont.style}
               >
                 Introducing the first AI Layer Zero.
               </Text>
+
               <Text
-                fontSize={{ base: "3xl", md: "50px" }}
+                fontSize={{ base: "3xl", md: "40px" }}
                 // textTransform="uppercase"
                 fontWeight={400}
                 maxW="500px"
-                textAlign={{ base: "center", lg: "start" }}
+                textAlign={{ base: "center", lg: "left" }}
                 letterSpacing="1px"
                 position="absolute"
-                top={{ base: "0px", lg: "-50px" }}
+                top={{ base: "0px", lg: "-10px" }}
+                left={{ lg: "52px" }}
                 id="page-title-2"
                 style={videoFont.style}
               >
                 Create your own L1 Blockchain in minutes.
               </Text>
               <Text
-                fontSize={{ base: "3xl", md: "50px" }}
+                fontSize={{ base: "3xl", md: "40px" }}
                 // textTransform="uppercase"
                 fontWeight={400}
                 maxW="500px"
-                textAlign={{ base: "center", lg: "start" }}
+                textAlign={{ base: "center", lg: "left" }}
                 letterSpacing="1px"
                 position="absolute"
-                top={{ base: "0px", lg: "-50px" }}
+                top={{ base: "0px", lg: "-10px" }}
+                left={{ lg: "52px" }}
                 id="page-title-3"
                 style={videoFont.style}
               >
@@ -241,7 +263,8 @@ export default function CPhronZero() {
             >
               <Tab
                 // px="10"
-                minW={{ base: "200px", md: "auto" }}
+                // minW={{ base: "320px", md: "auto" }}
+                w="full"
                 _selected={{
                   color: "#fff",
                   background: "linear-gradient(to right, #a159b7, #1245d9)",
@@ -258,10 +281,12 @@ export default function CPhronZero() {
                 backgroundImage="linear-gradient(to right, #4A5568, #4A5568)"
                 width="100%"
                 height="50px"
+                minW={{ base: "100%", sm: "auto" }}
+                mr="4"
               >
                 Layer 1 Minter
               </Tab>
-              <Tab
+              {/* <Tab
                 // px="10"
                 minW={{ base: "200px", md: "auto" }}
                 _selected={{
@@ -283,10 +308,10 @@ export default function CPhronZero() {
                 mx="4"
               >
                 Adaptive AI Staking
-              </Tab>
+              </Tab> */}
               {/* <Tab
                 // px="10"
-                minW={{ base: "200px", md: "auto" }}
+                // minW={{ base: "320px", md: "auto" }}
                 _selected={{
                   color: "#fff",
                   background: "linear-gradient(to right, #a159b7, #1245d9)",
@@ -309,11 +334,12 @@ export default function CPhronZero() {
               </Tab> */}
               <Tab
                 // px="10"
-                minW={{ base: "200px", md: "auto" }}
+                // minW={{ base: "320px", md: "auto" }}
                 _selected={{
                   color: "#fff",
                   background: "linear-gradient(to right, #a159b7, #1245d9)",
                 }}
+                w="full"
                 textAlign="center"
                 textTransform="uppercase"
                 fontWeight={300}
@@ -326,6 +352,7 @@ export default function CPhronZero() {
                 backgroundImage="linear-gradient(to right, #4A5568, #4A5568)"
                 width="100%"
                 height="50px"
+                minW={{ base: "100%", sm: "auto" }}
               >
                 Node Block Sharing
               </Tab>
@@ -611,7 +638,7 @@ export default function CPhronZero() {
                   </Grid>
                 </VStack>
               </TabPanel>
-              <TabPanel px="0" pt="10">
+              {/* <TabPanel px="0" pt="10">
                 <Box mx="auto" maxW={{ base: "100px", md: "200px" }}>
                   <Image
                     src="/assets/phronzero-text.png"
@@ -713,7 +740,7 @@ export default function CPhronZero() {
                     />
                   </video>
                 </VStack>
-              </TabPanel>
+              </TabPanel> */}
               <TabPanel px="0" pt="10">
                 <Box mx="auto" maxW={{ base: "100px", md: "200px" }}>
                   <Image

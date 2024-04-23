@@ -49,11 +49,11 @@ export const navItems = [
     label: "Ecosystem",
     href: "/ecosystem",
   },
-  {
-    id: 4,
-    label: "NFT Marketplace",
-    href: "/marketplace",
-  },
+  // {
+  //   id: 4,
+  //   label: "NFT Marketplace",
+  //   href: "/marketplace",
+  // },
   // {
   //   id: 14,
   //   label: "Phron AI: Projects",

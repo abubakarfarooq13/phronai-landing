@@ -52,7 +52,7 @@ export const team = [
   {
     id: "04",
     name: "Igor Bershadsky",
-    role: "Co - Founder and Business Developer Officer",
+    role: "Chief Business Development Officer",
     image: "/assets/team/igor-old-cropped.png",
     linkedinUrl: "https://www.linkedin.com/in/igorbershadsky/",
     imageWidth: 210,
@@ -98,7 +98,7 @@ export default function Team() {
       <Container maxW="1460px" pt="100px" pb="100px">
         <Fade bottom>
           <Text textAlign="center" fontSize="3xl" fontWeight={300} opacity=".8">
-            PhronZero
+            PhronAI
           </Text>
           <Text
             as="h1"
