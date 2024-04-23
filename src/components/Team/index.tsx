@@ -52,7 +52,7 @@ export const team = [
   {
     id: "04",
     name: "Igor Bershadsky",
-    role: "Chief Business Development Officer",
+    role: "Co-Founder and CBDO",
     image: "/assets/team/igor-old-cropped.png",
     linkedinUrl: "https://www.linkedin.com/in/igorbershadsky/",
     imageWidth: 210,

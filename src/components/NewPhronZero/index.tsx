@@ -445,10 +445,10 @@ export default function CPhronZero() {
                           textTransform="uppercase"
                           opacity=".7"
                         >
-                          Less Time Layer 1
+                          Create your layer 1<br /> in minutes
                         </Text>
                         <Text opacity=".5" letterSpacing=".5px">
-                          Create your Layer 1 in Minutes
+                          Choose your parameters to create your own blockchain
                         </Text>
                       </VStack>
 
