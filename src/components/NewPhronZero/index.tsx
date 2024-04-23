@@ -97,37 +97,37 @@ export default function CPhronZero() {
 
     tl.to(".line1 .char", {
       visibility: "visible",
-      stagger: 0.02,
+      stagger: 0.05,
       delay: 0.5,
       duration: 0.1,
     })
       .to(".line1 .char", {
         visibility: "hidden",
-        stagger: -0.02,
+        stagger: -0.05,
         delay: 0.5,
         duration: 0.1,
       })
       .to(".line2 .char", {
         visibility: "visible",
-        stagger: 0.02,
+        stagger: 0.05,
         delay: 0.5,
         duration: 0.1,
       })
       .to(".line2 .char", {
         visibility: "hidden",
-        stagger: -0.02,
+        stagger: -0.05,
         delay: 0.5,
         duration: 0.1,
       })
       .to(".line3 .char", {
         visibility: "visible",
-        stagger: 0.02,
+        stagger: 0.05,
         delay: 0.5,
         duration: 0.1,
       })
       .to(".line3 .char", {
         visibility: "hidden",
-        stagger: -0.02,
+        stagger: -0.05,
         delay: 0.5,
         duration: 0.1,
       });
@@ -286,9 +286,9 @@ export default function CPhronZero() {
               >
                 Layer 1 Minter
               </Tab>
-              {/* <Tab
+              <Tab
                 // px="10"
-                minW={{ base: "200px", md: "auto" }}
+
                 _selected={{
                   color: "#fff",
                   background: "linear-gradient(to right, #a159b7, #1245d9)",
@@ -303,12 +303,12 @@ export default function CPhronZero() {
                   px: "4",
                 }}
                 backgroundImage="linear-gradient(to right, #4A5568, #4A5568)"
-                width="100%"
                 height="50px"
-                mx="4"
+                mr="4"
+                minW={{ base: "100%", sm: "auto" }}
               >
                 Adaptive AI Staking
-              </Tab> */}
+              </Tab>
               {/* <Tab
                 // px="10"
                 // minW={{ base: "320px", md: "auto" }}
@@ -638,7 +638,7 @@ export default function CPhronZero() {
                   </Grid>
                 </VStack>
               </TabPanel>
-              {/* <TabPanel px="0" pt="10">
+              <TabPanel px="0" pt="10">
                 <Box mx="auto" maxW={{ base: "100px", md: "200px" }}>
                   <Image
                     src="/assets/phronzero-text.png"
@@ -699,11 +699,17 @@ export default function CPhronZero() {
                   border="1px"
                   borderColor="rgba(75, 66, 97, .5)"
                   mx="auto"
-                  p={{ base: "5", md: "10" }}
+                  p={{ base: "2", md: "10" }}
                   bgColor="rgba(0,0,0,1)"
                   mt={{ base: "-50px", md: "-120px" }}
                 >
-                  <HStack justifyContent="space-between" w="full" mb="5">
+                  <HStack
+                    justifyContent="space-between"
+                    w="full"
+                    px={{ base: "4", md: "0" }}
+                    pt={{ base: "4", md: "0" }}
+                    mb="5"
+                  >
                     <Text
                       textTransform="uppercase"
                       fontSize={{ base: "xs", md: "xl" }}
@@ -740,7 +746,7 @@ export default function CPhronZero() {
                     />
                   </video>
                 </VStack>
-              </TabPanel> */}
+              </TabPanel>
               <TabPanel px="0" pt="10">
                 <Box mx="auto" maxW={{ base: "100px", md: "200px" }}>
                   <Image
