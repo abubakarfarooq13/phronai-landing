@@ -358,6 +358,7 @@ export default function Nav() {
             </Button>
             <Button
               as={Link}
+              target="_blank"
               href="https://phron.ai/tokenomics.pdf"
               variant="primary-outline"
               borderRadius="full"

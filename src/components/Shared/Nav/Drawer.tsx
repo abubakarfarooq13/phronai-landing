@@ -165,6 +165,7 @@ export default function MobileDrawer(props: MobileDrawerProps) {
               </Button>
               <Button
                 as={Link}
+                target="_blank"
                 href="https://phron.ai/tokenomics.pdf"
                 variant="primary-outline"
                 borderRadius="full"
