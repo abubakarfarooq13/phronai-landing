@@ -112,7 +112,7 @@ export default function DubaiExpo2023() {
         <Container
           id="phron-features"
           maxW="1160px"
-          pt={{ base: "50px", md: "400px" }}
+          pt={{ base: "100px", md: "400px" }}
         >
           <Box
             backgroundImage="linear-gradient(148deg, rgba(41,20,82,1) 0%, #03020b 50%);"
