@@ -57,7 +57,7 @@ export default function Phron() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <Box
-        pt={{ base: "70px", "1350px": "160px" }}
+        // pt={{ base: "70px", "1350px": "160px" }}
         bgColor="#03020b"
         color="#fff"
       >

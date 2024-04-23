@@ -351,7 +351,8 @@ export default function Nav() {
               target="_blank"
               variant="primary"
               borderRadius="full"
-              padding="5px 20px"
+              // padding="10px 20px"
+              px="8"
               w="full"
               fontSize={{ base: "sm", "3000px": "lg" }}
               color="#5900d7"
@@ -364,8 +365,9 @@ export default function Nav() {
               href="https://phron.ai/tokenomics.pdf"
               variant="primary-purple"
               borderRadius="full"
-              padding="5px 20px"
+              // padding="10px 20px"
               w="full"
+              px="8"
               fontSize={{ base: "sm", "3000px": "lg" }}
             >
               Tokenomics

@@ -16,7 +16,7 @@ const Fade = require("react-reveal/Fade");
 
 export default function PhronesisMarketplace() {
   return (
-    <Box id="nft-marketplace" pos="relative" overflow="hidden">
+    <Box id="nft-marketplace" pos="relative" pt="70px" overflow="hidden">
       <CImage
         src="/assets/header-left-shadow.png"
         pos="absolute"

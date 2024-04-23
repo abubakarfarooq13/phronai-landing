@@ -793,7 +793,7 @@ export default function CPhronZero() {
                   maxW="950px"
                   mx="auto"
                   pt={{ base: "10", md: "32" }}
-                  px={{ base: "5", md: "10" }}
+                  px={{ base: "2", md: "10" }}
                   pb={{ base: "5", md: "10" }}
                   border="1px"
                   borderColor="rgba(75, 66, 97, .5)"
