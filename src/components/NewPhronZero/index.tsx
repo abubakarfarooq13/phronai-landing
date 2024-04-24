@@ -256,10 +256,13 @@ export default function CPhronZero() {
           <Tabs variant="soft-rounded" colorScheme="green">
             <TabList
               w="full"
-              justifyContent={{ md: "center" }}
-              overflow="auto"
-              p="2"
+              justifyContent="center"
               mt={{ base: "0px", md: "24" }}
+              flexWrap={{ base: "wrap", md: "nowrap" }}
+              gap="2"
+              rowGap="4"
+              maxW={{ base: "full", md: "800px" }}
+              mx="auto"
             >
               <Tab
                 // px="10"
@@ -275,14 +278,16 @@ export default function CPhronZero() {
                 className="btn"
                 _before={{
                   content: `'Layer 1 Minter'`,
-                  fontSize: "16px",
+                  fontSize: { base: "13px", md: "16px" },
+                  lineHeight: "140%",
                   px: "4",
                 }}
                 backgroundImage="linear-gradient(to right, #4A5568, #4A5568)"
                 width="100%"
-                height="50px"
-                minW={{ base: "100%", sm: "auto" }}
-                mr="4"
+                height={{ base: "55px", md: "50px" }}
+                maxW={{ base: "45%", md: "auto" }}
+                // minW={{ base: "100%", sm: "auto" }}
+                mr={{ base: "0", md: "4" }}
               >
                 Layer 1 Minter
               </Tab>
@@ -299,15 +304,17 @@ export default function CPhronZero() {
                 className="btn"
                 _before={{
                   content: `'Adaptive AI Staking'`,
-                  fontSize: "16px",
+                  fontSize: { base: "13px", md: "16px" },
+                  lineHeight: "140%",
                   px: "4",
                 }}
+                maxW={{ base: "45%", md: "auto" }}
                 backgroundImage="linear-gradient(to right, #4A5568, #4A5568)"
-                height="50px"
-                mr="4"
-                minW={{ base: "100%", sm: "auto" }}
+                height={{ base: "55px", md: "50px" }}
+                mr={{ md: "4" }}
+                // minW={{ base: "100%", sm: "auto" }}
               >
-                Adaptive AI Staking
+                {/* Adaptive AI Staking */}
               </Tab>
               {/* <Tab
                 // px="10"
@@ -322,8 +329,9 @@ export default function CPhronZero() {
                 className="btn"
                 _before={{
                   content: `'Nomination Pools'`,
-                  fontSize: "16px",
-                px: '4'
+                  fontSize: {base:'34px',md:"16px"},
+ 
+ lineHeight: '110%',                 px: '4'
                 }}
                 backgroundImage="linear-gradient(to right, #4A5568, #4A5568)"
                 width="100%"
@@ -346,13 +354,15 @@ export default function CPhronZero() {
                 className="btn"
                 _before={{
                   content: `'Node Block Sharing'`,
-                  fontSize: "16px",
+                  fontSize: { base: "13px", md: "16px" },
+                  lineHeight: "140%",
                   px: "4",
                 }}
+                maxW={{ base: "70%", md: "auto" }}
                 backgroundImage="linear-gradient(to right, #4A5568, #4A5568)"
                 width="100%"
-                height="50px"
-                minW={{ base: "100%", sm: "auto" }}
+                height={{ base: "55px", md: "50px" }}
+                // minW={{ base: "100%", sm: "auto" }}
               >
                 Node Block Sharing
               </Tab>
