@@ -285,7 +285,7 @@ export default function CPhronZero() {
                 backgroundImage="linear-gradient(to right, #4A5568, #4A5568)"
                 width="100%"
                 height={{ base: "55px", md: "50px" }}
-                maxW={{ base: "45%", md: "auto" }}
+                maxW={{ base: "48%", md: "auto" }}
                 // minW={{ base: "100%", sm: "auto" }}
                 mr={{ base: "0", md: "4" }}
               >
@@ -308,7 +308,7 @@ export default function CPhronZero() {
                   lineHeight: "140%",
                   px: "4",
                 }}
-                maxW={{ base: "45%", md: "auto" }}
+                maxW={{ base: "48%", md: "auto" }}
                 backgroundImage="linear-gradient(to right, #4A5568, #4A5568)"
                 height={{ base: "55px", md: "50px" }}
                 mr={{ md: "4" }}
@@ -358,7 +358,7 @@ export default function CPhronZero() {
                   lineHeight: "140%",
                   px: "4",
                 }}
-                maxW={{ base: "70%", md: "auto" }}
+                maxW={{ base: "63%", md: "auto" }}
                 backgroundImage="linear-gradient(to right, #4A5568, #4A5568)"
                 width="100%"
                 height={{ base: "55px", md: "50px" }}
