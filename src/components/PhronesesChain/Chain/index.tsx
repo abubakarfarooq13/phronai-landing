@@ -262,7 +262,7 @@ export default function Chain() {
                   From Static, to Dynamic
                 </Text>
 
-                <Button
+                {/* <Button
                   mt={{ base: "5", md: "0" }}
                   as={CLink}
                   href="https://phron.ai/whitepaper.pdf"
@@ -274,7 +274,7 @@ export default function Chain() {
                   fontSize={{ "3000px": "lg" }}
                 >
                   Check our Whitepaper
-                </Button>
+                </Button> */}
               </Fade>
             </VStack>
 
