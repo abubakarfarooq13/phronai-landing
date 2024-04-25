@@ -37,7 +37,7 @@ export default function RoadMapCard(props: any) {
         px="7"
         display="inline-block"
         rounded="full"
-        fontSize="3xl"
+        fontSize={title.includes("/") ? "lg" : "3xl"}
         fontWeight={500}
       >
         {title}

@@ -81,7 +81,7 @@ export default function RoadMap() {
           <RoadMapCard
             mt={{ md: "150px" }}
             bgImageUrl="/assets/roadmap/1.png"
-            title="Q3 2023"
+            title="Q4 2023 / Q1 2024"
           >
             <Box>
               <Text
@@ -148,7 +148,7 @@ export default function RoadMap() {
           <RoadMapCard
             float={{ md: "right" }}
             bgImageUrl="/assets/roadmap/2.png"
-            title="Q4 2023"
+            title="Q2 2024"
             mt={{ md: "-350px" }}
           >
             <Box>
@@ -204,7 +204,7 @@ export default function RoadMap() {
           <RoadMapCard
             mt={{ md: "100px" }}
             bgImageUrl="/assets/roadmap/3.png"
-            title="Q1 2024"
+            title="Q3 2024"
           >
             <Box>
               <Text
@@ -272,7 +272,7 @@ export default function RoadMap() {
             float={{ md: "right" }}
             mt={{ md: "-360px", lg: "-250px" }}
             bgImageUrl="/assets/roadmap/4.png"
-            title="Q2 2024"
+            title="Q4 2024"
           >
             <Box>
               <Text
@@ -314,7 +314,7 @@ export default function RoadMap() {
           <RoadMapCard
             mt={{ md: "50px", lg: "200px" }}
             bgImageUrl="/assets/roadmap/5.png"
-            title="Q3 2024"
+            title="Q1 2025"
             noBottomMargin
           >
             <Box>

@@ -4,6 +4,7 @@ import { Logo } from "../..";
 import { AiFillMediumSquare, AiOutlineTwitter } from "react-icons/ai";
 import { GrReddit } from "react-icons/gr";
 import { FaTelegramPlane } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import { IoLogoDiscord } from "react-icons/io5";
 import { BsYoutube } from "react-icons/bs";
 import Link from "next/link";
@@ -58,7 +59,7 @@ export default function Footer() {
               }}
               fontSize={{ "3000px": "35px" }}
             >
-              <AiOutlineTwitter />
+              <FaXTwitter />
             </Text>
 
             <Text

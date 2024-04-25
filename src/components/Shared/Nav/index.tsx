@@ -345,7 +345,7 @@ export default function Nav() {
               PhronZero
             </Button> */}
 
-            <Button
+            {/* <Button
               as={CLink}
               href="https://phron.ai/whitepaper.pdf"
               target="_blank"
@@ -358,7 +358,55 @@ export default function Nav() {
               color="#5900d7"
             >
               Whitepaper
-            </Button>
+            </Button> */}
+            <Menu>
+              <MenuButton
+                as={Button}
+                variant="primary"
+                borderRadius="full"
+                // padding="10px 20px"
+                px="8"
+                w="full"
+                fontSize={{ base: "sm", "3000px": "lg" }}
+                color="#5900d7"
+              >
+                Whitepapers
+              </MenuButton>
+              <MenuList bgColor="#000" border="0px" py="0">
+                <MenuItem
+                  color="#fff"
+                  bgColor="#000"
+                  roundedTop="lg"
+                  as="a"
+                  href="https://phron.ai/whitepaper_pure.pdf"
+                  target="_blank"
+                  display="block"
+                  ml="5"
+                  pt="3"
+                  _hover={{
+                    color: "#9e5aff",
+                  }}
+                >
+                  Whitepaper Pure
+                </MenuItem>
+                <MenuItem
+                  color="#fff"
+                  bgColor="#000"
+                  roundedBottom="lg"
+                  as="a"
+                  href="https://phron.ai/whitepaper_royal.pdf"
+                  ml="5"
+                  pb="3"
+                  target="_blank"
+                  display="block"
+                  _hover={{
+                    color: "#9e5aff",
+                  }}
+                >
+                  Whitepaper Royal
+                </MenuItem>
+              </MenuList>
+            </Menu>
             <Button
               as={Link}
               target="_blank"
