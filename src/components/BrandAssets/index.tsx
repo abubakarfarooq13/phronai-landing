@@ -28,7 +28,7 @@ const logos = [
 
   {
     id: 3,
-    name: "PhronAi Logo Black",
+    name: "PhronAI Logo Black",
     logoSrc: "/assets/brand-assets/phronai-logo-black.svg",
     isBlack: true,
     pngDownloadLink: "/assets/brand-assets/phronai-logo-black.png",
