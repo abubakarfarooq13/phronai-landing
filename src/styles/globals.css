@@ -74,11 +74,11 @@ a:hover {
 }
 
 nav {
-    filter: drop-shadow(0 -10px 20px #5900d7);
+    /* filter: drop-shadow(0 -10px 20px #5900d7); */
 }
 .scroll-up {
 	nav {
-		filter: drop-shadow(0 -10px 20px #5900d7);
+		/* filter: drop-shadow(0 -10px 20px #5900d7); */
 	}
 }
 

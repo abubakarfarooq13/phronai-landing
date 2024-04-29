@@ -201,7 +201,7 @@ export default function Nav() {
       as="nav"
       ref={navRef}
       pt="5"
-      pb={{ base: "5", md: "5" }}
+      pb={router.pathname !== "/brand-assets" ? { base: "5", md: "5" } : "0px"}
       // bgColor="#05010c"
       bgColor="transparent"
       color="#fff"
@@ -423,6 +423,26 @@ export default function Nav() {
           </HStack>
         </HStack>
       </Container>
+      {/* 
+      {router.pathname === "/brand-assets" ? (
+        <HStack
+          mt="5"
+          justifyContent="center"
+          spacing="10"
+          bgColor="#6317fe"
+          py="5"
+        >
+          <Text as="a" href="#logo">
+            Logo
+          </Text>
+          <Text as="a" href="#colors">
+            Colors
+          </Text>
+          <Text as="a" href="#fonts">
+            Fonts
+          </Text>
+        </HStack>
+      ) : null} */}
 
       {/* {currentMenu === "Phron AI Foundation" ? (
         <Fade>

@@ -17,11 +17,11 @@ export default function Footer() {
     <Box as="footer" py="10" bgColor="#05010c">
       <Container maxW="1440px" px={{ base: "4", xl: "4" }}>
         <Stack
-          direction="row"
+          direction={{ base: "column", md: "row" }}
           w="full"
           justifyContent={{ base: "center", md: "space-between" }}
-          alignItems="flex-end"
-          flexWrap="wrap"
+          alignItems={{ base: "center", md: "flex-end" }}
+          // flexWrap="wrap"
           spacing="10"
         >
           <VStack align="start" spacing="5" zIndex={99}>
@@ -29,9 +29,9 @@ export default function Footer() {
             <Text
               color="#c1c1c1"
               display={{ base: "none", md: "flex" }}
-              fontSize={{ base: "base", "3000px": "xl" }}
+              fontSize={{ base: "sm", "3000px": "xl" }}
             >
-              &copy; {new Date().getFullYear()} Phron AI
+              {new Date().getFullYear()} &copy; Phron AI. All rights reserved.
             </Text>
           </VStack>
           <HStack fontSize="30px" spacing="5" color="#c1c1c1">
@@ -89,14 +89,27 @@ export default function Footer() {
               <IoLogoDiscord />
             </Text>
           </HStack>
-          <Box>
+          <Text
+            as={Link}
+            href="/brand-assets"
+            transition="all .3s"
+            color="#c1c1c1"
+            _hover={{
+              transition: "all .3s",
+              color: "rgba(105,46,164,1)",
+            }}
+            fontSize={{ base: "sm", "3000px": "35px" }}
+          >
+            Brand Assets
+          </Text>
+          {/* <Box>
             <Text color="#c1c1c1" display={{ base: "flex", md: "none" }}>
               &copy; {new Date().getFullYear()} Phron AI
             </Text>
             <Text color="#c1c1c1" fontSize={{ base: "base", "3000px": "xl" }}>
               All rights reserved.
             </Text>
-          </Box>
+          </Box> */}
         </Stack>
       </Container>
     </Box>
