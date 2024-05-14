@@ -106,6 +106,8 @@ const partners = [
   },
 ];
 
+const Fade = require("react-reveal/Fade");
+
 export default function CPartners() {
   return (
     <Box
@@ -115,30 +117,35 @@ export default function CPartners() {
     >
       <Nav />
       <Container maxW="1260px" pt="120px" position="relative" pb="96px">
-        <Text
-          as="h1"
-          fontSize={{ base: "3xl", md: "5xl" }}
-          fontWeight={500}
-          textAlign="center"
-          letterSpacing="1px"
-          mb="16"
-        >
-          Our PartnerShip
-        </Text>
+        <Fade bottom>
+          <Text
+            as="h1"
+            fontSize={{ base: "3xl", md: "5xl" }}
+            fontWeight={500}
+            textAlign="center"
+            letterSpacing="1px"
+            mb="16"
+          >
+            Our PartnerShip
+          </Text>
+        </Fade>
 
         <Box position="relative" maxW="1180px" mx="auto">
           <Wrap justify="center" spacing="10">
             {partners.map((logo) => (
-              <Image
-                key={logo.id}
-                src={logo.imageSrc}
-                alt={logo.name + " logo"}
-                width={150}
-                height={250}
-                style={{
-                  objectFit: "contain",
-                }}
-              />
+              <WrapItem key={logo.id}>
+                <Fade bottom delay={logo.id * 50}>
+                  <Image
+                    src={logo.imageSrc}
+                    alt={logo.name + " logo"}
+                    width={150}
+                    height={250}
+                    style={{
+                      objectFit: "contain",
+                    }}
+                  />
+                </Fade>
+              </WrapItem>
             ))}
           </Wrap>
 
