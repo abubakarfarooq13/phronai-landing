@@ -133,13 +133,19 @@ export default function CPartners() {
         <Box position="relative" maxW="1180px" mx="auto">
           <Wrap justify="center" spacing="10">
             {partners.map((logo) => (
-              <WrapItem key={logo.id}>
+              <WrapItem
+                key={logo.id}
+                transition="all .3s"
+                _hover={{
+                  transform: "translateY(-10px)",
+                }}
+              >
                 <Fade bottom delay={logo.id * 50}>
                   <Image
                     src={logo.imageSrc}
                     alt={logo.name + " logo"}
-                    width={150}
-                    height={250}
+                    width={130}
+                    height={150}
                     style={{
                       objectFit: "contain",
                     }}
@@ -150,11 +156,13 @@ export default function CPartners() {
           </Wrap>
 
           <Text
-            position="absolute"
-            right="0"
-            bottom="100px"
+            // position="absolute"
+            // right="0"
+            // bottom="100px"
             fontSize="22px"
-            color="#838383"
+            color="#c1c1c1"
+            textAlign="center"
+            mt="20"
           >
             ...and much more coming soon
           </Text>
