@@ -114,19 +114,34 @@ export default function Footer() {
               </svg>
             </Text>
           </HStack>
-          <Text
-            as={Link}
-            href="/brand-assets"
-            transition="all .3s"
-            color="#c1c1c1"
-            _hover={{
-              transition: "all .3s",
-              color: "rgba(105,46,164,1)",
-            }}
-            fontSize={{ base: "sm", "3000px": "35px" }}
-          >
-            Brand Assets
-          </Text>
+          <HStack spacing="4">
+            <Text
+              as={Link}
+              href="/partnerships"
+              transition="all .3s"
+              color="#c1c1c1"
+              _hover={{
+                transition: "all .3s",
+                color: "rgba(105,46,164,1)",
+              }}
+              fontSize={{ base: "sm", "3000px": "35px" }}
+            >
+              Our Partnerships
+            </Text>
+            <Text
+              as={Link}
+              href="/brand-assets"
+              transition="all .3s"
+              color="#c1c1c1"
+              _hover={{
+                transition: "all .3s",
+                color: "rgba(105,46,164,1)",
+              }}
+              fontSize={{ base: "sm", "3000px": "35px" }}
+            >
+              Brand Assets
+            </Text>
+          </HStack>
           {/* <Box>
             <Text color="#c1c1c1" display={{ base: "flex", md: "none" }}>
               &copy; {new Date().getFullYear()} Phron AI
