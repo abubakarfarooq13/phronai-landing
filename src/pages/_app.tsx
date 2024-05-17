@@ -8,22 +8,22 @@ import localFont from "next/font/local";
 const ruberoidFont = localFont({
   src: [
     {
-      path: "../assets/fonts/ruberoid/Ruberoid-Light.otf",
+      path: "../assets/fonts/Ruberoid/Ruberoid-Light.otf",
       weight: "300",
       style: "normal",
     },
     {
-      path: "../assets/fonts/ruberoid/Ruberoid-Regular.otf",
+      path: "../assets/fonts/Ruberoid/Ruberoid-Regular.otf",
       weight: "400",
       style: "normal",
     },
     {
-      path: "../assets/fonts/ruberoid/Ruberoid-Medium.otf",
+      path: "../assets/fonts/Ruberoid/Ruberoid-Medium.otf",
       weight: "500",
       style: "normal",
     },
     {
-      path: "../assets/fonts/ruberoid/Ruberoid-Bold.otf",
+      path: "../assets/fonts/Ruberoid/Ruberoid-Bold.otf",
       weight: "700",
       style: "normal",
     },
