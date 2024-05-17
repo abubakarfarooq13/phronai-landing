@@ -653,3 +653,26 @@ nav {
     display: none;
 }
 
+.dropdown-1-menu {
+    display: none;
+}
+  
+.dropdown-1:hover .dropdown-1-menu {
+    display: block;
+}
+
+.dropdown-2-menu {
+    display: none;
+}
+  
+.dropdown-2:hover .dropdown-2-menu {
+    display: block;
+}
+
+.dropdown-3-menu {
+    display: none;
+}
+  
+.dropdown-3:hover .dropdown-3-menu {
+    display: block;
+}

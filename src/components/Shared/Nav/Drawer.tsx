@@ -23,7 +23,13 @@ import {
 import Link from "next/link";
 import { useRouter } from "next/router";
 import Logo from "../Logo";
-import { navItems, newsItems } from ".";
+import {
+  ecosystem,
+  layerZeroAndLayerOneMenuItems,
+  navItems,
+  newsAndUpdates,
+  newsItems,
+} from ".";
 import { IoIosArrowDown } from "react-icons/io";
 
 interface MobileDrawerProps {
@@ -83,14 +89,58 @@ export default function MobileDrawer(props: MobileDrawerProps) {
                     px="0"
                     justifyContent="space-between"
                   >
-                    Phron AI Foundation
+                    Layer 0 / Layer 1
                     <AccordionIcon />
                   </AccordionButton>
                 </h2>
 
                 <AccordionPanel px="0" py="10px">
                   <VStack w="full">
-                    {navItems.map((item) =>
+                    {layerZeroAndLayerOneMenuItems.map((item) =>
+                      !item.href ? null : (
+                        <Text
+                          w="full"
+                          key={item.id}
+                          as={Link}
+                          href={item.href}
+                          // py="5"
+                          px="10px"
+                          _active={{
+                            boxShadow: "none",
+                          }}
+                          _focus={{
+                            boxShadow: "none",
+                          }}
+                          bgColor={
+                            router.pathname === item.href ? "#5900d7" : "none"
+                          }
+                          color={
+                            router.pathname === item.href ? "#fff" : "none"
+                          }
+                          fontSize={{ "3000px": "lg" }}
+                        >
+                          {item.label}
+                        </Text>
+                      )
+                    )}
+                  </VStack>
+                </AccordionPanel>
+              </AccordionItem>
+              <AccordionItem border="0px">
+                <h2>
+                  <AccordionButton
+                    fontWeight={500}
+                    px="0"
+                    justifyContent="space-between"
+                  >
+                    Ecosystem
+                    <AccordionIcon />
+                  </AccordionButton>
+                </h2>
+
+                <AccordionPanel px="0" py="10px">
+                  <VStack w="full">
+                    {ecosystem.map((item) =>
                       !item.href ? null : (
                         <Text
                           w="full"
@@ -134,7 +184,7 @@ export default function MobileDrawer(props: MobileDrawerProps) {
 
                 <AccordionPanel px="0" py="10px">
                   <VStack w="full">
-                    {newsItems.map((item) => (
+                    {newsAndUpdates.map((item) => (
                       <Text
                         w="full"
                         key={item.id}
