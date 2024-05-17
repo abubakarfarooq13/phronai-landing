@@ -122,8 +122,8 @@ const partners = [
     imageSrc: "/assets/partners/dexe.png",
     description:
       "An infrastructure for creating and governing DAOs. 50+ smart-contracts for your web-3 product.",
-    twitterUrl: "https://twitter.com/SolidProof_io",
-    websiteUrl: "https://solidproof.io/",
+    twitterUrl: "https://twitter.com/DexeNetwork",
+    websiteUrl: "https://www.dexe.network/",
   },
   {
     id: 2,
@@ -131,8 +131,9 @@ const partners = [
     imageSrc: "/assets/partners/solid-proof.png",
     description:
       "Smart Contract Audits · KYC Services · Development · Consulting",
-    twitterUrl: "https://twitter.com/DexeNetwork",
-    websiteUrl: "https://www.dexe.network/",
+
+    twitterUrl: "https://twitter.com/SolidProof_io",
+    websiteUrl: "https://solidproof.io/",
   },
   {
     id: 3,
@@ -281,6 +282,7 @@ const partners = [
     description:
       "GemX is a Web3 platform designed to built for mass adoption, providing timely news updates and insights into the latest trends in the crypto world",
     twitterUrl: "https://twitter.com/gemx_crypto",
+    websiteUrl: "https://gemx.io/",
   },
   {
     id: 19,
@@ -350,8 +352,9 @@ export default function CPartners() {
             }}
             gap="5"
           >
-            {partners.map((partner) => (
+            {partners.map((partner, i) => (
               <GridItem key={partner.id}>
+                {/* <Fade bottom delay={i * 50}> */}
                 <PartnerCard
                   description={partner.description}
                   logoUrl={partner.imageSrc}
@@ -361,6 +364,7 @@ export default function CPartners() {
                   logoHeight={partner.logoHeight}
                   logoWidth={partner.logoWidth}
                 />
+                {/* </Fade> */}
               </GridItem>
             ))}
           </Grid>

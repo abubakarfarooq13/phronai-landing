@@ -49,6 +49,9 @@ export default function PartnerCard(props: PartnerCardProps) {
   //   bgColor="#0c011f"
   return (
     <Box
+      as="a"
+      href={websiteUrl}
+      target="_blank"
       bgImage="/assets/team/background.png"
       rounded="xl"
       px="6"
@@ -56,6 +59,12 @@ export default function PartnerCard(props: PartnerCardProps) {
       h="full"
       bgSize="cover"
       bgPos="center"
+      display="block"
+      transition="all .3s"
+      _hover={{
+        transform: "translateY(-10px)",
+      }}
+      // minH="170px"
     >
       <HStack spacing="4" minH="80px" alignItems="center">
         <Image
@@ -68,7 +77,7 @@ export default function PartnerCard(props: PartnerCardProps) {
           {name}
         </Text>
 
-        <Popover placement="top" trigger="hover">
+        {/* <Popover placement="top" trigger="hover">
           <PopoverTrigger>
             <Button variant="link" color="#fff">
               <CiMenuKebab />
@@ -82,8 +91,6 @@ export default function PartnerCard(props: PartnerCardProps) {
             py="2"
             boxShadow="xl"
           >
-            {/* <PopoverArrow /> */}
-
             <PopoverBody>
               <VStack align="start">
                 {websiteUrl ? (
@@ -119,7 +126,7 @@ export default function PartnerCard(props: PartnerCardProps) {
               </VStack>
             </PopoverBody>
           </PopoverContent>
-        </Popover>
+        </Popover> */}
       </HStack>
 
       <Text fontSize="sm" color="rgba(255,255,255,0.9)">
