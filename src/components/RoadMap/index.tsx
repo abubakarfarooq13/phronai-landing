@@ -86,6 +86,7 @@ export default function RoadMap() {
             <Box>
               <Text
                 fontSize={{ base: "xl", md: "lg", lg: "xl" }}
+                as="h3"
                 fontWeight={500}
                 mb="4"
                 opacity=".9"
@@ -109,6 +110,7 @@ export default function RoadMap() {
             <Box>
               <Text
                 fontSize={{ base: "xl", md: "lg", lg: "xl" }}
+                as="h3"
                 fontWeight={500}
                 mb="4"
                 opacity=".9"
@@ -126,6 +128,7 @@ export default function RoadMap() {
             <Box>
               <Text
                 fontSize={{ base: "xl", md: "lg", lg: "xl" }}
+                as="h3"
                 fontWeight={500}
                 mb="4"
                 opacity=".9"
@@ -154,6 +157,7 @@ export default function RoadMap() {
             <Box>
               <Text
                 fontSize={{ base: "xl", md: "lg", lg: "xl" }}
+                as="h3"
                 fontWeight={500}
                 mb="4"
                 opacity=".9"
@@ -177,6 +181,7 @@ export default function RoadMap() {
             <Box>
               <Text
                 fontSize={{ base: "xl", md: "lg", lg: "xl" }}
+                as="h3"
                 fontWeight={500}
                 mb="4"
                 opacity=".9"
@@ -209,6 +214,7 @@ export default function RoadMap() {
             <Box>
               <Text
                 fontSize={{ base: "xl", md: "lg", lg: "xl" }}
+                as="h3"
                 fontWeight={500}
                 mb="4"
                 opacity=".9"
@@ -227,6 +233,7 @@ export default function RoadMap() {
             <Box>
               <Text
                 fontSize={{ base: "xl", md: "lg", lg: "xl" }}
+                as="h3"
                 fontWeight={500}
                 mb="4"
                 opacity=".9"
@@ -248,6 +255,7 @@ export default function RoadMap() {
             <Box>
               <Text
                 fontSize={{ base: "xl", md: "lg", lg: "xl" }}
+                as="h3"
                 fontWeight={500}
                 mb="4"
                 opacity=".9"
@@ -277,6 +285,7 @@ export default function RoadMap() {
             <Box>
               <Text
                 fontSize={{ base: "xl", md: "lg", lg: "xl" }}
+                as="h3"
                 fontWeight={500}
                 mb="4"
                 opacity=".9"
@@ -293,6 +302,7 @@ export default function RoadMap() {
             <Box>
               <Text
                 fontSize={{ base: "xl", md: "lg", lg: "xl" }}
+                as="h3"
                 fontWeight={500}
                 mb="4"
                 opacity=".9"
@@ -320,6 +330,7 @@ export default function RoadMap() {
             <Box>
               <Text
                 fontSize={{ base: "xl", md: "lg", lg: "xl" }}
+                as="h3"
                 fontWeight={500}
                 mb="4"
                 opacity=".9"

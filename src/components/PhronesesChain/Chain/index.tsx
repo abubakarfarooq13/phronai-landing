@@ -243,8 +243,9 @@ export default function Chain() {
                     md: "70px",
                     "3000px": "70px",
                   }}
-                  fontWeight={500}
+                  fontWeight={600}
                   textAlign={{ base: "center", md: "start" }}
+                  letterSpacing="2px"
                 >
                   {/* Phronesis:{" "} */}
                   Phron AI:{" "}

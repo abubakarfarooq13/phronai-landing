@@ -384,7 +384,7 @@ export default function CPhronZero() {
                     fontSize={{ base: "2xl", md: "4xl" }}
                     textTransform="uppercase"
                     letterSpacing="1px"
-                    fontWeight={300}
+                    fontWeight={500}
                     mb="5"
                   >
                     Layer 1 Minter
@@ -454,6 +454,7 @@ export default function CPhronZero() {
                           letterSpacing="1px"
                           textTransform="uppercase"
                           opacity=".7"
+                          as="h3"
                         >
                           Create your layer 1<br /> in minutes
                         </Text>
@@ -509,6 +510,7 @@ export default function CPhronZero() {
                           letterSpacing="1px"
                           textTransform="uppercase"
                           opacity=".7"
+                          as="h3"
                         >
                           AI Enhancement
                         </Text>
@@ -564,6 +566,7 @@ export default function CPhronZero() {
                           letterSpacing="1px"
                           textTransform="uppercase"
                           opacity=".7"
+                          as="h3"
                         >
                           Shared Nodes
                         </Text>
@@ -620,6 +623,7 @@ export default function CPhronZero() {
                           letterSpacing="1px"
                           textTransform="uppercase"
                           opacity=".7"
+                          as="h3"
                         >
                           Audit +
                         </Text>
@@ -665,7 +669,7 @@ export default function CPhronZero() {
                   fontSize={{ base: "2xl", md: "4xl" }}
                   textTransform="uppercase"
                   letterSpacing="1px"
-                  fontWeight={300}
+                  fontWeight={500}
                   mb="5"
                   mt="2"
                   textAlign="center"
@@ -774,7 +778,7 @@ export default function CPhronZero() {
                   fontSize={{ base: "2xl", md: "4xl" }}
                   textTransform="uppercase"
                   letterSpacing="1px"
-                  fontWeight={300}
+                  fontWeight={500}
                   mb="5"
                   mt="2"
                   textAlign="center"

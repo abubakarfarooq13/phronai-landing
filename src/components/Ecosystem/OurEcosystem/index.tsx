@@ -60,7 +60,7 @@ export default function OurEcosystem() {
             </Box>
             <Box>
               <Fade top>
-                <Text fontSize="2xl" fontWeight={500}>
+                <Text as="h3" fontSize="2xl" fontWeight={500}>
                   Phron AI Decentralized Exchange
                 </Text>
 
@@ -138,7 +138,7 @@ export default function OurEcosystem() {
                 </Box>
 
                 <Fade right>
-                  <Text fontSize="2xl" fontWeight={500}>
+                  <Text as="h3" fontSize="2xl" fontWeight={500}>
                     {/* View your transactions{" "} */}
                     {/* <Box as="br" display={{ base: "none", lg: "block" }} />{" "} */}
                     Phron AI Cross Chain Bridge
@@ -230,7 +230,7 @@ export default function OurEcosystem() {
                 </Box>
 
                 <Fade right>
-                  <Text fontSize="2xl" fontWeight={500}>
+                  <Text as="h3" fontSize="2xl" fontWeight={500}>
                     Phron Explorer
                   </Text>
                   <Text color="#c1c1c1">

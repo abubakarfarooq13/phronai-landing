@@ -3,31 +3,33 @@ import Head from "next/head";
 import localFont from "next/font/local";
 import { CRoadMap, Footer, Nav } from "@/components";
 import { Box } from "@chakra-ui/react";
+import { Inter } from "next/font/google";
+import { interFont } from "@/components/fonts";
 
-const FormularFont = localFont({
-  src: [
-    {
-      path: "../assets/fonts/Formular-Light.woff",
-      weight: "300",
-      style: "normal",
-    },
-    {
-      path: "../assets/fonts/Formular.woff",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "../assets/fonts/Formular-Medium.woff",
-      weight: "500",
-      style: "normal",
-    },
-    {
-      path: "../assets/fonts/Formular-Bold.woff",
-      weight: "700",
-      style: "normal",
-    },
-  ],
-});
+// const FormularFont = localFont({
+//   src: [
+//     {
+//       path: "../assets/fonts/Formular-Light.woff",
+//       weight: "300",
+//       style: "normal",
+//     },
+//     {
+//       path: "../assets/fonts/Formular.woff",
+//       weight: "400",
+//       style: "normal",
+//     },
+//     {
+//       path: "../assets/fonts/Formular-Medium.woff",
+//       weight: "500",
+//       style: "normal",
+//     },
+//     {
+//       path: "../assets/fonts/Formular-Bold.woff",
+//       weight: "700",
+//       style: "normal",
+//     },
+//   ],
+// });
 
 export default function RoadMap() {
   return (
@@ -62,7 +64,7 @@ export default function RoadMap() {
         bgColor="#03020b"
         color="#fff"
       >
-        <main id="roadmap-page" className={FormularFont.className}>
+        <main id="roadmap-page" style={interFont.style}>
           <CRoadMap />
         </main>
       </Box>

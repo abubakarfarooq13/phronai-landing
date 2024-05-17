@@ -49,6 +49,97 @@ import Image from "next/image";
 
 const Fade = require("react-reveal/Fade");
 
+const layerZeroAndLayerOneMenuItems = [
+  // {
+  //   id: 2,
+  //   label: "Homepage",
+  //   href: "/",
+  // },
+  {
+    id: 2,
+    label: "PhronZero",
+    href: "/",
+  },
+  {
+    id: 3,
+    label: "Phron Layer 1",
+    href: "/chain",
+  },
+  {
+    id: 4,
+    label: "Road map",
+    href: "/roadmap",
+  },
+];
+
+const ecosystem = [
+  {
+    id: 5,
+    label: "PhronScan",
+    href: "#",
+  },
+  {
+    id: 6,
+    label: "Telemetry",
+    href: "#",
+  },
+  {
+    id: 7,
+    label: "DEX",
+    href: "#",
+  },
+  {
+    id: 8,
+    label: "Bridge",
+    href: "#",
+  },
+  {
+    id: 9,
+    label: "Partnerships",
+    href: "/partnerships",
+  },
+  {
+    id: 10,
+    label: "Hacken Auditing",
+    href: "#",
+  },
+];
+
+const newsAndUpdates = [
+  {
+    id: 11,
+    label: "Dubai Expo 2023",
+    href: "/dubai-crypto-expo-2023",
+  },
+  {
+    id: 12,
+    label: "X updates",
+    href: "#",
+  },
+];
+
+// Layer 0 / Layer 1
+
+// - Homepage
+// - PhronZero
+// - Phron Layer 1
+// - Road map
+// - Team
+
+// Ecosystem
+
+// - PhronScan
+// - Telemetry
+// - DEX
+// - Bridge
+// - ⁠Partnerships
+// - Hacken Auditing
+
+// News / Updates
+
+// - Dubai Expo 2023
+// - X updates
+
 export const navItems = [
   {
     id: 2,
@@ -248,10 +339,12 @@ export default function Nav() {
             ))} */}
             {navItems.map((item) =>
               item.subMenu ? (
-                <Menu key={item.id} isOpen={isMenuOpen} onClose={onMenuClose}>
+                // isOpen={isMenuOpen} onClose={onMenuClose}
+                <Menu key={item.id}>
                   <MenuButton
-                    onMouseOver={onMenuOpen}
+                    // onMouseOver={onMenuOpen}
                     as={Button}
+                    fontFamily="inherit"
                     _hover={{
                       // bgColor: "#0e0023",
                       color: "#9e5aff",
@@ -265,7 +358,7 @@ export default function Nav() {
                       boxShadow: "none",
                     }}
                     color={router.pathname === item.href ? "#9e5aff" : "#fff"}
-                    fontWeight={500}
+                    fontWeight={400}
                     rightIcon={<IoIosArrowDown />}
                     colorScheme="ghost"
                     px="0"
