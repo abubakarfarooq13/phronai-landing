@@ -11,6 +11,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import PhronZeroLogo from "../PhronZeroLogo";
 import { SiGitbook } from "react-icons/si";
+import { FaInstagram } from "react-icons/fa6";
 
 export default function Footer() {
   const router = useRouter();
@@ -88,6 +89,19 @@ export default function Footer() {
               fontSize={{ "3000px": "35px" }}
             >
               <IoLogoDiscord />
+            </Text>
+            <Text
+              as={Link}
+              href="https://www.instagram.com/phronai/"
+              target="_blank"
+              transition="all .3s"
+              _hover={{
+                transition: "all .3s",
+                color: "rgba(105,46,164,1)",
+              }}
+              fontSize={{ "3000px": "35px" }}
+            >
+              <FaInstagram />
             </Text>
             <Text
               as={Link}
