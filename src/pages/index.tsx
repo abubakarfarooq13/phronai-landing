@@ -1,37 +1,8 @@
 import Head from "next/head";
-import localFont from "next/font/local";
 import { Box } from "@chakra-ui/react";
-import { CHome, Ecosystem, NftMarketPlace, PhronesesChain } from "@/components";
 import Script from "next/script";
-import { useEffect } from "react";
-import NewPhronZero from "@/components/NewPhronZero";
-import { Inter } from "next/font/google";
-import { interFont } from "@/components/fonts";
-
-// const FormularFont = localFont({
-//   src: [
-//     {
-//       path: "../assets/fonts/Formular-Light.woff",
-//       weight: "300",
-//       style: "normal",
-//     },
-//     {
-//       path: "../assets/fonts/Formular.woff",
-//       weight: "400",
-//       style: "normal",
-//     },
-//     {
-//       path: "../assets/fonts/Formular-Medium.woff",
-//       weight: "500",
-//       style: "normal",
-//     },
-//     {
-//       path: "../assets/fonts/Formular-Bold.woff",
-//       weight: "700",
-//       style: "normal",
-//     },
-//   ],
-// });
+import NewHome from "@/components/NewHome";
+import { interFont, plusJakartaSans } from "@/components/fonts";
 
 export default function Home() {
   return (
@@ -63,14 +34,15 @@ export default function Home() {
       </Head>
       <Box
         // pt={{ base: "70px", "1350px": "80px" }}
-        bgColor="#03020b"
+        bgColor="#000"
         color="#fff"
         as="main"
         minH="100vh"
-        style={interFont.style}
+        style={plusJakartaSans.style}
       >
         {/* <PhronesesChain /> */}
-        <NewPhronZero />
+        {/* <NewPhronZero /> */}
+        <NewHome />
       </Box>
     </>
   );

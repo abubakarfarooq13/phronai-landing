@@ -279,6 +279,14 @@ nav {
     }
 }
 
+.logo-image {
+    filter: grayscale(1)
+}
+
+.logo-image:hover {
+    filter: grayscale(0)
+}
+
 #block-animation-section .line {
     opacity: 0;
     animation: opacityAnimation 1s ease-in 2s, dropShadowLines 2s ease-in 2s infinite;
@@ -675,4 +683,159 @@ nav {
   
 .dropdown-3:hover .dropdown-3-menu {
     display: block;
+}
+
+.ai-staking-logo-1 {
+    top: 33%;
+    position: absolute;
+    max-width: 40px;
+    opacity: 0;
+    animation: aiStakingLogo1Animation 9s ease-in 0s infinite both;
+}
+
+.ai-staking-logo-2 {
+    top: 33%;
+    position: absolute;
+    max-width: 40px;
+    opacity: 0;
+    animation: aiStakingLogo2Animation 8s ease-in 0s infinite both;
+}
+
+.ai-staking-logo-3 {
+    top: 33%;
+    position: absolute;
+    max-width: 40px;
+    opacity: 0;
+    animation: aiStakingLogo3Animation 9s ease-in 0s infinite both;
+}
+
+.ai-staking-logo-4 {
+    top: 33%;
+    position: absolute;
+    max-width: 40px;
+    opacity: 0;
+    animation: aiStakingLogo4Animation 10s ease-in 0s infinite both;
+}
+
+.ai-staking-logo-4 {
+    top: 33%;
+    position: absolute;
+    max-width: 40px;
+    opacity: 0;
+    animation: aiStakingLogo4Animation 10s ease-in 0s infinite both;
+}
+
+@keyframes aiStakingLogo1Animation {
+    0% {
+        left: 0%;
+        opacity: 0;
+        transform: scale(.2);
+    }
+
+    50% {
+        opacity: .75;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        top: 17%;
+        left: 45%;
+        opacity: 0;
+        transform: scale(1);
+    }
+}
+
+@keyframes aiStakingLogo2Animation {
+    0% {
+        left: 0%;
+        opacity: 0;
+        transform: scale(.2);
+    }
+
+    50% {
+        opacity: .75;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        top: 37%;
+        left: 45%;
+        opacity: 0;
+        transform: scale(1);
+    }
+}
+
+@keyframes aiStakingLogo3Animation {
+    0% {
+        right: 0%;
+        opacity: 0;
+        transform: scale(.2);
+    }
+
+    50% {
+        opacity: .75;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        top: 17%;
+        right: 45%;
+        opacity: 0;
+        transform: scale(1);
+    }
+}
+
+@keyframes aiStakingLogo4Animation {
+    0% {
+        right: 0%;
+        opacity: 0;
+        transform: scale(.2);
+    }
+
+    50% {
+        opacity: .75;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        top: 37%;
+        right: 45%;
+        opacity: 0;
+        transform: scale(1);
+    }
+}
+
+@keyframes aiStakingLogo4Animation {
+    0% {
+        right: 0%;
+        opacity: 0;
+        transform: scale(.2);
+    }
+
+    50% {
+        opacity: .75;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        top: 37%;
+        right: 45%;
+        opacity: 0;
+        transform: scale(1);
+    }
 }

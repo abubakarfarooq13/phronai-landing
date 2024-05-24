@@ -342,14 +342,14 @@ export default function Nav() {
     let lastScroll = 0;
 
     window.addEventListener("scroll", () => {
-      // const currentScroll = window.scrollY;
-      // if (currentScroll > 0 && navRef.current) {
-      //   navRef.current.style.backgroundColor = "#05010c";
-      // }
-      // if (currentScroll <= 0 && navRef.current) {
-      //   navRef.current.style.backgroundColor = "transparent";
-      //   return;
-      // }
+      const currentScroll = window.scrollY;
+      if (currentScroll > 0 && navRef.current) {
+        navRef.current.style.backgroundColor = "#05010c";
+      }
+      if (currentScroll <= 0 && navRef.current) {
+        navRef.current.style.backgroundColor = "transparent";
+        return;
+      }
       // if (
       //   currentScroll > lastScroll &&
       //   !body.classList.contains("scroll-down")
@@ -374,12 +374,13 @@ export default function Nav() {
         ref={navRef}
         pt={{ base: "5", xl: "0" }}
         pb={{ base: "5", xl: "0" }}
-        bgColor="#05010c"
-        // bgColor="transparent"
+        // bgColor="#05010c"
+        bgColor="transparent"
         color="#fff"
         w="full"
         transition="all 300ms ease-in-out"
         position="relative"
+        px="4"
       >
         <Container maxW="1440px" px={{ base: "4", xl: "0" }}>
           <HStack justifyContent="space-between">
@@ -397,106 +398,6 @@ export default function Nav() {
               fontSize={{ base: "15px", "2xl": "base" }}
               ml="0px"
             >
-              {/* {menu.map((item) => (
-              <Button
-                key={item}
-                variant="unstyled"
-                cursor="pointer"
-                display="flex"
-                alignItems="center"
-                fontWeight={500}
-                rightIcon={item === currentMenu ? <IoIosArrowDown /> : <></>}
-                fontSize="17px"
-                onClick={() => setCurrentMenu(item)}
-              >
-                {item}
-              </Button>
-            ))} */}
-              {/* {navItems.map((item) =>
-              item.subMenu ? (
-                // isOpen={isMenuOpen} onClose={onMenuClose}
-                <Menu key={item.id}>
-                  <MenuButton
-                    // onMouseOver={onMenuOpen}
-                    as={Button}
-                    fontFamily="inherit"
-                    _hover={{
-                      // bgColor: "#0e0023",
-                      color: "#9e5aff",
-                      outline: "none",
-                      boxShadow: "none",
-                    }}
-                    _active={{
-                      boxShadow: "none",
-                    }}
-                    _focus={{
-                      boxShadow: "none",
-                    }}
-                    color={router.pathname === item.href ? "#9e5aff" : "#fff"}
-                    fontWeight={400}
-                    rightIcon={<IoIosArrowDown />}
-                    colorScheme="ghost"
-                    px="0"
-                  >
-                    {item.label}
-                  </MenuButton>
-                  <MenuList bg="black" borderColor="rgba(255,255,255,0.1)">
-                    {item.subMenu.map((link) => (
-                      <MenuItem
-                        bg="black"
-                        key={link.id}
-                        as={Link}
-                        href={link.href}
-                        _hover={{
-                          // bgColor: "#0e0023",
-                          color: "#9e5aff",
-                          outline: "none",
-                          boxShadow: "none",
-                        }}
-                        _active={{
-                          boxShadow: "none",
-                        }}
-                        _focus={{
-                          boxShadow: "none",
-                        }}
-                        color={
-                          router.pathname === item.href ? "#9e5aff" : "#fff"
-                        }
-                        fontWeight={500}
-                        colorScheme="ghost"
-                      >
-                        {link.label}
-                      </MenuItem>
-                    ))}
-                  </MenuList>
-                </Menu>
-              ) : (
-                <Text
-                  key={item.id}
-                  as={Link}
-                  href={item.href}
-                  // py="5"
-                  // px="5"
-                  _hover={{
-                    // bgColor: "#0e0023",
-                    color: "#9e5aff",
-                    outline: "none",
-                    boxShadow: "none",
-                  }}
-                  _active={{
-                    boxShadow: "none",
-                  }}
-                  _focus={{
-                    boxShadow: "none",
-                  }}
-                  color={router.pathname === item.href ? "#9e5aff" : "#fff"}
-                  fontWeight={500}
-                >
-                  {item.label}
-                </Text>
-              )
-            )} */}
-
               {navItems.map((item) => (
                 <Box
                   key={item.id}
@@ -515,13 +416,9 @@ export default function Nav() {
                   cursor="pointer"
                 >
                   <Text
-                    // href={item.href}
-                    // py="5"
-                    // px="5"
                     h="full"
                     py="7"
                     _hover={{
-                      // bgColor: "#0e0023",
                       outline: "none",
                       boxShadow: "none",
                     }}
