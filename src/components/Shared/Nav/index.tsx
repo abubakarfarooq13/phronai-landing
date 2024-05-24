@@ -8,67 +8,35 @@ import {
   Container,
   useDisclosure,
   Link as CLink,
-  // Menu,
-  // MenuButton,
-  // MenuList,
-  // MenuItem,
+  VStack,
 } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import { Logo } from "../..";
 import { Link } from "@chakra-ui/next-js";
 import { CgMenuRightAlt } from "react-icons/cg";
 import MobileDrawer from "./Drawer";
-import { IoIosArrowDown } from "react-icons/io";
-import SingleMenu from "./SingleMenu";
-import { SiGitbook } from "react-icons/si";
-
-// import {
-//   Popover,
-//   PopoverTrigger,
-//   PopoverContent,
-//   PopoverHeader,
-//   PopoverBody,
-//   PopoverFooter,
-//   PopoverArrow,
-//   PopoverCloseButton,
-//   PopoverAnchor,
-// } from "@chakra-ui/react";
-
-import {
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  MenuItemOption,
-  MenuGroup,
-  MenuOptionGroup,
-  MenuDivider,
-} from "@chakra-ui/react";
+import { Menu, MenuButton, MenuList, MenuItem } from "@chakra-ui/react";
 import PhronZeroLogo from "../PhronZeroLogo";
 import Image from "next/image";
 
-// const Fade = require("react-reveal/Fade");
-
 export const layerZeroAndLayerOneMenuItems = [
-  // {
-  //   id: 2,
-  //   label: "Homepage",
-  //   href: "/",
-  // },
   {
     id: 2,
     label: "PhronZero",
     href: "/",
+    icon: "/assets/new-home/layer-icon.png",
   },
   {
     id: 3,
     label: "Phron Layer 1",
     href: "/chain",
+    icon: "/assets/new-home/layer-icon.png",
   },
   {
     id: 4,
     label: "Road map",
     href: "/roadmap",
+    icon: "/assets/new-home/map-icon.png",
   },
 ];
 
@@ -77,31 +45,37 @@ export const ecosystem = [
     id: 5,
     label: "PhronScan",
     href: "#",
+    icon: "/assets/new-home/global.svg",
   },
   {
     id: 6,
     label: "Telemetry",
     href: "#",
+    icon: "/assets/new-home/code-bracket.svg",
   },
   {
     id: 7,
     label: "DEX",
     href: "#",
+    icon: "/assets/new-home/swap.svg",
   },
   {
     id: 8,
     label: "Bridge",
     href: "#",
+    icon: "/assets/new-home/bridge.svg",
   },
   {
     id: 9,
     label: "Partnerships",
     href: "/partnerships",
+    icon: "/assets/new-home/handshake.svg",
   },
   {
     id: 10,
     label: "Hacken Auditing",
     href: "#",
+    icon: "/assets/new-home/hacken.svg",
   },
 ];
 
@@ -110,11 +84,13 @@ export const newsAndUpdates = [
     id: 11,
     label: "Dubai Expo 2023",
     href: "/dubai-crypto-expo-2023",
+    icon: "/assets/new-home/dubai-expo.svg",
   },
   {
     id: 12,
     label: "X updates",
     href: "#",
+    icon: "/assets/new-home/x-twitter.svg",
   },
 ];
 
@@ -140,87 +116,6 @@ export const newsAndUpdates = [
 // - Dubai Expo 2023
 // - X updates
 
-// export const navItems = [
-//   {
-//     id: 2,
-//     label: "PhronZero",
-//     href: "/",
-//   },
-//   {
-//     id: 2,
-//     label: "Phron AI: Layer 1",
-//     href: "/chain",
-//   },
-//   {
-//     id: 4,
-//     label: "Our Team",
-//     href: "/team",
-//   },
-//   {
-//     id: 5,
-//     label: "RoadMap",
-//     href: "/roadmap",
-//   },
-//   // {
-//   //   id: 5,
-//   //   label: "Team",
-//   //   href: "/team",
-//   // },
-//   {
-//     id: 10,
-//     label: "PHRON",
-//     href: "/phron",
-//   },
-//   {
-//     id: 3,
-//     label: "Ecosystem",
-//     href: "/ecosystem",
-//   },
-//   // {
-//   //   id: 4,
-//   //   label: "NFT Marketplace",
-//   //   href: "/marketplace",
-//   // },
-//   {
-//     id: 22,
-//     label: "News / Updates",
-//     subMenu: [
-//       {
-//         id: 1,
-//         label: "Dubai Crypto Expo 2023",
-//         href: "/dubai-crypto-expo-2023",
-//       },
-//       // {
-//       //   id: 2,
-//       //   label: "Articles",
-//       //   href: "/news",
-//       // },
-//     ],
-//   },
-
-//   // {
-//   //   id: 14,
-//   //   label: "Phron AI: Projects",
-//   //   href: "/projects",
-//   // },
-//   // {
-//   //   id: 5,
-//   //   label: "Phron: The GamePad",
-//   //   href: "/gamepad",
-//   // },
-//   // {
-//   //   id: 5,
-//   //   label: "News",
-//   //   href: "/news",
-//   // },
-
-//   // {
-//   //   id: 5,
-//   //   label: "PHRON",
-//   //   href: "/#",
-//   // },
-// ];
-
 export const navItems = [
   {
     id: 2,
@@ -228,6 +123,7 @@ export const navItems = [
     href: "/",
     className: "dropdown-1",
     items: ["/", "/chain", "/roadmap"],
+    imageUrl: "/assets/phronzero/card-1-img.png",
   },
   {
     id: 2,
@@ -235,6 +131,7 @@ export const navItems = [
     href: "/chain",
     className: "dropdown-2",
     items: ["#", "#", "#", "#", "/partnerships", "#"],
+    imageUrl: "/assets/our-ecosystem/_chain.png",
   },
   {
     id: 4,
@@ -242,6 +139,7 @@ export const navItems = [
     href: "/team",
     className: "dropdown-3",
     items: ["/dubai-crypto-expo-2023", "#"],
+    imageUrl: "/assets/phronzero/card-3-img.png",
   },
 ];
 
@@ -266,48 +164,74 @@ function SubMenu(props: any) {
   return (
     <>
       <Box
-        bgColor="#6317fe"
-        borderBottomColor="#26124f"
-        borderBottomWidth="2px"
+        bgColor="rgba(0,0,0,.8)"
         position="absolute"
+        maxW="600px"
         w="full"
-        left="0"
+        rounded="2xl"
+        p="8"
         {...props}
       >
-        <Container maxW="1400px">
-          <Stack
-            direction="row"
-            flexWrap="wrap"
-            justifyContent="flex-end"
-            alignItems="center"
-            spacing="0px"
-          >
-            {props.menu.map((item: any) => (
-              <Text
-                key={item.id}
-                as={Link}
-                href={item.href}
-                py="5"
-                px="5"
-                _hover={{
-                  bgColor: "#0e0023",
-                  outline: "none",
-                  boxShadow: "none",
-                }}
-                _active={{
-                  boxShadow: "none",
-                }}
-                _focus={{
-                  boxShadow: "none",
-                }}
-                bgColor={router.pathname === item.href ? "#0e0023" : "none"}
-                color="#fff"
-                fontSize={{ "3000px": "lg" }}
-                fontWeight={500}
-              >
-                {item.label}
-              </Text>
-            ))}
+        <Container maxW="1400px" px="0">
+          <Stack direction="row" spacing="10">
+            <Box
+              bgImage="linear-gradient(180deg, rgba(41,24,93,1) 41%, rgba(13,7,29,1) 77%)"
+              rounded="2xl"
+              px="10"
+              py="5"
+              h="fit-content"
+            >
+              <Image
+                src={props.imageUrl}
+                alt="menu image"
+                width={160}
+                height={160}
+              />
+            </Box>
+            <VStack w="50%" spacing="10px">
+              {props.menu.map((item: any) => (
+                <HStack
+                  key={item.id}
+                  w="full"
+                  py="2"
+                  px="5"
+                  rounded="lg"
+                  spacing="4"
+                  _hover={{
+                    bgColor: "#2d1a65",
+                    // px: "20px",
+                    // py: "10px",
+                  }}
+                  bgColor={router.pathname === item.href ? "#2d1a65" : "none"}
+                >
+                  <Image src={item.icon} alt="icon" width={20} height={20} />
+                  <Text
+                    as={Link}
+                    href={item.href}
+                    w="full"
+                    _hover={
+                      {
+                        // bgColor: "#0e0023",
+                        // outline: "none",
+                        // boxShadow: "none",
+                      }
+                    }
+                    _active={{
+                      boxShadow: "none",
+                    }}
+                    _focus={{
+                      boxShadow: "none",
+                    }}
+                    // bgColor={router.pathname === item.href ? "#0e0023" : "none"}
+                    color="#fff"
+                    fontSize={{ "3000px": "lg" }}
+                    fontWeight={500}
+                  >
+                    {item.label}
+                  </Text>
+                </HStack>
+              ))}
+            </VStack>
           </Stack>
         </Container>
       </Box>
@@ -407,7 +331,7 @@ export default function Nav() {
                     color: "#fff",
                     outline: "none",
                     boxShadow: "none",
-                    bgColor: "#6317fe",
+                    // bgColor: "#6317fe",
                   }}
                   px="4"
                   color={
@@ -437,11 +361,17 @@ export default function Nav() {
                     <SubMenu
                       menu={layerZeroAndLayerOneMenuItems}
                       className="dropdown-1-menu"
+                      imageUrl={item.imageUrl}
                     />
-                    <SubMenu menu={ecosystem} className="dropdown-2-menu" />
+                    <SubMenu
+                      menu={ecosystem}
+                      imageUrl={item.imageUrl}
+                      className="dropdown-2-menu"
+                    />
                     <SubMenu
                       menu={newsAndUpdates}
                       className="dropdown-3-menu"
+                      imageUrl={item.imageUrl}
                     />
                   </Box>
                 </Box>
