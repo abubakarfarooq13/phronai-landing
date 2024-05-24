@@ -35,15 +35,18 @@ export default function Hero() {
             align={{ base: "center", lg: "start" }}
             pos="relative"
             minH="200px"
+            textAlign="center"
           >
             <Text
-              fontSize="4xl"
+              fontSize={{ base: "2xl", md: "4xl" }}
               lineHeight="130%"
               letterSpacing="1px"
               fontWeight={600}
               mb="2"
             >
-              From Static to Dynamic <br /> with AI-Powered Consensus.
+              From Static to Dynamic{" "}
+              <Box as="br" display={{ base: "block", md: "none" }} /> with
+              AI-Powered Consensus.
             </Text>
             <Text mb="5" fontSize="17px" color="#ebebeb">
               Introducing the First Layer 0 and Layer 1 Blockchain.
