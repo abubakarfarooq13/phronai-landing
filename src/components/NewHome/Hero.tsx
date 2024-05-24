@@ -35,7 +35,7 @@ export default function Hero() {
             align={{ base: "center", lg: "start" }}
             pos="relative"
             minH="200px"
-            textAlign="center"
+            textAlign={{ base: "center", md: "left" }}
           >
             <Text
               fontSize={{ base: "2xl", md: "4xl" }}
