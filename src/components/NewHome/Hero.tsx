@@ -12,7 +12,7 @@ import Image from "next/image";
 import { GoArrowRight } from "react-icons/go";
 
 // import { Fade, Slide } from "react-awesome-reveal";
-const Fade = require("react-reveal/Fade");
+// const Fade = require("react-reveal/Fade");
 
 export default function Hero() {
   return (
@@ -45,7 +45,7 @@ export default function Hero() {
               mb="2"
             >
               From Static to Dynamic{" "}
-              <Box as="br" display={{ base: "block", md: "none" }} /> with
+              <Box as="br" display={{ base: "none", md: "block" }} /> with
               AI-Powered Consensus.
             </Text>
             <Text mb="5" fontSize="17px" color="#ebebeb">

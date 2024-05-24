@@ -17,6 +17,8 @@ import {
 } from "@chakra-ui/react";
 import Image from "next/image";
 
+const Fade = require("react-reveal/Fade");
+
 export default function DNASection() {
   const mobileAIStakingDisplay = useBreakpointValue({
     base: "block",
@@ -424,23 +426,27 @@ export default function DNASection() {
             </TabPanel>
             <TabPanel px="4" pt="10">
               <Box mx="auto" maxW="1100px" position="relative">
-                <Image
-                  src="/assets/new-home/ai-staking-image.png"
-                  alt="AI Staking image"
-                  width={1100}
-                  height={800}
-                  style={{
-                    display: AIStakingDisplay,
-                  }}
-                />
-                <CImage
-                  src="/assets/new-home/ai-staking-image-mobile.png"
-                  alt="AI Staking image mobile"
-                  style={{
-                    display: mobileAIStakingDisplay,
-                    paddingTop: "60px",
-                  }}
-                />
+                <Fade bottom>
+                  <Image
+                    src="/assets/new-home/ai-staking-image.png"
+                    alt="AI Staking image"
+                    width={1100}
+                    height={800}
+                    style={{
+                      display: AIStakingDisplay,
+                    }}
+                  />
+                </Fade>
+                <Fade bottom>
+                  <CImage
+                    src="/assets/new-home/ai-staking-image-mobile.png"
+                    alt="AI Staking image mobile"
+                    style={{
+                      display: mobileAIStakingDisplay,
+                      paddingTop: "60px",
+                    }}
+                  />
+                </Fade>
 
                 <Image
                   src="/assets/logo-icon.png"
