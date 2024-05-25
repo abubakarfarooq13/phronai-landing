@@ -37,7 +37,8 @@ const footerMenu = [
       {
         id: 2,
         label: "Layer 0",
-        href: "/phronzero",
+        // href: "/phronzero",
+        href: "/",
       },
       {
         id: 3,
@@ -84,36 +85,36 @@ const footerMenu = [
       {
         id: 1,
         label: "PhronScan",
-        href: "#",
+        href: "https://testnet.phronscan.io",
       },
-      {
-        id: 2,
-        label: "Telemetry",
-        href: "#",
-      },
-      {
-        id: 3,
-        label: "Become a Validator",
-        href: "#",
-      },
+      // {
+      //   id: 2,
+      //   label: "Telemetry",
+      //   href: "#",
+      // },
+      // {
+      //   id: 3,
+      //   label: "Become a Validator",
+      //   href: "#",
+      // },
     ],
   },
-  {
-    id: 4,
-    title: "Community",
-    menu: [
-      {
-        id: 1,
-        label: "News",
-        href: "#",
-      },
-      {
-        id: 2,
-        label: "Events",
-        href: "#",
-      },
-    ],
-  },
+  // {
+  //   id: 4,
+  //   title: "Community",
+  //   menu: [
+  //     {
+  //       id: 1,
+  //       label: "News",
+  //       href: "#",
+  //     },
+  //     {
+  //       id: 2,
+  //       label: "Events",
+  //       href: "#",
+  //     },
+  //   ],
+  // },
 ];
 
 export default function Footer() {
@@ -320,6 +321,8 @@ export default function Footer() {
             rounded="full"
             px="8"
             fontFamily="inherit"
+            as="a"
+            href="mailto:support@phron.ai"
           >
             Support
           </Button>
@@ -363,7 +366,7 @@ export default function Footer() {
         </Grid>
 
         <Text color="#909090" textAlign="center" fontSize="sm">
-          2024 &copy; PhronAI All rights reserved
+          {new Date().getFullYear()} &copy; PhronAI All rights reserved
         </Text>
       </Container>
     </Box>

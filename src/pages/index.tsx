@@ -25,10 +25,11 @@ export default function Home() {
       ></Script>
       {/* <Script defer type="module" src="/canvas.js"></Script> */}
       <Head>
-        <title>Welcome to PhronZero</title>
+        <title>Welcome to PhronAI</title>
         <meta
           name="description"
-          content="One step beyond with artificial intelligence, bringing the first AI Layer 0 Platform. Create your Layer 1 Blockchain in minutes."
+          // content="One step beyond with artificial intelligence, bringing the first AI Layer 0 Platform. Create your Layer 1 Blockchain in minutes."
+          content="From Static to Dynamic with AI-Powered Consensus."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>

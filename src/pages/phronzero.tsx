@@ -7,6 +7,7 @@ import LightNav from "@/components/Shared/Nav/LightNav";
 import LightFooter from "@/components/Shared/Footer/LightFooter";
 import { Inter } from "next/font/google";
 import { interFont } from "@/components/fonts";
+import NewPhronZero from "@/components/NewPhronZero";
 
 // const FormularFont = localFont({
 //   src: [
@@ -66,19 +67,16 @@ export default function PhronZero() {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <LightNav />
+      {/* <LightNav /> */}
 
-      <Box
-        pt={{ base: "70px", "1350px": "120px" }}
-        bgColor="#03020b"
-        color="#fff"
-      >
+      <Box bgColor="#03020b" color="#fff">
         <main id="phron-page" style={interFont.style}>
-          <CPhronZero />
+          {/* <CPhronZero /> */}
+          <NewPhronZero />
         </main>
       </Box>
 
-      <LightFooter />
+      {/* <Footer /> */}
     </>
   );
 }

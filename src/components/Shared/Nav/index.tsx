@@ -44,39 +44,39 @@ export const ecosystem = [
   {
     id: 5,
     label: "PhronScan",
-    href: "#",
+    href: "https://testnet.phronscan.io",
     icon: "/assets/new-home/global.svg",
   },
-  {
-    id: 6,
-    label: "Telemetry",
-    href: "#",
-    icon: "/assets/new-home/code-bracket.svg",
-  },
-  {
-    id: 7,
-    label: "DEX",
-    href: "#",
-    icon: "/assets/new-home/swap.svg",
-  },
-  {
-    id: 8,
-    label: "Bridge",
-    href: "#",
-    icon: "/assets/new-home/bridge.svg",
-  },
+  // {
+  //   id: 6,
+  //   label: "Telemetry",
+  //   href: "#",
+  //   icon: "/assets/new-home/code-bracket.svg",
+  // },
+  // {
+  //   id: 7,
+  //   label: "DEX",
+  //   href: "#",
+  //   icon: "/assets/new-home/swap.svg",
+  // },
+  // {
+  //   id: 8,
+  //   label: "Bridge",
+  //   href: "#",
+  //   icon: "/assets/new-home/bridge.svg",
+  // },
   {
     id: 9,
     label: "Partnerships",
     href: "/partnerships",
     icon: "/assets/new-home/handshake.svg",
   },
-  {
-    id: 10,
-    label: "Hacken Auditing",
-    href: "#",
-    icon: "/assets/new-home/hacken.svg",
-  },
+  // {
+  //   id: 10,
+  //   label: "Hacken Auditing",
+  //   href: "#",
+  //   icon: "/assets/new-home/hacken.svg",
+  // },
 ];
 
 export const newsAndUpdates = [
@@ -86,12 +86,12 @@ export const newsAndUpdates = [
     href: "/dubai-crypto-expo-2023",
     icon: "/assets/new-home/dubai-expo.svg",
   },
-  {
-    id: 12,
-    label: "X updates",
-    href: "#",
-    icon: "/assets/new-home/x-twitter.svg",
-  },
+  // {
+  //   id: 12,
+  //   label: "X updates",
+  //   href: "#",
+  //   icon: "/assets/new-home/x-twitter.svg",
+  // },
 ];
 
 // Layer 0 / Layer 1

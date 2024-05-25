@@ -60,7 +60,7 @@ const videoFont = localFont({
 //   style: "italic",
 // });
 
-export default function CPhronZero() {
+export default function NewPhronZero() {
   const container = useRef<any>();
 
   useGSAP(
