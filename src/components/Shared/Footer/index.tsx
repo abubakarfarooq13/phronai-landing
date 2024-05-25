@@ -7,6 +7,8 @@ import {
   VStack,
   HStack,
   Button,
+  Grid,
+  GridItem,
 } from "@chakra-ui/react";
 import { Logo } from "../..";
 import { AiFillMediumSquare, AiOutlineTwitter } from "react-icons/ai";
@@ -20,6 +22,7 @@ import { useRouter } from "next/router";
 import PhronZeroLogo from "../PhronZeroLogo";
 import { SiGitbook } from "react-icons/si";
 import { FaInstagram } from "react-icons/fa6";
+import { FaYoutube } from "react-icons/fa";
 
 const footerMenu = [
   {
@@ -34,7 +37,7 @@ const footerMenu = [
       {
         id: 2,
         label: "Layer 0",
-        href: "/",
+        href: "/phronzero",
       },
       {
         id: 3,
@@ -116,18 +119,30 @@ const footerMenu = [
 export default function Footer() {
   const router = useRouter();
   return (
-    <Box as="footer" py="20" bgColor="#05010c">
+    <Box
+      as="footer"
+      pt="40"
+      pb="10"
+      bgImage="/assets/footer-bg.png"
+      bgSize="cover"
+      bgPos="bottom"
+    >
       <Container maxW="1440px" px={{ base: "4", xl: "4" }}>
         <Stack
+          pb={{ base: "10", lg: "32" }}
           direction={{ base: "column", md: "row" }}
           w="full"
           justifyContent={{ base: "center", md: "space-between" }}
-          alignItems="flex-start"
+          alignItems={{ base: "center", md: "flex-start" }}
           // flexWrap="wrap"
           spacing="10"
         >
-          <VStack align="start" spacing="5" zIndex={99}>
-            {router.pathname === "/" ? <PhronZeroLogo /> : <Logo />}
+          <VStack
+            align={{ base: "center", md: "flex-start" }}
+            spacing="5"
+            zIndex={99}
+          >
+            {router.pathname === "/phronzero" ? <PhronZeroLogo /> : <Logo />}
             {/* <Text
               color="#c1c1c1"
               display={{ base: "none", md: "flex" }}
@@ -135,7 +150,14 @@ export default function Footer() {
             >
               {new Date().getFullYear()} &copy; Phron AI. All rights reserved.
             </Text> */}
-            <HStack fontSize="30px" spacing="5" color="#c1c1c1">
+            <HStack
+              fontSize="30px"
+              spacing="5"
+              color="#c1c1c1"
+              bgColor="#080808"
+              py="5"
+              px="5"
+            >
               <Text
                 as={Link}
                 href="https://medium.com/@phron_ai"
@@ -145,7 +167,7 @@ export default function Footer() {
                   transition: "all .3s",
                   color: "rgba(105,46,164,1)",
                 }}
-                fontSize="25px"
+                fontSize="23px"
               >
                 <AiFillMediumSquare />
               </Text>
@@ -158,7 +180,7 @@ export default function Footer() {
                   transition: "all .3s",
                   color: "rgba(105,46,164,1)",
                 }}
-                fontSize="25px"
+                fontSize="23px"
               >
                 <FaXTwitter />
               </Text>
@@ -172,7 +194,7 @@ export default function Footer() {
                   transition: "all .3s",
                   color: "rgba(105,46,164,1)",
                 }}
-                fontSize="25px"
+                fontSize="23px"
               >
                 <FaTelegramPlane />
               </Text>
@@ -185,7 +207,7 @@ export default function Footer() {
                   transition: "all .3s",
                   color: "rgba(105,46,164,1)",
                 }}
-                fontSize="25px"
+                fontSize="23px"
               >
                 <IoLogoDiscord />
               </Text>
@@ -198,9 +220,22 @@ export default function Footer() {
                   transition: "all .3s",
                   color: "rgba(105,46,164,1)",
                 }}
-                fontSize="25px"
+                fontSize="23px"
               >
                 <FaInstagram />
+              </Text>
+              <Text
+                as={Link}
+                href="https://www.youtube.com/@PhronAI"
+                target="_blank"
+                transition="all .3s"
+                _hover={{
+                  transition: "all .3s",
+                  color: "rgba(105,46,164,1)",
+                }}
+                fontSize="23px"
+              >
+                <FaYoutube />
               </Text>
               <Text
                 as={Link}
@@ -228,7 +263,13 @@ export default function Footer() {
             </HStack>
           </VStack>
           {footerMenu.map((menu) => (
-            <VStack spacing="4" fontSize="sm" align="start" key={menu.id}>
+            <VStack
+              spacing="4"
+              fontSize="sm"
+              display={{ base: "none", lg: "flex" }}
+              align="start"
+              key={menu.id}
+            >
               <Text fontWeight={500}>{menu.title}</Text>
               {menu.menu.map((item) => (
                 <Text
@@ -291,6 +332,39 @@ export default function Footer() {
             </Text>
           </Box> */}
         </Stack>
+
+        <Grid
+          gridTemplateColumns={{ base: "repeat(2, 1fr)", md: "repeat(4, 1fr)" }}
+          pb="10"
+          display={{ base: "grid", lg: "none" }}
+          gap="5"
+          rowGap="16"
+        >
+          {footerMenu.map((menu) => (
+            <GridItem key={menu.id}>
+              <VStack spacing="4" fontSize="sm" align="center">
+                <Text fontWeight={500}>{menu.title}</Text>
+                {menu.menu.map((item) => (
+                  <Text
+                    as={Link}
+                    _hover={{
+                      color: "#fff",
+                    }}
+                    color="#909090"
+                    key={item.id}
+                    href={item.href}
+                  >
+                    {item.label}
+                  </Text>
+                ))}
+              </VStack>
+            </GridItem>
+          ))}
+        </Grid>
+
+        <Text color="#909090" textAlign="center" fontSize="sm">
+          2024 &copy; PhronAI All rights reserved
+        </Text>
       </Container>
     </Box>
   );

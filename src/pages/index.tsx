@@ -40,8 +40,6 @@ export default function Home() {
         minH="100vh"
         style={plusJakartaSans.style}
       >
-        {/* <PhronesesChain /> */}
-        {/* <NewPhronZero /> */}
         <NewHome />
       </Box>
     </>

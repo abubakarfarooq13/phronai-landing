@@ -662,27 +662,30 @@ nav {
 }
 
 .dropdown-1-menu {
-    display: none;
+    transform: scale(0);
+    transition: all .2s;
 }
   
 .dropdown-1:hover .dropdown-1-menu {
-    display: block;
+    transform: scale(1);
 }
 
 .dropdown-2-menu {
-    display: none;
+    transform: scale(0);
+    transition: all .2s;
 }
   
 .dropdown-2:hover .dropdown-2-menu {
-    display: block;
+    transform: scale(1);
 }
 
 .dropdown-3-menu {
-    display: none;
+    transform: scale(0);
+    transition: all .2s;
 }
   
 .dropdown-3:hover .dropdown-3-menu {
-    display: block;
+    transform: scale(1);
 }
 
 .ai-staking-logo-1 {

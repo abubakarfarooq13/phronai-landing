@@ -164,7 +164,7 @@ function SubMenu(props: any) {
   return (
     <>
       <Box
-        bgColor="rgba(0,0,0,.8)"
+        bgColor="rgba(0,0,0,.9)"
         position="absolute"
         maxW="600px"
         w="full"
@@ -308,8 +308,8 @@ export default function Nav() {
       >
         <Container maxW="1440px" px={{ base: "4", xl: "0" }}>
           <HStack justifyContent="space-between">
-            <Box maxW={router.pathname === "/" ? "180px" : "166px"}>
-              {router.pathname === "/" ? <PhronZeroLogo /> : <Logo />}
+            <Box maxW={router.pathname === "/phronzero" ? "180px" : "166px"}>
+              {router.pathname === "/phronzero" ? <PhronZeroLogo /> : <Logo />}
             </Box>
 
             <MobileDrawer isOpen={isOpen} onOpen={onOpen} onClose={onClose} />

@@ -10,6 +10,7 @@ import {
   Grid,
   GridItem,
   useBreakpointValue,
+  HStack,
 } from "@chakra-ui/react";
 import { GoArrowRight } from "react-icons/go";
 import Image from "next/image";
@@ -33,7 +34,7 @@ export default function SophiaAI() {
     >
       <Container
         maxW="1150px"
-        mt="260px"
+        // mt={{ xl: "260px" }}
         mb="50px"
         zIndex={99}
         position="relative"
@@ -50,12 +51,20 @@ export default function SophiaAI() {
           <Stack
             direction={{ base: "column", md: "row" }}
             align="center"
-            spacing="0"
+            spacing={{ base: "0px", xl: "20" }}
           >
             <VStack align={{ base: "center", md: "start" }} maxW="250px">
-              <Text fontSize="3xl" fontWeight={500}>
-                Try Sophia
-              </Text>
+              <HStack spacing="4">
+                <Text fontSize="3xl" fontWeight={500}>
+                  Try Sophia
+                </Text>
+                <Image
+                  src="/assets/chain/shophia.png"
+                  alt="sophia"
+                  width={70}
+                  height={70}
+                />
+              </HStack>
               <Text mb="4" fontSize="lg" color="#ebebeb">
                 The first Dynamic Consensus
               </Text>
@@ -70,7 +79,7 @@ export default function SophiaAI() {
             </VStack>
 
             <Box position="relative">
-              <Image
+              {/* <Image
                 src="/assets/new-home/brain-image.png"
                 alt="sophia brain"
                 width={800}
@@ -79,7 +88,14 @@ export default function SophiaAI() {
                   maxWidth: brainImageWidth,
                   marginLeft: marginLeft,
                 }}
-              />
+              /> */}
+              <video width="600" height="400" autoPlay playsInline muted loop>
+                <source
+                  src="/assets/new-home/brain-video.mp4"
+                  type="video/mp4"
+                />
+                Your browser does not support the video tag.
+              </video>
               <Box
                 position="absolute"
                 top="10%"
@@ -112,20 +128,20 @@ export default function SophiaAI() {
               <Box
                 position="absolute"
                 top={{ base: "70%", md: "50%" }}
-                right={{ base: "-15%", sm: "-10%", lg: "-32%" }}
+                right={{ base: "-15%", sm: "-10%", lg: "-15%" }}
                 fontSize={{ base: "sm", lg: "xl" }}
                 pb="2"
                 borderBottomWidth="1px"
                 borderColor="#ecd0f1"
-                w={{ base: "200px", lg: "300px" }}
+                w={{ base: "200px", lg: "220px" }}
                 textAlign="left"
                 pl={{ base: "45px", lg: "70px" }}
               >
                 <Text>
-                  Dynamic Node <br /> Ranking LTFM Protocol
+                  Dynamic Node <br /> Ranking
                 </Text>
               </Box>
-              <Box
+              {/* <Box
                 position="absolute"
                 left="50%"
                 top="50%"
@@ -139,7 +155,7 @@ export default function SophiaAI() {
                 px="3"
               >
                 <Text>Sophia</Text>
-              </Box>
+              </Box> */}
             </Box>
           </Stack>
 

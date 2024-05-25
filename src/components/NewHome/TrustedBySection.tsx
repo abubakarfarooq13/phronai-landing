@@ -170,15 +170,15 @@ export default function TrustedBySection() {
           <Image
             src="/assets/partners/solid-proof.png"
             alt="solid proof"
-            width={45}
-            height={25}
+            width={65}
+            height={45}
             className="logo-image"
           />
           <Image
             src="/assets/new-home/hacken-logo.png"
             alt="solid proof"
-            width={40}
-            height={25}
+            width={60}
+            height={45}
             className="logo-image"
           />
         </HStack>
