@@ -61,8 +61,12 @@ export default function DNASection() {
         {/* </Box> */}
         <VStack
           // bgImage="/assets/new-home/dna-image.png"
+          bgColor={{ base: "rgba(0,0,0,.2)", sm: "rgba(0,0,0,0)" }}
           maxW="900px"
-          minH={"490px"}
+          w="full"
+          px="8"
+          // minH={"490px"}
+          pb="8"
           bgSize="cover"
           bgPos="center"
           mx="auto"

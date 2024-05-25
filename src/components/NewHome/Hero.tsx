@@ -22,7 +22,7 @@ export default function Hero() {
       //   bgPosition="right"
       position="relative"
       overflowX="hidden"
-      pb={{ md: "250px" }}
+      pb={{ base: "51px", md: "250px" }}
     >
       <Container maxW="1300px" pt={{ base: "130px", md: "100px" }} mb="100px">
         <Stack
@@ -65,9 +65,10 @@ export default function Hero() {
             </Button> */}
           </VStack>
           <Box
-            position={{ lg: "absolute" }}
+            position={{ base: "absolute" }}
             top="0"
             right={{ lg: "-30%", xl: "0px" }}
+            w={{ base: "200%", sm: "auto" }}
           >
             {/* <Image
               src="/assets/new-home/hero-image.png"

@@ -112,14 +112,14 @@ export default function SophiaAI() {
               <Box
                 position="absolute"
                 top="10%"
-                right={{ base: "-15%", sm: "-10%" }}
+                right={{ base: "-10%", sm: "-10%" }}
                 fontSize={{ base: "sm", lg: "xl" }}
                 pb="2"
                 borderBottomWidth="1px"
                 borderColor="#ecd0f1"
-                w={{ base: "170px", lg: "200px" }}
+                w={{ base: "125px", lg: "200px" }}
                 textAlign="left"
-                pl={{ base: "95px", lg: "80px" }}
+                pl={{ base: "50px", lg: "80px" }}
               >
                 <Text>
                   Proof <br /> of Learning
@@ -127,13 +127,13 @@ export default function SophiaAI() {
               </Box>
               <Box
                 position="absolute"
-                top={{ base: "70%", md: "50%" }}
-                right={{ base: "-15%", sm: "-10%", lg: "-15%" }}
+                top={{ base: "50%", md: "50%" }}
+                right={{ base: "-10%", sm: "-10%", lg: "-15%" }}
                 fontSize={{ base: "sm", lg: "xl" }}
                 pb="2"
                 borderBottomWidth="1px"
                 borderColor="#ecd0f1"
-                w={{ base: "200px", lg: "220px" }}
+                w={{ base: "145px", lg: "220px" }}
                 textAlign="left"
                 pl={{ base: "45px", lg: "70px" }}
               >
