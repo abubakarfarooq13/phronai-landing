@@ -30,6 +30,11 @@ export default function DNASection() {
     md: "block",
   });
 
+  const dnaVideoMaxWidth = useBreakpointValue({
+    md: "600px",
+    lg: "full",
+  });
+
   return (
     <Box
       pt={{ base: "0px", lg: "4" }}
@@ -48,6 +53,7 @@ export default function DNASection() {
             // position: "absolute",
             // left: "50%",
             transform: "rotate(180deg)",
+            maxWidth: dnaVideoMaxWidth,
           }}
           height="500"
           autoPlay
@@ -70,7 +76,7 @@ export default function DNASection() {
           bgSize="cover"
           bgPos="center"
           mx="auto"
-          pt="50px"
+          pt={{ base: "20px", sm: "50px" }}
           position="absolute"
           left="50%"
           transform="translateX(-50%)"
@@ -83,7 +89,12 @@ export default function DNASection() {
             width={200}
             height={100}
           />
-          <Text fontSize="3xl" mt="2" fontWeight={500} textAlign="center">
+          <Text
+            fontSize={{ base: "2xl", sm: "3xl" }}
+            mt="2"
+            fontWeight={500}
+            textAlign="center"
+          >
             We want to be a DNA where it has
           </Text>
         </VStack>
@@ -108,6 +119,7 @@ export default function DNASection() {
                 display: mobileAIStakingDisplay,
                 paddingTop: "60px",
                 margin: "0 auto",
+                marginTop: "-60px",
               }}
             />
           </Fade>

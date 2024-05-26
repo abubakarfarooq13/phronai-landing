@@ -38,6 +38,18 @@ export const layerZeroAndLayerOneMenuItems = [
     href: "/roadmap",
     icon: "/assets/new-home/map-icon.png",
   },
+  {
+    id: 5,
+    label: "Our Team",
+    href: "/team",
+    icon: "/assets/new-home/team-icon.png",
+  },
+  {
+    id: 6,
+    label: "Phron Coin",
+    href: "/phron",
+    icon: "/assets/brand-assets/logo-icon.png",
+  },
 ];
 
 export const ecosystem = [
@@ -47,6 +59,13 @@ export const ecosystem = [
     href: "https://testnet.phronscan.io",
     icon: "/assets/new-home/global.svg",
   },
+  {
+    id: 55,
+    label: "PhronAI Ecosystem",
+    href: "/ecosystem",
+    icon: "/assets/new-home/ecosystem.svg",
+  },
+
   // {
   //   id: 6,
   //   label: "Telemetry",
@@ -120,7 +139,7 @@ export const navItems = [
   {
     id: 2,
     label: "Layer 0 / Layer 1",
-    href: "/",
+    href: "",
     className: "dropdown-1",
     items: ["/", "/chain", "/roadmap"],
     imageUrl: "/assets/phronzero/card-1-img.png",
@@ -128,7 +147,7 @@ export const navItems = [
   {
     id: 2,
     label: "Ecosystem",
-    href: "/chain",
+    href: "",
     className: "dropdown-2",
     items: ["#", "#", "#", "#", "/partnerships", "#"],
     imageUrl: "/assets/our-ecosystem/_chain.png",
@@ -136,7 +155,7 @@ export const navItems = [
   {
     id: 4,
     label: "News / Updates",
-    href: "/team",
+    href: "",
     className: "dropdown-3",
     items: ["/dubai-crypto-expo-2023", "#"],
     imageUrl: "/assets/phronzero/card-3-img.png",

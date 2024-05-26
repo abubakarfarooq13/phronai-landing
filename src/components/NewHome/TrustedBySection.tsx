@@ -168,16 +168,16 @@ export default function TrustedBySection() {
 
         <HStack spacing="16" justifyContent="center">
           <Image
-            src="/assets/partners/solid-proof.png"
+            src="/assets/new-home/hacken-logo.png"
             alt="solid proof"
-            width={65}
+            width={60}
             height={45}
             className="logo-image"
           />
           <Image
-            src="/assets/new-home/hacken-logo.png"
+            src="/assets/partners/solid-proof.png"
             alt="solid proof"
-            width={60}
+            width={65}
             height={45}
             className="logo-image"
           />

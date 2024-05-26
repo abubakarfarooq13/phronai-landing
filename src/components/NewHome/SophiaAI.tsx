@@ -112,7 +112,7 @@ export default function SophiaAI() {
               <Box
                 position="absolute"
                 top="10%"
-                right={{ base: "-10%", sm: "-10%" }}
+                right={{ base: "-10%", sm: "-10%", md: "-5%" }}
                 fontSize={{ base: "sm", lg: "xl" }}
                 pb="2"
                 borderBottomWidth="1px"
@@ -128,7 +128,7 @@ export default function SophiaAI() {
               <Box
                 position="absolute"
                 top={{ base: "50%", md: "50%" }}
-                right={{ base: "-10%", sm: "-10%", lg: "-15%" }}
+                right={{ base: "-10%", md: "-5%", lg: "-15%" }}
                 fontSize={{ base: "sm", lg: "xl" }}
                 pb="2"
                 borderBottomWidth="1px"

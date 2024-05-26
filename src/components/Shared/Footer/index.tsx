@@ -115,6 +115,22 @@ const footerMenu = [
   //     },
   //   ],
   // },
+  {
+    id: 4,
+    title: "Company",
+    menu: [
+      {
+        id: 1,
+        label: "Brand Assets",
+        href: "/brand-assets",
+      },
+      {
+        id: 1,
+        label: "Partnerships",
+        href: "/partnerships",
+      },
+    ],
+  },
 ];
 
 export default function Footer() {
