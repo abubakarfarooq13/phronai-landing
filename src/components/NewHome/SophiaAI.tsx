@@ -208,17 +208,24 @@ export default function SophiaAI() {
           gridTemplateColumns={{ base: "repeat(1, 1fr)", sm: "repeat(2, 1fr)" }}
           gap={{ base: "40px", md: "70px" }}
         >
-          <GridItem w="full">
+          <GridItem
+            w="full"
+            bgColor="#000000"
+            rounded="xl"
+            border="1px"
+            borderColor="rgba(146,120,190,.6)"
+          >
             <Image
               src="/assets/new-home/telemetery.png"
               alt="telemetery"
-              width={500}
-              height={500}
+              width={800}
+              height={800}
               style={{
                 width: "100%",
+                borderRadius: "14px",
               }}
             />
-            <Box ml="8" mt="-80px">
+            <Box ml="8" mt="-35px" pb="22px">
               <Text fontSize="2xl" fontWeight={500}>
                 Telemetery
               </Text>
