@@ -126,7 +126,7 @@ export default function Hero() {
               </Text>
               <Text
                 as={Link}
-                href="https://discord.gg/wy4gFtmTsK"
+                href="https://discord.gg/pfEsXAxMX8"
                 target="_blank"
                 transition="all .3s"
                 _hover={{
