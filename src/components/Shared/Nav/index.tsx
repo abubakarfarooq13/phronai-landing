@@ -18,6 +18,7 @@ import MobileDrawer from "./Drawer";
 import { Menu, MenuButton, MenuList, MenuItem } from "@chakra-ui/react";
 import PhronZeroLogo from "../PhronZeroLogo";
 import Image from "next/image";
+import ConnectWalletButton from "../ConnectWalletButton";
 
 export const layerZeroAndLayerOneMenuItems = [
   {
@@ -505,7 +506,7 @@ export default function Nav() {
                   </MenuItem>
                 </MenuList>
               </Menu>
-              <Button
+              {/* <Button
                 as={Link}
                 target="_blank"
                 href="https://phron.ai/tokenomics.pdf"
@@ -517,7 +518,8 @@ export default function Nav() {
                 fontSize={{ base: "sm", "3000px": "lg" }}
               >
                 Tokenomics
-              </Button>
+              </Button> */}
+              <ConnectWalletButton />
 
               <Text
                 as={Link}
@@ -566,77 +568,6 @@ export default function Nav() {
             </Box>
           </HStack>
         </Container>
-        {/* 
-      {router.pathname === "/brand-assets" ? (
-        <HStack
-          mt="5"
-          justifyContent="center"
-          spacing="10"
-          bgColor="#6317fe"
-          py="5"
-        >
-          <Text as="a" href="#logo">
-            Logo
-          </Text>
-          <Text as="a" href="#colors">
-            Colors
-          </Text>
-          <Text as="a" href="#fonts">
-            Fonts
-          </Text>
-        </HStack>
-      ) : null} */}
-
-        {/* {currentMenu === "News / Updates" ? (
-        <Fade>
-          <Box
-            display={{ base: "none", "1350px": "block" }}
-            bgColor="#5900d7"
-            mt="5"
-            borderTopColor="#26124f"
-            borderBottomColor="#26124f"
-            borderTopWidth="2px"
-            borderBottomWidth="2px"
-          >
-            <Container maxW="1400px">
-              <Stack
-                direction="row"
-                flexWrap="wrap"
-                justifyContent="flex-end"
-                alignItems="center"
-                spacing="0px"
-              >
-                {newsItems.map((item) => (
-                  <Text
-                    key={item.id}
-                    as={Link}
-                    href={item.href}
-                    py="5"
-                    px="5"
-                    _hover={{
-                      bgColor: "#0e0023",
-                      outline: "none",
-                      boxShadow: "none",
-                    }}
-                    _active={{
-                      boxShadow: "none",
-                    }}
-                    _focus={{
-                      boxShadow: "none",
-                    }}
-                    bgColor={router.pathname === item.href ? "#0e0023" : "none"}
-                    color="#fff"
-                    fontSize={{ "3000px": "lg" }}
-                    fontWeight={500}
-                  >
-                    {item.label}
-                  </Text>
-                ))}
-              </Stack>
-            </Container>
-          </Box>
-        </Fade>
-      ) : null} */}
       </Box>
     </Box>
   );

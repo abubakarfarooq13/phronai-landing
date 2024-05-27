@@ -4,6 +4,10 @@ import theme from "@/theme";
 import { PageLoadingIndicator } from "../components";
 import "@/styles/globals.css";
 import localFont from "next/font/local";
+// import { headers } from "next/headers";
+import { cookieToInitialState } from "wagmi";
+import { config } from "@/config";
+import Web3ModalProvider from "@/context";
 
 const ruberoidFont = localFont({
   src: [
@@ -32,11 +36,15 @@ const ruberoidFont = localFont({
 });
 
 export default function App({ Component, pageProps }: AppProps) {
+  // const initialState = cookieToInitialState(config, headers().get("cookie"));
+
   return (
     <div className={`${ruberoidFont.variable}`}>
       <ChakraProvider theme={theme}>
         <PageLoadingIndicator />
-        <Component {...pageProps} />
+        <Web3ModalProvider>
+          <Component {...pageProps} />
+        </Web3ModalProvider>
       </ChakraProvider>
     </div>
   );
