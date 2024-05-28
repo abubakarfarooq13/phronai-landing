@@ -1,4 +1,4 @@
-import type { AppProps } from "next/app";
+import type { AppContext, AppProps } from "next/app";
 import { ChakraProvider } from "@chakra-ui/react";
 import theme from "@/theme";
 import { PageLoadingIndicator } from "../components";
@@ -8,6 +8,7 @@ import localFont from "next/font/local";
 import { cookieToInitialState } from "wagmi";
 import { config } from "@/config";
 import Web3ModalProvider from "@/context";
+import cookies from "next-cookies";
 
 const ruberoidFont = localFont({
   src: [
@@ -35,17 +36,27 @@ const ruberoidFont = localFont({
   variable: "--font-ruberoid",
 });
 
-export default function App({ Component, pageProps }: AppProps) {
-  // const initialState = cookieToInitialState(config, headers().get("cookie"));
+interface MyAppProps extends AppProps {
+  cookies: any;
+}
+
+export default function App({ Component, pageProps, cookies }: MyAppProps) {
+  const initialState = cookieToInitialState(config, cookies);
 
   return (
     <div className={`${ruberoidFont.variable}`}>
       <ChakraProvider theme={theme}>
         <PageLoadingIndicator />
-        <Web3ModalProvider>
+        <Web3ModalProvider initialState={initialState}>
           <Component {...pageProps} />
         </Web3ModalProvider>
       </ChakraProvider>
     </div>
   );
 }
+
+App.getInitialProps = async (appContext: AppContext) => {
+  return {
+    cookies: appContext.ctx.req?.headers.cookie,
+  };
+};

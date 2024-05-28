@@ -28,6 +28,7 @@ export default function Web3ModalProvider({
   initialState?: State;
 }) {
   return (
+    // @ts-ignore
     <WagmiProvider config={config} initialState={initialState}>
       <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
     </WagmiProvider>
