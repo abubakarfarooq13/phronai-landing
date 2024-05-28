@@ -688,6 +688,24 @@ nav {
     transform: scale(1);
 }
 
+.dropdown-4-menu {
+    transform: scale(0);
+    transition: all .2s;
+}
+  
+.dropdown-4:hover .dropdown-4-menu {
+    transform: scale(1);
+}
+
+.dropdown-5-menu {
+    transform: scale(0);
+    transition: all .2s;
+}
+  
+.dropdown-5:hover .dropdown-5-menu {
+    transform: scale(1);
+}
+
 .ai-staking-logo-1 {
     top: 33%;
     position: absolute;

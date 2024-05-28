@@ -24,13 +24,16 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import Logo from "../Logo";
 import {
-  ecosystem,
+  networkMenuItems,
   layerZeroAndLayerOneMenuItems,
   navItems,
-  newsAndUpdates,
+  communityMenuItems,
   newsItems,
+  papersMenuItems,
+  buildMenuItems,
 } from ".";
 import { IoIosArrowDown } from "react-icons/io";
+import Image from "next/image";
 
 interface MobileDrawerProps {
   isOpen: boolean;
@@ -98,29 +101,36 @@ export default function MobileDrawer(props: MobileDrawerProps) {
                   <VStack w="full">
                     {layerZeroAndLayerOneMenuItems.map((item) =>
                       !item.href ? null : (
-                        <Text
-                          w="full"
-                          key={item.id}
-                          as={Link}
-                          href={item.href}
-                          // py="5"
-                          px="10px"
-                          _active={{
-                            boxShadow: "none",
-                          }}
-                          _focus={{
-                            boxShadow: "none",
-                          }}
-                          bgColor={
-                            router.pathname === item.href ? "#5900d7" : "none"
-                          }
-                          color={
-                            router.pathname === item.href ? "#fff" : "none"
-                          }
-                          fontSize={{ "3000px": "lg" }}
-                        >
-                          {item.label}
-                        </Text>
+                        <HStack key={item.id} w="full" ml="4">
+                          <Image
+                            src={item.icon}
+                            alt="icon"
+                            width={20}
+                            height={20}
+                          />
+                          <Text
+                            w="full"
+                            as={Link}
+                            href={item.href}
+                            // py="5"
+                            px="10px"
+                            _active={{
+                              boxShadow: "none",
+                            }}
+                            _focus={{
+                              boxShadow: "none",
+                            }}
+                            bgColor={
+                              router.pathname === item.href ? "#5900d7" : "none"
+                            }
+                            color={
+                              router.pathname === item.href ? "#fff" : "none"
+                            }
+                            fontSize={{ "3000px": "lg" }}
+                          >
+                            {item.label}
+                          </Text>
+                        </HStack>
                       )
                     )}
                   </VStack>
@@ -133,18 +143,74 @@ export default function MobileDrawer(props: MobileDrawerProps) {
                     px="0"
                     justifyContent="space-between"
                   >
-                    Ecosystem
+                    Build
                     <AccordionIcon />
                   </AccordionButton>
                 </h2>
 
                 <AccordionPanel px="0" py="10px">
                   <VStack w="full">
-                    {ecosystem.map((item) =>
+                    {buildMenuItems.map((item) =>
                       !item.href ? null : (
+                        <HStack key={item.id} w="full" ml="4">
+                          <Image
+                            src={item.icon}
+                            alt="icon"
+                            width={20}
+                            height={20}
+                          />
+                          <Text
+                            w="full"
+                            as={Link}
+                            href={item.href}
+                            // py="5"
+                            px="10px"
+                            _active={{
+                              boxShadow: "none",
+                            }}
+                            _focus={{
+                              boxShadow: "none",
+                            }}
+                            bgColor={
+                              router.pathname === item.href ? "#5900d7" : "none"
+                            }
+                            color={
+                              router.pathname === item.href ? "#fff" : "none"
+                            }
+                            fontSize={{ "3000px": "lg" }}
+                          >
+                            {item.label}
+                          </Text>
+                        </HStack>
+                      )
+                    )}
+                  </VStack>
+                </AccordionPanel>
+              </AccordionItem>
+              <AccordionItem border="0px">
+                <h2>
+                  <AccordionButton
+                    fontWeight={500}
+                    px="0"
+                    justifyContent="space-between"
+                  >
+                    Network
+                    <AccordionIcon />
+                  </AccordionButton>
+                </h2>
+
+                <AccordionPanel px="0" py="10px">
+                  <VStack w="full">
+                    {networkMenuItems.map((item) => (
+                      <HStack key={item.id} w="full" ml="4">
+                        <Image
+                          src={item.icon}
+                          alt="icon"
+                          width={20}
+                          height={20}
+                        />
                         <Text
                           w="full"
-                          key={item.id}
                           as={Link}
                           href={item.href}
                           // py="5"
@@ -165,8 +231,8 @@ export default function MobileDrawer(props: MobileDrawerProps) {
                         >
                           {item.label}
                         </Text>
-                      )
-                    )}
+                      </HStack>
+                    ))}
                   </VStack>
                 </AccordionPanel>
               </AccordionItem>
@@ -177,129 +243,99 @@ export default function MobileDrawer(props: MobileDrawerProps) {
                     px="0"
                     justifyContent="space-between"
                   >
-                    News / Updates
+                    Community
                     <AccordionIcon />
                   </AccordionButton>
                 </h2>
 
                 <AccordionPanel px="0" py="10px">
                   <VStack w="full">
-                    {newsAndUpdates.map((item) => (
-                      <Text
-                        w="full"
-                        key={item.id}
-                        as={Link}
-                        href={item.href}
-                        // py="5"
-                        px="10px"
-                        _active={{
-                          boxShadow: "none",
-                        }}
-                        _focus={{
-                          boxShadow: "none",
-                        }}
-                        bgColor={
-                          router.pathname === item.href ? "#5900d7" : "none"
-                        }
-                        color={router.pathname === item.href ? "#fff" : "none"}
-                        fontSize={{ "3000px": "lg" }}
-                      >
-                        {item.label}
-                      </Text>
+                    {communityMenuItems.map((item) => (
+                      <HStack key={item.id} w="full" ml="4">
+                        <Image
+                          src={item.icon}
+                          alt="icon"
+                          width={20}
+                          height={20}
+                        />
+                        <Text
+                          w="full"
+                          as={Link}
+                          href={item.href}
+                          // py="5"
+                          px="10px"
+                          _active={{
+                            boxShadow: "none",
+                          }}
+                          _focus={{
+                            boxShadow: "none",
+                          }}
+                          bgColor={
+                            router.pathname === item.href ? "#5900d7" : "none"
+                          }
+                          color={
+                            router.pathname === item.href ? "#fff" : "none"
+                          }
+                          fontSize={{ "3000px": "lg" }}
+                        >
+                          {item.label}
+                        </Text>
+                      </HStack>
+                    ))}
+                  </VStack>
+                </AccordionPanel>
+              </AccordionItem>
+              <AccordionItem border="0px">
+                <h2>
+                  <AccordionButton
+                    fontWeight={500}
+                    px="0"
+                    justifyContent="space-between"
+                  >
+                    Papers
+                    <AccordionIcon />
+                  </AccordionButton>
+                </h2>
+
+                <AccordionPanel px="0" py="10px">
+                  <VStack w="full">
+                    {papersMenuItems.map((item) => (
+                      <HStack key={item.id} w="full" ml="4">
+                        <Image
+                          src={item.icon}
+                          alt="icon"
+                          width={20}
+                          height={20}
+                        />
+                        <Text
+                          w="full"
+                          as={Link}
+                          href={item.href}
+                          // py="5"
+                          px="10px"
+                          _active={{
+                            boxShadow: "none",
+                          }}
+                          _focus={{
+                            boxShadow: "none",
+                          }}
+                          bgColor={
+                            router.pathname === item.href ? "#5900d7" : "none"
+                          }
+                          color={
+                            router.pathname === item.href ? "#fff" : "none"
+                          }
+                          fontSize={{ "3000px": "lg" }}
+                        >
+                          {item.label}
+                        </Text>
+                      </HStack>
                     ))}
                   </VStack>
                 </AccordionPanel>
               </AccordionItem>
             </Accordion>
             <VStack w="full" mt="30px" spacing="4">
-              {/* <Button
-                as={Link}
-                href="/phronzero"
-                variant="primary"
-                borderRadius="full"
-                px="8"
-                py="5"
-                w="full"
-                fontSize={{ "3000px": "lg" }}
-                textTransform="uppercase"
-              >
-                PhronZero
-              </Button> */}
-              <Accordion allowMultiple w="full">
-                <AccordionItem border="0px">
-                  <AccordionButton
-                    fontWeight={500}
-                    px="0"
-                    justifyContent="space-between"
-                  >
-                    <Button
-                      // as={CLink}
-                      // href="https://phron.ai/whitepaper.pdf"
-                      // target="_blank"
-                      as={Button}
-                      variant="primary"
-                      borderRadius="full"
-                      // padding="10px 20px"
-                      px="8"
-                      w="full"
-                      fontSize={{ base: "sm", "3000px": "lg" }}
-                      color="#5900d7"
-                      _active={{
-                        color: "#5900d7",
-                      }}
-                      _focus={{
-                        color: "#5900d7",
-                      }}
-                    >
-                      Whitepapers
-                    </Button>
-                  </AccordionButton>
-
-                  <AccordionPanel px="0" py="10px">
-                    <VStack w="full">
-                      <Text
-                        w="full"
-                        as={"a"}
-                        href="https://phron.ai/whitepaper_pure.pdf"
-                        target="_blank"
-                        px="10px"
-                        _active={{
-                          boxShadow: "none",
-                        }}
-                        _focus={{
-                          boxShadow: "none",
-                        }}
-                        fontSize={{ "3000px": "lg" }}
-                        _hover={{
-                          color: "#9e5aff",
-                        }}
-                      >
-                        Whitepaper Pure
-                      </Text>
-                      <Text
-                        w="full"
-                        as={"a"}
-                        href="https://phron.ai/whitepaper_royal.pdf"
-                        target="_blank"
-                        px="10px"
-                        _active={{
-                          boxShadow: "none",
-                        }}
-                        _focus={{
-                          boxShadow: "none",
-                        }}
-                        fontSize={{ "3000px": "lg" }}
-                        _hover={{
-                          color: "#9e5aff",
-                        }}
-                      >
-                        Whitepaper Royal
-                      </Text>
-                    </VStack>
-                  </AccordionPanel>
-                </AccordionItem>
-              </Accordion>
-
               <Button
                 as={Link}
                 target="_blank"
