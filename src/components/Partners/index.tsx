@@ -315,7 +315,7 @@ export default function CPartners() {
             letterSpacing="1px"
             mb="16"
           >
-            Our PartnerShip
+            Our PartnerShips
           </Text>
         </Fade>
 

@@ -18,12 +18,19 @@ import MobileDrawer from "./Drawer";
 import { Menu, MenuButton, MenuList, MenuItem } from "@chakra-ui/react";
 import PhronZeroLogo from "../PhronZeroLogo";
 import Image from "next/image";
+import ConnectWalletButton from "../ConnectWalletButton";
 
 export const layerZeroAndLayerOneMenuItems = [
   {
     id: 2,
     label: "Layer 0",
     href: "/phronzero",
+    icon: "/assets/new-home/layer-icon.png",
+  },
+  {
+    id: 2,
+    label: "Layer 1",
+    href: "/chain",
     icon: "/assets/new-home/layer-icon.png",
   },
   {
@@ -56,7 +63,7 @@ export const buildMenuItems = [
   {
     id: 5,
     label: "Github",
-    href: "https://testnet.phronscan.io",
+    href: "#",
     icon: "/assets/new-home/github-icon.png",
   },
   {
@@ -75,19 +82,19 @@ export const networkMenuItems = [
     icon: "/assets/new-home/phronscan-icon.png",
   },
 
-  {
-    id: 6,
-    label: "Telemetry",
-    href: "#",
-    icon: "/assets/new-home/code-bracket.svg",
-  },
+  // {
+  //   id: 6,
+  //   label: "Telemetry",
+  //   href: "#",
+  //   icon: "/assets/new-home/code-bracket.svg",
+  // },
 
-  {
-    id: 6,
-    label: "Become a Validator",
-    href: "#",
-    icon: "/assets/new-home/check-icon.png",
-  },
+  // {
+  //   id: 6,
+  //   label: "Become a Validator",
+  //   href: "#",
+  //   icon: "/assets/new-home/check-icon.png",
+  // },
   // {
   //   id: 7,
   //   label: "DEX",
@@ -524,19 +531,8 @@ export default function Nav() {
                   </MenuItem>
                 </MenuList>
               </Menu> */}
-              <Button
-                as={Link}
-                target="_blank"
-                href="https://phron.ai/tokenomics.pdf"
-                variant="primary-purple"
-                borderRadius="full"
-                // padding="10px 20px"
-                w="full"
-                px="8"
-                fontSize={{ base: "sm", "3000px": "lg" }}
-              >
-                Tokenomics
-              </Button>
+
+              <ConnectWalletButton />
 
               <Text
                 as={Link}
@@ -585,77 +581,6 @@ export default function Nav() {
             </Box>
           </HStack>
         </Container>
-        {/* 
-      {router.pathname === "/brand-assets" ? (
-        <HStack
-          mt="5"
-          justifyContent="center"
-          spacing="10"
-          bgColor="#6317fe"
-          py="5"
-        >
-          <Text as="a" href="#logo">
-            Logo
-          </Text>
-          <Text as="a" href="#colors">
-            Colors
-          </Text>
-          <Text as="a" href="#fonts">
-            Fonts
-          </Text>
-        </HStack>
-      ) : null} */}
-
-        {/* {currentMenu === "News / Updates" ? (
-        <Fade>
-          <Box
-            display={{ base: "none", "1350px": "block" }}
-            bgColor="#5900d7"
-            mt="5"
-            borderTopColor="#26124f"
-            borderBottomColor="#26124f"
-            borderTopWidth="2px"
-            borderBottomWidth="2px"
-          >
-            <Container maxW="1400px">
-              <Stack
-                direction="row"
-                flexWrap="wrap"
-                justifyContent="flex-end"
-                alignItems="center"
-                spacing="0px"
-              >
-                {newsItems.map((item) => (
-                  <Text
-                    key={item.id}
-                    as={Link}
-                    href={item.href}
-                    py="5"
-                    px="5"
-                    _hover={{
-                      bgColor: "#0e0023",
-                      outline: "none",
-                      boxShadow: "none",
-                    }}
-                    _active={{
-                      boxShadow: "none",
-                    }}
-                    _focus={{
-                      boxShadow: "none",
-                    }}
-                    bgColor={router.pathname === item.href ? "#0e0023" : "none"}
-                    color="#fff"
-                    fontSize={{ "3000px": "lg" }}
-                    fontWeight={500}
-                  >
-                    {item.label}
-                  </Text>
-                ))}
-              </Stack>
-            </Container>
-          </Box>
-        </Fade>
-      ) : null} */}
       </Box>
     </Box>
   );
