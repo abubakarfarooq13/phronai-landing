@@ -52,7 +52,7 @@ export default function Phron() {
               `,
           }}
         ></script>
-        <title>Our PartnerShip</title>
+        <title>Our PartnerShips</title>
         <meta name="description" content="Phron AI partnerships." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>

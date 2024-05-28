@@ -49,21 +49,25 @@ export default function Hero() {
               mb="2"
               mt={{ base: "250px", lg: "0px" }}
             >
-              From Static to Dynamic{" "}
+              {/* From Static to Dynamic{" "}
               <Box as="br" display={{ base: "none", md: "block" }} /> with
-              AI-Powered Consensus.
+              AI-Powered Consensus. */}
+              Proof of Learning
             </Text>
             <Text mb="5" fontSize="17px" color="#ebebeb">
-              Introducing the First Layer 0 and Layer 1 Blockchain.
+              {/* Introducing the First Layer 0 and Layer 1 Blockchain. */}
+              From Static to Dynamic with AI-Powered Consensus.{" "}
+              <Box as="br" display={{ base: "none", md: "block" }} />
+              Layer 0 and Layer 1 Blockchain.
             </Text>
-            {/* <Button
+            <Button
               fontFamily="inherit"
               rightIcon={<GoArrowRight fontSize="20px" />}
               rounded="full"
               fontWeight={400}
             >
-              Start for free
-            </Button> */}
+              Try Sophia AI consensus
+            </Button>
           </VStack>
           <Box
             position={{ base: "absolute" }}
