@@ -45,6 +45,41 @@ export default function DNASection() {
         {/* <Box
           
         > */}
+
+        {/* </Box> */}
+        <VStack
+          // bgImage="/assets/new-home/dna-image.png"
+          bgColor={{ base: "rgba(0,0,0,.2)", sm: "rgba(0,0,0,0)" }}
+          maxW="900px"
+          w="full"
+          px="8"
+          // minH={"490px"}
+          pb="8"
+          bgSize="cover"
+          bgPos="center"
+          mx="auto"
+          pt={{ base: "20px", sm: "50px" }}
+          // position="absolute"
+          // left="50%"
+          // transform="translateX(-50%)"
+          top="0"
+          zIndex={99}
+        >
+          <Image
+            src="/assets/new-home/phron-zero-white.png"
+            alt="phronzero white logo"
+            width={200}
+            height={100}
+          />
+          <Text
+            fontSize={{ base: "2xl", sm: "3xl" }}
+            mt="2"
+            fontWeight={500}
+            textAlign="center"
+          >
+            Build your Layer 1 in minutes
+          </Text>
+        </VStack>
         <video
           width="700"
           style={{
@@ -64,41 +99,6 @@ export default function DNASection() {
           <source src="/assets/new-home/dna-video.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-        {/* </Box> */}
-        <VStack
-          // bgImage="/assets/new-home/dna-image.png"
-          bgColor={{ base: "rgba(0,0,0,.2)", sm: "rgba(0,0,0,0)" }}
-          maxW="900px"
-          w="full"
-          px="8"
-          // minH={"490px"}
-          pb="8"
-          bgSize="cover"
-          bgPos="center"
-          mx="auto"
-          pt={{ base: "20px", sm: "50px" }}
-          position="absolute"
-          left="50%"
-          transform="translateX(-50%)"
-          top="0"
-          zIndex={99}
-        >
-          <Image
-            src="/assets/new-home/phron-zero-white.png"
-            alt="phronzero white logo"
-            width={200}
-            height={100}
-          />
-          <Text
-            fontSize={{ base: "2xl", sm: "3xl" }}
-            mt="2"
-            fontWeight={500}
-            textAlign="center"
-          >
-            We want to be a DNA where it has
-          </Text>
-        </VStack>
-
         <Box mx="auto" maxW="1100px" px="4" position="relative">
           <Fade bottom>
             <Image

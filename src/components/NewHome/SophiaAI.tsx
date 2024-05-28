@@ -205,7 +205,7 @@ export default function SophiaAI() {
       <Container maxW="1150px">
         <Grid
           minH="290px"
-          gridTemplateColumns={{ base: "repeat(1, 1fr)", sm: "repeat(2, 1fr)" }}
+          gridTemplateColumns={{ base: "repeat(1, 1fr)", md: "repeat(2, 1fr)" }}
           gap={{ base: "40px", md: "70px" }}
         >
           <GridItem
@@ -214,18 +214,21 @@ export default function SophiaAI() {
             rounded="xl"
             border="1px"
             borderColor="rgba(146,120,190,.6)"
+            h="fit-content"
           >
-            <Image
-              src="/assets/new-home/telemetery.png"
-              alt="telemetery"
-              width={800}
-              height={800}
-              style={{
-                width: "100%",
-                borderRadius: "14px",
-              }}
-            />
-            <Box ml="8" mt="-35px" pb="22px">
+            <Box rounded="xl" bgColor="#000" pb={{ base: "29px", lg: "50px" }}>
+              <Image
+                src="/assets/new-home/telemetery.png"
+                alt="telemetery"
+                width={800}
+                height={800}
+                style={{
+                  width: "100%",
+                  borderRadius: "14px",
+                }}
+              />
+            </Box>
+            <Box ml="8" mt="-50px" pb="22px">
               <Text fontSize="2xl" fontWeight={500}>
                 Telemetery
               </Text>
@@ -234,17 +237,25 @@ export default function SophiaAI() {
               </Text>
             </Box>
           </GridItem>
-          <GridItem w="full">
+          <GridItem
+            w="full"
+            bgColor="#000000"
+            rounded="xl"
+            border="1px"
+            borderColor="rgba(146,120,190,.6)"
+            h="fit-content"
+          >
             <Image
               src="/assets/new-home/phron-explorer.png"
-              alt="phron-explorer"
-              width={500}
-              height={500}
+              alt="telemetery"
+              width={800}
+              height={800}
               style={{
                 width: "100%",
+                borderRadius: "14px",
               }}
             />
-            <Box ml="8" mt="-80px">
+            <Box ml="8" mt="-50px" pb="22px">
               <Text fontSize="2xl" fontWeight={500}>
                 PhronScan
               </Text>

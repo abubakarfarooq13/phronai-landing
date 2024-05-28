@@ -37,8 +37,7 @@ const footerMenu = [
       {
         id: 2,
         label: "Layer 0",
-        // href: "/phronzero",
-        href: "/",
+        href: "/phronzero",
       },
       {
         id: 3,
