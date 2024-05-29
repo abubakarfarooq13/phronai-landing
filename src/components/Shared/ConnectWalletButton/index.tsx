@@ -16,7 +16,7 @@ function formatWalletAddress(address?: string) {
   return `${start}...${end}`;
 }
 
-export default function ConnectWalletButton() {
+export default function ConnectWalletButton(props: any) {
   const { open } = useWeb3Modal();
   const { address, isConnected } = useAccount();
 
@@ -35,8 +35,13 @@ export default function ConnectWalletButton() {
       w="full"
       px="8"
       fontSize={{ base: "sm", "3000px": "lg" }}
+      fontFamily="inherit"
     >
-      {isConnected ? formatWalletAddress(address) : "Connect Wallet"}
+      {isConnected
+        ? formatWalletAddress(address)
+        : props.label
+        ? props.label
+        : "Connect Wallet"}
     </Button>
   );
 }

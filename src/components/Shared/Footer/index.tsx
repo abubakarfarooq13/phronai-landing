@@ -132,40 +132,119 @@ const footerMenu = [
   },
 ];
 
+const socialIcons = [
+  {
+    id: 1,
+    label: "Medium",
+    icon: AiFillMediumSquare,
+    href: "https://medium.com/@phron_ai",
+    bgColor: "#5400c9",
+    hoverGbColor: "#4701a9",
+  },
+  {
+    id: 2,
+    label: "Twitter",
+    icon: FaXTwitter,
+    href: "https://twitter.com/Phron_ai",
+    bgColor: "#4701a9",
+    hoverGbColor: "#19003c",
+  },
+  {
+    id: 3,
+    label: "Telegram",
+    icon: FaTelegramPlane,
+    href: "https://t.me/+-DVxm6qfco1mNDRk",
+    bgColor: "#3e0293",
+    hoverGbColor: "#280061",
+  },
+  {
+    id: 4,
+    label: "Discord",
+    icon: IoLogoDiscord,
+    href: "https://discord.gg/pfEsXAxMX8",
+    bgColor: "#360083",
+    hoverGbColor: "#3e0293",
+  },
+  {
+    id: 6,
+    label: "Instagram",
+    icon: FaInstagram,
+    href: "https://www.instagram.com/phronai/",
+    bgColor: "#280061",
+    hoverGbColor: "#360083",
+  },
+  {
+    id: 7,
+    label: "Youtube",
+    icon: FaYoutube,
+    href: "https://www.youtube.com/@PhronAI",
+    bgColor: "#19003c",
+    hoverGbColor: "#3e0293",
+  },
+];
+
 export default function Footer() {
   const router = useRouter();
   return (
     <Box
       as="footer"
-      pt="40"
-      pb="10"
+      pt={{ base: "10", xl: "40" }}
+      // pb="10"
       bgImage="/assets/footer-bg.png"
       bgSize="cover"
       bgPos="bottom"
     >
       <Container maxW="1440px" px={{ base: "4", xl: "4" }}>
+        <Grid
+          gridTemplateColumns={{ base: "repeat(2, 1fr)", md: "repeat(4, 1fr)" }}
+          pb="10"
+          display={{ base: "grid", lg: "none" }}
+          gap="5"
+          rowGap="16"
+        >
+          {footerMenu.map((menu) => (
+            <GridItem key={menu.id}>
+              <VStack spacing="4" fontSize="sm" align="center">
+                <Text fontWeight={500}>{menu.title}</Text>
+                {menu.menu.map((item) => (
+                  <Text
+                    as={Link}
+                    _hover={{
+                      color: "#fff",
+                    }}
+                    color="#909090"
+                    key={item.id}
+                    href={item.href}
+                  >
+                    {item.label}
+                  </Text>
+                ))}
+              </VStack>
+            </GridItem>
+          ))}
+        </Grid>
         <Stack
           pb={{ base: "10", lg: "32" }}
           direction={{ base: "column", md: "row" }}
           w="full"
-          justifyContent={{ base: "center", md: "space-between" }}
+          justifyContent={{ base: "center" }}
           alignItems={{ base: "center", md: "flex-start" }}
           // flexWrap="wrap"
-          spacing="10"
+          spacing="32"
         >
-          <VStack
-            align={{ base: "center", md: "flex-start" }}
-            spacing="5"
-            zIndex={99}
-          >
-            {router.pathname === "/phronzero" ? <PhronZeroLogo /> : <Logo />}
-            {/* <Text
+          {/* {router.pathname === "/phronzero" ? <PhronZeroLogo /> : <Logo />} */}
+          {/* <Text
               color="#c1c1c1"
               display={{ base: "none", md: "flex" }}
               fontSize={{ base: "sm", "3000px": "xl" }}
             >
               {new Date().getFullYear()} &copy; Phron AI. All rights reserved.
             </Text> */}
+          {/* <VStack
+            align={{ base: "center", md: "flex-start" }}
+            spacing="5"
+            zIndex={99}
+          >
             <HStack
               fontSize="30px"
               spacing="5"
@@ -277,7 +356,7 @@ export default function Footer() {
                 </svg>
               </Text>
             </HStack>
-          </VStack>
+          </VStack> */}
           {footerMenu.map((menu) => (
             <VStack
               spacing="4"
@@ -351,39 +430,48 @@ export default function Footer() {
           </Box> */}
         </Stack>
 
-        <Grid
-          gridTemplateColumns={{ base: "repeat(2, 1fr)", md: "repeat(4, 1fr)" }}
-          pb="10"
-          display={{ base: "grid", lg: "none" }}
-          gap="5"
-          rowGap="16"
-        >
-          {footerMenu.map((menu) => (
-            <GridItem key={menu.id}>
-              <VStack spacing="4" fontSize="sm" align="center">
-                <Text fontWeight={500}>{menu.title}</Text>
-                {menu.menu.map((item) => (
-                  <Text
-                    as={Link}
-                    _hover={{
-                      color: "#fff",
-                    }}
-                    color="#909090"
-                    key={item.id}
-                    href={item.href}
-                  >
-                    {item.label}
-                  </Text>
-                ))}
-              </VStack>
-            </GridItem>
-          ))}
-        </Grid>
-
         <Text color="#909090" textAlign="center" fontSize="sm">
           {new Date().getFullYear()} &copy; PhronAI All rights reserved
         </Text>
       </Container>
+      <Grid
+        mt="5"
+        gridTemplateColumns={{
+          base: "repeat(2, 1fr)",
+          sm: "repeat(3, 1fr)",
+          md: "repeat(6, 1fr)",
+        }}
+      >
+        {socialIcons.map((social) => (
+          <GridItem key={social.id}>
+            <Text
+              py="3"
+              px="5"
+              as={Link}
+              w="full"
+              href={social.href}
+              target="_blank"
+              transition="all .3s"
+              _hover={{
+                transition: "all .3s",
+                // color: "rgba(105,46,164,1)",
+                bgColor: social.hoverGbColor,
+              }}
+              display="flex"
+              alignItems="center"
+              justifyContent="center"
+              bgColor={social.bgColor}
+            >
+              <Text as="span" fontSize="lg">
+                <social.icon />
+              </Text>
+              <Text as="span" ml="2" fontSize="sm" fontWeight={500}>
+                {social.label}
+              </Text>
+            </Text>
+          </GridItem>
+        ))}
+      </Grid>
     </Box>
   );
 }

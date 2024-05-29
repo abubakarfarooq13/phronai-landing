@@ -10,6 +10,7 @@ import {
 } from "@chakra-ui/react";
 import Image from "next/image";
 import { GoArrowRight } from "react-icons/go";
+import ConnectWalletButton from "../Shared/ConnectWalletButton";
 
 // import { Fade, Slide } from "react-awesome-reveal";
 // const Fade = require("react-reveal/Fade");
@@ -60,14 +61,17 @@ export default function Hero() {
               <Box as="br" display={{ base: "none", md: "block" }} />
               Layer 0 and Layer 1 Blockchain.
             </Text>
-            <Button
+            {/* <Button
               fontFamily="inherit"
               rightIcon={<GoArrowRight fontSize="20px" />}
               rounded="full"
               fontWeight={400}
             >
               Try Sophia AI consensus
-            </Button>
+            </Button> */}
+            <Box>
+              <ConnectWalletButton label="Try Sophia AI consensus" />
+            </Box>
           </VStack>
           <Box
             position={{ base: "absolute" }}
