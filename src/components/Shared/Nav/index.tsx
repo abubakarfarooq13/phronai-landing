@@ -186,7 +186,14 @@ export const navItems = [
     label: "Layer 0 / Layer 1",
     href: "",
     className: "dropdown-1",
-    items: ["/", "/chain", "/roadmap"],
+    items: [
+      "/phronzero",
+      "/chain",
+      "/phron",
+      "/ecosystem",
+      "/team",
+      "/roadmap",
+    ],
     imageUrl: "/assets/phronzero/card-1-img.png",
   },
   {
@@ -194,7 +201,7 @@ export const navItems = [
     label: "Build",
     href: "",
     className: "dropdown-2",
-    items: ["#", "#", "#", "#", "/partnerships", "#"],
+    items: [],
     imageUrl: "/assets/new-home/chain-image.png",
   },
   {
@@ -202,7 +209,7 @@ export const navItems = [
     label: "Network",
     href: "",
     className: "dropdown-3",
-    items: ["/dubai-crypto-expo-2023", "#"],
+    items: [],
     imageUrl: "/assets/phronzero/card-3-img.png",
   },
   {
@@ -210,7 +217,7 @@ export const navItems = [
     label: "Community",
     href: "",
     className: "dropdown-4",
-    // items: ["/dubai-crypto-expo-2023", "#"],
+    items: ["/dubai-crypto-expo-2023", "/partnerships"],
     imageUrl: "/assets/new-home/community.png",
   },
   {
@@ -218,7 +225,7 @@ export const navItems = [
     label: "Papers",
     href: "",
     className: "dropdown-5",
-    // items: ["/dubai-crypto-expo-2023", "#"],
+    items: [],
     imageUrl: "/assets/new-home/paper.png",
   },
 ];
@@ -286,20 +293,13 @@ function SubMenu(props: any) {
                     // px: "20px",
                     // py: "10px",
                   }}
+                  as={Link}
+                  href={item.href}
                   bgColor={router.pathname === item.href ? "#2d1a65" : "none"}
                 >
                   <Image src={item.icon} alt="icon" width={20} height={20} />
                   <Text
-                    as={Link}
-                    href={item.href}
                     w="full"
-                    _hover={
-                      {
-                        // bgColor: "#0e0023",
-                        // outline: "none",
-                        // boxShadow: "none",
-                      }
-                    }
                     _active={{
                       boxShadow: "none",
                     }}
