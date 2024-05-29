@@ -2282,7 +2282,7 @@
   dependencies:
     "@use-gesture/core" "10.3.0"
 
-"@wagmi/connectors@5.0.6":
+"@wagmi/connectors@5.0.6", "@wagmi/connectors@^5.0.6":
   version "5.0.6"
   resolved "https://registry.yarnpkg.com/@wagmi/connectors/-/connectors-5.0.6.tgz#9894800f2303118e4804fe5f6eb196876ac9158a"
   integrity sha512-eyn2pw9QBKfvNOVZis72GqZw4neo7Ktut7Jt4NSiR/umncWJKpKrni3exLHAJw2+mDTDWtUTHs9YL56ov2tWLw==

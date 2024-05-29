@@ -68,14 +68,14 @@ export default function SophiaAI() {
               <Text mb="4" fontSize="lg" color="#ebebeb">
                 The first Dynamic Consensus
               </Text>
-              <Button
+              {/* <Button
                 fontFamily="inherit"
                 rightIcon={<GoArrowRight fontSize="20px" />}
                 rounded="full"
                 fontWeight={400}
               >
                 Start for free
-              </Button>
+              </Button> */}
             </VStack>
 
             <Box position="relative">
@@ -195,7 +195,7 @@ export default function SophiaAI() {
             </GridItem>
             <GridItem>
               <Text py="5" textAlign={{ md: "right" }}>
-                0.0001 USD
+                0.00001 USD
               </Text>
             </GridItem>
           </Grid>
