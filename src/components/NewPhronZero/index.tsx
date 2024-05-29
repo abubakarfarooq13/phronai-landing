@@ -791,7 +791,7 @@ export default function NewPhronZero() {
                   mb="5"
                   textAlign="center"
                 >
-                  Optimize Node usage between different Layer&apos;s!
+                  Optimize Node usage between different Layers!
                 </Text>
                 <Box maxW={{ base: "100px", md: "300px" }} mx="auto">
                   <Image
