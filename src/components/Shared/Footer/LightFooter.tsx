@@ -60,7 +60,7 @@ export default function Footer() {
 
             <Text
               as={Link}
-              href="https://t.me/+-DVxm6qfco1mNDRk"
+              href="https://t.me/PhronAIPortal"
               target="_blank"
               transition="all .3s"
               _hover={{
@@ -73,7 +73,7 @@ export default function Footer() {
             </Text>
             <Text
               as={Link}
-              href="https://discord.gg/pfEsXAxMX8"
+              href="https://discord.gg/QRMhdRx6du"
               target="_blank"
               transition="all .3s"
               _hover={{

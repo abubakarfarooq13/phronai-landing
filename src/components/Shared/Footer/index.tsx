@@ -153,7 +153,7 @@ const socialIcons = [
     id: 3,
     label: "Telegram",
     icon: FaTelegramPlane,
-    href: "https://t.me/+-DVxm6qfco1mNDRk",
+    href: "https://t.me/PhronAIPortal",
     bgColor: "#3e0293",
     hoverGbColor: "#280061",
   },
@@ -161,7 +161,7 @@ const socialIcons = [
     id: 4,
     label: "Discord",
     icon: IoLogoDiscord,
-    href: "https://discord.gg/pfEsXAxMX8",
+    href: "https://discord.gg/QRMhdRx6du",
     bgColor: "#360083",
     hoverGbColor: "#3e0293",
   },
@@ -282,7 +282,7 @@ export default function Footer() {
 
               <Text
                 as={Link}
-                href="https://t.me/+-DVxm6qfco1mNDRk"
+                href="https://t.me/PhronAIPortal"
                 target="_blank"
                 transition="all .3s"
                 _hover={{
@@ -295,7 +295,7 @@ export default function Footer() {
               </Text>
               <Text
                 as={Link}
-                href="https://discord.gg/pfEsXAxMX8"
+                href="https://discord.gg/QRMhdRx6du"
                 target="_blank"
                 transition="all .3s"
                 _hover={{
