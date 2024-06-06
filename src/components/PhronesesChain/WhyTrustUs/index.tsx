@@ -22,7 +22,7 @@ const Fade = require("react-reveal/Fade");
 export default function WhyUs() {
   return (
     <Box id="why-us">
-      <Box pos="relative" pt={{ base: "100px", lg: "200px" }} pb="100px">
+      <Box pos="relative" pt={{ base: "100px", lg: "200px" }}>
         <CImage
           src="/assets/purple-shadow-left.png"
           pos="absolute"
