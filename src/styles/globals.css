@@ -714,6 +714,7 @@ nav {
     animation: aiStakingLogo1Animation 9s ease-in 0s infinite both;
 }
 
+
 .ai-staking-logo-2 {
     top: 33%;
     position: absolute;
@@ -744,6 +745,196 @@ nav {
     max-width: 40px;
     opacity: 0;
     animation: aiStakingLogo4Animation 10s ease-in 0s infinite both;
+}
+
+.machine-learning-logo-1 {
+    top: 33%;
+    position: absolute;
+    max-width: 40px;
+    opacity: 0;
+    animation: machineLearningLogoAnimation1 9s ease-in 0s infinite both;
+}
+
+.machine-learning-logo-2 {
+    top: 33%;
+    position: absolute;
+    max-width: 40px;
+    opacity: 0;
+    animation: machineLearningLogoAnimation2 8s ease-in 0s infinite both;
+}
+
+.machine-learning-logo-3 {
+    top: 10%;
+    position: absolute;
+    max-width: 40px;
+    opacity: 0;
+    animation: machineLearningLogoAnimation3 9s ease-in 0s infinite both;
+}
+
+.machine-learning-logo-right-1 {
+    top: 43%;
+    position: absolute;
+    max-width: 40px;
+    opacity: 0;
+    animation: machineLearningLogoAnimationRight1 9s ease-in 0s infinite both;
+}
+
+.machine-learning-logo-right-2 {
+    top: 43%;
+    position: absolute;
+    max-width: 40px;
+    opacity: 0;
+    animation: machineLearningLogoAnimationRight2 8s ease-in 0s infinite both;
+}
+
+.machine-learning-logo-right-3 {
+    top: 40%;
+    position: absolute;
+    max-width: 40px;
+    opacity: 0;
+    animation: machineLearningLogoAnimationRight3 9s ease-in 0s infinite both;
+}
+
+@keyframes machineLearningLogoAnimation1 {
+    0% {
+        left: 0%;
+        opacity: 0;
+        transform: scale(.2);
+    }
+
+    50% {
+        opacity: .75;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        top: 17%;
+        left: 100%;
+        opacity: 0;
+        transform: scale(1);
+    }
+}
+
+@keyframes machineLearningLogoAnimation2 {
+    0% {
+        left: 10%;
+        opacity: 0;
+        transform: scale(.2);
+    }
+
+    50% {
+        opacity: .75;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        top: 50%;
+        left: 100%;
+        opacity: 0;
+        transform: scale(1);
+    }
+}
+
+@keyframes machineLearningLogoAnimation3 {
+    0% {
+        left: 10%;
+        opacity: 0;
+        transform: scale(.2);
+    }
+
+    50% {
+        opacity: .75;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        top: 0%;
+        left: 100%;
+        opacity: 0;
+        transform: scale(1);
+    }
+}
+
+@keyframes machineLearningLogoAnimationRight1 {
+    0% {
+        right: 0%;
+        opacity: 0;
+        transform: scale(.2);
+    }
+
+    50% {
+        opacity: .75;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        top: 17%;
+        right: 100%;
+        opacity: 0;
+        transform: scale(1);
+    }
+}
+
+@keyframes machineLearningLogoAnimationRight2 {
+    0% {
+        right: 0%;
+        opacity: 0;
+        transform: scale(.2);
+    }
+
+    50% {
+        opacity: .75;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        top: 50%;
+        right: 100%;
+        opacity: 0;
+        transform: scale(1);
+    }
+}
+
+@keyframes machineLearningLogoAnimationRight3 {
+    0% {
+        right: 0%;
+        opacity: 0;
+        transform: scale(.2);
+    }
+
+    50% {
+        opacity: .75;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        top: 0%;
+        right: 100%;
+        opacity: 0;
+        transform: scale(1);
+    }
+}
+
+.sophia-section .react-reveal {
+    width: 100%;
 }
 
 @keyframes aiStakingLogo1Animation {

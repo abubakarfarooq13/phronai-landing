@@ -4,6 +4,7 @@ import { Footer, Nav } from "..";
 import WhyUs from "./WhyTrustUs";
 import PhronesisEquals from "./PhronesisEquals";
 import Chain from "./Chain";
+import MachineLearningModel from "./MachineLearningModel";
 
 export default function PhronesesChain() {
   return (
@@ -20,6 +21,7 @@ export default function PhronesesChain() {
         <PhronesisEquals />
       </Box>
       <WhyUs />
+      <MachineLearningModel />
       <Footer />
     </>
   );
