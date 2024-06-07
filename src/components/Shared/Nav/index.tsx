@@ -9,6 +9,7 @@ import {
   useDisclosure,
   Link as CLink,
   VStack,
+  IconButton,
 } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import { Logo } from "../..";
@@ -255,8 +256,11 @@ const AlertBanner = React.forwardRef((props, ref: any) => {
 
   return (
     <Box
-      bgImage="/assets/chain/alert-banner-image.png"
-      bgPos="top"
+      bgImage={{
+        base: "/assets/chain/alert-banner-image-mobile.png",
+        md: "/assets/chain/alert-banner-image.png",
+      }}
+      bgPos={{ base: "right", md: "top" }}
       bgSize="cover"
       transform="translateY(0px)"
       display="block"
@@ -266,23 +270,29 @@ const AlertBanner = React.forwardRef((props, ref: any) => {
       transition="all .3s"
     >
       <Stack
-        direction={{ base: "column", md: "row" }}
-        alignItems={{ base: "flex-end", md: "center" }}
+        direction={{ base: "column", sm: "row" }}
+        alignItems={{ base: "flex-end", sm: "center" }}
         justifyContent="center"
         maxW="1260px"
         mx="auto"
         px="4"
         py="4"
         spacing={{ base: "3", md: "8" }}
+        position="relative"
+        pt={{ base: "12", sm: "4" }}
       >
-        <HStack spacing="5">
+        <HStack alignItems="center" spacing={{ base: "2", sm: "5" }}>
           <Image
             src="/assets/chain/balloon-icon.png"
             alt="ballon icon"
             width={25}
             height={25}
           />
-          <Text fontWeight={500} fontSize={{ base: "sm", md: "16px" }}>
+          <Text
+            fontWeight={500}
+            textAlign="center"
+            fontSize={{ base: "sm", md: "16px" }}
+          >
             Welcome to the PHRON AI Airdrop Extravaganza!
           </Text>
           <Image
@@ -310,10 +320,24 @@ const AlertBanner = React.forwardRef((props, ref: any) => {
             onClick={() => {
               setShow(false);
             }}
+            display={{ base: "none", sm: "block" }}
           >
             <MdOutlineClose />
           </Text>
         </HStack>
+        <IconButton
+          cursor="pointer"
+          onClick={() => {
+            setShow(false);
+          }}
+          position="absolute"
+          top="10px"
+          right="15px"
+          display={{ base: "flex", sm: "none" }}
+          size="xs"
+          icon={<MdOutlineClose fontSize="16px" />}
+          aria-label="close button"
+        />
       </Stack>
     </Box>
   );
@@ -466,7 +490,13 @@ export default function Nav() {
   }, []);
 
   return (
-    <Box pos="fixed" top={0} left={0} zIndex={999} w="full">
+    <Box
+      pos={{ base: "relative", sm: "fixed" }}
+      top={0}
+      left={0}
+      zIndex={999}
+      w="full"
+    >
       <AlertBanner ref={alertBannerRef} />
       <Box
         as="nav"
