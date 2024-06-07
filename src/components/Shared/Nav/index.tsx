@@ -19,6 +19,7 @@ import { Menu, MenuButton, MenuList, MenuItem } from "@chakra-ui/react";
 import PhronZeroLogo from "../PhronZeroLogo";
 import Image from "next/image";
 import ConnectWalletButton from "../ConnectWalletButton";
+import { MdOutlineClose } from "react-icons/md";
 
 export const layerZeroAndLayerOneMenuItems = [
   {
@@ -245,6 +246,81 @@ export const newsItems = [
 
 export const menu = ["Phron AI Foundation", "News / Updates"];
 
+const AlertBanner = React.forwardRef((props, ref: any) => {
+  const [show, setShow] = useState(true);
+
+  if (!show) {
+    return false;
+  }
+
+  return (
+    <Box
+      bgImage="/assets/chain/alert-banner-image.png"
+      bgPos="top"
+      bgSize="cover"
+      transform="translateY(0px)"
+      display="block"
+      bgRepeat="no-repeat"
+      w="full"
+      ref={ref}
+      transition="all .3s"
+    >
+      <Stack
+        direction={{ base: "column", md: "row" }}
+        alignItems={{ base: "flex-end", md: "center" }}
+        justifyContent="center"
+        maxW="1260px"
+        mx="auto"
+        px="4"
+        py="4"
+        spacing={{ base: "3", md: "8" }}
+      >
+        <HStack spacing="5">
+          <Image
+            src="/assets/chain/balloon-icon.png"
+            alt="ballon icon"
+            width={25}
+            height={25}
+          />
+          <Text fontWeight={500} fontSize={{ base: "sm", md: "16px" }}>
+            Welcome to the PHRON AI Airdrop Extravaganza!
+          </Text>
+          <Image
+            src="/assets/chain/balloon-icon.png"
+            alt="ballon icon"
+            width={25}
+            height={25}
+          />
+        </HStack>
+
+        <HStack spacing="4">
+          <Button
+            variant="primary"
+            as="a"
+            href="https://voyage.phron.ai/"
+            target="_blank"
+            rounded="full"
+            size="sm"
+            px="4"
+          >
+            Get Started
+          </Button>
+          <Text
+            cursor="pointer"
+            onClick={() => {
+              setShow(false);
+            }}
+          >
+            <MdOutlineClose />
+          </Text>
+        </HStack>
+      </Stack>
+    </Box>
+  );
+});
+
+AlertBanner.displayName = "AlertBanner";
+
 function SubMenu(props: any) {
   const router = useRouter();
 
@@ -332,6 +408,7 @@ export default function Nav() {
   } = useDisclosure();
 
   const navRef = useRef<HTMLDivElement>(null);
+  const alertBannerRef = useRef<HTMLDivElement>(null);
 
   const [currentMenu, setCurrentMenu] = useState("Phron AI Foundation");
 
@@ -356,8 +433,21 @@ export default function Nav() {
       }
       if (currentScroll <= 0 && navRef.current) {
         navRef.current.style.backgroundColor = "transparent";
-        return;
       }
+      if (currentScroll > 0 && navRef.current) {
+        navRef.current.style.backgroundColor = "#05010c";
+      }
+
+      // if (currentScroll > 100 && alertBannerRef.current) {
+      //   alertBannerRef.current.style.transform = "translateY(-100%)";
+      //   alertBannerRef.current.style.display = "none";
+      // }
+
+      // if (currentScroll <= 0 && alertBannerRef.current) {
+      //   alertBannerRef.current.style.transform = "translateY(0px)";
+      //   alertBannerRef.current.style.display = "block";
+      // }
+
       // if (
       //   currentScroll > lastScroll &&
       //   !body.classList.contains("scroll-down")
@@ -377,6 +467,7 @@ export default function Nav() {
 
   return (
     <Box pos="fixed" top={0} left={0} zIndex={999} w="full">
+      <AlertBanner ref={alertBannerRef} />
       <Box
         as="nav"
         ref={navRef}

@@ -21,7 +21,7 @@ export default function PhronesesChain() {
         <PhronesisEquals />
       </Box>
       <WhyUs />
-      <MachineLearningModel />
+      {/* <MachineLearningModel /> */}
       <Footer />
     </>
   );
