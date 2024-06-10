@@ -34,6 +34,7 @@ interface PartnerCardProps {
   twitterUrl: string;
   logoWidth?: number;
   logoHeight?: number;
+  style?: any;
 }
 
 export default function PartnerCard(props: PartnerCardProps) {
@@ -45,6 +46,7 @@ export default function PartnerCard(props: PartnerCardProps) {
     websiteUrl,
     logoHeight,
     logoWidth,
+    style,
   } = props;
   //   bgColor="#0c011f"
   return (
@@ -72,6 +74,7 @@ export default function PartnerCard(props: PartnerCardProps) {
           alt={name + " logo"}
           width={logoWidth ? logoWidth : 40}
           height={logoHeight ? logoHeight : 40}
+          style={style}
         />
         <Text fontSize="lg" fontWeight={500} flexGrow={1}>
           {name}

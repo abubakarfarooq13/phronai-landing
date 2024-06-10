@@ -293,6 +293,165 @@ const partners = [
     websiteUrl: "https://x-alpha.ai/x-alpha",
     twitterUrl: "https://twitter.com/XAlphaAI_Team",
   },
+  {
+    id: 20,
+    name: "VPS AI",
+    imageSrc: "/assets/partners/vpsai-logo.png",
+    description:
+      "$SKYH - Tokenizing Real World Assets. Invest in diverse tangible assets on the Blockchain. Powered by Solana. Join us",
+    websiteUrl: "https://vpsai.io/",
+    twitterUrl: "https://x.com/VPS_AI",
+  },
+  {
+    id: 21,
+    name: "Sky Hause",
+    imageSrc: "/assets/partners/sky-hause-logo.jpg",
+    description:
+      "$SKYH - Tokenizing Real World Assets. Invest in diverse tangible assets on the Blockchain. Powered by Solana. Join us",
+    websiteUrl: "https://skyhause.xyz/",
+    twitterUrl: "https://x.com/hause_ly",
+  },
+  {
+    id: 22,
+    name: "BUNNY | Ukraine",
+    imageSrc: "/assets/partners/bunny-ukraine-logo.png",
+    description:
+      "$SKYH - Hello, I'm Bunny! I believe that football will bring strong connections and relieve the stress of war.",
+    websiteUrl: "https://bunnychz.com/",
+    twitterUrl: "https://x.com/BunnyChiliz",
+  },
+  {
+    id: 23,
+    name: "ZERO Labs",
+    imageSrc: "/assets/partners/zero-labs-logo.jpg",
+    description:
+      "Unlocking real-world value for DeFi through zk-powered omnichain identity, solvency aggregation and attestation. Powered by @hyperlane",
+    websiteUrl: "https://0xzero.org/",
+    twitterUrl: "https://x.com/0xZeroOrg",
+    style: {
+      borderRadius: "100%",
+    },
+  },
+  {
+    id: 24,
+    name: "XeroAI",
+    imageSrc: "/assets/partners/xero-ai-logo.jpg",
+    description:
+      "A New Era in Text to Video and Voice to Video using new #ARBP ML model.",
+    websiteUrl: "https://www.xeroai.io/",
+    twitterUrl: "https://x.com/xeroai_erc",
+    style: {
+      borderRadius: "100%",
+    },
+  },
+  {
+    id: 25,
+    name: "BuddyAI",
+    imageSrc: "/assets/partners/buddy-ai-logo.jpg",
+    description:
+      "Introducing Buddy AI: An Evolving AI-driven Telegram bot designed to moderate communities, foster active engagement, provide real-time blockchain data.",
+    websiteUrl: "https://buddyai.services/",
+    twitterUrl: "https://x.com/BuddyAIERC",
+    style: {
+      borderRadius: "100%",
+    },
+  },
+  {
+    id: 26,
+    name: "XEI AI",
+    imageSrc: "/assets/partners/xei-ai-logo.jpg",
+    description:
+      "Introducing Buddy AI: An Evolving AI-driven Telegram bot designed to moderate communities, foster active engagement, provide real-time blockchain data.",
+    websiteUrl: "https://xei.ai/",
+    twitterUrl: "https://x.com/xei_official",
+    style: {
+      borderRadius: "100%",
+    },
+  },
+  {
+    id: 27,
+    name: "Bitgert - $BRISE",
+    imageSrc: "/assets/partners/bitgert-logo.png",
+    description:
+      "Bitgert is a rapidly expanding crypto project that boasts a gas fee-free  blockchain, CEX and a lot more!.",
+    websiteUrl: "http://www.bitgert.com/",
+    twitterUrl: "https://x.com/bitgertbrise",
+  },
+  {
+    id: 28,
+    name: "Voice AI",
+    imageSrc: "/assets/partners/voice-ai.jpg",
+    description:
+      "Voice AI, an Ethereum-based token, redefines digital interaction with voice assistants, AMA sessions, voice cloning, music studio, and streamlined crypto swap.",
+    websiteUrl: "https://voiceai.live/",
+    twitterUrl: "https://x.com/VoiceAIERC",
+    style: {
+      borderRadius: "100%",
+    },
+  },
+  {
+    id: 29,
+    name: "XallyAI",
+    imageSrc: "/assets/partners/xally-logo.jpg",
+    description:
+      "Xally ecosystem simplifies AI application development by providing cutting-edge AI models and pre-built modules, making your ideas a reality.",
+    websiteUrl: "https://xally.ai/",
+    twitterUrl: "https://x.com/xallyai",
+    style: {
+      borderRadius: "100%",
+    },
+  },
+  {
+    id: 30,
+    name: "SuperString - Decentralized AI",
+    imageSrc: "/assets/partners/superstring-logo.jpg",
+    description:
+      "Decentralized computing power eliminates uncertainty in the world",
+    websiteUrl: "https://superstring.app/",
+    twitterUrl: "https://x.com/superstring_bot",
+    style: {
+      borderRadius: "100%",
+    },
+  },
+  {
+    id: 31,
+    name: "DSCLAB",
+    imageSrc: "/assets/partners/dsc-logo.jpg",
+    description:
+      "Motivate users'GPU/CPU computing power and match AI computing power application needs.",
+    websiteUrl: "https://dsclab.io/",
+    twitterUrl: "https://x.com/dsc_lab",
+  },
+  {
+    id: 32,
+    name: "Collably Network",
+    imageSrc: "/assets/partners/collably-network-logo.png",
+    description:
+      "🤝 Collably Network: Connecting Projects with Perfect Partners. Your bridge to successful collaborations. 🚀",
+    websiteUrl: "https://collably.network/",
+    twitterUrl: "https://x.com/CollablyNetwork",
+  },
+  {
+    id: 33,
+    name: "Agent Layer",
+    imageSrc: "/assets/partners/agent-layer-logo.png",
+    description:
+      "AgentLayer - A Decentralized Autonomous AI Agent Blockchain and Network",
+    websiteUrl: "https://agentlayer.xyz/",
+    twitterUrl: "https://x.com/Agent_Layer",
+  },
+  {
+    id: 33,
+    name: "Haya Finance",
+    imageSrc: "/assets/partners/haya-logo.jpg",
+    description:
+      "Haya utilizes #DeFi and #ZK technologies to provide safe, on-chain #ETF for long-term investments tailored to ordinary investors and digital nomads.",
+    websiteUrl: "https://haya.finance/",
+    twitterUrl: "https://x.com/haya_finance",
+    style: {
+      borderRadius: "100%",
+    },
+  },
 ];
 
 const Fade = require("react-reveal/Fade");
@@ -305,7 +464,7 @@ export default function CPartners() {
       bgSize="cover"
     >
       <Nav />
-      <Container maxW="1260px" pt="120px" position="relative" pb="96px">
+      <Container maxW="1260px" pt="160px" position="relative" pb="96px">
         <Fade bottom>
           <Text
             as="h1"
@@ -363,6 +522,7 @@ export default function CPartners() {
                   websiteUrl={partner.websiteUrl}
                   logoHeight={partner.logoHeight}
                   logoWidth={partner.logoWidth}
+                  style={partner.style}
                 />
                 {/* </Fade> */}
               </GridItem>
