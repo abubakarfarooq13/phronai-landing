@@ -131,6 +131,12 @@ export const communityMenuItems = [
     href: "/partnerships",
     icon: "/assets/new-home/handshake.svg",
   },
+  {
+    id: 9,
+    label: "VIP Partnerships",
+    href: "/vip-partnerships",
+    icon: "/assets/diamond-icon.svg",
+  },
   // {
   //   id: 12,
   //   label: "X updates",
