@@ -421,6 +421,9 @@ const partners = [
       "Motivate users'GPU/CPU computing power and match AI computing power application needs.",
     websiteUrl: "https://dsclab.io/",
     twitterUrl: "https://x.com/dsc_lab",
+    style: {
+      borderRadius: "100%",
+    },
   },
   {
     id: 32,
