@@ -131,12 +131,12 @@ export const communityMenuItems = [
     href: "/partnerships",
     icon: "/assets/new-home/handshake.svg",
   },
-  {
-    id: 9,
-    label: "VIP Partnerships",
-    href: "/vip-partnerships",
-    icon: "/assets/diamond-icon.svg",
-  },
+  // {
+  //   id: 9,
+  //   label: "VIP Partnerships",
+  //   href: "/vip-partnerships",
+  //   icon: "/assets/diamond-icon.svg",
+  // },
   // {
   //   id: 12,
   //   label: "X updates",
@@ -439,6 +439,9 @@ export default function Nav() {
 
   const navRef = useRef<HTMLDivElement>(null);
   const alertBannerRef = useRef<HTMLDivElement>(null);
+  const logoRef = useRef<HTMLDivElement>(null);
+  const labelsRef = useRef<HTMLParagraphElement>(null);
+  const connectButtonRef = useRef<HTMLDivElement>(null);
 
   const [currentMenu, setCurrentMenu] = useState("Phron AI Foundation");
 
@@ -464,8 +467,35 @@ export default function Nav() {
       if (currentScroll <= 0 && navRef.current) {
         navRef.current.style.backgroundColor = "transparent";
       }
-      if (currentScroll > 0 && navRef.current) {
-        navRef.current.style.backgroundColor = "#05010c";
+
+      if (currentScroll > 10 && logoRef.current) {
+        logoRef.current.style.maxWidth =
+          router.pathname === "/phronzero" ? "180px" : "166px";
+      }
+
+      if (currentScroll <= 0 && logoRef.current) {
+        logoRef.current.style.maxWidth =
+          router.pathname === "/phronzero" ? "280px" : "266px";
+      }
+
+      if (currentScroll > 10 && labelsRef.current) {
+        labelsRef.current.style.fontSize = "17px";
+      }
+
+      if (currentScroll <= 0 && labelsRef.current) {
+        labelsRef.current.style.fontSize = "19px";
+      }
+
+      if (currentScroll > 0 && connectButtonRef.current) {
+        connectButtonRef.current.style.height = "40px";
+        connectButtonRef.current.style.maxWidth = "190px";
+        connectButtonRef.current.style.fontSize = "16px";
+      }
+
+      if (currentScroll <= 0 && connectButtonRef.current) {
+        connectButtonRef.current.style.height = "50px";
+        connectButtonRef.current.style.maxWidth = "240px";
+        connectButtonRef.current.style.fontSize = "16px";
       }
 
       // if (currentScroll > 100 && alertBannerRef.current) {
@@ -495,6 +525,8 @@ export default function Nav() {
     });
   }, []);
 
+  console.log(labelsRef);
+
   return (
     <Box
       pos={{ base: "relative", sm: "fixed" }}
@@ -519,7 +551,7 @@ export default function Nav() {
       >
         <Container maxW="1440px" px={{ base: "4", xl: "0" }}>
           <HStack justifyContent="space-between">
-            <Box maxW={router.pathname === "/phronzero" ? "180px" : "166px"}>
+            <Box ref={logoRef} transition="all .3s">
               {router.pathname === "/phronzero" ? <PhronZeroLogo /> : <Logo />}
             </Box>
 
@@ -530,8 +562,9 @@ export default function Nav() {
               spacing="0px"
               // display={{ base: "none", "1350px": "flex" }}
               display={{ base: "none", xl: "flex" }}
-              fontSize={{ base: "15px", "2xl": "base" }}
+              fontSize={{ base: "15px", "2xl": "19px" }}
               ml="0px"
+              ref={labelsRef}
             >
               {navItems.map((item) => (
                 <Box
@@ -544,11 +577,17 @@ export default function Nav() {
                     boxShadow: "none",
                     // bgColor: "#6317fe",
                   }}
+                  outline="none"
+                  boxShadow="none"
                   px="4"
                   color={
                     item.items?.includes(router.pathname) ? "#9e5aff" : "#fff"
                   }
                   cursor="pointer"
+                  // fontSize="2xl"
+
+                  fontSize="inherit"
+                  transition="all .3s"
                 >
                   <Text
                     h="full"
@@ -564,7 +603,6 @@ export default function Nav() {
                       boxShadow: "none",
                     }}
                     fontWeight={500}
-                    fontSize="17px"
                   >
                     {item.label}
                   </Text>
@@ -608,7 +646,10 @@ export default function Nav() {
             <HStack
               // display={{ base: "none", "1350px": "flex" }}
               display={{ base: "none", md: "flex" }}
-              fontSize={{ base: "15px", "2xl": "base" }}
+              fontSize={{ base: "15px", "2xl": "16px" }}
+              w="full"
+              maxW="230px"
+              justifyContent="flex-end"
             >
               {/* <Menu>
                 <MenuButton
@@ -658,8 +699,19 @@ export default function Nav() {
                   </MenuItem>
                 </MenuList>
               </Menu> */}
-
-              <ConnectWalletButton />
+              <Box
+                maxW="250px"
+                ref={connectButtonRef}
+                transition="all .3s"
+                h="50px"
+                w="full"
+              >
+                <ConnectWalletButton
+                  height={"inherit"}
+                  fontSize="inherit"
+                  maxWidth={"inherit"}
+                />
+              </Box>
 
               <Text
                 as={Link}

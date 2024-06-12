@@ -76,6 +76,7 @@ export default function DNASection() {
             mt="2"
             fontWeight={500}
             textAlign="center"
+            as="h2"
           >
             Build your Layer 1 in minutes
           </Text>

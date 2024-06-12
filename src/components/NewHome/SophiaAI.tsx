@@ -55,7 +55,7 @@ export default function SophiaAI() {
           >
             <VStack align={{ base: "center", md: "start" }} maxW="250px">
               <HStack spacing="4">
-                <Text fontSize="3xl" fontWeight={500}>
+                <Text fontSize="3xl" fontWeight={500} as="h3">
                   Try Sophia
                 </Text>
                 <Image

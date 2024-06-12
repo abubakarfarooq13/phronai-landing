@@ -49,6 +49,7 @@ export default function Hero() {
               fontWeight={600}
               mb="2"
               mt={{ base: "250px", lg: "0px" }}
+              as="h1"
             >
               {/* From Static to Dynamic{" "}
               <Box as="br" display={{ base: "none", md: "block" }} /> with

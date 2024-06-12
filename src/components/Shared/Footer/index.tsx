@@ -128,6 +128,11 @@ const footerMenu = [
         label: "Partnerships",
         href: "/partnerships",
       },
+      // {
+      //   id: 1,
+      //   label: "Partnerships",
+      //   href: "/vip-partnerships",
+      // },
     ],
   },
 ];

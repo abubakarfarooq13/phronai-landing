@@ -39,7 +39,7 @@ export default function Home() {
         color="#fff"
         as="main"
         minH="100vh"
-        style={plusJakartaSans.style}
+        style={interFont.style}
       >
         <NewHome />
       </Box>
