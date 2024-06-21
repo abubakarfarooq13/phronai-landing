@@ -501,7 +501,12 @@ export default function CPartners() {
     >
       <Nav />
 
-      <Container maxW="1260px" pt="180px" position="relative" pb="96px">
+      <Container
+        maxW="1260px"
+        pt={{ base: "40px", sm: "180px" }}
+        position="relative"
+        pb="96px"
+      >
         <Fade bottom>
           <Text
             as="h1"

@@ -58,11 +58,7 @@ export default function Phron() {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <Box
-        // pt={{ base: "70px", "1350px": "160px" }}
-        bgColor="#03020b"
-        color="#fff"
-      >
+      <Box pt="30px" bgColor="#03020b" color="#fff">
         <main id="phron-page" style={interFont.style}>
           <CPhron />
         </main>

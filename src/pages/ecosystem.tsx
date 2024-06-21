@@ -58,11 +58,7 @@ export default function Home() {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <Box
-        // pt={{ base: "70px", "1350px": "120px" }}
-        bgColor="#03020b"
-        color="#fff"
-      >
+      <Box pt="30px" bgColor="#03020b" color="#fff">
         <main id="ecosystem-page" style={interFont.style}>
           <Ecosystem />
         </main>

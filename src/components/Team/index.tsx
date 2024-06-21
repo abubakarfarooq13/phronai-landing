@@ -31,6 +31,15 @@ export const team = [
   //   imageHeight: 208,
   // },
   {
+    id: "10",
+    name: "Vitalii Yatskiv",
+    role: "CTO",
+    image: "/assets/team/vitalii-yatskiv.png",
+    linkedinUrl: "https://www.linkedin.com/in/vitalii-yatskiv/",
+    imageWidth: 250,
+    imageHeight: 230,
+  },
+  {
     id: "02",
     name: "Adel Elmessiry, Ph.D.",
     role: "Leading AI Advisor",
@@ -95,7 +104,7 @@ export default function Team() {
       bgSize="cover"
     >
       <Nav />
-      <Container maxW="1460px" pt="100px" pb="100px">
+      <Container maxW="1460px" pt={{ base: "30px", md: "160px" }} pb="100px">
         <Fade bottom>
           <Text textAlign="center" fontSize="3xl" fontWeight={300} opacity=".8">
             Phron AI

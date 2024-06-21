@@ -11,7 +11,7 @@ export default function RoadMap() {
       bgSize={{ base: "cover", md: "100% 100%" }}
       bgPos="center"
       bgRepeat="no-repeat"
-      pt={{ base: "100px", md: "150px" }}
+      pt={{ base: "40px", md: "160px" }}
       pb={{ base: "50px", md: "100px" }}
     >
       <Container maxW="1160px" pb={{ base: "60px", md: "0px" }}>

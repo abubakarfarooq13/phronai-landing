@@ -142,7 +142,12 @@ export default function NewPhronZero() {
         bgSize="100% 100%"
         bgPos="center"
       >
-        <Container ref={container} maxW="1300px" pt="100px" mb="100px">
+        <Container
+          ref={container}
+          maxW="1300px"
+          pt={{ base: "40px", md: "160px" }}
+          mb="100px"
+        >
           <Stack
             direction={{ base: "column-reverse", lg: "row" }}
             justifyContent="space-between"
