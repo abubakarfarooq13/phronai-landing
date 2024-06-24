@@ -6,7 +6,7 @@ export default function Benchmarks() {
   return (
     <Box
       py="70px"
-      bgImage="linear-gradient(146deg, rgba(0,0,0,0) 50%, rgba(80,41,150,1) 100%)"
+      // bgImage="linear-gradient(146deg, rgba(0,0,0,0) 50%, rgba(80,41,150,1) 100%)"
     >
       <Container maxW="1300px">
         <Text
