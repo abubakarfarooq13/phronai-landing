@@ -45,8 +45,19 @@ export default function DNASection() {
       position="relative"
       overflow="hidden"
     >
-      <video width="600" height="400" autoPlay playsInline muted loop>
-        <source src="/assets/new-home/brain-video.mp4" type="video/mp4" />
+      <video
+        style={{
+          // margin: "10px auto 20px auto",
+          position: "absolute",
+          top: videoTop,
+          width: "100%",
+        }}
+        autoPlay
+        playsInline
+        muted
+        loop
+      >
+        <source src="/assets/dna-background-video.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <Box w="full">
