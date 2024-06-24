@@ -35,6 +35,8 @@ export default function DNASection() {
     lg: "full",
   });
 
+  const videoTop = useBreakpointValue({ md: "-200px", lg: "-300px" });
+
   return (
     <Box
       pt={{ base: "0px", lg: "4" }}
@@ -43,14 +45,13 @@ export default function DNASection() {
       position="relative"
       overflow="hidden"
     >
-      <Box
-        as="video"
+      <video
         style={{
           display: "block",
           margin: "10px auto 20px auto",
           position: "absolute",
+          top: videoTop,
         }}
-        top={{ md: "-200px", lg: "-300px" }}
         autoPlay
         playsInline
         muted
@@ -58,7 +59,7 @@ export default function DNASection() {
       >
         <source src="/assets/dna-background.mp4" type="video/mp4" />
         Your browser does not support the video tag.
-      </Box>
+      </video>
       <Box w="full">
         <Container maxW="1300px" px="4" mt="4" position="relative">
           <VStack
