@@ -45,7 +45,9 @@ export default function DNASection() {
       position="relative"
       overflow="hidden"
     >
-      <video
+      <Box
+        as="video"
+        display={{ base: "block", xl: "none" }}
         style={{
           // margin: "10px auto 20px auto",
           position: "absolute",
@@ -59,7 +61,24 @@ export default function DNASection() {
       >
         <source src="/assets/dna-background-video.mp4" type="video/mp4" />
         Your browser does not support the video tag.
-      </video>
+      </Box>
+      <Box
+        as="video"
+        style={{
+          // margin: "10px auto 20px auto",
+          position: "absolute",
+          top: videoTop,
+          width: "100%",
+        }}
+        display={{ base: "none", xl: "block" }}
+        autoPlay
+        playsInline
+        muted
+        loop
+      >
+        <source src="/assets/dna-background.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </Box>
       <Box w="full">
         <Container maxW="1300px" px="4" mt="4" position="relative">
           <VStack
