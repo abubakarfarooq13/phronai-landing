@@ -52,6 +52,8 @@ export default function DNASection() {
           top: videoTop,
           zIndex: 9999,
         }}
+        width="900"
+        height="900"
         autoPlay
         playsInline
         muted
