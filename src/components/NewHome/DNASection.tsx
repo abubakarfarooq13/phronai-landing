@@ -56,6 +56,7 @@ export default function DNASection() {
         playsInline
         muted
         loop
+        controls
       >
         <source src="/assets/dna-background.mp4" type="video/mp4" />
         Your browser does not support the video tag.
