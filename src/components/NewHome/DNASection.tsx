@@ -45,18 +45,8 @@ export default function DNASection() {
       position="relative"
       overflow="hidden"
     >
-      <video
-        style={{
-          // margin: "10px auto 20px auto",
-          position: "absolute",
-          top: videoTop,
-        }}
-        autoPlay
-        playsInline
-        muted
-        loop
-      >
-        <source src="/assets/dna-background.webm" type="video/webm" />
+      <video width="600" height="400" autoPlay playsInline muted loop>
+        <source src="/assets/dna-background.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <Box w="full">
