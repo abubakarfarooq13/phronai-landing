@@ -50,13 +50,11 @@ export default function DNASection() {
           // margin: "10px auto 20px auto",
           position: "absolute",
           top: videoTop,
-          zIndex: 9999,
         }}
         autoPlay
         playsInline
         muted
         loop
-        controls
       >
         <source src="/assets/dna-background.webm" type="video/webm" />
         Your browser does not support the video tag.
