@@ -47,10 +47,10 @@ export default function DNASection() {
     >
       <video
         style={{
-          display: "block",
           margin: "10px auto 20px auto",
           position: "absolute",
           top: videoTop,
+          zIndex: 9999,
         }}
         autoPlay
         playsInline
