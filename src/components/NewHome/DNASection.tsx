@@ -36,9 +36,9 @@ export default function DNASection() {
   });
 
   const videoTop = useBreakpointValue({
-    md: "-200px",
-    "2xl": "-300px",
-    "2340px": "-400px",
+    // md: "-200px",
+    // "2xl": "-300px",
+    // "2340px": "-400px",
   });
 
   return (
@@ -51,7 +51,7 @@ export default function DNASection() {
     >
       <Box
         as="video"
-        display={{ base: "block", xl: "none" }}
+        display={{ base: "block", md: "none" }}
         style={{
           // margin: "10px auto 20px auto",
           position: "absolute",
@@ -74,7 +74,7 @@ export default function DNASection() {
           top: videoTop,
           width: "100%",
         }}
-        display={{ base: "none", xl: "block" }}
+        display={{ base: "none", md: "block" }}
         autoPlay
         playsInline
         muted
@@ -84,26 +84,26 @@ export default function DNASection() {
         Your browser does not support the video tag.
       </Box>
       <Box>
-        <Container maxW="1300px" px="4" mt="4" position="relative">
+        <Container maxW="1100px" px="4" mt="4" position="relative">
           <VStack
             // bgImage="/assets/new-home/dna-image.png"
             align="flex-start"
             bgColor={{ base: "rgba(0,0,0,.2)", sm: "rgba(0,0,0,0)" }}
             maxW="900px"
             w="full"
-            px="8"
+            // px="8"
             // minH={"490px"}
             pb="8"
             // bgSize="cover"
             // bgPos="center"
-            mx="auto"
+            // mx="auto"
             pt={{ base: "0px", sm: "50px" }}
             // position="absolute"
             // left="50%"
             // transform="translateX(-50%)"
             top="0"
             zIndex={99}
-            mt={{ base: "0px", xl: "150px" }}
+            mt={{ base: "0px", md: "150px" }}
           >
             <Image
               src="/assets/new-home/phron-zero-white.png"
@@ -162,7 +162,7 @@ export default function DNASection() {
         >
           <HStack
             maxW="1100px"
-            mt={{ base: "100px", lg: "200px", xl: "500px" }}
+            mt={{ base: "100px", lg: "200px", xl: "350px" }}
             mx="auto"
             justifyContent="space-between"
             display={{ base: "none", md: "flex" }}
