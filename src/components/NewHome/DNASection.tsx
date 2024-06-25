@@ -97,7 +97,7 @@ export default function DNASection() {
             // bgSize="cover"
             // bgPos="center"
             mx="auto"
-            pt={{ base: "20px", sm: "50px" }}
+            pt={{ base: "0px", sm: "50px" }}
             // position="absolute"
             // left="50%"
             // transform="translateX(-50%)"
@@ -166,6 +166,7 @@ export default function DNASection() {
             mx="auto"
             justifyContent="space-between"
             display={{ base: "none", md: "flex" }}
+            px="4"
           >
             <Text pt="300px" textAlign="left" color="#c1c1c1">
               Performance <br /> Leaderboard
@@ -192,6 +193,8 @@ export default function DNASection() {
             mt="150px"
             mb="5"
             display={{ base: "flex", md: "none" }}
+            maxW="300px"
+            mx="auto"
           >
             <Image
               src="/assets/new-home/phron-zero-white.png"
@@ -211,6 +214,7 @@ export default function DNASection() {
             justifyContent="space-between"
             fontSize="xs"
             display={{ base: "flex", md: "none" }}
+            px="4"
           >
             <Text textAlign="left" color="#c1c1c1">
               Performance <br /> Leaderboard
