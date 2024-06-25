@@ -168,7 +168,7 @@ export default function DNASection() {
             display={{ base: "none", md: "flex" }}
             px="4"
           >
-            <Text pt="300px" textAlign="left" color="#c1c1c1">
+            <Text pt="300px" textAlign="left" color="#c1c1c1" fontWeight={300}>
               Performance <br /> Leaderboard
             </Text>
             <VStack>
@@ -178,13 +178,15 @@ export default function DNASection() {
                 width={200}
                 height={100}
               />
-              <Text color="#c1c1c1">Adaptive AI Staking</Text>
-              <Text textAlign="center" color="#c1c1c1">
+              <Text color="#c1c1c1" fontSize="3xl" fontWeight={500}>
+                Adaptive AI Staking
+              </Text>
+              <Text textAlign="center" color="#c1c1c1" fontWeight={300}>
                 Staking to the most efficient notes. <br /> Creating the best
                 value for stakers and node providers.
               </Text>
             </VStack>
-            <Text pt="300px" textAlign="right" color="#c1c1c1">
+            <Text pt="300px" textAlign="right" color="#c1c1c1" fontWeight={300}>
               Runtime <br /> Leaderboard
             </Text>
           </HStack>
@@ -202,10 +204,15 @@ export default function DNASection() {
               width={200}
               height={100}
             />
-            <Text color="#c1c1c1" fontSize="sm">
+            <Text color="#c1c1c1" fontSize="3xl" fontWeight={500}>
               Adaptive AI Staking
             </Text>
-            <Text textAlign="center" color="#c1c1c1" fontSize="sm">
+            <Text
+              textAlign="center"
+              color="#c1c1c1"
+              fontSize="sm"
+              fontWeight={300}
+            >
               Staking to the most efficient notes. <br /> Creating the best
               value for stakers and node providers.
             </Text>
@@ -216,16 +223,16 @@ export default function DNASection() {
             display={{ base: "flex", md: "none" }}
             px="4"
           >
-            <Text textAlign="left" color="#c1c1c1">
+            <Text textAlign="left" color="#c1c1c1" fontWeight={300}>
               Performance <br /> Leaderboard
             </Text>
-            <Text textAlign="right" color="#c1c1c1">
+            <Text textAlign="right" color="#c1c1c1" fontWeight={300}>
               Runtime <br /> Leaderboard
             </Text>
           </HStack>
           <Box
             mx="auto"
-            mt={{ base: "-50px", xl: "-90px" }}
+            mt={{ base: "-50px", xl: "-80px" }}
             maxW="1100px"
             px="4"
             position="relative"
