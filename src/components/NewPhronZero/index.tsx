@@ -144,7 +144,7 @@ export default function NewPhronZero() {
       >
         <Container
           ref={container}
-          maxW="1300px"
+          maxW="1100px"
           pt={{ base: "40px", md: "160px" }}
           mb="100px"
         >

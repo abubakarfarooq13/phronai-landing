@@ -142,7 +142,7 @@ const logos = [
 export default function TrustedBySection() {
   return (
     <Box overflow="hidden">
-      <Container maxW="1300px" py="50px">
+      <Container maxW="1100px" py="50px">
         <Text fontSize="lg" as="h3" fontWeight={500} textAlign="center" mb="8">
           Trusted By
         </Text>
