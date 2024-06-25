@@ -35,7 +35,11 @@ export default function DNASection() {
     lg: "full",
   });
 
-  const videoTop = useBreakpointValue({ md: "-200px", lg: "-300px" });
+  const videoTop = useBreakpointValue({
+    md: "-200px",
+    "2xl": "-300px",
+    "2340px": "-400px",
+  });
 
   return (
     <Box
@@ -79,7 +83,7 @@ export default function DNASection() {
         <source src="/assets/dna-background.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </Box>
-      <Box w="full">
+      <Box>
         <Container maxW="1300px" px="4" mt="4" position="relative">
           <VStack
             // bgImage="/assets/new-home/dna-image.png"
@@ -137,11 +141,89 @@ export default function DNASection() {
           <source src="/assets/new-home/dna-video.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video> */}
+        </Container>
+        <Box
+          position="relative"
+          w="full"
+          _after={{
+            content: `' '`,
+            background: "rgba(0,0,0,.5)",
+            position: "absolute",
+            width: "100%",
+            height: "100%",
+            top: 0,
+            left: 0,
+            bottom: 0,
+            right: 0,
+            zIndex: -1,
+            filter: "blur(6px)",
+          }}
+          zIndex={999}
+        >
+          <HStack
+            maxW="1100px"
+            mt={{ base: "100px", lg: "200px", xl: "500px" }}
+            mx="auto"
+            justifyContent="space-between"
+            display={{ base: "none", md: "flex" }}
+          >
+            <Text pt="300px" textAlign="left" color="#c1c1c1">
+              Performance <br /> Leaderboard
+            </Text>
+            <VStack>
+              <Image
+                src="/assets/new-home/phron-zero-white.png"
+                alt="phronzero white logo"
+                width={200}
+                height={100}
+              />
+              <Text color="#c1c1c1">Adaptive AI Staking</Text>
+              <Text textAlign="center" color="#c1c1c1">
+                Staking to the most efficient notes. <br /> Creating the best
+                value for stakers and node providers.
+              </Text>
+            </VStack>
+            <Text pt="300px" textAlign="right" color="#c1c1c1">
+              Runtime <br /> Leaderboard
+            </Text>
+          </HStack>
+          <VStack
+            align="center"
+            mt="150px"
+            mb="5"
+            display={{ base: "flex", md: "none" }}
+          >
+            <Image
+              src="/assets/new-home/phron-zero-white.png"
+              alt="phronzero white logo"
+              width={200}
+              height={100}
+            />
+            <Text color="#c1c1c1" fontSize="sm">
+              Adaptive AI Staking
+            </Text>
+            <Text textAlign="center" color="#c1c1c1" fontSize="sm">
+              Staking to the most efficient notes. <br /> Creating the best
+              value for stakers and node providers.
+            </Text>
+          </VStack>
+          <HStack
+            justifyContent="space-between"
+            fontSize="xs"
+            display={{ base: "flex", md: "none" }}
+          >
+            <Text textAlign="left" color="#c1c1c1">
+              Performance <br /> Leaderboard
+            </Text>
+            <Text textAlign="right" color="#c1c1c1">
+              Runtime <br /> Leaderboard
+            </Text>
+          </HStack>
           <Box
             mx="auto"
+            mt={{ base: "-50px", xl: "-90px" }}
             maxW="1100px"
             px="4"
-            mt={{ base: "100px", xl: "300px" }}
             position="relative"
           >
             <Fade bottom>
@@ -200,7 +282,7 @@ export default function DNASection() {
               className="ai-staking-logo-4"
             />
           </Box>
-        </Container>
+        </Box>
       </Box>
     </Box>
   );
