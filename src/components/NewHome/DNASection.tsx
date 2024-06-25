@@ -158,7 +158,7 @@ export default function DNASection() {
             zIndex: -1,
             filter: "blur(6px)",
           }}
-          zIndex={999}
+          zIndex={9}
         >
           <HStack
             maxW="1100px"
