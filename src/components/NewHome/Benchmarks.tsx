@@ -5,7 +5,8 @@ import Image from "next/image";
 export default function Benchmarks() {
   return (
     <Box
-      py="70px"
+      pb="70px"
+      pt={{ base: "10px", md: "40px", lg: "70px" }}
       // bgImage="linear-gradient(146deg, rgba(0,0,0,0) 50%, rgba(80,41,150,1) 100%)"
     >
       <Container maxW="1100px">

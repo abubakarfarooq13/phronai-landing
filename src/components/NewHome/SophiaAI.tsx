@@ -30,7 +30,7 @@ export default function SophiaAI() {
   return (
     <Box
       // bgImage="linear-gradient(146deg, rgba(0,0,0,0) 50%, rgba(80,41,150,1) 100%)"
-      pb="100px"
+      pb={{ base: "50px", lg: "100px" }}
     >
       <Container
         maxW="1150px"
