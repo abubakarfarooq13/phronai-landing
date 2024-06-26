@@ -171,6 +171,7 @@ export default function SophiaAI() {
             borderTopWidth="1px"
             borderColor="#3b2d4b"
             mt="10"
+            textAlign={{ base: "center", md: "left" }}
           >
             <GridItem>
               <Text
