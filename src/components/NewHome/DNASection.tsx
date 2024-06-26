@@ -54,7 +54,7 @@ export default function DNASection() {
         display={{ base: "block", md: "none" }}
         style={{
           // margin: "10px auto 20px auto",
-          position: "absolute",
+          // position: "absolute",
           top: videoTop,
           width: "100%",
         }}
@@ -70,7 +70,7 @@ export default function DNASection() {
         as="video"
         style={{
           // margin: "10px auto 20px auto",
-          position: "absolute",
+          // position: "absolute",
           top: videoTop,
           width: "100%",
         }}
@@ -80,69 +80,64 @@ export default function DNASection() {
         muted
         loop
       >
-        <source src="/assets/dna-background.mp4" type="video/mp4" />
+        <source src="/assets/dna-background-edited.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </Box>
-      <Box>
-        <Container maxW="1100px" px="4" mt="4" position="relative">
-          <VStack
-            // bgImage="/assets/new-home/dna-image.png"
-            align="flex-start"
-            bgColor={{ base: "rgba(0,0,0,.2)", sm: "rgba(0,0,0,0)" }}
-            maxW="900px"
-            w="full"
-            // px="8"
-            // minH={"490px"}
-            pb="8"
-            // bgSize="cover"
-            // bgPos="center"
-            // mx="auto"
-            pt={{ base: "0px", sm: "50px" }}
-            // position="absolute"
-            // left="50%"
-            // transform="translateX(-50%)"
-            top="0"
-            zIndex={99}
-            mt={{ base: "0px", md: "150px" }}
-          >
-            <Image
-              src="/assets/new-home/phron-zero-white.png"
-              alt="phronzero white logo"
-              width={200}
-              height={100}
-            />
-            <Text
-              fontSize={{ base: "2xl", sm: "3xl" }}
-              mt="2"
-              fontWeight={500}
-              textAlign="left"
-              as="h2"
-            >
-              Build your Layer 1 in{" "}
-              <Box display={{ base: "none", md: "block" }} as="br" /> minutes
-            </Text>
-          </VStack>
-          {/* <video
-          width="700"
-          style={{
-            display: "block",
-            margin: "10px auto 20px auto",
-            // position: "absolute",
-            // left: "50%",
-            transform: "rotate(180deg)",
-            maxWidth: dnaVideoMaxWidth,
-          }}
-          height="500"
-          autoPlay
-          playsInline
-          muted
-          loop
+      <Container
+        maxW="1100px"
+        // minH={{ md: "70vh", "2xl": "80vh" }}
+        px={{ base: "4", xl: "0" }}
+        mt={{ base: "0px", md: "4" }}
+        position="absolute"
+        top="0"
+        left="50%"
+        transform="translateX(-50%)"
+      >
+        <VStack
+          // bgImage="/assets/new-home/dna-image.png"
+          align="flex-start"
+          bgColor={{ base: "rgba(0,0,0,.2)", sm: "rgba(0,0,0,0)" }}
+          maxW="900px"
+          w="full"
+          // px="8"
+          // minH={"490px"}
+          pb="8"
+          // bgSize="cover"
+          // bgPos="center"
+          // mx="auto"
+          pt={{ base: "0px", sm: "50px" }}
+          // position="absolute"
+          // left="50%"
+          // transform="translateX(-50%)"
+          top="0"
+          zIndex={99}
+          mt={{ base: "0px", xl: "150px" }}
         >
-          <source src="/assets/new-home/dna-video.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video> */}
-        </Container>
-        <Box
+          <Image
+            src="/assets/new-home/phron-zero-white.png"
+            alt="phronzero white logo"
+            width={200}
+            height={100}
+          />
+          <Text
+            fontSize={{ base: "xl", sm: "3xl", lg: "45px", "2340px": "60px" }}
+            mt="2"
+            fontWeight={500}
+            textAlign="left"
+            as="h2"
+            lineHeight="110%"
+          >
+            Build your Layer 1{" "}
+            <Box as="br" display={{ base: "none", md: "block" }} /> in minutes
+          </Text>
+          <Text color="#c1c1c1" fontSize={{ base: "17px", "2340px": "22px" }}>
+            Introducing the First Layer 0 and{" "}
+            <Box as="br" display={{ base: "block", lg: "none" }} />
+            Layer 1 AI Blockchain.
+          </Text>
+        </VStack>
+      </Container>
+      {/* <Box
           position="relative"
           w="full"
           _after={{
@@ -293,8 +288,7 @@ export default function DNASection() {
               className="ai-staking-logo-4"
             />
           </Box>
-        </Box>
-      </Box>
+        </Box> */}
     </Box>
   );
 }

@@ -87,12 +87,21 @@ export const team = [
   },
   {
     id: "07",
-    name: "rehan shams",
+    name: "Rehan Shams",
     role: "Head of Development",
     image: "/assets/team/rehan-crop.png",
     linkedinUrl: "https://www.linkedin.com/in/rehanshamas/",
     imageWidth: 190,
     imageHeight: 240,
+  },
+  {
+    id: "07",
+    name: "Egor Sukhorukov",
+    role: "Social Media / Community Manager",
+    image: "/assets/team/egor-sukhorukov.png",
+    // linkedinUrl: "https://www.linkedin.com/in/rehanshamas/",
+    imageWidth: 180,
+    imageHeight: 200,
   },
 ];
 
@@ -147,6 +156,8 @@ export default function Team() {
                   minH={{ base: "300px", sm: "250px" }}
                   maxW="430px"
                   overflow="hidden"
+                  display="flex"
+                  // justifyContent={i === 7 ? "flex-end" : "flex-start"}
                 >
                   <Image
                     src={member.image}
@@ -158,6 +169,7 @@ export default function Team() {
                       bottom: "0px",
                     }}
                   />
+
                   <VStack
                     position="absolute"
                     top={{ base: "28%", sm: "40%", md: "30%", lg: "43%" }}
@@ -183,36 +195,39 @@ export default function Team() {
                       {member.role}
                     </Text>
                   </VStack>
-                  <Text
-                    as={Link}
-                    href={member.linkedinUrl}
-                    target="_blank"
-                    position="absolute"
-                    bottom={{ base: "4", md: "2", lg: "4" }}
-                    right="4"
-                    display="flex"
-                    alignItems="center"
-                    justifyContent="center"
-                    border="1px"
-                    borderColor="rgba(169, 76, 203, .3)"
-                    rounded="full"
-                    px="5"
-                    py="2"
-                    _hover={{
-                      background: "rgba(169, 76, 203, .3)",
-                    }}
-                  >
-                    <Text as="span" fontSize="sm" fontWeight={700}>
-                      Linked
-                    </Text>{" "}
-                    <FaLinkedin fontSize="16px" />{" "}
-                    <BsArrowRightCircleFill
-                      fontSize="18px"
-                      style={{
-                        marginLeft: "10px",
+
+                  {member.linkedinUrl ? (
+                    <Text
+                      as={Link}
+                      href={member.linkedinUrl}
+                      target="_blank"
+                      position="absolute"
+                      bottom={{ base: "4", md: "2", lg: "4" }}
+                      right="4"
+                      display="flex"
+                      alignItems="center"
+                      justifyContent="center"
+                      border="1px"
+                      borderColor="rgba(169, 76, 203, .3)"
+                      rounded="full"
+                      px="5"
+                      py="2"
+                      _hover={{
+                        background: "rgba(169, 76, 203, .3)",
                       }}
-                    />
-                  </Text>
+                    >
+                      <Text as="span" fontSize="sm" fontWeight={700}>
+                        Linked
+                      </Text>{" "}
+                      <FaLinkedin fontSize="16px" />{" "}
+                      <BsArrowRightCircleFill
+                        fontSize="18px"
+                        style={{
+                          marginLeft: "10px",
+                        }}
+                      />
+                    </Text>
+                  ) : null}
                 </Box>
               </Fade>
             </WrapItem>
