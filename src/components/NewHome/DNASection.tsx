@@ -54,7 +54,7 @@ export default function DNASection() {
         display={{ base: "block", md: "none" }}
         style={{
           // margin: "10px auto 20px auto",
-          // position: "absolute",
+          position: "absolute",
           top: videoTop,
           width: "100%",
         }}
@@ -70,7 +70,7 @@ export default function DNASection() {
         as="video"
         style={{
           // margin: "10px auto 20px auto",
-          // position: "absolute",
+          position: "absolute",
           top: videoTop,
           width: "100%",
         }}
@@ -85,13 +85,13 @@ export default function DNASection() {
       </Box>
       <Container
         maxW="1100px"
-        // minH={{ md: "70vh", "2xl": "80vh" }}
+        minH={{ md: "70vh", "2340px": "80vh" }}
         px={{ base: "4", xl: "0" }}
         mt={{ base: "0px", md: "4" }}
-        position="absolute"
-        top="0"
-        left="50%"
-        transform="translateX(-50%)"
+        position="relative"
+        // top="0"
+        // left="50%"
+        // transform="translateX(-50%)"
       >
         <VStack
           // bgImage="/assets/new-home/dna-image.png"
