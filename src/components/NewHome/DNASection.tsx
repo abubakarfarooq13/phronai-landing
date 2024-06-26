@@ -85,7 +85,7 @@ export default function DNASection() {
       </Box>
       <Container
         maxW="1100px"
-        minH={{ md: "70vh", "2340px": "80vh" }}
+        minH={{ md: "70vh", "2340px": "60vh" }}
         px={{ base: "4", xl: "0" }}
         mt={{ base: "0px", md: "4" }}
         position="relative"
