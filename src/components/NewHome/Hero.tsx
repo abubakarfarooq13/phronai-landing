@@ -21,7 +21,6 @@ export default function Hero() {
       //   bgImage="/assets/new-home/hero-image.png"
       //   bgRepeat="no-repeat"
       //   bgPosition="right"
-      position="relative"
       overflowX="hidden"
       pb={{ base: "51px", lg: "250px" }}
     >
@@ -29,6 +28,8 @@ export default function Hero() {
         maxW={{ base: "1100px", "2340px": "1440px" }}
         pt={{ base: "130px", md: "100px" }}
         mb="100px"
+        position="relative"
+        px={{ base: "4", xl: "0" }}
       >
         <Stack
           direction={{ base: "column", lg: "row" }}
@@ -47,7 +48,13 @@ export default function Hero() {
             textAlign={{ base: "center", lg: "left" }}
           >
             <Text
-              fontSize={{ base: "3xl", sm: "4xl" }}
+              // fontSize={{ base: "3xl", sm: "4xl", "2340px": "60px" }}
+              fontSize={{
+                base: "3xl",
+                sm: "3xl",
+                lg: "45px",
+                "2340px": "60px",
+              }}
               lineHeight="130%"
               letterSpacing="1px"
               fontWeight={600}
@@ -60,7 +67,11 @@ export default function Hero() {
               AI-Powered Consensus. */}
               Proof of Learning
             </Text>
-            <Text mb="5" fontSize="17px" color="#ebebeb">
+            <Text
+              mb="5"
+              fontSize={{ base: "17px", "2340px": "18px" }}
+              color="#ebebeb"
+            >
               {/* Introducing the First Layer 0 and Layer 1 Blockchain. */}
               From Static to Dynamic with AI-Powered Consensus.{" "}
               <Box as="br" display={{ base: "none", md: "block" }} />
@@ -81,7 +92,8 @@ export default function Hero() {
           <Box
             position={{ base: "absolute" }}
             top="0"
-            right={{ lg: "-30%", xl: "0px", "2340px": "170px" }}
+            // right={{ lg: "-30%", xl: "0px", "2340px": "170px" }}
+            right={{ lg: "-30%" }}
             w={{ base: "200%", md: "120%", lg: "auto" }}
           >
             {/* <Image

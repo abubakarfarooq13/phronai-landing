@@ -143,7 +143,14 @@ export default function TrustedBySection() {
   return (
     <Box overflow="hidden">
       <Container maxW={{ base: "1100px", "2340px": "1440px" }} py="50px">
-        <Text fontSize="lg" as="h3" fontWeight={500} textAlign="center" mb="8">
+        <Text
+          fontSize={{ base: "lg", "2340px": "30px" }}
+          letterSpacing="2px"
+          as="h3"
+          fontWeight={700}
+          textAlign="center"
+          mb="8"
+        >
           Trusted By
         </Text>
 
@@ -163,10 +170,11 @@ export default function TrustedBySection() {
         </Marquee>
 
         <Text
-          fontSize="lg"
+          fontSize={{ base: "lg", "2340px": "30px" }}
+          letterSpacing="2px"
           as="h3"
           mt="20"
-          fontWeight={500}
+          fontWeight={700}
           textAlign="center"
           mb="8"
         >

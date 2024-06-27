@@ -243,7 +243,7 @@ export default function Footer() {
           {footerMenu.map((menu) => (
             <VStack
               spacing="4"
-              fontSize="sm"
+              fontSize={{ base: "sm", "2340px": "xl" }}
               display={{ base: "none", lg: "flex" }}
               align="start"
               key={menu.id}
@@ -289,7 +289,11 @@ export default function Footer() {
           </Box> */}
         </Stack>
 
-        <Text color="#909090" textAlign="center" fontSize="sm">
+        <Text
+          color="#909090"
+          textAlign="center"
+          fontSize={{ base: "sm", "2340px": "lg" }}
+        >
           {new Date().getFullYear()} &copy; PhronAI All rights reserved
         </Text>
       </Container>
@@ -321,10 +325,15 @@ export default function Footer() {
               justifyContent="center"
               bgColor={social.bgColor}
             >
-              <Text as="span" fontSize="lg">
+              <Text as="span" fontSize={{ base: "lg", "2340px": "xl" }}>
                 <social.icon />
               </Text>
-              <Text as="span" ml="2" fontSize="sm" fontWeight={500}>
+              <Text
+                as="span"
+                ml="2"
+                fontSize={{ base: "sm", "2340px": "lg" }}
+                fontWeight={500}
+              >
                 {social.label}
               </Text>
             </Text>

@@ -12,7 +12,7 @@ export default function Benchmarks() {
     >
       <Container maxW={{ base: "1100px", "2340px": "1440px" }}>
         <Text
-          fontSize="3xl"
+          fontSize={{ base: "3xl", "2340px": "40px" }}
           as="h2"
           fontWeight={500}
           textAlign="center"

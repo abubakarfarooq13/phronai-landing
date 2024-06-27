@@ -54,9 +54,16 @@ export default function SophiaAI() {
             spacing={{ base: "0px", xl: "20" }}
             justifyContent={{ base: "flex-start", "2340px": "center" }}
           >
-            <VStack align={{ base: "center", md: "start" }} maxW="250px">
+            <VStack
+              align={{ base: "center", md: "start" }}
+              maxW={{ base: "250px", "2340px": "350px" }}
+            >
               <HStack spacing="4">
-                <Text fontSize="3xl" fontWeight={500} as="h3">
+                <Text
+                  fontSize={{ base: "3xl", "2340px": "40px" }}
+                  fontWeight={500}
+                  as="h3"
+                >
                   Try Sophia
                 </Text>
                 <Image
@@ -66,7 +73,11 @@ export default function SophiaAI() {
                   height={70}
                 />
               </HStack>
-              <Text mb="4" fontSize="lg" color="#ebebeb">
+              <Text
+                mb="4"
+                fontSize={{ base: "lg", "2340px": "21px" }}
+                color="#ebebeb"
+              >
                 The first Dynamic Consensus
               </Text>
               {/* <Button
