@@ -35,7 +35,7 @@ export default function SophiaAI() {
       <Container
         maxW={{ base: "1100px", "2340px": "1440px" }}
         // mt={{ xl: "260px" }}
-        mb="50px"
+        mb={{ base: "50px", md: "20px", lg: "50px" }}
         zIndex={99}
         position="relative"
       >
@@ -207,7 +207,7 @@ export default function SophiaAI() {
         <Grid
           minH="290px"
           gridTemplateColumns={{ base: "repeat(1, 1fr)", md: "repeat(2, 1fr)" }}
-          gap={{ base: "40px", md: "70px" }}
+          gap={{ base: "40px", md: "20px", lg: "70px" }}
         >
           <GridItem
             w="full"

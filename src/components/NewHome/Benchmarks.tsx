@@ -6,7 +6,7 @@ export default function Benchmarks() {
   return (
     <Box
       pb="70px"
-      pt={{ base: "20px", lg: "70px" }}
+      pt={{ base: "20px", md: "50px", lg: "70px" }}
 
       // bgImage="linear-gradient(146deg, rgba(0,0,0,0) 50%, rgba(80,41,150,1) 100%)"
     >
@@ -27,6 +27,7 @@ export default function Benchmarks() {
           height={700}
           style={{
             borderRadius: "30px",
+            width: "100%",
           }}
         />
       </Container>

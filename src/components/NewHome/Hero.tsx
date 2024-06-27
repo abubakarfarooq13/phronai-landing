@@ -81,7 +81,7 @@ export default function Hero() {
           <Box
             position={{ base: "absolute" }}
             top="0"
-            right={{ lg: "-30%", xl: "0px" }}
+            right={{ lg: "-30%", xl: "0px", "2340px": "170px" }}
             w={{ base: "200%", md: "120%", lg: "auto" }}
           >
             {/* <Image

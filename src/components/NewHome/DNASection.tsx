@@ -57,6 +57,7 @@ export default function DNASection() {
         background: "#000",
         top: "0px",
         filter: "blur(100px)",
+        visibility: { base: "hidden", xl: "visible" },
       }}
     >
       <Box
@@ -81,7 +82,7 @@ export default function DNASection() {
         position="absolute"
         top={videoTop}
         width={{ base: "90%", "2340px": "60%" }}
-        right={{ base: "40px", "2340px": "267px" }}
+        right={{ base: "0px", xl: "40px", "2340px": "267px" }}
         display={{ base: "none", md: "block" }}
         autoPlay
         playsInline
@@ -97,6 +98,7 @@ export default function DNASection() {
           // sm: "50vh",
           // md: "40vh",
           // lg: "50vh",
+          md: "200px",
           xl: "285px",
           "2340px": "425px",
         }}
