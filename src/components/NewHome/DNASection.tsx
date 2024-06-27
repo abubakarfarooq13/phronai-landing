@@ -48,6 +48,16 @@ export default function DNASection() {
       // bgImage="linear-gradient(146deg, rgba(0,0,0,0) 50%, rgba(80,41,150,1) 100%)"
       position="relative"
       overflow="hidden"
+      _after={{
+        content: `''`,
+        position: "absolute",
+        right: "0px",
+        width: { base: "200px", "2340px": "400px" },
+        height: "100%",
+        background: "#000",
+        top: "0px",
+        filter: "blur(100px)",
+      }}
     >
       <Box
         as="video"
@@ -68,12 +78,10 @@ export default function DNASection() {
       </Box>
       <Box
         as="video"
-        style={{
-          // margin: "10px auto 20px auto",
-          position: "absolute",
-          top: videoTop,
-          width: "100%",
-        }}
+        position="absolute"
+        top={videoTop}
+        width={{ base: "90%", "2340px": "60%" }}
+        right={{ base: "40px", "2340px": "267px" }}
         display={{ base: "none", md: "block" }}
         autoPlay
         playsInline
@@ -84,13 +92,13 @@ export default function DNASection() {
         Your browser does not support the video tag.
       </Box>
       <Container
-        maxW="1100px"
+        maxW={{ base: "1100px", "2340px": "1440px" }}
         minH={{
           // sm: "50vh",
           // md: "40vh",
           // lg: "50vh",
-          xl: "50vh",
-          "2340px": "60vh",
+          xl: "285px",
+          "2340px": "425px",
         }}
         px={{ base: "4", xl: "0" }}
         mt={{ base: "0px", md: "4" }}

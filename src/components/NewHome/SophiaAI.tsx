@@ -33,7 +33,7 @@ export default function SophiaAI() {
       pb={{ base: "50px", lg: "100px" }}
     >
       <Container
-        maxW="1150px"
+        maxW={{ base: "1100px", "2340px": "1440px" }}
         // mt={{ xl: "260px" }}
         mb="50px"
         zIndex={99}
@@ -203,7 +203,7 @@ export default function SophiaAI() {
         </Box>
       </Container>
 
-      <Container maxW="1150px">
+      <Container maxW={{ base: "1100px", "2340px": "1440px" }}>
         <Grid
           minH="290px"
           gridTemplateColumns={{ base: "repeat(1, 1fr)", md: "repeat(2, 1fr)" }}
@@ -246,17 +246,27 @@ export default function SophiaAI() {
             borderColor="rgba(146,120,190,.6)"
             h="fit-content"
           >
-            <Image
-              src="/assets/new-home/phron-explorer.png"
-              alt="telemetery"
-              width={800}
-              height={800}
-              style={{
-                width: "100%",
-                borderRadius: "14px",
-              }}
-            />
-            <Box ml="8" mt="-50px" pb="22px">
+            <Text as="a" href="https://testnet.phronscan.io" target="_blank">
+              <Image
+                src="/assets/new-home/phron-explorer.png"
+                alt="telemetery"
+                width={800}
+                height={800}
+                style={{
+                  width: "100%",
+                  borderRadius: "14px",
+                }}
+              />
+            </Text>
+            <Box
+              as="a"
+              href="https://testnet.phronscan.io"
+              target="_blank"
+              ml="8"
+              mt="-50px"
+              pb="22px"
+              display="block"
+            >
               <Text fontSize="2xl" fontWeight={500}>
                 PhronScan
               </Text>

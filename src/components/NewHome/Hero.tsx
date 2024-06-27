@@ -25,7 +25,11 @@ export default function Hero() {
       overflowX="hidden"
       pb={{ base: "51px", lg: "250px" }}
     >
-      <Container maxW="1100px" pt={{ base: "130px", md: "100px" }} mb="100px">
+      <Container
+        maxW={{ base: "1100px", "2340px": "1440px" }}
+        pt={{ base: "130px", md: "100px" }}
+        mb="100px"
+      >
         <Stack
           direction={{ base: "column", lg: "row" }}
           justifyContent="space-between"

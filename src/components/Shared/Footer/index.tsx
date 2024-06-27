@@ -199,7 +199,10 @@ export default function Footer() {
       bgSize="cover"
       bgPos="bottom"
     >
-      <Container maxW="1100px" px={{ base: "4", xl: "4" }}>
+      <Container
+        maxW={{ base: "1100px", "2340px": "1440px" }}
+        px={{ base: "4", xl: "4" }}
+      >
         <Grid
           gridTemplateColumns={{ base: "repeat(2, 1fr)", md: "repeat(4, 1fr)" }}
           pb="10"
