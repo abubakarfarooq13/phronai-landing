@@ -58,11 +58,7 @@ export default function Home() {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <Box
-        pt={{ base: "70px", "1350px": "120px" }}
-        bgColor="#03020b"
-        color="#fff"
-      >
+      <Box pt={{ base: "70px", "1350px": "120px" }} bgColor="#000" color="#fff">
         <main style={interFont.style}>
           <CHome />
         </main>

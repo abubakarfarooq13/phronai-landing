@@ -50,7 +50,7 @@ export default function MobileDrawer(props: MobileDrawerProps) {
     <>
       <Drawer isOpen={isOpen} placement="right" onClose={onClose}>
         <DrawerOverlay />
-        <DrawerContent bgColor="#03020b" color="#fff">
+        <DrawerContent bgColor="#000" color="#fff">
           <DrawerCloseButton
             _focus={{
               boxShadow: "none",

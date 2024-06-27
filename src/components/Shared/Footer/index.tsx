@@ -192,7 +192,7 @@ const socialIcons = [
 export default function Footer() {
   const router = useRouter();
   return (
-    <>
+    <Box bg="#000" overflow="hidden">
       <Box
         as="footer"
         bgImage="/assets/footer-bg.png"
@@ -201,7 +201,6 @@ export default function Footer() {
         maxW={{ base: "full", "2340px": "1440px" }}
         position="relative"
         mx="auto"
-        overflow="hidden"
         _after={{
           content: `''`,
           position: "absolute",
@@ -209,8 +208,8 @@ export default function Footer() {
           width: { base: "200px", "2340px": "400px" },
           height: "100%",
           background: "#000",
-          top: "0px",
-          filter: { base: "blur(70px)", "2340px": "blur(120px)" },
+          top: router.pathname === "/" ? "0px" : "-100px",
+          filter: { base: "blur(70px)", "2340px": "blur(100px)" },
           visibility: { base: "hidden", xl: "visible" },
         }}
         pb="5"
@@ -364,6 +363,6 @@ export default function Footer() {
           </GridItem>
         ))}
       </Grid>
-    </>
+    </Box>
   );
 }

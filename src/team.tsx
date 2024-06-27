@@ -55,11 +55,7 @@ export default function Teams() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
-      <Box
-        pt={{ base: "70px", "1350px": "120px" }}
-        bgColor="#03020b"
-        color="#fff"
-      >
+      <Box pt={{ base: "70px", "1350px": "120px" }} bgColor="#000" color="#fff">
         <main id="phron-page" className={FormularFont.className}>
           <CTeam />
         </main>

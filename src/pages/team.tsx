@@ -59,7 +59,7 @@ export default function RoadMap() {
 
       {/* <Nav /> */}
 
-      <Box bgColor="#03020b" color="#fff">
+      <Box bgColor="#000" color="#fff">
         <main id="phron-page" style={interFont.style}>
           <CTeam />
         </main>

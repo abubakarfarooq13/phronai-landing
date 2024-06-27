@@ -69,7 +69,7 @@ export default function PhronZero() {
       </Head>
       {/* <LightNav /> */}
 
-      <Box bgColor="#03020b" color="#fff">
+      <Box bgColor="#000" color="#fff">
         <main id="phron-page" style={interFont.style}>
           {/* <CPhronZero /> */}
           <NewPhronZero />

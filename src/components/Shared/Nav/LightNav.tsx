@@ -89,7 +89,7 @@ export default function LightNav() {
       as="nav"
       pt="5"
       pb={{ base: "5", "1350px": "0" }}
-      bgColor="#03020b"
+      bgColor="#000"
       color="#fff"
       pos="fixed"
       top={0}
