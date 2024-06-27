@@ -51,15 +51,15 @@ export default function DNASection() {
       _after={{
         content: `''`,
         position: "absolute",
-        right: { base: "-200px", "2340px": "-230px" },
+        right: { base: "-100px", "2340px": "-230px" },
         width: { base: "200px", "2340px": "400px" },
         height: "100%",
         background: "#000",
         top: "0px",
-        filter: "blur(60px)",
+        filter: { base: "blur(70px)", "2340px": "blur(120px)" },
         visibility: { base: "hidden", xl: "visible" },
       }}
-      maxW={{ base: "1440px", "2340px": "1640px" }}
+      maxW={{ base: "1100px", "2340px": "1440px" }}
       mx="auto"
     >
       <Box
@@ -83,9 +83,9 @@ export default function DNASection() {
         as="video"
         position="absolute"
         top={videoTop}
-        // width={{ base: "90%", "2340px": "60%" }}
+        width="100%"
         right="0"
-        width={{ base: "100%", xl: "90%" }}
+        // width="100%"
         // right={{ base: "0px", xl: "40px", "2340px": "267px" }}
         display={{ base: "none", md: "block" }}
         autoPlay
@@ -103,7 +103,7 @@ export default function DNASection() {
           // md: "40vh",
           // lg: "50vh",
           md: "200px",
-          xl: "285px",
+          xl: "250px",
           "2340px": "500px",
         }}
         mt={{ base: "0px", md: "4" }}
@@ -130,7 +130,7 @@ export default function DNASection() {
           // transform="translateX(-50%)"
           top="0"
           zIndex={99}
-          mt={{ base: "0px", xl: "130px", "2340px": "0px" }}
+          mt={{ base: "0px", xl: "125px", "2340px": "0px" }}
         >
           <Image
             src="/assets/new-home/phron-zero-white.png"

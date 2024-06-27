@@ -23,6 +23,7 @@ import PhronZeroLogo from "../PhronZeroLogo";
 import { SiGitbook } from "react-icons/si";
 import { FaInstagram } from "react-icons/fa6";
 import { FaYoutube } from "react-icons/fa";
+import TrustedBySection from "@/components/NewHome/TrustedBySection";
 
 const footerMenu = [
   {
@@ -191,28 +192,88 @@ const socialIcons = [
 export default function Footer() {
   const router = useRouter();
   return (
-    <Box
-      as="footer"
-      pt={{ base: "10", xl: "40" }}
-      // pb="10"
-      bgImage="/assets/footer-bg.png"
-      bgSize="cover"
-      bgPos="bottom"
-    >
-      <Container
-        maxW={{ base: "1100px", "2340px": "1440px" }}
-        px={{ base: "4", xl: "4" }}
+    <>
+      <Box
+        as="footer"
+        bgImage="/assets/footer-bg.png"
+        bgSize="cover"
+        bgPos="top"
+        maxW={{ base: "full", "2340px": "1440px" }}
+        position="relative"
+        mx="auto"
+        overflow="hidden"
+        _after={{
+          content: `''`,
+          position: "absolute",
+          right: { base: "-100px", "2340px": "-230px" },
+          width: { base: "200px", "2340px": "400px" },
+          height: "100%",
+          background: "#000",
+          top: "0px",
+          filter: { base: "blur(70px)", "2340px": "blur(120px)" },
+          visibility: { base: "hidden", xl: "visible" },
+        }}
+        pb="5"
       >
-        <Grid
-          gridTemplateColumns={{ base: "repeat(2, 1fr)", md: "repeat(4, 1fr)" }}
-          pb="10"
-          display={{ base: "grid", lg: "none" }}
-          gap="5"
-          rowGap="16"
+        {router.pathname === "/" ? <TrustedBySection /> : null}
+        <Container
+          maxW={{ base: "1100px", "2340px": "1440px" }}
+          px={{ base: "4", xl: "4" }}
+          zIndex="99"
+          position="relative"
+          mt="10"
+          pt={{ base: "10", xl: "40" }}
         >
-          {footerMenu.map((menu) => (
-            <GridItem key={menu.id}>
-              <VStack spacing="4" fontSize="sm" align="center">
+          <Grid
+            gridTemplateColumns={{
+              base: "repeat(2, 1fr)",
+              md: "repeat(4, 1fr)",
+            }}
+            pb="10"
+            display={{ base: "grid", lg: "none" }}
+            gap="5"
+            rowGap="16"
+          >
+            {footerMenu.map((menu) => (
+              <GridItem key={menu.id}>
+                <VStack spacing="4" fontSize="sm" align="center">
+                  <Text fontWeight={500}>{menu.title}</Text>
+                  {menu.menu.map((item) => (
+                    <Text
+                      as={Link}
+                      _hover={{
+                        color: "#fff",
+                      }}
+                      color="#909090"
+                      key={item.id}
+                      href={item.href}
+                    >
+                      {item.label}
+                    </Text>
+                  ))}
+                </VStack>
+              </GridItem>
+            ))}
+          </Grid>
+          <Stack
+            pb={{ base: "10", lg: "32" }}
+            direction={{ base: "column", md: "row" }}
+            w="full"
+            justifyContent={{ base: "center" }}
+            alignItems={{ base: "center", md: "flex-start" }}
+            // flexWrap="wrap"
+            spacing="32"
+          >
+            {footerMenu.map((menu) => (
+              <VStack
+                spacing="4"
+                fontSize={{ base: "sm", "2340px": "xl" }}
+                display={{ base: "none", lg: "flex" }}
+                align="start"
+                key={menu.id}
+                w="full"
+                // minW="200px"
+              >
                 <Text fontWeight={500}>{menu.title}</Text>
                 {menu.menu.map((item) => (
                   <Text
@@ -228,58 +289,21 @@ export default function Footer() {
                   </Text>
                 ))}
               </VStack>
-            </GridItem>
-          ))}
-        </Grid>
-        <Stack
-          pb={{ base: "10", lg: "32" }}
-          direction={{ base: "column", md: "row" }}
-          w="full"
-          justifyContent={{ base: "center" }}
-          alignItems={{ base: "center", md: "flex-start" }}
-          // flexWrap="wrap"
-          spacing="32"
-        >
-          {footerMenu.map((menu) => (
-            <VStack
-              spacing="4"
-              fontSize={{ base: "sm", "2340px": "xl" }}
-              display={{ base: "none", lg: "flex" }}
-              align="start"
-              key={menu.id}
-              w="full"
-              // minW="200px"
-            >
-              <Text fontWeight={500}>{menu.title}</Text>
-              {menu.menu.map((item) => (
-                <Text
-                  as={Link}
-                  _hover={{
-                    color: "#fff",
-                  }}
-                  color="#909090"
-                  key={item.id}
-                  href={item.href}
-                >
-                  {item.label}
-                </Text>
-              ))}
-            </VStack>
-          ))}
+            ))}
 
-          <Button
-            variant="primary-purple"
-            rounded="full"
-            px="8"
-            fontFamily="inherit"
-            as="a"
-            href="mailto:support@phron.ai"
-            w="full"
-            maxW="140px"
-          >
-            Support
-          </Button>
-          {/* <Box>
+            <Button
+              variant="primary-purple"
+              rounded="full"
+              px="8"
+              fontFamily="inherit"
+              as="a"
+              href="mailto:support@phron.ai"
+              w="full"
+              maxW="140px"
+            >
+              Support
+            </Button>
+            {/* <Box>
             <Text color="#c1c1c1" display={{ base: "flex", md: "none" }}>
               &copy; {new Date().getFullYear()} Phron AI
             </Text>
@@ -287,18 +311,18 @@ export default function Footer() {
               All rights reserved.
             </Text>
           </Box> */}
-        </Stack>
+          </Stack>
 
-        <Text
-          color="#909090"
-          textAlign="center"
-          fontSize={{ base: "sm", "2340px": "lg" }}
-        >
-          {new Date().getFullYear()} &copy; PhronAI All rights reserved
-        </Text>
-      </Container>
+          <Text
+            color="#909090"
+            textAlign="center"
+            fontSize={{ base: "sm", "2340px": "lg" }}
+          >
+            {new Date().getFullYear()} &copy; PhronAI All rights reserved
+          </Text>
+        </Container>
+      </Box>
       <Grid
-        mt="5"
         gridTemplateColumns={{
           base: "repeat(2, 1fr)",
           sm: "repeat(3, 1fr)",
@@ -340,6 +364,6 @@ export default function Footer() {
           </GridItem>
         ))}
       </Grid>
-    </Box>
+    </>
   );
 }
