@@ -52,6 +52,7 @@ export default function SophiaAI() {
             direction={{ base: "column", md: "row" }}
             align="center"
             spacing={{ base: "0px", xl: "20" }}
+            justifyContent={{ base: "flex-start", "2340px": "center" }}
           >
             <VStack align={{ base: "center", md: "start" }} maxW="250px">
               <HStack spacing="4">
