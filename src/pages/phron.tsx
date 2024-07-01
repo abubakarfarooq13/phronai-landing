@@ -58,7 +58,7 @@ export default function Phron() {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <Box pt="30px" bgColor="#000" color="#fff">
+      <Box bgColor="#000" color="#fff">
         <main id="phron-page" style={interFont.style}>
           <CPhron />
         </main>
