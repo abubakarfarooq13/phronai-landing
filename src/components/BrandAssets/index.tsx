@@ -71,7 +71,7 @@ const tokenIcons = [
 export default function CBrandAssets() {
   return (
     <>
-      <Box pt="100px">
+      <Box pt={{ base: "100px", md: "150px" }}>
         <Text as="h1" id="logo" textAlign="center" fontSize="4xl" mb="7">
           Logo
         </Text>

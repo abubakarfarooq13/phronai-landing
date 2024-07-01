@@ -38,7 +38,6 @@ export default function Home() {
       </Head>
 
       <Box
-        pt={{ base: "60px" }}
         bgColor="#000"
         color="#fff"
         as="main"
