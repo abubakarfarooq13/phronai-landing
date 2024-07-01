@@ -44,7 +44,8 @@ export default function EcosystemHero() {
       }}
       pos="relative"
       overflow="hidden"
-      mt={{ base: "-100px", md: "0px" }}
+      mt={{ base: "-100px", sm: "0px" }}
+      pt={{ sm: "100px" }}
     >
       <CImage
         src="/assets/header-left-shadow.png"

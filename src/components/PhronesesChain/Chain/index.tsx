@@ -207,7 +207,7 @@ export default function Chain() {
         >
           <Stack
             direction={{ base: "column", md: "row" }}
-            pt={{ base: "40px", md: "100px" }}
+            pt={{ base: "40px", sm: "160px" }}
             justifyContent="space-between"
             spacing="20"
           >
