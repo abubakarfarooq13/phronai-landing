@@ -69,7 +69,7 @@ const footerMenu = [
       {
         id: 1,
         label: "Github",
-        href: "#",
+        href: "http://git.phron.ai/",
       },
       {
         id: 2,

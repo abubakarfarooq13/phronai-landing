@@ -65,7 +65,7 @@ export const buildMenuItems = [
   {
     id: 5,
     label: "Github",
-    href: "#",
+    href: "http://git.phron.ai/",
     icon: "/assets/new-home/github-icon.png",
   },
   {
