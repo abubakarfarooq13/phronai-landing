@@ -44,8 +44,7 @@ export default function EcosystemHero() {
       }}
       pos="relative"
       overflow="hidden"
-      mt={{ base: "-100px", sm: "0px" }}
-      pt={{ sm: "100px" }}
+      mt={{ base: "-100px", md: "60px" }}
     >
       <CImage
         src="/assets/header-left-shadow.png"
@@ -83,7 +82,7 @@ export default function EcosystemHero() {
         bgRepeat="no-repeat"
         h={{ base: "280px", sm: "400px", md: "550px" }}
         display={{ base: "flex", lg: "none" }}
-        mt={{ base: "200px" }}
+        mt={{ base: "130px", sm: "300px" }}
       >
         <Box
           className="infinit-move-1"
