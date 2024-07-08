@@ -103,6 +103,24 @@ export const team = [
     imageWidth: 180,
     imageHeight: 200,
   },
+  {
+    id: "07",
+    name: "Sander Görtjes",
+    role: "Advisor",
+    image: "/assets/team/sander-gortjes.png",
+    // linkedinUrl: "https://www.linkedin.com/in/rehanshamas/",
+    imageWidth: 240,
+    imageHeight: 200,
+  },
+  {
+    id: "07",
+    name: "Nikita Sachdev",
+    role: "Advisor",
+    image: "/assets/team/nikita-sachdev.png",
+    // linkedinUrl: "https://www.linkedin.com/in/rehanshamas/",
+    imageWidth: 240,
+    imageHeight: 200,
+  },
 ];
 
 export default function Team() {
