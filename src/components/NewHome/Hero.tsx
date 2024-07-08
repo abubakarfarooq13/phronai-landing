@@ -29,7 +29,6 @@ export default function Hero() {
         pt={{ base: "130px", md: "100px" }}
         mb="100px"
         position="relative"
-        px={{ base: "4", xl: "0" }}
       >
         <Stack
           direction={{ base: "column", lg: "row" }}
