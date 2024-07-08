@@ -50,15 +50,6 @@ export const team = [
   },
   {
     id: "07",
-    name: "Sander Görtjes",
-    role: "Advisor",
-    image: "/assets/team/sander-gortjes.png",
-    linkedinUrl: "https://www.linkedin.com/in/sandergortjes/",
-    imageWidth: 240,
-    imageHeight: 200,
-  },
-  {
-    id: "07",
     name: "Nikita Sachdev",
     role: "Advisor",
     image: "/assets/team/nikita-sachdev.png",
@@ -83,6 +74,15 @@ export const team = [
     linkedinUrl: "https://www.linkedin.com/in/adelelmessiry/",
     imageWidth: 180,
     imageHeight: 220,
+  },
+  {
+    id: "07",
+    name: "Sander Görtjes",
+    role: "Advisor",
+    image: "/assets/team/sander-gortjes.png",
+    linkedinUrl: "https://www.linkedin.com/in/sandergortjes/",
+    imageWidth: 240,
+    imageHeight: 200,
   },
   {
     id: "03",
