@@ -181,13 +181,16 @@ export default function TrustedBySection() {
           Audited By
         </Text>
 
-        <HStack spacing="16" justifyContent="center">
+        <HStack spacing="14" justifyContent="center">
           <Image
-            src="/assets/new-home/hacken-logo.png"
+            src="/assets/new-home/Hacken.png"
             alt="solid proof"
-            width={60}
-            height={45}
+            width={90}
+            height={55}
             className="logo-image"
+            style={{
+              maxWidth: "70px",
+            }}
           />
           <Image
             src="/assets/partners/solid-proof.png"
