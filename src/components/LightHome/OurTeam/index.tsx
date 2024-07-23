@@ -172,19 +172,20 @@ export default function OurTeam() {
         </Fade>
 
         <Fade bottom>
-          <Wrap justify="center" spacing="6">
+          <Wrap justify="center" spacing="6" w="full">
             {team.map((member) => (
               <WrapItem
                 key={member.id}
                 display={member.display}
-                maxW={{ base: "180px", xl: "240px" }}
+                maxW={{ base: "full", xl: "240px" }}
               >
-                <Box>
+                <Box w="full">
                   <Image
                     src={member.image}
                     alt={member.name + " image"}
                     width={member.imageWidth}
                     height={member.imageWidth}
+                    style={{ width: "100%" }}
                   />
                   <Text fontSize="16px" fontWeight={600} pt="4">
                     {member.name}
