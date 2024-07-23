@@ -177,7 +177,7 @@ export default function OurTeam() {
               <WrapItem
                 key={member.id}
                 display={member.display}
-                maxW={{ base: "full", xl: "240px" }}
+                maxW={{ base: "140px", xl: "240px" }}
               >
                 <Box w="full">
                   <Image
