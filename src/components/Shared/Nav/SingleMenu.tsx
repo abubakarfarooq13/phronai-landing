@@ -10,7 +10,7 @@ import {
 import { useRouter } from "next/router";
 import { IoIosArrowDown } from "react-icons/io";
 import router from "next/router";
-import { navItems } from ".";
+import { navItems } from "@/constant/nav";
 
 interface SingleMenuProps {
   menuItems: {
