@@ -41,7 +41,12 @@ export default function FooterLighter() {
         // }}
         pb="5"
       >
-        <Stack direction="row" justifyContent="flex-end" mt="10">
+        <Stack
+          direction="row"
+          justifyContent={{ base: "center", md: "flex-end" }}
+          mt="10"
+          px="4"
+        >
           {socialIcons.map((social) => (
             <GridItem key={social.id}>
               <Text
@@ -182,7 +187,7 @@ export default function FooterLighter() {
           <Stack
             direction="row"
             flexWrap="wrap"
-            justifyContent="space-between"
+            justifyContent={{ base: "center", md: "space-between" }}
             alignItems="center"
           >
             <DarkLogo />

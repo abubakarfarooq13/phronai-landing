@@ -139,65 +139,78 @@ const logos = [
   },
 ];
 
+const Fade = require("react-reveal/Fade");
+
 export default function TrustedBySection() {
   return (
     <Box overflow="hidden">
       <Container maxW="1240px" py="50px">
-        <Text
-          fontSize={{ base: "lg", "2340px": "30px" }}
-          letterSpacing="2px"
-          as="h3"
-          fontWeight={700}
-          textAlign="center"
-          mb="8"
-        >
-          Trusted By
-        </Text>
+        <Fade bottom>
+          <Text
+            fontSize={{ base: "lg", "2340px": "30px" }}
+            letterSpacing="2px"
+            as="h3"
+            fontWeight={700}
+            textAlign="center"
+            mb="8"
+          >
+            Trusted By
+          </Text>
+        </Fade>
 
         <Wrap spacing="10" justify="center">
-          {logos.map((logo) => (
-            <WrapItem key={logo.id}>
-              <Image
-                src={logo.logoUrl}
-                alt={logo.alt}
-                width={logo.width}
-                height={logo.height}
-                // className="logo-image"
-              />
-            </WrapItem>
+          {logos.map((logo, i) => (
+            <Fade bottom key={logo.id} delay={i * 100}>
+              <WrapItem>
+                <Image
+                  src={logo.logoUrl}
+                  alt={logo.alt}
+                  width={logo.width}
+                  height={logo.height}
+                  // className="logo-image"
+                />
+              </WrapItem>
+            </Fade>
           ))}
         </Wrap>
 
-        <Text
-          fontSize={{ base: "lg", "2340px": "30px" }}
-          letterSpacing="2px"
-          as="h3"
-          mt="20"
-          fontWeight={700}
-          textAlign="center"
-          mb="8"
-        >
-          Audited By
-        </Text>
+        <Fade bottom>
+          <Text
+            fontSize={{ base: "lg", "2340px": "30px" }}
+            letterSpacing="2px"
+            as="h3"
+            mt="20"
+            fontWeight={700}
+            textAlign="center"
+            mb="8"
+          >
+            Audited By
+          </Text>
+        </Fade>
 
         <HStack spacing="14" justifyContent="center">
-          <Image
-            src="/assets/new-home/Hacken.png"
-            alt="solid proof"
-            width={90}
-            height={55}
-            // className="logo-image"
-            style={{
-              maxWidth: "70px",
-            }}
-          />
-          <Image
-            src="/assets/partners/solid-proof-black.png"
-            alt="solid proof"
-            width={65}
-            height={45}
-            // className="logo-image"
-          />
+          <Fade bottom>
+            <Image
+              src="/assets/new-home/Hacken.png"
+              alt="solid proof"
+              width={90}
+              height={55}
+              // className="logo-image"
+              style={{
+                maxWidth: "70px",
+              }}
+            />
+          </Fade>
+
+          <Fade bottom>
+            <Image
+              src="/assets/partners/solid-proof-black.png"
+              alt="solid proof"
+              width={65}
+              height={45}
+              // className="logo-image"
+            />
+          </Fade>
         </HStack>
       </Container>
     </Box>

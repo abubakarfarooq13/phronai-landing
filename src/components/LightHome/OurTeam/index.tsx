@@ -133,6 +133,8 @@ export const team = [
   },
 ];
 
+const Fade = require("react-reveal/Fade");
+
 export default function OurTeam() {
   return (
     <Box
@@ -140,61 +142,69 @@ export default function OurTeam() {
       bgImage="linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(232,239,252,1) 20%)"
     >
       <Container maxW="1240px">
-        <Text as="h2" fontSize="3xl" textAlign="center" pb="50px">
-          Our Team
-        </Text>
-
-        <Wrap justify="center" spacing="6" mb="6">
-          {topBar.map((member) => (
-            <WrapItem key={member.id} display={member.display}>
-              <Box>
-                <Image
-                  src={member.image}
-                  alt={member.name + " image"}
-                  width={member.imageWidth}
-                  height={member.imageWidth}
-                />
-                <Text fontSize="16px" fontWeight={600} pt="4">
-                  {member.name}
-                </Text>
-                <Text fontSize="14px" color="#8a8a8a" pt="2">
-                  {member.role}
-                </Text>
-              </Box>
-            </WrapItem>
-          ))}
-        </Wrap>
-
-        <Wrap justify="center" spacing="6">
-          {team.map((member) => (
-            <WrapItem
-              key={member.id}
-              display={member.display}
-              maxW={{ base: "180px", xl: "240px" }}
-            >
-              <Box>
-                <Image
-                  src={member.image}
-                  alt={member.name + " image"}
-                  width={member.imageWidth}
-                  height={member.imageWidth}
-                />
-                <Text fontSize="16px" fontWeight={600} pt="4">
-                  {member.name}
-                </Text>
-                <Text fontSize="14px" color="#8a8a8a">
-                  {member.role}
-                </Text>
-              </Box>
-            </WrapItem>
-          ))}
-        </Wrap>
-
-        <VStack mt="10">
-          <Text as={Link} href="/team" className="btn-grad">
-            Meet all members
+        <Fade bottom>
+          <Text as="h2" fontSize="3xl" textAlign="center" pb="50px">
+            Our Team
           </Text>
-        </VStack>
+        </Fade>
+
+        <Fade bottom>
+          <Wrap justify="center" spacing="6" mb="6">
+            {topBar.map((member) => (
+              <WrapItem key={member.id} display={member.display}>
+                <Box>
+                  <Image
+                    src={member.image}
+                    alt={member.name + " image"}
+                    width={member.imageWidth}
+                    height={member.imageWidth}
+                  />
+                  <Text fontSize="16px" fontWeight={600} pt="4">
+                    {member.name}
+                  </Text>
+                  <Text fontSize="14px" color="#8a8a8a" pt="1">
+                    {member.role}
+                  </Text>
+                </Box>
+              </WrapItem>
+            ))}
+          </Wrap>
+        </Fade>
+
+        <Fade bottom>
+          <Wrap justify="center" spacing="6">
+            {team.map((member) => (
+              <WrapItem
+                key={member.id}
+                display={member.display}
+                maxW={{ base: "180px", xl: "240px" }}
+              >
+                <Box>
+                  <Image
+                    src={member.image}
+                    alt={member.name + " image"}
+                    width={member.imageWidth}
+                    height={member.imageWidth}
+                  />
+                  <Text fontSize="16px" fontWeight={600} pt="4">
+                    {member.name}
+                  </Text>
+                  <Text fontSize="14px" color="#8a8a8a">
+                    {member.role}
+                  </Text>
+                </Box>
+              </WrapItem>
+            ))}
+          </Wrap>
+        </Fade>
+
+        <Fade bottom>
+          <VStack mt="10">
+            <Text as={Link} href="/team" className="btn-grad">
+              Meet all members
+            </Text>
+          </VStack>
+        </Fade>
       </Container>
     </Box>
   );

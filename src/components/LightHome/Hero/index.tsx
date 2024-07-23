@@ -15,7 +15,8 @@ import { GoArrowRight } from "react-icons/go";
 import ConnectWalletButton from "../../Shared/ConnectWalletButton";
 
 // import { Fade, Slide } from "react-awesome-reveal";
-// const Fade = require("react-reveal/Fade");
+
+const Fade = require("react-reveal/Fade");
 
 const stats = [
   {
@@ -69,102 +70,108 @@ export default function Hero() {
             textAlign={{ base: "center", lg: "left" }}
             spacing="4"
           >
-            <Text
-              fontSize="2xl"
-              lineHeight="130%"
-              letterSpacing="1px"
-              fontWeight={600}
-              // mb="2"
-              ml="1"
-            >
-              Proof of Learning
-            </Text>
-            <Text
-              // fontSize={{ base: "3xl", sm: "4xl", "2340px": "60px" }}
-              fontSize={{
-                base: "3xl",
-                sm: "3xl",
-                lg: "45px",
-                "2340px": "60px",
-              }}
-              lineHeight="115%"
-              letterSpacing="1px"
-              fontWeight={600}
-              // mb="2"
-              as="h1"
-            >
-              {/* From Static to Dynamic{" "}
+            <Fade left>
+              <Text
+                fontSize="2xl"
+                lineHeight="130%"
+                letterSpacing="1px"
+                fontWeight={600}
+                // mb="2"
+                ml="1"
+              >
+                Proof of Learning
+              </Text>
+              <Text
+                // fontSize={{ base: "3xl", sm: "4xl", "2340px": "60px" }}
+                fontSize={{
+                  base: "3xl",
+                  sm: "3xl",
+                  lg: "45px",
+                  "2340px": "60px",
+                }}
+                lineHeight="115%"
+                letterSpacing="1px"
+                fontWeight={600}
+                // mb="2"
+                as="h1"
+              >
+                {/* From Static to Dynamic{" "}
               <Box as="br" display={{ base: "none", md: "block" }} /> with
               AI-Powered Consensus. */}
-              Build your Layer 1{" "}
-              <Box as="br" display={{ base: "none", xl: "block" }} /> in minutes
-            </Text>
-            <Text mb="5" fontSize={{ base: "17px", "2340px": "18px" }}>
-              From Static to Dynamic with the first{" "}
-              <Box as="br" display={{ base: "none", md: "block" }} /> Layer 0
-              and Layer 1 AI-Powered Consensus
-            </Text>
+                Build your Layer 1{" "}
+                <Box as="br" display={{ base: "none", xl: "block" }} /> in
+                minutes
+              </Text>
+              <Text mb="5" fontSize={{ base: "17px", "2340px": "18px" }}>
+                From Static to Dynamic with the first{" "}
+                <Box as="br" display={{ base: "none", md: "block" }} /> Layer 0
+                and Layer 1 AI-Powered Consensus
+              </Text>
 
-            <Box>
-              <ConnectWalletButton
-                label="Try Sophia AI consensus"
-                gradientButton
-              />
-            </Box>
+              <Box>
+                <ConnectWalletButton
+                  label="Try Sophia AI consensus"
+                  gradientButton
+                />
+              </Box>
+            </Fade>
           </VStack>
-          <Box position="relative">
-            <Image
-              src="/assets/light-theme-home/sophia-robot.png"
-              alt="sophia robot image"
-              width={800}
-              height={754}
-              style={
-                {
-                  // marginLeft: "-14px",
+
+          <Fade right>
+            <Box position="relative" mt="10">
+              <Image
+                src="/assets/light-theme-home/sophia-robot.png"
+                alt="sophia robot image"
+                width={800}
+                height={754}
+                style={
+                  {
+                    // marginLeft: "-14px",
+                  }
                 }
-              }
-            />
-            <Text
-              pos="absolute"
-              top="40%"
-              left="0%"
-              bgColor="#fff"
-              px="5"
-              py="2"
-              rounded="full"
-              fontSize="14px"
-              lineHeight="110%"
-            >
-              Proof of Learning
-            </Text>
-            <Text
-              pos="absolute"
-              right="10%"
-              top="10%"
-              bgColor="#fff"
-              px="5"
-              py="2"
-              rounded="full"
-              fontSize="14px"
-              lineHeight="110%"
-            >
-              Dynamic Node <br />
-              Ranking LTFM Protocol
-            </Text>
-            <Text
-              pos="absolute"
-              top="50%"
-              right="30%"
-              bgColor="#fff"
-              px="5"
-              py="2"
-              rounded="full"
-              fontSize="14px"
-              lineHeight="110%"
-            >
-              EVM
-            </Text>
-          </Box>
+              />
+              <Text
+                pos="absolute"
+                top="40%"
+                left="0%"
+                bgColor="#fff"
+                px="5"
+                py="2"
+                rounded="full"
+                fontSize="14px"
+                lineHeight="110%"
+              >
+                Proof of Learning
+              </Text>
+              <Text
+                pos="absolute"
+                right="10%"
+                top="10%"
+                bgColor="#fff"
+                px="5"
+                py="2"
+                rounded="full"
+                fontSize="14px"
+                lineHeight="110%"
+              >
+                Dynamic Node <br />
+                Ranking LTFM Protocol
+              </Text>
+              <Text
+                pos="absolute"
+                top="50%"
+                right="30%"
+                bgColor="#fff"
+                px="5"
+                py="2"
+                rounded="full"
+                fontSize="14px"
+                lineHeight="110%"
+              >
+                EVM
+              </Text>
+            </Box>
+          </Fade>
         </Stack>
 
         <Grid
@@ -175,10 +182,12 @@ export default function Hero() {
           }}
           w="full"
           gap="4"
-          position={{ md: "absolute" }}
+          marginTop="18px"
+          zIndex={1}
+          position={{ base: "relative", md: "absolute" }}
           bottom="30px"
           maxW="1240px"
-          px="4"
+          px={{ base: "0", md: "4" }}
           left={{ md: "50%" }}
           transform={{ md: "translateX(-50%)" }}
         >
@@ -191,36 +200,43 @@ export default function Hero() {
                 lg: 1,
               }}
             >
-              <HStack
-                bgColor="#fff"
-                px="6"
-                py="4"
-                rounded="xl"
-                spacing="4"
-                w="full"
-                maxW={{
-                  base: "full",
-                  md: `${i === 2 ? "50%" : "full"}`,
-                  lg: "full",
-                }}
-                mx="auto"
-              >
-                <Box bgColor="#d8ddfd" px="3" py="2" rounded="lg">
-                  <Image src={stat.iconSrc} alt="box" width={20} height={20} />
-                </Box>
-                <Box>
-                  <Text fontSize="2xl" lineHeight="110%" fontWeight={700}>
-                    {stat.label}
-                  </Text>
-                  <Text
-                    textTransform="uppercase"
-                    fontSize="12px"
-                    color="#9a9a9a"
-                  >
-                    {stat.description}
-                  </Text>
-                </Box>
-              </HStack>
+              <Fade delay={i * 300} bottom>
+                <HStack
+                  bgColor="#fff"
+                  px="6"
+                  py="4"
+                  rounded="xl"
+                  spacing="4"
+                  w="full"
+                  maxW={{
+                    base: "full",
+                    md: `${i === 2 ? "50%" : "full"}`,
+                    lg: "full",
+                  }}
+                  mx="auto"
+                >
+                  <Box bgColor="#d8ddfd" px="3" py="2" rounded="lg">
+                    <Image
+                      src={stat.iconSrc}
+                      alt="box"
+                      width={20}
+                      height={20}
+                    />
+                  </Box>
+                  <Box>
+                    <Text fontSize="2xl" lineHeight="110%" fontWeight={700}>
+                      {stat.label}
+                    </Text>
+                    <Text
+                      textTransform="uppercase"
+                      fontSize="12px"
+                      color="#9a9a9a"
+                    >
+                      {stat.description}
+                    </Text>
+                  </Box>
+                </HStack>
+              </Fade>
             </GridItem>
           ))}
         </Grid>

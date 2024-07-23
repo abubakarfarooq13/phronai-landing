@@ -2,6 +2,8 @@ import React from "react";
 import { Box, Container, Grid, GridItem, HStack, Text } from "@chakra-ui/react";
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
 
+const Fade = require("react-reveal/Fade");
+
 export default function ExploreEcosystem() {
   return (
     <Container maxW="1240px" py="50px">
@@ -24,7 +26,7 @@ export default function ExploreEcosystem() {
             bgPos={{ base: "left", lg: "center" }}
             position="relative"
             py={{ base: "10px", md: "30px" }}
-            minH="150px"
+            minH="320px"
             px="30px"
             rounded="20px"
           >
@@ -49,7 +51,8 @@ export default function ExploreEcosystem() {
             </HStack>
           </Box>
         </GridItem>
-        <GridItem bgColor="#DEC6FF" rounded="20px">
+
+        <GridItem bgColor="#EFF3F7" rounded="20px">
           <Box
             bgImage="/assets/light-theme-home/layers-bg.png"
             w="full"
@@ -59,6 +62,7 @@ export default function ExploreEcosystem() {
             position="relative"
             p="30px"
             rounded="20px"
+            minH="200px"
           >
             <Text fontSize="4xl" lineHeight="130%">
               Layer 0 / Layer 1
@@ -78,7 +82,8 @@ export default function ExploreEcosystem() {
             </HStack>
           </Box>
         </GridItem>
-        <GridItem bgColor="#DEC6FF" rounded="20px">
+
+        <GridItem bgColor="#EFE4FF" rounded="20px">
           <Box
             bgImage="/assets/light-theme-home/phronscan-bg.png"
             w="full"
@@ -88,7 +93,7 @@ export default function ExploreEcosystem() {
             position="relative"
             px="30px"
             py="10px"
-            minH="150px"
+            minH="250px"
             rounded="20px"
           >
             <Text fontSize="4xl">PhronScan</Text>
@@ -107,6 +112,7 @@ export default function ExploreEcosystem() {
             </HStack>
           </Box>
         </GridItem>
+
         <GridItem colSpan={{ base: 1, md: 3 }} bgColor="#DEC6FF" rounded="20px">
           <Box
             bgImage="/assets/light-theme-home/ai-staking-bg.png"
@@ -116,6 +122,7 @@ export default function ExploreEcosystem() {
             bgPos={{ base: "right", lg: "center" }}
             position="relative"
             p="30px"
+            minH="250px"
             rounded="20px"
           >
             <Text fontSize="4xl" lineHeight="120%">
