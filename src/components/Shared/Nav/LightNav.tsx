@@ -274,17 +274,17 @@ export default function Nav() {
         labelsRef.current.style.fontSize = "19px";
       }
 
-      // if (currentScroll > 0 && connectButtonRef.current) {
-      //   connectButtonRef.current.style.height = "40px";
-      //   connectButtonRef.current.style.maxWidth = "190px";
-      //   connectButtonRef.current.style.fontSize = "16px";
-      // }
+      if (currentScroll > 0 && connectButtonRef.current) {
+        // connectButtonRef.current.style.height = "40px";
+        connectButtonRef.current.style.maxWidth = "190px";
+        connectButtonRef.current.style.fontSize = "16px";
+      }
 
-      // if (currentScroll <= 0 && connectButtonRef.current) {
-      //   connectButtonRef.current.style.height = "50px";
-      //   connectButtonRef.current.style.maxWidth = "240px";
-      //   connectButtonRef.current.style.fontSize = "16px";
-      // }
+      if (currentScroll <= 0 && connectButtonRef.current) {
+        // connectButtonRef.current.style.height = "50px";
+        connectButtonRef.current.style.maxWidth = "240px";
+        connectButtonRef.current.style.fontSize = "16px";
+      }
     });
   }, []);
 
@@ -305,16 +305,16 @@ export default function Nav() {
         ref={navRef}
         pt={{ base: "5", xl: "0" }}
         pb={{ base: "5", xl: "0" }}
-        // bgColor="#05010c"
         mx="auto"
         color="#000"
         w="full"
         transition="all 300ms ease-in-out"
         position="relative"
-        px="6"
+        // px="6"
+        px="4"
         maxW="1240px"
       >
-        <Container maxW="1240px" px={{ base: "4", xl: "0" }}>
+        <>
           <HStack justifyContent="space-between">
             <Box ref={logoRef} transition="all .3s">
               {router.pathname === "/phronzero" ? <PhronZeroLogo /> : <Logo />}
@@ -419,9 +419,6 @@ export default function Nav() {
               <Box
                 // maxW="200px"
                 ref={connectButtonRef}
-                transition="all .3s"
-                h="50px"
-                w="full"
               >
                 <ConnectWalletButton
                   height={"inherit"}
@@ -477,7 +474,7 @@ export default function Nav() {
               <CgMenuRightAlt size="30px" />
             </Box>
           </HStack>
-        </Container>
+        </>
       </Box>
     </Box>
   );
