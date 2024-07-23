@@ -274,17 +274,17 @@ export default function Nav() {
         labelsRef.current.style.fontSize = "19px";
       }
 
-      if (currentScroll > 0 && connectButtonRef.current) {
-        connectButtonRef.current.style.height = "40px";
-        connectButtonRef.current.style.maxWidth = "190px";
-        connectButtonRef.current.style.fontSize = "16px";
-      }
+      // if (currentScroll > 0 && connectButtonRef.current) {
+      //   connectButtonRef.current.style.height = "40px";
+      //   connectButtonRef.current.style.maxWidth = "190px";
+      //   connectButtonRef.current.style.fontSize = "16px";
+      // }
 
-      if (currentScroll <= 0 && connectButtonRef.current) {
-        connectButtonRef.current.style.height = "50px";
-        connectButtonRef.current.style.maxWidth = "240px";
-        connectButtonRef.current.style.fontSize = "16px";
-      }
+      // if (currentScroll <= 0 && connectButtonRef.current) {
+      //   connectButtonRef.current.style.height = "50px";
+      //   connectButtonRef.current.style.maxWidth = "240px";
+      //   connectButtonRef.current.style.fontSize = "16px";
+      // }
     });
   }, []);
 
@@ -297,6 +297,7 @@ export default function Nav() {
       left={0}
       zIndex={999}
       w="full"
+      bgColor="#fff"
     >
       <AlertBanner ref={alertBannerRef} />
       <Box
@@ -305,12 +306,13 @@ export default function Nav() {
         pt={{ base: "5", xl: "0" }}
         pb={{ base: "5", xl: "0" }}
         // bgColor="#05010c"
-        bgColor="#fff"
+        mx="auto"
         color="#000"
         w="full"
         transition="all 300ms ease-in-out"
         position="relative"
-        px="4"
+        px="6"
+        maxW="1240px"
       >
         <Container maxW="1240px" px={{ base: "4", xl: "0" }}>
           <HStack justifyContent="space-between">
@@ -415,7 +417,7 @@ export default function Nav() {
               justifyContent="flex-end"
             >
               <Box
-                maxW="200px"
+                // maxW="200px"
                 ref={connectButtonRef}
                 transition="all .3s"
                 h="50px"

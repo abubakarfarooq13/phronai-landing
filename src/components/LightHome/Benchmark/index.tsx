@@ -32,7 +32,7 @@ export default function Benchmark() {
           }}
         /> */}
         <Fade bottom>
-          <VStack spacing="4">
+          <VStack spacing="4" display={{ base: "none", md: "flex" }}>
             <Image
               src="/assets/light-theme-home/benchmark-heading.png"
               alt="benchmark table"
@@ -61,6 +61,20 @@ export default function Benchmark() {
                 margin: "0 auto",
                 borderRadius: "20px",
               }}
+            />
+          </VStack>
+
+          <VStack
+            display={{
+              base: "flex",
+              md: "none",
+            }}
+          >
+            <Image
+              src="/assets/light-theme-home/mobile-benchmark.png"
+              alt="mobile benchmark"
+              width={1000}
+              height={1715}
             />
           </VStack>
         </Fade>
