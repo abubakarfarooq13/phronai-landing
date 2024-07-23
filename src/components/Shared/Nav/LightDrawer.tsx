@@ -23,7 +23,7 @@ import {
 import Link from "next/link";
 import { useRouter } from "next/router";
 import DarkLogo from "../Logo/DarkLogo";
-import { navItems, newsItems } from ".";
+import { navItems, newsItems } from "@/constant/nav";
 import { IoIosArrowDown } from "react-icons/io";
 
 interface MobileDrawerProps {

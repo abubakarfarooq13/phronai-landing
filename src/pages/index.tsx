@@ -3,6 +3,7 @@ import { Box } from "@chakra-ui/react";
 import Script from "next/script";
 import NewHome from "@/components/NewHome";
 import { interFont, plusJakartaSans } from "@/components/fonts";
+import LightHome from "@/components/LightHome";
 
 export default function Home() {
   return (
@@ -35,13 +36,13 @@ export default function Home() {
       </Head>
       <Box
         // pt={{ base: "70px", "1350px": "80px" }}
-        bgColor="#000"
-        color="#fff"
+        bgColor="#fff"
+        color="#000"
         as="main"
         minH="100vh"
         style={interFont.style}
       >
-        <NewHome />
+        <LightHome />
       </Box>
     </>
   );

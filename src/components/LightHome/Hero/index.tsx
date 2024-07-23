@@ -1,0 +1,195 @@
+import React from "react";
+import {
+  Box,
+  VStack,
+  Text,
+  Container,
+  HStack,
+  Stack,
+  Button,
+} from "@chakra-ui/react";
+import Image from "next/image";
+import { GoArrowRight } from "react-icons/go";
+import ConnectWalletButton from "../../Shared/ConnectWalletButton";
+
+// import { Fade, Slide } from "react-awesome-reveal";
+// const Fade = require("react-reveal/Fade");
+
+const stats = [
+  {
+    id: 1,
+    iconSrc: "/assets/light-theme-home/box.png",
+    label: "31k",
+    description: "Transactions Per Second",
+  },
+  {
+    id: 2,
+    iconSrc: "/assets/light-theme-home/clock.png",
+    label: "0.9",
+    description: "Faster Than Ever Before",
+  },
+  {
+    id: 3,
+    iconSrc: "/assets/light-theme-home/dollar-sign.png",
+    label: "0.0001",
+    description: "Low Cost Forever",
+  },
+];
+
+export default function Hero() {
+  return (
+    <Box
+      bgImage="/assets/light-theme-home/hero-background-cropped.png"
+      bgRepeat="no-repeat"
+      bgPosition="bottom"
+      overflowX="hidden"
+      position="relative"
+    >
+      <Container maxW="1240px" pt="100px" position="relative">
+        <Stack
+          direction={{ base: "column", lg: "row" }}
+          justifyContent="space-between"
+          alignItems="flex-start"
+          spacing={{ base: "0", lg: "10" }}
+          w="full"
+        >
+          <VStack
+            zIndex={1}
+            pt={{ md: "20px", lg: "100px" }}
+            w={{ base: "full", lg: "60%" }}
+            align={{ base: "center", lg: "start" }}
+            // pos="relative"
+            minH="200px"
+            textAlign={{ base: "center", lg: "left" }}
+            spacing="4"
+          >
+            <Text
+              fontSize="2xl"
+              lineHeight="130%"
+              letterSpacing="1px"
+              fontWeight={600}
+              // mb="2"
+              ml="1"
+            >
+              Proof of Learning
+            </Text>
+            <Text
+              // fontSize={{ base: "3xl", sm: "4xl", "2340px": "60px" }}
+              fontSize={{
+                base: "3xl",
+                sm: "3xl",
+                lg: "45px",
+                "2340px": "60px",
+              }}
+              lineHeight="105%"
+              letterSpacing="1px"
+              fontWeight={600}
+              // mb="2"
+              as="h1"
+            >
+              {/* From Static to Dynamic{" "}
+              <Box as="br" display={{ base: "none", md: "block" }} /> with
+              AI-Powered Consensus. */}
+              Build your Layer 1 <br /> in minutes
+            </Text>
+            <Text mb="5" fontSize={{ base: "17px", "2340px": "18px" }}>
+              From Static to Dynamic with the first{" "}
+              <Box as="br" display={{ base: "none", md: "block" }} /> Layer 0
+              and Layer 1 AI-Powered Consensus
+            </Text>
+
+            <Box>
+              <ConnectWalletButton
+                label="Try Sophia AI consensus"
+                gradientButton
+              />
+            </Box>
+          </VStack>
+          <Box position="relative">
+            <Image
+              src="/assets/light-theme-home/sophia-robot.png"
+              alt="sophia robot image"
+              width={800}
+              height={754}
+              style={{
+                marginLeft: "-14px",
+              }}
+            />
+            <Text
+              pos="absolute"
+              top="40%"
+              left="0%"
+              bgColor="#fff"
+              px="5"
+              py="2"
+              rounded="full"
+              fontSize="14px"
+              lineHeight="110%"
+            >
+              Proof of Learning
+            </Text>
+            <Text
+              pos="absolute"
+              right="10%"
+              top="10%"
+              bgColor="#fff"
+              px="5"
+              py="2"
+              rounded="full"
+              fontSize="14px"
+              lineHeight="110%"
+            >
+              Dynamic Node <br />
+              Ranking LTFM Protocol
+            </Text>
+            <Text
+              pos="absolute"
+              top="50%"
+              right="30%"
+              bgColor="#fff"
+              px="5"
+              py="2"
+              rounded="full"
+              fontSize="14px"
+              lineHeight="110%"
+            >
+              EVM
+            </Text>
+          </Box>
+        </Stack>
+
+        <Stack
+          direction="row"
+          w="full"
+          spacing="10"
+          position="absolute"
+          bottom="30px"
+        >
+          {stats.map((stat) => (
+            <HStack
+              key={stat.id}
+              bgColor="#fff"
+              px="6"
+              py="4"
+              rounded="xl"
+              spacing="4"
+              w="full"
+            >
+              <Box bgColor="#d8ddfd" px="3" py="2" rounded="lg">
+                <Image src={stat.iconSrc} alt="box" width={20} height={20} />
+              </Box>
+              <Box>
+                <Text fontSize="2xl" lineHeight="110%" fontWeight={700}>
+                  {stat.label}
+                </Text>
+                <Text textTransform="uppercase" fontSize="12px" color="#9a9a9a">
+                  {stat.description}
+                </Text>
+              </Box>
+            </HStack>
+          ))}
+        </Stack>
+      </Container>
+    </Box>
+  );
+}

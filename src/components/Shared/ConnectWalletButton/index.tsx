@@ -17,12 +17,29 @@ function formatWalletAddress(address?: string) {
 }
 
 export default function ConnectWalletButton(props: any) {
-  const { height, fontSize, maxWidth } = props;
+  const { height, fontSize, maxWidth, gradientButton } = props;
 
   const { open } = useWeb3Modal();
   const { address, isConnected } = useAccount();
 
-  return (
+  return gradientButton ? (
+    <button
+      className="btn-grad"
+      onClick={() => {
+        isConnected
+          ? open({
+              view: "Account",
+            })
+          : open();
+      }}
+    >
+      {isConnected
+        ? formatWalletAddress(address)
+        : props.label
+        ? props.label
+        : "Connect Wallet"}
+    </button>
+  ) : (
     <Button
       onClick={() => {
         isConnected

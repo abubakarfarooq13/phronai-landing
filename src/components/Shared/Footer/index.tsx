@@ -25,7 +25,7 @@ import { FaInstagram } from "react-icons/fa6";
 import { FaYoutube } from "react-icons/fa";
 import TrustedBySection from "@/components/NewHome/TrustedBySection";
 
-const footerMenu = [
+export const footerMenu = [
   {
     id: 1,
     title: "Layer 1/Layer 0",
@@ -138,7 +138,7 @@ const footerMenu = [
   },
 ];
 
-const socialIcons = [
+export const socialIcons = [
   {
     id: 1,
     label: "Medium",

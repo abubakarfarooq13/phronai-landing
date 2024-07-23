@@ -21,237 +21,15 @@ import PhronZeroLogo from "../PhronZeroLogo";
 import Image from "next/image";
 import ConnectWalletButton from "../ConnectWalletButton";
 import { MdOutlineClose } from "react-icons/md";
-
-export const layerZeroAndLayerOneMenuItems = [
-  {
-    id: 2,
-    label: "Layer 0",
-    href: "/phronzero",
-    icon: "/assets/new-home/layer-icon.png",
-  },
-  {
-    id: 2,
-    label: "Layer 1",
-    href: "/chain",
-    icon: "/assets/new-home/layer-icon.png",
-  },
-  {
-    id: 6,
-    label: "Phron Coin",
-    href: "/phron",
-    icon: "/assets/new-home/phron-coin.png",
-  },
-  {
-    id: 3,
-    label: "Ecosystem",
-    href: "/ecosystem",
-    icon: "/assets/new-home/ecosystem.png",
-  },
-  {
-    id: 4,
-    label: "Team",
-    href: "/team",
-    icon: "/assets/new-home/team-icon.png",
-  },
-  {
-    id: 5,
-    label: "Roadmap",
-    href: "/roadmap",
-    icon: "/assets/new-home/map-icon.png",
-  },
-];
-
-export const buildMenuItems = [
-  {
-    id: 5,
-    label: "Github",
-    href: "http://git.phron.ai/",
-    icon: "/assets/new-home/github-icon.png",
-  },
-  {
-    id: 55,
-    label: "Docs",
-    href: "https://docs.phron.ai/",
-    icon: "/assets/new-home/docs-icon.png",
-  },
-];
-
-export const networkMenuItems = [
-  {
-    id: 5,
-    label: "PhronScan",
-    href: "https://testnet.phronscan.io",
-    icon: "/assets/new-home/phronscan-icon.png",
-  },
-
-  // {
-  //   id: 6,
-  //   label: "Telemetry",
-  //   href: "#",
-  //   icon: "/assets/new-home/code-bracket.svg",
-  // },
-
-  // {
-  //   id: 6,
-  //   label: "Become a Validator",
-  //   href: "#",
-  //   icon: "/assets/new-home/check-icon.png",
-  // },
-  // {
-  //   id: 7,
-  //   label: "DEX",
-  //   href: "#",
-  //   icon: "/assets/new-home/swap.svg",
-  // },
-  // {
-  //   id: 8,
-  //   label: "Bridge",
-  //   href: "#",
-  //   icon: "/assets/new-home/bridge.svg",
-  // },
-
-  // {
-  //   id: 10,
-  //   label: "Hacken Auditing",
-  //   href: "#",
-  //   icon: "/assets/new-home/hacken.svg",
-  // },
-];
-
-export const communityMenuItems = [
-  {
-    id: 11,
-    label: "Dubai Expo 2023",
-    href: "/dubai-crypto-expo-2023",
-    icon: "/assets/new-home/dubai-expo.svg",
-  },
-  {
-    id: 9,
-    label: "Partnerships",
-    href: "/partnerships",
-    icon: "/assets/new-home/handshake.svg",
-  },
-  // {
-  //   id: 9,
-  //   label: "VIP Partnerships",
-  //   href: "/vip-partnerships",
-  //   icon: "/assets/diamond-icon.svg",
-  // },
-  // {
-  //   id: 12,
-  //   label: "X updates",
-  //   href: "#",
-  //   icon: "/assets/new-home/x-twitter.svg",
-  // },
-];
-
-export const papersMenuItems = [
-  {
-    id: 9,
-    label: "Whitepaper Pure",
-    href: "https://phron.ai/whitepaper_pure.pdf",
-    icon: "/assets/new-home/docs-icon.png",
-  },
-  {
-    id: 10,
-    label: "Whitepaper Royal",
-    href: "https://phron.ai/whitepaper_royal.pdf",
-    icon: "/assets/new-home/docs-icon.png",
-  },
-  {
-    id: 12,
-    label: "Tokenomics",
-    href: "https://phron.ai/tokenomics.pdf",
-    icon: "/assets/new-home/docs-icon.png",
-  },
-];
-
-// Layer 0 / Layer 1
-
-// - Homepage
-// - PhronZero
-// - Phron Layer 1
-// - Road map
-// - Team
-
-// Ecosystem
-
-// - PhronScan
-// - Telemetry
-// - DEX
-// - Bridge
-// - ⁠Partnerships
-// - Hacken Auditing
-
-// News / Updates
-
-// - Dubai Expo 2023
-// - X updates
-
-export const navItems = [
-  {
-    id: 2,
-    label: "Layer 0 / Layer 1",
-    href: "",
-    className: "dropdown-1",
-    items: [
-      "/phronzero",
-      "/chain",
-      "/phron",
-      "/ecosystem",
-      "/team",
-      "/roadmap",
-    ],
-    imageUrl: "/assets/phronzero/card-1-img.png",
-  },
-  {
-    id: 2,
-    label: "Build",
-    href: "",
-    className: "dropdown-2",
-    items: [],
-    imageUrl: "/assets/new-home/chain-image.png",
-  },
-  {
-    id: 4,
-    label: "Network",
-    href: "",
-    className: "dropdown-3",
-    items: [],
-    imageUrl: "/assets/phronzero/card-3-img.png",
-  },
-  {
-    id: 4,
-    label: "Community",
-    href: "",
-    className: "dropdown-4",
-    items: ["/dubai-crypto-expo-2023", "/partnerships"],
-    imageUrl: "/assets/new-home/community.png",
-  },
-  {
-    id: 5,
-    label: "Papers",
-    href: "",
-    className: "dropdown-5",
-    items: [],
-    imageUrl: "/assets/new-home/paper.png",
-  },
-];
-
-export const newsItems = [
-  {
-    id: 1,
-    label: "Dubai Crypto Expo 2023",
-    href: "/dubai-crypto-expo-2023",
-  },
-  // {
-  //   id: 2,
-  //   label: "Articles",
-  //   href: "/news",
-  // },
-];
-
-export const menu = ["Phron AI Foundation", "News / Updates"];
+import {
+  newsItems,
+  layerZeroAndLayerOneMenuItems,
+  buildMenuItems,
+  networkMenuItems,
+  communityMenuItems,
+  papersMenuItems,
+  navItems,
+} from "@/constant/nav";
 
 const AlertBanner = React.forwardRef((props, ref: any) => {
   const [show, setShow] = useState(true);
@@ -351,7 +129,7 @@ const AlertBanner = React.forwardRef((props, ref: any) => {
 
 AlertBanner.displayName = "AlertBanner";
 
-function SubMenu(props: any) {
+export function SubMenu(props: any) {
   const router = useRouter();
 
   return (
@@ -497,31 +275,6 @@ export default function Nav() {
         connectButtonRef.current.style.maxWidth = "240px";
         connectButtonRef.current.style.fontSize = "16px";
       }
-
-      // if (currentScroll > 100 && alertBannerRef.current) {
-      //   alertBannerRef.current.style.transform = "translateY(-100%)";
-      //   alertBannerRef.current.style.display = "none";
-      // }
-
-      // if (currentScroll <= 0 && alertBannerRef.current) {
-      //   alertBannerRef.current.style.transform = "translateY(0px)";
-      //   alertBannerRef.current.style.display = "block";
-      // }
-
-      // if (
-      //   currentScroll > lastScroll &&
-      //   !body.classList.contains("scroll-down")
-      // ) {
-      //   body.classList.remove("scroll-up");
-      //   body.classList.add("scroll-down");
-      // } else if (
-      //   currentScroll < lastScroll &&
-      //   body.classList.contains("scroll-down")
-      // ) {
-      //   body.classList.remove("scroll-down");
-      //   body.classList.add("scroll-up");
-      // }
-      // lastScroll = currentScroll;
     });
   }, []);
 
@@ -651,54 +404,6 @@ export default function Nav() {
               maxW="230px"
               justifyContent="flex-end"
             >
-              {/* <Menu>
-                <MenuButton
-                  as={Button}
-                  variant="primary"
-                  borderRadius="full"
-                  // padding="10px 20px"
-                  px="8"
-                  w="full"
-                  fontSize={{ base: "sm", "3000px": "lg" }}
-                  color="#5900d7"
-                >
-                  Whitepapers
-                </MenuButton>
-                <MenuList bgColor="#000" border="0px" py="0">
-                  <MenuItem
-                    color="#fff"
-                    bgColor="#000"
-                    roundedTop="lg"
-                    as="a"
-                    href="https://phron.ai/whitepaper_pure.pdf"
-                    target="_blank"
-                    display="block"
-                    ml="5"
-                    pt="3"
-                    _hover={{
-                      color: "#9e5aff",
-                    }}
-                  >
-                    Whitepaper Pure
-                  </MenuItem>
-                  <MenuItem
-                    color="#fff"
-                    bgColor="#000"
-                    roundedBottom="lg"
-                    as="a"
-                    href="https://phron.ai/whitepaper_royal.pdf"
-                    ml="5"
-                    pb="3"
-                    target="_blank"
-                    display="block"
-                    _hover={{
-                      color: "#9e5aff",
-                    }}
-                  >
-                    Whitepaper Royal
-                  </MenuItem>
-                </MenuList>
-              </Menu> */}
               <Box
                 maxW="250px"
                 ref={connectButtonRef}

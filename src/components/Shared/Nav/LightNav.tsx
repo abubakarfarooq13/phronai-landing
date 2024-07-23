@@ -12,6 +12,7 @@ import {
   MenuButton,
   MenuList,
   MenuItem,
+  VStack,
 } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import DarkLogo from "../Logo/DarkLogo";
@@ -19,62 +20,95 @@ import { Link } from "@chakra-ui/next-js";
 import { CgMenuRightAlt } from "react-icons/cg";
 import MobileDrawer from "./LightDrawer";
 import { IoIosArrowDown } from "react-icons/io";
-import { menu, newsItems } from ".";
+import {
+  menu,
+  newsItems,
+  navItems,
+  layerZeroAndLayerOneMenuItems,
+  buildMenuItems,
+  networkMenuItems,
+} from "@/constant/nav";
+import ConnectWalletButton from "../ConnectWalletButton";
+import Image from "next/image";
 
-const Fade = require("react-reveal/Fade");
-
-export const navItems = [
+const _menu = [
+  {
+    id: 1,
+    label: "Layer 1 / Layer 0",
+    href: "#",
+    subMenu: [
+      {
+        id: 2,
+        label: "Layer 0",
+        href: "/phronzero",
+        icon: "/assets/new-home/layer-icon.png",
+      },
+      {
+        id: 2,
+        label: "Layer 1",
+        href: "/chain",
+        icon: "/assets/new-home/layer-icon.png",
+      },
+      {
+        id: 6,
+        label: "Phron Coin",
+        href: "/phron",
+        icon: "/assets/new-home/phron-coin.png",
+      },
+      {
+        id: 3,
+        label: "Ecosystem",
+        href: "/ecosystem",
+        icon: "/assets/new-home/ecosystem.png",
+      },
+      {
+        id: 4,
+        label: "Team",
+        href: "/team",
+        icon: "/assets/new-home/team-icon.png",
+      },
+      {
+        id: 5,
+        label: "Roadmap",
+        href: "/roadmap",
+        icon: "/assets/new-home/map-icon.png",
+      },
+    ],
+  },
   {
     id: 2,
-    label: "Phron: The Chain",
-    href: "/",
-  },
-  {
-    id: 5,
-    label: "RoadMap",
-    href: "/roadmap",
-  },
-  {
-    id: 5,
-    label: "Team",
-    href: "/team",
-  },
-  {
-    id: 10,
-    label: "PHRON",
-    href: "/phron",
+    label: "Build",
+    href: "#",
+    subMenu: [
+      {
+        id: 5,
+        label: "Github",
+        href: "http://git.phron.ai/",
+        icon: "/assets/new-home/github-icon.png",
+      },
+      {
+        id: 55,
+        label: "Docs",
+        href: "https://docs.phron.ai/",
+        icon: "/assets/new-home/docs-icon.png",
+      },
+    ],
   },
   {
     id: 3,
-    label: "Ecosystem",
-    href: "/ecosystem",
+    label: "Network",
+    href: "#",
   },
-  // {
-  //   id: 4,
-  //   label: "NFT Marketplace",
-  //   href: "/marketplace",
-  // },
-  // {
-  //   id: 14,
-  //   label: "Phron AI: Projects",
-  //   href: "/projects",
-  // },
-  // {
-  //   id: 5,
-  //   label: "Phron: The GamePad",
-  //   href: "/gamepad",
-  // },
-  // {
-  //   id: 5,
-  //   label: "News",
-  //   href: "/news",
-  // },
-
-  // {
-  //   id: 5,
-  //   label: "PHRON",
-  //   href: "/#",
-  // },
+  {
+    id: 4,
+    label: "Community",
+    href: "#",
+  },
+  {
+    id: 5,
+    label: "Papers",
+    href: "#",
+  },
 ];
 
 export default function LightNav() {
@@ -87,10 +121,9 @@ export default function LightNav() {
   return (
     <Box
       as="nav"
-      pt="5"
-      pb={{ base: "5", "1350px": "0" }}
-      bgColor="#000"
-      color="#fff"
+      py="5"
+      bgColor="#fff"
+      color="#000"
       pos="fixed"
       top={0}
       left={0}
@@ -98,8 +131,8 @@ export default function LightNav() {
       w="full"
       transition="all 300ms ease-in-out"
     >
-      <Container maxW="1400px">
-        <HStack justifyContent="space-between">
+      <Container maxW="1240px">
+        <HStack justifyContent="space-between" spacing="10">
           <DarkLogo />
 
           <MobileDrawer isOpen={isOpen} onOpen={onOpen} onClose={onClose} />
@@ -108,184 +141,20 @@ export default function LightNav() {
             <CgMenuRightAlt size="30px" />
           </Box>
 
-          {/* <HStack
-            spacing={{ base: "20px", "2xl": "30px" }}
-            display={{ base: "none", "1350px": "flex" }}
-            fontSize={{ base: "15px", "2xl": "base" }}
-          > */}
           <HStack
-            ml="100px"
-            spacing={{ base: "20px", "2xl": "30px" }}
             display={{ base: "none", "1350px": "flex" }}
             fontSize={{ base: "15px", "2xl": "base" }}
+            flex={1}
+            spacing="10"
           >
-            {menu.map((item) => (
-              <Button
-                key={item}
-                variant="unstyled"
-                // color={item === currentMenu ? "#6317fe" : ""}
-                cursor="pointer"
-                display="flex"
-                alignItems="center"
-                fontWeight={500}
-                rightIcon={item === currentMenu ? <IoIosArrowDown /> : <></>}
-                fontSize="17px"
-                onClick={() => setCurrentMenu(item)}
-              >
-                {item}
-              </Button>
+            {_menu.map((item) => (
+              // <CMenuItem key={item.id} {...item} />
+              <></>
             ))}
           </HStack>
-
-          <HStack
-            display={{ base: "none", "1350px": "flex" }}
-            fontSize={{ base: "15px", "2xl": "base" }}
-          >
-            <Button
-              as={Link}
-              href="/phronzero"
-              variant="purple-outline"
-              borderRadius="full"
-              px="10"
-              py="5"
-              w="full"
-              fontSize={{ "3000px": "lg" }}
-              textTransform="uppercase"
-            >
-              PhronZero
-            </Button>
-            {/* <Button
-                as={Link}
-                href="/phron"
-                variant="primary-purple"
-                borderRadius="full"
-                px="10"
-                py="5"
-                w="full"
-                fontSize={{ "3000px": "lg" }}
-                textTransform="uppercase"
-              >
-                Phron
-              </Button> */}
-            <Button
-              as={CLink}
-              href="https://phron.ai/whitepaper.pdf"
-              target="_blank"
-              variant="primary-purple"
-              borderRadius="full"
-              px="8"
-              py="5"
-              w="full"
-              fontSize={{ "3000px": "lg" }}
-            >
-              Whitepaper
-            </Button>
-          </HStack>
-          {/* </HStack> */}
+          <ConnectWalletButton gradientButton />
         </HStack>
       </Container>
-
-      {currentMenu === "Phron AI Foundation" ? (
-        <Fade>
-          <Box
-            display={{ base: "none", "1350px": "block" }}
-            bgColor="#5900d7"
-            mt="5"
-            borderTopColor="#26124f"
-            borderBottomColor="#26124f"
-            borderTopWidth="2px"
-            borderBottomWidth="2px"
-          >
-            <Container maxW="1400px">
-              <Stack
-                direction="row"
-                flexWrap="wrap"
-                justifyContent="flex-end"
-                alignItems="center"
-                spacing="0px"
-              >
-                {navItems.map((item) => (
-                  <Text
-                    key={item.id}
-                    as={Link}
-                    href={item.href}
-                    py="5"
-                    px="5"
-                    _hover={{
-                      bgColor: "#0e0023",
-                      outline: "none",
-                      boxShadow: "none",
-                    }}
-                    _active={{
-                      boxShadow: "none",
-                    }}
-                    _focus={{
-                      boxShadow: "none",
-                    }}
-                    bgColor={router.pathname === item.href ? "#0e0023" : "none"}
-                    color="#fff"
-                    fontSize={{ "3000px": "lg" }}
-                    fontWeight={500}
-                  >
-                    {item.label}
-                  </Text>
-                ))}
-              </Stack>
-            </Container>
-          </Box>
-        </Fade>
-      ) : null}
-
-      {currentMenu === "News / Updates" ? (
-        <Fade>
-          <Box
-            display={{ base: "none", "1350px": "block" }}
-            bgColor="#5900d7"
-            mt="5"
-            borderTopColor="#26124f"
-            borderBottomColor="#26124f"
-            borderTopWidth="2px"
-            borderBottomWidth="2px"
-          >
-            <Container maxW="1400px">
-              <Stack
-                direction="row"
-                flexWrap="wrap"
-                justifyContent="flex-end"
-                alignItems="center"
-                spacing="0px"
-              >
-                {newsItems.map((item) => (
-                  <Text
-                    key={item.id}
-                    as={Link}
-                    href={item.href}
-                    py="5"
-                    px="5"
-                    _hover={{
-                      bgColor: "#0e0023",
-                      outline: "none",
-                      boxShadow: "none",
-                    }}
-                    _active={{
-                      boxShadow: "none",
-                    }}
-                    _focus={{
-                      boxShadow: "none",
-                    }}
-                    bgColor={router.pathname === item.href ? "#0e0023" : "none"}
-                    color="#fff"
-                    fontSize={{ "3000px": "lg" }}
-                    fontWeight={500}
-                  >
-                    {item.label}
-                  </Text>
-                ))}
-              </Stack>
-            </Container>
-          </Box>
-        </Fade>
-      ) : null}
     </Box>
   );
 }

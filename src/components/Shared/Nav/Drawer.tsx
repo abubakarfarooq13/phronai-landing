@@ -24,14 +24,14 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import Logo from "../Logo";
 import {
-  networkMenuItems,
-  layerZeroAndLayerOneMenuItems,
-  navItems,
-  communityMenuItems,
   newsItems,
-  papersMenuItems,
+  layerZeroAndLayerOneMenuItems,
   buildMenuItems,
-} from ".";
+  networkMenuItems,
+  communityMenuItems,
+  papersMenuItems,
+  navItems,
+} from "@/constant/nav";
 import { IoIosArrowDown } from "react-icons/io";
 import Image from "next/image";
 import ConnectWalletButton from "../ConnectWalletButton";

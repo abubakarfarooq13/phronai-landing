@@ -1,100 +1,248 @@
 import React from "react";
-import { Box, Container, Stack, Text, VStack, HStack } from "@chakra-ui/react";
-import DarkLogo from "../Logo/DarkLogo";
-import { AiFillMediumSquare, AiOutlineTwitter } from "react-icons/ai";
-import { GrReddit } from "react-icons/gr";
-import { FaTelegramPlane } from "react-icons/fa";
-import { IoLogoDiscord } from "react-icons/io5";
-import { BsYoutube } from "react-icons/bs";
+import {
+  Box,
+  Container,
+  Stack,
+  Text,
+  VStack,
+  Button,
+  Grid,
+  GridItem,
+} from "@chakra-ui/react";
 import Link from "next/link";
+import { useRouter } from "next/router";
+import TrustedBySection from "@/components/NewHome/TrustedBySection";
+import { footerMenu, socialIcons } from ".";
+import Logo from "../Logo";
+import DarkLogo from "../Logo/DarkLogo";
 
-export default function Footer() {
+export default function FooterLighter() {
+  const router = useRouter();
   return (
-    <Box as="footer" py="10" bgColor="#fff">
-      <Container maxW="1400px">
-        <Stack
-          direction="row"
-          w="full"
-          justifyContent={{ base: "center", md: "space-between" }}
-          alignItems="flex-end"
-          flexWrap="wrap"
-          spacing="10"
+    <Box overflow="hidden">
+      <Box
+        as="footer"
+        // bgImage="/assets/footer-bg.png"
+        // bgSize="cover"
+        // bgPos="top"
+        maxW="1240px"
+        position="relative"
+        mx="auto"
+        // _after={{
+        //   content: `''`,
+        //   position: "absolute",
+        //   right: { base: "-100px", "2340px": "-230px" },
+        //   width: { base: "200px", "2340px": "400px" },
+        //   height: "100%",
+        //   background: "#000",
+        //   top: router.pathname === "/" ? "0px" : "-100px",
+        //   filter: { base: "blur(70px)", "2340px": "blur(100px)" },
+        //   visibility: { base: "hidden", xl: "visible" },
+        // }}
+        pb="5"
+      >
+        <Stack direction="row" justifyContent="flex-end" mt="10">
+          {socialIcons.map((social) => (
+            <GridItem key={social.id}>
+              <Text
+                py="2"
+                px="3"
+                rounded="lg"
+                as={Link}
+                w="full"
+                href={social.href}
+                target="_blank"
+                transition="all .3s"
+                _hover={{
+                  transition: "all .3s",
+                  // color: "rgba(105,46,164,1)",
+                  // bgColor: social.hoverGbColor,
+                  bgColor: "#d8e5fd",
+                }}
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+                bgColor={"#e8effc"}
+              >
+                <Text as="span" fontSize="24px" color="#000">
+                  <social.icon />
+                </Text>
+                {/* <Text
+                  as="span"
+                  ml="2"
+                  fontSize={{ base: "sm", "2340px": "lg" }}
+                  fontWeight={500}
+                  color="#fff"
+                >
+                  {social.label}
+                </Text> */}
+              </Text>
+            </GridItem>
+          ))}
+        </Stack>
+        {/* {router.pathname === "/" ? <TrustedBySection /> : null} */}
+        <Container
+          maxW="1240px"
+          px={{ base: "4", xl: "4" }}
+          zIndex="99"
+          position="relative"
+          pt="10"
         >
-          <VStack align="start" spacing="5" zIndex={99}>
-            <DarkLogo />
-            <Text
-              color="#000"
-              display={{ base: "none", md: "flex" }}
-              fontSize={{ base: "base", "3000px": "xl" }}
-            >
-              &copy; {new Date().getFullYear()} Phron AI
-            </Text>
-          </VStack>
-          <HStack fontSize="30px" spacing="5" color="#000">
-            <Text
-              as={Link}
-              href="https://medium.com/@phron_ai"
-              target="_blank"
-              transition="all .3s"
-              _hover={{
-                transition: "all .3s",
-                color: "rgba(105,46,164,1)",
-              }}
-              fontSize={{ "3000px": "35px" }}
-            >
-              <AiFillMediumSquare />
-            </Text>
-            <Text
-              as={Link}
-              href="https://twitter.com/Phron_ai"
-              target="_blank"
-              transition="all .3s"
-              _hover={{
-                transition: "all .3s",
-                color: "rgba(105,46,164,1)",
-              }}
-              fontSize={{ "3000px": "35px" }}
-            >
-              <AiOutlineTwitter />
-            </Text>
+          <Grid
+            gridTemplateColumns={{
+              base: "repeat(2, 1fr)",
+              md: "repeat(4, 1fr)",
+            }}
+            pb="10"
+            display={{ base: "grid", lg: "none" }}
+            gap="5"
+            rowGap="16"
+          >
+            {footerMenu.map((menu) => (
+              <GridItem key={menu.id}>
+                <VStack spacing="4" fontSize="sm" align="center">
+                  <Text fontWeight={500}>{menu.title}</Text>
+                  {menu.menu.map((item) => (
+                    <Text
+                      as={Link}
+                      _hover={{
+                        color: "#fff",
+                      }}
+                      color="#909090"
+                      key={item.id}
+                      href={item.href}
+                    >
+                      {item.label}
+                    </Text>
+                  ))}
+                </VStack>
+              </GridItem>
+            ))}
+          </Grid>
+          <Stack
+            pb={{ base: "10", lg: "32" }}
+            direction={{ base: "column", md: "row" }}
+            w="full"
+            justifyContent={{ base: "center" }}
+            alignItems={{ base: "center", md: "flex-start" }}
+            // flexWrap="wrap"
+            spacing="32"
+          >
+            {footerMenu.map((menu) => (
+              <VStack
+                spacing="4"
+                fontSize={{ base: "sm", "2340px": "xl" }}
+                display={{ base: "none", lg: "flex" }}
+                align="start"
+                key={menu.id}
+                w="full"
+                // minW="200px"
+              >
+                <Text fontWeight={500}>{menu.title}</Text>
+                {menu.menu.map((item) => (
+                  <Text
+                    as={Link}
+                    _hover={{
+                      color: "#000",
+                    }}
+                    color="#909090"
+                    key={item.id}
+                    href={item.href}
+                  >
+                    {item.label}
+                  </Text>
+                ))}
+              </VStack>
+            ))}
 
             <Text
-              as={Link}
-              href="https://t.me/PhronAIPortal"
-              target="_blank"
-              transition="all .3s"
-              _hover={{
-                transition: "all .3s",
-                color: "rgba(105,46,164,1)",
-              }}
-              fontSize={{ "3000px": "35px" }}
+              as="a"
+              // variant="primary-purple"
+              rounded="full"
+              px="8"
+              // fontFamily="inherit"
+              // as="a"
+              className="btn-grad"
+              href="mailto:support@phron.ai"
+              w="full"
+              // maxW="140px"
             >
-              <FaTelegramPlane />
+              Support
             </Text>
-            <Text
-              as={Link}
-              href="https://discord.gg/QRMhdRx6du"
-              target="_blank"
-              transition="all .3s"
-              _hover={{
-                transition: "all .3s",
-                color: "rgba(105,46,164,1)",
-              }}
-              fontSize={{ "3000px": "35px" }}
-            >
-              <IoLogoDiscord />
-            </Text>
-          </HStack>
-          <Box>
-            <Text color="#000" display={{ base: "flex", md: "none" }}>
+            {/* <Box>
+            <Text color="#c1c1c1" display={{ base: "flex", md: "none" }}>
               &copy; {new Date().getFullYear()} Phron AI
             </Text>
-            <Text color="#000" fontSize={{ base: "base", "3000px": "xl" }}>
+            <Text color="#c1c1c1" fontSize={{ base: "base", "3000px": "xl" }}>
               All rights reserved.
             </Text>
-          </Box>
-        </Stack>
-      </Container>
+          </Box> */}
+          </Stack>
+
+          <Stack
+            direction="row"
+            flexWrap="wrap"
+            justifyContent="space-between"
+            alignItems="center"
+          >
+            <DarkLogo />
+            <Text
+              color="#909090"
+              textAlign="center"
+              fontSize={{ base: "sm", "2340px": "lg" }}
+            >
+              {new Date().getFullYear()} &copy; PhronAI All rights reserved
+            </Text>
+          </Stack>
+        </Container>
+      </Box>
+      <Grid
+        gridTemplateColumns={{
+          base: "repeat(2, 1fr)",
+          sm: "repeat(3, 1fr)",
+          md: "repeat(6, 1fr)",
+        }}
+      >
+        {/* {socialIcons.map((social) => (
+          <GridItem key={social.id}>
+            <Text
+              py="3"
+              px="5"
+              as={Link}
+              w="full"
+              href={social.href}
+              target="_blank"
+              transition="all .3s"
+              _hover={{
+                transition: "all .3s",
+                // color: "rgba(105,46,164,1)",
+                bgColor: social.hoverGbColor,
+              }}
+              display="flex"
+              alignItems="center"
+              justifyContent="center"
+              bgColor={social.bgColor}
+            >
+              <Text
+                as="span"
+                fontSize={{ base: "lg", "2340px": "xl" }}
+                color="#fff"
+              >
+                <social.icon />
+              </Text>
+              <Text
+                as="span"
+                ml="2"
+                fontSize={{ base: "sm", "2340px": "lg" }}
+                fontWeight={500}
+                color="#fff"
+              >
+                {social.label}
+              </Text>
+            </Text>
+          </GridItem>
+        ))} */}
+      </Grid>
     </Box>
   );
 }

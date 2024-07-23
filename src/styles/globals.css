@@ -143,6 +143,45 @@ nav {
     background: linear-gradient(to right,#1245d9, #a159b7);
 }
 
+.btn-grad {
+    background-image: linear-gradient(to right, rgb(87,86,244) 0%, rgb(195,75,251)  51%, rgb(87,86,244) 100%);
+    padding: 15px 25px;
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+    box-shadow: 0px 6px 38.7px 4.3px rgba(171, 76, 248, 0.4)
+}
+
+.btn-grad:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+    box-shadow: 0px 6px 20px 1px rgba(171, 76, 248, 0.4)
+}
+
+.arrow-btn {
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.arrow-btn:hover {
+    text-decoration: underline;
+    transition: all .3s;
+}
+
+.arrow-btn svg {
+    transition: all .3s;
+}
+
+.arrow-btn:hover svg {
+    transform: translateX(4px);
+    transition: all .3s;
+}
+
 .displacement div {
     position: absolute;
 }
