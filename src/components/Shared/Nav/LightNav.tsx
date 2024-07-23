@@ -15,7 +15,7 @@ import { useRouter } from "next/router";
 import { Logo } from "../..";
 import { Link } from "@chakra-ui/next-js";
 import { CgMenuRightAlt } from "react-icons/cg";
-import MobileDrawer from "./Drawer";
+import MobileDrawer from "./LightDrawer";
 import { Menu, MenuButton, MenuList, MenuItem } from "@chakra-ui/react";
 import PhronZeroLogo from "../PhronZeroLogo";
 import Image from "next/image";

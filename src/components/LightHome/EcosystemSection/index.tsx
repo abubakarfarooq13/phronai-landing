@@ -10,12 +10,18 @@ export default function ExploreEcosystem() {
         minH="850px"
         gap="20px"
       >
-        <GridItem colSpan={{ base: 1, md: 2 }} rowSpan={{ base: 1, md: 2 }}>
+        <GridItem
+          colSpan={{ base: 1, md: 2 }}
+          rowSpan={{ base: 1, md: 2 }}
+          bgColor="#9CADFF"
+          rounded="20px"
+        >
           <Box
             bgImage="/assets/light-theme-home/telemetry-bg.png"
             w="full"
             h="full"
-            bgSize={{ base: "cover", md: "100% 100%" }}
+            bgSize={{ base: "cover", lg: "100% 100%" }}
+            bgPos={{ base: "left", lg: "center" }}
             position="relative"
             py={{ base: "10px", md: "30px" }}
             minH="150px"
@@ -43,16 +49,20 @@ export default function ExploreEcosystem() {
             </HStack>
           </Box>
         </GridItem>
-        <GridItem>
+        <GridItem bgColor="#DEC6FF" rounded="20px">
           <Box
             bgImage="/assets/light-theme-home/layers-bg.png"
             w="full"
             h="full"
-            bgSize="100% 100%"
+            bgSize={{ base: "cover", lg: "100% 100%" }}
+            bgPos={{ base: "right", lg: "center" }}
             position="relative"
             p="30px"
+            rounded="20px"
           >
-            <Text fontSize="4xl">Layer 0 / Layer 1</Text>
+            <Text fontSize="4xl" lineHeight="130%">
+              Layer 0 / Layer 1
+            </Text>
             <Text fontSize="sm">Introducing the first AI Layers Zero</Text>
 
             <HStack
@@ -68,16 +78,18 @@ export default function ExploreEcosystem() {
             </HStack>
           </Box>
         </GridItem>
-        <GridItem>
+        <GridItem bgColor="#DEC6FF" rounded="20px">
           <Box
             bgImage="/assets/light-theme-home/phronscan-bg.png"
             w="full"
             h="full"
-            bgSize="100% 100%"
+            bgSize={{ base: "cover", lg: "100% 100%" }}
+            bgPos={{ base: "right", lg: "center" }}
             position="relative"
             px="30px"
-            py="20px"
+            py="10px"
             minH="150px"
+            rounded="20px"
           >
             <Text fontSize="4xl">PhronScan</Text>
             <Text fontSize="sm">Explore PhronAI Network</Text>
@@ -100,8 +112,8 @@ export default function ExploreEcosystem() {
             bgImage="/assets/light-theme-home/ai-staking-bg.png"
             w="full"
             h="full"
-            bgSize={{ base: "cover", md: "100% 100%" }}
-            bgPos={{ base: "right", md: "center" }}
+            bgSize={{ base: "cover", lg: "100% 100%" }}
+            bgPos={{ base: "right", lg: "center" }}
             position="relative"
             p="30px"
             rounded="20px"

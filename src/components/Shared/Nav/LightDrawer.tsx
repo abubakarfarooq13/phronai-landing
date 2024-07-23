@@ -1,30 +1,40 @@
 import {
   Drawer,
   DrawerBody,
-  DrawerFooter,
   DrawerHeader,
   DrawerOverlay,
   DrawerContent,
   DrawerCloseButton,
   Button,
   VStack,
-  Text,
   Link as CLink,
   Menu,
   MenuButton,
   MenuList,
   MenuItem,
   Accordion,
-  AccordionButton,
-  AccordionIcon,
   AccordionItem,
+  AccordionButton,
   AccordionPanel,
+  AccordionIcon,
+  HStack,
+  Text,
 } from "@chakra-ui/react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import DarkLogo from "../Logo/DarkLogo";
-import { navItems, newsItems } from "@/constant/nav";
+import Logo from "../Logo";
+import {
+  newsItems,
+  layerZeroAndLayerOneMenuItems,
+  buildMenuItems,
+  networkMenuItems,
+  communityMenuItems,
+  papersMenuItems,
+  navItems,
+} from "@/constant/nav";
 import { IoIosArrowDown } from "react-icons/io";
+import Image from "next/image";
+import ConnectWalletButton from "../ConnectWalletButton";
 
 interface MobileDrawerProps {
   isOpen: boolean;
@@ -32,61 +42,182 @@ interface MobileDrawerProps {
   onOpen: () => void;
 }
 
-export default function LightDrawer(props: MobileDrawerProps) {
+export default function MobileDrawer(props: MobileDrawerProps) {
   const { isOpen, onClose, onOpen } = props;
   const router = useRouter();
+
   return (
     <>
       <Drawer isOpen={isOpen} placement="right" onClose={onClose}>
         <DrawerOverlay />
-        <DrawerContent bgColor="#000">
+        <DrawerContent bgColor="#fff" color="#000">
           <DrawerCloseButton
             _focus={{
               boxShadow: "none",
             }}
           />
           <DrawerHeader p="5">
-            <DarkLogo />
+            <Logo />
           </DrawerHeader>
 
           <DrawerBody>
-            <Accordion allowMultiple w="full">
+            <Accordion allowMultiple w="full" mt="5">
               <AccordionItem border="0px">
                 <h2>
                   <AccordionButton
                     fontWeight={500}
-                    px="0"
+                    px="2"
                     justifyContent="space-between"
                   >
-                    Phron AI Foundation
+                    Layer 0 / Layer 1
                     <AccordionIcon />
                   </AccordionButton>
                 </h2>
 
                 <AccordionPanel px="0" py="10px">
                   <VStack w="full">
-                    {navItems.map((item) => (
-                      <Text
-                        w="full"
-                        key={item.id}
-                        as={Link}
-                        href={item.href}
-                        // py="5"
-                        px="10px"
-                        _active={{
-                          boxShadow: "none",
-                        }}
-                        _focus={{
-                          boxShadow: "none",
-                        }}
-                        bgColor={
-                          router.pathname === item.href ? "#5900d7" : "none"
-                        }
-                        color={router.pathname === item.href ? "#fff" : "none"}
-                        fontSize={{ "3000px": "lg" }}
-                      >
-                        {item.label}
-                      </Text>
+                    {layerZeroAndLayerOneMenuItems.map((item) =>
+                      !item.href ? null : (
+                        <HStack key={item.id} w="full" ml="4">
+                          <Image
+                            src={item.icon}
+                            alt="icon"
+                            width={20}
+                            height={20}
+                            style={{
+                              filter: "invert(1)",
+                            }}
+                          />
+                          <Text
+                            w="full"
+                            as={Link}
+                            href={item.href}
+                            // py="5"
+                            px="10px"
+                            _active={{
+                              boxShadow: "none",
+                            }}
+                            _focus={{
+                              boxShadow: "none",
+                            }}
+                            bgColor={
+                              router.pathname === item.href ? "#5900d7" : "none"
+                            }
+                            color={
+                              router.pathname === item.href ? "#fff" : "none"
+                            }
+                            fontSize={{ "3000px": "lg" }}
+                          >
+                            {item.label}
+                          </Text>
+                        </HStack>
+                      )
+                    )}
+                  </VStack>
+                </AccordionPanel>
+              </AccordionItem>
+              <AccordionItem border="0px">
+                <h2>
+                  <AccordionButton
+                    fontWeight={500}
+                    px="2"
+                    justifyContent="space-between"
+                  >
+                    Build
+                    <AccordionIcon />
+                  </AccordionButton>
+                </h2>
+
+                <AccordionPanel px="0" py="10px">
+                  <VStack w="full">
+                    {buildMenuItems.map((item) =>
+                      !item.href ? null : (
+                        <HStack key={item.id} w="full" ml="4">
+                          <Image
+                            src={item.icon}
+                            alt="icon"
+                            width={20}
+                            height={20}
+                            style={{
+                              filter: "invert(1)",
+                            }}
+                          />
+                          <Text
+                            w="full"
+                            as={Link}
+                            href={item.href}
+                            // py="5"
+                            px="10px"
+                            _active={{
+                              boxShadow: "none",
+                            }}
+                            _focus={{
+                              boxShadow: "none",
+                            }}
+                            bgColor={
+                              router.pathname === item.href ? "#5900d7" : "none"
+                            }
+                            color={
+                              router.pathname === item.href ? "#fff" : "none"
+                            }
+                            fontSize={{ "3000px": "lg" }}
+                          >
+                            {item.label}
+                          </Text>
+                        </HStack>
+                      )
+                    )}
+                  </VStack>
+                </AccordionPanel>
+              </AccordionItem>
+              <AccordionItem border="0px">
+                <h2>
+                  <AccordionButton
+                    fontWeight={500}
+                    px="2"
+                    justifyContent="space-between"
+                  >
+                    Network
+                    <AccordionIcon />
+                  </AccordionButton>
+                </h2>
+
+                <AccordionPanel px="0" py="10px">
+                  <VStack w="full">
+                    {networkMenuItems.map((item) => (
+                      <HStack key={item.id} w="full" ml="4">
+                        <Image
+                          src={item.icon}
+                          alt="icon"
+                          width={20}
+                          height={20}
+                          style={{
+                            filter: "invert(1)",
+                          }}
+                        />
+                        <Text
+                          w="full"
+                          as={Link}
+                          href={item.href}
+                          // py="5"
+                          px="10px"
+                          _active={{
+                            boxShadow: "none",
+                          }}
+                          _focus={{
+                            boxShadow: "none",
+                          }}
+                          bgColor={
+                            router.pathname === item.href ? "#5900d7" : "none"
+                          }
+                          color={
+                            router.pathname === item.href ? "#fff" : "none"
+                          }
+                          fontSize={{ "3000px": "lg" }}
+                        >
+                          {item.label}
+                        </Text>
+                      </HStack>
                     ))}
                   </VStack>
                 </AccordionPanel>
@@ -95,69 +226,109 @@ export default function LightDrawer(props: MobileDrawerProps) {
                 <h2>
                   <AccordionButton
                     fontWeight={500}
-                    px="0"
+                    px="2"
                     justifyContent="space-between"
                   >
-                    News / Updates
+                    Community
                     <AccordionIcon />
                   </AccordionButton>
                 </h2>
 
                 <AccordionPanel px="0" py="10px">
                   <VStack w="full">
-                    {newsItems.map((item) => (
-                      <Text
-                        w="full"
-                        key={item.id}
-                        as={Link}
-                        href={item.href}
-                        // py="5"
-                        px="10px"
-                        _active={{
-                          boxShadow: "none",
-                        }}
-                        _focus={{
-                          boxShadow: "none",
-                        }}
-                        bgColor={
-                          router.pathname === item.href ? "#5900d7" : "none"
-                        }
-                        color={router.pathname === item.href ? "#fff" : "none"}
-                        fontSize={{ "3000px": "lg" }}
-                      >
-                        {item.label}
-                      </Text>
+                    {communityMenuItems.map((item) => (
+                      <HStack key={item.id} w="full" ml="4">
+                        <Image
+                          src={item.icon}
+                          style={{
+                            filter: "invert(1)",
+                          }}
+                          alt="icon"
+                          width={20}
+                          height={20}
+                        />
+                        <Text
+                          w="full"
+                          as={Link}
+                          href={item.href}
+                          // py="5"
+                          px="10px"
+                          _active={{
+                            boxShadow: "none",
+                          }}
+                          _focus={{
+                            boxShadow: "none",
+                          }}
+                          bgColor={
+                            router.pathname === item.href ? "#5900d7" : "none"
+                          }
+                          color={
+                            router.pathname === item.href ? "#fff" : "none"
+                          }
+                          fontSize={{ "3000px": "lg" }}
+                        >
+                          {item.label}
+                        </Text>
+                      </HStack>
+                    ))}
+                  </VStack>
+                </AccordionPanel>
+              </AccordionItem>
+              <AccordionItem border="0px">
+                <h2>
+                  <AccordionButton
+                    fontWeight={500}
+                    px="2"
+                    justifyContent="space-between"
+                  >
+                    Papers
+                    <AccordionIcon />
+                  </AccordionButton>
+                </h2>
+
+                <AccordionPanel px="0" py="10px">
+                  <VStack w="full">
+                    {papersMenuItems.map((item) => (
+                      <HStack key={item.id} w="full" ml="4">
+                        <Image
+                          src={item.icon}
+                          alt="icon"
+                          width={20}
+                          height={20}
+                          style={{
+                            filter: "invert(1)",
+                          }}
+                        />
+                        <Text
+                          w="full"
+                          as={Link}
+                          href={item.href}
+                          // py="5"
+                          px="10px"
+                          _active={{
+                            boxShadow: "none",
+                          }}
+                          _focus={{
+                            boxShadow: "none",
+                          }}
+                          bgColor={
+                            router.pathname === item.href ? "#5900d7" : "none"
+                          }
+                          color={
+                            router.pathname === item.href ? "#fff" : "none"
+                          }
+                          fontSize={{ "3000px": "lg" }}
+                        >
+                          {item.label}
+                        </Text>
+                      </HStack>
                     ))}
                   </VStack>
                 </AccordionPanel>
               </AccordionItem>
             </Accordion>
             <VStack w="full" mt="30px" spacing="4">
-              <Button
-                as={Link}
-                href="/phronzero"
-                variant="purple-outline"
-                borderRadius="full"
-                px="8"
-                py="5"
-                w="full"
-                fontSize={{ "3000px": "lg" }}
-                textTransform="uppercase"
-              >
-                PhronZero
-              </Button>
-              <Button
-                as={CLink}
-                href="https://phron.ai/whitepaper.pdf"
-                target="_blank"
-                variant="primary-purple"
-                borderRadius="full"
-                px="8"
-                py="5"
-                w="full"
-              >
-                Whitepaper
-              </Button>
+              <ConnectWalletButton />
             </VStack>
           </DrawerBody>
         </DrawerContent>
