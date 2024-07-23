@@ -117,61 +117,57 @@ export default function Hero() {
             </Fade>
           </VStack>
 
-          <Fade right>
-            <Box position="relative" mt="10">
+          <VStack position="relative" mt="10" w="full">
+            <Fade right>
               <Image
                 src="/assets/light-theme-home/sophia-robot.png"
                 alt="sophia robot image"
                 width={800}
                 height={754}
-                style={
-                  {
-                    // marginLeft: "-14px",
-                  }
-                }
               />
-              <Text
-                pos="absolute"
-                top="40%"
-                left="0%"
-                bgColor="#fff"
-                px="5"
-                py="2"
-                rounded="full"
-                fontSize="14px"
-                lineHeight="110%"
-              >
-                Proof of Learning
-              </Text>
-              <Text
-                pos="absolute"
-                right="10%"
-                top="10%"
-                bgColor="#fff"
-                px="5"
-                py="2"
-                rounded="full"
-                fontSize="14px"
-                lineHeight="110%"
-              >
-                Dynamic Node <br />
-                Ranking LTFM Protocol
-              </Text>
-              <Text
-                pos="absolute"
-                top="50%"
-                right="30%"
-                bgColor="#fff"
-                px="5"
-                py="2"
-                rounded="full"
-                fontSize="14px"
-                lineHeight="110%"
-              >
-                EVM
-              </Text>
-            </Box>
-          </Fade>
+            </Fade>
+            <Text
+              pos="absolute"
+              top="40%"
+              left="0%"
+              bgColor="#fff"
+              px="5"
+              py="2"
+              rounded="full"
+              fontSize="14px"
+              lineHeight="110%"
+            >
+              Proof of Learning
+            </Text>
+
+            <Text
+              pos="absolute"
+              right="10%"
+              top="10%"
+              bgColor="#fff"
+              px="5"
+              py="2"
+              rounded="full"
+              fontSize="14px"
+              lineHeight="110%"
+            >
+              Dynamic Node <br />
+              Ranking LTFM Protocol
+            </Text>
+            <Text
+              pos="absolute"
+              top="50%"
+              right="30%"
+              bgColor="#fff"
+              px="5"
+              py="2"
+              rounded="full"
+              fontSize="14px"
+              lineHeight="110%"
+            >
+              EVM
+            </Text>
+          </VStack>
         </Stack>
 
         <Grid
