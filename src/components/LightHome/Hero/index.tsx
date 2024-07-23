@@ -7,6 +7,8 @@ import {
   HStack,
   Stack,
   Button,
+  Grid,
+  GridItem,
 } from "@chakra-ui/react";
 import Image from "next/image";
 import { GoArrowRight } from "react-icons/go";
@@ -45,7 +47,11 @@ export default function Hero() {
       overflowX="hidden"
       position="relative"
     >
-      <Container maxW="1240px" pt="100px" position="relative">
+      <Container
+        maxW="1240px"
+        pt={{ base: "50px", md: "160px" }}
+        position="relative"
+      >
         <Stack
           direction={{ base: "column", lg: "row" }}
           justifyContent="space-between"
@@ -81,7 +87,7 @@ export default function Hero() {
                 lg: "45px",
                 "2340px": "60px",
               }}
-              lineHeight="105%"
+              lineHeight="115%"
               letterSpacing="1px"
               fontWeight={600}
               // mb="2"
@@ -90,7 +96,8 @@ export default function Hero() {
               {/* From Static to Dynamic{" "}
               <Box as="br" display={{ base: "none", md: "block" }} /> with
               AI-Powered Consensus. */}
-              Build your Layer 1 <br /> in minutes
+              Build your Layer 1{" "}
+              <Box as="br" display={{ base: "none", xl: "block" }} /> in minutes
             </Text>
             <Text mb="5" fontSize={{ base: "17px", "2340px": "18px" }}>
               From Static to Dynamic with the first{" "}
@@ -111,9 +118,11 @@ export default function Hero() {
               alt="sophia robot image"
               width={800}
               height={754}
-              style={{
-                marginLeft: "-14px",
-              }}
+              style={
+                {
+                  // marginLeft: "-14px",
+                }
+              }
             />
             <Text
               pos="absolute"
@@ -158,37 +167,63 @@ export default function Hero() {
           </Box>
         </Stack>
 
-        <Stack
-          direction="row"
+        <Grid
+          gridTemplateColumns={{
+            base: "repeat(1,1fr)",
+            md: "repeat(2, 1fr)",
+            lg: "repeat(3,1fr)",
+          }}
           w="full"
-          spacing="10"
-          position="absolute"
+          gap="4"
+          position={{ md: "absolute" }}
           bottom="30px"
+          maxW="1240px"
+          px="4"
+          left={{ md: "50%" }}
+          transform={{ md: "translateX(-50%)" }}
         >
-          {stats.map((stat) => (
-            <HStack
+          {stats.map((stat, i) => (
+            <GridItem
               key={stat.id}
-              bgColor="#fff"
-              px="6"
-              py="4"
-              rounded="xl"
-              spacing="4"
-              w="full"
+              colSpan={{
+                base: 1,
+                md: i === 2 ? 2 : 1,
+                lg: 1,
+              }}
             >
-              <Box bgColor="#d8ddfd" px="3" py="2" rounded="lg">
-                <Image src={stat.iconSrc} alt="box" width={20} height={20} />
-              </Box>
-              <Box>
-                <Text fontSize="2xl" lineHeight="110%" fontWeight={700}>
-                  {stat.label}
-                </Text>
-                <Text textTransform="uppercase" fontSize="12px" color="#9a9a9a">
-                  {stat.description}
-                </Text>
-              </Box>
-            </HStack>
+              <HStack
+                bgColor="#fff"
+                px="6"
+                py="4"
+                rounded="xl"
+                spacing="4"
+                w="full"
+                maxW={{
+                  base: "full",
+                  md: `${i === 2 ? "50%" : "full"}`,
+                  lg: "full",
+                }}
+                mx="auto"
+              >
+                <Box bgColor="#d8ddfd" px="3" py="2" rounded="lg">
+                  <Image src={stat.iconSrc} alt="box" width={20} height={20} />
+                </Box>
+                <Box>
+                  <Text fontSize="2xl" lineHeight="110%" fontWeight={700}>
+                    {stat.label}
+                  </Text>
+                  <Text
+                    textTransform="uppercase"
+                    fontSize="12px"
+                    color="#9a9a9a"
+                  >
+                    {stat.description}
+                  </Text>
+                </Box>
+              </HStack>
+            </GridItem>
           ))}
-        </Stack>
+        </Grid>
       </Container>
     </Box>
   );

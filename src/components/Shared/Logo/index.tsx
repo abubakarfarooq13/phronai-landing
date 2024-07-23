@@ -6,7 +6,11 @@ export default function Logo() {
   return (
     <Box maxW={{ base: "160px", md: "200px" }} w="full">
       <Link href="/">
-        <CImage src="/assets/phronai-logo.svg" alt="logo" w="full" />
+        <CImage
+          src="/assets/brand-assets/phronai-logo-black.svg"
+          alt="logo"
+          w="full"
+        />
       </Link>
     </Box>
   );

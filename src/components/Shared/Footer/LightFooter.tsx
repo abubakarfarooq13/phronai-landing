@@ -164,7 +164,7 @@ export default function FooterLighter() {
               // as="a"
               className="btn-grad"
               href="mailto:support@phron.ai"
-              w="full"
+              w={{ base: "fit-content", xl: "full" }}
               // maxW="140px"
             >
               Support

@@ -1,4 +1,4 @@
-import { Button } from "@chakra-ui/react";
+import { Box, Button } from "@chakra-ui/react";
 import { useWeb3Modal } from "@web3modal/wagmi/react";
 import { useAccount } from "wagmi";
 
@@ -23,7 +23,9 @@ export default function ConnectWalletButton(props: any) {
   const { address, isConnected } = useAccount();
 
   return gradientButton ? (
-    <button
+    <Box
+      as="button"
+      minW="200px"
       className="btn-grad"
       onClick={() => {
         isConnected
@@ -38,7 +40,7 @@ export default function ConnectWalletButton(props: any) {
         : props.label
         ? props.label
         : "Connect Wallet"}
-    </button>
+    </Box>
   ) : (
     <Button
       onClick={() => {
