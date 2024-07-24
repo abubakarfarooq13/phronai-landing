@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  Box,
-  Container,
-  Text,
-  Image as CImage,
-  SimpleGrid,
-  position,
-} from "@chakra-ui/react";
+import { Box, Container, Text, Image as CImage } from "@chakra-ui/react";
 import RoadMapCard from "./RoadMapCardLight";
 
 const Fade = require("react-reveal/Fade");

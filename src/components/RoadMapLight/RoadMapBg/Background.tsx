@@ -16,7 +16,11 @@ const Background = () => {
         "linear(to-b, #ebeff5, #fafafa)",
       ]}
       // bg={"#ebeff5"}
-      overflow={"hidden"}
+      // bgImage={"/assets/roadmaplight/background.png"}
+      // bgRepeat={"none"}
+      // bgSize={"cover"}
+      // bgPosition={"center"}
+      // overflow={"hidden"}
     >
       <Box position={"relative"} width={"full"}>
         <Box width={"full"}>
@@ -66,7 +70,7 @@ const Background = () => {
                 alt="bg"
                 width={"50%"}
                 position="relative"
-                style={{ top: "900px", left: "0" }}
+                style={{ top: "400px", left: "0" }}
               />
               <Image
                 src="/assets/roadmaplight/Vrstva3315right.png"
@@ -79,7 +83,7 @@ const Background = () => {
                 style={{
                   right: "0",
                   opacity: "0.7",
-                  top: "900px",
+                  top: "400px",
                 }}
               />
             </Box>
