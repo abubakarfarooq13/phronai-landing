@@ -36,7 +36,7 @@ const Fade = require("react-reveal/Fade");
 
 export default function WhitePapers() {
   return (
-    <Box mt={"-250px"}>
+    <Box>
       <Container maxW="1240px" pb="100px">
         <Fade bottom>
           <VStack mb="2">
