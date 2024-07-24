@@ -34,15 +34,16 @@ export default function Benchmark() {
         <Fade bottom>
           <VStack spacing="4" display={{ base: "none", md: "flex" }}>
             <Image
-              src="/assets/light-theme-home/benchmark-heading.png"
+              src="/assets/light-theme-home/benchmark.png"
               alt="benchmark table"
-              width={1240}
-              height={100}
+              width={2319}
+              height={982}
               style={{
                 margin: "0 auto",
+                maxWidth: "1240px",
               }}
             />
-            <Image
+            {/* <Image
               src="/assets/light-theme-home/benchmark-body.png"
               alt="benchmark table"
               width={1240}
@@ -61,7 +62,7 @@ export default function Benchmark() {
                 margin: "0 auto",
                 borderRadius: "20px",
               }}
-            />
+            /> */}
           </VStack>
 
           <VStack
