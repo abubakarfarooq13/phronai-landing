@@ -2,10 +2,16 @@ import React from "react";
 import Head from "next/head";
 import localFont from "next/font/local";
 import { CRoadMap, Footer, Nav } from "@/components";
+import RoadMapLight from "../components/RoadMapLight";
 import { Box } from "@chakra-ui/react";
 import { Inter } from "next/font/google";
 import { interFont } from "@/components/fonts";
-
+import WhitePapers from "../components/LightHome/WhitePapers";
+import TrustedBySection from "../components/LightHome/TrustedBySection";
+import OurTeam from "../components/RoadMapLight/OurTeam";
+import FooterLighter from "../components/Shared/Footer/LightFooter";
+import LightNav from "../components/Shared/Nav/LightNav";
+import Background from "../components/RoadMapLight/RoadMapBg/Background";
 // const FormularFont = localFont({
 //   src: [
 //     {
@@ -57,19 +63,30 @@ export default function RoadMap() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
-      <Nav />
-
+      {/* <Nav /> */}
+      <LightNav />
       <Box
-        // pt={{ base: "70px", "1350px": "120px" }}
-        bgColor="#000"
-        color="#fff"
+      // pt={{ base: "70px", "1350px": "120px" }}
+      // bgColor="#000"
+
+      // color="#fff"
       >
         <main id="roadmap-page" style={interFont.style}>
-          <CRoadMap />
+          {/* <CRoadMap /> */}
+          <Background />
+          <RoadMapLight />
+          <Box color={"black"}>
+            <WhitePapers />
+            <TrustedBySection />
+            <OurTeam />
+          </Box>
         </main>
       </Box>
+      <Box color={"#000"} bg={"#fff"}>
+        <FooterLighter />{" "}
+      </Box>
 
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
