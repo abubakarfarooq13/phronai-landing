@@ -16,7 +16,12 @@ export default function RoadMap() {
       pt={{ base: "40px", md: "160px" }}
       // pb={{ base: "50px", md: "100px" }}
     >
-      <Container mt={"20"} maxW="88%" pb={{ base: "60px", md: "0px" }}>
+      <Container
+        mt={{ base: "260px", md: "60px", lg: "20px" }}
+        maxW="88%"
+        pb={{ base: "60px", md: "0px" }}
+        pt={{ lg: "50px" }}
+      >
         <Fade bottom>
           <Text
             as="h1"
@@ -35,22 +40,22 @@ export default function RoadMap() {
         pb="70px"
         pos="relative"
         height={"full"}
-        gap={"500px"}
+        // gap={"500px"}
         display={"flex"}
         flexDir={"column"}
       >
         <Fade bottom>
           <Box
-            display={{ base: "block", md: "block", lg: "flex" }}
+            display={{ base: "grid", md: "grid", lg: "flex" }}
             justifyContent={"center"}
             height={"full"}
             pos={"relative"}
           >
             {/* <SimpleGrid
-            columns={{ base: 1, md: 2, lg: 5 }}
-            spacing={{ base: "70px", md: "0", lg: "0" }}
-          > */}
-            <Box mt={{ md: "150px" }}>
+              columns={{ md: 2, lg: 5 }}
+              // spacing={{ base: "70px", md: "0", lg: "0" }}
+            > */}
+            <Box mt={{ md: "200px", lg: "120px" }}>
               <Text px={"10px"} pb={"20px"} fontSize={"20px"} fontWeight={600}>
                 Q4 2023 / Q1 2024
               </Text>
@@ -137,7 +142,7 @@ export default function RoadMap() {
                 alt=".."
               />
             </Box>
-            <Box mt={{ base: "50px", md: "350px" }}>
+            <Box mt={{ base: "50px", md: "150px", lg: "350px" }}>
               <Text px={"10px"} pb={"20px"} fontSize={"20px"} fontWeight={600}>
                 Q2 2024
               </Text>
@@ -212,7 +217,7 @@ export default function RoadMap() {
                 alt=".."
               />
             </Box>
-            <Box mt={{ base: "50px", md: "550px" }}>
+            <Box mt={{ base: "50px", md: "150px", lg: "550px" }}>
               <Text px={"10px"} pb={"20px"} fontSize={"20px"} fontWeight={600}>
                 Q2 2024
               </Text>
@@ -274,32 +279,31 @@ export default function RoadMap() {
                   </Text>
                 </Box>
               </RoadMapCard>
-              {/* </SimpleGrid> */}
             </Box>
+            {/* </SimpleGrid> */}
           </Box>
         </Fade>
         <Fade bottom>
           <Box
-            display={{ base: "block", md: "block", lg: "flex" }}
-            mt={"20"}
+            display={{ base: "grid", md: "grid", lg: "flex" }}
+            mt={{ lg: "130px" }}
             // gap={20}
-            height={"0px"}
             justifyContent={"center"}
             pos={"relative"}
           >
             {/* <SimpleGrid
-            columns={{ base: 1, md: 2, lg: 3 }}
-            spacing={"650px"}
-            mt={{ base: "270px" }}
-          > */}
-            <Box mt={{ base: "-550px", lg: "-800px" }}>
+              columns={{ md: 2 }}
+              spacing={"650px"}
+              mt={{ base: "270px" }}
+            > */}
+            <Box mt={{ base: "80px", md: "150px", lg: "-370px" }}>
               <Text px={"10px"} pb={"20px"} fontSize={"20px"} fontWeight={600}>
                 Q3 2024
               </Text>
               <RoadMapCard
                 bgImageUrl="/assets/roadmaplight/4.png"
                 // title="Q3 2024"
-                minH={"750px"}
+                // minH={"750px"}
               >
                 <Box>
                   <Text
@@ -368,16 +372,16 @@ export default function RoadMap() {
             <Box
               pos={"relative"}
               display={{ base: "none", md: "none", lg: "flex" }}
-              top={"-690px"}
+              top={"-260px"}
             >
               <CImage
-                height={"390px"}
+                height={"410px"}
                 width={"90px"}
                 src="/assets/roadmaplight/curvedline.svg"
                 alt=".."
               />
             </Box>
-            <Box mt={{ base: "50px", md: "", lg: "-600px" }}>
+            <Box mt={{ base: "50px", md: "150px", lg: "-180px" }}>
               <Text px={"10px"} pb={"20px"} fontSize={"20px"} fontWeight={600}>
                 Q4 2024
               </Text>
@@ -387,7 +391,7 @@ export default function RoadMap() {
 
                 bgImageUrl="/assets/roadmaplight/5.png"
                 // title="Q4 2024"
-                minH={"500px"}
+                // minH={"500px"}
               >
                 <Box>
                   <Text
@@ -429,7 +433,7 @@ export default function RoadMap() {
             <Box
               pos={"relative"}
               display={{ base: "none", md: "none", lg: "flex" }}
-              top={"-320px"}
+              top={"130px"}
             >
               <CImage
                 height={"390px"}
@@ -438,7 +442,7 @@ export default function RoadMap() {
                 alt=".."
               />
             </Box>
-            <Box mt={{ base: "50px", md: "", lg: "-400px" }}>
+            <Box mt={{ base: "50px", md: "150px", lg: "50px" }}>
               <Text px={"10px"} pb={"20px"} fontSize={"20px"} fontWeight={600}>
                 Q1 2025
               </Text>
@@ -475,8 +479,8 @@ export default function RoadMap() {
                   </Text>
                 </Box>
               </RoadMapCard>
-              {/* </SimpleGrid> */}
             </Box>
+            {/* </SimpleGrid> */}
           </Box>{" "}
         </Fade>
       </Container>
