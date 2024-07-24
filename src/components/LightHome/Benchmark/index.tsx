@@ -38,10 +38,6 @@ export default function Benchmark() {
               alt="benchmark table"
               width={2319}
               height={982}
-              style={{
-                margin: "0 auto",
-                maxWidth: "1240px",
-              }}
             />
             {/* <Image
               src="/assets/light-theme-home/benchmark-body.png"
