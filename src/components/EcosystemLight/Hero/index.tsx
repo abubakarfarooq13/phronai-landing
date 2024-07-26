@@ -86,7 +86,7 @@ const EcosystemHero = () => {
                   <Text
                     cursor={"pointer"}
                     w="full"
-                    style={{ textWrap: "nowrap" }}
+                    style={{ whiteSpace: "nowrap" }}
                     // variant="primary-purple"
                     className="btn-grad"
                     // px={{ base: "7", md: "10", lg: "55px" }}
