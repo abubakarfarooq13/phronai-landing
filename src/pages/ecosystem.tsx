@@ -1,6 +1,6 @@
 import Head from "next/head";
 import localFont from "next/font/local";
-import { CHome, Ecosystem } from "@/components";
+import Ecosystem from "@/components/EcosystemLight/";
 import { Box } from "@chakra-ui/react";
 import { Inter } from "next/font/google";
 import { interFont } from "@/components/fonts";
@@ -58,7 +58,7 @@ export default function Home() {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <Box bgColor="#000" color="#fff">
+      <Box>
         <main id="ecosystem-page" style={interFont.style}>
           <Ecosystem />
         </main>

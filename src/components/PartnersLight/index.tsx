@@ -744,12 +744,13 @@ export default function CPartners() {
       >
         {/* <Nav /> */}
         <LightNav />
-        <Box width={"100%"} position={"absolute"} mt={"0px"}>
-          <Image
-            width={0}
-            height={0}
-            style={{ width: "100%", height: "100%" }}
-            src={"/assets/roadmaplight/Vrstva590.png"}
+        <Box width={"100%"} position={"absolute"} mt={"85px"}>
+          <CImage
+            width={"100%"}
+            height={{ base: "50vh", md: "70vh", lg: "100%" }}
+            bgSize={"cover"}
+            bgPos={"center"}
+            src={"/assets/partnerslight/partnersbg.png"}
             alt="BG"
           />
         </Box>
@@ -762,7 +763,7 @@ export default function CPartners() {
           <Fade bottom>
             <Flex
               // bgGradient={"linear(to-r,#d5dbfc,#f2e8fd,#d5dbfc)"}
-              height={"70vh"}
+              height={{ base: "full", lg: "70vh" }}
               width={"full"}
             >
               <Box
@@ -773,18 +774,6 @@ export default function CPartners() {
                 // justifyContent={"center"}
                 // alignItems={"start"}
               >
-                <Box
-                  position={"absolute"}
-                  right={{ base: "-40%", md: "0%", lg: "15%" }}
-                  style={{ zIndex: "-1", filter: "blur(80px) " }}
-                  // opacity={"0.7"}
-                  borderRadius={"full"}
-                  top={"-100px"}
-                  width={"500px"}
-                  height={"500px"}
-                  // bg={"red"}
-                  bgGradient={"radial(#fbf6fc,#ffe2e6)"}
-                ></Box>
                 <Box
                   display={"flex"}
                   flexDir={"column"}
@@ -810,13 +799,13 @@ export default function CPartners() {
                   </Text>
                 </Box>
                 <CImage
-                  mt={{ base: "-70", lg: "-60px" }}
-                  ml={{ base: "-180px", md: "-70px", lg: "-30px" }}
+                  mt={{ base: "20px", md: "80px", lg: "0px" }}
+                  ml={{ base: "-180px", md: "-150px", lg: "-30px" }}
                   style={{
                     zIndex: "",
                   }}
-                  width={"100rem"}
-                  height={"100%"}
+                  width={"100%"}
+                  height={{ base: "80%", md: "50%", lg: "90%" }}
                   src={"/assets/partnerslight/partners.png"}
                   alt="PhronAI"
                 />
@@ -969,9 +958,9 @@ export default function CPartners() {
             </Text>
           </Box>
         </Container>
-        <Whitepapers />
+        {/* <Whitepapers />
         <Trustedby />
-        <OurTeam />
+        <OurTeam /> */}
         <LightFooter />
         {/* <Footer /> */}
       </Box>{" "}
