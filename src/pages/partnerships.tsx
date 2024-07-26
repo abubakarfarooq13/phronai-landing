@@ -1,8 +1,8 @@
 import Head from "next/head";
 import localFont from "next/font/local";
 import { CPhron } from "@/components";
-import { Box } from "@chakra-ui/react";
-import Partners from "@/components/Partners";
+import { Box, Flex } from "@chakra-ui/react";
+import Partners from "@/components/PartnersLight";
 import { Inter } from "next/font/google";
 import { interFont } from "@/components/fonts";
 
@@ -57,11 +57,14 @@ export default function Phron() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <Box
-        // pt={{ base: "70px", "1350px": "160px" }}
-        bgColor="#000"
-        color="#fff"
+      // pt={{ base: "70px", "1350px": "160px" }}
+      // bgColor="#000"
+      // color="#fff"
       >
-        <main id="phron-page" style={interFont.style}>
+        <main
+          // id="phron-page"
+          style={interFont.style}
+        >
           <Partners />
         </main>
       </Box>
