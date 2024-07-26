@@ -2,7 +2,7 @@ import React from "react";
 import Head from "next/head";
 import localFont from "next/font/local";
 // import { CRoadMap, CTeam, Footer, Nav } from "@/components";
-import CTeam from "@/components/TeamLight/";
+import CTeam from "@/components/TeamLight/index";
 import { Box } from "@chakra-ui/react";
 import { Inter } from "next/font/google";
 import { interFont } from "@/components/fonts";
