@@ -75,11 +75,11 @@ export default function RoadMap() {
           {/* <CRoadMap /> */}
           <Background />
           <RoadMapLight />
-          <Box mt={{ md: "100px", lg: "100px" }} color={"black"}>
+          {/* <Box mt={{ md: "100px", lg: "100px" }} color={"black"}>
             <WhitePapers />
             <TrustedBySection />
             <OurTeam />
-          </Box>
+          </Box> */}
         </main>
       </Box>
       <Box color={"#000"} bg={"#fff"}>

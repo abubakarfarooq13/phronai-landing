@@ -1,22 +1,22 @@
 export const layerZeroAndLayerOneMenuItems = [
-  {
-    id: 2,
-    label: "Layer 0",
-    href: "/phronzero",
-    icon: "/assets/new-home/layer-icon.png",
-  },
-  {
-    id: 2,
-    label: "Layer 1",
-    href: "/chain",
-    icon: "/assets/new-home/layer-icon.png",
-  },
-  {
-    id: 6,
-    label: "Phron Coin",
-    href: "/phron",
-    icon: "/assets/new-home/phron-coin.png",
-  },
+  // {
+  //   id: 2,
+  //   label: "Layer 0",
+  //   href: "/phronzero",
+  //   icon: "/assets/new-home/layer-icon.png",
+  // },
+  // {
+  //   id: 2,
+  //   label: "Layer 1",
+  //   href: "/chain",
+  //   icon: "/assets/new-home/layer-icon.png",
+  // },
+  // {
+  //   id: 6,
+  //   label: "Phron Coin",
+  //   href: "/phron",
+  //   icon: "/assets/new-home/phron-coin.png",
+  // },
   {
     id: 3,
     label: "Ecosystem",
@@ -62,12 +62,12 @@ export const networkMenuItems = [
 ];
 
 export const communityMenuItems = [
-  {
-    id: 11,
-    label: "Dubai Expo 2023",
-    href: "/dubai-crypto-expo-2023",
-    icon: "/assets/new-home/dubai-expo.svg",
-  },
+  // {
+  //   id: 11,
+  //   label: "Dubai Expo 2023",
+  //   href: "/dubai-crypto-expo-2023",
+  //   icon: "/assets/new-home/dubai-expo.svg",
+  // },
   {
     id: 9,
     label: "Partnerships",

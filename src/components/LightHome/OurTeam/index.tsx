@@ -3,40 +3,40 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const topBar = [
-  {
-    id: "04",
-    name: "Igor Bershadsky",
-    role: "Co-Founder",
-    image: "/assets/light-theme-home/igor-bershadsky.png",
-    linkedinUrl: "https://www.linkedin.com/in/igorbershadsky/",
-    imageWidth: 240,
-    imageHeight: 240,
-    display: { base: "none", xl: "block" },
-  },
-  {
-    id: "05",
-    name: "Guillermo Guimaraes",
-    role: "Co-Founder",
-    image: "/assets/light-theme-home/guillermo.png",
-    linkedinUrl: "https://www.linkedin.com/in/guillermoguimaraes/",
-    imageWidth: 240,
-    imageHeight: 240,
-    display: { base: "none", xl: "block" },
-  },
-  {
-    id: "07",
-    name: "Nikita Sachdev",
-    role: "Advisor",
-    image: "/assets/light-theme-home/nikita-sachdev.png",
-    linkedinUrl: "https://www.linkedin.com/in/nikitasachdev/",
-    imageWidth: 240,
-    imageHeight: 240,
-    display: { base: "none", xl: "block" },
-  },
-];
+// const topBar = [
+//   {
+//     id: "04",
+//     name: "Igor Bershadsky",
+//     role: "Co-Founder",
+//     image: "/assets/light-theme-home/igor-bershadsky.png",
+//     linkedinUrl: "https://www.linkedin.com/in/igorbershadsky/",
+//     imageWidth: 240,
+//     imageHeight: 240,
+//     display: { base: "none", xl: "block" },
+//   },
+//   {
+//     id: "05",
+//     name: "Guillermo Guimaraes",
+//     role: "Co-Founder",
+//     image: "/assets/light-theme-home/guillermo.png",
+//     linkedinUrl: "https://www.linkedin.com/in/guillermoguimaraes/",
+//     imageWidth: 240,
+//     imageHeight: 240,
+//     display: { base: "none", xl: "block" },
+//   },
+//   {
+//     id: "07",
+//     name: "Nikita Sachdev",
+//     role: "Advisor",
+//     image: "/assets/light-theme-home/nikita-sachdev.png",
+//     linkedinUrl: "https://www.linkedin.com/in/nikitasachdev/",
+//     imageWidth: 240,
+//     imageHeight: 240,
+//     display: { base: "none", xl: "block" },
+//   },
+// ];
 
-export const team = [
+const teamMembers = [
   {
     id: "04",
     name: "Igor Bershadsky",
@@ -57,25 +57,7 @@ export const team = [
     imageHeight: 240,
     display: { base: "block", xl: "none" },
   },
-  {
-    id: "07",
-    name: "Nikita Sachdev",
-    role: "Advisor",
-    image: "/assets/light-theme-home/nikita-sachdev.png",
-    linkedinUrl: "https://www.linkedin.com/in/nikitasachdev/",
-    imageWidth: 240,
-    imageHeight: 240,
-    display: { base: "block", xl: "none" },
-  },
-  {
-    id: "10",
-    name: "Vitalii Yatskiv",
-    role: "CTO",
-    image: "/assets/light-theme-home/vitalii.png",
-    linkedinUrl: "https://www.linkedin.com/in/vitalii-yatskiv/",
-    imageWidth: 220,
-    imageHeight: 220,
-  },
+
   {
     id: "02",
     name: "Adel Elmessiry, Ph.D.",
@@ -133,6 +115,28 @@ export const team = [
   },
 ];
 
+const advisors = [
+  {
+    id: "07",
+    name: "Nikita Sachdev",
+    role: "Advisor",
+    image: "/assets/light-theme-home/nikita-sachdev.png",
+    linkedinUrl: "https://www.linkedin.com/in/nikitasachdev/",
+    imageWidth: 240,
+    imageHeight: 240,
+    display: { base: "block", xl: "none" },
+  },
+  {
+    id: "10",
+    name: "Vitalii Yatskiv",
+    role: "CTO",
+    image: "/assets/light-theme-home/vitalii.png",
+    linkedinUrl: "https://www.linkedin.com/in/vitalii-yatskiv/",
+    imageWidth: 220,
+    imageHeight: 220,
+  },
+];
+
 const Fade = require("react-reveal/Fade");
 
 export default function OurTeam() {
@@ -146,23 +150,39 @@ export default function OurTeam() {
           <Text as="h2" fontSize="3xl" textAlign="center" pb="50px">
             Our Team
           </Text>
+
+          <Text
+            fontSize={{ base: "lg", "2340px": "30px" }}
+            letterSpacing="2px"
+            as="h3"
+            mb="6"
+            textAlign="center"
+            fontWeight={700}
+          >
+            Team Members
+          </Text>
         </Fade>
 
         <Fade bottom>
-          <Wrap justify="center" spacing="6" mb="6">
-            {topBar.map((member) => (
-              <WrapItem key={member.id} display={member.display}>
-                <Box>
+          <Wrap justify="center" spacing="6" w="full">
+            {teamMembers.map((member) => (
+              <WrapItem
+                key={member.id}
+                // display={member.display}
+                maxW={{ base: "140px", xl: "240px" }}
+              >
+                <Box w="full">
                   <Image
                     src={member.image}
                     alt={member.name + " image"}
                     width={member.imageWidth}
                     height={member.imageWidth}
+                    style={{ width: "100%" }}
                   />
                   <Text fontSize="16px" fontWeight={600} pt="4">
                     {member.name}
                   </Text>
-                  <Text fontSize="14px" color="#8a8a8a" pt="1">
+                  <Text fontSize="14px" color="#8a8a8a">
                     {member.role}
                   </Text>
                 </Box>
@@ -172,13 +192,23 @@ export default function OurTeam() {
         </Fade>
 
         <Fade bottom>
+          <Text
+            fontSize={{ base: "lg", "2340px": "30px" }}
+            letterSpacing="2px"
+            as="h3"
+            mb="6"
+            textAlign="center"
+            mt="16"
+            fontWeight={700}
+          >
+            Advisors
+          </Text>
+        </Fade>
+
+        <Fade bottom>
           <Wrap justify="center" spacing="6" w="full">
-            {team.map((member) => (
-              <WrapItem
-                key={member.id}
-                display={member.display}
-                maxW={{ base: "140px", xl: "240px" }}
-              >
+            {advisors.map((member) => (
+              <WrapItem key={member.id} maxW={{ base: "140px", xl: "240px" }}>
                 <Box w="full">
                   <Image
                     src={member.image}

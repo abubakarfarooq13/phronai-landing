@@ -7,6 +7,7 @@ import {
   Stack,
   Button,
 } from "@chakra-ui/react";
+import Image from "next/image";
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
 const Fade = require("react-reveal/Fade");
 
@@ -24,28 +25,17 @@ const EcosystemHero = () => {
       >
         <Container maxW={"1240px"}>
           <Fade bottom>
-            <Box
-              pl={{ md: "0px", lg: "0px" }}
-              display={{ base: "block", md: "grid", lg: "flex" }}
-              justifyContent={{ base: "center", md: "center" }}
-              gap={{ lg: "80px" }}
-              color={"#000"}
-              // gap={{ lg: "20px" }}
-              width={"full"}
-              height={"full"}
+            <Stack
+              direction={{ base: "column", lg: "row" }}
+              justifyContent="space-between"
+              pt="100px"
+              zIndex={99}
+              alignItems="center"
             >
               <VStack
                 w={{ base: "100%", md: "100%", lg: "50%" }}
                 align={{ base: "center", lg: "start" }}
                 h="100%"
-                pt={"130px"}
-                // pt={{
-                //   base: "0px",
-                //   "2560px": "100px",
-                //   "3400px": "250px",
-                //   "4000px": "300px",
-                // }}
-                // zIndex={99}/
               >
                 <Text
                   fontSize={{ base: "2xl", md: "3xl", lg: "xl" }}
@@ -114,35 +104,33 @@ const EcosystemHero = () => {
                 </Stack>
               </VStack>
 
-              <CImage
-                ml={{ lg: "-90px" }}
-                // mt={{ md: "-60px", lg: "-70px" }}
-                mt={{ md: "30px", lg: "60px" }}
-                position={"relative"}
-                display={{ base: "flex", md: "flex", lg: "flex" }}
-                mixBlendMode={"multiply"}
-                style={{ zIndex: "-1", mixBlendMode: "multiply" }}
+              <Image
                 src="/assets/ecosystemlight/hero.png"
                 alt="hero"
-                height={{ lg: "full" }}
-                width={{ base: "700px", md: "600px", lg: "450px" }}
+                width={450}
+                height={450}
+                style={{
+                  mixBlendMode: "multiply",
+                }}
               />
-            </Box>
+            </Stack>
           </Fade>
         </Container>
         <Box>
           <Fade bottom>
             <Container
               my={{ lg: "150px" }}
-              mb={{ md: "150px" }}
-              display={{ base: "grid", md: "grid", lg: "flex" }}
+              mb={{ base: "20px", md: "150px" }}
+              display="grid"
               gridTemplateColumns={{
+                base: "repeat(1,1fr)",
                 md: "repeat(2,1fr)",
+                lg: "repeat(3,1fr)",
               }}
               style={{ zIndex: "2" }}
               gridGap={{ base: "20px", md: "20px" }}
               gridRowGap={{ md: "30px" }}
-              maxW={"1100px"}
+              maxW={"1240px"}
               mt={{ base: "20px", md: "80px", lg: "80px" }}
               justifyContent={{ md: "center", lg: "space-between" }}
             >
@@ -150,13 +138,14 @@ const EcosystemHero = () => {
                 height={"80px"}
                 maxH={"80px"}
                 bg={"#fff"}
-                minW={"350px"}
+                minW={"full"}
                 display={"flex"}
                 alignItems={"center"}
                 py={"20px"}
                 px={"25px"}
                 borderRadius={"xl"}
                 gap={"30px"}
+                boxShadow="lg"
               >
                 <Box
                   bg={"#d8ddfd"}
@@ -187,13 +176,14 @@ const EcosystemHero = () => {
                 height={"80px"}
                 maxH={"80px"}
                 bg={"#fff"}
-                minW={"350px"}
+                minW={"full"}
                 display={"flex"}
                 alignItems={"center"}
                 py={"20px"}
                 px={"25px"}
                 borderRadius={"xl"}
                 gap={"30px"}
+                boxShadow="lg"
               >
                 <Box
                   bg={"#d8ddfd"}
@@ -224,13 +214,14 @@ const EcosystemHero = () => {
                 height={"80px"}
                 maxH={"80px"}
                 bg={"#fff"}
-                minW={"350px"}
+                minW={"full"}
                 display={"flex"}
                 alignItems={"center"}
                 py={"20px"}
                 px={"25px"}
                 borderRadius={"xl"}
                 gap={"30px"}
+                boxShadow="lg"
               >
                 <Box
                   bg={"#d8ddfd"}

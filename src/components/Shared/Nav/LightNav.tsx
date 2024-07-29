@@ -181,7 +181,7 @@ export function SubMenu(props: any) {
                   }}
                   as={Link}
                   href={item.href}
-                  bgColor={router.pathname === item.href ? "#2d1a65" : "none"}
+                  bgColor={router.pathname === item.href ? "#e8effc" : "none"}
                 >
                   <Image
                     src={item.icon}

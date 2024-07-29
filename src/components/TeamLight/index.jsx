@@ -176,7 +176,7 @@ export default function Team() {
   return (
     <Box bg={"#fff"} color={"#000"}>
       <NavLight />
-      <Container maxW={"1240px"} pt={{ base: "30px", md: "160px" }} pb="100px">
+      <Container maxW={"1240px"} pt={{ base: "30px", md: "160px" }}>
         <Fade bottom>
           <Box>
             <Text
@@ -195,7 +195,7 @@ export default function Team() {
         <Wrap mt="10" mb="20" spacing="8" justify="center">
           {team.map((member, i) => (
             <WrapItem
-              maxW={{ base: "430px", md: "350px", lg: "430px" }}
+              maxW={{ base: "430px", md: "350px", lg: "380px" }}
               position="relative"
               w="full"
               rounded="xl"
