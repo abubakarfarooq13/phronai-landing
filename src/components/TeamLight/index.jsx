@@ -181,6 +181,7 @@ export default function Team() {
           <Box>
             <Text
               // ml={"2.5%"}
+              pt={{ md: "10px", lg: "10px" }}
               as="h1"
               fontSize={{ base: "4xl", md: "5xl", "3000px": "7xl" }}
               lineHeight={{ base: "40px", md: "60px", "3000px": "70px" }}

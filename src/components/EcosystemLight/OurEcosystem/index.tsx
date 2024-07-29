@@ -53,7 +53,7 @@ const Ecosystem = () => {
                   >
                     Phron Explorer
                   </Text>
-                  <Text fontSize={"sm"}>
+                  <Text fontSize={"sm"} textAlign={{ base: "center" }}>
                     Check out all the information our blockchain provides
                   </Text>
                   <Text
