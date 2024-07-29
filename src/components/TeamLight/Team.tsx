@@ -12,7 +12,7 @@ export default function Team() {
   return (
     <Box bgPos="bottom" bgSize="100% 100%" bgRepeat="no-repeat">
       <Nav />
-      <Container maxW="1460px" pt="70px" pb="100px">
+      <Container pt="70px" pb="100px">
         <Fade bottom>
           <Text textAlign="center" fontSize="3xl" fontWeight={300} opacity=".8">
             PhronZero

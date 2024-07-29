@@ -286,9 +286,9 @@ export default function Team() {
             </Text>
           </Button> */}
 
-          <a className="btn" href="mailto:info@phron.ai">
-            {/* Contact Us Button */}
-          </a>
+          {/* <a className="btn" href="mailto:info@phron.ai">
+            Contact Us Button
+          </a> */}
         </VStack>
 
         {/* <VStack mt="20">

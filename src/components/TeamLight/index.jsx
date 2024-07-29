@@ -20,6 +20,7 @@ import { FaLinkedin } from "react-icons/fa";
 import { BsArrowRightCircleFill } from "react-icons/bs";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
+import FooterLighter from "../Shared/Footer/LightFooter";
 
 const Fade = require("react-reveal/Fade");
 
@@ -175,11 +176,11 @@ export default function Team() {
   return (
     <Box bg={"#fff"} color={"#000"}>
       <NavLight />
-      <Container maxW="1460px" pt={{ base: "30px", md: "160px" }} pb="100px">
+      <Container maxW={"1240px"} pt={{ base: "30px", md: "160px" }} pb="100px">
         <Fade bottom>
           <Box>
             <Text
-              ml={"2.5%"}
+              // ml={"2.5%"}
               as="h1"
               fontSize={{ base: "4xl", md: "5xl", "3000px": "7xl" }}
               lineHeight={{ base: "40px", md: "60px", "3000px": "70px" }}
@@ -291,6 +292,7 @@ export default function Team() {
           ))}
         </Wrap>
       </Container>
+      <FooterLighter />
     </Box>
   );
 }

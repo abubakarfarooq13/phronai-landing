@@ -14,13 +14,13 @@ const Ecosystem = () => {
     <>
       <Box
         overflowX={"hidden"}
-        mt={{ base: "-300px", md: "-200px", lg: "-70px" }}
+        mt={{ base: "0px", md: "50px", lg: "-50px" }}
         backgroundImage={"/assets/ecosystemlight/bgsection2.png"}
         bgSize={"cover"}
         bgPos={"center"}
         // h={"90vh"}
       >
-        <Container maxW={"1160px"}>
+        <Container maxW={"1240px"}>
           <Fade bottom>
             <Box
               py={{ base: "50px", md: "50px", lg: "100px" }}
@@ -70,13 +70,17 @@ const Ecosystem = () => {
               </Stack>
               <CImage
                 mr={{ base: "0px", md: "", lg: "-400px" }}
-                ml={{ base: "100px", md: "150px", lg: "0px" }}
+                ml={{ base: "68px", md: "150px", lg: "0px" }}
                 mt={{ base: "40px", md: "50px", lg: "0px" }}
                 position={"relative"}
                 src="/assets/ecosystemlight/section2.png"
                 alt="section2"
-                height={{ base: "350px", md: "400px" }}
-                width={{ base: "800px", md: "900px", lg: "1000px" }}
+                height={{ base: "340px", md: "400px" }}
+                // width={"full"}
+                // height={"full"}
+                // bgPos={"center"}
+                // bgSize={"cover"}
+                width={{ base: "full", md: "900px", lg: "1000px" }}
               />
             </Box>
           </Fade>
@@ -105,8 +109,12 @@ const Ecosystem = () => {
               color={"#000"}
             >
               <CImage
-                ml={{ base: "30px", md: "30px", lg: "-180px" }}
+                ml={{ base: "10px", md: "30px", lg: "-180px" }}
                 width={{ base: "450px", md: "700px", lg: "600px" }}
+                // width={"full"}
+                // height={"full"}
+                // bgPos={"center"}
+                // bgSize={"cover"}
                 position={"relative"}
                 src="/assets/ecosystemlight/section3.png"
                 alt="section3"
@@ -155,11 +163,11 @@ const Ecosystem = () => {
         </Container>
       </Box>
       <Box
-        h={{ lg: "90vh" }}
+        // h={{ md: "0px", lg: "90vh" }}
         overflowX={"hidden"}
         overflowY={"hidden"}
         // mt={"-50px"}
-        py={{ base: "100px", md: "100px", lg: "0px" }}
+        py={{ base: "50px", md: "100px", lg: "100px" }}
         backgroundImage={"/assets/ecosystemlight/bgsection4.png"}
         bgSize={"cover"}
         bgPos={"center"}
@@ -199,7 +207,10 @@ const Ecosystem = () => {
                     <br />
                     Decentralized Exchange
                   </Text>
-                  <Text fontSize={"sm"}>
+                  <Text
+                    fontSize={"sm"}
+                    textAlign={{ base: "center", md: "start", lg: "start" }}
+                  >
                     Enjoy a seamless transition between PHRON and your favorite
                     token
                   </Text>
@@ -216,10 +227,14 @@ const Ecosystem = () => {
                 </VStack>
               </Stack>
               <CImage
-                ml={{ base: "80px", md: "110px", lg: "0px" }}
+                ml={{ base: "50px", md: "110px", lg: "0px" }}
                 mr={{ md: "", lg: "-200px" }}
                 height={{ base: "380px", md: "500px", lg: "550px" }}
                 width={{ base: "600px", md: "900px", lg: "900px" }}
+                // width={"full"}
+                // height={"full"}
+                // bgPos={"center"}
+                // bgSize={"cover"}
                 position={"relative"}
                 src="/assets/ecosystemlight/section423.png"
                 alt="section4"

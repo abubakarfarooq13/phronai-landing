@@ -15,19 +15,20 @@ const EcosystemHero = () => {
     <>
       <Box
         overflowX={"hidden"}
-        mt={"140px"}
+        mt={{ base: "0px", md: "100px" }}
         backgroundImage={"/assets/ecosystemlight/backgroundhero.jpg"}
         bgSize={"cover"}
         bgPos={"center"}
-        h={{ base: "140vh", md: "150vh", lg: "150vh" }}
+        h={{ base: "full", md: "full", lg: "full" }}
         overflow={"hidden"}
       >
-        <Container maxW={"1160px"}>
+        <Container maxW={"1240px"}>
           <Fade bottom>
             <Box
-              pl={{ md: "0px", lg: "100px" }}
+              pl={{ md: "0px", lg: "0px" }}
               display={{ base: "block", md: "grid", lg: "flex" }}
               justifyContent={{ base: "center", md: "center" }}
+              gap={{ lg: "80px" }}
               color={"#000"}
               // gap={{ lg: "20px" }}
               width={"full"}
@@ -114,15 +115,17 @@ const EcosystemHero = () => {
               </VStack>
 
               <CImage
-                ml={{ lg: "-40px" }}
-                mt={{ md: "-60px", lg: "-70px" }}
+                ml={{ lg: "-90px" }}
+                // mt={{ md: "-60px", lg: "-70px" }}
+                mt={{ md: "30px", lg: "60px" }}
                 position={"relative"}
                 display={{ base: "flex", md: "flex", lg: "flex" }}
-                style={{ zIndex: "-1" }}
+                mixBlendMode={"multiply"}
+                style={{ zIndex: "-1", mixBlendMode: "multiply" }}
                 src="/assets/ecosystemlight/hero.png"
                 alt="hero"
-                // height={"50%"}
-                width={{ base: "700px", md: "800px", lg: "800px" }}
+                height={{ lg: "full" }}
+                width={{ base: "700px", md: "600px", lg: "450px" }}
               />
             </Box>
           </Fade>
@@ -130,14 +133,17 @@ const EcosystemHero = () => {
         <Box>
           <Fade bottom>
             <Container
+              my={{ lg: "150px" }}
+              mb={{ md: "150px" }}
               display={{ base: "grid", md: "grid", lg: "flex" }}
               gridTemplateColumns={{
                 md: "repeat(2,1fr)",
               }}
+              style={{ zIndex: "2" }}
               gridGap={{ base: "20px", md: "20px" }}
               gridRowGap={{ md: "30px" }}
-              maxW={"1160px"}
-              mt={{ base: "-90px", md: "-80px", lg: "-80px" }}
+              maxW={"1100px"}
+              mt={{ base: "20px", md: "80px", lg: "80px" }}
               justifyContent={{ md: "center", lg: "space-between" }}
             >
               <Box

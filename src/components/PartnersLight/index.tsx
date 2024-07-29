@@ -744,7 +744,11 @@ export default function CPartners() {
       >
         {/* <Nav /> */}
         <LightNav />
-        <Box width={"100%"} position={"absolute"} mt={"85px"}>
+        <Box
+          width={"100%"}
+          position={"absolute"}
+          mt={{ base: "0px", lg: "85px" }}
+        >
           <CImage
             width={"100%"}
             height={{ base: "50vh", md: "70vh", lg: "100%" }}
@@ -799,13 +803,31 @@ export default function CPartners() {
                   </Text>
                 </Box>
                 <CImage
-                  mt={{ base: "20px", md: "80px", lg: "0px" }}
-                  ml={{ base: "-180px", md: "-150px", lg: "-30px" }}
+                  mt={{
+                    base: "10px",
+                    md: "80px",
+                    lg: "30px",
+                    // // xl: "100px",
+                    // "2xl": "0px",
+                    // "3xl": "100px",
+                  }}
+                  ml={{
+                    base: "-180px",
+                    md: "-150px",
+                    lg: "-30px",
+                    "3xl": "-60px",
+                  }}
                   style={{
                     zIndex: "",
                   }}
-                  width={"100%"}
-                  height={{ base: "80%", md: "50%", lg: "90%" }}
+                  width={{ md: "full", lg: "800px", "3xl": "900px" }}
+                  height={{
+                    base: "80%",
+                    md: "65%",
+                    lg: "80%",
+                    // xl: "60%",
+                    // "3xl": "60%",
+                  }}
                   src={"/assets/partnerslight/partners.png"}
                   alt="PhronAI"
                 />
