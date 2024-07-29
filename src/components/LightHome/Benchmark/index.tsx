@@ -7,7 +7,6 @@ const Fade = require("react-reveal/Fade");
 export default function Benchmark() {
   return (
     <Box
-      bg="red"
       pb="70px"
       pt="50px"
       bgImage="/assets/light-theme-home/benchmark-section-bg.png"
