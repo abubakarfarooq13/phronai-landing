@@ -30,21 +30,21 @@ export const footerMenu = [
     id: 1,
     title: "Layer 1/Layer 0",
     menu: [
-      {
-        id: 1,
-        label: "Layer 1",
-        href: "/chain",
-      },
-      {
-        id: 2,
-        label: "Layer 0",
-        href: "/phronzero",
-      },
-      {
-        id: 3,
-        label: "Phron Coin",
-        href: "/phron",
-      },
+      // {
+      //   id: 1,
+      //   label: "Layer 1",
+      //   href: "/chain",
+      // },
+      // {
+      //   id: 2,
+      //   label: "Layer 0",
+      //   href: "/phronzero",
+      // },
+      // {
+      //   id: 3,
+      //   label: "Phron Coin",
+      //   href: "/phron",
+      // },
       {
         id: 4,
         label: "Ecosystem",
@@ -119,11 +119,11 @@ export const footerMenu = [
     id: 4,
     title: "Company",
     menu: [
-      {
-        id: 1,
-        label: "Brand Assets",
-        href: "/brand-assets",
-      },
+      // {
+      //   id: 1,
+      //   label: "Brand Assets",
+      //   href: "/brand-assets",
+      // },
       {
         id: 1,
         label: "Partnerships",

@@ -15,18 +15,15 @@ import TrustedBySection from "@/components/NewHome/TrustedBySection";
 import { footerMenu, socialIcons } from ".";
 import Logo from "../Logo";
 import DarkLogo from "../Logo/DarkLogo";
+import Image from "next/image";
 
 export default function FooterLighter() {
   const router = useRouter();
   return (
-    <Box overflow="hidden">
+    <Box bgImage="/assets/footer-bg.jpg" bgSize="cover" bgPos="center">
       <Box
         as="footer"
-        // bgImage="/assets/footer-bg.png"
-        // bgSize="cover"
-        // bgPos="top"
         maxW="1240px"
-        position="relative"
         mx="auto"
         // _after={{
         //   content: `''`,
@@ -39,19 +36,33 @@ export default function FooterLighter() {
         //   filter: { base: "blur(70px)", "2340px": "blur(100px)" },
         //   visibility: { base: "hidden", xl: "visible" },
         // }}
+        position="relative"
         pb="5"
       >
+        <Box
+          position="absolute"
+          top="-150px"
+          display={{ base: "none", lg: "block" }}
+        >
+          <Image
+            src="/assets/footer-coin.png"
+            alt="footer coin"
+            width={300}
+            height={300}
+          />
+        </Box>
         <Stack
           direction="row"
-          justifyContent={{ base: "center", md: "flex-end" }}
-          mt="10"
+          justifyContent="center"
+          pt={{ base: "20", lg: "72" }}
           px="4"
+          flexWrap="wrap"
         >
           {socialIcons.map((social) => (
             <GridItem key={social.id}>
               <Text
-                py="2"
-                px="3"
+                py="4"
+                px="6"
                 rounded="lg"
                 as={Link}
                 w="full"
@@ -62,14 +73,14 @@ export default function FooterLighter() {
                   transition: "all .3s",
                   // color: "rgba(105,46,164,1)",
                   // bgColor: social.hoverGbColor,
-                  bgColor: "#d8e5fd",
+                  bgColor: "#fff4fb",
                 }}
                 display="flex"
                 alignItems="center"
                 justifyContent="center"
-                bgColor={"#e8effc"}
+                bgColor={"#faf7f9"}
               >
-                <Text as="span" fontSize="24px" color="#000">
+                <Text as="span" fontSize="44px" color="#000">
                   <social.icon />
                 </Text>
                 {/* <Text
@@ -87,7 +98,7 @@ export default function FooterLighter() {
         </Stack>
         {/* {router.pathname === "/" ? <TrustedBySection /> : null} */}
         <Container
-          maxW="1240px"
+          maxW="1040px"
           px={{ base: "4", xl: "4" }}
           zIndex="99"
           position="relative"
@@ -96,7 +107,7 @@ export default function FooterLighter() {
           <Grid
             gridTemplateColumns={{
               base: "repeat(2, 1fr)",
-              md: "repeat(4, 1fr)",
+              md: "repeat(3, 1fr)",
             }}
             pb="10"
             display={{ base: "grid", lg: "none" }}
@@ -131,7 +142,8 @@ export default function FooterLighter() {
             justifyContent={{ base: "center" }}
             alignItems={{ base: "center", md: "flex-start" }}
             // flexWrap="wrap"
-            spacing="32"
+            spacing="0"
+            pt="10  "
           >
             {footerMenu.map((menu) => (
               <VStack
@@ -164,12 +176,13 @@ export default function FooterLighter() {
               as="a"
               // variant="primary-purple"
               rounded="full"
-              px="8"
+              px={{ base: "8", lg: "12" }}
               // fontFamily="inherit"
               // as="a"
               className="btn-grad"
               href="mailto:support@phron.ai"
-              w={{ base: "fit-content", xl: "full" }}
+              w="fit-content"
+              mr={{ lg: "20" }}
               // maxW="140px"
             >
               Support
