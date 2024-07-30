@@ -67,12 +67,13 @@ const teamMembers = [
     imageWidth: 220,
     imageHeight: 220,
   },
+
   {
-    id: "07",
-    name: "Sander Görtjes",
-    role: "Advisor",
-    image: "/assets/light-theme-home/sander.png",
-    linkedinUrl: "https://www.linkedin.com/in/sandergortjes/",
+    id: "10",
+    name: "Vitalii Yatskiv",
+    role: "CTO",
+    image: "/assets/light-theme-home/vitalii.png",
+    linkedinUrl: "https://www.linkedin.com/in/vitalii-yatskiv/",
     imageWidth: 220,
     imageHeight: 220,
   },
@@ -127,11 +128,11 @@ const advisors = [
     display: { base: "block", xl: "none" },
   },
   {
-    id: "10",
-    name: "Vitalii Yatskiv",
-    role: "CTO",
-    image: "/assets/light-theme-home/vitalii.png",
-    linkedinUrl: "https://www.linkedin.com/in/vitalii-yatskiv/",
+    id: "07",
+    name: "Sander Görtjes",
+    role: "Advisor",
+    image: "/assets/light-theme-home/sander.png",
+    linkedinUrl: "https://www.linkedin.com/in/sandergortjes/",
     imageWidth: 220,
     imageHeight: 220,
   },
@@ -172,7 +173,7 @@ export default function OurTeam() {
                 maxW={{ base: "140px", xl: "240px" }}
                 w="full"
               >
-                <Box w="full">
+                <Box w="full" textAlign="center">
                   <Image
                     src={member.image}
                     alt={member.name + " image"}
@@ -213,6 +214,7 @@ export default function OurTeam() {
                 key={member.id}
                 maxW={{ base: "140px", xl: "240px" }}
                 w="full"
+                textAlign="center"
               >
                 <Box w="full">
                   <Image
