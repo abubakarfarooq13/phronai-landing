@@ -79,16 +79,16 @@ export const communityMenuItems = [
 export const papersMenuItems = [
   {
     id: 9,
-    label: "Whitepaper Pure",
+    label: "Whitepaper",
     href: "https://phron.ai/whitepaper_pure.pdf",
     icon: "/assets/new-home/docs-icon.png",
   },
-  {
-    id: 10,
-    label: "Whitepaper Royal",
-    href: "https://phron.ai/whitepaper_royal.pdf",
-    icon: "/assets/new-home/docs-icon.png",
-  },
+  // {
+  //   id: 10,
+  //   label: "Whitepaper Royal",
+  //   href: "https://phron.ai/whitepaper_royal.pdf",
+  //   icon: "/assets/new-home/docs-icon.png",
+  // },
   {
     id: 12,
     label: "Tokenomics",

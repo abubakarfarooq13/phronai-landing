@@ -71,7 +71,7 @@ export default function Hero() {
             spacing="4"
           >
             <Fade left>
-              <Text
+              {/* <Text
                 fontSize="2xl"
                 lineHeight="130%"
                 letterSpacing="1px"
@@ -80,7 +80,7 @@ export default function Hero() {
                 ml="1"
               >
                 Proof of Learning
-              </Text>
+              </Text> */}
               <Text
                 // fontSize={{ base: "3xl", sm: "4xl", "2340px": "60px" }}
                 fontSize={{
@@ -98,9 +98,7 @@ export default function Hero() {
                 {/* From Static to Dynamic{" "}
               <Box as="br" display={{ base: "none", md: "block" }} /> with
               AI-Powered Consensus. */}
-                Build your Layer 1{" "}
-                <Box as="br" display={{ base: "none", xl: "block" }} /> in
-                minutes
+                Proof of Learning
               </Text>
               <Text mb="5" fontSize={{ base: "17px", "2340px": "18px" }}>
                 From Static to Dynamic with the first{" "}
