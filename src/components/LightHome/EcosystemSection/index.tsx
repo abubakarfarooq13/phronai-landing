@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Container, Grid, GridItem, HStack, Text } from "@chakra-ui/react";
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
+import Link from "next/link";
 
 const Fade = require("react-reveal/Fade");
 
@@ -22,7 +23,7 @@ export default function ExploreEcosystem() {
             bgImage="/assets/light-theme-home/telemetry-bg.png"
             w="full"
             h="full"
-            bgSize={{ base: "cover", lg: "100% 100%" }}
+            bgSize="cover"
             bgPos={{ base: "left", lg: "center" }}
             position="relative"
             py={{ base: "10px", md: "30px" }}
@@ -43,6 +44,8 @@ export default function ExploreEcosystem() {
               // left={{ md: "30px" }}
               right="30px"
               bottom="25px"
+              as={Link}
+              href="/ecosystem"
             >
               <Text fontSize="14px" fontWeight={500}>
                 Explore Ecosystem
@@ -64,8 +67,8 @@ export default function ExploreEcosystem() {
             rounded="20px"
             minH="200px"
           >
-            <Text fontSize="4xl" lineHeight="130%">
-              Layer 0 / Layer 1
+            <Text fontSize="2xl" lineHeight="130%">
+              Explore Layer 0 / Layer 1
             </Text>
             <Text fontSize="sm">Introducing the first AI Layers Zero</Text>
 
@@ -74,6 +77,8 @@ export default function ExploreEcosystem() {
               position="absolute"
               left="30px"
               bottom="25px"
+              as={Link}
+              href="/ecosystem"
             >
               <Text fontSize="14px" fontWeight={500}>
                 Explore Ecosystem
@@ -88,7 +93,7 @@ export default function ExploreEcosystem() {
             bgImage="/assets/light-theme-home/phronscan-bg.png"
             w="full"
             h="full"
-            bgSize={{ base: "cover", lg: "100% 100%" }}
+            bgSize="cover"
             bgPos={{ base: "right", lg: "center" }}
             position="relative"
             px="30px"
@@ -96,7 +101,7 @@ export default function ExploreEcosystem() {
             minH="250px"
             rounded="20px"
           >
-            <Text fontSize="4xl">PhronScan</Text>
+            <Text fontSize="2xl">Explore PhronScan</Text>
             <Text fontSize="sm">Explore PhronAI Network</Text>
 
             <HStack
@@ -104,6 +109,9 @@ export default function ExploreEcosystem() {
               position="absolute"
               left="30px"
               bottom="25px"
+              as="a"
+              target="_blank"
+              href="https://testnet.phronscan.io/"
             >
               <Text fontSize="14px" fontWeight={500}>
                 Explore Ecosystem
@@ -144,6 +152,8 @@ export default function ExploreEcosystem() {
               bottom="25px"
               left={{ md: "30px" }}
               right={{ base: "30px", md: "auto" }}
+              as={Link}
+              href="/ecosystem"
             >
               <Text fontSize="14px" fontWeight={500}>
                 Explore Ecosystem

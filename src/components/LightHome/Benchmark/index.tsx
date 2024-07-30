@@ -33,7 +33,7 @@ export default function Benchmark() {
         <Fade bottom>
           <VStack spacing="4" display={{ base: "none", md: "flex" }}>
             <Image
-              src="/assets/light-theme-home/benchmark.png"
+              src="/assets/light-theme-home/benchmark-table.png"
               alt="benchmark table"
               width={2319}
               height={982}

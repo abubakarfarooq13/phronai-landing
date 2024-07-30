@@ -81,7 +81,7 @@ export default function CBrandAssets() {
           amount of margin around the outside so the logo is clearly visible.
         </Text> */}
 
-        <Container maxW="1060px">
+        <Container maxW="1240px">
           <Grid
             gridTemplateColumns={{
               base: "repeat(1, 1fr)",
@@ -94,7 +94,7 @@ export default function CBrandAssets() {
             {logos.map((logo) => (
               <GridItem key={logo.id}>
                 <Box
-                  bgColor={logo.isBlack ? "#fff" : ""}
+                  bgColor={logo.isBlack ? "#fff" : "#000"}
                   rounded="lg"
                   px="4"
                   mb="3"
@@ -125,7 +125,7 @@ export default function CBrandAssets() {
                       as="a"
                       href={logo.svgDownloadLink}
                       fontSize="xs"
-                      bg="#6317fe"
+                      bg="#E3C6FE"
                       px="1.5"
                       py="0.5"
                       rounded="sm"
@@ -137,7 +137,7 @@ export default function CBrandAssets() {
                       as="a"
                       href={logo.pngDownloadLink}
                       fontSize="xs"
-                      bg="#6317fe"
+                      bg="#E3C6FE"
                       px="1.5"
                       py="0.5"
                       rounded="sm"
@@ -194,7 +194,7 @@ export default function CBrandAssets() {
                       as="a"
                       href={logo.svgDownloadLink}
                       fontSize="xs"
-                      bg="#6317fe"
+                      bg="#E3C6FE"
                       px="1.5"
                       py="0.5"
                       rounded="sm"
@@ -206,7 +206,7 @@ export default function CBrandAssets() {
                       as="a"
                       href={logo.pngDownloadLink}
                       fontSize="xs"
-                      bg="#6317fe"
+                      bg="#E3C6FE"
                       px="1.5"
                       py="0.5"
                       rounded="sm"
@@ -230,9 +230,9 @@ export default function CBrandAssets() {
             <Text textAlign="center" mb="4" fontSize="2xl">
               Primary
             </Text>
-            <Box bgColor="#6317fe" py="6" w="full" rounded="xl">
+            <Box bgColor="#E3C6FE" py="6" w="full" rounded="xl">
               <Text textAlign="center" fontSize="lg">
-                #6317fe
+                #E3C6FE
               </Text>
             </Box>
           </Box>
@@ -259,7 +259,7 @@ export default function CBrandAssets() {
             mb="10"
           >
             <VStack
-              bgColor="#6317fe"
+              bgColor="#E3C6FE"
               spacing="0"
               px={{ base: "4", sm: "10" }}
               py="4"

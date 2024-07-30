@@ -18,7 +18,7 @@ export default function RoadMap() {
     >
       <Container
         mt={{ base: "260px", md: "60px", lg: "20px" }}
-        maxW="88%"
+        maxW="1240px"
         pb={{ base: "60px", md: "0px" }}
         pt={{ lg: "50px" }}
       >

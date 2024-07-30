@@ -15,15 +15,15 @@ const EcosystemHero = () => {
   return (
     <>
       <Box
-        overflowX={"hidden"}
+        overflowX="hidden"
         mt={{ base: "0px", md: "100px" }}
-        backgroundImage={"/assets/ecosystemlight/backgroundhero.jpg"}
-        bgSize={"cover"}
-        bgPos={"center"}
+        backgroundImage="/assets/ecosystemlight/backgroundhero.jpg"
+        bgSize="cover"
+        bgPos="center"
         h={{ base: "full", md: "full", lg: "full" }}
-        overflow={"hidden"}
+        overflow="hidden"
       >
-        <Container maxW={"1240px"}>
+        <Container maxW="1240px">
           <Fade bottom>
             <Stack
               direction={{ base: "column", lg: "row" }}
@@ -135,31 +135,31 @@ const EcosystemHero = () => {
               justifyContent={{ md: "center", lg: "space-between" }}
             >
               <Box
-                height={"80px"}
-                maxH={"80px"}
-                bg={"#fff"}
-                minW={"full"}
-                display={"flex"}
-                alignItems={"center"}
-                py={"20px"}
-                px={"25px"}
-                borderRadius={"xl"}
-                gap={"30px"}
+                height="80px"
+                maxH="80px"
+                bg="#fff"
+                minW="full"
+                display="flex"
+                alignItems="center"
+                py="20px"
+                px="25px"
+                borderRadius="xl"
+                gap="30px"
                 boxShadow="lg"
               >
                 <Box
-                  bg={"#d8ddfd"}
-                  borderRadius={"xl"}
-                  height={"50px"}
-                  px={"12px"}
-                  py={"15px"}
-                  display={"flex"}
-                  alignItems={"center"}
+                  bg="#d8ddfd"
+                  borderRadius="xl"
+                  height="50px"
+                  px="12px"
+                  py="15px"
+                  display="flex"
+                  alignItems="center"
                 >
                   <CImage
-                    width={"30px"}
-                    height={"30px"}
-                    src={"/assets/ecosystemlight/decentralized.png"}
+                    width="30px"
+                    height="30px"
+                    src="/assets/ecosystemlight/decentralized.png"
                     alt="decentralized"
                   />
                 </Box>

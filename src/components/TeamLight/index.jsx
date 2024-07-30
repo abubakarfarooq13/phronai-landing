@@ -192,7 +192,7 @@ export default function Team() {
             </Text>{" "}
           </Box>
         </Fade>
-        <Wrap mt="10" mb="20" spacing="8" justify="center">
+        <Wrap mt="10" mb="32" spacing="8" justify="center">
           {team.map((member, i) => (
             <WrapItem
               maxW={{ base: "430px", md: "350px", lg: "380px" }}
@@ -236,7 +236,7 @@ export default function Team() {
                     left="210px"
                     align="flex-start"
                     spacing="2"
-                    mt="-50px"
+                    mt="-70px"
                     pr="5"
                   >
                     <Image

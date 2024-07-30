@@ -63,30 +63,16 @@ export default function RoadMap() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
-      {/* <Nav /> */}
       <LightNav />
-      <Box
-      // pt={{ base: "70px", "1350px": "120px" }}
-      // bgColor="#000"
-
-      // color="#fff"
-      >
+      <Box>
         <main id="roadmap-page" style={interFont.style}>
-          {/* <CRoadMap /> */}
           <Background />
           <RoadMapLight />
-          {/* <Box mt={{ md: "100px", lg: "100px" }} color={"black"}>
-            <WhitePapers />
-            <TrustedBySection />
-            <OurTeam />
-          </Box> */}
         </main>
       </Box>
       <Box color={"#000"} bg={"#fff"}>
-        <FooterLighter />{" "}
+        <FooterLighter />
       </Box>
-
-      {/* <Footer /> */}
     </>
   );
 }

@@ -3,8 +3,9 @@ import localFont from "next/font/local";
 import { Box } from "@chakra-ui/react";
 import Script from "next/script";
 import NewPhronZero from "@/components/NewPhronZero";
-import { Footer, Nav } from "@/components";
 import CBrandAssets from "@/components/BrandAssets";
+import FooterLighter from "@/components/Shared/Footer/LightFooter";
+import Nav from "@/components/Shared/Nav/LightNav";
 
 const FormularFont = localFont({
   src: [
@@ -59,15 +60,16 @@ export default function Home() {
       <Nav />
       <Box
         // pt={{ base: "70px", "1350px": "80px" }}
-        bgColor="#000"
-        color="#fff"
+        bgColor="#fff"
+        color="#000"
         as="main"
         minH="100vh"
         className={FormularFont.className}
       >
         <CBrandAssets />
       </Box>
-      <Footer />
+      {/* <Footer /> */}
+      <FooterLighter />
     </>
   );
 }

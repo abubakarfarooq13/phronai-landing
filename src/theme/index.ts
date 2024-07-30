@@ -10,8 +10,8 @@ const theme = extendTheme({
         scrollBehavior: "smooth !important",
       },
       body: {
-        bgColor: "#03020b",
-        color: "#fff",
+        bgColor: "#fff",
+        color: "#000",
       },
     },
   },

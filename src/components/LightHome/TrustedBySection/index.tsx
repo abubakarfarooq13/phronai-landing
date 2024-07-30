@@ -118,7 +118,7 @@ const logos = [
   },
   {
     id: 17,
-    logoUrl: "/assets/partners/way.png",
+    logoUrl: "/assets/partners/way-black.png",
     alt: "way logo",
     width: 50,
     height: 35,
@@ -161,7 +161,12 @@ export default function TrustedBySection() {
         <Wrap spacing="10" justify="center">
           {logos.map((logo, i) => (
             <Fade bottom key={logo.id} delay={i * 100}>
-              <WrapItem>
+              <WrapItem
+                _hover={{
+                  transform: "translateY(-8px)",
+                }}
+                transition="all .3s"
+              >
                 <Image
                   src={logo.logoUrl}
                   alt={logo.alt}
@@ -190,26 +195,40 @@ export default function TrustedBySection() {
 
         <HStack spacing="14" justifyContent="center">
           <Fade bottom>
-            <Image
-              src="/assets/new-home/Hacken.png"
-              alt="solid proof"
-              width={90}
-              height={55}
-              // className="logo-image"
-              style={{
-                maxWidth: "70px",
+            <Box
+              _hover={{
+                transform: "translateY(-8px)",
               }}
-            />
+              transition="all .3s"
+            >
+              <Image
+                src="/assets/new-home/Hacken.png"
+                alt="solid proof"
+                width={90}
+                height={55}
+                // className="logo-image"
+                style={{
+                  maxWidth: "70px",
+                }}
+              />
+            </Box>
           </Fade>
 
           <Fade bottom>
-            <Image
-              src="/assets/partners/solid-proof-black.png"
-              alt="solid proof"
-              width={65}
-              height={45}
-              // className="logo-image"
-            />
+            <Box
+              _hover={{
+                transform: "translateY(-8px)",
+              }}
+              transition="all .3s"
+            >
+              <Image
+                src="/assets/partners/solid-proof-black.png"
+                alt="solid proof"
+                width={65}
+                height={45}
+                // className="logo-image"
+              />
+            </Box>
           </Fade>
         </HStack>
       </Container>

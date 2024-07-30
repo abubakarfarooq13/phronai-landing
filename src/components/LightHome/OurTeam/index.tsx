@@ -170,6 +170,7 @@ export default function OurTeam() {
                 key={member.id}
                 // display={member.display}
                 maxW={{ base: "140px", xl: "240px" }}
+                w="full"
               >
                 <Box w="full">
                   <Image
@@ -208,7 +209,11 @@ export default function OurTeam() {
         <Fade bottom>
           <Wrap justify="center" spacing="6" w="full">
             {advisors.map((member) => (
-              <WrapItem key={member.id} maxW={{ base: "140px", xl: "240px" }}>
+              <WrapItem
+                key={member.id}
+                maxW={{ base: "140px", xl: "240px" }}
+                w="full"
+              >
                 <Box w="full">
                   <Image
                     src={member.image}

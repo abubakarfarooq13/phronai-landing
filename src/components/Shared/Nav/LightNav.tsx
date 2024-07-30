@@ -55,23 +55,30 @@ const AlertBanner = React.forwardRef((props, ref: any) => {
     >
       <Stack
         direction={{ base: "column", sm: "row" }}
-        alignItems={{ base: "flex-end", sm: "center" }}
+        alignItems={{ base: "flex-start", md: "center" }}
         justifyContent="center"
         maxW="1260px"
         mx="auto"
-        px="4"
-        py="4"
+        px={{ base: "4", md: "2" }}
+        pb="4"
         spacing={{ base: "3", md: "8" }}
         position="relative"
-        pt={{ base: "12", sm: "4" }}
+        pt={{ base: "2", md: "4" }}
       >
-        <HStack alignItems="center" spacing={{ base: "2", sm: "5" }}>
-          <Image
-            src="/assets/chain/balloon-icon.png"
-            alt="ballon icon"
-            width={25}
-            height={25}
-          />
+        <HStack
+          alignItems="center"
+          justifyContent="center"
+          w={{ base: "full", md: "fit-content" }}
+          spacing={{ base: "2", sm: "5" }}
+        >
+          <Box>
+            <Image
+              src="/assets/chain/balloon-icon.png"
+              alt="ballon icon"
+              width={25}
+              height={25}
+            />
+          </Box>
           <Text
             fontWeight={500}
             textAlign="center"
@@ -80,22 +87,28 @@ const AlertBanner = React.forwardRef((props, ref: any) => {
           >
             Welcome to the PHRON AI Airdrop Extravaganza!
           </Text>
-          <Image
-            src="/assets/chain/balloon-icon.png"
-            alt="ballon icon"
-            width={25}
-            height={25}
-          />
+          <Box display={{ base: "none", sm: "block" }}>
+            <Image
+              src="/assets/chain/balloon-icon.png"
+              alt="ballon icon"
+              width={25}
+              height={25}
+            />
+          </Box>
         </HStack>
 
-        <HStack spacing="4">
+        <HStack
+          spacing="4"
+          w={{ base: "full", sm: "fit-content" }}
+          justifyContent="center"
+        >
           <Button
             variant="primary"
             as="a"
             href="https://voyage.phron.ai/"
             target="_blank"
             rounded="full"
-            size="sm"
+            size={{ base: "xs", md: "sm" }}
             px="4"
           >
             Get Started

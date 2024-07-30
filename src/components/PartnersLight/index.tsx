@@ -7,6 +7,7 @@ import {
   GridItem,
   Text,
   Image as CImage,
+  Stack,
 } from "@chakra-ui/react";
 import Image from "next/image";
 import { Footer, Nav } from "..";
@@ -749,93 +750,82 @@ export default function CPartners() {
           position={"absolute"}
           mt={{ base: "0px", lg: "85px" }}
         >
-          <CImage
+          {/* <CImage
             width={"100%"}
             height={{ base: "50vh", md: "70vh", lg: "100%" }}
             bgSize={"cover"}
             bgPos={"center"}
             src={"/assets/partnerslight/partnersbg.png"}
             alt="BG"
-          />
+          /> */}
         </Box>
         <Container
-          maxW="1260px"
+          maxW="1240px"
           pt={{ base: "40px", sm: "180px" }}
           position="relative"
           pb="96px"
         >
           <Fade bottom>
-            <Flex
+            <Stack
               // bgGradient={"linear(to-r,#d5dbfc,#f2e8fd,#d5dbfc)"}
-              height={{ base: "full", lg: "70vh" }}
-              width={"full"}
+              // height={{ base: "full", lg: "70vh" }}
+              direction={{ base: "column", lg: "row" }}
+              alignItems="center"
+              pb={{ base: "20px", md: "70px" }}
             >
               <Box
-                width={"full"}
-                display={"flex"}
-                color={"#000"}
-                // flexDir={"column"}
-                // justifyContent={"center"}
-                // alignItems={"start"}
+                textAlign={{ base: "center", lg: "left" }}
+                style={{ zIndex: "1" }}
               >
-                <Box
-                  display={"flex"}
-                  flexDir={"column"}
-                  justifyContent={"center"}
-                  // bgGradient={"linear(to-r,#d5dbfc,#f2e8fd,#d5dbfc)"}
-                  style={{ zIndex: "1" }}
+                <Text
+                  as="h1"
+                  fontSize={{ base: "3xl", md: "3xl", lg: "4xl" }}
+                  fontWeight={500}
+                  letterSpacing="1px"
                 >
-                  <Text
-                    as="h1"
-                    fontSize={{ base: "3xl", md: "3xl", lg: "4xl" }}
-                    fontWeight={500}
-                    letterSpacing="1px"
-                  >
-                    OurVIP
-                  </Text>
-                  <Text
-                    as="h1"
-                    fontSize={{ base: "4xl", md: "5xl", lg: "7xl" }}
-                    fontWeight={500}
-                    letterSpacing="1px"
-                  >
-                    PartnerShips
-                  </Text>
-                </Box>
-                <CImage
-                  mt={{
-                    base: "10px",
-                    md: "80px",
-                    lg: "30px",
-                    // // xl: "100px",
-                    // "2xl": "0px",
-                    // "3xl": "100px",
-                  }}
-                  ml={{
-                    base: "-180px",
-                    md: "-150px",
-                    lg: "-30px",
-                    "3xl": "-60px",
-                  }}
-                  style={{
-                    zIndex: "",
-                  }}
-                  width={{ md: "full", lg: "800px", "3xl": "900px" }}
-                  height={{
-                    base: "80%",
-                    md: "65%",
-                    lg: "80%",
-                    // xl: "60%",
-                    // "3xl": "60%",
-                  }}
-                  src={"/assets/partnerslight/partners.png"}
-                  alt="PhronAI"
-                />
+                  OurVIP
+                </Text>
+                <Text
+                  as="h1"
+                  fontSize={{ base: "4xl", md: "5xl", lg: "7xl" }}
+                  fontWeight={500}
+                  letterSpacing="1px"
+                >
+                  PartnerShips
+                </Text>
               </Box>
-              {/* <Box pos={"relative"}>
-               
-              </Box> */}
-            </Flex>
+              <Image
+                width={700}
+                height={700}
+                // mt={{
+                //   base: "10px",
+                //   md: "80px",
+                //   lg: "30px",
+                //   // // xl: "100px",
+                //   // "2xl": "0px",
+                //   // "3xl": "100px",
+                // }}
+                // ml={{
+                //   base: "-180px",
+                //   md: "-150px",
+                //   lg: "-30px",
+                //   "3xl": "-60px",
+                // }}
+                // style={{
+                //   zIndex: "",
+                // }}
+                // width={{ md: "full", lg: "800px", "3xl": "900px" }}
+                // height={{
+                //   base: "80%",
+                //   md: "65%",
+                //   lg: "80%",
+                //   // xl: "60%",
+                //   // "3xl": "60%",
+                // }}
+                src="/assets/partnerslight/partners.png"
+                alt="PhronAI"
+              />
+            </Stack>
           </Fade>
 
           <Box position="relative" maxW="1290px" mx="auto">
@@ -901,7 +891,7 @@ export default function CPartners() {
           </Box>
         </Container>
 
-        <Container maxW="1260px" position="relative" pb="96px">
+        <Container maxW="1240px" position="relative" pb="140px">
           <Fade bottom>
             <Text
               as="h1"

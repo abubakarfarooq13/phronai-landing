@@ -20,7 +20,7 @@ import Image from "next/image";
 export default function FooterLighter() {
   const router = useRouter();
   return (
-    <Box bgImage="/assets/footer-bg.jpg" bgSize="cover" bgPos="center">
+    <Box bgImage="/assets/footer-bg.png" bgSize="cover" bgPos="center">
       <Box
         as="footer"
         maxW="1240px"
@@ -41,28 +41,68 @@ export default function FooterLighter() {
       >
         <Box
           position="absolute"
-          top="-150px"
+          top="-80px"
           display={{ base: "none", lg: "block" }}
         >
           <Image
             src="/assets/footer-coin.png"
             alt="footer coin"
-            width={300}
-            height={300}
+            width={220}
+            height={220}
+          />
+        </Box>
+        <Box
+          position="absolute"
+          left="180px"
+          top="30%"
+          display={{ base: "none", lg: "block" }}
+        >
+          <Image
+            src="/assets/footer-coin-left.png"
+            alt="footer coin"
+            width={80}
+            height={80}
+          />
+        </Box>
+        <Box
+          position="absolute"
+          right="10%"
+          top="25%"
+          display={{ base: "none", lg: "block" }}
+        >
+          <Image
+            src="/assets/footer-coin-right.png"
+            alt="footer coin"
+            width={100}
+            height={100}
+          />
+        </Box>
+        <Box
+          position="absolute"
+          right="0px"
+          bottom="70px"
+          display={{ base: "none", lg: "block" }}
+        >
+          <Image
+            src="/assets/footer-coin-large-right.png"
+            alt="footer coin"
+            width={250}
+            height={250}
           />
         </Box>
         <Stack
           direction="row"
           justifyContent="center"
-          pt={{ base: "20", lg: "72" }}
+          pt={{ base: "20", lg: "44" }}
           px="4"
           flexWrap="wrap"
+          mb="10"
         >
           {socialIcons.map((social) => (
-            <GridItem key={social.id}>
+            <Box key={social.id}>
               <Text
-                py="4"
-                px="6"
+                py={{ base: "2", md: "3", lg: "4" }}
+                px={{ base: "3", md: "4", lg: "6" }}
                 rounded="lg"
                 as={Link}
                 w="full"
@@ -80,7 +120,11 @@ export default function FooterLighter() {
                 justifyContent="center"
                 bgColor={"#faf7f9"}
               >
-                <Text as="span" fontSize="44px" color="#000">
+                <Text
+                  as="span"
+                  fontSize={{ base: "22px", md: "34px", lg: "44px" }}
+                  color="#000"
+                >
                   <social.icon />
                 </Text>
                 {/* <Text
@@ -93,16 +137,15 @@ export default function FooterLighter() {
                   {social.label}
                 </Text> */}
               </Text>
-            </GridItem>
+            </Box>
           ))}
         </Stack>
         {/* {router.pathname === "/" ? <TrustedBySection /> : null} */}
-        <Container
-          maxW="1040px"
+        <Box
+          maxW="940px"
           px={{ base: "4", xl: "4" }}
           zIndex="99"
           position="relative"
-          pt="10"
         >
           <Grid
             gridTemplateColumns={{
@@ -143,7 +186,7 @@ export default function FooterLighter() {
             alignItems={{ base: "center", md: "flex-start" }}
             // flexWrap="wrap"
             spacing="0"
-            pt="10  "
+            pt="10"
           >
             {footerMenu.map((menu) => (
               <VStack
@@ -212,7 +255,7 @@ export default function FooterLighter() {
               {new Date().getFullYear()} &copy; PhronAI All rights reserved
             </Text>
           </Stack>
-        </Container>
+        </Box>
       </Box>
       <Grid
         gridTemplateColumns={{
