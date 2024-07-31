@@ -218,7 +218,7 @@ export default function OurTeam() {
             {advisors.map((member) => (
               <WrapItem
                 key={member.id}
-                maxW={{ base: "140px", xl: "240px" }}
+                maxW={{ base: "140px", xl: "280px" }}
                 w="full"
                 textAlign="center"
                 _hover={{
