@@ -147,7 +147,7 @@ export default function OurTeam() {
     >
       <Container maxW="1240px" mb='50px'>
         <Fade bottom>
-          <Text as="h2" fontSize="3xl" pb="50px">
+          <Text as="h2" textAlign='center' fontSize="3xl" pb="50px">
           Team
           </Text>
 
