@@ -6,7 +6,7 @@ import Link from "next/link";
 import { FaLinkedin } from "react-icons/fa";
 import { BsArrowRightCircleFill } from "react-icons/bs";
 const Fade = require("react-reveal/Fade");
-import { team } from ".";
+import { team } from "./index2";
 
 export default function Team() {
   return (
