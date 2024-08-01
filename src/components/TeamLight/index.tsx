@@ -193,8 +193,14 @@ export default function OurTeam() {
                 }}
                 transition="all .3s"
               >
-                <Link href={member.linkedinUrl}>
-                  <Box w="full" textAlign="center">
+                <>
+                  <Box
+                    as={Link}
+                    href={member.linkedinUrl}
+                    display="block"
+                    target="_blank"
+                    w="full"
+                  >
                     <Image
                       src={member.image}
                       alt={member.name + " image"}
@@ -209,7 +215,7 @@ export default function OurTeam() {
                       {member.role}
                     </Text>
                   </Box>
-                </Link>
+                </>
               </WrapItem>
             ))}
           </Wrap>
