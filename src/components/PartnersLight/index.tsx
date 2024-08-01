@@ -170,6 +170,22 @@ const VIPPartners = [
       padding: "13px 6px 13px 6px",
     },
   },
+  {  
+    id: 4,
+    name: "FD Capital",
+    imageSrc: "/assets/partnerslight/FDCapital.png",
+    description:
+      "Empower investors with access to the Fast-Evolving blockchain industry.",
+    twitterUrl: "http://twitter.com/fdcapital_io",
+    websiteUrl: "https://fdcapital.io/",
+    style: {
+      background: "#f0f2ff",
+      borderRadius: "7px",
+      height: "56px",
+      width: "55px",
+      padding: "8px 6px 8px 6px",
+    },
+  },
 ];
 
 const partners = [
@@ -715,6 +731,150 @@ const partners = [
       "Haya utilizes #DeFi and #ZK technologies to provide safe, on-chain #ETF for long-term investments tailored to ordinary investors and digital nomads.",
     websiteUrl: "https://haya.finance/",
     twitterUrl: "https://x.com/haya_finance",
+    style: {
+      background: "#f0f2ff",
+      borderRadius: "7px",
+      height: "56px",
+      width: "55px",
+      padding: "10px 8px",
+    },
+  },
+  {
+    id: 34,
+    name: "Daopeople",
+    imageSrc: "/assets/partners/daopeople.jpeg",
+    description:
+      "The world's first social network created specifically for the Web 3.0 environment, which is suitable for both business and crypto communities. | No Bots ",
+    websiteUrl: "https://daopeople.io/",
+    twitterUrl: "https://x.com/DAOPEOPLE",
+    style: {
+      background: "#f0f2ff",
+      borderRadius: "7px",
+      height: "56px",
+      width: "55px",
+      padding: "10px 8px",
+    },
+  },
+  {
+    id: 35,
+    name: "RingAI",
+    imageSrc: "/assets/partners/ring-ai.jpeg",
+    description:
+      "An advanced AI platform that revolutionizes customer support & sales through autonomous, phone-based agents. Powered by $RING token.",
+    websiteUrl: "https://www.tryring.ai/",
+    twitterUrl: "https://x.com/TryRingAI",
+    style: {
+      background: "#f0f2ff",
+      borderRadius: "7px",
+      height: "56px",
+      width: "55px",
+      padding: "10px 8px",
+    },
+  },
+  {
+    id: 36,
+    name: "Match System",
+    imageSrc: "/assets/partners/matchsystem.jpg",
+    description:
+      "The goal of our company is to create a safe environment for #crypto holders and crypto #market participants.",
+    websiteUrl: "https://matchsystems.com/",
+    twitterUrl: "https://x.com/MatchSystems",
+    style: {
+      background: "#f0f2ff",
+      borderRadius: "7px",
+      height: "56px",
+      width: "55px",
+      padding: "10px 8px",
+    },
+  },
+  {
+    id: 37,
+    name: "D-Ecosystem",
+    imageSrc: "/assets/partners/d-ecosystem.png",
+    description:
+      "D-Ecosystem: A Community-Driven Blockchain Protocol with PropelX for decentralized earnings. ",
+    websiteUrl: "https://d-ecosystem.io/",
+    twitterUrl: "https://x.com/d_ecosystem",
+    style: {
+      background: "#f0f2ff",
+      borderRadius: "7px",
+      height: "56px",
+      width: "55px",
+      padding: "10px 8px",
+    },
+  },
+  {
+    id: 38,
+    name: "Ordi Launch",
+    imageSrc: "/assets/partners/ordi-launch.jpeg",
+    description:
+      "Inscription Liquidity Layer for #BRC20 and #Ethereum Bring inscription to DeFi",
+    websiteUrl: "https://www.ordilaunch.io/",
+    twitterUrl: "https://x.com/OrdiLaunch",
+    style: {
+      background: "#f0f2ff",
+      borderRadius: "7px",
+      height: "56px",
+      width: "55px",
+      padding: "10px 8px",
+    },
+  },
+  {
+    id: 39,
+    name: "CoreStake",
+    imageSrc: "/assets/partners/core-stake.jpg",
+    description:
+      "Core Stake provides a simple and reliable way to stake $CORE - the base layer currency of the Core network.",
+    websiteUrl: "https://corestake.org/",
+    twitterUrl: "https://x.com/StakeCore",
+    style: {
+      background: "#f0f2ff",
+      borderRadius: "7px",
+      height: "56px",
+      width: "55px",
+      padding: "10px 8px",
+    },
+  },
+  {
+    id: 40,
+    name: "Habit Network",
+    imageSrc: "/assets/partners/habitnetwork.png",
+    description:
+      "Onboarding 1B Web3 transacting users. Viral Daily Use Dapps inside Telegram tied by HABIT Layer3 appchain. Farm rwdHABIT daily to get $HABIT airdrop at launch!",
+    websiteUrl: "https://www.habitnetwork.xyz/",
+    twitterUrl: "https://x.com/0xHabitNetwork",
+    style: {
+      background: "#f0f2ff",
+      borderRadius: "7px",
+      height: "56px",
+      width: "55px",
+      padding: "10px 8px",
+    },
+  },
+  {
+    id: 41,
+    name: "Tokenwars",
+    imageSrc: "/assets/partners/token-wars.png",
+    description:
+      "SocialFi meets real-world token stakes in a gamified crypto battleground.",
+    websiteUrl: "https://tokenwars.io/",
+    twitterUrl: "https://x.com/tokenwars_io",
+    style: {
+      background: "#f0f2ff",
+      borderRadius: "7px",
+      height: "56px",
+      width: "55px",
+      padding: "10px 8px",
+    },
+  },
+  {
+    id: 42,
+    name: "Just Read IT",
+    imageSrc: "/assets/partners/jri.jpg",
+    description:
+      "JUST READ IT aims to build a revolutionary blockchain-based crowdfunding platform where JRI Contract holders can apply for funding for their business ideas.",
+    websiteUrl: "https://www.justreadit.build/",
+    twitterUrl: "https://x.com/jri_justreadit",
     style: {
       background: "#f0f2ff",
       borderRadius: "7px",
