@@ -6,9 +6,9 @@ import localFont from "next/font/local";
 import { Box } from "@chakra-ui/react";
 import { Inter } from "next/font/google";
 import { interFont } from "@/components/fonts";
-import Team from '@/components/TeamLight'
-import Navlight from '@/components/Shared/Nav/LightNav'
-import FooterLight from '@/components/Shared/Footer/LightFooter'
+import Team from "@/components/TeamLight";
+import Navlight from "@/components/Shared/Nav/LightNav";
+import FooterLight from "@/components/Shared/Footer/LightFooter";
 // const FormularFont = localFont({
 //   src: [
 //     {
@@ -61,17 +61,15 @@ export default function RoadMap() {
       </Head>
 
       {/* <Nav /> */}
-      <Navlight/>
+      <Navlight />
 
-      <Box 
-      mt={{md:'150px',lg:'120px'}}
-       >
-        <main id="phron-page"  style={interFont.style}>
+      <Box mt={{ md: "150px", lg: "120px" }}>
+        <main id="phron-page" style={interFont.style}>
           {/* <CTeam /> */}
-          <Team/>
+          <Team />
         </main>
       </Box>
-<FooterLight/>
+      <FooterLight />
       {/* <Footer /> */}
     </>
   );

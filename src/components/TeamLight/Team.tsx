@@ -6,7 +6,7 @@ import Link from "next/link";
 import { FaLinkedin } from "react-icons/fa";
 import { BsArrowRightCircleFill } from "react-icons/bs";
 const Fade = require("react-reveal/Fade");
-import { team } from "./index2";
+// import { team } fro./tempex2";
 
 export default function Team() {
   return (
@@ -30,7 +30,7 @@ export default function Team() {
           </Text>
         </Fade>
 
-        <Wrap mt="10" mb="20" spacing="8" justify="center">
+        {/* <Wrap mt="10" mb="20" spacing="8" justify="center">
           {team.map((member) => (
             <WrapItem
               key={member.id}
@@ -108,7 +108,7 @@ export default function Team() {
               </Text>
             </WrapItem>
           ))}
-        </Wrap>
+        </Wrap> */}
 
         <VStack>
           {/* <Button

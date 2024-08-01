@@ -1,4 +1,12 @@
-import { Box, Container, Link, Text, VStack, Wrap, WrapItem } from "@chakra-ui/react";
+import {
+  Box,
+  Container,
+  Link,
+  Text,
+  VStack,
+  Wrap,
+  WrapItem,
+} from "@chakra-ui/react";
 import Image from "next/image";
 import React from "react";
 
@@ -35,7 +43,7 @@ import React from "react";
 //   },
 // ];
 
-const teamMembers = [
+export const teamMembers = [
   {
     id: "04",
     name: "Igor Bershadsky",
@@ -115,7 +123,7 @@ const teamMembers = [
   },
 ];
 
-const advisors = [
+export const advisors = [
   {
     id: "07",
     name: "Nikita Sachdev",
@@ -127,15 +135,6 @@ const advisors = [
     display: { base: "block", xl: "none" },
   },
   {
-    id: "10",
-    name: "Dariia Vasylieva, Ph.D",
-    role: "Founder/CEO FD Capital",
-    image: "/assets/light-theme-home/DariiaVasylieva.png",
-    linkedinUrl: "https://www.linkedin.com/in/dvasylieva/",
-    imageWidth: 220,
-    imageHeight: 220,
-  },
-  {
     id: "07",
     name: "Sander Görtjes",
     role: "Advisor",
@@ -144,7 +143,15 @@ const advisors = [
     imageWidth: 220,
     imageHeight: 220,
   },
- 
+  {
+    id: "10",
+    name: "Dariia Vasylieva, Ph.D",
+    role: "Advisor - Founder/CEO FD Capital",
+    image: "/assets/light-theme-home/dariia.png",
+    linkedinUrl: "https://www.linkedin.com/in/dvasylieva/",
+    imageWidth: 220,
+    imageHeight: 220,
+  },
 ];
 
 const Fade = require("react-reveal/Fade");
@@ -155,10 +162,10 @@ export default function OurTeam() {
       py="50px"
       bgImage="linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(232,239,252,1) 20%)"
     >
-      <Container maxW="1240px" mb='50px'>
+      <Container maxW="1240px" mb="50px">
         <Fade bottom>
-          <Text as="h2" textAlign='center' fontSize="3xl" pb="50px">
-          Team
+          <Text as="h2" textAlign="center" fontSize="3xl" pb="50px">
+            Team
           </Text>
 
           <Text
@@ -179,7 +186,7 @@ export default function OurTeam() {
               <WrapItem
                 key={member.id}
                 // display={member.display}
-                maxW={{ base: "140px", xl: "280px" }}
+                maxW={{ base: "140px", xl: "240px" }}
                 w="full"
                 _hover={{
                   transform: "translateY(-8px)",
@@ -187,22 +194,21 @@ export default function OurTeam() {
                 transition="all .3s"
               >
                 <Link href={member.linkedinUrl}>
-                <Box w="full"  textAlign="center">
-                  <Image
-                    src={member.image}
-                    alt={member.name + " image"}
-                    width={member.imageWidth}
-                    height={member.imageWidth}
-                    style={{ width: "100%" }}
-                    
-                  />
-                  <Text  fontSize="16px"  fontWeight={600} pt="4">
-                    {member.name}
-                  </Text>
-                  <Text fontSize="14px" color="#8a8a8a">
-                    {member.role}
-                  </Text>
-                </Box>
+                  <Box w="full" textAlign="center">
+                    <Image
+                      src={member.image}
+                      alt={member.name + " image"}
+                      width={member.imageWidth}
+                      height={member.imageWidth}
+                      style={{ width: "100%" }}
+                    />
+                    <Text fontSize="16px" fontWeight={600} pt="4">
+                      {member.name}
+                    </Text>
+                    <Text fontSize="14px" color="#8a8a8a">
+                      {member.role}
+                    </Text>
+                  </Box>
                 </Link>
               </WrapItem>
             ))}
@@ -228,7 +234,7 @@ export default function OurTeam() {
             {advisors.map((member) => (
               <WrapItem
                 key={member.id}
-                maxW={{ base: "140px", xl: "280px" }}
+                maxW={{ base: "140px", xl: "240px" }}
                 w="full"
                 textAlign="center"
                 _hover={{
@@ -237,21 +243,22 @@ export default function OurTeam() {
                 transition="all .3s"
               >
                 <Link href={member.linkedinUrl}>
-                <Box w="full">
-                  <Image
-                    src={member.image}
-                    alt={member.name + " image"}
-                    width={member.imageWidth}
-                    height={member.imageWidth}
-                    style={{ width: "100%" }}
-                  />
-                  <Text fontSize="16px" fontWeight={600} pt="4">
-                    {member.name}
-                  </Text>
-                  <Text fontSize="14px" color="#8a8a8a">
-                    {member.role}
-                  </Text>
-                </Box></Link>
+                  <Box w="full">
+                    <Image
+                      src={member.image}
+                      alt={member.name + " image"}
+                      width={member.imageWidth}
+                      height={member.imageWidth}
+                      style={{ width: "100%" }}
+                    />
+                    <Text fontSize="16px" fontWeight={600} pt="4">
+                      {member.name}
+                    </Text>
+                    <Text fontSize="14px" color="#8a8a8a">
+                      {member.role}
+                    </Text>
+                  </Box>
+                </Link>
               </WrapItem>
             ))}
           </Wrap>
