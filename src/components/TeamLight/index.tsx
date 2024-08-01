@@ -127,6 +127,15 @@ const advisors = [
     display: { base: "block", xl: "none" },
   },
   {
+    id: "10",
+    name: "Dariia Vasylieva, Ph.D",
+    role: "Founder/CEO FD Capital",
+    image: "/assets/light-theme-home/DariiaVasylieva.png",
+    linkedinUrl: "https://www.linkedin.com/in/dvasylieva/",
+    imageWidth: 220,
+    imageHeight: 220,
+  },
+  {
     id: "07",
     name: "Sander Görtjes",
     role: "Advisor",
@@ -135,6 +144,7 @@ const advisors = [
     imageWidth: 220,
     imageHeight: 220,
   },
+ 
 ];
 
 const Fade = require("react-reveal/Fade");
