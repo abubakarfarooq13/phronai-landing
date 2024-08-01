@@ -38,8 +38,19 @@ export default function OurTeam() {
                 // display={member.display}
                 maxW={{ base: "140px", xl: "240px" }}
                 w="full"
+                _hover={{
+                  transform: "translateY(-10px)",
+                }}
+                transition="all .3s"
               >
-                <Box w="full" textAlign="center">
+                <Box
+                  as={Link}
+                  href={member.linkedinUrl}
+                  display="block"
+                  target="_blank"
+                  w="full"
+                  textAlign="center"
+                >
                   <Image
                     src={member.image}
                     alt={member.name + " image"}
@@ -81,8 +92,19 @@ export default function OurTeam() {
                 maxW={{ base: "140px", xl: "240px" }}
                 w="full"
                 textAlign="center"
+                _hover={{
+                  transform: "translateY(-10px)",
+                }}
+                transition="all .3s"
               >
-                <Box w="full">
+                <Box
+                  as={Link}
+                  href={member.linkedinUrl}
+                  display="block"
+                  target="_blank"
+                  w="full"
+                  textAlign="center"
+                >
                   <Image
                     src={member.image}
                     alt={member.name + " image"}

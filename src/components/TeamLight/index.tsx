@@ -117,7 +117,7 @@ export const teamMembers = [
     name: "Egor Sukhorukov",
     role: "Social Media / Community Manager",
     image: "/assets/light-theme-home/egor-sukhorukov.png",
-    // linkedinUrl: "https://www.linkedin.com/in/rehanshamas/",
+    linkedinUrl: "#",
     imageWidth: 220,
     imageHeight: 220,
   },
@@ -242,8 +242,14 @@ export default function OurTeam() {
                 }}
                 transition="all .3s"
               >
-                <Link href={member.linkedinUrl}>
-                  <Box w="full">
+                <>
+                  <Box
+                    as={Link}
+                    href={member.linkedinUrl}
+                    display="block"
+                    target="_blank"
+                    w="full"
+                  >
                     <Image
                       src={member.image}
                       alt={member.name + " image"}
@@ -258,7 +264,7 @@ export default function OurTeam() {
                       {member.role}
                     </Text>
                   </Box>
-                </Link>
+                </>
               </WrapItem>
             ))}
           </Wrap>
