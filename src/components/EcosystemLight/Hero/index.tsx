@@ -6,6 +6,7 @@ import {
   Image as CImage,
   Stack,
   Button,
+  GridItem,
 } from "@chakra-ui/react";
 import Image from "next/image";
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
@@ -135,7 +136,7 @@ const EcosystemHero = () => {
               mt={{ base: "20px", md: "80px", lg: "80px" }}
               justifyContent={{ md: "center", lg: "space-between" }}
             >
-              <Box
+              <GridItem
                 height="80px"
                 maxH="80px"
                 bg="#fff"
@@ -172,8 +173,8 @@ const EcosystemHero = () => {
                   />
                   <Text fontWeight={"600"}>Decentralized Exchange</Text>
                 </Box>
-              </Box>
-              <Box
+              </GridItem>
+              <GridItem
                 height="80px"
                 maxH="80px"
                 bg="#fff"
@@ -210,12 +211,12 @@ const EcosystemHero = () => {
                   />
                   <Text fontWeight={"600"}>Cross Chain Bridge</Text>
                 </Box>
-              </Box>
-              <Box
+              </GridItem>
+              <GridItem
                 height="80px"
                 maxH="80px"
                 bg="#fff"
-                minW={{ base: "full", md: "auto" }}
+                // minW={{ base: "full", xl: "auto" }}
                 display="flex"
                 alignItems="center"
                 py="20px"
@@ -223,6 +224,10 @@ const EcosystemHero = () => {
                 borderRadius="xl"
                 gap="30px"
                 boxShadow="lg"
+                colSpan={{ base: 1, md: 2, lg: 1 }}
+                w="full"
+                maxW={{ base: "full", md: "370px", lg: "full" }}
+                mx="auto"
               >
                 <Box
                   bg={"#d8ddfd"}
@@ -248,7 +253,7 @@ const EcosystemHero = () => {
                   />
                   <Text fontWeight={"600"}>Explorer</Text>
                 </Box>
-              </Box>
+              </GridItem>
             </Container>
           </Fade>
         </Box>
