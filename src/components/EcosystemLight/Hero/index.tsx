@@ -215,7 +215,7 @@ const EcosystemHero = () => {
                 height="80px"
                 maxH="80px"
                 bg="#fff"
-                minW={{ base: "auto", md: "full" }}
+                minW={{ base: "full", md: "auto" }}
                 display="flex"
                 alignItems="center"
                 py="20px"
