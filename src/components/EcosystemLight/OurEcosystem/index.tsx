@@ -70,6 +70,9 @@ const Ecosystem = () => {
                 height={400}
                 src="/assets/ecosystemlight/section2.png"
                 alt="section2"
+                style={{
+                  margin: "0 auto",
+                }}
               />
             </Stack>
           </Fade>
