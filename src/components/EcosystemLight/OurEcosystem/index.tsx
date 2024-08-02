@@ -64,16 +64,14 @@ const Ecosystem = () => {
                   Explorer live <IoArrowForwardCircleOutline size={30} />
                 </Text>
               </VStack>
-
-              <Image
-                width={600}
-                height={400}
-                src="/assets/ecosystemlight/section2.png"
-                alt="section2"
-                style={{
-                  margin: "0 auto",
-                }}
-              />
+              <Box mx={{ base: "auto", lg: "0px" }}>
+                <Image
+                  width={600}
+                  height={400}
+                  src="/assets/ecosystemlight/section2.png"
+                  alt="section2"
+                />
+              </Box>
             </Stack>
           </Fade>
         </Container>
