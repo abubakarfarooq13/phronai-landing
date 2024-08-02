@@ -174,9 +174,9 @@ export default function NewPhronZero() {
                   src="/assets/chain/shophia.png"
                   width={40}
                   height={40}
-                  alt="sophia image"
+                  alt="Phronesis image"
                 />
-                <Text fontSize="lg">Sophia :</Text>
+                <Text fontSize="lg">Phronesis :</Text>
               </HStack>
 
               <Text

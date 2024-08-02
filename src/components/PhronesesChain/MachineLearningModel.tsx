@@ -73,7 +73,7 @@ const Fade = require("react-reveal/Fade");
 
 export default function MachineLearningModel() {
   return (
-    <Container className="sophia-section" maxW="1390px" mb="20">
+    <Container className="phronesis-section" maxW="1390px" mb="20">
       {/* <Image
         src="/assets/chain/machine-learning-graph.png"
         alt="machine-learning-graph"
@@ -176,7 +176,7 @@ export default function MachineLearningModel() {
               >
                 <Image
                   src="/assets/chain/sophia-image.png"
-                  alt="sophia image"
+                  alt="phronesis image"
                   width={140}
                   height={140}
                 />

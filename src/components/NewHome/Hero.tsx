@@ -85,7 +85,7 @@ export default function Hero() {
               Try Sophia AI consensus
             </Button> */}
             <Box>
-              <ConnectWalletButton label="Try Sophia AI consensus" />
+              <ConnectWalletButton label="Try Phronesis AI consensus" />
             </Box>
           </VStack>
           <Box

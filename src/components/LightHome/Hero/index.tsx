@@ -108,7 +108,7 @@ export default function Hero() {
 
               <Box>
                 <ConnectWalletButton
-                  label="Try Sophia AI consensus"
+                  label="Try Phronesis AI consensus"
                   gradientButton
                 />
               </Box>
@@ -119,7 +119,7 @@ export default function Hero() {
             <Fade right>
               <Image
                 src="/assets/light-theme-home/sophia-robot.png"
-                alt="sophia robot image"
+                alt="Phronesis Robot Image"
                 width={800}
                 height={754}
               />

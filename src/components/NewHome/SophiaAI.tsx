@@ -64,11 +64,11 @@ export default function SophiaAI() {
                   fontWeight={500}
                   as="h3"
                 >
-                  Try Sophia
+                  Try Phronesis
                 </Text>
                 <Image
                   src="/assets/chain/shophia.png"
-                  alt="sophia"
+                  alt="Phronesis"
                   width={70}
                   height={70}
                 />

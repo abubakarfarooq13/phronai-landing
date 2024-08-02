@@ -20,7 +20,7 @@ const EcosystemHero = () => {
         backgroundImage="/assets/ecosystemlight/backgroundhero.jpg"
         bgSize="cover"
         bgPos="center"
-        h={{ base: "full", md: "full", lg: "full" }}
+        h="full"
         overflow="hidden"
       >
         <Container maxW="1240px">
@@ -31,6 +31,7 @@ const EcosystemHero = () => {
               pt="100px"
               zIndex={99}
               alignItems="center"
+              mr={{ base: "0px", xl: "180px" }}
             >
               <VStack
                 w={{ base: "100%", md: "100%", lg: "50%" }}
@@ -138,7 +139,7 @@ const EcosystemHero = () => {
                 height="80px"
                 maxH="80px"
                 bg="#fff"
-                minW="full"
+                minW={{ base: "full", md: "auto" }}
                 display="flex"
                 alignItems="center"
                 py="20px"
@@ -173,16 +174,16 @@ const EcosystemHero = () => {
                 </Box>
               </Box>
               <Box
-                height={"80px"}
-                maxH={"80px"}
-                bg={"#fff"}
-                minW={"full"}
-                display={"flex"}
-                alignItems={"center"}
-                py={"20px"}
-                px={"25px"}
-                borderRadius={"xl"}
-                gap={"30px"}
+                height="80px"
+                maxH="80px"
+                bg="#fff"
+                minW={{ base: "full", md: "auto" }}
+                display="flex"
+                alignItems="center"
+                py="20px"
+                px="25px"
+                borderRadius="xl"
+                gap="30px"
                 boxShadow="lg"
               >
                 <Box
@@ -211,16 +212,16 @@ const EcosystemHero = () => {
                 </Box>
               </Box>
               <Box
-                height={"80px"}
-                maxH={"80px"}
-                bg={"#fff"}
-                minW={"full"}
-                display={"flex"}
-                alignItems={"center"}
-                py={"20px"}
-                px={"25px"}
-                borderRadius={"xl"}
-                gap={"30px"}
+                height="80px"
+                maxH="80px"
+                bg="#fff"
+                minW={{ base: "auto", md: "full" }}
+                display="flex"
+                alignItems="center"
+                py="20px"
+                px="25px"
+                borderRadius="xl"
+                gap="30px"
                 boxShadow="lg"
               >
                 <Box

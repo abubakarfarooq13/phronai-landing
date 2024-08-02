@@ -24,10 +24,10 @@ export default function ExploreEcosystem() {
             w="full"
             h="full"
             bgSize="cover"
-            bgPos={{ base: "left", lg: "center" }}
+            bgPos={{ base: "right", lg: "center" }}
             position="relative"
             py={{ base: "10px", md: "30px" }}
-            minH="320px"
+            minH="350px"
             px="30px"
             rounded="20px"
           >
@@ -107,7 +107,8 @@ export default function ExploreEcosystem() {
             <HStack
               className="arrow-btn"
               position="absolute"
-              left="30px"
+              left={{ base: undefined, lg: "30px" }}
+              right={{ base: "30px", lg: undefined }}
               bottom="25px"
               as="a"
               target="_blank"
@@ -130,7 +131,7 @@ export default function ExploreEcosystem() {
             bgPos={{ base: "right", lg: "center" }}
             position="relative"
             p="30px"
-            minH="250px"
+            minH="300px"
             rounded="20px"
           >
             <Text fontSize="4xl" lineHeight="120%">

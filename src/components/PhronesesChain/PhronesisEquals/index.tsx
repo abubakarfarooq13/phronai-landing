@@ -56,7 +56,7 @@ export default function PhronesisEquals() {
                     src="/assets/chain/shophia.png"
                     width={214}
                     height={230}
-                    alt="sophia image"
+                    alt="phronesis image"
                   />
                 </Box>
                 <Text
@@ -65,7 +65,7 @@ export default function PhronesisEquals() {
                   fontSize="lg"
                   maxW="260px"
                 >
-                  Sophia: Artificial Intelligence Statistical Consensus
+                  Phronesis: Artificial Intelligence Statistical Consensus
                   Mechanism
                 </Text>
               </Fade>

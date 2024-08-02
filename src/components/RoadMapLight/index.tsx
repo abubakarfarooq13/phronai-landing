@@ -339,8 +339,8 @@ export default function RoadMap() {
                   <Text fontSize="13px" opacity=".7" mb="4">
                     After training of the CNN is completed, Testnet V2.0 is
                     launched. This process proves the completion of the
-                    technology applied through the Sophia Protocol in terms of
-                    the Consensus Mechanism.
+                    technology applied through the Phronesis Protocol in terms
+                    of the Consensus Mechanism.
                   </Text>
                   <Text fontSize="13px" opacity=".7">
                     This version of Testnet is the pre-release to the Mainnet
