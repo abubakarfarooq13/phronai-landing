@@ -54,6 +54,12 @@ const Ecosystem = () => {
                   lineHeight="50px"
                   alignItems="center"
                   gap="10px"
+                  as="a"
+                  target="_blank"
+                  href="https://testnet.phronscan.io/"
+                  _hover={{
+                    textDecor: "underline !important",
+                  }}
                 >
                   Explorer live <IoArrowForwardCircleOutline size={30} />
                 </Text>
@@ -126,7 +132,8 @@ const Ecosystem = () => {
                   alignItems="center"
                   gap="10px"
                 >
-                  Bridge live <IoArrowForwardCircleOutline size={30} />
+                  {/* Bridge live <IoArrowForwardCircleOutline size={30} /> */}
+                  Coming Soon
                 </Text>
               </VStack>
             </Stack>
@@ -146,7 +153,7 @@ const Ecosystem = () => {
         <Container maxW="1240px">
           <Fade bottom>
             <Box
-              pl={{ lg: "80px" }}
+              pl={{ xl: "80px" }}
               mt={{ lg: "-50px" }}
               display={{ base: "grid", md: "grid", lg: "flex" }}
               justifyContent={{ base: "center", md: "center" }}
@@ -161,7 +168,7 @@ const Ecosystem = () => {
                 alignItems="center"
                 pt={{ lg: "10" }}
                 mt={{ lg: "12" }}
-                // spacing="12"
+                spacing="32"
                 // w="100%"
               >
                 <VStack
@@ -193,7 +200,8 @@ const Ecosystem = () => {
                     alignItems="center"
                     gap="10px"
                   >
-                    Exchange live <IoArrowForwardCircleOutline size={30} />
+                    {/* Exchange live <IoArrowForwardCircleOutline size={30} /> */}
+                    Coming Soon
                   </Text>
                 </VStack>
                 <Image

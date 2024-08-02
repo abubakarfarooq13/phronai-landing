@@ -69,7 +69,7 @@ const EcosystemHero = () => {
                   The best gadgets for the best Web 3.0 experience
                 </Text>
 
-                <Stack
+                {/* <Stack
                   direction={{ base: "column", lg: "row" }}
                   pt="3"
                   mt={"10"}
@@ -103,7 +103,7 @@ const EcosystemHero = () => {
                   >
                     Explore Ecosystem
                   </Button>
-                </Stack>
+                </Stack> */}
               </VStack>
 
               <Image
