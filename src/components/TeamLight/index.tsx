@@ -204,7 +204,11 @@ export default function OurTeam() {
                     <Box
                       bgColor="#FEFEFE"
                       position="relative"
-                      px={member.name === "Egor Sukhorukov" ? "2px" : ""}
+                      px={
+                        member.name === "Egor Sukhorukov"
+                          ? { base: "1px", md: "2px" }
+                          : ""
+                      }
                       rounded="20px"
                       overflow="hidden"
                       _after={{
@@ -228,7 +232,12 @@ export default function OurTeam() {
                         style={{ width: "100%", filter: "grayscale(100%)" }}
                       />
                     </Box>
-                    <Text fontSize="16px" fontWeight={600} pt="4">
+                    <Text
+                      fontSize="16px"
+                      textAlign="center"
+                      fontWeight={600}
+                      pt="4"
+                    >
                       {member.name}
                     </Text>
                     <Text fontSize="14px" textAlign="center" color="#8a8a8a">
