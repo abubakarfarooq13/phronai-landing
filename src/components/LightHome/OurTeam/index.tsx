@@ -51,13 +51,33 @@ export default function OurTeam() {
                   w="full"
                   textAlign="center"
                 >
-                  <Image
-                    src={member.image}
-                    alt={member.name + " image"}
-                    width={member.imageWidth}
-                    height={member.imageWidth}
-                    style={{ width: "100%" }}
-                  />
+                  <Box
+                    bgColor="#fff"
+                    px={member.name === "Egor Sukhorukov" ? "2px" : ""}
+                    rounded="20px"
+                    overflow="hidden"
+                    position="relative"
+                    _after={{
+                      content: `''`,
+                      position: "absolute",
+                      top: "0px",
+                      bottom: "0px",
+                      left: "0px",
+                      right: "0px",
+                      backgroundImage:
+                        member.name === "Egor Sukhorukov"
+                          ? "linear-gradient(180deg, rgba(0,0,0,0) 80%, rgba(255,255,255,1) 100%)"
+                          : "",
+                    }}
+                  >
+                    <Image
+                      src={member.image}
+                      alt={member.name + " image"}
+                      width={member.imageWidth}
+                      height={member.imageWidth}
+                      style={{ width: "100%", filter: "grayscale(1)" }}
+                    />
+                  </Box>
                   <Text fontSize="16px" fontWeight={600} pt="4">
                     {member.name}
                   </Text>
