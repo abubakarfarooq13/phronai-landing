@@ -53,7 +53,11 @@ export default function OurTeam() {
                 >
                   <Box
                     bgColor="#fff"
-                    px={member.name === "Egor Sukhorukov" ? "2px" : ""}
+                    px={
+                      member.name === "Egor Sukhorukov"
+                        ? { base: "1px", md: "2px" }
+                        : ""
+                    }
                     rounded="20px"
                     overflow="hidden"
                     position="relative"
