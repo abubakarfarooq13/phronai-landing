@@ -127,7 +127,7 @@ export const advisors = [
   {
     id: "07",
     name: "Nikita Sachdev",
-    role: "Advisor",
+    role: "Advisor - Founder/CEO Luna Media Corporation",
     image: "/assets/light-theme-home/nikita-sachdev.png",
     linkedinUrl: "https://www.linkedin.com/in/nikitasachdev/",
     imageWidth: 240,
@@ -137,7 +137,7 @@ export const advisors = [
   {
     id: "07",
     name: "Sander Görtjes",
-    role: "Advisor",
+    role: "Advisor - Co-Owner HELLO Labs",
     image: "/assets/light-theme-home/sander.png",
     linkedinUrl: "https://www.linkedin.com/in/sandergortjes/",
     imageWidth: 220,
@@ -208,10 +208,10 @@ export default function OurTeam() {
                       height={member.imageWidth}
                       style={{ width: "100%" }}
                     />
-                    <Text fontSize="16px" fontWeight={600} pt="4">
+                    <Text fontSize="16px" textAlign='center' fontWeight={600} pt="4">
                       {member.name}
                     </Text>
-                    <Text fontSize="14px" color="#8a8a8a">
+                    <Text fontSize="14px" textAlign='center' color="#8a8a8a">
                       {member.role}
                     </Text>
                   </Box>
