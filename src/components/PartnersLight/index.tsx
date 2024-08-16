@@ -170,7 +170,7 @@ const VIPPartners = [
       padding: "13px 6px 13px 6px",
     },
   },
-  {  
+  {
     id: 4,
     name: "FD Capital",
     imageSrc: "/assets/partnerslight/FDCapital.png",
@@ -595,22 +595,22 @@ const partners = [
       padding: "10px 8px",
     },
   },
-  {
-    id: 26,
-    name: "XEI AI",
-    imageSrc: "/assets/partners/xei-ai-logo.jpg",
-    description:
-      "Introducing Buddy AI: An Evolving AI-driven Telegram bot designed to moderate communities, foster active engagement, provide real-time blockchain data.",
-    websiteUrl: "https://xei.ai/",
-    twitterUrl: "https://x.com/xei_official",
-    style: {
-      background: "#f0f2ff",
-      borderRadius: "7px",
-      height: "56px",
-      width: "55px",
-      padding: "10px 8px",
-    },
-  },
+  // {
+  //   id: 26,
+  //   name: "XEI AI",
+  //   imageSrc: "/assets/partners/xei-ai-logo.jpg",
+  //   description:
+  //     "Introducing Buddy AI: An Evolving AI-driven Telegram bot designed to moderate communities, foster active engagement, provide real-time blockchain data.",
+  //   websiteUrl: "https://xei.ai/",
+  //   twitterUrl: "https://x.com/xei_official",
+  //   style: {
+  //     background: "#f0f2ff",
+  //     borderRadius: "7px",
+  //     height: "56px",
+  //     width: "55px",
+  //     padding: "10px 8px",
+  //   },
+  // },
   {
     id: 27,
     name: "Bitgert - $BRISE",

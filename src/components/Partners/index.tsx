@@ -389,18 +389,18 @@ const partners = [
       borderRadius: "100%",
     },
   },
-  {
-    id: 26,
-    name: "XEI AI",
-    imageSrc: "/assets/partners/xei-ai-logo.jpg",
-    description:
-      "Introducing Buddy AI: An Evolving AI-driven Telegram bot designed to moderate communities, foster active engagement, provide real-time blockchain data.",
-    websiteUrl: "https://xei.ai/",
-    twitterUrl: "https://x.com/xei_official",
-    style: {
-      borderRadius: "100%",
-    },
-  },
+  // {
+  //   id: 26,
+  //   name: "XEI AI",
+  //   imageSrc: "/assets/partners/xei-ai-logo.jpg",
+  //   description:
+  //     "Introducing Buddy AI: An Evolving AI-driven Telegram bot designed to moderate communities, foster active engagement, provide real-time blockchain data.",
+  //   websiteUrl: "https://xei.ai/",
+  //   twitterUrl: "https://x.com/xei_official",
+  //   style: {
+  //     borderRadius: "100%",
+  //   },
+  // },
   {
     id: 27,
     name: "Bitgert - $BRISE",
