@@ -13,9 +13,9 @@ import { type Chain } from "viem";
 // Currency: PHRON
 
 export const phronai = {
-  id: 4477,
-  name: "Phron AI",
-  nativeCurrency: { name: "PHRON", symbol: "PHR", decimals: 18 },
+  id: 7744,
+  name: "PhronAI",
+  nativeCurrency: { name: "PHRON", symbol: "TPHR", decimals: 18 },
   rpcUrls: {
     default: { http: ["https://testnet.phron.ai"] },
   },
