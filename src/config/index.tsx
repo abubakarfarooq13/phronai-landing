@@ -17,7 +17,9 @@ export const phronai = {
   name: "PhronAI",
   nativeCurrency: { name: "PHRON", symbol: "TPHR", decimals: 18 },
   rpcUrls: {
-    default: { http: ["https://testnet.phron.ai"] },
+    default: {
+      http: ["https://testnet.phron.ai", "http://144.76.202.209:9987"],
+    },
   },
   blockExplorers: {
     default: { name: "Phronscan", url: "https://testnet.phronscan.io" },

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Box,
   Container,
@@ -8,6 +8,8 @@ import {
   Text,
   Image as CImage,
   Stack,
+  HStack,
+  Button,
 } from "@chakra-ui/react";
 import Image from "next/image";
 import { Footer, Nav } from "..";
@@ -17,6 +19,7 @@ import PartnerCard from "./PartnerCard";
 import Whitepapers from "../LightHome/WhitePapers/";
 import Trustedby from "../LightHome/TrustedBySection/";
 import OurTeam from "../RoadMapLight/OurTeam/";
+import CategoryPartners from "./CategoryPartners";
 
 // const partners = [
 //   {
@@ -121,164 +124,7 @@ import OurTeam from "../RoadMapLight/OurTeam/";
 //   },
 // ];
 
-const VIPPartners = [
-  {
-    id: 1,
-    name: "Dexe Protocol",
-    imageSrc: "/assets/partnerslight/dexe.png",
-    description:
-      "An infrastructure for creating and governing DAOs. 50+ smart-contracts for your web-3 product.",
-    twitterUrl: "https://twitter.com/DexeNetwork",
-    websiteUrl: "https://www.dexe.network/",
-    style: {
-      background: "#f0f2ff",
-      borderRadius: "7px",
-      height: "56px",
-      width: "55px",
-      padding: "8px 6px 8px 6px",
-    },
-  },
-  {
-    id: 2,
-    name: "Hacken",
-    imageSrc: "/assets/partnerslight/hacken-logo.png",
-    description:
-      "Web3 Security Auditor • We make Web3 a safer place by protecting projects from getting hacked.",
-    twitterUrl: "https://x.com/hackenclub",
-    websiteUrl: "https://hacken.io/",
-    style: {
-      background: "#f0f2ff",
-      borderRadius: "7px",
-      height: "56px",
-      width: "55px",
-      padding: "8px 10px 8px 10px",
-    },
-  },
-  {
-    id: 3,
-    name: "Kredly",
-    imageSrc: "/assets/partnerslight/kredly-logo.png",
-    description:
-      "AI-powered adjustments for rock-solid security. Dynamic fees, rewards & insurance keep the platform smooth & protected!",
-    twitterUrl: "https://x.com/kredlyAI",
-    websiteUrl: "https://kredly.ai/",
-    style: {
-      background: "#f0f2ff",
-      borderRadius: "7px",
-      height: "56px",
-      width: "55px",
-      padding: "13px 6px 13px 6px",
-    },
-  },
-  {
-    id: 4,
-    name: "FD Capital",
-    imageSrc: "/assets/partnerslight/FDCapital.png",
-    description:
-      "Empower investors with access to the Fast-Evolving blockchain industry.",
-    twitterUrl: "http://twitter.com/fdcapital_io",
-    websiteUrl: "https://fdcapital.io/",
-    style: {
-      background: "#f0f2ff",
-      borderRadius: "7px",
-      height: "56px",
-      width: "55px",
-      padding: "8px 6px 8px 6px",
-    },
-  },
-];
-
-const partners = [
-  // {
-  //   id: 1,
-  //   name: "Dexe Protocol",
-  //   imageSrc: "/assets/partners/dexe.png",
-  //   description:
-  //     "An infrastructure for creating and governing DAOs. 50+ smart-contracts for your web-3 product.",
-  //   twitterUrl: "https://twitter.com/DexeNetwork",
-  //   websiteUrl: "https://www.dexe.network/",
-  // },
-  {
-    id: 2,
-    name: "Solid Proof",
-    imageSrc: "/assets/partnerslight/solid-proof.png",
-    description:
-      "Smart Contract Audits · KYC Services · Development · Consulting",
-
-    twitterUrl: "https://twitter.com/SolidProof_io",
-    websiteUrl: "https://solidproof.io/",
-    style: {
-      background: "#f0f2ff",
-      borderRadius: "7px",
-      height: "56px",
-      width: "55px",
-      padding: "10px 10px",
-    },
-  },
-  {
-    id: 3,
-    name: "Volu Mint",
-    imageSrc: "/assets/partnerslight/volu-mint.png",
-    description:
-      "Empowering Crypto Projects with AI Automated CEX/DEX decentralised Market Solutions",
-    twitterUrl: "https://twitter.com/VoluMint",
-    websiteUrl: "https://volumint.io/",
-    style: {
-      background: "#f0f2ff",
-      borderRadius: "7px",
-      height: "56px",
-      width: "55px",
-      padding: "15px 8px",
-    },
-  },
-  {
-    id: 4,
-    name: "Agnus AI Blockchain",
-    imageSrc: "/assets/partners/agnus-ai-blockchain.png",
-    description:
-      "Layer 1 AI-Driven Blockchain. Experience unparalleled trust, high speed and security . EVM Compatible (PoA) + ( PBFT ) Consensus Mechanism.",
-    twitterUrl: "https://twitter.com/AgnusAIChain",
-    websiteUrl: "https://www.agnuschain.ai/",
-    style: {
-      background: "#f0f2ff",
-      borderRadius: "7px",
-      height: "56px",
-      width: "55px",
-      padding: "10px 8px",
-    },
-  },
-  {
-    id: 5,
-    name: "Paal AI",
-    imageSrc: "/assets/partners/paal-ai.png",
-    description:
-      "Powerful AI ecosystem built using Custom Data Feed and LLMs. Personalize your AI & share across all web platforms.",
-    twitterUrl: "https://twitter.com/PaalMind",
-    websiteUrl: "https://www.paal.ai/",
-    style: {
-      background: "#f0f2ff",
-      borderRadius: "7px",
-      height: "56px",
-      width: "55px",
-      padding: "10px 8px",
-    },
-  },
-  {
-    id: 6,
-    name: "Social Data Analytics",
-    imageSrc: "/assets/partners/social-data-analytics.png",
-    description:
-      "Panoptes, Nemesis, Themis, Prometheus, and Social Data Analytics unite for a holistic, swift, wise, and fair crypto solution.",
-    twitterUrl: "https://twitter.com/SDataAnalytics",
-    websiteUrl: "https://socialdatanalytics.com/",
-    style: {
-      background: "#f0f2ff",
-      borderRadius: "7px",
-      height: "56px",
-      width: "55px",
-      padding: "10px 8px",
-    },
-  },
+const nft = [
   {
     id: 7,
     name: "Open Gate",
@@ -287,138 +133,120 @@ const partners = [
       "Unlocking the Gateway to Web3: Your Portal to Decentralized Possibilities and Boundless Connectivity.",
     twitterUrl: "https://twitter.com/OpenGateLab",
     websiteUrl: "https://fil.opengatenft.com/",
-    style: {
-      background: "#f0f2ff",
-      borderRadius: "7px",
-      height: "56px",
-      width: "55px",
-      padding: "10px 8px",
-    },
+    category: "NFT",
+    width: 70,
+    height: 70,
   },
   {
-    id: 8,
-    name: "filscriptions",
-    imageSrc: "/assets/partners/filscriptions.png",
+    id: 39,
+    name: "Just Read It",
+    imageSrc: "/assets/partners/jri.jpg",
     description:
-      "The First Inscription Aggregation Trading Platform on #Filecoin",
-    twitterUrl: "https://twitter.com/filscriptions",
-    websiteUrl: "https://www.filscriptions.market/",
+      "JUST READ IT aims to build a revolutionary blockchain-based crowdfunding platform where JRI Contract holders can apply for funding for their business ideas.",
+    // websiteUrl: "https://www.chroniclesofwarcraft.com/",
+    twitterUrl: "https://x.com/jri_justreadit",
     style: {
-      background: "#f0f2ff",
-      borderRadius: "7px",
-      height: "56px",
-      width: "55px",
-      padding: "10px 8px",
+      borderRadius: "100%",
     },
+    category: "NFT",
   },
+];
+
+const rwa = [
   {
-    id: 10,
-    name: "hambit",
-    imageSrc: "/assets/partners/hambit.png",
+    id: 21,
+    name: "Sky Hause",
+    imageSrc: "/assets/partners/sky-hause-logo.jpg",
     description:
-      "Your on-chain PayPal, HamBit effortlessly solves all your payment needs!",
-    twitterUrl: "https://twitter.com/HamBit_Official",
-    websiteUrl: "https://www.hambit.io/",
+      "Revolutionizing cloud computing for #AI and #Blockchain with GPU-enabled VPS. A new era of decentralized  infrastructure, made accessible through $VPS.",
+    websiteUrl: "https://skyhause.xyz/",
+    twitterUrl: "https://x.com/hause_ly",
+    category: "RWA",
+  },
+];
+
+const dao = [
+  {
+    id: 30,
+    name: "SuperString AI",
+    imageSrc: "/assets/partners/superstring-logo.jpg",
+    description:
+      "Decentralized computing power eliminates uncertainty in the world",
+    websiteUrl: "https://superstring.app/",
+    twitterUrl: "https://x.com/superstring_bot",
     style: {
-      background: "#f0f2ff",
-      borderRadius: "7px",
-      height: "56px",
-      width: "55px",
-      padding: "10px 8px",
+      borderRadius: "100%",
     },
+    category: "DAO",
   },
   {
-    id: 11,
-    name: "Metakraft AI",
-    imageSrc: "/assets/partners/metakraft-ai.png",
-    description: "Generative Tools & Platform for Creative Professionals.",
-    twitterUrl: "https://twitter.com/TheMetakraft",
-    websiteUrl: "https://www.metakraft.ai/",
+    id: 31,
+    name: "DSCLAB",
+    imageSrc: "/assets/partners/ringai-logo.jpg",
+    description:
+      "An advanced AI platform that revolutionizes customer support & sales through autonomous, phone-based agents. Powered by $RING token.",
+    websiteUrl: "https://www.tryring.ai/",
+    twitterUrl: "https://x.com/dsc_lab",
     style: {
-      background: "#f0f2ff",
-      borderRadius: "7px",
-      height: "56px",
-      width: "55px",
-      padding: "10px 8px",
+      borderRadius: "100%",
     },
+    category: "DAO",
   },
   {
-    id: 12,
-    name: "$notif AI",
-    imageSrc: "/assets/partners/$notif-ai.png",
-    description: "DeFi Notifications Made Simple.",
-    twitterUrl: "https://twitter.com/NotifaiToken",
-    websiteUrl: "https://notifai.trade/",
+    id: 32,
+    name: "DSCLAB",
+    imageSrc: "/assets/partners/dsc-logo.jpg",
+    description:
+      "An advanced AI platform that revolutionizes customer support & sales through autonomous, phone-based agents. Powered by $RING token.",
+    websiteUrl: "https://dsclab.io/",
+    twitterUrl: "https://x.com/TryRingAI",
     style: {
-      background: "#f0f2ff",
-      borderRadius: "7px",
-      height: "56px",
-      width: "55px",
-      padding: "10px 8px",
+      borderRadius: "100%",
     },
+    category: "DAO",
+  },
+];
+
+const blockchainSecurity = [
+  {
+    id: 2,
+    name: "Solid Proof",
+    imageSrc: "/assets/partners/solid-proof-black.png",
+    description:
+      "Smart Contract Audits · KYC Services · Development · Consulting",
+
+    twitterUrl: "https://twitter.com/SolidProof_io",
+    websiteUrl: "https://solidproof.io/",
+    category: "Blockchain Security",
   },
   {
-    id: 13,
-    name: "Satochain",
-    imageSrc: "/assets/partners/sato-chain.png",
-    description: "The first Optimistic Rollup for Bitcoin Layer2",
-    twitterUrl: "https://twitter.com/SatochainL2",
-    websiteUrl: "https://www.satochain.io/",
-    logoWidth: 30,
-    logoHeight: 30,
-    style: {
-      background: "#f0f2ff",
-      borderRadius: "7px",
-      height: "56px",
-      width: "55px",
-      padding: "10px 8px",
-    },
+    id: 2,
+    name: "Hacken",
+    imageSrc: "/assets/partners/hacken-logo.png",
+    description:
+      "Web3 Security Auditor • We make Web3 a safer place by protecting projects from getting hacked.",
+    twitterUrl: "https://x.com/hackenclub",
+    websiteUrl: "https://hacken.io/",
+    category: "Blockchain Security",
+    logoWidth: 50,
+    logoHeight: 50,
   },
+];
+
+const cloudComputing = [
   {
-    id: 14,
-    name: "Way Network",
-    imageSrc: "/assets/partners/way.png",
-    description: "Zero-Knowledge Omnichain Interoperation Protocol.",
-    twitterUrl: "https://twitter.com/WayNetwork_Labs",
-    websiteUrl: "https://way.network/",
-    style: {
-      background: "#f0f2ff",
-      borderRadius: "7px",
-      height: "56px",
-      width: "55px",
-      padding: "10px 8px",
-    },
+    id: 20,
+    name: "VPS AI",
+    imageSrc: "/assets/partners/vpsai-logo.png",
+    description:
+      "Revolutionizing cloud computing for #AI and #Blockchain with GPU-enabled VPS. A new era of decentralized  infrastructure, made accessible through $VPS.",
+    websiteUrl: "https://vpsai.io/",
+    twitterUrl: "https://x.com/VPS_AI",
+    category: "Cloud Computing",
   },
-  {
-    id: 15,
-    name: "Send Token",
-    imageSrc: "/assets/partners/send-tokens.png",
-    description: "Crypto made easy. Send & receive with usernames (.send).",
-    twitterUrl: "https://twitter.com/sendtokens",
-    websiteUrl: "https://www.sendtokens.xyz/",
-    style: {
-      background: "#f0f2ff",
-      borderRadius: "7px",
-      height: "56px",
-      width: "55px",
-      padding: "10px 8px",
-    },
-  },
-  {
-    id: 15,
-    name: "zkgrok",
-    imageSrc: "/assets/partners/zkgrok.png",
-    description: "$ZKGROK is the hottest AI meme on zkSync in 2024",
-    twitterUrl: "https://twitter.com/zkgrok",
-    websiteUrl: "https://www.zkgrok.meme/",
-    style: {
-      background: "#f0f2ff",
-      borderRadius: "7px",
-      height: "56px",
-      width: "55px",
-      padding: "10px 8px",
-    },
-  },
+];
+
+const dataFi = [
   {
     id: 16,
     name: "orbler",
@@ -427,45 +255,7 @@ const partners = [
       "Empowering communities through innovation: Unveiling our cosmic revamp! 🚀✨ 'From Community, For Community'",
     twitterUrl: "https://twitter.com/Orbler1",
     websiteUrl: "https://orbler.io/",
-    style: {
-      background: "#f0f2ff",
-      borderRadius: "7px",
-      height: "56px",
-      width: "55px",
-      padding: "10px 8px",
-    },
-  },
-  {
-    id: 16,
-    name: "GPTPlus",
-    imageSrc: "/assets/partners/gptplus.png",
-    description:
-      "Embark on a Transformative Journey, Turning Visionary Ideas into Intelligent, Blockchain-Backed Solutions. Powered By $GPTPlus Token",
-    twitterUrl: "https://twitter.com/GPTPlusAI",
-    websiteUrl: "https://gpt-plus.io/",
-    style: {
-      background: "#f0f2ff",
-      borderRadius: "7px",
-      height: "56px",
-      width: "55px",
-      padding: "10px 8px",
-    },
-  },
-  {
-    id: 17,
-    name: "openname",
-    imageSrc: "/assets/partners/openname.png",
-    description:
-      "Omnichain Name Service for 1 Billion Users. Powered by LayerZero_Labs.",
-    twitterUrl: "https://twitter.com/OpenNameProject",
-    websiteUrl: "https://open.name/",
-    style: {
-      background: "#f0f2ff",
-      borderRadius: "7px",
-      height: "56px",
-      width: "55px",
-      padding: "10px 8px",
-    },
+    category: "DataFi",
   },
   {
     id: 18,
@@ -475,13 +265,7 @@ const partners = [
       "GemX is a Web3 platform designed to built for mass adoption, providing timely news updates and insights into the latest trends in the crypto world",
     twitterUrl: "https://twitter.com/gemx_crypto",
     websiteUrl: "https://gemx.io/",
-    style: {
-      background: "#f0f2ff",
-      borderRadius: "7px",
-      height: "56px",
-      width: "55px",
-      padding: "10px 8px",
-    },
+    category: "DataFi",
   },
   {
     id: 19,
@@ -491,77 +275,7 @@ const partners = [
       "Take Smarter Trades With X-ALPHA.AI | Real-time Crypto Analytics On Your Twitter Feed | Powered By $XALPHA",
     websiteUrl: "https://x-alpha.ai/x-alpha",
     twitterUrl: "https://twitter.com/XAlphaAI_Team",
-    style: {
-      background: "#f0f2ff",
-      borderRadius: "7px",
-      height: "56px",
-      width: "55px",
-      padding: "10px 8px",
-    },
-  },
-  {
-    id: 20,
-    name: "VPS AI",
-    imageSrc: "/assets/partners/vpsai-logo.png",
-    description:
-      "$SKYH - Tokenizing Real World Assets. Invest in diverse tangible assets on the Blockchain. Powered by Solana. Join us",
-    websiteUrl: "https://vpsai.io/",
-    twitterUrl: "https://x.com/VPS_AI",
-    style: {
-      background: "#f0f2ff",
-      borderRadius: "7px",
-      height: "56px",
-      width: "55px",
-      padding: "10px 8px",
-    },
-  },
-  {
-    id: 21,
-    name: "Sky Hause",
-    imageSrc: "/assets/partners/sky-hause-logo.jpg",
-    description:
-      "$SKYH - Tokenizing Real World Assets. Invest in diverse tangible assets on the Blockchain. Powered by Solana. Join us",
-    websiteUrl: "https://skyhause.xyz/",
-    twitterUrl: "https://x.com/hause_ly",
-    style: {
-      background: "#f0f2ff",
-      borderRadius: "7px",
-      height: "56px",
-      width: "55px",
-      padding: "10px 8px",
-    },
-  },
-  {
-    id: 22,
-    name: "BUNNY | Ukraine",
-    imageSrc: "/assets/partners/bunny-ukraine-logo.png",
-    description:
-      "$SKYH - Hello, I'm Bunny! I believe that football will bring strong connections and relieve the stress of war.",
-    websiteUrl: "https://bunnychz.com/",
-    twitterUrl: "https://x.com/BunnyChiliz",
-    style: {
-      background: "#f0f2ff",
-      borderRadius: "7px",
-      height: "56px",
-      width: "55px",
-      padding: "10px 8px",
-    },
-  },
-  {
-    id: 23,
-    name: "ZERO Labs",
-    imageSrc: "/assets/partners/zero-labs-logo.jpg",
-    description:
-      "Unlocking real-world value for DeFi through zk-powered omnichain identity, solvency aggregation and attestation. Powered by @hyperlane",
-    websiteUrl: "https://0xzero.org/",
-    twitterUrl: "https://x.com/0xZeroOrg",
-    style: {
-      background: "#f0f2ff",
-      borderRadius: "7px",
-      height: "56px",
-      width: "55px",
-      padding: "10px 8px",
-    },
+    category: "DataFi",
   },
   {
     id: 24,
@@ -572,45 +286,115 @@ const partners = [
     websiteUrl: "https://www.xeroai.io/",
     twitterUrl: "https://x.com/xeroai_erc",
     style: {
-      background: "#f0f2ff",
-      borderRadius: "7px",
-      height: "56px",
-      width: "55px",
-      padding: "10px 8px",
+      borderRadius: "100%",
     },
+    category: "DataFi",
   },
   {
-    id: 25,
-    name: "BuddyAI",
-    imageSrc: "/assets/partners/buddy-ai-logo.jpg",
+    id: 32,
+    name: "Collably Network",
+    imageSrc: "/assets/partners/collably-network-logo.png",
     description:
-      "Introducing Buddy AI: An Evolving AI-driven Telegram bot designed to moderate communities, foster active engagement, provide real-time blockchain data.",
-    websiteUrl: "https://buddyai.services/",
-    twitterUrl: "https://x.com/BuddyAIERC",
-    style: {
-      background: "#f0f2ff",
-      borderRadius: "7px",
-      height: "56px",
-      width: "55px",
-      padding: "10px 8px",
-    },
+      "🤝 Collably Network: Connecting Projects with Perfect Partners. Your bridge to successful collaborations. 🚀",
+    websiteUrl: "https://collably.network/",
+    twitterUrl: "https://x.com/CollablyNetwork",
+    category: "DataFi",
   },
-  // {
-  //   id: 26,
-  //   name: "XEI AI",
-  //   imageSrc: "/assets/partners/xei-ai-logo.jpg",
-  //   description:
-  //     "Introducing Buddy AI: An Evolving AI-driven Telegram bot designed to moderate communities, foster active engagement, provide real-time blockchain data.",
-  //   websiteUrl: "https://xei.ai/",
-  //   twitterUrl: "https://x.com/xei_official",
-  //   style: {
-  //     background: "#f0f2ff",
-  //     borderRadius: "7px",
-  //     height: "56px",
-  //     width: "55px",
-  //     padding: "10px 8px",
-  //   },
-  // },
+];
+
+const defi = [
+  {
+    id: 1,
+    name: "Dexe Protocol",
+    imageSrc: "/assets/partners/dexe-black.png",
+    description:
+      "An infrastructure for creating and governing DAOs. 50+ smart-contracts for your web-3 product.",
+    twitterUrl: "https://twitter.com/DexeNetwork",
+    websiteUrl: "https://www.dexe.network/",
+    category: "DeFi",
+  },
+  {
+    id: 3,
+    name: "Volu Mint",
+    imageSrc: "/assets/partners/volu-mint.png",
+    description:
+      "Empowering Crypto Projects with AI Automated CEX/DEX decentralised Market Solutions",
+    twitterUrl: "https://twitter.com/VoluMint",
+    websiteUrl: "https://volumint.io/",
+    category: "DeFi",
+    logoWidth: 40,
+    logoHeight: 40,
+  },
+  {
+    id: 4,
+    name: "Agnus AI Blockchain",
+    imageSrc: "/assets/partners/agnus-ai-blockchain.png",
+    description:
+      "Layer 1 AI-Driven Blockchain. Experience unparalleled trust, high speed and security . EVM Compatible (PoA) + ( PBFT ) Consensus Mechanism.",
+    twitterUrl: "https://twitter.com/AgnusAIChain",
+    websiteUrl: "https://www.agnuschain.ai/",
+    category: "DeFi",
+  },
+  {
+    id: 8,
+    name: "Filescriptions",
+    imageSrc: "/assets/partners/filscriptions.png",
+    description:
+      "The First Inscription Aggregation Trading Platform on #Filecoin",
+    twitterUrl: "https://twitter.com/filscriptions",
+    websiteUrl: "https://www.filscriptions.market/",
+    category: "DeFi",
+  },
+  {
+    id: 10,
+    name: "hambit",
+    imageSrc: "/assets/partners/hambit.png",
+    description:
+      "Your on-chain PayPal, HamBit effortlessly solves all your payment needs!",
+    twitterUrl: "https://twitter.com/HamBit_Official",
+    websiteUrl: "https://www.hambit.io/",
+    category: "DeFi",
+  },
+  {
+    id: 12,
+    name: "$notif AI",
+    imageSrc: "/assets/partners/$notif-ai.png",
+    description: "DeFi Notifications Made Simple.",
+    twitterUrl: "https://twitter.com/NotifaiToken",
+    websiteUrl: "https://notifai.trade/",
+    category: "DeFi",
+  },
+  {
+    id: 13,
+    name: "Satochain",
+    imageSrc: "/assets/partners/sato-chain.png",
+    description: "The first Optimistic Rollup for Bitcoin Layer2",
+    twitterUrl: "https://twitter.com/SatochainL2",
+    websiteUrl: "https://www.satochain.io/",
+    logoWidth: 30,
+    logoHeight: 30,
+    category: "DeFi",
+  },
+
+  {
+    id: 15,
+    name: "Send Token",
+    imageSrc: "/assets/partners/send-tokens.png",
+    description: "Crypto made easy. Send & receive with usernames (.send).",
+    twitterUrl: "https://twitter.com/sendtokens",
+    websiteUrl: "https://www.sendtokens.xyz/",
+    category: "DeFi",
+  },
+  {
+    id: 22,
+    name: "BUNNY | Ukraine",
+    imageSrc: "/assets/partners/bunny-ukraine-logo.png",
+    description:
+      "$SKYH - Hello, I'm Bunny! I believe that football will bring strong connections and relieve the stress of war.",
+    websiteUrl: "https://bunnychz.com/",
+    twitterUrl: "https://x.com/BunnyChiliz",
+    category: "DeFi",
+  },
   {
     id: 27,
     name: "Bitgert - $BRISE",
@@ -619,13 +403,7 @@ const partners = [
       "Bitgert is a rapidly expanding crypto project that boasts a gas fee-free  blockchain, CEX and a lot more!.",
     websiteUrl: "http://www.bitgert.com/",
     twitterUrl: "https://x.com/bitgertbrise",
-    style: {
-      background: "#f0f2ff",
-      borderRadius: "7px",
-      height: "56px",
-      width: "55px",
-      padding: "10px 8px",
-    },
+    category: "DeFi",
   },
   {
     id: 28,
@@ -636,12 +414,9 @@ const partners = [
     websiteUrl: "https://voiceai.live/",
     twitterUrl: "https://x.com/VoiceAIERC",
     style: {
-      background: "#f0f2ff",
-      borderRadius: "7px",
-      height: "56px",
-      width: "55px",
-      padding: "10px 8px",
+      borderRadius: "100%",
     },
+    category: "DeFi",
   },
   {
     id: 29,
@@ -652,61 +427,11 @@ const partners = [
     websiteUrl: "https://xally.ai/",
     twitterUrl: "https://x.com/xallyai",
     style: {
-      background: "#f0f2ff",
-      borderRadius: "7px",
-      height: "56px",
-      width: "55px",
-      padding: "10px 8px",
+      borderRadius: "100%",
     },
+    category: "DeFi",
   },
-  {
-    id: 30,
-    name: "SuperString - Decentralized AI",
-    imageSrc: "/assets/partners/superstring-logo.jpg",
-    description:
-      "Decentralized computing power eliminates uncertainty in the world",
-    websiteUrl: "https://superstring.app/",
-    twitterUrl: "https://x.com/superstring_bot",
-    style: {
-      background: "#f0f2ff",
-      borderRadius: "7px",
-      height: "56px",
-      width: "55px",
-      padding: "10px 8px",
-    },
-  },
-  {
-    id: 31,
-    name: "DSCLAB",
-    imageSrc: "/assets/partners/dsc-logo.jpg",
-    description:
-      "Motivate users'GPU/CPU computing power and match AI computing power application needs.",
-    websiteUrl: "https://dsclab.io/",
-    twitterUrl: "https://x.com/dsc_lab",
-    style: {
-      background: "#f0f2ff",
-      borderRadius: "7px",
-      height: "56px",
-      width: "55px",
-      padding: "10px 8px",
-    },
-  },
-  {
-    id: 32,
-    name: "Collably Network",
-    imageSrc: "/assets/partners/collably-network-logo.png",
-    description:
-      "🤝 Collably Network: Connecting Projects with Perfect Partners. Your bridge to successful collaborations. 🚀",
-    websiteUrl: "https://collably.network/",
-    twitterUrl: "https://x.com/CollablyNetwork",
-    style: {
-      background: "#f0f2ff",
-      borderRadius: "7px",
-      height: "56px",
-      width: "55px",
-      padding: "10px 8px",
-    },
-  },
+
   {
     id: 33,
     name: "Agent Layer",
@@ -715,179 +440,238 @@ const partners = [
       "AgentLayer - A Decentralized Autonomous AI Agent Blockchain and Network",
     websiteUrl: "https://agentlayer.xyz/",
     twitterUrl: "https://x.com/Agent_Layer",
-    style: {
-      background: "#f0f2ff",
-      borderRadius: "7px",
-      height: "56px",
-      width: "55px",
-      padding: "10px 8px",
-    },
+    category: "DeFi",
   },
   {
     id: 33,
     name: "Haya Finance",
-    imageSrc: "/assets/partners/haya-logo.jpg",
+    imageSrc: "/assets/partners/haya-logo.png",
     description:
       "Haya utilizes #DeFi and #ZK technologies to provide safe, on-chain #ETF for long-term investments tailored to ordinary investors and digital nomads.",
     websiteUrl: "https://haya.finance/",
     twitterUrl: "https://x.com/haya_finance",
-    style: {
-      background: "#f0f2ff",
-      borderRadius: "7px",
-      height: "56px",
-      width: "55px",
-      padding: "10px 8px",
-    },
+    category: "DeFi",
+    logoWidth: 35,
+    logoHeight: 30,
   },
   {
     id: 34,
-    name: "Daopeople",
-    imageSrc: "/assets/partners/daopeople.jpeg",
+    name: "Ottochain",
+    imageSrc: "/assets/partners/ottochain-logo.jpg",
     description:
-      "The world's first social network created specifically for the Web 3.0 environment, which is suitable for both business and crypto communities. | No Bots ",
-    websiteUrl: "https://daopeople.io/",
-    twitterUrl: "https://x.com/DAOPEOPLE",
+      "1st consumer chain on NEAR launched by @OmnityNetwork that adopts Oct 2.0 Interchain security built on the Cosmos SDK.Compatibility & Interoperability with EVM.",
+    websiteUrl: "https://www.ottochain.io/",
+    twitterUrl: "https://x.com/ottochain_",
     style: {
-      background: "#f0f2ff",
-      borderRadius: "7px",
-      height: "56px",
-      width: "55px",
-      padding: "10px 8px",
+      borderRadius: "100%",
     },
+    category: "DeFi",
   },
   {
     id: 35,
-    name: "RingAI",
-    imageSrc: "/assets/partners/ring-ai.jpeg",
+    name: "Synbo Protocol",
+    imageSrc: "/assets/partners/ottochain-logo.jpg",
     description:
-      "An advanced AI platform that revolutionizes customer support & sales through autonomous, phone-based agents. Powered by $RING token.",
-    websiteUrl: "https://www.tryring.ai/",
-    twitterUrl: "https://x.com/TryRingAI",
+      "The Community Capital Protocol, Consensus Matching by Position of Proof, and CCO (Community Consensus Offering).",
+    websiteUrl: "https://synbo.org/",
+    twitterUrl: "https://x.com/ottochain_",
     style: {
-      background: "#f0f2ff",
-      borderRadius: "7px",
-      height: "56px",
-      width: "55px",
-      padding: "10px 8px",
+      borderRadius: "100%",
     },
+    category: "DeFi",
   },
+  {
+    id: 3,
+    name: "Kredly",
+    imageSrc: "/assets/partners/kredly-logo.svg",
+    description:
+      "AI-powered adjustments for rock-solid security. Dynamic fees, rewards & insurance keep the platform smooth & protected!",
+    twitterUrl: "https://x.com/kredlyAI",
+    websiteUrl: "https://kredly.ai/",
+    category: "DeFi",
+  },
+];
+
+const socialFi = [
+  {
+    id: 5,
+    name: "Paal AI",
+    imageSrc: "/assets/partners/paal-ai.png",
+    description:
+      "Powerful AI ecosystem built using Custom Data Feed and LLMs. Personalize your AI & share across all web platforms.",
+    twitterUrl: "https://twitter.com/PaalMind",
+    websiteUrl: "https://www.paal.ai/",
+    category: "SocialFi",
+  },
+  {
+    id: 6,
+    name: "Social Data Analytics",
+    imageSrc: "/assets/partners/social-data-analytics.png",
+    description:
+      "Panoptes, Nemesis, Themis, Prometheus, and Social Data Analytics unite for a holistic, swift, wise, and fair crypto solution.",
+    twitterUrl: "https://twitter.com/SDataAnalytics",
+    websiteUrl: "https://socialdatanalytics.com/",
+    category: "SocialFi",
+  },
+  {
+    id: 7,
+    name: "Open Gate",
+    imageSrc: "/assets/partners/opengate.png",
+    description:
+      "Unlocking the Gateway to Web3: Your Portal to Decentralized Possibilities and Boundless Connectivity.",
+    twitterUrl: "https://twitter.com/OpenGateLab",
+    websiteUrl: "https://fil.opengatenft.com/",
+    category: "SocialFi",
+  },
+  {
+    id: 25,
+    name: "BuddyAI",
+    imageSrc: "/assets/partners/buddy-ai-logo.jpg",
+    description:
+      "Introducing Buddy AI: An Evolving AI-driven Telegram bot designed to moderate communities, foster active engagement, provide real-time blockchain data.",
+    websiteUrl: "https://buddyai.services/",
+    twitterUrl: "https://x.com/BuddyAIERC",
+    style: {
+      borderRadius: "100%",
+    },
+    category: "SocialFi",
+  },
+];
+
+const llm = [
+  {
+    id: 11,
+    name: "Metakraft AI",
+    imageSrc: "/assets/partners/metakraft-ai.png",
+    description: "Generative Tools & Platform for Creative Professionals.",
+    twitterUrl: "https://twitter.com/TheMetakraft",
+    websiteUrl: "https://www.metakraft.ai/",
+    category: "LLM",
+  },
+  {
+    id: 16,
+    name: "GPTPlus",
+    imageSrc: "/assets/partners/gptplus.png",
+    description:
+      "Embark on a Transformative Journey, Turning Visionary Ideas into Intelligent, Blockchain-Backed Solutions. Powered By $GPTPlus Token",
+    twitterUrl: "https://twitter.com/GPTPlusAI",
+    websiteUrl: "https://gpt-plus.io/",
+    category: "LLM",
+  },
+];
+
+const meme = [
+  {
+    id: 15,
+    name: "zkgrok",
+    imageSrc: "/assets/partners/zkgrok-black.png",
+    description: "$ZKGROK is the hottest AI meme on zkSync in 2024",
+    twitterUrl: "https://twitter.com/zkgrok",
+    websiteUrl: "https://www.zkgrok.meme/",
+    category: "Meme",
+  },
+];
+
+const dns = [
+  {
+    id: 17,
+    name: "openname",
+    imageSrc: "/assets/partners/openname-black.png",
+    description:
+      "Omnichain Name Service for 1 Billion Users. Powered by LayerZero_Labs.",
+    twitterUrl: "https://twitter.com/OpenNameProject",
+    websiteUrl: "https://open.name/",
+    category: "DNS",
+  },
+];
+
+const gameFi = [
   {
     id: 36,
-    name: "Match System",
-    imageSrc: "/assets/partners/matchsystem.jpg",
-    description:
-      "The goal of our company is to create a safe environment for #crypto holders and crypto #market participants.",
-    websiteUrl: "https://matchsystems.com/",
-    twitterUrl: "https://x.com/MatchSystems",
-    style: {
-      background: "#f0f2ff",
-      borderRadius: "7px",
-      height: "56px",
-      width: "55px",
-      padding: "10px 8px",
-    },
-  },
-  {
-    id: 37,
-    name: "D-Ecosystem",
-    imageSrc: "/assets/partners/d-ecosystem.png",
-    description:
-      "D-Ecosystem: A Community-Driven Blockchain Protocol with PropelX for decentralized earnings. ",
-    websiteUrl: "https://d-ecosystem.io/",
-    twitterUrl: "https://x.com/d_ecosystem",
-    style: {
-      background: "#f0f2ff",
-      borderRadius: "7px",
-      height: "56px",
-      width: "55px",
-      padding: "10px 8px",
-    },
-  },
-  {
-    id: 38,
-    name: "Ordi Launch",
-    imageSrc: "/assets/partners/ordi-launch.jpeg",
-    description:
-      "Inscription Liquidity Layer for #BRC20 and #Ethereum Bring inscription to DeFi",
-    websiteUrl: "https://www.ordilaunch.io/",
-    twitterUrl: "https://x.com/OrdiLaunch",
-    style: {
-      background: "#f0f2ff",
-      borderRadius: "7px",
-      height: "56px",
-      width: "55px",
-      padding: "10px 8px",
-    },
-  },
-  {
-    id: 39,
-    name: "CoreStake",
-    imageSrc: "/assets/partners/core-stake.jpg",
-    description:
-      "Core Stake provides a simple and reliable way to stake $CORE - the base layer currency of the Core network.",
-    websiteUrl: "https://corestake.org/",
-    twitterUrl: "https://x.com/StakeCore",
-    style: {
-      background: "#f0f2ff",
-      borderRadius: "7px",
-      height: "56px",
-      width: "55px",
-      padding: "10px 8px",
-    },
-  },
-  {
-    id: 40,
-    name: "Habit Network",
-    imageSrc: "/assets/partners/habitnetwork.png",
-    description:
-      "Onboarding 1B Web3 transacting users. Viral Daily Use Dapps inside Telegram tied by HABIT Layer3 appchain. Farm rwdHABIT daily to get $HABIT airdrop at launch!",
-    websiteUrl: "https://www.habitnetwork.xyz/",
-    twitterUrl: "https://x.com/0xHabitNetwork",
-    style: {
-      background: "#f0f2ff",
-      borderRadius: "7px",
-      height: "56px",
-      width: "55px",
-      padding: "10px 8px",
-    },
-  },
-  {
-    id: 41,
     name: "Tokenwars",
-    imageSrc: "/assets/partners/token-wars.png",
+    imageSrc: "/assets/partners/tokenwars-logo.png",
     description:
-      "SocialFi meets real-world token stakes in a gamified crypto battleground.",
+      "SocialFi meets real-world token stakes in a gamified crypto battleground. Tap to earn BIG ⚔️",
     websiteUrl: "https://tokenwars.io/",
     twitterUrl: "https://x.com/tokenwars_io",
     style: {
-      background: "#f0f2ff",
-      borderRadius: "7px",
-      height: "56px",
-      width: "55px",
-      padding: "10px 8px",
+      borderRadius: "100%",
     },
+    category: "GameFi",
   },
   {
-    id: 42,
-    name: "Just Read IT",
-    imageSrc: "/assets/partners/jri.jpg",
-    description:
-      "JUST READ IT aims to build a revolutionary blockchain-based crowdfunding platform where JRI Contract holders can apply for funding for their business ideas.",
-    websiteUrl: "https://www.justreadit.build/",
-    twitterUrl: "https://x.com/jri_justreadit",
+    id: 37,
+    name: "Chronicles Of Warcraft",
+    imageSrc: "/assets/partners/chronicles-of-warcraft-logo.jpg",
+    description: "A web3 game based on token economy 3.0, Freedom for gamers.",
+    websiteUrl: "https://www.chroniclesofwarcraft.com/",
+    twitterUrl: "https://x.com/COWGameFi",
     style: {
-      background: "#f0f2ff",
-      borderRadius: "7px",
-      height: "56px",
-      width: "55px",
-      padding: "10px 8px",
+      borderRadius: "100%",
     },
+    category: "GameFi",
   },
+  {
+    id: 37,
+    name: "Youflix",
+    imageSrc: "/assets/partners/youflix-logo.jpg",
+    description:
+      "Watch & upload memes—videos, images, GIFs on Solana's first decentralized media platform with @poconsol.",
+    websiteUrl: "https://www.chroniclesofwarcraft.com/",
+    twitterUrl: "https://x.com/PocoYouflix",
+    style: {
+      borderRadius: "100%",
+    },
+    category: "GameFi",
+  },
+];
+
+const infrastructure = [
+  {
+    id: 23,
+    name: "ZERO Labs",
+    imageSrc: "/assets/partners/zero-labs-logo.jpg",
+    description:
+      "Unlocking real-world value for DeFi through zk-powered omnichain identity, solvency aggregation and attestation. Powered by @hyperlane",
+    websiteUrl: "https://0xzero.org/",
+    twitterUrl: "https://x.com/0xZeroOrg",
+    style: {
+      borderRadius: "100%",
+    },
+    category: "Infrastructure",
+  },
+  {
+    id: 14,
+    name: "Way Network",
+    imageSrc: "/assets/partners/way.png",
+    description: "Zero-Knowledge Omnichain Interoperation Protocol.",
+    twitterUrl: "https://twitter.com/WayNetwork_Labs",
+    websiteUrl: "https://way.network/",
+    category: "Infrastructure",
+  },
+];
+
+const categories = [
+  "Blockchain Security",
+  "Cloud Computing",
+  "DAO",
+  "DataFi",
+  "DeFi",
+  "DNS",
+  "GameFi",
+  "Infrastructure",
+  "LLM",
+  "Meme",
+  "NFT",
+  "RWA",
+  "SocialFi",
 ];
 
 const Fade = require("react-reveal/Fade");
 
 export default function CPartners() {
+  const [currentCategory, setCurrentCategory] = useState("Blockchain Security");
+
   return (
     <>
       <Box
@@ -943,7 +727,7 @@ export default function CPartners() {
                   fontWeight={500}
                   letterSpacing="1px"
                 >
-                  OurVIP
+                  Our
                 </Text>
                 <Text
                   as="h1"
@@ -955,41 +739,46 @@ export default function CPartners() {
                 </Text>
               </Box>
               <Image
-                width={700}
+                width={800}
                 height={700}
-                // mt={{
-                //   base: "10px",
-                //   md: "80px",
-                //   lg: "30px",
-                //   // // xl: "100px",
-                //   // "2xl": "0px",
-                //   // "3xl": "100px",
-                // }}
-                // ml={{
-                //   base: "-180px",
-                //   md: "-150px",
-                //   lg: "-30px",
-                //   "3xl": "-60px",
-                // }}
-                // style={{
-                //   zIndex: "",
-                // }}
-                // width={{ md: "full", lg: "800px", "3xl": "900px" }}
-                // height={{
-                //   base: "80%",
-                //   md: "65%",
-                //   lg: "80%",
-                //   // xl: "60%",
-                //   // "3xl": "60%",
-                // }}
                 src="/assets/partnerslight/partners.png"
                 alt="PhronAI"
               />
             </Stack>
           </Fade>
 
-          <Box position="relative" maxW="1290px" mx="auto">
-            {/* <Wrap justify="center" spacing="10">
+          <Stack
+            direction="row"
+            justifyContent="center"
+            flexWrap="wrap"
+            gap="3"
+          >
+            <CategoryPartners
+              category="Blockchain Security"
+              partners={blockchainSecurity}
+            />
+            <CategoryPartners
+              category="Cloud Computing"
+              partners={cloudComputing}
+            />
+            <CategoryPartners category="Dao" partners={dao} />
+            <CategoryPartners category="DataFi" partners={dataFi} />
+            <CategoryPartners category="DeFi" partners={defi} />
+            <CategoryPartners category="DNS" partners={dns} />
+            <CategoryPartners category="GameFi" partners={gameFi} />
+            <CategoryPartners
+              category="Infratructure"
+              partners={infrastructure}
+            />
+            <CategoryPartners category="LLM" partners={llm} />
+            <CategoryPartners category="Meme" partners={meme} />
+            <CategoryPartners category="NFT" partners={nft} />
+            <CategoryPartners category="RWA" partners={rwa} />
+            <CategoryPartners category="SocialFi" partners={socialFi} />
+          </Stack>
+
+          {/* <Box position="relative" maxW="1290px" mx="auto"> */}
+          {/* <Wrap justify="center" spacing="10">
             {partners.map((logo) => (
               <WrapItem
                 key={logo.id}
@@ -1013,7 +802,7 @@ export default function CPartners() {
             ))}
           </Wrap> */}
 
-            <Grid
+          {/* <Grid
               gridTemplateColumns={{
                 base: "repeat(1, 1fr)",
                 md: "repeat(2, 1fr)",
@@ -1023,7 +812,6 @@ export default function CPartners() {
             >
               {VIPPartners.map((partner, i) => (
                 <GridItem key={partner.id}>
-                  {/* <Fade bottom delay={i * 50}> */}
                   <PartnerCard
                     description={partner.description}
                     logoUrl={partner.imageSrc}
@@ -1032,12 +820,11 @@ export default function CPartners() {
                     websiteUrl={partner.websiteUrl}
                     style={partner.style}
                   />
-                  {/* </Fade> */}
                 </GridItem>
               ))}
-            </Grid>
+            </Grid> */}
 
-            <Text
+          {/* <Text
               // position="absolute"
               // right="0"
               // bottom="100px"
@@ -1047,27 +834,46 @@ export default function CPartners() {
               mt="20"
             >
               ...and much more coming soon
-            </Text>
-          </Box>
+            </Text> */}
+          {/* </Box> */}
         </Container>
 
         <Container maxW="1240px" position="relative" pb="140px">
-          <Fade bottom>
+          {/* <Fade bottom>
             <Text
               as="h1"
               fontSize={{ base: "3xl", md: "4xl" }}
               fontWeight={500}
               // textAlign="center"
               letterSpacing="1px"
-              mb="16"
-              color={"#000"}
+              mb="8"
+              color="#000"
             >
               Other PartnerShips
             </Text>
-          </Fade>
+          </Fade> */}
 
-          <Box position="relative" maxW="1290px" mx="auto">
-            {/* <Wrap justify="center" spacing="10">
+          {/* <HStack mb="7">
+            {categories.map((category, i) => (
+              <Button
+                onClick={() => {
+                  setCurrentCategory(category);
+                }}
+                size="sm"
+                variant={
+                  currentCategory === category
+                    ? "primary-purple"
+                    : "purple-outline"
+                }
+                key={i}
+              >
+                {category}
+              </Button>
+            ))}
+          </HStack> */}
+
+          {/* <Box position="relative" maxW="1290px" mx="auto"> */}
+          {/* <Wrap justify="center" spacing="10">
             {partners.map((logo) => (
               <WrapItem
                 key={logo.id}
@@ -1091,7 +897,7 @@ export default function CPartners() {
             ))}
           </Wrap> */}
 
-            <Grid
+          {/* <Grid
               gridTemplateColumns={{
                 base: "repeat(1, 1fr)",
                 md: "repeat(2, 1fr)",
@@ -1099,36 +905,35 @@ export default function CPartners() {
               }}
               gap="5"
             >
-              {partners.map((partner, i) => (
-                <GridItem key={partner.id}>
-                  {/* <Fade bottom delay={i * 50}> */}
-                  <PartnerCard
-                    description={partner.description}
-                    logoUrl={partner.imageSrc}
-                    name={partner.name}
-                    twitterUrl={partner.twitterUrl}
-                    websiteUrl={partner.websiteUrl}
-                    logoHeight={partner.logoHeight}
-                    logoWidth={partner.logoWidth}
-                    style={partner.style}
-                  />
-                  {/* </Fade> */}
-                </GridItem>
-              ))}
-            </Grid>
-
-            <Text
-              // position="absolute"
-              // right="0"
-              // bottom="100px"
-              fontSize="22px"
-              color="#464545"
-              // textAlign="center"
-              mt="20"
-            >
-              ...and much more coming soon
-            </Text>
-          </Box>
+              {partners
+                .filter((p) => p.category === currentCategory)
+                .map((partner, i) => (
+                  <GridItem key={partner.id}>
+                    <PartnerCard
+                      description={partner.description}
+                      logoUrl={partner.imageSrc}
+                      name={partner.name}
+                      twitterUrl={partner.twitterUrl}
+                      websiteUrl={partner.websiteUrl}
+                      logoHeight={partner.logoHeight}
+                      logoWidth={partner.logoWidth}
+                      style={partner.style}
+                    />
+                  </GridItem>
+                ))}
+            </Grid> */}
+          {/* </Box> */}
+          <Text
+            // position="absolute"
+            // right="0"
+            // bottom="100px"
+            fontSize="22px"
+            color="#464545"
+            // textAlign="center"
+            mt="20"
+          >
+            ...and much more coming soon
+          </Text>
         </Container>
         {/* <Whitepapers />
         <Trustedby />

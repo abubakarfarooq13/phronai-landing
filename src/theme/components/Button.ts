@@ -13,8 +13,8 @@ export default defineStyleConfig({
       color: "#fff",
       // border: "3px solid #5b28ac",
       // backgroundImage: "linear-gradient(30deg, #5b28ac 80%, transparent 50%)",
-      border: "3px solid #5900d7",
-      backgroundImage: "linear-gradient(30deg, #5900d7 80%, transparent 50%)",
+      border: "3px solid #5756f4",
+      backgroundImage: "linear-gradient(30deg, #5756f4 80%, transparent 50%)",
 
       backgroundSize: "500px",
       backgroundRepeat: "no-repeat",
@@ -27,11 +27,11 @@ export default defineStyleConfig({
         // color: "#fff",
         backgroundPosition: { base: "200%", lg: "170%" },
         // color: "#5b28ac",
-        color: "#5900d7",
+        color: "#5756f4",
         textDecor: "none",
       },
       _active: {
-        boxShadow: "0 0 5px 0 #5900d7 inset, 0 0 10px 2px",
+        boxShadow: "0 0 5px 0 #5756f4 inset, 0 0 10px 2px",
         // boxShadow: "0 0 5px 0 #5b28ac inset, 0 0 10px 2px",
       },
     },
@@ -83,8 +83,8 @@ export default defineStyleConfig({
       bgColor: "none",
       // color: "#5b28ac",
       // borderColor: "#5b28ac",
-      color: "#5900d7",
-      borderColor: "#5900d7",
+      color: "#5756f4",
+      borderColor: "#5756f4",
       borderWidth: "2px",
       backgroundColor: "transparent",
 
@@ -95,7 +95,7 @@ export default defineStyleConfig({
       // color: #00d7c3;
       _hover: {
         // boxShadow: "0 0 5px 0 #5b28ac inset, 0 0 10px 2px",
-        boxShadow: "0 0 5px 0 #5900d7 inset, 0 0 10px 2px",
+        boxShadow: "0 0 5px 0 #5756f4 inset, 0 0 10px 2px",
         textDecor: "none",
       },
       _active: {

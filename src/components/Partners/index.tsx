@@ -1,9 +1,11 @@
 import React from "react";
 import {
   Box,
+  Button,
   Container,
   Grid,
   GridItem,
+  HStack,
   Text,
   Wrap,
   WrapItem,
@@ -167,6 +169,7 @@ const partners = [
 
     twitterUrl: "https://twitter.com/SolidProof_io",
     websiteUrl: "https://solidproof.io/",
+    category: "Blockchain Security",
   },
   {
     id: 3,
@@ -176,6 +179,9 @@ const partners = [
       "Empowering Crypto Projects with AI Automated CEX/DEX decentralised Market Solutions",
     twitterUrl: "https://twitter.com/VoluMint",
     websiteUrl: "https://volumint.io/",
+    category: "DeFi",
+    logoWidth: 25,
+    logoHeight: 25,
   },
   {
     id: 4,
@@ -185,6 +191,7 @@ const partners = [
       "Layer 1 AI-Driven Blockchain. Experience unparalleled trust, high speed and security . EVM Compatible (PoA) + ( PBFT ) Consensus Mechanism.",
     twitterUrl: "https://twitter.com/AgnusAIChain",
     websiteUrl: "https://www.agnuschain.ai/",
+    category: "DeFi",
   },
   {
     id: 5,
@@ -194,6 +201,7 @@ const partners = [
       "Powerful AI ecosystem built using Custom Data Feed and LLMs. Personalize your AI & share across all web platforms.",
     twitterUrl: "https://twitter.com/PaalMind",
     websiteUrl: "https://www.paal.ai/",
+    category: "SocialFi",
   },
   {
     id: 6,
@@ -203,6 +211,7 @@ const partners = [
       "Panoptes, Nemesis, Themis, Prometheus, and Social Data Analytics unite for a holistic, swift, wise, and fair crypto solution.",
     twitterUrl: "https://twitter.com/SDataAnalytics",
     websiteUrl: "https://socialdatanalytics.com/",
+    category: "SocialFi",
   },
   {
     id: 7,
@@ -212,15 +221,17 @@ const partners = [
       "Unlocking the Gateway to Web3: Your Portal to Decentralized Possibilities and Boundless Connectivity.",
     twitterUrl: "https://twitter.com/OpenGateLab",
     websiteUrl: "https://fil.opengatenft.com/",
+    category: "SocialFi",
   },
   {
     id: 8,
-    name: "filscriptions",
+    name: "Filescriptions",
     imageSrc: "/assets/partners/filscriptions.png",
     description:
       "The First Inscription Aggregation Trading Platform on #Filecoin",
     twitterUrl: "https://twitter.com/filscriptions",
     websiteUrl: "https://www.filscriptions.market/",
+    category: "DeFi",
   },
   {
     id: 10,
@@ -230,6 +241,7 @@ const partners = [
       "Your on-chain PayPal, HamBit effortlessly solves all your payment needs!",
     twitterUrl: "https://twitter.com/HamBit_Official",
     websiteUrl: "https://www.hambit.io/",
+    category: "DeFi",
   },
   {
     id: 11,
@@ -238,6 +250,7 @@ const partners = [
     description: "Generative Tools & Platform for Creative Professionals.",
     twitterUrl: "https://twitter.com/TheMetakraft",
     websiteUrl: "https://www.metakraft.ai/",
+    category: "LLM",
   },
   {
     id: 12,
@@ -246,6 +259,7 @@ const partners = [
     description: "DeFi Notifications Made Simple.",
     twitterUrl: "https://twitter.com/NotifaiToken",
     websiteUrl: "https://notifai.trade/",
+    category: "DeFi",
   },
   {
     id: 13,
@@ -256,6 +270,7 @@ const partners = [
     websiteUrl: "https://www.satochain.io/",
     logoWidth: 30,
     logoHeight: 30,
+    category: "DeFi",
   },
   {
     id: 14,
@@ -264,6 +279,7 @@ const partners = [
     description: "Zero-Knowledge Omnichain Interoperation Protocol.",
     twitterUrl: "https://twitter.com/WayNetwork_Labs",
     websiteUrl: "https://way.network/",
+    category: "Infrastructure",
   },
   {
     id: 15,
@@ -272,6 +288,7 @@ const partners = [
     description: "Crypto made easy. Send & receive with usernames (.send).",
     twitterUrl: "https://twitter.com/sendtokens",
     websiteUrl: "https://www.sendtokens.xyz/",
+    category: "DeFi",
   },
   {
     id: 15,
@@ -280,6 +297,7 @@ const partners = [
     description: "$ZKGROK is the hottest AI meme on zkSync in 2024",
     twitterUrl: "https://twitter.com/zkgrok",
     websiteUrl: "https://www.zkgrok.meme/",
+    category: "Meme",
   },
   {
     id: 16,
@@ -289,6 +307,7 @@ const partners = [
       "Empowering communities through innovation: Unveiling our cosmic revamp! 🚀✨ 'From Community, For Community'",
     twitterUrl: "https://twitter.com/Orbler1",
     websiteUrl: "https://orbler.io/",
+    category: "DataFi",
   },
   {
     id: 16,
@@ -298,6 +317,7 @@ const partners = [
       "Embark on a Transformative Journey, Turning Visionary Ideas into Intelligent, Blockchain-Backed Solutions. Powered By $GPTPlus Token",
     twitterUrl: "https://twitter.com/GPTPlusAI",
     websiteUrl: "https://gpt-plus.io/",
+    category: "LLM",
   },
   {
     id: 17,
@@ -307,6 +327,7 @@ const partners = [
       "Omnichain Name Service for 1 Billion Users. Powered by LayerZero_Labs.",
     twitterUrl: "https://twitter.com/OpenNameProject",
     websiteUrl: "https://open.name/",
+    category: "DNS",
   },
   {
     id: 18,
@@ -316,6 +337,7 @@ const partners = [
       "GemX is a Web3 platform designed to built for mass adoption, providing timely news updates and insights into the latest trends in the crypto world",
     twitterUrl: "https://twitter.com/gemx_crypto",
     websiteUrl: "https://gemx.io/",
+    category: "DataFi",
   },
   {
     id: 19,
@@ -325,24 +347,27 @@ const partners = [
       "Take Smarter Trades With X-ALPHA.AI | Real-time Crypto Analytics On Your Twitter Feed | Powered By $XALPHA",
     websiteUrl: "https://x-alpha.ai/x-alpha",
     twitterUrl: "https://twitter.com/XAlphaAI_Team",
+    category: "DataFi",
   },
   {
     id: 20,
     name: "VPS AI",
     imageSrc: "/assets/partners/vpsai-logo.png",
     description:
-      "$SKYH - Tokenizing Real World Assets. Invest in diverse tangible assets on the Blockchain. Powered by Solana. Join us",
+      "Revolutionizing cloud computing for #AI and #Blockchain with GPU-enabled VPS. A new era of decentralized  infrastructure, made accessible through $VPS.",
     websiteUrl: "https://vpsai.io/",
     twitterUrl: "https://x.com/VPS_AI",
+    category: "Cloud Computing",
   },
   {
     id: 21,
     name: "Sky Hause",
     imageSrc: "/assets/partners/sky-hause-logo.jpg",
     description:
-      "$SKYH - Tokenizing Real World Assets. Invest in diverse tangible assets on the Blockchain. Powered by Solana. Join us",
+      "Revolutionizing cloud computing for #AI and #Blockchain with GPU-enabled VPS. A new era of decentralized  infrastructure, made accessible through $VPS.",
     websiteUrl: "https://skyhause.xyz/",
     twitterUrl: "https://x.com/hause_ly",
+    category: "RWA",
   },
   {
     id: 22,
@@ -352,6 +377,7 @@ const partners = [
       "$SKYH - Hello, I'm Bunny! I believe that football will bring strong connections and relieve the stress of war.",
     websiteUrl: "https://bunnychz.com/",
     twitterUrl: "https://x.com/BunnyChiliz",
+    category: "DeFi",
   },
   {
     id: 23,
@@ -364,6 +390,7 @@ const partners = [
     style: {
       borderRadius: "100%",
     },
+    category: "Infrastructure",
   },
   {
     id: 24,
@@ -376,6 +403,7 @@ const partners = [
     style: {
       borderRadius: "100%",
     },
+    category: "DataFi",
   },
   {
     id: 25,
@@ -388,19 +416,8 @@ const partners = [
     style: {
       borderRadius: "100%",
     },
+    category: "SocialFi",
   },
-  // {
-  //   id: 26,
-  //   name: "XEI AI",
-  //   imageSrc: "/assets/partners/xei-ai-logo.jpg",
-  //   description:
-  //     "Introducing Buddy AI: An Evolving AI-driven Telegram bot designed to moderate communities, foster active engagement, provide real-time blockchain data.",
-  //   websiteUrl: "https://xei.ai/",
-  //   twitterUrl: "https://x.com/xei_official",
-  //   style: {
-  //     borderRadius: "100%",
-  //   },
-  // },
   {
     id: 27,
     name: "Bitgert - $BRISE",
@@ -409,6 +426,7 @@ const partners = [
       "Bitgert is a rapidly expanding crypto project that boasts a gas fee-free  blockchain, CEX and a lot more!.",
     websiteUrl: "http://www.bitgert.com/",
     twitterUrl: "https://x.com/bitgertbrise",
+    category: "DeFi",
   },
   {
     id: 28,
@@ -421,6 +439,7 @@ const partners = [
     style: {
       borderRadius: "100%",
     },
+    category: "DeFi",
   },
   {
     id: 29,
@@ -433,6 +452,7 @@ const partners = [
     style: {
       borderRadius: "100%",
     },
+    category: "DeFi",
   },
   {
     id: 30,
@@ -445,6 +465,7 @@ const partners = [
     style: {
       borderRadius: "100%",
     },
+    category: "DAO",
   },
   {
     id: 31,
@@ -457,6 +478,7 @@ const partners = [
     style: {
       borderRadius: "100%",
     },
+    category: "DAO",
   },
   {
     id: 32,
@@ -466,6 +488,7 @@ const partners = [
       "🤝 Collably Network: Connecting Projects with Perfect Partners. Your bridge to successful collaborations. 🚀",
     websiteUrl: "https://collably.network/",
     twitterUrl: "https://x.com/CollablyNetwork",
+    category: "DataFi",
   },
   {
     id: 33,
@@ -475,6 +498,7 @@ const partners = [
       "AgentLayer - A Decentralized Autonomous AI Agent Blockchain and Network",
     websiteUrl: "https://agentlayer.xyz/",
     twitterUrl: "https://x.com/Agent_Layer",
+    category: "DeFi",
   },
   {
     id: 33,
@@ -487,7 +511,114 @@ const partners = [
     style: {
       borderRadius: "100%",
     },
+    category: "DeFi",
   },
+  {
+    id: 34,
+    name: "Ottochain",
+    imageSrc: "/assets/partners/ottochain-logo.jpg",
+    description:
+      "1st consumer chain on NEAR launched by @OmnityNetwork that adopts Oct 2.0 Interchain security built on the Cosmos SDK.Compatibility & Interoperability with EVM.",
+    websiteUrl: "https://www.ottochain.io/",
+    twitterUrl: "https://x.com/ottochain_",
+    style: {
+      borderRadius: "100%",
+    },
+    category: "DeFi",
+  },
+  {
+    id: 35,
+    name: "Synbo Protocol",
+    imageSrc: "/assets/partners/ottochain-logo.jpg",
+    description:
+      "The Community Capital Protocol, Consensus Matching by Position of Proof, and CCO (Community Consensus Offering).",
+    websiteUrl: "https://synbo.org/",
+    twitterUrl: "https://x.com/ottochain_",
+    style: {
+      borderRadius: "100%",
+    },
+    category: "DeFi",
+  },
+  {
+    id: 36,
+    name: "Tokenwars",
+    imageSrc: "/assets/partners/tokenwars-logo.png",
+    description:
+      "SocialFi meets real-world token stakes in a gamified crypto battleground. Tap to earn BIG ⚔️",
+    websiteUrl: "https://tokenwars.io/",
+    twitterUrl: "https://x.com/tokenwars_io",
+    style: {
+      borderRadius: "100%",
+    },
+    category: "GameFi",
+  },
+  {
+    id: 37,
+    name: "Chronicles Of Warcraft",
+    imageSrc: "/assets/partners/chronicles-of-warcraft-logo.jpg",
+    description: "A web3 game based on token economy 3.0, Freedom for gamers.",
+    websiteUrl: "https://www.chroniclesofwarcraft.com/",
+    twitterUrl: "https://x.com/COWGameFi",
+    style: {
+      borderRadius: "100%",
+    },
+    category: "GameFi",
+  },
+  {
+    id: 37,
+    name: "Youflix",
+    imageSrc: "/assets/partners/youflix-logo.jpg",
+    description:
+      "Watch & upload memes—videos, images, GIFs on Solana's first decentralized media platform with @poconsol.",
+    websiteUrl: "https://www.chroniclesofwarcraft.com/",
+    twitterUrl: "https://x.com/PocoYouflix",
+    style: {
+      borderRadius: "100%",
+    },
+    category: "GameFi",
+  },
+  {
+    id: 38,
+    name: "Just Read It",
+    imageSrc: "/assets/partners/jri.jpg",
+    description:
+      "JUST READ IT aims to build a revolutionary blockchain-based crowdfunding platform where JRI Contract holders can apply for funding for their business ideas.",
+    // websiteUrl: "https://www.chroniclesofwarcraft.com/",
+    twitterUrl: "https://x.com/jri_justreadit",
+    style: {
+      borderRadius: "100%",
+    },
+    category: "NFT",
+  },
+  {
+    id: 39,
+    name: "Just Read It",
+    imageSrc: "/assets/partners/jri.jpg",
+    description:
+      "JUST READ IT aims to build a revolutionary blockchain-based crowdfunding platform where JRI Contract holders can apply for funding for their business ideas.",
+    // websiteUrl: "https://www.chroniclesofwarcraft.com/",
+    twitterUrl: "https://x.com/jri_justreadit",
+    style: {
+      borderRadius: "100%",
+    },
+    category: "NFT",
+  },
+];
+
+const categories = [
+  "Blockchain Security",
+  "Cloud Computing",
+  "DAO",
+  "DataFi",
+  "DeFi",
+  "DNS",
+  "GameFi",
+  "Infrastructure",
+  "LLM",
+  "Meme",
+  "NFT",
+  "RWA",
+  "SocialFi",
 ];
 
 const Fade = require("react-reveal/Fade");
@@ -621,6 +752,12 @@ export default function CPartners() {
               </WrapItem>
             ))}
           </Wrap> */}
+
+          <HStack>
+            {categories.map((category, i) => (
+              <Button key={i}>{category}</Button>
+            ))}
+          </HStack>
 
           <Grid
             gridTemplateColumns={{
