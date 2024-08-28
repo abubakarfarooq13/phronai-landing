@@ -44,7 +44,7 @@ export default function CategoryPartners(props: CategoryPartnersProps) {
         {partners.map((p) => (
           <VStack
             _hover={{
-              translateY: "-7px",
+              transform: "translateY(-7px)",
               transition: "all .3s",
             }}
             transition="all .3s"
