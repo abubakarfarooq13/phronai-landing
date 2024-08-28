@@ -42,7 +42,17 @@ export default function CategoryPartners(props: CategoryPartnersProps) {
         justifyContent={{ base: "center" }}
       >
         {partners.map((p) => (
-          <VStack key={p.id} as={"a"} href={p.twitterUrl} target="_blank">
+          <VStack
+            _hover={{
+              translateY: "-7px",
+              transition: "all .3s",
+            }}
+            transition="all .3s"
+            key={p.id}
+            as={"a"}
+            href={p.twitterUrl}
+            target="_blank"
+          >
             <Box
               minH="57px"
               bgColor={p.name === "Volu Mint" ? "#000" : "transparent"}
