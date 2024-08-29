@@ -44,6 +44,7 @@ export default function CategoryPartners(props: CategoryPartnersProps) {
         pointerEvents="none"
         as="button"
         className="btn-grad"
+        margin={{ base: "0px auto 20px auto", md: "0px 0px 20px 0px" }}
       >
         {category}
       </Box>
