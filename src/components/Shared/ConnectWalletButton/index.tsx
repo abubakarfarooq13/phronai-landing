@@ -25,8 +25,8 @@ export default function ConnectWalletButton(props: any) {
   return gradientButton ? (
     <Box
       as="button"
-      minW="200px"
       className="btn-grad"
+      minW="200px"
       onClick={() => {
         isConnected
           ? open({

@@ -60,7 +60,7 @@ export default function PartnerCard(props: PartnerCardProps) {
       px="6"
       pb="6"
       h="full"
-      bg={"white"}
+      bg={"#f3f5ff"}
       color={"#000"}
       // bgSize="cover"
       // bgPos="center"
@@ -71,6 +71,7 @@ export default function PartnerCard(props: PartnerCardProps) {
       _hover={{
         transform: "translateY(-10px)",
       }}
+      border="1px solid rgba(0,0,0,0.08)"
       // minH="170px"
     >
       <Box>

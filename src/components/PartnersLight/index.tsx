@@ -749,9 +749,9 @@ export default function CPartners() {
 
           <Stack
             direction="row"
-            justifyContent="center"
+            justifyContent="flex-start"
             flexWrap="wrap"
-            gap="3"
+            gap="10"
           >
             <Fade bottom>
               <CategoryPartners
