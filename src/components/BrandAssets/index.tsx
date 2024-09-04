@@ -10,6 +10,8 @@ import {
   Divider,
   VStack,
   Stack,
+  Button,
+  useClipboard,
 } from "@chakra-ui/react";
 
 const Fade = require("react-reveal/Fade");
@@ -69,6 +71,20 @@ const tokenIcons = [
 ];
 
 export default function CBrandAssets() {
+  const { onCopy, value, setValue, hasCopied } = useClipboard("");
+  const {
+    onCopy: onCopySecondary,
+    value: secondaryValue,
+    setValue: setSecondaryValue,
+    hasCopied: hasSecondaryCopied,
+  } = useClipboard("");
+  const {
+    onCopy: onCopyGradient,
+    value: gradientValue,
+    setValue: setGradientValue,
+    hasCopied: hasGradientCopied,
+  } = useClipboard("");
+
   return (
     <>
       <Box pt={{ base: "20px", sm: "150px" }}>
@@ -125,10 +141,11 @@ export default function CBrandAssets() {
                       as="a"
                       href={logo.svgDownloadLink}
                       fontSize="xs"
-                      bg="#E3C6FE"
+                      bg="#c34bfb"
                       px="1.5"
                       py="0.5"
                       rounded="sm"
+                      color="#fff"
                       download
                     >
                       SVG
@@ -137,10 +154,11 @@ export default function CBrandAssets() {
                       as="a"
                       href={logo.pngDownloadLink}
                       fontSize="xs"
-                      bg="#E3C6FE"
+                      bg="#c34bfb"
                       px="1.5"
                       py="0.5"
                       rounded="sm"
+                      color="#fff"
                       download
                     >
                       PNG
@@ -151,7 +169,7 @@ export default function CBrandAssets() {
             ))}
           </Grid>
 
-          <Divider borderColor="rgba(255,255,255,0.2)" />
+          <Divider borderColor="rgba(0,0,0,0.2)" />
 
           <Text as="h2" textAlign="center" fontSize="4xl" mb="4" pt="14">
             Token Icon
@@ -194,7 +212,8 @@ export default function CBrandAssets() {
                       as="a"
                       href={logo.svgDownloadLink}
                       fontSize="xs"
-                      bg="#E3C6FE"
+                      bg="#c34bfb"
+                      color="#fff"
                       px="1.5"
                       py="0.5"
                       rounded="sm"
@@ -206,7 +225,8 @@ export default function CBrandAssets() {
                       as="a"
                       href={logo.pngDownloadLink}
                       fontSize="xs"
-                      bg="#E3C6FE"
+                      bg="#c34bfb"
+                      color="#fff"
                       px="1.5"
                       py="0.5"
                       rounded="sm"
@@ -220,24 +240,110 @@ export default function CBrandAssets() {
             ))}
           </Grid>
 
-          <Divider borderColor="rgba(255,255,255,0.2)" />
+          <Divider borderColor="rgba(0,0,0,0.2)" />
 
-          <Box pt="14" id="colors">
+          <Box py="14" id="colors">
             <Text as="h2" textAlign="center" fontSize="4xl" pb="10">
               Colors
             </Text>
 
-            <Text textAlign="center" mb="4" fontSize="2xl">
+            {/* <Text textAlign="center" mb="4" fontSize="2xl">
               Primary
-            </Text>
-            <Box bgColor="#E3C6FE" py="6" w="full" rounded="xl">
-              <Text textAlign="center" fontSize="lg">
-                #E3C6FE
-              </Text>
-            </Box>
+            </Text> */}
+            <Stack direction={{ base: "column", md: "row" }}>
+              <Box
+                w="full"
+                border="1px solid rgba(0,0,0,.3)"
+                rounded="xl"
+                pb="2"
+              >
+                <Box bgColor="#5756f4" py="6" w="full" rounded="xl">
+                  <Text textAlign="center" fontSize="lg" color="#fff">
+                    #5756f4
+                  </Text>
+                </Box>
+                <Text
+                  color="#000"
+                  opacity=".8"
+                  fontSize="17px"
+                  textAlign="center"
+                  fontWeight={500}
+                  mt="2"
+                  cursor="pointer"
+                  onClick={() => {
+                    setValue("#5756f4");
+                    onCopy();
+                  }}
+                >
+                  {hasCopied ? "Copied!" : "Copy"}
+                </Text>
+              </Box>
+              <Box
+                w="full"
+                border="1px solid rgba(0,0,0,.3)"
+                rounded="xl"
+                pb="2"
+              >
+                <Box bgColor="#c34bfb" py="6" w="full" rounded="xl">
+                  <Text textAlign="center" fontSize="lg" color="#fff">
+                    #c34bfb
+                  </Text>
+                </Box>
+                <Text
+                  color="#000"
+                  opacity=".8"
+                  fontSize="17px"
+                  textAlign="center"
+                  fontWeight={500}
+                  mt="2"
+                  cursor="pointer"
+                  onClick={() => {
+                    setSecondaryValue("#c34bfb");
+                    onCopySecondary();
+                  }}
+                >
+                  {hasSecondaryCopied ? "Copied!" : "Copy"}
+                </Text>
+              </Box>
+
+              <Box
+                w="full"
+                border="1px solid rgba(0,0,0,.3)"
+                rounded="xl"
+                pb="2"
+              >
+                <Box
+                  bgImage="linear-gradient(to right, #5756f4, #c34bfb)"
+                  py="6"
+                  w="full"
+                  rounded="xl"
+                >
+                  <Text textAlign="center" fontSize="lg" color="#fff">
+                    #5756f4 - #c34bfb
+                  </Text>
+                </Box>
+                <Text
+                  color="#000"
+                  opacity=".8"
+                  fontSize="17px"
+                  textAlign="center"
+                  fontWeight={500}
+                  mt="2"
+                  cursor="pointer"
+                  onClick={() => {
+                    setGradientValue(
+                      "linear-gradient(to right, #5756f4, #c34bfb)"
+                    );
+                    onCopyGradient();
+                  }}
+                >
+                  {hasGradientCopied ? "Copied!" : "Copy"}
+                </Text>
+              </Box>
+            </Stack>
           </Box>
 
-          <Divider borderColor="rgba(255,255,255,0.2)" />
+          <Divider borderColor="rgba(0,0,0,0.2)" />
 
           <Text
             as="h2"
@@ -255,32 +361,51 @@ export default function CBrandAssets() {
             w="full"
             justifyContent="center"
             spacing="5"
-            alignItems="center"
-            mb="10"
+            alignItems="flex-start"
+            mb="32"
           >
-            <VStack
+            {/* <VStack
               bgColor="#E3C6FE"
               spacing="0"
               px={{ base: "4", sm: "10" }}
               py="4"
               rounded="lg"
+              w="full"
+              maxW="250px"
             >
-              <Text fontSize="lg" fontWeight={700}>
-                Formular Bold
+              <Text as="h4" fontSize="lg" fontWeight={700}>
+                Ruberoid Bold
               </Text>
-              <Text fontSize="lg" fontWeight={500}>
-                Formular Medium
+            </VStack> */}
+            <VStack
+              align={{ base: "center", sm: "start" }}
+              textAlign={{ base: "center", sm: "left" }}
+              w="full"
+              maxW="350px"
+            >
+              <Text fontSize="2xl" as="h4">
+                Ruberoid
               </Text>
-              <Text fontSize="lg" fontWeight={400}>
-                Formular Regular
+              <Text
+                fontSize="sm"
+                style={{ fontFamily: "var(--font-ruberoid)" }}
+              >
+                Ruberoid is a squarish geometric sans-serif family reminiscent
+                of Italian designs of 1950s and 1960s, but featuring
+                considerably rounder shapes to give it a more contemporary feel.
               </Text>
             </VStack>
             <VStack
               align={{ base: "center", sm: "start" }}
               textAlign={{ base: "center", sm: "left" }}
+              w="full"
+              maxW="350px"
             >
-              <Text fontSize="2xl">Formular</Text>
-              <Text fontSize="lg">Formular is our primary font.</Text>
+              <Text fontSize="2xl">Inter</Text>
+              <Text fontSize="base">
+                Inter is a variable font family carefully crafted & designed for
+                computer screens.
+              </Text>
             </VStack>
           </Stack>
         </Container>
