@@ -253,7 +253,7 @@ export default function CBrandAssets() {
             <Stack direction={{ base: "column", md: "row" }}>
               <Box
                 w="full"
-                border="1px solid rgba(0,0,0,.3)"
+                border="1px solid rgba(0,0,0,.2)"
                 rounded="xl"
                 pb="2"
               >
@@ -280,7 +280,7 @@ export default function CBrandAssets() {
               </Box>
               <Box
                 w="full"
-                border="1px solid rgba(0,0,0,.3)"
+                border="1px solid rgba(0,0,0,.2)"
                 rounded="xl"
                 pb="2"
               >
@@ -308,7 +308,7 @@ export default function CBrandAssets() {
 
               <Box
                 w="full"
-                border="1px solid rgba(0,0,0,.3)"
+                border="1px solid rgba(0,0,0,.2)"
                 rounded="xl"
                 pb="2"
               >
