@@ -1,3 +1,7 @@
+import { FaDroplet, FaLink, FaWallet } from "react-icons/fa6";
+import { FiBarChart2 } from "react-icons/fi";
+import { MdWifiTethering } from "react-icons/md";
+
 export const layerZeroAndLayerOneMenuItems = [
   // {
   //   id: 2,
@@ -59,6 +63,30 @@ export const networkMenuItems = [
     href: "https://testnet.phronscan.io",
     icon: "/assets/new-home/phronscan-icon.png",
   },
+  {
+    id: 6,
+    label: "Testnet Faucet",
+    href: "#",
+    icon: <FaDroplet color="#000" />,
+  },
+  {
+    id: 7,
+    label: "PhronAI Wallet",
+    href: "#",
+    icon: <FaWallet color="#000" />,
+  },
+  {
+    id: 7,
+    label: "Bridge",
+    href: "#",
+    icon: <FaLink fontSize="20px" color="#000" />,
+  },
+  {
+    id: 7,
+    label: "Dex",
+    href: "#",
+    icon: <FiBarChart2 fontSize="22px" color="#000" />,
+  },
 ];
 
 export const communityMenuItems = [
@@ -73,6 +101,20 @@ export const communityMenuItems = [
     label: "Partnerships",
     href: "/partnerships",
     icon: "/assets/new-home/handshake.svg",
+  },
+  {
+    id: 10,
+    label: "Voyage Airdrop Campaign",
+    href: "https://voyage.phron.ai/",
+    icon: <MdWifiTethering fontSize="22px" color="#000" />,
+  },
+  {
+    id: 11,
+    label: "Phrony",
+    href: "https://t.me/phron_bot",
+    icon: "/assets/brand-assets/logo-icon.svg",
+    target: "_blank",
+    noStyle: true,
   },
 ];
 

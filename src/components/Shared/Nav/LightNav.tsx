@@ -194,17 +194,26 @@ export function SubMenu(props: any) {
                   }}
                   as={Link}
                   href={item.href}
+                  target={item.target}
                   bgColor={router.pathname === item.href ? "#e8effc" : "none"}
                 >
-                  <Image
-                    src={item.icon}
-                    alt="icon"
-                    width={20}
-                    height={20}
-                    style={{
-                      filter: "invert(1)",
-                    }}
-                  />
+                  {typeof item.icon === "string" ? (
+                    <Image
+                      src={item.icon}
+                      alt="icon"
+                      width={20}
+                      height={20}
+                      style={
+                        item.noStyle
+                          ? {}
+                          : {
+                              filter: "invert(1)",
+                            }
+                      }
+                    />
+                  ) : (
+                    item.icon
+                  )}
                   <Text
                     w="full"
                     _active={{

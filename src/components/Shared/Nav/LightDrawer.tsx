@@ -186,15 +186,19 @@ export default function MobileDrawer(props: MobileDrawerProps) {
                   <VStack w="full">
                     {networkMenuItems.map((item) => (
                       <HStack key={item.id} w="full" ml="4">
-                        <Image
-                          src={item.icon}
-                          alt="icon"
-                          width={20}
-                          height={20}
-                          style={{
-                            filter: "invert(1)",
-                          }}
-                        />
+                        {typeof item.icon === "string" ? (
+                          <Image
+                            src={item.icon}
+                            alt="icon"
+                            width={20}
+                            height={20}
+                            style={{
+                              filter: "invert(1)",
+                            }}
+                          />
+                        ) : (
+                          <Text width="20px">{item.icon}</Text>
+                        )}
                         <Text
                           w="full"
                           as={Link}
@@ -238,15 +242,19 @@ export default function MobileDrawer(props: MobileDrawerProps) {
                   <VStack w="full">
                     {communityMenuItems.map((item) => (
                       <HStack key={item.id} w="full" ml="4">
-                        <Image
-                          src={item.icon}
-                          style={{
-                            filter: "invert(1)",
-                          }}
-                          alt="icon"
-                          width={20}
-                          height={20}
-                        />
+                        {typeof item.icon === "string" ? (
+                          <Image
+                            src={item.icon}
+                            style={{
+                              filter: "invert(1)",
+                            }}
+                            alt="icon"
+                            width={20}
+                            height={20}
+                          />
+                        ) : (
+                          item.icon
+                        )}
                         <Text
                           w="full"
                           as={Link}
