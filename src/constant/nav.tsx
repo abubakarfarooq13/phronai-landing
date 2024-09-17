@@ -111,6 +111,7 @@ export const communityMenuItems = [
     label: "Voyage Airdrop Campaign",
     href: "https://voyage.phron.ai/",
     icon: <MdWifiTethering fontSize="22px" color="#000" />,
+    target: "_blank",
   },
   {
     id: 11,
