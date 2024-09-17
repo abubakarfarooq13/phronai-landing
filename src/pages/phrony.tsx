@@ -28,7 +28,7 @@ export default function PhronyPage() {
         <title>Phrony The Game</title>
         <meta
           name="description"
-          content="From static to dynamic. One step beyond."
+          content="Enjoy earning $PHRON through a gamified system that provides an interactive and easy way to earn tokens and have fun!"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
