@@ -24,8 +24,8 @@ export default function PhronyHero() {
       bgSize="contain"
       bgPos="top"
       bgRepeat="no-repeat"
-      pt={{ base: "50px", sm: "100px", lg: "170px", xl: "180px" }}
-      mt={{ base: "0px", sm: "155px", lg: "150px", xl: "100px" }}
+      pt={{ base: "90px", sm: "140px", lg: "170px", xl: "180px" }}
+      mt={{ base: "0px", sm: "130px", lg: "150px", xl: "100px" }}
       position="relative"
       minH="600px"
       maxW="1500px"
