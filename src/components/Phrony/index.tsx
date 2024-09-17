@@ -26,7 +26,7 @@ export default function Phrony() {
     <>
       <LightNav />
 
-      <Box px={{ base: "4", xl: "0" }}>
+      <Box px={{ base: "4", xl: "0" }} overflow="hidden">
         <PhronyHero />
         <Airdrop />
         <GameAndVoyage />

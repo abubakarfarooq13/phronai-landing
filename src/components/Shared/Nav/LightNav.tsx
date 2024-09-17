@@ -86,12 +86,8 @@ const AlertBanner = React.forwardRef((props, ref: any) => {
             fontSize={{ base: "sm", md: "16px" }}
             color="#fff"
           >
-            Our gamified airdrop campaign!{" "}
-            <Text as="span" fontWeight={300} fontSize="sm">
-              Enjoy a distribution of over US$ 1M worth of tokens through
-              playing with our tapping game and completing task in our voyage
-              portal.
-            </Text>
+            Our gamified airdrop campaign! Enjoy a distribution of over US$
+            1,000,000 worth of tokens
           </Text>
           {/* <Box display={{ base: "none", sm: "block" }}>
             <Image

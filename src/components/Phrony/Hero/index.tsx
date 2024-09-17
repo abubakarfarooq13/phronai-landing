@@ -24,8 +24,8 @@ export default function PhronyHero() {
       bgSize="contain"
       bgPos="top"
       bgRepeat="no-repeat"
-      pt={{ base: "50px", sm: "100px" }}
-      mt={{ base: "0px", sm: "155px" }}
+      pt={{ base: "50px", sm: "100px", lg: "170px", xl: "180px" }}
+      mt={{ base: "0px", sm: "155px", lg: "150px", xl: "100px" }}
       position="relative"
       minH="600px"
       maxW="1500px"
@@ -40,14 +40,14 @@ export default function PhronyHero() {
         bgRepeat="no-repeat"
         rounded="40px"
         display="flex"
-        flexDir={{ base: "column", xl: "row" }}
+        flexDir={{ base: "column", lg: "row" }}
         alignItems="center"
         justifyContent="space-between"
-        pl={{ base: "16px", lg: "80px", xl: "80px" }}
+        pl={{ base: "16px", lg: "80px" }}
         pr={{ base: "16px", lg: "80px", xl: "160px" }}
-        pt={{ base: "26px", lg: "80px", xl: "0px" }}
+        pt={{ base: "26px", lg: "0px" }}
       >
-        <VStack spacing="8" maxW="500px" w="full">
+        <VStack spacing="8" py="80px" maxW="500px" w={{ xl: "full" }}>
           {/* <Image
             src="/placeholder.svg?height=100&width=200"
             alt="Phrony Logo"
@@ -73,7 +73,7 @@ export default function PhronyHero() {
         </VStack>
 
         <Box
-          mt={{ base: "30px", lg: "40px", xl: "-100px" }}
+          mt={{ base: "30px", lg: "-100px" }}
           mb={{ base: "-23px", lg: "-32px" }}
         >
           <Fade right>

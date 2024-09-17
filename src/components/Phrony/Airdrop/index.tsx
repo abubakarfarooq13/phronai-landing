@@ -41,7 +41,7 @@ export default function Airdrop() {
         top: "0px",
         bottom: "0px",
         right: "0px",
-        opacity: ".4",
+        opacity: "0.2",
         display: { base: "block", md: "none" },
       }}
       position="relative"
