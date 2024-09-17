@@ -322,7 +322,7 @@ const marketing = [
   {
     id: 22,
     name: "Luna PR",
-    imageSrc: "/assets/partners/Luna-pr-logo.jpg",
+    imageSrc: "/assets/partners/luna-pr-logo.jpg",
     description:
       "Connecting tomorrow's tech with today's audience. Public relations⏐ Marketing ⏐ Strategy & Consulting for Web3 and Emerging Tech.",
     twitterUrl: "https://x.com/LunaPRofficial",
