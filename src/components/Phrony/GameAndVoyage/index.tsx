@@ -44,7 +44,7 @@ export default function GameAndVoyage() {
               top: "0px",
               bottom: "0px",
               right: "0px",
-              opacity: ".5",
+              opacity: ".3",
               display: { base: "block", xl: "none" },
             }}
             overflow="hidden"
@@ -134,7 +134,7 @@ export default function GameAndVoyage() {
               top: "0px",
               bottom: "0px",
               right: "0px",
-              opacity: ".5",
+              opacity: ".3",
               display: { base: "block", xl: "none" },
             }}
             overflow="hidden"

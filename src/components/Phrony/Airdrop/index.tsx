@@ -22,15 +22,15 @@ export default function Airdrop() {
       maxW="1240px"
       bgImage="/assets/phrony/airdrop-bg.jpg"
       bgSize="cover"
-      bgPos="center"
+      bgPos={{ base: "left", md: "center" }}
       minH="440px"
       bgRepeat="no-repeat"
       rounded="40px"
       display="flex"
       alignItems="center"
       justifyContent="flex-end"
-      pl={{ base: "40px", lg: "80px" }}
-      pr={{ base: "40px", lg: "80px", xl: "160px" }}
+      pl={{ base: "40px", md: "80px" }}
+      pr={{ base: "40px", md: "80px", xl: "160px" }}
       _after={{
         content: `''`,
         background: "#000",
@@ -41,17 +41,17 @@ export default function Airdrop() {
         top: "0px",
         bottom: "0px",
         right: "0px",
-        opacity: ".5",
-        display: { base: "block", xl: "none" },
+        opacity: ".4",
+        display: { base: "block", md: "none" },
       }}
       position="relative"
       overflow="hidden"
     >
       <VStack
-        color={{ base: "#fff", xl: "#000" }}
+        color={{ base: "#fff", md: "#000" }}
         zIndex={1}
         position="relative"
-        maxW={{ base: "full", xl: "400px" }}
+        maxW={{ base: "full", md: "400px" }}
       >
         <Text as="h2" fontSize="34px" lineHeight="120%" mb={4}>
           The common airdrop, but funnier than ever
