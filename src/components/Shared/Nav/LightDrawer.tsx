@@ -249,9 +249,13 @@ export default function MobileDrawer(props: MobileDrawerProps) {
                         {typeof item.icon === "string" ? (
                           <Image
                             src={item.icon}
-                            style={{
-                              filter: "invert(1)",
-                            }}
+                            style={
+                              item.noStyle
+                                ? {}
+                                : {
+                                    filter: "invert(1)",
+                                  }
+                            }
                             alt="icon"
                             width={20}
                             height={20}
