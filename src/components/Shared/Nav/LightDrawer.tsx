@@ -218,8 +218,12 @@ export default function MobileDrawer(props: MobileDrawerProps) {
                             router.pathname === item.href ? "#fff" : "none"
                           }
                           fontSize={{ "3000px": "lg" }}
+                          target={item.target}
                         >
-                          {item.label}
+                          {item.label}{" "}
+                          <Text as="span" fontSize="xs" fontWeight={300}>
+                            {item.isComingSoon ? "(coming soon)" : null}
+                          </Text>
                         </Text>
                       </HStack>
                     ))}

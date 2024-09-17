@@ -32,6 +32,11 @@ const ruberoidFont = localFont({
       weight: "700",
       style: "normal",
     },
+    {
+      path: "../assets/fonts/Ruberoid/Ruberoid-ExtraBold.otf",
+      weight: "800",
+      style: "normal",
+    },
   ],
   variable: "--font-ruberoid",
 });

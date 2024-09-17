@@ -21,6 +21,7 @@ export const layerZeroAndLayerOneMenuItems = [
   //   href: "/phron",
   //   icon: "/assets/new-home/phron-coin.png",
   // },
+
   {
     id: 3,
     label: "Ecosystem",
@@ -66,13 +67,14 @@ export const networkMenuItems = [
   {
     id: 6,
     label: "Testnet Faucet",
-    href: "#",
+    href: "https://faucet.phron.ai/",
     icon: <FaDroplet color="#000" />,
+    target: "_blank",
   },
   {
     id: 7,
     label: "PhronAI Wallet",
-    href: "#",
+    href: "https://faucet.phron.ai/",
     icon: <FaWallet color="#000" />,
   },
   {
@@ -80,14 +82,14 @@ export const networkMenuItems = [
     label: "Bridge",
     href: "#",
     icon: <FaLink fontSize="20px" color="#000" />,
-    isComing: true,
+    isComingSoon: true,
   },
   {
     id: 7,
     label: "Dex",
     href: "#",
     icon: <FiBarChart2 fontSize="22px" color="#000" />,
-    isComing: true,
+    isComingSoon: true,
   },
 ];
 
@@ -113,9 +115,9 @@ export const communityMenuItems = [
   {
     id: 11,
     label: "Phrony",
-    href: "https://t.me/phron_bot",
+    href: "/phrony",
     icon: "/assets/brand-assets/logo-icon.svg",
-    target: "_blank",
+    // target: "_blank",
     noStyle: true,
   },
 ];

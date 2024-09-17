@@ -40,10 +40,11 @@ const AlertBanner = React.forwardRef((props, ref: any) => {
 
   return (
     <Box
-      bgImage={{
-        base: "/assets/chain/alert-banner-image-mobile.png",
-        md: "/assets/chain/alert-banner-image.png",
-      }}
+      // bgImage={{
+      //   base: "/assets/chain/alert-banner-image-mobile.png",
+      //   md: "/assets/chain/alert-banner-image.png",
+      // }}
+      bgImage="linear-gradient(90deg, #5756f4 0%, #c34bfb 100%)"
       bgPos={{ base: "right", md: "top" }}
       bgSize="cover"
       transform="translateY(0px)"
@@ -57,7 +58,7 @@ const AlertBanner = React.forwardRef((props, ref: any) => {
         direction={{ base: "column", sm: "row" }}
         alignItems={{ base: "flex-start", md: "center" }}
         justifyContent="center"
-        maxW="1260px"
+        maxW="1360px"
         mx="auto"
         px={{ base: "4", md: "2" }}
         pb="4"
@@ -71,30 +72,35 @@ const AlertBanner = React.forwardRef((props, ref: any) => {
           w={{ base: "full", md: "fit-content" }}
           spacing={{ base: "2", sm: "5" }}
         >
-          <Box>
+          {/* <Box>
             <Image
               src="/assets/chain/balloon-icon.png"
               alt="ballon icon"
               width={25}
               height={25}
             />
-          </Box>
+          </Box> */}
           <Text
             fontWeight={500}
             textAlign="center"
             fontSize={{ base: "sm", md: "16px" }}
             color="#fff"
           >
-            Welcome to the PHRON AI Airdrop Extravaganza!
+            Our gamified airdrop campaign!{" "}
+            <Text as="span" fontWeight={300} fontSize="sm">
+              Enjoy a distribution of over US$ 1M worth of tokens through
+              playing with our tapping game and completing task in our voyage
+              portal.
+            </Text>
           </Text>
-          <Box display={{ base: "none", sm: "block" }}>
+          {/* <Box display={{ base: "none", sm: "block" }}>
             <Image
               src="/assets/chain/balloon-icon.png"
               alt="ballon icon"
               width={25}
               height={25}
             />
-          </Box>
+          </Box> */}
         </HStack>
 
         <HStack
@@ -102,7 +108,7 @@ const AlertBanner = React.forwardRef((props, ref: any) => {
           w={{ base: "full", sm: "fit-content" }}
           justifyContent="center"
         >
-          <Button
+          {/* <Button
             variant="primary"
             as="a"
             href="https://voyage.phron.ai/"
@@ -112,8 +118,8 @@ const AlertBanner = React.forwardRef((props, ref: any) => {
             px="4"
           >
             Get Started
-          </Button>
-          <Text
+          </Button> */}
+          {/* <Text
             cursor="pointer"
             onClick={() => {
               setShow(false);
@@ -121,9 +127,9 @@ const AlertBanner = React.forwardRef((props, ref: any) => {
             display={{ base: "none", sm: "block" }}
           >
             <MdOutlineClose />
-          </Text>
+          </Text> */}
         </HStack>
-        <IconButton
+        {/* <IconButton
           cursor="pointer"
           onClick={() => {
             setShow(false);
@@ -135,7 +141,7 @@ const AlertBanner = React.forwardRef((props, ref: any) => {
           size="xs"
           icon={<MdOutlineClose fontSize="16px" />}
           aria-label="close button"
-        />
+        /> */}
       </Stack>
     </Box>
   );
@@ -227,7 +233,10 @@ export function SubMenu(props: any) {
                     fontSize={{ base: "17px", "3000px": "lg" }}
                     fontWeight={500}
                   >
-                    {item.label}
+                    {item.label}{" "}
+                    <Text as="span" fontSize="xs" fontWeight={300}>
+                      {item.isComingSoon ? "(coming soon)" : null}
+                    </Text>
                   </Text>
                 </HStack>
               ))}
