@@ -62,7 +62,7 @@ const AlertBanner = React.forwardRef((props, ref: any) => {
         mx="auto"
         px={{ base: "4", md: "2" }}
         pb="4"
-        spacing={{ base: "3", md: "8" }}
+        spacing="0"
         position="relative"
         pt={{ base: "2", md: "4" }}
       >
