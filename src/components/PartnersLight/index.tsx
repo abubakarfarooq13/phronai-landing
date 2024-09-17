@@ -181,12 +181,12 @@ const dao = [
   },
   {
     id: 31,
-    name: "DSCLAB",
+    name: "Ring AI | $RING",
     imageSrc: "/assets/partners/ringai-logo.jpg",
     description:
       "An advanced AI platform that revolutionizes customer support & sales through autonomous, phone-based agents. Powered by $RING token.",
     websiteUrl: "https://www.tryring.ai/",
-    twitterUrl: "https://x.com/dsc_lab",
+    twitterUrl: "https://x.com/TryRingAI",
     style: {
       borderRadius: "100%",
     },
@@ -197,9 +197,9 @@ const dao = [
     name: "DSCLAB",
     imageSrc: "/assets/partners/dsc-logo.jpg",
     description:
-      "An advanced AI platform that revolutionizes customer support & sales through autonomous, phone-based agents. Powered by $RING token.",
+      "Pioneering the Future of Computing Power Leverage AI computing power across a global network.",
     websiteUrl: "https://dsclab.io/",
-    twitterUrl: "https://x.com/TryRingAI",
+    twitterUrl: "https://x.com/dsc_lab",
     style: {
       borderRadius: "100%",
     },
@@ -299,6 +299,38 @@ const dataFi = [
     websiteUrl: "https://collably.network/",
     twitterUrl: "https://x.com/CollablyNetwork",
     category: "DataFi",
+  },
+];
+
+const TradFi = [
+  {
+    id: 22,
+    name: "FD CAPITAL",
+    imageSrc: "/assets/partners/fd-capital-logo.jpg",
+    description:
+      "VCaaS firm focused on blockchain companies with strong technical teams that can achieve mainstream adoption.'",
+    twitterUrl: "https://x.com/fdcapital_io",
+    websiteUrl: "https://fdcapital.io/",
+    category: "TradFi",
+    style: {
+      borderRadius: "100%",
+    },
+  },
+];
+
+const marketing = [
+  {
+    id: 22,
+    name: "Luna PR",
+    imageSrc: "/assets/partners/Luna-pr-logo.jpg",
+    description:
+      "Connecting tomorrow's tech with today's audience. Public relations⏐ Marketing ⏐ Strategy & Consulting for Web3 and Emerging Tech.",
+    twitterUrl: "https://x.com/LunaPRofficial",
+    websiteUrl: "https://www.lunapr.io/",
+    category: "Marketing/PR",
+    style: {
+      borderRadius: "100%",
+    },
   },
 ];
 
@@ -758,6 +790,14 @@ export default function CPartners() {
                 category="Blockchain Security"
                 partners={blockchainSecurity}
               />
+            </Fade>
+
+            <Fade bottom>
+              <CategoryPartners category="TradFi" partners={TradFi} />
+            </Fade>
+
+            <Fade bottom>
+              <CategoryPartners category="Marketing/PR" partners={marketing} />
             </Fade>
 
             <Fade bottom>

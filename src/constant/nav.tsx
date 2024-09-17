@@ -80,12 +80,14 @@ export const networkMenuItems = [
     label: "Bridge",
     href: "#",
     icon: <FaLink fontSize="20px" color="#000" />,
+    isComing: true,
   },
   {
     id: 7,
     label: "Dex",
     href: "#",
     icon: <FiBarChart2 fontSize="22px" color="#000" />,
+    isComing: true,
   },
 ];
 
