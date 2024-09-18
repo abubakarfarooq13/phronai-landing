@@ -77,7 +77,6 @@ export const networkMenuItems = [
     label: "PhronAI Wallet",
     href: "#",
     icon: <FaWallet color="#000" />,
-    isComingSoon: true,
   },
   {
     id: 7,
