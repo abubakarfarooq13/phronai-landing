@@ -75,8 +75,9 @@ export const networkMenuItems = [
   {
     id: 7,
     label: "PhronAI Wallet",
-    href: "https://faucet.phron.ai/",
+    href: "#",
     icon: <FaWallet color="#000" />,
+    isComingSoon: true,
   },
   {
     id: 7,
