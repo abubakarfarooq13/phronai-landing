@@ -69,11 +69,24 @@ export default function YourWallet() {
               <Text as="h3" fontSize="xl" fontWeight={"800 !important"} mb="4">
                 Not your keys, not your crypto
               </Text>
-              <Text>
+              <Text mb="20px">
                 Providing the best security, but not controlling your assets nor
                 your keys. Always trying to provide the decentralization and
                 privacy required for a Web 3.0 environment.
               </Text>
+
+              <Box
+                as="a"
+                href="https://t.me/phron_bot"
+                target="_blank"
+                w="full"
+                className="btn-grad"
+                p="10px"
+                zIndex={1}
+                maxW="260px"
+              >
+                Explore Phron AI De Wallet
+              </Box>
             </Box>
           </GridItem>
         </Grid>
