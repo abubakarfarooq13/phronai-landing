@@ -10,6 +10,8 @@ import {
 import Image from "next/image";
 import React from "react";
 
+const Fade = require("react-reveal/Fade");
+
 export default function PhronWalletHero() {
   return (
     <Box
@@ -25,60 +27,69 @@ export default function PhronWalletHero() {
       mx="auto"
     >
       <Container maxW="1240px">
-        <VStack>
-          <Text fontSize="xl" fontWeight={700}>
-            Phron AI DeWallet
-          </Text>
+        <Fade bottom>
+          <VStack>
+            <Text fontSize="xl" fontWeight={700}>
+              Phron AI DeWallet
+            </Text>
 
-          <Text
-            fontWeight={700}
-            fontSize="4xl"
-            lineHeight="110%"
-            textAlign="center"
-            mb="5"
-          >
-            Your decentralized gateway
-            <Box as="br" display={{ base: "none", md: "block" }} /> to storing
-            to your assets.
-          </Text>
-
-          <Text
-            bgColor="#fff"
-            textAlign="center"
-            color="#000"
-            rounded="full"
-            px={3}
-          >
-            Enjoy an easy and simple way to transact, buy and sell tokens, NFTs
-            and more!
-          </Text>
-        </VStack>
+            <Fade bottom>
+              <Text
+                fontWeight={700}
+                fontSize="4xl"
+                lineHeight="110%"
+                textAlign="center"
+                mb="5"
+              >
+                Your decentralized gateway
+                <Box as="br" display={{ base: "none", md: "block" }} /> to
+                storing to your assets.
+              </Text>
+              <Text
+                bgColor="#fff"
+                textAlign="center"
+                color="#000"
+                rounded="full"
+                px={3}
+              >
+                Enjoy an easy and simple way to transact, buy and sell tokens,
+                NFTs and more!
+              </Text>
+            </Fade>
+          </VStack>
+        </Fade>
 
         <Stack direction="row" justifyContent="center" spacing="0" mt="70px">
-          <Box mr={{ base: "-50px", md: "-100px" }}>
-            <Image
-              src="/assets/phron-wallet/ph3.png"
-              alt="phone 1"
-              width={400}
-              height={700}
-            />
-          </Box>
-          <Box mt="-70px">
-            <Image
-              src="/assets/phron-wallet/ph2.png"
-              alt="phone 1"
-              width={500}
-              height={900}
-            />
-          </Box>
-          <Box ml={{ base: "-50px", md: "-100px" }}>
-            <Image
-              src="/assets/phron-wallet/ph1.png"
-              alt="phone 1"
-              width={400}
-              height={700}
-            />
-          </Box>
+          <Fade bottom delay={200}>
+            <Box mr={{ base: "-50px", md: "-100px" }}>
+              <Image
+                src="/assets/phron-wallet/ph3.png"
+                alt="phone 1"
+                width={400}
+                height={700}
+              />
+            </Box>
+          </Fade>
+          <Fade bottom>
+            <Box mt="-70px">
+              <Image
+                src="/assets/phron-wallet/ph2.png"
+                alt="phone 1"
+                width={500}
+                height={900}
+              />
+            </Box>
+          </Fade>
+          <Fade bottom delay={300}>
+            <Box ml={{ base: "-50px", md: "-100px" }}>
+              <Image
+                src="/assets/phron-wallet/ph1.png"
+                alt="phone 1"
+                width={400}
+                height={700}
+              />
+            </Box>
+          </Fade>
         </Stack>
 
         <Stack

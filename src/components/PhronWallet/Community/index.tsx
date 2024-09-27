@@ -7,21 +7,23 @@ const Fade = require("react-reveal/Fade");
 export default function Community() {
   return (
     <Container maxW="1240px" pb="100px">
-      <VStack alignItems="center" textAlign="center">
-        <Text
-          as="h2"
-          fontSize="3xl"
-          mb="4"
-          fontWeight={"800 !important"}
-          lineHeight="110%"
-        >
-          One way, one outcome <br /> Connect with the community
-        </Text>
-        <Text fontSize="lg">
-          Enjoy a wallet not only backed by an ecosystem, but by a community of
-          crypto enthusiast.
-        </Text>
-      </VStack>
+      <Fade bottom>
+        <VStack alignItems="center" textAlign="center">
+          <Text
+            as="h2"
+            fontSize="3xl"
+            mb="4"
+            fontWeight={"800 !important"}
+            lineHeight="110%"
+          >
+            One way, one outcome <br /> Connect with the community
+          </Text>
+          <Text fontSize="lg">
+            Enjoy a wallet not only backed by an ecosystem, but by a community
+            of crypto enthusiast.
+          </Text>
+        </VStack>
+      </Fade>
 
       <Grid
         gridTemplateColumns={{ base: "repeat(1, 1fr)", md: "repeat(3, 1fr)" }}

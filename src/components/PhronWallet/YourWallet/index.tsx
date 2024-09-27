@@ -7,21 +7,23 @@ const Fade = require("react-reveal/Fade");
 export default function YourWallet() {
   return (
     <Container maxW="1240px" py="100px">
-      <VStack alignItems="center" textAlign="center">
-        <Text
-          as="h2"
-          fontSize="3xl"
-          mb="4"
-          fontWeight={"800 !important"}
-          lineHeight="110%"
-        >
-          Your wallet, Easy and Simple
-        </Text>
-        <Text fontSize="lg">A wallet for you.</Text>
-        <Text maxW="2xl" fontSize="lg">
-          Decentralized, secure, private, all in one place.
-        </Text>
-      </VStack>
+      <Fade bottom>
+        <VStack alignItems="center" textAlign="center">
+          <Text
+            as="h2"
+            fontSize="3xl"
+            mb="4"
+            fontWeight={"800 !important"}
+            lineHeight="110%"
+          >
+            Your wallet, Easy and Simple
+          </Text>
+          <Text fontSize="lg">A wallet for you.</Text>
+          <Text maxW="2xl" fontSize="lg">
+            Decentralized, secure, private, all in one place.
+          </Text>
+        </VStack>
+      </Fade>
 
       <Fade>
         <Grid
