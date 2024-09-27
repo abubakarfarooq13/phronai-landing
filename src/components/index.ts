@@ -10,6 +10,7 @@ export { default as CTeam } from "./Team";
 export { default as CRoadMap } from "./RoadMap";
 export { default as CPhronZero } from "./PhronZero";
 export { default as Phrony } from "./Phrony";
+export { default as PhronWallet } from "./PhronWallet";
 
 export { default as CProjects } from "./Projects";
 
