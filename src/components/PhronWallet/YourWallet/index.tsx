@@ -80,9 +80,9 @@ export default function YourWallet() {
               </Text>
 
               <Box
-                as="a"
-                href="https://t.me/phron_bot"
-                target="_blank"
+                // as="a"
+                // href="#"
+                // target="_blank"
                 w="full"
                 className="btn-grad"
                 p="10px"
@@ -94,6 +94,7 @@ export default function YourWallet() {
                 onMouseLeave={() => {
                   setHoverButton("");
                 }}
+                cursor="pointer"
               >
                 {hoverButton === "explore-phron-ai"
                   ? "Coming soon"

@@ -107,9 +107,9 @@ export default function Community() {
 
       <VStack>
         <Box
-          as="a"
-          href="https://t.me/phron_bot"
-          target="_blank"
+          // as="a"
+          // href="https://t.me/phron_bot"
+          // target="_blank"
           mt="60px"
           mb="60px"
           w="full"
@@ -123,6 +123,7 @@ export default function Community() {
           onMouseLeave={() => {
             setHoverButton("");
           }}
+          cursor="pointer"
         >
           {hoverButton === "try-it-now" ? "Coming soon" : " Try it now!"}
         </Box>
