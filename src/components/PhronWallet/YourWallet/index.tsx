@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import { Box, Container, Grid, GridItem, Text, VStack } from "@chakra-ui/react";
 
 const Fade = require("react-reveal/Fade");
 
 export default function YourWallet() {
+  const [hoverButton, setHoverButton] = useState("");
+
   return (
     <Container maxW="1240px" py="100px">
       <Fade bottom>
@@ -86,8 +88,16 @@ export default function YourWallet() {
                 p="10px"
                 zIndex={1}
                 maxW="260px"
+                onMouseEnter={() => {
+                  setHoverButton("explore-phron-ai");
+                }}
+                onMouseLeave={() => {
+                  setHoverButton("");
+                }}
               >
-                Explore Phron AI De Wallet
+                {hoverButton === "explore-phron-ai"
+                  ? "Coming soon"
+                  : "Explore Phron AI De Wallet"}
               </Box>
             </Box>
           </GridItem>

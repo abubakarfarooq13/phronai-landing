@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import { Box, Container, Grid, GridItem, Text, VStack } from "@chakra-ui/react";
 
 const Fade = require("react-reveal/Fade");
 
 export default function Community() {
+  const [hoverButton, setHoverButton] = useState("");
+
   return (
     <Container maxW="1240px" pb="100px">
       <Fade bottom>
@@ -115,8 +117,14 @@ export default function Community() {
           className="btn-grad"
           p="10px"
           zIndex={1}
+          onMouseEnter={() => {
+            setHoverButton("try-it-now");
+          }}
+          onMouseLeave={() => {
+            setHoverButton("");
+          }}
         >
-          Try it now!
+          {hoverButton === "try-it-now" ? "Coming soon" : " Try it now!"}
         </Box>
       </VStack>
     </Container>

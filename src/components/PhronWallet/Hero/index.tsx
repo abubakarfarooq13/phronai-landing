@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import {
   Box,
   Button,
@@ -8,11 +9,12 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import Image from "next/image";
-import React from "react";
 
 const Fade = require("react-reveal/Fade");
 
 export default function PhronWalletHero() {
+  const [hoverButton, setHoverButton] = useState("");
+
   return (
     <Box
       pb="60px"
@@ -127,8 +129,16 @@ export default function PhronWalletHero() {
                 />
               </Box>
             }
+            onMouseEnter={() => {
+              setHoverButton("brave-browser");
+            }}
+            onMouseLeave={() => {
+              setHoverButton("");
+            }}
+            w="full"
+            maxW="230px"
           >
-            Brave Browser
+            {hoverButton === "brave-browser" ? "Coming soon" : "Brave Browser"}
           </Button>
           <Button
             colorScheme="blackAlpha"
@@ -150,8 +160,18 @@ export default function PhronWalletHero() {
                 height={25}
               />
             }
+            onMouseEnter={() => {
+              setHoverButton("chrome-browser");
+            }}
+            onMouseLeave={() => {
+              setHoverButton("");
+            }}
+            w="full"
+            maxW="230px"
           >
-            Chrome Browser
+            {hoverButton === "chrome-browser"
+              ? "Coming soon"
+              : "Chrome Browser"}
           </Button>
         </Stack>
       </Container>
