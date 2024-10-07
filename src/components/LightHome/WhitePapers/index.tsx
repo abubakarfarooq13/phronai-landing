@@ -14,20 +14,20 @@ import { IoArrowForwardCircleOutline } from "react-icons/io5";
 const whitepapers = [
   {
     id: 1,
-    label: "Whitepapers Pure",
-    href: "#",
+    label: "Whitepaper",
+    href: "https://phron.ai/whitepaper_pure.pdf",
     bgSrc: "/assets/light-theme-home/whitepapers/whitepaper-pure-bg.png",
   },
-  {
-    id: 2,
-    label: "Whitepapers Royal",
-    href: "#",
-    bgSrc: "/assets/light-theme-home/whitepapers/whitepaper-royal-bg.png",
-  },
+  // {
+  //   id: 2,
+  //   label: "Whitepapers Royal",
+  //   href: "#",
+  //   bgSrc: "/assets/light-theme-home/whitepapers/whitepaper-royal-bg.png",
+  // },
   {
     id: 3,
     label: "Tokenomics",
-    href: "#",
+    href: "https://phron.ai/tokenomics.pdf",
     bgSrc: "/assets/light-theme-home/whitepapers/tokenomics-bg.png",
   },
 ];
