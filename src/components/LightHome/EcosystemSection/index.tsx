@@ -224,7 +224,7 @@ export default function ExploreEcosystem() {
             />
 
             <Text
-              fontSize={{ base: "22px", md: "32px" }}
+              fontSize={{ base: "22px", md: "36px" }}
               fontWeight={400}
               lineHeight="120%"
             >
@@ -240,10 +240,12 @@ export default function ExploreEcosystem() {
             bottom="25px"
             right={{ base: "30px" }}
             as={Link}
-            href="/ecosystem"
+            href="https://hacken.io/case-studies/phronai/?utm_source=hackenclub&utm_medium=post&utm_campaign=phronai-case-study"
+            target="_blank"
+            zIndex={100}
           >
             <Text fontSize="14px" fontWeight={500}>
-              Explore Ecosystem
+              hacken.io
             </Text>
             <IoArrowForwardCircleOutline fontSize="18px" />
           </HStack>
