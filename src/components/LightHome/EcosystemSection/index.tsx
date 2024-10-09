@@ -179,15 +179,20 @@ export default function ExploreEcosystem() {
           // bgImage="linear-gradient(145deg, rgba(176,255,231,1) 0%, rgba(121,247,209,1) 40%)"
           bgImage="/assets/hacken-bg.png"
           bgPos="center"
-          bgSize="cover"
-          rounded="20px"
+          bgSize="100% 100%"
+          rounded="30px"
           position="relative"
-          // minH="300px"
+          minH={{ md: "300px" }}
           p="30px"
+          as="a"
+          href="https://hacken.io/case-studies/phronai/?utm_source=hackenclub&utm_medium=post&utm_campaign=phronai-case-study"
+          target="_blank"
+          display="flex"
+          overflow="hidden"
         >
           <Box
             position="absolute"
-            maxW={{ base: "150px", sm: "200px", md: "280px", lg: "330px" }}
+            maxW={{ base: "150px", sm: "200px", md: "240px", lg: "330px" }}
             right="0px"
             top="0px"
           >
@@ -232,7 +237,7 @@ export default function ExploreEcosystem() {
               Protocol and Tokenomics Audit{" "}
               <Box as="br" display={{ base: "none", md: "block" }} /> of
               PhronAI&apos;s AI-Powered Layer 0 / Layer 1
-              <Box as="br" display={{ base: "none", md: "block" }} /> Blockchain
+              <Box as="br" display={{ base: "none", lg: "block" }} /> Blockchain
             </Text>
           </VStack>
           <HStack
@@ -240,9 +245,10 @@ export default function ExploreEcosystem() {
             position="absolute"
             bottom="25px"
             right={{ base: "30px" }}
-            as={Link}
-            href="https://hacken.io/case-studies/phronai/?utm_source=hackenclub&utm_medium=post&utm_campaign=phronai-case-study"
-            target="_blank"
+            // as={Link}
+            // href="https://hacken.io/case-studies/phronai/?utm_source=hackenclub&utm_medium=post&utm_campaign=phronai-case-study"
+            // target="_blank"
+            _hover={{ textDecor: "none" }}
             zIndex={100}
           >
             <Text fontSize="14px" fontWeight={500}>
