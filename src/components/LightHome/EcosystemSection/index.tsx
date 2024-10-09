@@ -203,6 +203,7 @@ export default function ExploreEcosystem() {
             align="flex-start"
             zIndex={99}
             position="relative"
+            mb="10"
           >
             <Image
               src="/assets/new-home/Hacken.png"
