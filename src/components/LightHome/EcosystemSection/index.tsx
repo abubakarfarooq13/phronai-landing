@@ -195,7 +195,7 @@ export default function ExploreEcosystem() {
               src="/assets/hacken-cube.png"
               alt="hacken-cube"
               width={350}
-              height={350}
+              height={250}
             />
           </Box>
           <VStack
