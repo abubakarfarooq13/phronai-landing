@@ -570,7 +570,7 @@ const partners = [
     imageSrc: "/assets/partners/youflix-logo.jpg",
     description:
       "Watch & upload memes—videos, images, GIFs on Solana's first decentralized media platform with @poconsol.",
-    websiteUrl: "https://www.chroniclesofwarcraft.com/",
+    websiteUrl: "https://youflix.so/",
     twitterUrl: "https://x.com/PocoYouflix",
     style: {
       borderRadius: "100%",
