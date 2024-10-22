@@ -417,16 +417,16 @@ const defi = [
     websiteUrl: "https://www.sendtokens.xyz/",
     category: "DeFi",
   },
-  {
-    id: 22,
-    name: "BUNNY | Ukraine",
-    imageSrc: "/assets/partners/bunny-ukraine-logo.png",
-    description:
-      "$SKYH - Hello, I'm Bunny! I believe that football will bring strong connections and relieve the stress of war.",
-    websiteUrl: "https://bunnychz.com/",
-    twitterUrl: "https://x.com/BunnyChiliz",
-    category: "DeFi",
-  },
+  // {
+  //   id: 22,
+  //   name: "BUNNY | Ukraine",
+  //   imageSrc: "/assets/partners/bunny-ukraine-logo.png",
+  //   description:
+  //     "$SKYH - Hello, I'm Bunny! I believe that football will bring strong connections and relieve the stress of war.",
+  //   websiteUrl: "https://bunnychz.com/",
+  //   twitterUrl: "https://x.com/BunnyChiliz",
+  //   category: "DeFi",
+  // },
   {
     id: 27,
     name: "Bitgert - $BRISE",
