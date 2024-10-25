@@ -150,6 +150,19 @@ const nft = [
     },
     category: "NFT",
   },
+  {
+    id: 40,
+    name: "WeRentOfficial",
+    imageSrc: "/assets/partners/werent-logo.jpg",
+    description:
+      "#WeRent #RentingNFTisEasy The easiest way for you to rent and lend your NFT Assets. Join our Telegram community.",
+    websiteUrl: "https://werentnft.io/",
+    twitterUrl: "https://x.com/WerentOfficial",
+    style: {
+      borderRadius: "100%",
+    },
+    category: "NFT",
+  },
 ];
 
 const rwa = [
@@ -242,6 +255,19 @@ const cloudComputing = [
       "Revolutionizing cloud computing for #AI and #Blockchain with GPU-enabled VPS. A new era of decentralized  infrastructure, made accessible through $VPS.",
     websiteUrl: "https://vpsai.io/",
     twitterUrl: "https://x.com/VPS_AI",
+    category: "Cloud Computing",
+  },
+  {
+    id: 20,
+    name: "Cluster Protocol",
+    imageSrc: "/assets/partners/cluster-protocol-logo.jpg",
+    description:
+      "Cluster Protocol is a decentralized infrastructure for AI that enables anyone to build, train, deploy and monetize AI models within few clicks. Our mission is to democratize AI by making it accessible, affordable, and user-friendly for developers, businesses, and individuals alike.",
+    websiteUrl: "https://www.clusterprotocol.ai/",
+    twitterUrl: "https://x.com/ClusterProtocol",
+    style: {
+      borderRadius: "100%",
+    },
     category: "Cloud Computing",
   },
 ];
@@ -407,7 +433,6 @@ const defi = [
     logoHeight: 30,
     category: "DeFi",
   },
-
   {
     id: 15,
     name: "Send Token",
@@ -417,6 +442,17 @@ const defi = [
     websiteUrl: "https://www.sendtokens.xyz/",
     category: "DeFi",
   },
+  {
+    id: 15,
+    name: "ReflectionAI",
+    imageSrc: "/assets/partners/reflection-ai-logo.png",
+    description:
+      "Decentralized AI Virtual Personality Social Computing Platform. Earn $RECT on @RectBot",
+    twitterUrl: "https://x.com/ReflectionAI_",
+    websiteUrl: "https://www.reflectionai.app/",
+    category: "DeFi",
+  },
+
   // {
   //   id: 22,
   //   name: "BUNNY | Ukraine",
@@ -522,6 +558,57 @@ const defi = [
     websiteUrl: "https://kredly.ai/",
     category: "DeFi",
   },
+  {
+    id: 3,
+    name: "Hemera Trading AI",
+    imageSrc: "/assets/partners/hemera-trading-ai.jpg",
+    description:
+      "🚀 Hemera Trading | AI Trading Tools & Smart Bots on Binance & Bybit Futures 🌐 Automate strategies, optimize trades, maximize profits with AI 📈 #HEM",
+    twitterUrl: "https://x.com/hemeratrading",
+    websiteUrl: "https://hemeratrading.net/",
+    style: {
+      borderRadius: "100%",
+    },
+    category: "DeFi",
+  },
+  {
+    id: 5,
+    name: "Chainpal",
+    imageSrc: "/assets/partners/chainpal-logo.jpg",
+    description:
+      "Trade faster and smarter with the most advanced bot on the market, bootstrapped with a database of high ROI wallets & Alpha fnding algorithms.",
+    twitterUrl: "https://x.com/chainpalai",
+    websiteUrl: "https://chainpal.ai/",
+    style: {
+      borderRadius: "100%",
+    },
+    category: "DeFi",
+  },
+  {
+    id: 7,
+    name: "IBIT",
+    imageSrc: "/assets/partners/ibit-logo.jpg",
+    description: "All-in-one Smart Crypto Investment & Trading Platform.",
+    twitterUrl: "https://x.com/IBIT_Global",
+    websiteUrl: "https://www.ibit.global/",
+    style: {
+      borderRadius: "100%",
+    },
+    category: "DeFi",
+  },
+  {
+    id: 7,
+    name: "DMAIL.AI",
+    imageSrc: "/assets/partners/dmail-ai-logo.jpg",
+    description:
+      "#AI Powered decentralized messaging infra. Dmail DApp https://mail.dmail.ai, TG Bot @DmailNetworkbot, SubHub https://subscription.dmail.ai",
+    twitterUrl: "https://x.com/Dmailofficial",
+    websiteUrl: "https://dmail.ai/",
+    style: {
+      borderRadius: "100%",
+    },
+    category: "DeFi",
+  },
 ];
 
 const socialFi = [
@@ -602,6 +689,16 @@ const meme = [
     websiteUrl: "https://www.zkgrok.meme/",
     category: "Meme",
   },
+  // {
+  //   id: 16,
+  //   name: "Pome",
+  //   imageSrc: "/assets/partners/pome.jpg",
+  //   description:
+  //     "BNB chain.  POME - Meme Coin Revolution 🌐 | Fun, Safe, and Community-Driven 💎 | Pomelion Movement 🌟 | HODL & Laugh 😂 | #Crypto",
+  //   twitterUrl: "https://x.com/protocolofmeme",
+  //   websiteUrl: "https://pome.one/",
+  //   category: "Meme",
+  // },
 ];
 
 const dns = [
@@ -656,6 +753,19 @@ const gameFi = [
     },
     category: "GameFi",
   },
+  {
+    id: 38,
+    name: "Thravos",
+    imageSrc: "/assets/partners/thravos-logo.jpg",
+    description:
+      "Fusing sports & fitness with tech. Powered by sports RWAs tokenization, AI & blockchain tech - new era for athletes, fitness enthusiast & brands is here! 🔥💪",
+    websiteUrl: "https://thravos.io/",
+    twitterUrl: "https://x.com/thravos_io",
+    style: {
+      borderRadius: "100%",
+    },
+    category: "GameFi",
+  },
 ];
 
 const infrastructure = [
@@ -680,6 +790,32 @@ const infrastructure = [
     twitterUrl: "https://twitter.com/WayNetwork_Labs",
     websiteUrl: "https://way.network/",
     category: "Infrastructure",
+  },
+  {
+    id: 14,
+    name: "GintonicAI",
+    imageSrc: "/assets/partners/gintonic-ai-logo.jpg",
+    description:
+      "GintonicAI: Decentralized AI Deployment and Model Hosting Platform.",
+    twitterUrl: "https://x.com/gintonicAI",
+    websiteUrl: "https://www.gintonic.ai/",
+    category: "Infrastructure",
+    style: {
+      borderRadius: "100%",
+    },
+  },
+  {
+    id: 16,
+    name: "SynonAI",
+    imageSrc: "/assets/partners/synon-ai.jpg",
+    description:
+      "A blockchain layer 1 for AI - leverages GPU power to enable decentralized computing and advanced AI model training.",
+    twitterUrl: "https://x.com/Synon_AI",
+    websiteUrl: "https://synonai.net/",
+    category: "Infrastructure",
+    style: {
+      borderRadius: "100%",
+    },
   },
 ];
 
