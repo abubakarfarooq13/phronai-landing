@@ -36,7 +36,10 @@ export default function OurTeam() {
               <WrapItem
                 key={member.id}
                 // display={member.display}
-                maxW={{ base: "140px", xl: "240px" }}
+                maxW={{
+                  base: "140px",
+                  xl: member.maxWidth ? member.maxWidth : "240px",
+                }}
                 w="full"
                 _hover={{
                   transform: "translateY(-10px)",
@@ -54,7 +57,8 @@ export default function OurTeam() {
                   <Box
                     bgColor="#fff"
                     px={
-                      member.name === "Egor Sukhorukov"
+                      member.name === "Egor Sukhorukov" ||
+                      member.name === "Dyma Budorin"
                         ? { base: "1px", md: "2px" }
                         : ""
                     }
@@ -69,7 +73,8 @@ export default function OurTeam() {
                       left: "0px",
                       right: "0px",
                       backgroundImage:
-                        member.name === "Egor Sukhorukov"
+                        member.name === "Egor Sukhorukov" ||
+                        member.name === "Dyma Budorin"
                           ? "linear-gradient(180deg, rgba(0,0,0,0) 80%, rgba(255,255,255,1) 100%)"
                           : "",
                     }}
