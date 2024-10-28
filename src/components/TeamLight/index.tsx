@@ -112,6 +112,7 @@ export const teamMembers = [
     linkedinUrl: "https://www.linkedin.com/in/njelich/",
     imageWidth: 160,
     imageHeight: 190,
+    maxWidth: "229px",
   },
   {
     id: "07",
@@ -196,7 +197,10 @@ export default function OurTeam() {
               <WrapItem
                 key={member.id}
                 // display={member.display}
-                maxW={{ base: "140px", xl: "240px" }}
+                maxW={{
+                  base: "140px",
+                  xl: member.maxWidth ? member.maxWidth : "240px",
+                }}
                 w="full"
                 _hover={{
                   transform: "translateY(-8px)",
