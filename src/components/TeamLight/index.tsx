@@ -103,6 +103,7 @@ export const teamMembers = [
       "https://www.linkedin.com/in/dyma-budorin-acca-ccssa-56a98035/",
     imageWidth: 220,
     imageHeight: 220,
+    maxWidth: "230px",
   },
   {
     id: "06",
@@ -112,7 +113,6 @@ export const teamMembers = [
     linkedinUrl: "https://www.linkedin.com/in/njelich/",
     imageWidth: 160,
     imageHeight: 190,
-    maxWidth: "229px",
   },
   {
     id: "07",
