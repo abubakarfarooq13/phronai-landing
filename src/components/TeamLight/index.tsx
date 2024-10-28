@@ -219,7 +219,8 @@ export default function OurTeam() {
                       bgColor="#FEFEFE"
                       position="relative"
                       px={
-                        member.name === "Egor Sukhorukov"
+                        member.name === "Egor Sukhorukov" ||
+                        member.name === "Dyma Budorin"
                           ? { base: "1px", md: "2px" }
                           : ""
                       }
@@ -233,7 +234,8 @@ export default function OurTeam() {
                         left: "0px",
                         right: "0px",
                         backgroundImage:
-                          member.name === "Egor Sukhorukov"
+                          member.name === "Egor Sukhorukov" ||
+                          member.name === "Dyma Budorin"
                             ? "linear-gradient(180deg, rgba(0,0,0,0) 80%, rgba(255,255,255,1) 100%)"
                             : "",
                       }}
