@@ -111,7 +111,7 @@ export const teamMembers = [
     image: "/assets/light-theme-home/noah.png",
     linkedinUrl: "https://www.linkedin.com/in/njelich/",
     imageWidth: 160,
-    imageHeight: 220,
+    imageHeight: 190,
   },
   {
     id: "07",
@@ -196,7 +196,7 @@ export default function OurTeam() {
               <WrapItem
                 key={member.id}
                 // display={member.display}
-                maxW={{ base: "140px", xl: "230px" }}
+                maxW={{ base: "140px", xl: "240px" }}
                 w="full"
                 _hover={{
                   transform: "translateY(-8px)",
