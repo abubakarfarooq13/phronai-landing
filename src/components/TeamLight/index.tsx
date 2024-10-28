@@ -95,6 +95,16 @@ export const teamMembers = [
     imageHeight: 220,
   },
   {
+    id: "10",
+    name: "Dyma Budorin",
+    role: "Advisor for Blockchain Security and Ethical AI Standards",
+    image: "/assets/light-theme-home/dyma-budorin.png",
+    linkedinUrl:
+      "https://www.linkedin.com/in/dyma-budorin-acca-ccssa-56a98035/",
+    imageWidth: 220,
+    imageHeight: 220,
+  },
+  {
     id: "06",
     name: "Noah J.",
     role: "Chief Security Officer",
