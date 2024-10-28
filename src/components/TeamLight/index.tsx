@@ -196,7 +196,7 @@ export default function OurTeam() {
               <WrapItem
                 key={member.id}
                 // display={member.display}
-                maxW={{ base: "140px", xl: "240px" }}
+                maxW={{ base: "140px", xl: "230px" }}
                 w="full"
                 _hover={{
                   transform: "translateY(-8px)",
