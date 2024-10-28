@@ -110,7 +110,7 @@ export const teamMembers = [
     role: "Chief Security Officer",
     image: "/assets/light-theme-home/noah.png",
     linkedinUrl: "https://www.linkedin.com/in/njelich/",
-    imageWidth: 220,
+    imageWidth: 180,
     imageHeight: 220,
   },
   {
