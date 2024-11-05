@@ -165,13 +165,13 @@ export default function BuildingOnUs() {
     },
     {
       name: "Wow Max",
-      icon: "/assets/partners/kredly-logo.svg",
+      icon: "/assets/partners/wowmax-logo.jpg",
       description:
         "WOWMAX is the next generation DEX aggregation protocol that uses slippage as an additional source of optimization.",
     },
     {
       name: "Kredly",
-      icon: "/assets/partners/wowmax-logo.jpg",
+      icon: "/assets/partners/kredly-logo.svg",
       description:
         "AI-powered adjustments for rock-solid security. Dynamic fees, rewards & insurance keep the platform smooth & protected!",
     },
@@ -184,7 +184,7 @@ export default function BuildingOnUs() {
   ];
 
   return (
-    <Box bg="white" pb="96px" pt={{ base: "10", md: "0" }}>
+    <Box bg="white" pb="96px" pt={{ base: "10", md: "0" }} overflow="hidden">
       <Container position="relative" maxW="1240px">
         {/* Hero Section */}
         <VStack
