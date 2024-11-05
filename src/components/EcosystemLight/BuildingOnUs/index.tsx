@@ -184,7 +184,7 @@ export default function BuildingOnUs() {
   ];
 
   return (
-    <Box bg="white" pb="96px">
+    <Box bg="white" pb="96px" pt="10">
       <Container position="relative" maxW="1240px">
         {/* Hero Section */}
         <VStack
