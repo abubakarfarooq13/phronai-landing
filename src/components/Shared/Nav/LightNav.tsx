@@ -80,15 +80,29 @@ const AlertBanner = React.forwardRef((props, ref: any) => {
               height={25}
             />
           </Box> */}
-          <Text
-            fontWeight={500}
-            textAlign="center"
-            fontSize={{ base: "sm", md: "16px" }}
-            color="#fff"
+          <Stack
+            direction={{ base: "column", md: "row" }}
+            alignItems="end"
+            spacing="4"
           >
-            Our gamified airdrop campaign! Enjoy a distribution of over US$
-            1,000,000 worth of tokens
-          </Text>
+            <Text
+              fontWeight={500}
+              textAlign="center"
+              fontSize={{ base: "sm", md: "16px" }}
+              color="#fff"
+            >
+              Our gamified airdrop campaign! Enjoy a distribution of over US$
+              1,000,000 worth of tokens
+            </Text>
+            <Button
+              as={Link}
+              href="https://t.me/phron_bot"
+              target="_blank"
+              size="xs"
+            >
+              Play Now
+            </Button>
+          </Stack>
           {/* <Box display={{ base: "none", sm: "block" }}>
             <Image
               src="/assets/chain/balloon-icon.png"

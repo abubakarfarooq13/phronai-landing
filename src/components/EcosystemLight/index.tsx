@@ -4,6 +4,7 @@ import EcosystemHero from "./Hero";
 import OurEcosystem from "./OurEcosystem";
 import NavLight from "../Shared/Nav/LightNav";
 import FooterLight from "../Shared/Footer/LightFooter";
+import BuildingOnUs from "./BuildingOnUs";
 
 export default function Ecosystem() {
   return (
@@ -11,6 +12,7 @@ export default function Ecosystem() {
       {/* <Nav /> */}
       <NavLight />
       <EcosystemHero />
+      <BuildingOnUs />
       <OurEcosystem />
       <FooterLight />
       {/* <Footer /> */}
