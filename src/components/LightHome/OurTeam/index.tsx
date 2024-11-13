@@ -1,4 +1,4 @@
-import { advisors, teamMembers } from "@/components/TeamLight";
+import { advisors, drMarwan, teamMembers } from "@/components/TeamLight";
 import { Box, Container, Text, VStack, Wrap, WrapItem } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
@@ -110,6 +110,109 @@ export default function OurTeam() {
           >
             Advisors
           </Text>
+        </Fade>
+
+        <Fade bottom>
+          <Wrap justify="center" spacing="6" w="full" pb='10'>
+            {drMarwan.map((member) => (
+              // <WrapItem
+              //   key={member.id}
+              //   maxW={{
+              //     base: "140px",
+              //     xl: member.maxWidth ? member.maxWidth : "240px",
+              //   }}
+              //   w="full"
+              //   textAlign="center"
+              //   _hover={{
+              //     transform: "translateY(-8px)",
+              //   }}
+              //   transition="all .3s"
+              // >
+              //   <>
+              //     <Box
+              //       as={Link}
+              //       href={member.linkedinUrl}
+              //       display="block"
+              //       target="_blank"
+              //       w="full"
+              //     >
+              //       <Image
+              //         src={member.image}
+              //         alt={member.name + " image"}
+              //         width={member.imageWidth}
+              //         height={member.imageWidth}
+              //         style={{ width: "100%" }}
+              //       />
+              //       <Text fontSize="16px" fontWeight={600} pt="4">
+              //         {member.name}
+              //       </Text>
+              //       <Text fontSize="14px" color="#8a8a8a">
+              //         {member.role}
+              //       </Text>
+              //     </Box>
+              //   </>
+              // </WrapItem>
+              <WrapItem
+                key={member.id}
+                maxW={{
+                  base: "140px",
+                  xl: "240px",
+                }}
+                w="full"
+                _hover={{
+                  transform: "translateY(-10px)",
+                }}
+                transition="all .3s"
+              >
+                <Box
+                  as={Link}
+                  href={member.linkedinUrl}
+                  display="block"
+                  target="_blank"
+                  w="full"
+                  textAlign="center"
+                >
+                  <Box
+                    bgColor="#fff"
+                    px={
+                      member.name === "Dyma Budorin"
+                        ? { base: "1px", md: "2px" }
+                        : ""
+                    }
+                    rounded="20px"
+                    overflow="hidden"
+                    position="relative"
+                    _after={{
+                      content: `''`,
+                      position: "absolute",
+                      top: "0px",
+                      bottom: "0px",
+                      left: "0px",
+                      right: "0px",
+                      backgroundImage:
+                        member.name === "Dyma Budorin"
+                          ? "linear-gradient(180deg, rgba(0,0,0,0) 80%, rgba(255,255,255,1) 100%)"
+                          : "",
+                    }}
+                  >
+                    <Image
+                      src={member.image}
+                      alt={member.name + " image"}
+                      width={member.imageWidth}
+                      height={member.imageWidth}
+                      style={{ width: "100%", filter: "grayscale(1)" }}
+                    />
+                  </Box>
+                  <Text fontSize="16px" fontWeight={600} pt="4">
+                    {member.name}
+                  </Text>
+                  <Text fontSize="14px" color="#8a8a8a">
+                    {member.role}
+                  </Text>
+                </Box>
+              </WrapItem>
+            ))}
+          </Wrap>
         </Fade>
 
         <Fade bottom>
