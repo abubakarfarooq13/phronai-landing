@@ -1,5 +1,6 @@
 import React from "react";
 import {
+  Badge,
   Box,
   Button,
   Container,
@@ -16,7 +17,7 @@ import Image from "next/image";
 import { FaLink, FaWallet } from "react-icons/fa";
 import { FiBarChart2 } from "react-icons/fi";
 
-const BuiltProjectCard = ({ name, description, icon }: any) => (
+const BuiltProjectCard = ({ name, description, icon, status }: any) => (
   <VStack
     bg={useColorModeValue("white", "gray.800")}
     // boxShadow="md"
@@ -32,14 +33,33 @@ const BuiltProjectCard = ({ name, description, icon }: any) => (
     spacing="2"
     textAlign="center"
   >
-    <Box mb="0">{icon}</Box>
+    {typeof icon === "string" ? (
+      <Image
+        src={icon}
+        alt={`${name} icon`}
+        width={50}
+        height={50}
+        style={{
+          borderRadius: "50%",
+        }}
+      />
+    ) : (
+      <Box mb="0">{icon}</Box>
+    )}
     <Text
       as="h3"
       size="2xl"
       fontWeight={700}
       color={useColorModeValue("blue.900", "blue.200")}
     >
-      {name}
+      {name}{" "}
+      <Badge
+        fontSize="10px"
+        colorScheme={status === "live" ? "green" : "purple"}
+        variant="outline"
+      >
+        {status}
+      </Badge>
     </Text>
     <Text fontSize="sm" color={useColorModeValue("blue.700", "blue.300")}>
       {description}
@@ -107,6 +127,7 @@ export default function BuildingOnUs() {
           height={40}
         />
       ),
+      status: "live",
     },
     {
       name: "PhronAI Dex",
@@ -120,9 +141,7 @@ export default function BuildingOnUs() {
           height={40}
         />
       ),
-
-      // icon: <FaLink fontSize="40px" color="#c34bfb" />,
-      // icon: "🔄"
+      status: "live",
     },
     {
       name: "PhronAI Bridge",
@@ -136,8 +155,7 @@ export default function BuildingOnUs() {
           height={40}
         />
       ),
-      // icon: <FiBarChart2 fontSize="40px" color="#c34bfb" />,
-      // icon: "🌉"
+      status: "live",
     },
     {
       name: "Phron AI Wallet",
@@ -151,37 +169,64 @@ export default function BuildingOnUs() {
           height={40}
         />
       ),
-      // icon: <FaWallet fontSize="40px" color="#c34bfb" />,
-      // icon: "👛"
+      status: "live",
     },
-  ];
-
-  const buildingProjects = [
     {
       name: "Dexe",
-      icon: "/assets/partners/dexe.png",
       description:
         "An infrastructure for creating and governing DAOs. 50+ smart-contracts for your web-3 product.",
+      icon: "/assets/partners/dexe-black.png",
+      status: "coming soon",
     },
     {
       name: "Wow Max",
-      icon: "/assets/partners/wowmax-logo.jpg",
       description:
         "WOWMAX is the next generation DEX aggregation protocol that uses slippage as an additional source of optimization.",
+      icon: "/assets/partners/wowmax-logo.jpg",
+      status: "coming soon",
     },
     {
       name: "Kredly",
-      icon: "/assets/partners/kredly-logo.svg",
       description:
         "AI-powered adjustments for rock-solid security. Dynamic fees, rewards & insurance keep the platform smooth & protected!",
+      icon: "/assets/partners/kredly-logo.svg",
+      status: "coming soon",
     },
     {
       name: "Power AI",
-      icon: "/assets/partners/powerai-logo.jpg",
       description:
         "Power AI: Democratizing AI computing with global idle GPUs. Affordable, sustainable, and decentralized solutions.",
+      icon: "/assets/partners/powerai-logo.jpg",
+      status: "coming soon",
     },
   ];
+
+  // const buildingProjects = [
+  //   {
+  //     name: "Dexe",
+  //     icon: "/assets/partners/dexe.png",
+  //     description:
+  //       "An infrastructure for creating and governing DAOs. 50+ smart-contracts for your web-3 product.",
+  //   },
+  //   {
+  //     name: "Wow Max",
+  //     icon: "/assets/partners/wowmax-logo.jpg",
+  //     description:
+  //       "WOWMAX is the next generation DEX aggregation protocol that uses slippage as an additional source of optimization.",
+  //   },
+  //   {
+  //     name: "Kredly",
+  //     icon: "/assets/partners/kredly-logo.svg",
+  //     description:
+  //       "AI-powered adjustments for rock-solid security. Dynamic fees, rewards & insurance keep the platform smooth & protected!",
+  //   },
+  //   {
+  //     name: "Power AI",
+  //     icon: "/assets/partners/powerai-logo.jpg",
+  //     description:
+  //       "Power AI: Democratizing AI computing with global idle GPUs. Affordable, sustainable, and decentralized solutions.",
+  //   },
+  // ];
 
   return (
     <Box bg="white" pb="96px" pt={{ base: "10", md: "0" }} overflow="hidden">
@@ -207,7 +252,7 @@ export default function BuildingOnUs() {
             color={useColorModeValue("gray.700", "blue.300")}
             mb="4"
           >
-            Empowering developers and projects in the decentralized ecosystem
+            Join the AI Web3 Revolution
           </Text>
           <Box
             as="a"
@@ -231,7 +276,7 @@ export default function BuildingOnUs() {
             // color={useColorModeValue("blue.900", "blue.100")}
             letterSpacing="1px"
           >
-            Built Projects
+            Building on us
           </Text>
           <Grid
             templateColumns={{
@@ -248,7 +293,7 @@ export default function BuildingOnUs() {
         </Box>
 
         {/* Building on Us Section */}
-        <Box mb={20} position="relative" zIndex={10}>
+        {/* <Box mb={20} position="relative" zIndex={10}>
           <Text
             as="h2"
             fontSize={{ base: "3xl", md: "4xl", "3000px": "5xl" }}
@@ -268,10 +313,10 @@ export default function BuildingOnUs() {
               ))}
             </Wrap>
           </Box>
-        </Box>
+        </Box> */}
 
         {/* Call to Action */}
-        <VStack spacing={4} textAlign="center" position="relative" zIndex={10}>
+        {/* <VStack spacing={4} textAlign="center" position="relative" zIndex={10}>
           <Heading
             as="h2"
             size="xl"
@@ -299,7 +344,7 @@ export default function BuildingOnUs() {
           >
             Start Building
           </Box>
-        </VStack>
+        </VStack> */}
 
         {/* Decorative Elements */}
         <Box
