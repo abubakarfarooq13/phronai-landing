@@ -164,6 +164,15 @@ export const advisors = [
     imageWidth: 220,
     imageHeight: 220,
   },
+  {
+    id: "10",
+    name: "Dr. Marwan Alzarouni",
+    role: "Advisor - CEO Dubai Blockchain",
+    image: "/assets/team/marwan.png",
+    linkedinUrl: "https://www.linkedin.com/in/drmarwan/",
+    imageWidth: 1020,
+    imageHeight: 1020,
+  },
 ];
 
 const Fade = require("react-reveal/Fade");

@@ -16,6 +16,8 @@ interface CategoryPartnersProps {
   partners: any[];
 }
 
+const Fade = require("react-reveal/Fade");
+
 export default function CategoryPartners(props: CategoryPartnersProps) {
   const { category, partners } = props;
   return (
@@ -57,7 +59,7 @@ export default function CategoryPartners(props: CategoryPartnersProps) {
         }}
         gap="4"
       >
-        {partners.map((p) => (
+        {partners.map((p, i) => (
           // <VStack
           //   _hover={{
           //     transform: "translateY(-7px)",
@@ -91,6 +93,7 @@ export default function CategoryPartners(props: CategoryPartnersProps) {
           //   </Text>
           //   <Text maxW="300px">{p.description}</Text>
           // </VStack>
+
           <Box key={p.id} maxW="380px">
             <PartnerCard
               description={p.description}

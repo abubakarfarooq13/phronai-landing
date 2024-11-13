@@ -921,74 +921,30 @@ export default function CPartners() {
             flexWrap="wrap"
             gap="10"
           >
-            <Fade bottom>
-              <CategoryPartners
-                category="Blockchain Security"
-                partners={blockchainSecurity}
-              />
-            </Fade>
-
-            <Fade bottom>
-              <CategoryPartners category="TradFi" partners={TradFi} />
-            </Fade>
-
-            <Fade bottom>
-              <CategoryPartners category="Marketing/PR" partners={marketing} />
-            </Fade>
-
-            <Fade bottom>
-              <CategoryPartners
-                category="Cloud Computing"
-                partners={cloudComputing}
-              />
-            </Fade>
-
-            <Fade bottom>
-              <CategoryPartners category="Dao" partners={dao} />
-            </Fade>
-
-            <Fade bottom>
-              <CategoryPartners category="DataFi" partners={dataFi} />
-            </Fade>
-
-            <Fade bottom>
-              <CategoryPartners category="DeFi" partners={defi} />
-            </Fade>
-
-            <Fade bottom>
-              <CategoryPartners category="DNS" partners={dns} />
-            </Fade>
-
-            <Fade bottom>
-              <CategoryPartners category="GameFi" partners={gameFi} />
-            </Fade>
-
-            <Fade bottom>
-              <CategoryPartners
-                category="Infratructure"
-                partners={infrastructure}
-              />
-            </Fade>
-
-            <Fade bottom>
-              <CategoryPartners category="LLM" partners={llm} />
-            </Fade>
-
-            <Fade bottom>
-              <CategoryPartners category="Meme" partners={meme} />
-            </Fade>
-
-            <Fade bottom>
-              <CategoryPartners category="NFT" partners={nft} />
-            </Fade>
-
-            <Fade bottom>
-              <CategoryPartners category="RWA" partners={rwa} />
-            </Fade>
-
-            <Fade bottom>
-              <CategoryPartners category="SocialFi" partners={socialFi} />
-            </Fade>
+            <CategoryPartners
+              category="Blockchain Security"
+              partners={blockchainSecurity}
+            />
+            <CategoryPartners category="TradFi" partners={TradFi} />
+            <CategoryPartners category="Marketing/PR" partners={marketing} />
+            <CategoryPartners
+              category="Cloud Computing"
+              partners={cloudComputing}
+            />
+            <CategoryPartners category="Dao" partners={dao} />
+            <CategoryPartners category="DataFi" partners={dataFi} />
+            <CategoryPartners category="DeFi" partners={defi} />
+            <CategoryPartners category="DNS" partners={dns} />
+            <CategoryPartners category="GameFi" partners={gameFi} />
+            <CategoryPartners
+              category="Infratructure"
+              partners={infrastructure}
+            />
+            <CategoryPartners category="LLM" partners={llm} />
+            <CategoryPartners category="Meme" partners={meme} />
+            <CategoryPartners category="NFT" partners={nft} />
+            <CategoryPartners category="RWA" partners={rwa} />
+            <CategoryPartners category="SocialFi" partners={socialFi} />
           </Stack>
 
           {/* <Box position="relative" maxW="1290px" mx="auto"> */}

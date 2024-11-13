@@ -17,7 +17,9 @@ import Image from "next/image";
 import { FaLink, FaWallet } from "react-icons/fa";
 import { FiBarChart2 } from "react-icons/fi";
 
-const BuiltProjectCard = ({ name, description, icon, status }: any) => (
+const Fade = require("react-reveal/Fade");
+
+const BuiltProjectCard = ({ name, description, icon, status, href }: any) => (
   <VStack
     bg={useColorModeValue("white", "gray.800")}
     // boxShadow="md"
@@ -32,6 +34,11 @@ const BuiltProjectCard = ({ name, description, icon, status }: any) => (
     align="center"
     spacing="2"
     textAlign="center"
+    as="a"
+    href={href}
+    target="_blank"
+    display="flex"
+    h="full"
   >
     {typeof icon === "string" ? (
       <Image
@@ -128,6 +135,7 @@ export default function BuildingOnUs() {
         />
       ),
       status: "live",
+      href: "https://phron.lendland.io/",
     },
     {
       name: "PhronAI Dex",
@@ -142,6 +150,7 @@ export default function BuildingOnUs() {
         />
       ),
       status: "live",
+      href: "https://dex.phron.ai/",
     },
     {
       name: "PhronAI Bridge",
@@ -156,6 +165,7 @@ export default function BuildingOnUs() {
         />
       ),
       status: "live",
+      href: "https://bridge.phron.ai/",
     },
     {
       name: "Phron AI Wallet",
@@ -169,7 +179,8 @@ export default function BuildingOnUs() {
           height={40}
         />
       ),
-      status: "live",
+      status: "Coming Soon",
+      href: "#",
     },
     {
       name: "Dexe",
@@ -177,6 +188,7 @@ export default function BuildingOnUs() {
         "An infrastructure for creating and governing DAOs. 50+ smart-contracts for your web-3 product.",
       icon: "/assets/partners/dexe-black.png",
       status: "coming soon",
+      href: "https://dexe.network/",
     },
     {
       name: "Wow Max",
@@ -184,6 +196,7 @@ export default function BuildingOnUs() {
         "WOWMAX is the next generation DEX aggregation protocol that uses slippage as an additional source of optimization.",
       icon: "/assets/partners/wowmax-logo.jpg",
       status: "coming soon",
+      href: "https://wowmax.exchange/ ",
     },
     {
       name: "Kredly",
@@ -191,6 +204,7 @@ export default function BuildingOnUs() {
         "AI-powered adjustments for rock-solid security. Dynamic fees, rewards & insurance keep the platform smooth & protected!",
       icon: "/assets/partners/kredly-logo.svg",
       status: "coming soon",
+      href: "https://kredly.ai/",
     },
     {
       name: "Power AI",
@@ -198,6 +212,7 @@ export default function BuildingOnUs() {
         "Power AI: Democratizing AI computing with global idle GPUs. Affordable, sustainable, and decentralized solutions.",
       icon: "/assets/partners/powerai-logo.jpg",
       status: "coming soon",
+      href: "https://power-ai.me/",
     },
   ];
 
@@ -286,8 +301,10 @@ export default function BuildingOnUs() {
             }}
             gap={6}
           >
-            {builtProjects.map((project) => (
-              <BuiltProjectCard key={project.name} {...project} />
+            {builtProjects.map((project, i) => (
+              <Fade key={i} delay={i * 50} bottom>
+                <BuiltProjectCard key={project.name} {...project} />
+              </Fade>
             ))}
           </Grid>
         </Box>
