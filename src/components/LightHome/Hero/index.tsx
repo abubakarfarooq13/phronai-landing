@@ -9,6 +9,8 @@ import {
   Button,
   Grid,
   GridItem,
+  Wrap,
+  WrapItem,
 } from "@chakra-ui/react";
 import Image from "next/image";
 import { GoArrowRight } from "react-icons/go";
@@ -39,12 +41,51 @@ const stats = [
   },
 ];
 
+const trustedByLogos = [
+  {
+    id: 1,
+    name: "CoinGecko Logo",
+    logoUrl: "/assets/light-theme-home/coingecko-logo.png",
+    width: 160,
+    height: 100,
+  },
+  {
+    id: 2,
+    name: "Alibaba Cloud Logo",
+    logoUrl: "/assets/light-theme-home/alibaba-cloud-logo.png",
+    width: 140,
+    height: 100,
+  },
+  {
+    id: 3,
+    name: "Pyth Logo",
+    logoUrl: "/assets/light-theme-home/pyth-logo.png",
+    width: 100,
+    height: 60,
+  },
+  {
+    id: 4,
+    name: "QuickNodes Logo",
+    logoUrl: "/assets/light-theme-home/quick-node-logo.png",
+    width: 150,
+    height: 70,
+  },
+  {
+    id: 5,
+    name: "AWS Logo",
+    logoUrl: "/assets/light-theme-home/aws-logo.png",
+    width: 70,
+    height: 70,
+  },
+];
+
 export default function Hero() {
   return (
     <Box
-      bgImage="/assets/light-theme-home/hero-background-cropped.png"
+      bgImage="/assets/light-theme-home/hero-image-new.png"
       bgRepeat="no-repeat"
-      bgPosition="bottom"
+      bgPosition="center"
+      bgSize="cover"
       overflowX="hidden"
       position="relative"
     >
@@ -82,28 +123,33 @@ export default function Hero() {
                 Proof of Learning
               </Text> */}
               <Text
-                // fontSize={{ base: "3xl", sm: "4xl", "2340px": "60px" }}
-                fontSize={{
-                  base: "3xl",
-                  sm: "3xl",
-                  lg: "45px",
-                  "2340px": "60px",
-                }}
-                lineHeight="115%"
+                fontSize={{ base: "22px" }}
+                lineHeight="100%"
                 letterSpacing="1px"
                 fontWeight={600}
+                color="brand.purple"
                 // mb="2"
-                as="h1"
+                // as="h1"
               >
                 {/* From Static to Dynamic{" "}
               <Box as="br" display={{ base: "none", md: "block" }} /> with
               AI-Powered Consensus. */}
                 Proof of Learning
               </Text>
-              <Text mb="5" fontSize={{ base: "17px", "2340px": "18px" }}>
-                From Static to Dynamic with the first{" "}
-                <Box as="br" display={{ base: "none", md: "block" }} /> Layer 0
-                and Layer 1 AI-Powered Consensus
+              <Text
+                fontSize={{
+                  base: "xl",
+                  sm: "2xl",
+                  lg: "55px",
+                }}
+                fontWeight={700}
+                lineHeight="110%"
+                color="brand.darkGray"
+              >
+                From Static <br /> to Dynamic
+              </Text>
+              <Text color="#5d6380">
+                with the first AI-driven Dynamic Consensus
               </Text>
 
               <Box>
@@ -168,7 +214,7 @@ export default function Hero() {
           </VStack>
         </Stack>
 
-        <Grid
+        {/* <Grid
           gridTemplateColumns={{
             base: "repeat(1,1fr)",
             md: "repeat(2, 1fr)",
@@ -233,7 +279,91 @@ export default function Hero() {
               </Fade>
             </GridItem>
           ))}
-        </Grid>
+        </Grid> */}
+
+        <Box>
+          <Fade bottom>
+            <Text
+              fontSize={{ base: "lg", "2340px": "30px" }}
+              letterSpacing="2px"
+              as="h3"
+              mt="20"
+              fontWeight={700}
+              textAlign="center"
+              mb="8"
+            >
+              Audited By
+            </Text>
+          </Fade>
+
+          <HStack spacing="14" justifyContent="center">
+            <Fade bottom>
+              <Box
+                _hover={{
+                  transform: "translateY(-8px)",
+                }}
+                transition="all .3s"
+              >
+                <Image
+                  src="/assets/light-theme-home/hacken-logo.png"
+                  alt="solid proof"
+                  width={50}
+                  height={55}
+                  // className="logo-image"
+                />
+              </Box>
+            </Fade>
+
+            <Fade bottom>
+              <Box
+                _hover={{
+                  transform: "translateY(-8px)",
+                }}
+                transition="all .3s"
+              >
+                <Image
+                  src="/assets/light-theme-home/solid-proof.png"
+                  alt="solid proof"
+                  width={65}
+                  height={45}
+                  // className="logo-image"
+                />
+              </Box>
+            </Fade>
+          </HStack>
+        </Box>
+
+        <Box>
+          <Fade bottom>
+            <Text
+              fontSize={{ base: "lg", "2340px": "30px" }}
+              letterSpacing="2px"
+              as="h3"
+              mt="20"
+              fontWeight={700}
+              textAlign="center"
+              mb="8"
+            >
+              Trusted By
+            </Text>
+          </Fade>
+          <Wrap justify="center" align="center" spacing='10'>
+            {trustedByLogos.map((logo,i) => (
+              <WrapItem key={logo.id}>
+                <Fade bottom delay={i*100}>
+                  <Box>
+                    <Image
+                      src={logo.logoUrl}
+                      alt={`${logo.name} name`}
+                      width={logo.width}
+                      height={logo.height}
+                    />
+                  </Box>
+                </Fade>
+              </WrapItem>
+            ))}
+          </Wrap>
+        </Box>
       </Container>
     </Box>
   );

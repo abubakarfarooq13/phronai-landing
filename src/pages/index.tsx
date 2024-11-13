@@ -40,7 +40,7 @@ export default function Home() {
         color="#000"
         as="main"
         minH="100vh"
-        style={interFont.style}
+        style={plusJakartaSans.style}
       >
         <LightHome />
       </Box>

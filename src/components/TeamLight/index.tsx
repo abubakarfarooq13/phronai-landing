@@ -119,8 +119,8 @@ export const teamMembers = [
     role: "Social Media / Community Manager",
     image: "/assets/light-theme-home/egor.png",
     linkedinUrl: "#",
-    imageWidth: 180,
-    imageHeight: 200,
+    imageWidth: 480,
+    imageHeight: 400,
   },
 ];
 
@@ -142,8 +142,8 @@ export const advisors = [
     image: "/assets/light-theme-home/dyma-budorin.png",
     linkedinUrl:
       "https://www.linkedin.com/in/dyma-budorin-acca-ccssa-56a98035/",
-    imageWidth: 220,
-    imageHeight: 220,
+    imageWidth: 420,
+    imageHeight: 420,
     maxWidth: "233px",
   },
   {

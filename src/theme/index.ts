@@ -32,6 +32,13 @@ const theme = extendTheme({
   components: {
     Button,
   },
+  colors: {
+    brand: {
+      blue: "#5756f4",
+      purple: "#c34bfb",
+      darkGray: "#292c2e",
+    },
+  },
 });
 
 export default theme;

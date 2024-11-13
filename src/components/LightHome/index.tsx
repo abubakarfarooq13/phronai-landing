@@ -8,12 +8,14 @@ import TrustedBySection from "./TrustedBySection";
 import OurTeam from "./OurTeam";
 import FooterLighter from "../Shared/Footer/LightFooter";
 import LightNav from "../Shared/Nav/LightNav";
+import PhronAISuite from "./PhronAISuite";
 
 export default function LightHome() {
   return (
     <>
       <LightNav />
       <Hero />
+      <PhronAISuite />
       <ExploreEcosystem />
       <Benchmark />
       <WhitePapers />
