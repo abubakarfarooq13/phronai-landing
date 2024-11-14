@@ -89,16 +89,18 @@ export const networkMenuItems = [
   {
     id: 7,
     label: "Bridge",
-    href: "#",
+    href: "https://bridge.phron.ai/",
     icon: <FaLink fontSize="20px" color="#000" />,
-    isComingSoon: true,
+    isComingSoon: false,
+    target: "_blank",
   },
   {
     id: 7,
     label: "Dex",
-    href: "#",
+    href: "https://dex.phron.ai/",
     icon: <FiBarChart2 fontSize="22px" color="#000" />,
-    isComingSoon: true,
+    isComingSoon: false,
+    target: "_blank",
   },
 ];
 
