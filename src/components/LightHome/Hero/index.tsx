@@ -138,8 +138,7 @@ export default function Hero() {
               </Text>
               <Text
                 fontSize={{
-                  base: "xl",
-                  sm: "2xl",
+                  base: "4xl",
                   lg: "55px",
                 }}
                 fontWeight={700}
