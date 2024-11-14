@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function PhronAISuite() {
   return (
-    <Box mt="20">
+    <Box mt="20" px="4">
       <Text
         fontSize={{
           base: "2xl",
