@@ -1,10 +1,16 @@
 import React from "react";
 import { Box, Grid, GridItem, Stack, Text, VStack } from "@chakra-ui/react";
 import Image from "next/image";
+import AnimatedLines from "./AnimatedLines";
+import AnimatedZigzag from './AnimatedZigzag'
 
 export default function PhronAISuite() {
   return (
     <Box mt="20" px="4">
+      <AnimatedLines />
+
+      <AnimatedZigzag />
+
       <Text
         fontSize={{
           base: "2xl",
