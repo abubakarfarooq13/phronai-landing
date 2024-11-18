@@ -5,8 +5,8 @@ import { Box, keyframes } from "@chakra-ui/react"
 const moveAlongPath = (width: number, height: number) => keyframes`
   0% { transform: translate(0, 0) rotate(0deg); }
   33.33% { transform: translate(0, ${height * 4/9}px) rotate(0deg); }
-  33.34% { transform: translate(0, ${height * 4/9}px) rotate(80deg); }
-  66.66% { transform: translate(-${width - 4}px, ${height * 5/9}px) rotate(80deg); }
+  33.34% { transform: translate(0, ${height * 4/9}px) rotate(78deg); }
+  66.66% { transform: translate(-${width - 4}px, ${height * 5/9}px) rotate(78deg); }
   66.67% { transform: translate(-${width - 4}px, ${height * 5/9}px) rotate(0deg); }
   100% { transform: translate(-${width - 4}px, ${height}px) rotate(0deg); }
 `

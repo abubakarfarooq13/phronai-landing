@@ -26,30 +26,57 @@ export default function PhronAISuite() {
 
       <Fade bottom>
         <VStack
-          position="relative"
-          mx="auto"
-          maxW="420px"
           mb="6"
+          maxW="320px"
+          mx="auto"
+          position="relative"
           display={{ base: "flex", md: "none" }}
         >
+          <Box position="relative">
+            <Image
+              src="/assets/light-theme-home/decentralised-text-img.png"
+              alt="open decentralised graph"
+              width={190}
+              height={100}
+              style={{
+                zIndex: 5,
+                position: "relative",
+              }}
+            />
+            <Box
+              position="absolute"
+              bottom="-60%"
+              right="8%"
+              transform="scaleX(-1)"
+            >
+              <AnimatedZigzag height={80} width={60} />
+            </Box>
+            <Box position="absolute" bottom="-60%" left="8%">
+              <AnimatedZigzag height={80} width={60} />
+            </Box>
+          </Box>
           <Image
             src="/assets/light-theme-home/suite-graph-2.png"
             alt="open phron graph"
-            width={320}
-            height={300}
+            width={420}
+            height={400}
             style={{
               zIndex: 5,
               position: "relative",
             }}
           />
-          <Box position="absolute" bottom="140px" left="72px">
+          <Box
+            position="absolute"
+            bottom={{ base: "35%", lg: "40%" }}
+            right={{ base: "8%", lg: "12%" }}
+            transform="scaleX(-1)"
+          >
             <AnimatedZigzag height={80} width={60} />
           </Box>
           <Box
             position="absolute"
-            bottom="140px"
-            right="72px"
-            transform="scaleX(-1)"
+            bottom={{ base: "35%", lg: "40%" }}
+            left={{ base: "8%", lg: "12%" }}
           >
             <AnimatedZigzag height={80} width={60} />
           </Box>
@@ -70,8 +97,8 @@ export default function PhronAISuite() {
             spacing="2"
             h="40%"
             position="absolute"
-            left="36"
-            bottom="24"
+            left="30%"
+            bottom="20%"
           >
             <AnimatedLines />
             <AnimatedLines />
@@ -81,8 +108,8 @@ export default function PhronAISuite() {
             spacing="2"
             h="40%"
             position="absolute"
-            right="36"
-            bottom="24"
+            right="30%"
+            bottom="20%"
           >
             <AnimatedLines />
             <AnimatedLines />
@@ -94,11 +121,13 @@ export default function PhronAISuite() {
         direction={{ base: "column", md: "row" }}
         alignItems="center"
         justifyContent="center"
-        spacing="6"
+        spacing={{ base: "6", md: "0" }}
         mb="10"
+        maxW='1260px'
+        mx='auto'
       >
         <Fade bottom>
-          <Box position="relative" mt={{ base: "0", md: "14" }}>
+          <Box position="relative" mt={{ base: "0", md: "10" }}>
             <Image
               src="/assets/light-theme-home/suite-graph-1.png"
               alt="open phron graph"
@@ -136,8 +165,44 @@ export default function PhronAISuite() {
           </Box>
         </Fade>
 
+        <Box mt="-100px" ml='10'>
+          <Image
+            src="/assets/light-theme-home/arrow-left.png"
+            alt="arrow left"
+            width={140}
+            height={140}
+            style={{
+              marginLeft: "20px",
+              marginRight: "20px",
+            }}
+          />
+        </Box>
+
         <Fade bottom>
-          <Box position="relative" display={{ base: "none", md: "block" }}>
+          <VStack position="relative" display={{ base: "none", md: "flex" }}>
+            <Box position="relative">
+              <Image
+                src="/assets/light-theme-home/decentralised-text-img.png"
+                alt="open decentralised graph"
+                width={190}
+                height={100}
+                style={{
+                  zIndex: 5,
+                  position: "relative",
+                }}
+              />
+              <Box
+                position="absolute"
+                bottom="-50%"
+                right="24%"
+                transform="scaleX(-1)"
+              >
+                <AnimatedZigzag height={70} width={40} />
+              </Box>
+              <Box position="absolute" bottom="-50%" left="24%">
+                <AnimatedZigzag height={70} width={40} />
+              </Box>
+            </Box>
             <Image
               src="/assets/light-theme-home/suite-graph-2.png"
               alt="open phron graph"
@@ -197,11 +262,24 @@ export default function PhronAISuite() {
               <AnimatedLines />
               <AnimatedLines />
             </Stack>
-          </Box>
+          </VStack>
         </Fade>
 
+        <Box mt="-100px" mr='10'>
+          <Image
+            src="/assets/light-theme-home/arrow-right.png"
+            alt="arrow left"
+            width={140}
+            height={140}
+            style={{
+              marginLeft: "20px",
+              marginRight: "20px",
+            }}
+          />
+        </Box>
+
         <Fade bottom>
-          <Box position="relative" mt={{ base: "0", md: "14" }}>
+          <Box position="relative" mt={{ base: "0", md: "10" }}>
             <Image
               src="/assets/light-theme-home/suite-graph-3.png"
               alt="open phron graph"
