@@ -2,13 +2,11 @@ import React from "react";
 import { Box, Grid, GridItem, Stack, Text, VStack } from "@chakra-ui/react";
 import Image from "next/image";
 import AnimatedLines from "./AnimatedLines";
-import AnimatedZigzag from './AnimatedZigzag'
+import AnimatedZigzag from "./AnimatedZigzag";
 
 export default function PhronAISuite() {
   return (
     <Box mt="20" px="4">
-      <AnimatedLines />
-
       <AnimatedZigzag />
 
       <Text
@@ -40,29 +38,99 @@ export default function PhronAISuite() {
         spacing="6"
         mb="10"
       >
-        <Box mt={{ base: "0", md: "14" }}>
+        <Box position="relative" mt={{ base: "0", md: "14" }}>
           <Image
-            src="/assets/light-theme-home/phronzero.png"
+            src="/assets/light-theme-home/suite-graph-1.png"
             alt="open phron graph"
             width={290}
             height={400}
+            style={{
+              zIndex: 5,
+              position: "relative",
+            }}
           />
+          <Stack
+            direction="row"
+            h="70%"
+            position="absolute"
+            bottom="0"
+            left="51%"
+            transform="translateX(-50%)"
+            spacing="12px"
+          >
+            <AnimatedLines />
+            <AnimatedLines />
+          </Stack>
         </Box>
-        <Box display={{ base: "none", md: "block" }}>
+        <Box position="relative" display={{ base: "none", md: "block" }}>
           <Image
-            src="/assets/light-theme-home/openPhron.png"
+            src="/assets/light-theme-home/suite-graph-2.png"
             alt="open phron graph"
             width={420}
             height={400}
+            style={{
+              zIndex: 5,
+              position: "relative",
+            }}
           />
+          <Stack
+            direction="row"
+            h="70%"
+            position="absolute"
+            bottom="0"
+            left="49.5%"
+            transform="translateX(-50%)"
+            spacing="12px"
+          >
+            <AnimatedLines />
+            <AnimatedLines />
+          </Stack>
+          <Stack
+            direction="row"
+            spacing="2"
+            h="40%"
+            position="absolute"
+            left="32"
+            bottom="24"
+          >
+            <AnimatedLines />
+            <AnimatedLines />
+          </Stack>
+          <Stack
+            direction="row"
+            spacing="2"
+            h="40%"
+            position="absolute"
+            right="32"
+            bottom="24"
+          >
+            <AnimatedLines />
+            <AnimatedLines />
+          </Stack>
         </Box>
-        <Box mt={{ base: "0", md: "14" }}>
+        <Box position="relative" mt={{ base: "0", md: "14" }}>
           <Image
-            src="/assets/light-theme-home/phronai.png"
+            src="/assets/light-theme-home/suite-graph-3.png"
             alt="open phron graph"
             width={290}
             height={400}
+            style={{
+              zIndex: 5,
+              position: "relative",
+            }}
           />
+          <Stack
+            direction="row"
+            h="70%"
+            position="absolute"
+            bottom="0"
+            left="48.7%"
+            transform="translateX(-50%)"
+            spacing="12px"
+          >
+            <AnimatedLines />
+            <AnimatedLines />
+          </Stack>
         </Box>
       </Stack>
     </Box>

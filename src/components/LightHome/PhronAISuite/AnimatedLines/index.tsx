@@ -7,15 +7,15 @@ export default function AnimatedLines(props: AnimatedLinesProps) {
   return (
     <Box
       position="relative"
-      w="4px"
+      w="3px"
       rounded="full"
-      h="100px"
+      h="full"
       bgColor="gray.200"
       overflow="hidden"
       {...props}
     >
       <Box
-        bgGradient="linear(to-b, red.100, red.400)"
+        bgGradient="linear(to-b, #baa2e530, #baa2e5)"
         rounded="full"
         w="full"
         h="20%"
