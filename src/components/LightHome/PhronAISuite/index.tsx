@@ -22,7 +22,7 @@ export default function PhronAISuite() {
         PhronAI Blockchain Suite
       </Text>
 
-      <VStack mb="6" display={{ base: "block", md: "none" }}>
+      <VStack mb="6" display={{ base: "flex", md: "none" }}>
         <Image
           src="/assets/light-theme-home/openPhron.png"
           alt="open phron graph"
