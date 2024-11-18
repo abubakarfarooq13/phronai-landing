@@ -123,8 +123,8 @@ export default function PhronAISuite() {
         justifyContent="center"
         spacing={{ base: "6", md: "0" }}
         mb="10"
-        maxW='1260px'
-        mx='auto'
+        maxW="1260px"
+        mx="auto"
       >
         <Fade bottom>
           <Box position="relative" mt={{ base: "0", md: "10" }}>
@@ -165,7 +165,12 @@ export default function PhronAISuite() {
           </Box>
         </Fade>
 
-        <Box mt="-100px" ml='10'>
+        <Box
+          mt="-100px"
+          ml="10"
+          display={{ base: "none", lg: "block" }}
+          w={{ lg: "80px", xl: "140px" }}
+        >
           <Image
             src="/assets/light-theme-home/arrow-left.png"
             alt="arrow left"
@@ -265,7 +270,12 @@ export default function PhronAISuite() {
           </VStack>
         </Fade>
 
-        <Box mt="-100px" mr='10'>
+        <Box
+          mt="-100px"
+          mr="10"
+          display={{ base: "none", lg: "block" }}
+          w={{ lg: "80px", xl: "140px" }}
+        >
           <Image
             src="/assets/light-theme-home/arrow-right.png"
             alt="arrow left"
