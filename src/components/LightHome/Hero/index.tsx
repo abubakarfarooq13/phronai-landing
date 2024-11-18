@@ -332,7 +332,7 @@ export default function Hero() {
           </HStack> */}
         </Box>
 
-        <Box>
+        {/* <Box>
           <Fade bottom>
             <Text
               fontSize={{ base: "lg", "2340px": "30px" }}
@@ -362,7 +362,7 @@ export default function Hero() {
               </WrapItem>
             ))}
           </Wrap>
-        </Box>
+        </Box> */}
       </Container>
     </Box>
   );
