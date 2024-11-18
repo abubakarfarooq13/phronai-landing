@@ -281,7 +281,7 @@ export default function Hero() {
         </Grid> */}
 
         <Box>
-          <Fade bottom>
+          {/* <Fade bottom>
             <Text
               fontSize={{ base: "lg", "2340px": "30px" }}
               letterSpacing="2px"
@@ -329,7 +329,7 @@ export default function Hero() {
                 />
               </Box>
             </Fade>
-          </HStack>
+          </HStack> */}
         </Box>
 
         <Box>
