@@ -7,7 +7,7 @@ export default function AnimatedLines(props: AnimatedLinesProps) {
   return (
     <Box
       position="relative"
-      w="3px"
+      w="4px"
       rounded="full"
       h="full"
       bgColor="gray.200"
