@@ -2,6 +2,8 @@ import React from "react";
 import { Box, Container, Stack, Text, VStack } from "@chakra-ui/react";
 import Image from "next/image";
 
+const Fade = require("react-reveal/Fade");
+
 export default function RoadTowardsTheFuture() {
   return (
     <Box my="20" px="4">
@@ -34,68 +36,77 @@ export default function RoadTowardsTheFuture() {
           justifyContent="center"
           boxShadow="0 0px 50px -12px rgba(0, 0, 0, 0.1)"
           rounded="3xl"
-          pr={{md:"50px"}}
+          pr={{ md: "50px" }}
           mb="10"
         >
           <Box>
-            <Image
-              src="/assets/light-theme-home/brain-img-new.png"
-              alt="brain image"
-              width={500}
-              height={500}
-            />
+            <Fade left>
+              <Image
+                src="/assets/light-theme-home/brain-img-new.png"
+                alt="brain image"
+                width={500}
+                height={500}
+              />
+            </Fade>
           </Box>
 
-          <VStack
-            align="flex-start"
-            bgColor="#fff"
-            px="10"
-            py="5"
-            rounded="3xl"
-            maxW="640px"
-            ml="auto"
-            pl={{md:"90px"}}
-            position="relative"
-            pb="10"
-          >
-            <Box position="absolute" left={{md:"5"}} right={{base:"5",md:'auto'}} top={{base:"0",md:'5'}}>
-              <Image
-                src="/assets/light-theme-home/phronesis-icon.png"
-                alt="star-icon"
-                width={50}
-                height={50}
-              />
-            </Box>
-            <Text
-              as="h3"
-              fontSize={{
-                base: "xl",
-                lg: "2xl",
-              }}
-              fontWeight={700}
-              color="brand.darkGray"
-              lineHeight="120%"
+          <Fade right>
+            <VStack
+              align="flex-start"
+              bgColor="#fff"
+              px="10"
+              py="5"
+              rounded="3xl"
+              maxW="640px"
+              ml="auto"
+              pl={{ md: "90px" }}
+              position="relative"
+              pb="10"
             >
-              Phronesis Consensus
-            </Text>
-            <Text mb="5">
-              Combining our statistical algorithm for the appliance of different
-              types of nodes in a network alongside the engine of the
-              Convolutional Neural Network supplied, scalability stops being an
-              issue.
-            </Text>
-            <Box
-              as="a"
-              href="https://docs.phron.ai"
-              maxW="200px"
-              w="full"
-              target="_blank"
-              className="btn-grad"
-              py="3"
-            >
-              Explore Phronesis
-            </Box>
-          </VStack>
+              <Box
+                position="absolute"
+                left={{ md: "5" }}
+                right={{ base: "5", md: "auto" }}
+                top={{ base: "0", md: "5" }}
+              >
+                <Image
+                  src="/assets/light-theme-home/phronesis-icon.png"
+                  alt="star-icon"
+                  width={50}
+                  height={50}
+                />
+              </Box>
+              <Text
+                as="h3"
+                fontSize={{
+                  base: "xl",
+                  lg: "2xl",
+                }}
+                fontWeight={700}
+                color="brand.darkGray"
+                lineHeight="120%"
+              >
+                Phronesis Consensus
+              </Text>
+              <Text mb="5">
+                Combining our statistical algorithm for the appliance of
+                different types of nodes in a network alongside the engine of
+                the Convolutional Neural Network supplied, scalability stops
+                being an issue.
+              </Text>
+              <Box
+                as="a"
+                href="https://docs.phron.ai"
+                maxW="200px"
+                w="full"
+                target="_blank"
+                className="btn-grad"
+                py="3"
+              >
+                Explore Phronesis
+              </Box>
+            </VStack>
+          </Fade>
         </Stack>
 
         {/* 2 */}
@@ -106,67 +117,76 @@ export default function RoadTowardsTheFuture() {
           justifyContent="center"
           boxShadow="0 0px 50px -12px rgba(0, 0, 0, 0.1)"
           rounded="3xl"
-          pl={{md:"50px"}}
+          pl={{ md: "50px" }}
           mb="10"
         >
-          <VStack
-            align="flex-start"
-            bgColor="#fff"
-            px="10"
-            py="5"
-            rounded="3xl"
-            maxW="640px"
-            mr="auto"
-            pl={{md:"90px"}}
-            position="relative"
-            pb="10"
-          >
-            <Box position="absolute" left={{md:"5"}} right={{base:"5",md:'auto'}} top={{base:"5",md:'5'}}>
-              <Image
-                src="/assets/light-theme-home/layers-icon.png"
-                alt="star-icon"
-                width={50}
-                height={50}
-              />
-            </Box>
-            <Text
-              as="h3"
-              fontSize={{
-                base: "xl",
-                lg: "2xl",
-              }}
-              fontWeight={700}
-              color="brand.darkGray"
-              lineHeight="120%"
+          <Fade left>
+            <VStack
+              align="flex-start"
+              bgColor="#fff"
+              px="10"
+              py="5"
+              rounded="3xl"
+              maxW="640px"
+              mr="auto"
+              pl={{ md: "90px" }}
+              position="relative"
+              pb="10"
             >
-              Phron AI Layer 1: <br />
-              Proof-of-Concept
-            </Text>
-            <Text mb="5">
-              A seamless transition between Blockchain Technology and AI,
-              introduced through our operational Layer 1. Breaking a paradigm of
-              scalability towards continues growth and efficiency.
-            </Text>
-            <Box
-              as="a"
-              href="https://docs.phron.ai"
-              maxW="240px"
-              w="full"
-              target="_blank"
-              className="btn-grad"
-              py="3"
-            >
-              Explore PhronAI Layer 1
-            </Box>
-          </VStack>
+              <Box
+                position="absolute"
+                left={{ md: "5" }}
+                right={{ base: "5", md: "auto" }}
+                top={{ base: "5", md: "5" }}
+              >
+                <Image
+                  src="/assets/light-theme-home/layers-icon.png"
+                  alt="star-icon"
+                  width={50}
+                  height={50}
+                />
+              </Box>
+              <Text
+                as="h3"
+                fontSize={{
+                  base: "xl",
+                  lg: "2xl",
+                }}
+                fontWeight={700}
+                color="brand.darkGray"
+                lineHeight="120%"
+              >
+                Phron AI Layer 1: <br />
+                Proof-of-Concept
+              </Text>
+              <Text mb="5">
+                A seamless transition between Blockchain Technology and AI,
+                introduced through our operational Layer 1. Breaking a paradigm
+                of scalability towards continues growth and efficiency.
+              </Text>
+              <Box
+                as="a"
+                href="https://docs.phron.ai"
+                maxW="240px"
+                w="full"
+                target="_blank"
+                className="btn-grad"
+                py="3"
+              >
+                Explore PhronAI Layer 1
+              </Box>
+            </VStack>
+          </Fade>
 
           <Box>
-            <Image
-              src="/assets/light-theme-home/layers.png"
-              alt="brain image"
-              width={540}
-              height={540}
-            />
+            <Fade right>
+              <Image
+                src="/assets/light-theme-home/layers.png"
+                alt="brain image"
+                width={540}
+                height={540}
+              />
+            </Fade>
           </Box>
         </Stack>
 
@@ -178,69 +198,79 @@ export default function RoadTowardsTheFuture() {
           justifyContent="center"
           boxShadow="0 0px 50px -12px rgba(0, 0, 0, 0.1)"
           rounded="3xl"
-          pr={{md:"50px"}}
+          pr={{ md: "50px" }}
           mb="10"
         >
           <Box>
-            <Image
-              src="/assets/light-theme-home/3d-box-new.png"
-              alt="brain image"
-              width={500}
-              height={500}
-            />
+            <Fade left>
+              <Image
+                src="/assets/light-theme-home/3d-box-new.png"
+                alt="brain image"
+                width={500}
+                height={500}
+              />
+            </Fade>
           </Box>
 
-          <VStack
-            align="flex-start"
-            bgColor="#fff"
-            px="10"
-            py="5"
-            rounded="3xl"
-            maxW="640px"
-            ml="auto"
-            pl={{md:"90px"}}
-            position="relative"
-            pb="10"
-          >
-            <Box position="absolute" left={{md:"5"}} right={{base:"5",md:'auto'}} top={{base:"5",md:'5'}}>
-              <Image
-                src="/assets/light-theme-home/3d-box-icon.png"
-                alt="star-icon"
-                width={50}
-                height={50}
-              />
-            </Box>
-            <Text
-              as="h3"
-              fontSize={{
-                base: "xl",
-                lg: "2xl",
-              }}
-              fontWeight={700}
-              color="brand.darkGray"
-              lineHeight="120%"
+          <Fade right>
+            <VStack
+              align="flex-start"
+              bgColor="#fff"
+              px="10"
+              py="5"
+              rounded="3xl"
+              maxW="640px"
+              ml="auto"
+              pl={{ md: "90px" }}
+              position="relative"
+              pb="10"
             >
-              PhronZero: <br />
-              AI-driven Blockchain <br />
-              Infrastructure
-            </Text>
-            <Text mb="5">
-              The next approach towards a truly decentralized technology. From
-              making your new Layer 1 in minutes to including AI implementations
-              in your chain, embrace the future with groundbreaking technology.
-            </Text>
-            <Box
-              as="a"
-              // href="https://docs.phron.ai"
-              maxW="200px"
-              w="full"
-              target="_blank"
-              className="btn-grad"
-              py="3"
-            >
-              Coming Soon
-            </Box>
-          </VStack>
+              <Box
+                position="absolute"
+                left={{ md: "5" }}
+                right={{ base: "5", md: "auto" }}
+                top={{ base: "5", md: "5" }}
+              >
+                <Image
+                  src="/assets/light-theme-home/3d-box-icon.png"
+                  alt="star-icon"
+                  width={50}
+                  height={50}
+                />
+              </Box>
+              <Text
+                as="h3"
+                fontSize={{
+                  base: "xl",
+                  lg: "2xl",
+                }}
+                fontWeight={700}
+                color="brand.darkGray"
+                lineHeight="120%"
+              >
+                PhronZero: <br />
+                AI-driven Blockchain <br />
+                Infrastructure
+              </Text>
+              <Text mb="5">
+                The next approach towards a truly decentralized technology. From
+                making your new Layer 1 in minutes to including AI
+                implementations in your chain, embrace the future with
+                groundbreaking technology.
+              </Text>
+              <Box
+                as="a"
+                // href="https://docs.phron.ai"
+                maxW="200px"
+                w="full"
+                target="_blank"
+                className="btn-grad"
+                py="3"
+              >
+                Coming Soon
+              </Box>
+            </VStack>
+          </Fade>
         </Stack>
       </Container>
     </Box>
