@@ -61,7 +61,6 @@ export default function ExploreEcosystem() {
               bottom="25px"
               left={{ md: "30px" }}
               right={{ base: "30px", md: "auto" }}
-              cursor="default"
             >
               Explore Ecosystem
             </Box>
@@ -110,7 +109,6 @@ export default function ExploreEcosystem() {
               bottom="25px"
               left={{ md: "30px" }}
               right={{ base: "30px", md: "auto" }}
-              cursor="default"
             >
               Explore Ecosystem
             </Box>
@@ -160,7 +158,6 @@ export default function ExploreEcosystem() {
               bottom="25px"
               left={{ md: "30px" }}
               right={{ base: "30px", md: "auto" }}
-              cursor="default"
             >
               Explore Ecosystem
             </Box>
@@ -203,7 +200,6 @@ export default function ExploreEcosystem() {
               bottom="25px"
               left={{ md: "30px" }}
               right={{ base: "30px", md: "auto" }}
-              cursor="default"
             >
               Coming Soon
             </Box>
@@ -253,7 +249,6 @@ export default function ExploreEcosystem() {
                 bottom="25px"
                 left={{ md: "30px" }}
                 right={{ base: "30px", md: "auto" }}
-                cursor="default"
               >
                 openPhron
               </Box>
