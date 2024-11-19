@@ -20,6 +20,7 @@ export default function PhronAISuite() {
         textAlign="center"
         color="brand.darkGray"
         mb="10"
+        as='h2'
       >
         PhronAI Blockchain Suite
       </Text>

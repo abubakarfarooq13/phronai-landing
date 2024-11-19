@@ -39,6 +39,9 @@ const theme = extendTheme({
       darkGray: "#292c2e",
     },
   },
+  boxShadow: {
+    theme: "0 0px 50px -12px rgba(0, 0, 0, 0.1)",
+  },
 });
 
 export default theme;

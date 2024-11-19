@@ -9,6 +9,8 @@ import OurTeam from "./OurTeam";
 import FooterLighter from "../Shared/Footer/LightFooter";
 import LightNav from "../Shared/Nav/LightNav";
 import PhronAISuite from "./PhronAISuite";
+import EmbracingBlockchain from "./EmbracingBlockchain";
+import RoadTowardsTheFuture from "./RoadTowardsTheFuture";
 
 export default function LightHome() {
   return (
@@ -16,6 +18,8 @@ export default function LightHome() {
       <LightNav />
       <Hero />
       <PhronAISuite />
+      <EmbracingBlockchain />
+      <RoadTowardsTheFuture />
       <ExploreEcosystem />
       <Benchmark />
       <WhitePapers />

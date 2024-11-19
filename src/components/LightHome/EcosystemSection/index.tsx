@@ -8,6 +8,7 @@ import {
   Grid,
   GridItem,
   HStack,
+  Stack,
   Text,
   VStack,
 } from "@chakra-ui/react";
@@ -27,7 +28,7 @@ export default function ExploreEcosystem() {
           colSpan={{ base: 1, md: 2 }}
           rowSpan={{ base: 1, md: 2 }}
           bgColor="#9CADFF"
-          rounded="20px"
+          rounded="30px"
         >
           <Box
             bgImage="/assets/light-theme-home/telemetry-bg.png"
@@ -39,7 +40,7 @@ export default function ExploreEcosystem() {
             py={{ base: "10px", md: "30px" }}
             minH="350px"
             px="30px"
-            rounded="20px"
+            rounded="30px"
           >
             <Text color={{ base: "#000", md: "#fff" }} fontSize="4xl">
               Telemetry
@@ -48,24 +49,26 @@ export default function ExploreEcosystem() {
               Witness The first Live AI Nodes Ranking
             </Text>
 
-            <HStack
-              className="arrow-btn"
-              position="absolute"
-              // left={{ md: "30px" }}
-              right="30px"
-              bottom="25px"
+            <Box
               as={Link}
               href="/ecosystem"
+              maxW="200px"
+              w="full"
+              target="_blank"
+              className="btn-grad"
+              py="3"
+              position="absolute"
+              bottom="25px"
+              left={{ md: "30px" }}
+              right={{ base: "30px", md: "auto" }}
+              cursor="default"
             >
-              <Text fontSize="14px" fontWeight={500}>
-                Explore Ecosystem
-              </Text>
-              <IoArrowForwardCircleOutline fontSize="18px" />
-            </HStack>
+              Explore Ecosystem
+            </Box>
           </Box>
         </GridItem>
 
-        <GridItem bgColor="#EFF3F7" rounded="20px">
+        <GridItem bgColor="#EFF3F7" rounded="30px">
           <Box
             bgImage="/assets/light-theme-home/layers-bg.png"
             w="full"
@@ -74,7 +77,7 @@ export default function ExploreEcosystem() {
             bgPos={{ base: "right", lg: "center" }}
             position="relative"
             p="30px"
-            rounded="20px"
+            rounded="30px"
             minH="200px"
           >
             <Text fontSize="2xl" lineHeight="130%">
@@ -82,7 +85,7 @@ export default function ExploreEcosystem() {
             </Text>
             <Text fontSize="sm">Introducing the first AI Layers Zero</Text>
 
-            <HStack
+            {/* <HStack
               className="arrow-btn"
               position="absolute"
               left="30px"
@@ -94,11 +97,27 @@ export default function ExploreEcosystem() {
                 Explore Ecosystem
               </Text>
               <IoArrowForwardCircleOutline fontSize="18px" />
-            </HStack>
+            </HStack> */}
+            <Box
+              as={Link}
+              href="/ecosystem"
+              maxW="200px"
+              w="full"
+              target="_blank"
+              className="btn-grad"
+              py="3"
+              position="absolute"
+              bottom="25px"
+              left={{ md: "30px" }}
+              right={{ base: "30px", md: "auto" }}
+              cursor="default"
+            >
+              Explore Ecosystem
+            </Box>
           </Box>
         </GridItem>
 
-        <GridItem bgColor="#EFE4FF" rounded="20px">
+        <GridItem bgColor="#EFE4FF" rounded="30px">
           <Box
             bgImage="/assets/light-theme-home/phronscan-bg.png"
             w="full"
@@ -109,12 +128,12 @@ export default function ExploreEcosystem() {
             px="30px"
             py="10px"
             minH="250px"
-            rounded="20px"
+            rounded="30px"
           >
             <Text fontSize="2xl">Explore PhronScan</Text>
             <Text fontSize="sm">Explore PhronAI Network</Text>
 
-            <HStack
+            {/* <HStack
               className="arrow-btn"
               position="absolute"
               left={{ base: undefined, lg: "30px" }}
@@ -128,11 +147,27 @@ export default function ExploreEcosystem() {
                 Explore Ecosystem
               </Text>
               <IoArrowForwardCircleOutline fontSize="18px" />
-            </HStack>
+            </HStack> */}
+            <Box
+              as="a"
+              href="https://testnet.phronscan.io/"
+              maxW="200px"
+              w="full"
+              target="_blank"
+              className="btn-grad"
+              py="3"
+              position="absolute"
+              bottom="25px"
+              left={{ md: "30px" }}
+              right={{ base: "30px", md: "auto" }}
+              cursor="default"
+            >
+              Explore Ecosystem
+            </Box>
           </Box>
         </GridItem>
 
-        <GridItem colSpan={{ base: 1, md: 3 }} bgColor="#DEC6FF" rounded="20px">
+        <GridItem colSpan={{ base: 1, md: 3 }} bgColor="#DEC6FF" rounded="30px">
           <Box
             bgImage="/assets/light-theme-home/ai-staking-bg.png"
             w="full"
@@ -142,7 +177,7 @@ export default function ExploreEcosystem() {
             position="relative"
             p="30px"
             minH="300px"
-            rounded="20px"
+            rounded="30px"
           >
             <Text fontSize="4xl" lineHeight="120%">
               Adaptive AI Staking
@@ -157,21 +192,81 @@ export default function ExploreEcosystem() {
               Creating the best value of stakers and node providers.
             </Text>
 
-            <HStack
-              className="arrow-btn"
+            <Box
+              as="a"
+              maxW="200px"
+              w="full"
+              target="_blank"
+              className="btn-grad"
+              py="3"
               position="absolute"
               bottom="25px"
               left={{ md: "30px" }}
               right={{ base: "30px", md: "auto" }}
-              as={Link}
-              href="/ecosystem"
+              cursor="default"
             >
-              <Text fontSize="14px" fontWeight={500}>
-                Explore Ecosystem
-              </Text>
-              <IoArrowForwardCircleOutline fontSize="18px" />
-            </HStack>
+              Coming Soon
+            </Box>
           </Box>
+        </GridItem>
+
+        <GridItem colSpan={{ base: 1, md: 3 }} bgColor="#DEC6FF" rounded="30px">
+          <Stack
+            bgImage="/assets/light-theme-home/open-phron-bg.png"
+            w="full"
+            h="full"
+            bgSize={{ base: "cover", lg: "100% 100%" }}
+            bgPos={{ base: "right", lg: "center" }}
+            position="relative"
+            px="30px"
+            pt="30px"
+            minH="300px"
+            rounded="30px"
+            direction={{ base: "column", lg: "row" }}
+            justifyContent="space-between"
+            alignItems={{ base: "center", lg: "flex-end" }}
+          >
+            <Box pb={{ lg: "80px", xl: "100px" }}>
+              <Text fontSize="4xl" lineHeight="120%">
+                openPhron
+              </Text>
+              <Text
+                fontSize="base"
+                mt="4"
+                textAlign={{ base: "right", md: "left" }}
+                lineHeight={{ base: "150%", md: "30px" }}
+                maxW="500px"
+              >
+                The first AI Web 3.0 Marketplace, aggregating AI Agents into the{" "}
+                blockchain, allowing seamless integration inside PhronZero{" "}
+                ecosystem.
+              </Text>
+
+              <Box
+                as="a"
+                maxW="200px"
+                w="full"
+                target="_blank"
+                className="btn-grad"
+                py="3"
+                position="absolute"
+                bottom="25px"
+                left={{ md: "30px" }}
+                right={{ base: "30px", md: "auto" }}
+                cursor="default"
+              >
+                openPhron
+              </Box>
+            </Box>
+            <Box>
+              <Image
+                src="/assets/light-theme-home/open-phron-dashboard.png"
+                alt="open-phron-dashboard"
+                width={500}
+                height={300}
+              />
+            </Box>
+          </Stack>
         </GridItem>
 
         <GridItem
