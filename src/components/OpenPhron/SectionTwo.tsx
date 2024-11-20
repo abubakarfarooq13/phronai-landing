@@ -15,7 +15,7 @@ const SectionTwo = () => {
             <GridItem
               bgImage="/assets/open-phron/development.png"
               bgPos={{base:"bottom",md:"bottom",lg:"center"}}
-              bgSize={{base:"110% 120%",md:"110% 120%",lg:"cover"}}
+              bgSize={{base:"110% 100%",md:"110% 120%",lg:"cover"}}
               bgRepeat="no-repeat"
               colSpan={{ base: 2, lg: 1 }}
           rowSpan={{ base: 2, md: 2 }}
