@@ -14,12 +14,12 @@ const SectionTwo = () => {
           >
             <GridItem
               bgImage="/assets/open-phron/development.png"
-              bgPos="center"
-              bgSize="100% 100%"
+              bgPos={{base:"bottom",md:"bottom",lg:"center"}}
+              bgSize={{base:"110% 120%",md:"110% 120%",lg:"cover"}}
               bgRepeat="no-repeat"
               colSpan={{ base: 2, lg: 1 }}
           rowSpan={{ base: 2, md: 2 }}
-          borderRadius={{base:"23px",md:"0px"}}
+          borderRadius={{base:"23px",md:"23px"}}
             >
               <Box p="20px" height={{base:"350px",lg:"300px"}}>
                 <Text lineHeight="30px" fontWeight="600" fontSize={{base:"25px",md:"25px"}}>
@@ -37,11 +37,11 @@ const SectionTwo = () => {
             </GridItem>
             <GridItem
               bgImage="/assets/open-phron/libraries.png"
-              bgPos="center"
-              bgSize="100% 100%"
+              bgPos={{base:"right",md:"center"}}
+              bgSize={{base:"120% 100%",md:"100% 100%",lg:"cover"}}
               colSpan={{ base: 2, lg: 1 }}
               rowSpan={{ base: 2, md: 1 }}
-              borderRadius={{base:"23px",md:"0px"}}
+              borderRadius={{base:"23px",md:"23px"}}
             >
               <Box p="20px">
                 <Text fontWeight="600" fontSize="25px">
@@ -55,11 +55,11 @@ const SectionTwo = () => {
             </GridItem>
             <GridItem
               bgImage="/assets/open-phron/subscription.png"
-              bgPos="center"
-              bgSize="100% 100%"
+              bgPos={{base:"right",md:"center"}}
+              bgSize={{base:"120% 100%",md:"100% 100%",lg:"cover"}}
               colSpan={{ base: 2, lg: 1 }}
               rowSpan={{ base: 2, md: 1 }}
-              borderRadius={{base:"23px",md:"0px"}}
+              borderRadius={{base:"23px",md:"23px"}}
             >
               <Box p="20px">
                 <Text fontWeight="600" fontSize="25px">
@@ -74,11 +74,11 @@ const SectionTwo = () => {
             </GridItem>
             <GridItem
               bgImage="/assets/open-phron/collaborations.png"
-              bgPos="center"
-              bgSize={{base:"cover",md:"100% 100%"}}
+              bgPos={{base:"center",md:"center"}}
+              bgSize={{base:"200% 100%",md:"cover",lg:"cover"}}
               colSpan={{ base: 2,}}
               rowSpan={{ base: 1,}}
-              borderRadius={{base:"23px",md:"0px"}}
+              borderRadius={{base:"23px",md:"23px"}}
             >
               <Box p="20px">
                 <Text fontWeight="600" fontSize="25px">
