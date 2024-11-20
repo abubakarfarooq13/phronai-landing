@@ -32,7 +32,7 @@ The road towards the future"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <Box py={{base:"0px",md:"9rem"}}>
+      <Box pt={{base:"0px",md:"9rem"}}>
       <main id="openphron-page" style={interFont.style}>
         <OpenPhron/>
         </main>

@@ -29,7 +29,8 @@ const SectionTwo = () => {
                 </Text>
                 <Text fontSize={{base:"14px",md:"16px"}} mt="20px" color="#666c88">
                   {" "}
-                  An aggregator for AI applications for Web 3.0 products. <br />
+                  An aggregator for AI applications for Web 3.0 products.
+                  <Box as='span' display={{base:"none",md:"block"}}></Box>
                   Creating a Centralized space for Decentralized AI results.
                 </Text>
               </Box>

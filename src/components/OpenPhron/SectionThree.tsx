@@ -10,11 +10,11 @@ const SectionThree = () => {
           <Box textAlign="center" my="50px">
             <Text lineHeight={{base:"30px",md:"45px"}} fontWeight="700" fontSize={{base:"21px",md:"35px",lg:"40px"}}>
               From imagination to implementation:
-              <br />
+              <Box as="span" display={{base:"none",md:"block"}}></Box>
               The road towards the future
             </Text>
             <Text fontSize={{base:"14px",md:"16px"}} mt="20px" color="#666c88">
-              Carved from the concept, we applied the concept of having a<br />
+              Carved from the concept, we applied the concept of having a<Box as="span" display={{base:"none",md:"block"}}></Box>
               long-lasting technology embedded with utility and accessibility.
             </Text>
           </Box></Fade>
@@ -57,9 +57,9 @@ const SectionThree = () => {
             </Text>
             <Text mt="10px" mb="20px" color="#666c88">
               From GPU to Storage, find the most<Box as="span" display={{base:"block",md:"none"}}></Box> suitable
-              <br />
+              <Box as="span" display={{base:"none",md:"block"}}></Box>
               solution provided by different renders
-              <br />
+              <Box as="span" display={{base:"none",md:"block"}}></Box>
               in a decentralized scale.
             </Text>
             <button className="btn-grad">Explore PhronZero</button>    
