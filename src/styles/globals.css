@@ -1089,3 +1089,6 @@ nav {
         transform: scale(1);
     }
 }
+.openbg{
+    background-image: linear-gradient(180deg,#e5e5f3,#ffffff,#ffffff,#ffffff);
+}
