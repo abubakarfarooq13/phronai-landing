@@ -30,13 +30,14 @@ export default function RoadTowardsTheFuture() {
 
         {/* 1 */}
         <Stack
-          direction={{ base: "column", lg: "row" }}
+          direction={{ base: "column", md: "row" }}
           w="full"
           alignItems="center"
           justifyContent="center"
           boxShadow="0 0px 50px -12px rgba(0, 0, 0, 0.1)"
           rounded="3xl"
-          pr={{ md: "50px" }}
+          pr={{ xl: "50px" }}
+          fontSize={{ md: "10px", lg: "16px" }}
           mb="10"
         >
           <Box>
@@ -79,7 +80,7 @@ export default function RoadTowardsTheFuture() {
               <Text
                 as="h3"
                 fontSize={{
-                  base: "xl",
+                  base: "lg",
                   lg: "2xl",
                 }}
                 fontWeight={700}
@@ -88,7 +89,7 @@ export default function RoadTowardsTheFuture() {
               >
                 Phronesis Consensus
               </Text>
-              <Text mb="5">
+              <Text mb={{base:'5',md:"2", lg:'5'}}>
                 Combining our statistical algorithm for the appliance of
                 different types of nodes in a network alongside the engine of
                 the Convolutional Neural Network supplied, scalability stops
@@ -111,13 +112,14 @@ export default function RoadTowardsTheFuture() {
 
         {/* 2 */}
         <Stack
-          direction={{ base: "column", lg: "row" }}
+          direction={{ base: "column", md: "row" }}
           w="full"
           alignItems="center"
           justifyContent="center"
           boxShadow="0 0px 50px -12px rgba(0, 0, 0, 0.1)"
           rounded="3xl"
-          pl={{ md: "50px" }}
+          pl={{ xl: "50px" }}
+          fontSize={{ md: "10px", lg: "16px" }}
           mb="10"
         >
           <Fade left>
@@ -149,7 +151,7 @@ export default function RoadTowardsTheFuture() {
               <Text
                 as="h3"
                 fontSize={{
-                  base: "xl",
+                  base: "lg",
                   lg: "2xl",
                 }}
                 fontWeight={700}
@@ -159,7 +161,7 @@ export default function RoadTowardsTheFuture() {
                 Phron AI Layer 1: <br />
                 Proof-of-Concept
               </Text>
-              <Text mb="5">
+              <Text mb={{base:'5',md:"2", lg:'5'}}>
                 A seamless transition between Blockchain Technology and AI,
                 introduced through our operational Layer 1. Breaking a paradigm
                 of scalability towards continues growth and efficiency.
@@ -192,13 +194,14 @@ export default function RoadTowardsTheFuture() {
 
         {/* 3 */}
         <Stack
-          direction={{ base: "column", lg: "row" }}
+          direction={{ base: "column", md: "row" }}
           w="full"
           alignItems="center"
           justifyContent="center"
           boxShadow="0 0px 50px -12px rgba(0, 0, 0, 0.1)"
           rounded="3xl"
-          pr={{ md: "50px" }}
+          pr={{ xl: "50px" }}
+          fontSize={{ md: "10px", lg: "16px" }}
           mb="10"
         >
           <Box>
@@ -241,7 +244,7 @@ export default function RoadTowardsTheFuture() {
               <Text
                 as="h3"
                 fontSize={{
-                  base: "xl",
+                  base: "lg",
                   lg: "2xl",
                 }}
                 fontWeight={700}
@@ -252,7 +255,7 @@ export default function RoadTowardsTheFuture() {
                 AI-driven Blockchain <br />
                 Infrastructure
               </Text>
-              <Text mb="5">
+              <Text mb={{base:'5',md:"2", lg:'5'}}>
                 The next approach towards a truly decentralized technology. From
                 making your new Layer 1 in minutes to including AI
                 implementations in your chain, embrace the future with

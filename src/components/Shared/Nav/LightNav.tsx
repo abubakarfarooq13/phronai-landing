@@ -82,7 +82,7 @@ const AlertBanner = React.forwardRef((props, ref: any) => {
           </Box> */}
           <Stack
             direction={{ base: "column", md: "row" }}
-            alignItems="end"
+            alignItems={{base:'center', md:"end"}}
             spacing="4"
           >
             <Text
