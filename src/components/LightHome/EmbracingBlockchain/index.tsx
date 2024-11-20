@@ -130,12 +130,12 @@ export default function EmbracingBlock() {
                 fontWeight={700}
                 color="brand.darkGray"
               >
-                AI-Driven Consensus
+                Accessibility to Anyone
               </Text>
               <Text mb="5">
-                With the application of neural networks, Phronesis Consensus
-                enhances chain efficiency. In contrast, creates an ever-evolving
-                technology for incredible applications.
+                Its growth is directed towards a world where a few clicks
+                provide you the tools you need in a decentralized space.
+                PhronZero blockchain infrastructure is taking us there.
               </Text>
               <Box
                 as="a"
@@ -146,7 +146,7 @@ export default function EmbracingBlock() {
                 className="btn-grad"
                 py="3"
               >
-                Explore Phronesis
+                Coming Soon
               </Box>
             </VStack>
           </Fade>
