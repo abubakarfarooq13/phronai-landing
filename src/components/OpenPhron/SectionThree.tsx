@@ -31,11 +31,11 @@ const SectionThree = () => {
               <Text fontSize="30px" fontWeight="500" color="#ffffff">
                 AI Agents
               </Text>
-              <Text mt="10px" mb="20px" color="#ffffff">
-                Power your everyday <Box as="span" display={{base:"block",md:"none"}}></Box>tasks with AI agents.
-                <br />
-                Gatherings the best<Box as="span" display={{base:"block",md:"none"}}></Box> solutions in the market in
-                <br />a single place.
+              <Text maxW={{base:"200px",md:"300px",lg:"350px"}} mt="10px" mb="20px" color="#ffffff">
+                Power your everyday tasks with AI agents.
+                
+                Gatherings the best solutions in the market in
+                a single place.
               </Text>
               <button className="btn-grad">Explore Phronesis</button>
             </Box>
@@ -52,14 +52,14 @@ const SectionThree = () => {
             borderRadius="25px"
           >
             <Box pl={{base:"50px"}}  pr={{md:"50px",lg:"100px"}} pt={{base:"70px",md:"80px"}}>
-             <Text fontSize="30px" fontWeight="500" color="#000000">
-              Decentralized Cloud <Box as="span" display={{base:"none",md:"block",lg:"none"}}></Box> Services
+             <Text maxW={{base:"full",md:"300px",lg:"full"}} fontSize="30px" fontWeight="500" color="#000000">
+              Decentralized Cloud  Services
             </Text>
-            <Text mt="10px" mb="20px" color="#666c88">
-              From GPU to Storage, find the most<Box as="span" display={{base:"block",md:"none"}}></Box> suitable
-              <Box as="span" display={{base:"none",md:"block"}}></Box>
+            <Text  maxW={{base:"230px",md:"300px",lg:"350px"}} mt="10px" mb="20px" color={{base:"#ffffff",md:"#666c88"}}>
+              From GPU to Storage, find the most suitable
+             
               solution provided by different renders
-              <Box as="span" display={{base:"none",md:"block"}}></Box>
+              
               in a decentralized scale.
             </Text>
             <button className="btn-grad">Explore PhronZero</button>    
