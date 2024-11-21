@@ -27,6 +27,7 @@ const SectionThree = () => {
             height="400px"
             borderRadius="25px"
           >
+            <Fade left>
             <Box pl={{base:"50px",lg:"100px"}} pt={{base:"70px",md:"80px"}}>
               <Text fontSize="30px" fontWeight="500" color="#ffffff">
                 AI Agents
@@ -38,7 +39,7 @@ const SectionThree = () => {
                 a single place.
               </Text>
               <button className="btn-grad">Explore Phronesis</button>
-            </Box>
+            </Box></Fade>
           </Box></Fade>
           <Fade bottom>
           <Flex mt="50px"
@@ -50,7 +51,7 @@ const SectionThree = () => {
             flexDir="column"
             mb="100px"
             borderRadius="25px"
-          >
+          ><Fade right>
             <Box pl={{base:"50px"}}  pr={{md:"50px",lg:"100px"}} pt={{base:"70px",md:"80px"}}>
              <Text maxW={{base:"full",md:"300px",lg:"full"}} fontSize="30px" fontWeight="500" color="#000000">
               Decentralized Cloud  Services
@@ -63,7 +64,7 @@ const SectionThree = () => {
               in a decentralized scale.
             </Text>
             <button className="btn-grad">Explore PhronZero</button>    
-            </Box>
+            </Box></Fade>
            
           </Flex></Fade>
         </Container>

@@ -7,7 +7,7 @@ const SectionTwo = () => {
     <Box>
       <Box mt={"20px"}>
         <Container maxWidth="1240px">
-          <Fade bottom>
+          <Fade>
           <Grid
             py="50px"
             gridTemplateColumns={{ base: "repeat(1, 1fr)", md: "repeat(1, 1fr)",lg:"repeat(2, 1fr)" }}
@@ -24,6 +24,7 @@ const SectionTwo = () => {
           overflow="hidden"
           // bg="#daf1fe"
           h={{base:"310px",md:"full"}}
+          boxShadow="0 0px 50px -12px rgba(0, 0, 0, 0.1)"
             >
               <Box p="20px" height={{base:"350px",lg:"300px"}}>
                 <Text lineHeight="30px" fontWeight="600" fontSize={{base:"25px",md:"25px"}}>
@@ -55,6 +56,7 @@ const SectionTwo = () => {
               bg="#e6f9fc"
               overflow="hidden"
               h={{lg:"160px"}}
+              boxShadow="0 0px 50px -12px rgba(0, 0, 0, 0.1)"
             >
               <Flex h="full" flexDir={{base:"column",md:"row"}}  justifyContent={{base:"center",md:"space-between"}} alignItems="center">
               <Box w="full" p="20px">
@@ -81,6 +83,7 @@ const SectionTwo = () => {
               borderRadius={{base:"23px",md:"23px"}}
               bg="#ede4fd"
               overflow="hidden"
+              boxShadow="0 0px 50px -12px rgba(0, 0, 0, 0.1)"
             ><Flex flexDir={{base:"column",md:"row"}}  justifyContent={{base:"center",md:"space-between"}} alignItems="center">
               <Box p="20px">
                 <Text fontWeight="600" fontSize="25px">
@@ -109,6 +112,7 @@ const SectionTwo = () => {
               borderRadius={{base:"23px",md:"23px"}}
               bg="#efd4ff"
               overflow="hidden"
+              boxShadow="0 0px 50px -12px rgba(0, 0, 0, 0.1)"
             >
               <Flex flexDir={{base:"column",md:"row"}}  justifyContent={{base:"center",md:"space-between"}} alignItems={{base:"center",lg:"normal"}} position="relative">
               <Flex position="absolute" mr={{base:"-180px",md:"-60px"}} top={{base:"0px",md:"-80px"}} display={{base:"block",md:"none",lg:"none"}}  alignItems={{base:"center",md:"start"}}  w={{base:"150px",}}  maxW="530px">
