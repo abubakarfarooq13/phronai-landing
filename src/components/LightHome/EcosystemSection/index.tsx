@@ -239,16 +239,16 @@ export default function ExploreEcosystem() {
               </Text>
 
               <Box
-                as="a"
+                as={Link}
                 maxW="200px"
                 w="full"
-                target="_blank"
                 className="btn-grad"
                 py="3"
                 position="absolute"
                 bottom="25px"
                 left={{ md: "30px" }}
                 right={{ base: "30px", md: "auto" }}
+                href="/openphron"
               >
                 openPhron
               </Box>

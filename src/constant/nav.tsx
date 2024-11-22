@@ -1,6 +1,6 @@
 import { FaDroplet, FaLink, FaWallet } from "react-icons/fa6";
 import { FiBarChart2 } from "react-icons/fi";
-import { MdWifiTethering } from "react-icons/md";
+import { MdDashboard, MdWifiTethering } from "react-icons/md";
 import { FiSettings } from "react-icons/fi";
 
 export const layerZeroAndLayerOneMenuItems = [
@@ -71,6 +71,13 @@ export const networkMenuItems = [
     href: "https://devs.phron.ai/",
     icon: <FiSettings fontSize="20px" color="#000" />,
     target: "_blank",
+  },
+  {
+    id: 5,
+    label: "Open Phron",
+    href: "/openphron",
+    icon: <MdDashboard fontSize="20px" color="#000" />,
+    // target: "_blank",
   },
   {
     id: 6,
