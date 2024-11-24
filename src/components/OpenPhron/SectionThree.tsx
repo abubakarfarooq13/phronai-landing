@@ -52,9 +52,9 @@ const SectionThree = () => {
             mb="100px"
             borderRadius="25px"
           ><Fade right>
-            <Box pl={{base:"50px"}}  pr={{md:"50px",lg:"100px"}} pt={{base:"70px",md:"80px"}}>
+            <Box pl={{base:"50px"}} mr={{base:"20px",md:""}}  pr={{base:"0px",md:"50px",lg:"100px"}} pt={{base:"70px",md:"80px"}}>
              <Text maxW={{base:"full",md:"300px",lg:"full"}} fontSize="30px" fontWeight="500" color="#000000">
-              Decentralized Cloud  Services
+              Decentralized Cloud Services
             </Text>
             <Text  maxW={{base:"230px",md:"300px",lg:"350px"}} mt="10px" mb="20px" color={{base:"#ffffff",md:"#666c88"}}>
               From GPU to Storage, find the most suitable

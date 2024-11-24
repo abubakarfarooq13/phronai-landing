@@ -13,8 +13,8 @@ const SectionOne = () => {
         <Fade bottom>
     <Flex flexDir={{base:"column",lg:"row"}}  py="50px" justifyContent={{lg:"space-between"}}alignItems={{base:"center",lg:""}}> 
         <Box w="100%" textAlign={{base:"center",lg:"start"}}>
-            <Text as="h1" color="#713fc0" fontSize={{base:"20px",lg:"25px"}} fontWeight="600">open Phron</Text>
-            <Text fontWeight="700" fontSize={{base:"40px",md:"45px",lg:"55px"}} lineHeight={{base:"45px",md:"55px"}} as="p">AI Web 3.0<br/>
+            <Text as="h1" color="#713fc0" fontSize={{base:"20px",md:"25px",lg:"25px"}} fontWeight="600">open Phron</Text>
+            <Text fontWeight="700" fontSize={{base:"40px",md:"55px",lg:"55px"}} lineHeight={{base:"45px",md:"55px"}} as="p">AI Web 3.0<br/>
             Development,<br/>
             made easy.
             </Text>

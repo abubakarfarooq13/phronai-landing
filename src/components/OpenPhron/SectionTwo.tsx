@@ -38,9 +38,10 @@ const SectionTwo = () => {
                   <Box as='span' display={{base:"none",md:"block",lg:"none"}}></Box>
                   Creating a Centralized space for Decentralized AI results.
                 </Text>
-                <Box  mt={{base:"32px",md:"10px",lg:"25px"}} w={{base:"",md:"100%"}} maxW="700px">
-                   <Image src="/assets/open-phron/discover1.png" alt="openphron" height="1000" width="1000"/>
-                </Box>
+                <Flex  justifyContent="center"  w={{base:"",md:"full"}}  >
+                  <Box mt={{base:"32px",md:"10px",lg:"25px"}} borderRadius="15px 15px 0px 0px" overflow="hidden" maxW="700px">
+                   <Image src="/assets/open-phron/discover1.png" alt="openphron" height="1000" width="1000"/></Box>
+                </Flex>
                
               </Box>
             </GridItem>
