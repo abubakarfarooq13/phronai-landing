@@ -1,4 +1,12 @@
-import { Box, Container, Flex, Grid, GridItem, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Container,
+  Flex,
+  Grid,
+  GridItem,
+  Text,
+  VStack,
+} from "@chakra-ui/react";
 import Image from "next/image";
 import React from "react";
 
@@ -28,30 +36,32 @@ const SectionTwo = () => {
                 borderRadius={{ base: "23px", md: "23px" }}
                 overflow="hidden"
                 // bg="#daf1fe"
-                h={{ base: "310px", md: "full" }}
+                // h={{ base: "310px", md: "full" }}
                 boxShadow="0 0px 50px -12px rgba(0, 0, 0, 0.1)"
               >
-                <Box p="20px" height={{ base: "350px", lg: "300px" }}>
-                  <Text
-                    lineHeight="120%"
-                    fontWeight="600"
-                    fontSize={{ base: "25px", md: "25px" }}
-                  >
-                    Everything AI for Blockchain Development
-                  </Text>
-                  <Text
-                    fontSize={{ base: "14px", md: "16px", lg: "17px" }}
-                    mt="20px"
-                    color="#666c88"
-                  >
-                    {" "}
-                    An aggregator for AI applications for Web 3.0 products.
-                    <Box
-                      as="span"
-                      display={{ base: "none", md: "block", lg: "none" }}
-                    ></Box>
-                    Creating a Centralized space for Decentralized AI results.
-                  </Text>
+                <VStack px="20px" pt="8" justifyContent="space-between" h="full">
+                  <Box>
+                    <Text
+                      lineHeight="120%"
+                      fontWeight="600"
+                      fontSize={{ base: "25px", md: "25px" }}
+                    >
+                      Everything AI for Blockchain Development
+                    </Text>
+                    <Text
+                      fontSize={{ base: "14px", md: "16px", lg: "17px" }}
+                      mt="20px"
+                      color="#666c88"
+                    >
+                      {" "}
+                      An aggregator for AI applications for Web 3.0 products.
+                      <Box
+                        as="span"
+                        display={{ base: "none", md: "block", lg: "none" }}
+                      ></Box>
+                      Creating a Centralized space for Decentralized AI results.
+                    </Text>
+                  </Box>
                   <Flex justifyContent="center" w={{ base: "", md: "full" }}>
                     <Box
                       mt={{ base: "32px", md: "10px", lg: "25px" }}
@@ -67,7 +77,7 @@ const SectionTwo = () => {
                       />
                     </Box>
                   </Flex>
-                </Box>
+                </VStack>
               </GridItem>
               <GridItem
                 // bgImage="/assets/open-phron/libraries.png"
