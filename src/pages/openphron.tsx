@@ -25,15 +25,14 @@ const openphron = () => {
               `,
           }}
         ></script>
-        <title>Open Phron</title>
+        <title>Open Phron | AI Web 3.0 Development, made easy.</title>
         <meta
           name="description"
-          content="From imagination to implementation:
-The road towards the future"
+          content="From imagination to implementation The road towards the future"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <Box pt={{sm:'180px',md:'150px'}}>
+      <Box pt={{ sm: "180px", md: "150px" }}>
         <main id="openphron-page" style={interFont.style}>
           <OpenPhron />
         </main>
