@@ -111,9 +111,10 @@ const SectionThree = () => {
           >
             <Fade right>
               <Box
-                px={{ base: "8", md: "20" }}
+                pr={{ base: "8",  md:"0",lg: "20" }}
+                pl={{ base: "8", lg: "20" }}
                 // pt={{ base: "70px", md: "80px" }}
-                py={{ base: "10", md: "32" }}
+                py={{ base: "10", lg: "32" }}
               >
                 <Text
                   maxW={{ base: "full", md: "300px", lg: "full" }}
