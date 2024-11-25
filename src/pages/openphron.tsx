@@ -1,12 +1,13 @@
-import { Box } from '@chakra-ui/react'
-import Head from 'next/head'
-import React from 'react'
+import { Box } from "@chakra-ui/react";
+import Head from "next/head";
+import React from "react";
 import { interFont } from "@/components/fonts";
-import OpenPhron from '@/components/OpenPhron';
+import OpenPhron from "@/components/OpenPhron";
+
 const openphron = () => {
   return (
-   <>
-   <Head>
+    <>
+      <Head>
         {/* eslint-disable-next-line @next/next/next-script-for-ga */}
         <script
           async
@@ -32,13 +33,13 @@ The road towards the future"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <Box pt={{base:"0px",md:"9rem"}}>
-      <main id="openphron-page" style={interFont.style}>
-        <OpenPhron/>
+      <Box pt={{sm:'180px',md:'150px'}}>
+        <main id="openphron-page" style={interFont.style}>
+          <OpenPhron />
         </main>
       </Box>
-   </>
-  )
-}
+    </>
+  );
+};
 
-export default openphron
+export default openphron;
