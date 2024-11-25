@@ -30,6 +30,7 @@ import {
   papersMenuItems,
   navItems,
 } from "@/constant/nav";
+import OpenPhronLogo from "../OpenPhronLogo";
 
 const AlertBanner = React.forwardRef((props, ref: any) => {
   const [show, setShow] = useState(true);
@@ -82,7 +83,7 @@ const AlertBanner = React.forwardRef((props, ref: any) => {
           </Box> */}
           <Stack
             direction={{ base: "column", md: "row" }}
-            alignItems={{base:'center', md:"end"}}
+            alignItems={{ base: "center", md: "end" }}
             spacing="4"
           >
             <Text
@@ -358,7 +359,13 @@ export default function Nav() {
         <>
           <HStack justifyContent="space-between">
             <Box ref={logoRef} transition="all .3s">
-              {router.pathname === "/phronzero" ? <PhronZeroLogo /> : <Logo />}
+              {router.pathname === "/phronzero" ? (
+                <PhronZeroLogo />
+              ) : router.pathname === "/openphron" ? (
+                <OpenPhronLogo />
+              ) : (
+                <Logo />
+              )}
             </Box>
 
             <MobileDrawer isOpen={isOpen} onOpen={onOpen} onClose={onClose} />
