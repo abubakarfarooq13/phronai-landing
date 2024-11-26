@@ -18,7 +18,7 @@ const SectionTwo = () => {
         <Container maxWidth="1240px">
           <Fade>
             <Grid
-              py="50px"
+              pt="50px"
               gridTemplateColumns={{
                 base: "repeat(1, 1fr)",
                 md: "repeat(1, 1fr)",

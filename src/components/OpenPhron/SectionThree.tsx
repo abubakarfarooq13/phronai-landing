@@ -44,7 +44,7 @@ const SectionThree = () => {
           <Fade bottom>
             <Stack
               direction={{ base: "column", md: "row" }}
-              my="50px"
+              my="6"
               bgImage="linear-gradient(45deg, rgba(126,138,174,1) 0%, rgba(170,173,208,1) 50%, rgba(126,138,174,1) 100%)"
               bgPos="center"
               // bgSize={{ base: "cover", lg: "100% 100%" }}
@@ -61,7 +61,7 @@ const SectionThree = () => {
                 <VStack
                   align={{ base: "center", md: "flex-start" }}
                   textAlign={{ base: "center", md: "left" }}
-                  pb="10"
+                  pb={{md:"10"}}
                 >
                   <Text fontSize="30px" fontWeight="500" color="#ffffff">
                     AI Agents
@@ -100,7 +100,7 @@ const SectionThree = () => {
           </Fade>
 
           <Flex
-            mt="50px"
+            mt="6"
             bgImage="/assets/open-phron/cloud.png"
             bgPos={{ base: "left", md: "center" }}
             bgSize="cover"
