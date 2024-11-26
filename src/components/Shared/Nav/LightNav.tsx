@@ -392,7 +392,7 @@ export default function Nav() {
                   }}
                   outline="none"
                   boxShadow="none"
-                  px="4"
+                  px="3"
                   color={
                     item.items?.includes(router.pathname) ? "#9e5aff" : "#000"
                   }
@@ -402,23 +402,44 @@ export default function Nav() {
                   fontSize="inherit"
                   transition="all .3s"
                 >
-                  <Text
-                    h="full"
-                    py="7"
-                    _hover={{
-                      outline: "none",
-                      boxShadow: "none",
-                    }}
-                    _active={{
-                      boxShadow: "none",
-                    }}
-                    _focus={{
-                      boxShadow: "none",
-                    }}
-                    fontWeight={500}
-                  >
-                    {item.label}
-                  </Text>
+                  {item.href ? (
+                    <Link
+                      href={item.href}
+                      h="full"
+                      py="7"
+                      _hover={{
+                        outline: "none",
+                        boxShadow: "none",
+                      }}
+                      _active={{
+                        boxShadow: "none",
+                      }}
+                      _focus={{
+                        boxShadow: "none",
+                      }}
+                      fontWeight={500}
+                    >
+                      {item.label}
+                    </Link>
+                  ) : (
+                    <Text
+                      h="full"
+                      py="7"
+                      _hover={{
+                        outline: "none",
+                        boxShadow: "none",
+                      }}
+                      _active={{
+                        boxShadow: "none",
+                      }}
+                      _focus={{
+                        boxShadow: "none",
+                      }}
+                      fontWeight={500}
+                    >
+                      {item.label}
+                    </Text>
+                  )}
 
                   <Box>
                     <SubMenu

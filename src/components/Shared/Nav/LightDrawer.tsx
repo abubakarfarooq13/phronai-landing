@@ -19,6 +19,7 @@ import {
   AccordionIcon,
   HStack,
   Text,
+  Box,
 } from "@chakra-ui/react";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -116,6 +117,18 @@ export default function MobileDrawer(props: MobileDrawerProps) {
                   </VStack>
                 </AccordionPanel>
               </AccordionItem>
+              <Box
+                as={Link}
+                href="/openphron"
+                display="block"
+                p="2"
+                fontWeight={500}
+                _hover={{
+                  background:'gray.50'
+                }}
+              >
+                openPhron
+              </Box>
               <AccordionItem border="0px">
                 <h2>
                   <AccordionButton

@@ -180,6 +180,21 @@ export const navItems = [
   },
   {
     id: 2,
+    label: "openPhron",
+    href: "/openPhron",
+    // className: "dropdown-1",
+    // items: [
+    //   "/phronzero",
+    //   "/chain",
+    //   "/phron",
+    //   "/ecosystem",
+    //   "/team",
+    //   "/roadmap",
+    // ],
+    // imageUrl: "/assets/phronzero/card-1-img.png",
+  },
+  {
+    id: 22,
     label: "Build",
     href: "",
     className: "dropdown-2",
@@ -187,7 +202,7 @@ export const navItems = [
     imageUrl: "/assets/new-home/chain-image.png",
   },
   {
-    id: 4,
+    id: 44,
     label: "Network",
     href: "",
     className: "dropdown-3",

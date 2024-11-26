@@ -156,12 +156,12 @@ export function SubMenu(props: any) {
               placeContent="center"
               pt="5"
             >
-              <Image
+              {/* <Image
                 src={props.imageUrl}
                 alt="menu image"
                 width={props.label === "Papers" ? 80 : 160}
                 height={160}
-              />
+              /> */}
             </Box>
             <VStack w="50%" spacing="10px">
               {props.menu.map((item: any) => (
