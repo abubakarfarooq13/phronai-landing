@@ -1,11 +1,14 @@
 import { Box, Flex, Text, Container } from "@chakra-ui/react";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import ConnectWalletButton from "../Shared/ConnectWalletButton";
 
 const Fade = require("react-reveal/Fade");
 
 const SectionOne = () => {
+  const [isHovered, setIsHovered] = useState(false);
+
+
   return (
     <Box>
       <Box
@@ -49,7 +52,18 @@ const SectionOne = () => {
                   An aggregator for all things AI in Web 3.0.
                 </Text>
                 <Flex justifyContent={{ base: "center", lg: "start" }}>
-                <ConnectWalletButton label="Try Phronesis AI consensus" gradientButton />
+                <Box
+                  as="button"
+                  className="btn-grad"
+                  onMouseEnter={() => {
+                    setIsHovered(true);
+                  }}
+                  onMouseLeave={() => {
+                    setIsHovered(false);
+                  }}
+                >
+                  {isHovered ? "Coming Soon" : "Try openPhron"}
+                </Box>
                 </Flex>
 
                 <Flex

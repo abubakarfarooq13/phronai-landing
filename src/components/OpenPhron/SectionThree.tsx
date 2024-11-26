@@ -20,7 +20,7 @@ const SectionThree = () => {
       <Box>
         <Container alignItems="center" maxWidth="1240px">
           <Fade bottom>
-            <Box textAlign="center" my="50px">
+            {/* <Box textAlign="center" my="50px">
               <Text
                 lineHeight={{ base: "38px", md: "45px" }}
                 fontWeight="700"
@@ -39,7 +39,7 @@ const SectionThree = () => {
                 <Box as="span" display={{ base: "none", md: "block" }}></Box>
                 long-lasting technology embedded with utility and accessibility.
               </Text>
-            </Box>
+            </Box> */}
           </Fade>
           <Fade bottom>
             <Stack
@@ -75,7 +75,7 @@ const SectionThree = () => {
                     Power your everyday tasks with AI agents. Gatherings the
                     best solutions in the market in a single place.
                   </Text>
-                  <Box
+                  {/* <Box
                     as="a"
                     href="https://docs.phron.ai/"
                     target="_blank"
@@ -83,7 +83,7 @@ const SectionThree = () => {
                     w="fit-content"
                   >
                     Explore Phronesis
-                  </Box>
+                  </Box> */}
                 </VStack>
               </Fade>
               <Fade right>
@@ -131,7 +131,7 @@ const SectionThree = () => {
                   color={{ base: "#fff", md: "#666c88" }}
                 >
                   From GPU to Storage, find the most suitable solution provided
-                  by different renders in a decentralized scale.
+                  by different suppliers in a decentralized scale.
                 </Text>
                 <Box
                   as="button"

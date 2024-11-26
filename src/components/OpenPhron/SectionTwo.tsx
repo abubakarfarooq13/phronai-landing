@@ -39,7 +39,12 @@ const SectionTwo = () => {
                 // h={{ base: "310px", md: "full" }}
                 boxShadow="0 0px 50px -12px rgba(0, 0, 0, 0.1)"
               >
-                <VStack px="20px" pt="8" justifyContent="space-between" h="full">
+                <VStack
+                  px="20px"
+                  pt="8"
+                  justifyContent="space-between"
+                  h="full"
+                >
                   <Box>
                     <Text
                       lineHeight="120%"
@@ -54,7 +59,7 @@ const SectionTwo = () => {
                       color="#666c88"
                     >
                       {" "}
-                      An aggregator for AI applications for Web 3.0 products.
+                      An aggregator for AI applications for Web 3.0 products.{" "}
                       <Box
                         as="span"
                         display={{ base: "none", md: "block", lg: "none" }}
@@ -228,7 +233,7 @@ const SectionTwo = () => {
                       mt="10px"
                       color="#666c88"
                     >
-                      Open AI smart contracts
+                      Open-source AI smart contracts
                       <Box
                         display={{ base: "block", md: "none" }}
                         as="span"
