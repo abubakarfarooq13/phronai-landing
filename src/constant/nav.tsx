@@ -72,13 +72,13 @@ export const networkMenuItems = [
     icon: <FiSettings fontSize="20px" color="#000" />,
     target: "_blank",
   },
-  {
-    id: 5,
-    label: "Open Phron",
-    href: "/openphron",
-    icon: <MdDashboard fontSize="20px" color="#000" />,
-    // target: "_blank",
-  },
+  // {
+  //   id: 5,
+  //   label: "Open Phron",
+  //   href: "/openphron",
+  //   icon: <MdDashboard fontSize="20px" color="#000" />,
+  //   // target: "_blank",
+  // },
   {
     id: 6,
     label: "Testnet Faucet",
@@ -181,7 +181,7 @@ export const navItems = [
   {
     id: 2,
     label: "openPhron",
-    href: "/openPhron",
+    href: "/openphron",
     // className: "dropdown-1",
     // items: [
     //   "/phronzero",
