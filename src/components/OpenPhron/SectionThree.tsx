@@ -13,7 +13,7 @@ import React, { useState } from "react";
 const Fade = require("react-reveal/Fade");
 
 const SectionThree = () => {
-  const [isHovered, setIsHovered] = useState(false);
+  // const [isHovered, setIsHovered] = useState(false);
 
   return (
     <Box mb="5rem">
@@ -133,7 +133,7 @@ const SectionThree = () => {
                   From GPU to Storage, find the most suitable solution provided
                   by different suppliers in a decentralized scale.
                 </Text>
-                <Box
+                {/* <Box
                   as="button"
                   className="btn-grad"
                   onMouseEnter={() => {
@@ -144,7 +144,7 @@ const SectionThree = () => {
                   }}
                 >
                   {isHovered ? "Coming Soon" : "Explore PhronZero"}
-                </Box>
+                </Box> */}
               </Box>
             </Fade>
           </Flex>
