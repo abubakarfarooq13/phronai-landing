@@ -703,7 +703,7 @@ nav {
     transform: scale(0);
     transition: all .2s;
 }
-  
+
 .dropdown-1:hover .dropdown-1-menu {
     transform: scale(1);
 }

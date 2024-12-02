@@ -1,4 +1,4 @@
-import { Box, Flex, Text, Container } from "@chakra-ui/react";
+import { Box, Flex, Text, Container, VStack } from "@chakra-ui/react";
 import Image from "next/image";
 import React, { useState } from "react";
 import ConnectWalletButton from "../Shared/ConnectWalletButton";
@@ -7,7 +7,6 @@ const Fade = require("react-reveal/Fade");
 
 const SectionOne = () => {
   const [isHovered, setIsHovered] = useState(false);
-
 
   return (
     <Box>
@@ -52,37 +51,55 @@ const SectionOne = () => {
                   An aggregator for all things AI in Web 3.0.
                 </Text>
                 <Flex justifyContent={{ base: "center", lg: "start" }}>
-                <Box
-                  as="button"
-                  className="btn-grad"
-                  onMouseEnter={() => {
-                    setIsHovered(true);
-                  }}
-                  onMouseLeave={() => {
-                    setIsHovered(false);
-                  }}
-                >
-                  {isHovered ? "Coming Soon" : "Try openPhron"}
-                </Box>
+                  <Box
+                    as="button"
+                    className="btn-grad"
+                    onMouseEnter={() => {
+                      setIsHovered(true);
+                    }}
+                    onMouseLeave={() => {
+                      setIsHovered(false);
+                    }}
+                  >
+                    {isHovered ? "Coming Soon" : "Try openPhron"}
+                  </Box>
                 </Flex>
 
-                <Flex
-                  justifyContent={{ base: "center", lg: "start" }}
-                  mt="30px"
+                <VStack
+                  maxW="90px"
+                  mt="6"
+                  spacing="3"
+                  mx={{ base: "auto", lg: "0px" }}
                 >
-                  <Image
+                  {/* <Image
                     src="/assets/open-phron/hacken-gray.png"
                     alt="openphron"
                     height="80"
                     width="80"
+                  /> */}
+                  <Text
+                    className="text-center"
+                    fontSize="xs"
+                    textTransform="uppercase"
+                    color="gray.600"
+                  >
+                    Secured By
+                  </Text>
+                  <Image
+                    src="/assets/new-home/Hacken.png"
+                    alt="solid proof"
+                    width={60}
+                    height={55}
+                    // className="logo-image"
+                    style={{
+                      maxWidth: "70px",
+                    }}
                   />
-                </Flex>
+                </VStack>
               </Box>
             </Fade>
             <Fade right>
-              <Box
-                mt={{ base: "20px", lg: "0px" }}
-              >
+              <Box mt={{ base: "20px", lg: "0px" }}>
                 <Image
                   src="/assets/open-phron/sectionone.png"
                   alt="openphron"
