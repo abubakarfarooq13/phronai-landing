@@ -152,11 +152,11 @@ export default function Hero() {
               </Text>
 
               <Box>
-                {/* <ConnectWalletButton
+                <ConnectWalletButton
                   label="Try Phronesis AI consensus"
                   gradientButton
-                /> */}
-                <Box
+                />
+                {/* <Box
                   as="a"
                   whiteSpace="nowrap"
                   href="https://app.openphron.ai"
@@ -165,10 +165,9 @@ export default function Hero() {
                   target="_blank"
                   className="btn-grad"
                   py="3"
-                  // gradientButton
                 >
                   Try Phronesis AI consensus
-                </Box>
+                </Box> */}
               </Box>
             </Fade>
           </VStack>
