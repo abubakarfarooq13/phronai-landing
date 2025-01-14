@@ -161,7 +161,7 @@ export const advisors = [
   {
     id: "07",
     name: "Sander Görtjes",
-    role: "Advisor - Co-Owner HELLO Labs",
+    role: "CMO - Co-Owner HELLO Labs",
     image: "/assets/light-theme-home/sander.png",
     linkedinUrl: "https://www.linkedin.com/in/sandergortjes/",
     imageWidth: 220,
@@ -294,7 +294,7 @@ export default function OurTeam() {
         </Fade>
 
         <Fade bottom>
-          <Wrap justify="center" spacing="6" w="full" pb='10'>
+          <Wrap justify="center" spacing="6" w="full" pb="10">
             {drMarwan.map((member) => (
               // <WrapItem
               //   key={member.id}

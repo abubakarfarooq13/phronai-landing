@@ -156,6 +156,18 @@ export default function Hero() {
                   label="Try Phronesis AI consensus"
                   gradientButton
                 />
+                {/* <Box
+                  as="a"
+                  whiteSpace="nowrap"
+                  href="https://app.openphron.ai"
+                  // maxW="200px"
+                  w="full"
+                  target="_blank"
+                  className="btn-grad"
+                  py="3"
+                >
+                  Try Phronesis AI consensus
+                </Box> */}
               </Box>
             </Fade>
           </VStack>
