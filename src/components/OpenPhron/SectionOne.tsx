@@ -1,13 +1,11 @@
 import { Box, Flex, Text, Container, VStack } from "@chakra-ui/react";
 import Image from "next/image";
 import React, { useState } from "react";
-import ConnectWalletButton from "../Shared/ConnectWalletButton";
+// import ConnectWalletButton from "../Shared/ConnectWalletButton";
 
 const Fade = require("react-reveal/Fade");
 
 const SectionOne = () => {
-  const [isHovered, setIsHovered] = useState(false);
-
   return (
     <Box>
       <Box
@@ -52,16 +50,12 @@ const SectionOne = () => {
                 </Text>
                 <Flex justifyContent={{ base: "center", lg: "start" }}>
                   <Box
-                    as="button"
+                    as="a"
+                    target="_blank"
+                    href="https://openphron.ai"
                     className="btn-grad"
-                    onMouseEnter={() => {
-                      setIsHovered(true);
-                    }}
-                    onMouseLeave={() => {
-                      setIsHovered(false);
-                    }}
                   >
-                    {isHovered ? "Coming Soon" : "Try openPhron"}
+                    Try openPhron
                   </Box>
                 </Flex>
 
