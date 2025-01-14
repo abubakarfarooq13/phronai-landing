@@ -117,18 +117,18 @@ export default function MobileDrawer(props: MobileDrawerProps) {
                   </VStack>
                 </AccordionPanel>
               </AccordionItem>
-              <Box
+              {/* <Box
                 as={Link}
                 href="/openphron"
                 display="block"
                 p="2"
                 fontWeight={500}
                 _hover={{
-                  background:'gray.50'
+                  background: "gray.50",
                 }}
               >
                 openPhron
-              </Box>
+              </Box> */}
               <AccordionItem border="0px">
                 <h2>
                   <AccordionButton
@@ -357,7 +357,18 @@ export default function MobileDrawer(props: MobileDrawerProps) {
               </AccordionItem>
             </Accordion>
             <VStack w="full" mt="30px" spacing="4">
-              <ConnectWalletButton />
+              {/* <ConnectWalletButton /> */}
+              <Box
+                as="a"
+                href="https://app.openphron.ai"
+                // maxW="200px"
+                w="full"
+                target="_blank"
+                className="btn-grad"
+                py="3"
+              >
+                openPhron
+              </Box>
             </VStack>
           </DrawerBody>
         </DrawerContent>
