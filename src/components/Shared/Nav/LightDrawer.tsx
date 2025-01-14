@@ -360,7 +360,7 @@ export default function MobileDrawer(props: MobileDrawerProps) {
               {/* <ConnectWalletButton /> */}
               <Box
                 as="a"
-                href="https://app.openphron.ai"
+                href="https://openphron.ai"
                 // maxW="200px"
                 w="full"
                 target="_blank"
