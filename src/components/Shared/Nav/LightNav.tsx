@@ -486,15 +486,22 @@ export default function Nav() {
               justifyContent="flex-end"
             >
               <Box
-                // maxW="200px"
                 ref={connectButtonRef}
+                as="a"
+                href="https://app.openphron.ai"
+                // maxW="200px"
+                w="full"
+                target="_blank"
+                className="btn-grad"
+                py="3"
               >
-                <ConnectWalletButton
+                {/* <ConnectWalletButton
                   height={"inherit"}
                   fontSize="inherit"
                   maxWidth={"inherit"}
                   gradientButton
-                />
+                /> */}
+                openPhron
               </Box>
 
               <Text
