@@ -64,7 +64,15 @@ export const teamMembers = [
     imageHeight: 240,
     display: { base: "block", xl: "none" },
   },
-
+  {
+    id: "07",
+    name: "Sander Görtjes",
+    role: "CMO - Hello Labs Co-Founder",
+    image: "/assets/light-theme-home/sander.png",
+    linkedinUrl: "https://www.linkedin.com/in/sandergortjes/",
+    imageWidth: 220,
+    imageHeight: 220,
+  },
   {
     id: "02",
     name: "Adel Elmessiry, Ph.D.",
@@ -138,6 +146,18 @@ export const drMarwan = [
 
 export const advisors = [
   {
+    id: "12",
+    name: "Dominic Longman",
+    role: "Advisor - Ex Senior Executive Officer - Binance Abu Dhabi",
+    image: "/assets/light-theme-home/dominic-longman.png",
+    linkedinUrl: "https://www.linkedin.com/in/dom-longman/",
+    imageWidth: 220,
+    imageHeight: 220,
+    maxWidth: "228px",
+    maxWidthM: "135px",
+    // display: { base: "block", xl: "none" },
+  },
+  {
     id: "07",
     name: "Nikita Sachdev",
     role: "Advisor - Founder/CEO Luna Media Corporation",
@@ -145,7 +165,7 @@ export const advisors = [
     linkedinUrl: "https://www.linkedin.com/in/nikitasachdev/",
     imageWidth: 240,
     imageHeight: 240,
-    display: { base: "block", xl: "none" },
+    // display: { base: "block", xl: "none" },
   },
   {
     id: "10",
@@ -157,18 +177,11 @@ export const advisors = [
     imageWidth: 420,
     imageHeight: 420,
     maxWidth: "233px",
+    maxWidthM: "135px",
   },
+
   {
-    id: "07",
-    name: "Sander Görtjes",
-    role: "CMO - Co-Owner HELLO Labs",
-    image: "/assets/light-theme-home/sander.png",
-    linkedinUrl: "https://www.linkedin.com/in/sandergortjes/",
-    imageWidth: 220,
-    imageHeight: 220,
-  },
-  {
-    id: "10",
+    id: "11",
     name: "Dariia Vasylieva, Ph.D",
     role: "Advisor - Founder/CEO FD Capital",
     image: "/assets/light-theme-home/dariia.png",
@@ -438,7 +451,7 @@ export default function OurTeam() {
               <WrapItem
                 key={member.id}
                 maxW={{
-                  base: "140px",
+                  base: member.maxWidthM ? member.maxWidthM : "140px",
                   xl: member.maxWidth ? member.maxWidth : "240px",
                 }}
                 w="full"
@@ -473,7 +486,8 @@ export default function OurTeam() {
                       left: "0px",
                       right: "0px",
                       backgroundImage:
-                        member.name === "Dyma Budorin"
+                        member.name === "Dyma Budorin" ||
+                        member.name === "Dominic Longman"
                           ? "linear-gradient(180deg, rgba(0,0,0,0) 80%, rgba(255,255,255,1) 100%)"
                           : "",
                     }}
@@ -486,7 +500,14 @@ export default function OurTeam() {
                       style={{ width: "100%", filter: "grayscale(1)" }}
                     />
                   </Box>
-                  <Text fontSize="16px" fontWeight={600} pt="4">
+                  <Text
+                    whiteSpace={
+                      member.name === "Dominic Longman" ? "nowrap" : "normal"
+                    }
+                    fontSize="16px"
+                    fontWeight={600}
+                    pt="4"
+                  >
                     {member.name}
                   </Text>
                   <Text fontSize="14px" color="#8a8a8a">
