@@ -48,7 +48,7 @@ export const teamMembers = [
     id: "04",
     name: "Igor Bershadsky",
     role: "Co-Founder",
-    image: "/assets/light-theme-home/igor-bershadsky.png",
+    image: "/assets/light-theme-home/igor-updated.png",
     linkedinUrl: "https://www.linkedin.com/in/igorbershadsky/",
     imageWidth: 240,
     imageHeight: 240,
@@ -265,13 +265,33 @@ export default function OurTeam() {
                             ? "linear-gradient(180deg, rgba(0,0,0,0) 80%, rgba(255,255,255,1) 100%)"
                             : "",
                       }}
+                      // style={
+                      //   member.name === "Igor Bershadsky"
+                      //     ? {
+                      //         width: "238px",
+                      //         heght: "228px",
+                      //         position: "relative",
+                      //       }
+                      //     : undefined
+                      // }
                     >
                       <Image
                         src={member.image}
                         alt={member.name + " image"}
                         width={member.imageWidth}
                         height={member.imageWidth}
-                        style={{ width: "100%", filter: "grayscale(100%)" }}
+                        style={
+                          // member.name === "Igor Bershadsky"
+                          //   ? {
+                          //       position: "absolute",
+                          //       height: "100%",
+                          //       width: "100%",
+                          //       left: "35px",
+                          //       bottom: "0px",
+                          //     }
+                          //   :
+                          { width: "100%", filter: "grayscale(100%)" }
+                        }
                       />
                     </Box>
                     <Text
