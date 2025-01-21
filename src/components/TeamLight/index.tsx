@@ -67,7 +67,7 @@ export const teamMembers = [
   {
     id: "07",
     name: "Sander Görtjes",
-    role: "CMO - Hello Labs Co-Founder",
+    role: "CMO - Hello Labs",
     image: "/assets/light-theme-home/sander.png",
     linkedinUrl: "https://www.linkedin.com/in/sandergortjes/",
     imageWidth: 220,
