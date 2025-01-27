@@ -55,6 +55,15 @@ export const teamMembers = [
     display: { base: "block", xl: "none" },
   },
   {
+    id: "07",
+    name: "Sander Görtjes",
+    role: "Co-Founder",
+    image: "/assets/light-theme-home/sander.png",
+    linkedinUrl: "https://www.linkedin.com/in/sandergortjes/",
+    imageWidth: 220,
+    imageHeight: 220,
+  },
+  {
     id: "05",
     name: "Guillermo Guimaraes",
     role: "Co-Founder",
@@ -63,15 +72,6 @@ export const teamMembers = [
     imageWidth: 240,
     imageHeight: 240,
     display: { base: "block", xl: "none" },
-  },
-  {
-    id: "07",
-    name: "Sander Görtjes",
-    role: "CMO - Hello Labs",
-    image: "/assets/light-theme-home/sander.png",
-    linkedinUrl: "https://www.linkedin.com/in/sandergortjes/",
-    imageWidth: 220,
-    imageHeight: 220,
   },
   {
     id: "02",
