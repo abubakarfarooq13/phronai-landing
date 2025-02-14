@@ -31,6 +31,9 @@ import {
   navItems,
 } from "@/constant/nav";
 import OpenPhronLogo from "../OpenPhronLogo";
+import GradientText from "@/utils/GradientText";
+import { BsArrowRight } from "react-icons/bs";
+import { FiArrowRight } from "react-icons/fi";
 
 const AlertBanner = React.forwardRef((props, ref: any) => {
   const [show, setShow] = useState(true);
@@ -83,8 +86,8 @@ const AlertBanner = React.forwardRef((props, ref: any) => {
           </Box> */}
           <Stack
             direction={{ base: "column", md: "row" }}
-            alignItems={{ base: "center", md: "end" }}
-            spacing="4"
+            alignItems={{ base: "center", md: "center" }}
+            spacing="2"
           >
             <Text
               fontWeight={500}
@@ -92,17 +95,42 @@ const AlertBanner = React.forwardRef((props, ref: any) => {
               fontSize={{ base: "sm", md: "16px" }}
               color="#fff"
             >
-              Our gamified airdrop campaign! Enjoy a distribution of over US$
-              1,000,000 worth of tokens
+              Whitelist for the Node Sale is now open!
             </Text>
-            <Button
+            <GradientText>
+              <Box
+                display="flex"
+                alignItems="center"
+                gap="2px"
+                pr="5px"
+                transition="transform 0.3s ease-in-out"
+                _hover={{
+                  transform: "translateX(5px)",
+                }}
+              >
+                <Text
+                  bg="transparent"
+                  px="2px"
+                  size="xs"
+                  fontWeight={500}
+                  as={Link}
+                  href="https://nodes.phron.ai "
+                  target="_blank"
+                >
+                  Register now
+                </Text>
+                <FiArrowRight color="#40ffaa" />
+              </Box>
+            </GradientText>
+
+            {/* <Button
               as={Link}
               href="https://t.me/phron_bot"
               target="_blank"
               size="xs"
             >
               Play Now
-            </Button>
+            </Button> */}
           </Stack>
           {/* <Box display={{ base: "none", sm: "block" }}>
             <Image
