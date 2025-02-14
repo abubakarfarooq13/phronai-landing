@@ -1105,7 +1105,10 @@ nav {
     overflow: hidden;
     cursor: pointer;
   }
-  
+  /* .animated-gradient-text:hover{
+    text-decoration: underline;
+    color: #40ffaa;
+  } */
   .gradient-overlay {
     position: absolute;
     top: 0;
@@ -1157,10 +1160,10 @@ nav {
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    
+    transition:transform 0.3s ease-in-out;
     animation: gradient linear infinite;
   }
   .text-content:hover{
-    text-decoration: underline;
-    color: #40ffaa;
+    /* color: #40ffaa; */
+     transform: translateX(5px);
   }

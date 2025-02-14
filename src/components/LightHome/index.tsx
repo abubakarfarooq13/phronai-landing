@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Image } from "@chakra-ui/react";
 import Hero from "./Hero";
 import ExploreEcosystem from "./EcosystemSection";
-import Benchmark from "./Benchmark";
+// import Benchmark from "./Benchmark";
 import WhitePapers from "./WhitePapers";
 import TrustedBySection from "./TrustedBySection";
 import OurTeam from "./OurTeam";
@@ -21,7 +21,7 @@ export default function LightHome() {
       <EmbracingBlockchain />
       <RoadTowardsTheFuture />
       <ExploreEcosystem />
-      <Benchmark />
+      {/* <Benchmark /> */}
       <WhitePapers />
       <TrustedBySection />
       <OurTeam />

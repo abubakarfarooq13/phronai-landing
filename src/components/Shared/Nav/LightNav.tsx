@@ -98,16 +98,7 @@ const AlertBanner = React.forwardRef((props, ref: any) => {
               Whitelist for the Node Sale is now open!
             </Text>
             <GradientText>
-              <Box
-                display="flex"
-                alignItems="center"
-                gap="2px"
-                pr="5px"
-                transition="transform 0.3s ease-in-out"
-                _hover={{
-                  transform: "translateX(5px)",
-                }}
-              >
+              <Box display="flex" alignItems="center" gap="2px" pr="5px">
                 <Text
                   bg="transparent"
                   px="2px"
