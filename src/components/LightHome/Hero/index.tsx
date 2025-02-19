@@ -11,6 +11,7 @@ import {
   GridItem,
   Wrap,
   WrapItem,
+  Flex,
 } from "@chakra-ui/react";
 import Image from "next/image";
 import { GoArrowRight } from "react-icons/go";
@@ -98,18 +99,19 @@ export default function Hero() {
           direction={{ base: "column", lg: "row" }}
           justifyContent="space-between"
           alignItems="flex-start"
-          spacing={{ base: "0", lg: "10" }}
+          // spacing={{ base: "0", lg: "10" }}
           w="full"
         >
           <VStack
             zIndex={1}
-            pt={{ md: "20px", lg: "100px" }}
-            w={{ base: "full", lg: "60%" }}
-            align={{ base: "center", lg: "start" }}
-            // pos="relative"
+            pt={{ md: "20px", lg: "150px" }}
+            w={{ base: "full", lg: "full" }}
+            align={{ base: "center", lg: "center" }}
+            pos="relative"
             minH="200px"
             textAlign={{ base: "center", lg: "left" }}
             spacing="4"
+            color="#321c75"
           >
             <Fade left>
               {/* <Text
@@ -123,13 +125,17 @@ export default function Hero() {
                 Proof of Learning
               </Text> */}
               <Text
-                fontSize={{ base: "22px" }}
+                fontSize={{ base: "13px", md: "15px" }}
                 lineHeight="100%"
-                letterSpacing="1px"
-                fontWeight={600}
-                color="brand.purple"
+                letterSpacing={{ base: "10px", lg: "17px" }}
+                fontWeight={400}
+                textTransform="uppercase"
+                // color="brand.purple"
                 // mb="2"
                 // as="h1"
+                textAlign="center"
+                w="full"
+                whiteSpace="nowrap"
               >
                 {/* From Static to Dynamic{" "}
               <Box as="br" display={{ base: "none", md: "block" }} /> with
@@ -138,22 +144,27 @@ export default function Hero() {
               </Text>
               <Text
                 fontSize={{
-                  base: "4xl",
-                  lg: "55px",
+                  base: "50px",
+                  md: "55px",
+                  lg: "60px",
                 }}
-                fontWeight={700}
+                textAlign="center"
+                fontWeight={400}
                 lineHeight="110%"
-                color="brand.darkGray"
+                // color="brand.darkGray"
               >
                 From Static <br /> to Dynamic
               </Text>
-              <Text color="#5d6380">
+              <Text
+                fontWeight={500}
+                fontSize={{ base: "13px", md: "14", lg: "15px" }}
+              >
                 with the first AI-driven Dynamic Consensus
               </Text>
 
-              <Box>
+              <Flex justifyItems="center" w="full">
                 <ConnectWalletButton
-                  label="Try Phronesis AI consensus"
+                  label="Try Sophia AI Consensus"
                   gradientButton
                 />
                 {/* <Box
@@ -168,7 +179,7 @@ export default function Hero() {
                 >
                   Try Phronesis AI consensus
                 </Box> */}
-              </Box>
+              </Flex>
             </Fade>
           </VStack>
 
@@ -191,6 +202,7 @@ export default function Hero() {
               rounded="full"
               fontSize="14px"
               lineHeight="110%"
+              // letterSpacing="wider"
             >
               Proof of Learning
             </Text>
@@ -224,7 +236,52 @@ export default function Hero() {
             </Text>
           </VStack>
         </Stack>
-
+        <Grid
+          gridTemplateColumns={{
+            base: "repeat(1,1fr)",
+            md: "repeat(2, 1fr)",
+            lg: "repeat(3,1fr)",
+          }}
+          w="full"
+          gap="6"
+          marginTop="-30px"
+          zIndex={1}
+          // position={{ base: "relative", md: "absolute" }}
+          // bottom="30px"
+          // maxW="1240px"
+          px={{ base: "0", md: "4" }}
+          pb="20px"
+          // left={{ md: "50%" }}
+          // transform={{ md: "translateX(-50%)" }}
+        >
+          <GridItem boxShadow="lg" rounded="26px">
+            <Image
+              src="/assets/light-theme-home/comparison/graph1.png"
+              alt="comparison"
+              height={500}
+              width={500}
+              quality={100}
+            />
+          </GridItem>
+          <GridItem boxShadow="lg" rounded="26px">
+            <Image
+              src="/assets/light-theme-home/comparison/graph2.png"
+              alt="comparison"
+              height={500}
+              width={500}
+              quality={100}
+            />
+          </GridItem>
+          <GridItem boxShadow="lg" rounded="26px">
+            <Image
+              src="/assets/light-theme-home/comparison/graph3.png"
+              alt="comparison"
+              height={500}
+              width={500}
+              quality={100}
+            />
+          </GridItem>
+        </Grid>
         {/* <Grid
           gridTemplateColumns={{
             base: "repeat(1,1fr)",

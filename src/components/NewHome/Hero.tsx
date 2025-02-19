@@ -104,13 +104,13 @@ export default function Hero() {
                 marginLeft: "-14px",
               }}
             /> */}
-            <video width="1200" height="1054" autoPlay playsInline muted loop>
+            {/* <video width="1200" height="1054" autoPlay playsInline muted loop>
               <source
                 src="/assets/new-home/neural-video.mp4"
                 type="video/mp4"
               />
               Your browser does not support the video tag.
-            </video>
+            </video> */}
           </Box>
         </Stack>
       </Container>
