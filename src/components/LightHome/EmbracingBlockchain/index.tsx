@@ -6,7 +6,7 @@ const Fade = require("react-reveal/Fade");
 
 export default function EmbracingBlock() {
   return (
-    <Box my="20">
+    <Box my="20" overflow="hidden">
       <Container maxW="1240px">
         <Text
           fontSize={{

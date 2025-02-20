@@ -6,7 +6,7 @@ const Fade = require("react-reveal/Fade");
 
 export default function RoadTowardsTheFuture() {
   return (
-    <Box my="20" px="4">
+    <Box my="20" px="4" overflow="hidden">
       <Container maxW="1240px">
         <Text
           fontSize={{
@@ -24,7 +24,8 @@ export default function RoadTowardsTheFuture() {
         </Text>
 
         <Text textAlign="center" color="#5d6380" mb="10">
-          Carved from the concept, we applied the concept of having a <br />
+          Carved from the concept, we applied the concept of having a{" "}
+          <Box as="br" display={{ base: "none", md: "block" }} />
           long-lasting technology embedded with utility and accessibility.
         </Text>
 
@@ -89,7 +90,7 @@ export default function RoadTowardsTheFuture() {
               >
                 Phronesis Consensus
               </Text>
-              <Text mb={{base:'5',md:"2", lg:'5'}}>
+              <Text mb={{ base: "5", md: "2", lg: "5" }}>
                 Combining our statistical algorithm for the appliance of
                 different types of nodes in a network alongside the engine of
                 the Convolutional Neural Network supplied, scalability stops
@@ -161,7 +162,7 @@ export default function RoadTowardsTheFuture() {
                 Phron AI Layer 1: <br />
                 Proof-of-Concept
               </Text>
-              <Text mb={{base:'5',md:"2", lg:'5'}}>
+              <Text mb={{ base: "5", md: "2", lg: "5" }}>
                 A seamless transition between Blockchain Technology and AI,
                 introduced through our operational Layer 1. Breaking a paradigm
                 of scalability towards continues growth and efficiency.
@@ -255,7 +256,7 @@ export default function RoadTowardsTheFuture() {
                 AI-driven Blockchain <br />
                 Infrastructure
               </Text>
-              <Text mb={{base:'5',md:"2", lg:'5'}}>
+              <Text mb={{ base: "5", md: "2", lg: "5" }}>
                 The next approach towards a truly decentralized technology. From
                 making your new Layer 1 in minutes to including AI
                 implementations in your chain, embrace the future with

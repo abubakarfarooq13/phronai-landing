@@ -87,7 +87,7 @@ export default function Hero() {
       bgRepeat="no-repeat"
       bgPosition="center"
       bgSize="cover"
-      overflowX="hidden"
+      overflow="hidden"
       position="relative"
     >
       <Container
@@ -246,41 +246,42 @@ export default function Hero() {
           gap="6"
           marginTop="-30px"
           zIndex={1}
-          // position={{ base: "relative", md: "absolute" }}
-          // bottom="30px"
-          // maxW="1240px"
           px={{ base: "0", md: "4" }}
           pb="20px"
-          // left={{ md: "50%" }}
-          // transform={{ md: "translateX(-50%)" }}
         >
-          <GridItem boxShadow="lg" rounded="26px">
-            <Image
-              src="/assets/light-theme-home/comparison/graph1.png"
-              alt="comparison"
-              height={500}
-              width={500}
-              quality={100}
-            />
-          </GridItem>
-          <GridItem boxShadow="lg" rounded="26px">
-            <Image
-              src="/assets/light-theme-home/comparison/graph2.png"
-              alt="comparison"
-              height={500}
-              width={500}
-              quality={100}
-            />
-          </GridItem>
-          <GridItem boxShadow="lg" rounded="26px">
-            <Image
-              src="/assets/light-theme-home/comparison/graph3.png"
-              alt="comparison"
-              height={500}
-              width={500}
-              quality={100}
-            />
-          </GridItem>
+          <Fade left>
+            <GridItem boxShadow="lg" rounded="26px">
+              <Image
+                src="/assets/light-theme-home/comparison/graph1.png"
+                alt="comparison"
+                height={500}
+                width={500}
+                quality={100}
+              />
+            </GridItem>
+          </Fade>
+          <Fade bottom>
+            <GridItem boxShadow="lg" rounded="26px">
+              <Image
+                src="/assets/light-theme-home/comparison/graph2.png"
+                alt="comparison"
+                height={500}
+                width={500}
+                quality={100}
+              />
+            </GridItem>
+          </Fade>
+          <Fade right>
+            <GridItem boxShadow="lg" rounded="26px">
+              <Image
+                src="/assets/light-theme-home/comparison/graph3.png"
+                alt="comparison"
+                height={500}
+                width={500}
+                quality={100}
+              />
+            </GridItem>
+          </Fade>
         </Grid>
         {/* <Grid
           gridTemplateColumns={{
