@@ -11,12 +11,14 @@ import LightNav from "../Shared/Nav/LightNav";
 import PhronAISuite from "./PhronAISuite";
 import EmbracingBlockchain from "./EmbracingBlockchain";
 import RoadTowardsTheFuture from "./RoadTowardsTheFuture";
+import TestnetStats from "./TestnetStats";
 
 export default function LightHome() {
   return (
     <>
       <LightNav />
       <Hero />
+      <TestnetStats />
       <PhronAISuite />
       <EmbracingBlockchain />
       <RoadTowardsTheFuture />
