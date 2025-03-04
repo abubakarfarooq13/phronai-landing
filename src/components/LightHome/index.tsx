@@ -11,14 +11,11 @@ import LightNav from "../Shared/Nav/LightNav";
 import PhronAISuite from "./PhronAISuite";
 import EmbracingBlockchain from "./EmbracingBlockchain";
 import RoadTowardsTheFuture from "./RoadTowardsTheFuture";
-<<<<<<< HEAD
 import Simplified from "../Simplified";
 import GalleryCarousel from "../GalleryCaresoul";
 import HackenSection from "../Hacken";
 import TrustedBySection2 from "../TrustedBySection";
-=======
 import TestnetStats from "./TestnetStats";
->>>>>>> main
 
 export default function LightHome() {
   return (
