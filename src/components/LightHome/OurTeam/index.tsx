@@ -14,19 +14,17 @@ export default function OurTeam() {
     >
       <Container maxW="1240px">
         <Fade bottom>
-          <Text as="h2" fontSize="3xl" textAlign="center" pb="50px">
+          <Text as="h2" textAlign="center" fontWeight="bold" fontSize="3xl">
             Our Team
           </Text>
 
           <Text
-            fontSize={{ base: "lg", "2340px": "30px" }}
-            letterSpacing="2px"
+            fontSize={{ base: "base", "2340px": "base" }}
             as="h3"
             mb="6"
             textAlign="center"
-            fontWeight={700}
           >
-            Team Members
+            Meet the Minds Behind PhronAI - Innovators, Builders, & AI Experts
           </Text>
         </Fade>
 
@@ -37,62 +35,56 @@ export default function OurTeam() {
                 key={member.id}
                 maxW={{
                   base: "140px",
-                  xl: "240px",
+                  xl: "220px",
                 }}
                 w="full"
                 _hover={{
-                  transform: "translateY(-10px)",
+                  transform: "translateY(-8px)",
                 }}
                 transition="all .3s"
               >
-                <Box
-                  as={Link}
-                  href={member.linkedinUrl}
-                  display="block"
-                  target="_blank"
-                  w="full"
-                  textAlign="center"
-                >
+                <>
                   <Box
-                    bgColor="#fff"
-                    px={
-                      member.name === "Egor Sukhorukov" ||
-                      member.name === "Dyma Budorin"
-                        ? { base: "1px", md: "2px" }
-                        : ""
-                    }
-                    rounded="20px"
-                    overflow="hidden"
-                    position="relative"
-                    _after={{
-                      content: `''`,
-                      position: "absolute",
-                      top: "0px",
-                      bottom: "0px",
-                      left: "0px",
-                      right: "0px",
-                      backgroundImage:
-                        member.name === "Egor Sukhorukov" ||
-                        member.name === "Dyma Budorin"
-                          ? "linear-gradient(180deg, rgba(0,0,0,0) 80%, rgba(255,255,255,1) 100%)"
-                          : "",
-                    }}
+                    as={Link}
+                    href={member.linkedinUrl}
+                    display="block"
+                    target="_blank"
+                    w="full"
                   >
-                    <Image
-                      src={member.image}
-                      alt={member.name + " image"}
-                      width={member.imageWidth}
-                      height={member.imageWidth}
-                      style={{ width: "100%", filter: "grayscale(1)" }}
-                    />
+                    <Box
+                      position="relative"
+                      rounded="20px"
+                      overflow="hidden"
+                      _after={{
+                        content: `''`,
+                        position: "absolute",
+                        top: "0px",
+                        bottom: "0px",
+                        left: "0px",
+                        right: "0px",
+                      }}
+                    >
+                      <Image
+                        src={member.image}
+                        alt={member.name + " image"}
+                        width={member.imageWidth}
+                        height={member.imageWidth}
+                        style={{ width: "100%" }}
+                      />
+                    </Box>
+                    <Text
+                      fontSize="16px"
+                      textAlign="center"
+                      fontWeight={600}
+                      pt="4"
+                    >
+                      {member.name}
+                    </Text>
+                    <Text fontSize="14px" textAlign="center" color="#8a8a8a">
+                      {member.role}
+                    </Text>
                   </Box>
-                  <Text fontSize="16px" fontWeight={600} pt="4">
-                    {member.name}
-                  </Text>
-                  <Text fontSize="14px" color="#8a8a8a">
-                    {member.role}
-                  </Text>
-                </Box>
+                </>
               </WrapItem>
             ))}
           </Wrap>
@@ -113,50 +105,13 @@ export default function OurTeam() {
         </Fade>
 
         <Fade bottom>
-          <Wrap justify="center" spacing="6" w="full" pb='10'>
+          <Wrap justify="center" spacing="6" w="full" pb="10">
             {drMarwan.map((member) => (
-              // <WrapItem
-              //   key={member.id}
-              //   maxW={{
-              //     base: "140px",
-              //     xl: member.maxWidth ? member.maxWidth : "240px",
-              //   }}
-              //   w="full"
-              //   textAlign="center"
-              //   _hover={{
-              //     transform: "translateY(-8px)",
-              //   }}
-              //   transition="all .3s"
-              // >
-              //   <>
-              //     <Box
-              //       as={Link}
-              //       href={member.linkedinUrl}
-              //       display="block"
-              //       target="_blank"
-              //       w="full"
-              //     >
-              //       <Image
-              //         src={member.image}
-              //         alt={member.name + " image"}
-              //         width={member.imageWidth}
-              //         height={member.imageWidth}
-              //         style={{ width: "100%" }}
-              //       />
-              //       <Text fontSize="16px" fontWeight={600} pt="4">
-              //         {member.name}
-              //       </Text>
-              //       <Text fontSize="14px" color="#8a8a8a">
-              //         {member.role}
-              //       </Text>
-              //     </Box>
-              //   </>
-              // </WrapItem>
               <WrapItem
                 key={member.id}
                 maxW={{
                   base: "140px",
-                  xl: "240px",
+                  xl: "220px",
                 }}
                 w="full"
                 _hover={{
@@ -173,12 +128,12 @@ export default function OurTeam() {
                   textAlign="center"
                 >
                   <Box
-                    bgColor="#fff"
-                    px={
-                      member.name === "Dyma Budorin"
-                        ? { base: "1px", md: "2px" }
-                        : ""
-                    }
+                    // bgColor="#fff"
+                    // px={
+                    //   member.name === "Dyma Budorin"
+                    //     ? { base: "1px", md: "2px" }
+                    //     : ""
+                    // }
                     rounded="20px"
                     overflow="hidden"
                     position="relative"
@@ -189,10 +144,6 @@ export default function OurTeam() {
                       bottom: "0px",
                       left: "0px",
                       right: "0px",
-                      backgroundImage:
-                        member.name === "Dyma Budorin"
-                          ? "linear-gradient(180deg, rgba(0,0,0,0) 80%, rgba(255,255,255,1) 100%)"
-                          : "",
                     }}
                   >
                     <Image
@@ -200,7 +151,7 @@ export default function OurTeam() {
                       alt={member.name + " image"}
                       width={member.imageWidth}
                       height={member.imageWidth}
-                      style={{ width: "100%", filter: "grayscale(1)" }}
+                      style={{ width: "100%" }}
                     />
                   </Box>
                   <Text fontSize="16px" fontWeight={600} pt="4">
@@ -214,14 +165,13 @@ export default function OurTeam() {
             ))}
           </Wrap>
         </Fade>
-
         <Fade bottom>
           <Wrap justify="center" spacing="6" w="full">
             {advisors.map((member) => (
               <WrapItem
                 key={member.id}
                 maxW={{
-                  base: "140px",
+                  base: member.maxWidthM ? member.maxWidthM : "140px",
                   xl: member.maxWidth ? member.maxWidth : "240px",
                 }}
                 w="full"
@@ -239,12 +189,12 @@ export default function OurTeam() {
                   textAlign="center"
                 >
                   <Box
-                    bgColor="#fff"
-                    px={
-                      member.name === "Dyma Budorin"
-                        ? { base: "1px", md: "2px" }
-                        : ""
-                    }
+                    // bgColor="#fff"
+                    // px={
+                    //   member.name === "Dyma Budorin"
+                    //     ? { base: "1px", md: "2px" }
+                    //     : ""
+                    // }
                     rounded="20px"
                     overflow="hidden"
                     position="relative"
@@ -255,10 +205,6 @@ export default function OurTeam() {
                       bottom: "0px",
                       left: "0px",
                       right: "0px",
-                      backgroundImage:
-                        member.name === "Dyma Budorin"
-                          ? "linear-gradient(180deg, rgba(0,0,0,0) 80%, rgba(255,255,255,1) 100%)"
-                          : "",
                     }}
                   >
                     <Image
@@ -266,10 +212,17 @@ export default function OurTeam() {
                       alt={member.name + " image"}
                       width={member.imageWidth}
                       height={member.imageWidth}
-                      style={{ width: "100%", filter: "grayscale(1)" }}
+                      style={{ width: "100%" }}
                     />
                   </Box>
-                  <Text fontSize="16px" fontWeight={600} pt="4">
+                  <Text
+                    whiteSpace={
+                      member.name === "Dominic Longman" ? "nowrap" : "normal"
+                    }
+                    fontSize="16px"
+                    fontWeight={600}
+                    pt="4"
+                  >
                     {member.name}
                   </Text>
                   <Text fontSize="14px" color="#8a8a8a">

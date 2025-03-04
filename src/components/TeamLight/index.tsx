@@ -10,45 +10,12 @@ import {
 import Image from "next/image";
 import React from "react";
 
-// const topBar = [
-//   {
-//     id: "04",
-//     name: "Igor Bershadsky",
-//     role: "Co-Founder",
-//     image: "/assets/light-theme-home/igor-bershadsky.png",
-//     linkedinUrl: "https://www.linkedin.com/in/igorbershadsky/",
-//     imageWidth: 240,
-//     imageHeight: 240,
-//     display: { base: "none", xl: "block" },
-//   },
-//   {
-//     id: "05",
-//     name: "Guillermo Guimaraes",
-//     role: "Co-Founder",
-//     image: "/assets/light-theme-home/guillermo.png",
-//     linkedinUrl: "https://www.linkedin.com/in/guillermoguimaraes/",
-//     imageWidth: 240,
-//     imageHeight: 240,
-//     display: { base: "none", xl: "block" },
-//   },
-//   {
-//     id: "07",
-//     name: "Nikita Sachdev",
-//     role: "Advisor",
-//     image: "/assets/light-theme-home/nikita-sachdev.png",
-//     linkedinUrl: "https://www.linkedin.com/in/nikitasachdev/",
-//     imageWidth: 240,
-//     imageHeight: 240,
-//     display: { base: "none", xl: "block" },
-//   },
-// ];
-
 export const teamMembers = [
   {
     id: "04",
     name: "Igor Bershadsky",
     role: "Co-Founder",
-    image: "/assets/light-theme-home/igor-updated.png",
+    image: "/assets/team-new-images/igore.png",
     linkedinUrl: "https://www.linkedin.com/in/igorbershadsky/",
     imageWidth: 240,
     imageHeight: 240,
@@ -56,47 +23,58 @@ export const teamMembers = [
   },
   {
     id: "07",
-    name: "Sander Görtjes",
+    name: "Guillermo Guimaraes",
     role: "Co-Founder",
-    image: "/assets/light-theme-home/sander.png",
-    linkedinUrl: "https://www.linkedin.com/in/sandergortjes/",
+    image: "/assets/team-new-images/guillermo.png",
+
+    linkedinUrl: "https://www.linkedin.com/in/guillermoguimaraes/",
     imageWidth: 220,
     imageHeight: 220,
   },
   {
     id: "05",
-    name: "Guillermo Guimaraes",
-    role: "Co-Founder",
-    image: "/assets/light-theme-home/guillermo.png",
-    linkedinUrl: "https://www.linkedin.com/in/guillermoguimaraes/",
+    name: "Myrtle Anne",
+    role: "COO",
+    image: "/assets/team-new-images/myrtle.png",
+    linkedinUrl: "https://www.linkedin.com/in/myrtleology/",
     imageWidth: 240,
     imageHeight: 240,
     display: { base: "block", xl: "none" },
   },
   {
     id: "02",
-    name: "Adel Elmessiry, Ph.D.",
-    role: "Leading AI Advisor",
-    image: "/assets/light-theme-home/adel.png",
-    linkedinUrl: "https://www.linkedin.com/in/adelelmessiry/",
+    name: "Sander Görtjes",
+    linkedinUrl: "https://www.linkedin.com/in/sandergortjes/",
+    role: "Co-Founder",
+    image: "/assets/team-new-images/sanders.png",
+
     imageWidth: 220,
     imageHeight: 220,
   },
 
   {
     id: "10",
+    name: "Adel Elmessiry, Ph.D.",
+    role: "Leading AI Advisor",
+    image: "/assets/team-new-images/adel.png",
+    linkedinUrl: "https://www.linkedin.com/in/adelelmessiry/",
+    imageWidth: 220,
+    imageHeight: 220,
+  },
+  {
+    id: "10",
     name: "Vitalii Yatskiv",
     role: "CTO",
-    image: "/assets/light-theme-home/vitalii.png",
+    image: "/assets/team-new-images/vitali.png",
     linkedinUrl: "https://www.linkedin.com/in/vitalii-yatskiv/",
     imageWidth: 220,
     imageHeight: 220,
   },
   {
     id: "03",
-    name: "Dr Stylianos Kampakis, CStat",
+    name: "Dr Stylianos Kampakis, CSTAT",
     role: "Tokenomics Advisor",
-    image: "/assets/light-theme-home/stylianos.png",
+    image: "/assets/team-new-images/stylianos.png",
     linkedinUrl:
       "https://www.linkedin.com/in/dr-stylianos-kampakis-ai-data-science-tokenomics/",
     imageWidth: 220,
@@ -107,7 +85,7 @@ export const teamMembers = [
     id: "06",
     name: "Noah J.",
     role: "Chief Security Officer",
-    image: "/assets/light-theme-home/noah.png",
+    image: "/assets/team-new-images/noah.png",
     linkedinUrl: "https://www.linkedin.com/in/njelich/",
     imageWidth: 160,
     imageHeight: 190,
@@ -116,7 +94,7 @@ export const teamMembers = [
     id: "07",
     name: "Rehan Shams",
     role: "Head of Development",
-    image: "/assets/light-theme-home/rehan.png",
+    image: "/assets/team-new-images/rehan.png",
     linkedinUrl: "https://www.linkedin.com/in/rehanshamas/",
     imageWidth: 220,
     imageHeight: 220,
@@ -125,7 +103,7 @@ export const teamMembers = [
     id: "07",
     name: "Egor Sukhorukov",
     role: "Social Media / Community Manager",
-    image: "/assets/light-theme-home/egor.png",
+    image: "/assets/team-new-images/egor.png",
     linkedinUrl: "#",
     imageWidth: 480,
     imageHeight: 400,
@@ -137,7 +115,7 @@ export const drMarwan = [
     id: "10",
     name: "Dr. Marwan Alzarouni",
     role: "Advisor - CEO of AI of Dubai Department of Economy and Tourism CEO of Dubai Blockchain Center",
-    image: "/assets/team/marwan.png",
+    image: "/assets/team-new-images/marwan.png",
     linkedinUrl: "https://www.linkedin.com/in/drmarwan/",
     imageWidth: 1020,
     imageHeight: 1020,
@@ -149,7 +127,7 @@ export const advisors = [
     id: "12",
     name: "Dominic Longman",
     role: "Advisor - Ex Senior Executive Officer - Binance Abu Dhabi",
-    image: "/assets/light-theme-home/dominic-longman.png",
+    image: "/assets/team-new-images/dominic.png",
     linkedinUrl: "https://www.linkedin.com/in/dom-longman/",
     imageWidth: 220,
     imageHeight: 220,
@@ -161,7 +139,7 @@ export const advisors = [
     id: "07",
     name: "Nikita Sachdev",
     role: "Advisor - Founder/CEO Luna Media Corporation",
-    image: "/assets/light-theme-home/nikita-sachdev.png",
+    image: "/assets/team-new-images/nikita.png",
     linkedinUrl: "https://www.linkedin.com/in/nikitasachdev/",
     imageWidth: 240,
     imageHeight: 240,
@@ -171,7 +149,7 @@ export const advisors = [
     id: "10",
     name: "Dyma Budorin",
     role: "CEO of Hacken - Advisor for Blockchain Security and Ethical AI Standards",
-    image: "/assets/light-theme-home/dyma-budorin.png",
+    image: "/assets/team-new-images/dyma.png",
     linkedinUrl:
       "https://www.linkedin.com/in/dyma-budorin-acca-ccssa-56a98035/",
     imageWidth: 420,
@@ -184,7 +162,7 @@ export const advisors = [
     id: "11",
     name: "Dariia Vasylieva, Ph.D",
     role: "Advisor - Founder/CEO FD Capital",
-    image: "/assets/light-theme-home/dariia.png",
+    image: "/assets/team-new-images/dariia.png",
     linkedinUrl: "https://www.linkedin.com/in/dvasylieva/",
     imageWidth: 220,
     imageHeight: 220,
@@ -201,19 +179,17 @@ export default function OurTeam() {
     >
       <Container maxW="1240px" mb="50px">
         <Fade bottom>
-          <Text as="h2" textAlign="center" fontSize="3xl" pb="50px">
-            Team
+          <Text as="h2" textAlign="center" fontWeight="bold" fontSize="3xl">
+            Our Team
           </Text>
 
           <Text
-            fontSize={{ base: "lg", "2340px": "30px" }}
-            letterSpacing="2px"
+            fontSize={{ base: "base", "2340px": "base" }}
             as="h3"
             mb="6"
             textAlign="center"
-            fontWeight={700}
           >
-            Team Members
+            Meet the Minds Behind PhronAI - Innovators, Builders, & AI Experts
           </Text>
         </Fade>
 
@@ -222,10 +198,9 @@ export default function OurTeam() {
             {teamMembers.map((member) => (
               <WrapItem
                 key={member.id}
-                // display={member.display}
                 maxW={{
                   base: "140px",
-                  xl: "240px",
+                  xl: "220px",
                 }}
                 w="full"
                 _hover={{
@@ -242,14 +217,7 @@ export default function OurTeam() {
                     w="full"
                   >
                     <Box
-                      bgColor="#FEFEFE"
                       position="relative"
-                      px={
-                        member.name === "Egor Sukhorukov" ||
-                        member.name === "Dyma Budorin"
-                          ? { base: "1px", md: "2px" }
-                          : ""
-                      }
                       rounded="20px"
                       overflow="hidden"
                       _after={{
@@ -259,39 +227,14 @@ export default function OurTeam() {
                         bottom: "0px",
                         left: "0px",
                         right: "0px",
-                        backgroundImage:
-                          member.name === "Egor Sukhorukov" ||
-                          member.name === "Dyma Budorin"
-                            ? "linear-gradient(180deg, rgba(0,0,0,0) 80%, rgba(255,255,255,1) 100%)"
-                            : "",
                       }}
-                      // style={
-                      //   member.name === "Igor Bershadsky"
-                      //     ? {
-                      //         width: "238px",
-                      //         heght: "228px",
-                      //         position: "relative",
-                      //       }
-                      //     : undefined
-                      // }
                     >
                       <Image
                         src={member.image}
                         alt={member.name + " image"}
                         width={member.imageWidth}
                         height={member.imageWidth}
-                        style={
-                          // member.name === "Igor Bershadsky"
-                          //   ? {
-                          //       position: "absolute",
-                          //       height: "100%",
-                          //       width: "100%",
-                          //       left: "35px",
-                          //       bottom: "0px",
-                          //     }
-                          //   :
-                          { width: "100%", filter: "grayscale(100%)" }
-                        }
+                        style={{ width: "100%" }}
                       />
                     </Box>
                     <Text
@@ -329,48 +272,11 @@ export default function OurTeam() {
         <Fade bottom>
           <Wrap justify="center" spacing="6" w="full" pb="10">
             {drMarwan.map((member) => (
-              // <WrapItem
-              //   key={member.id}
-              //   maxW={{
-              //     base: "140px",
-              //     xl: member.maxWidth ? member.maxWidth : "240px",
-              //   }}
-              //   w="full"
-              //   textAlign="center"
-              //   _hover={{
-              //     transform: "translateY(-8px)",
-              //   }}
-              //   transition="all .3s"
-              // >
-              //   <>
-              //     <Box
-              //       as={Link}
-              //       href={member.linkedinUrl}
-              //       display="block"
-              //       target="_blank"
-              //       w="full"
-              //     >
-              //       <Image
-              //         src={member.image}
-              //         alt={member.name + " image"}
-              //         width={member.imageWidth}
-              //         height={member.imageWidth}
-              //         style={{ width: "100%" }}
-              //       />
-              //       <Text fontSize="16px" fontWeight={600} pt="4">
-              //         {member.name}
-              //       </Text>
-              //       <Text fontSize="14px" color="#8a8a8a">
-              //         {member.role}
-              //       </Text>
-              //     </Box>
-              //   </>
-              // </WrapItem>
               <WrapItem
                 key={member.id}
                 maxW={{
                   base: "140px",
-                  xl: "240px",
+                  xl: "220px",
                 }}
                 w="full"
                 _hover={{
@@ -387,12 +293,12 @@ export default function OurTeam() {
                   textAlign="center"
                 >
                   <Box
-                    bgColor="#fff"
-                    px={
-                      member.name === "Dyma Budorin"
-                        ? { base: "1px", md: "2px" }
-                        : ""
-                    }
+                    // bgColor="#fff"
+                    // px={
+                    //   member.name === "Dyma Budorin"
+                    //     ? { base: "1px", md: "2px" }
+                    //     : ""
+                    // }
                     rounded="20px"
                     overflow="hidden"
                     position="relative"
@@ -403,10 +309,6 @@ export default function OurTeam() {
                       bottom: "0px",
                       left: "0px",
                       right: "0px",
-                      backgroundImage:
-                        member.name === "Dyma Budorin"
-                          ? "linear-gradient(180deg, rgba(0,0,0,0) 80%, rgba(255,255,255,1) 100%)"
-                          : "",
                     }}
                   >
                     <Image
@@ -414,7 +316,7 @@ export default function OurTeam() {
                       alt={member.name + " image"}
                       width={member.imageWidth}
                       height={member.imageWidth}
-                      style={{ width: "100%", filter: "grayscale(1)" }}
+                      style={{ width: "100%" }}
                     />
                   </Box>
                   <Text fontSize="16px" fontWeight={600} pt="4">
@@ -431,43 +333,6 @@ export default function OurTeam() {
         <Fade bottom>
           <Wrap justify="center" spacing="6" w="full">
             {advisors.map((member) => (
-              // <WrapItem
-              //   key={member.id}
-              //   maxW={{
-              //     base: "140px",
-              //     xl: member.maxWidth ? member.maxWidth : "240px",
-              //   }}
-              //   w="full"
-              //   textAlign="center"
-              //   _hover={{
-              //     transform: "translateY(-8px)",
-              //   }}
-              //   transition="all .3s"
-              // >
-              //   <>
-              //     <Box
-              //       as={Link}
-              //       href={member.linkedinUrl}
-              //       display="block"
-              //       target="_blank"
-              //       w="full"
-              //     >
-              //       <Image
-              //         src={member.image}
-              //         alt={member.name + " image"}
-              //         width={member.imageWidth}
-              //         height={member.imageWidth}
-              //         style={{ width: "100%" }}
-              //       />
-              //       <Text fontSize="16px" fontWeight={600} pt="4">
-              //         {member.name}
-              //       </Text>
-              //       <Text fontSize="14px" color="#8a8a8a">
-              //         {member.role}
-              //       </Text>
-              //     </Box>
-              //   </>
-              // </WrapItem>
               <WrapItem
                 key={member.id}
                 maxW={{
@@ -489,12 +354,12 @@ export default function OurTeam() {
                   textAlign="center"
                 >
                   <Box
-                    bgColor="#fff"
-                    px={
-                      member.name === "Dyma Budorin"
-                        ? { base: "1px", md: "2px" }
-                        : ""
-                    }
+                    // bgColor="#fff"
+                    // px={
+                    //   member.name === "Dyma Budorin"
+                    //     ? { base: "1px", md: "2px" }
+                    //     : ""
+                    // }
                     rounded="20px"
                     overflow="hidden"
                     position="relative"
@@ -505,11 +370,6 @@ export default function OurTeam() {
                       bottom: "0px",
                       left: "0px",
                       right: "0px",
-                      backgroundImage:
-                        member.name === "Dyma Budorin" ||
-                        member.name === "Dominic Longman"
-                          ? "linear-gradient(180deg, rgba(0,0,0,0) 80%, rgba(255,255,255,1) 100%)"
-                          : "",
                     }}
                   >
                     <Image
@@ -517,7 +377,7 @@ export default function OurTeam() {
                       alt={member.name + " image"}
                       width={member.imageWidth}
                       height={member.imageWidth}
-                      style={{ width: "100%", filter: "grayscale(1)" }}
+                      style={{ width: "100%" }}
                     />
                   </Box>
                   <Text
@@ -538,14 +398,6 @@ export default function OurTeam() {
             ))}
           </Wrap>
         </Fade>
-
-        {/* <Fade bottom>
-          <VStack mt="10">
-            <Text as={Link} color='#fff' href="/team" className="btn-grad">
-              Meet all members
-            </Text>
-          </VStack>
-        </Fade> */}
       </Container>
     </Box>
   );
