@@ -11,6 +11,10 @@ import LightNav from "../Shared/Nav/LightNav";
 import PhronAISuite from "./PhronAISuite";
 import EmbracingBlockchain from "./EmbracingBlockchain";
 import RoadTowardsTheFuture from "./RoadTowardsTheFuture";
+import Simplified from "../Simplified";
+import GalleryCarousel from "../GalleryCaresoul";
+import HackenSection from "../Hacken";
+import TrustedBySection2 from "../TrustedBySection";
 
 export default function LightHome() {
   return (
@@ -18,12 +22,16 @@ export default function LightHome() {
       <LightNav />
       <Hero />
       <PhronAISuite />
-      <EmbracingBlockchain />
-      <RoadTowardsTheFuture />
-      <ExploreEcosystem />
+      <Simplified />
+      <GalleryCarousel />
+      {/* <EmbracingBlockchain />
+      <RoadTowardsTheFuture /> */}
+      {/* <ExploreEcosystem /> */}
+      <HackenSection />
+      <TrustedBySection2 />
       {/* <Benchmark /> */}
-      <WhitePapers />
-      <TrustedBySection />
+      {/* <WhitePapers />
+      <TrustedBySection /> */}
       <OurTeam />
       <FooterLighter />
     </>
