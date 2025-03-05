@@ -2,7 +2,7 @@ import Head from "next/head";
 import { Box } from "@chakra-ui/react";
 import Script from "next/script";
 import NewHome from "@/components/NewHome";
-import { interFont, plusJakartaSans } from "@/components/fonts";
+import { urbanistFont } from "@/components/fonts";
 import LightHome from "@/components/LightHome";
 
 export default function Home() {
@@ -40,7 +40,7 @@ export default function Home() {
         color="#000"
         as="main"
         minH="100vh"
-        style={plusJakartaSans.style}
+        style={urbanistFont.style}
       >
         <LightHome />
       </Box>

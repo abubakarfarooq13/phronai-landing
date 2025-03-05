@@ -6,86 +6,72 @@ import {
   Grid,
   GridItem,
   Text,
+  Wrap,
+  WrapItem,
 } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { FiArrowUpRight } from "react-icons/fi";
 import { LuArrowRight } from "react-icons/lu";
+import PartnerCards from "./Cards";
 const Partners = [
   {
     id: 1,
     image: "/assets/newPartners/coinmarket.png",
     width: 120,
-    height: 120,
+    height: 40,
   },
   {
     id: 2,
     image: "/assets/newPartners/luna.png",
-    width: 90,
-    height: 90,
+    width: 70,
+    height: 30,
   },
   {
     id: 3,
     image: "/assets/newPartners/hacken.png",
-    width: 100,
-    height: 100,
+    width: 90,
+    height: 40,
   },
   {
     id: 4,
     image: "/assets/newPartners/solidproof.png",
     width: 100,
-    height: 100,
+    height: 40,
   },
   {
     id: 5,
     image: "/assets/newPartners/ibc.png",
     width: 100,
-    height: 100,
+    height: 40,
   },
   {
     id: 6,
     image: "/assets/newPartners/metabrand.png",
     width: 100,
-    height: 100,
+    height: 40,
   },
   {
     id: 7,
     image: "/assets/newPartners/bitmart.png",
-    width: 100,
-    height: 100,
+    width: 90,
+    height: 40,
   },
 ];
-const index = () => {
+
+const Hero = () => {
   return (
     <Box>
       <Container
         maxW="1240px"
+        overflow="hidden"
         pt={{ base: "50px", md: "160px" }}
         position="relative"
         pb="50px"
       >
         {" "}
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          style={{
-            // display: "flex",
-            // justifyContent: "center",
-
-            position: "absolute",
-            // top: "50%",
-            transform: "translateY(-12%)",
-            // left: "50%",
-            width: "100%",
-            height: "500px",
-            zIndex: 1,
-            objectFit: "contain",
-            // transform: "translate(-50%, -50%)",
-          }}
-        >
+        <video autoPlay loop muted className="hero" playsInline>
           <source src="/assets/holographic.mp4" type="video/mp4" />
         </video>
         <Flex
@@ -93,29 +79,42 @@ const index = () => {
           position="relative"
           zIndex="2"
           w="full"
-          mt="80px"
+          mt={{ base: "0px", md: "80px" }}
           textAlign="center"
           color="#321b7a"
         >
-          <Text as="h1" lineHeight="50px" fontSize="50px" fontWeight="500">
+          <Text
+            as="h1"
+            lineHeight="50px"
+            fontSize={{ base: "30px", md: "50px" }}
+            fontWeight="500"
+          >
             AI-Powered for Builders.
             <Box as="br" /> One Prompt for Everyone.
           </Text>
-          <Text mt="10px" fontSize="15px">
+          <Text mt="10px" fontSize={{ base: "13px", md: "15px" }}>
             Train AI models and earn from the network. Launch L1s, deploy smart
             contract,
-            <Box as="br" />
+            <Box as="br" display={{ base: "none", md: "block" }} />
             leverage AI Agents to manage your contract, and create AI-powered
             Oracles.
-            <Box as="br" /> All with just a promt.
+            <Box as="br" display={{ base: "none", md: "block" }} /> All with
+            just a promt.
           </Text>
-          <Flex gap="20px" mt="20px" justifyContent="center">
+          <Flex
+            gap="20px"
+            flexDir={{ base: "column", md: "row" }}
+            mt="20px"
+            justifyContent="center"
+            alignItems="center"
+          >
             <Button
               gap="60px"
               bg="#321b7a"
               borderRadius="20px"
               color="#ffffff"
               fontWeight={500}
+              px="5"
               border="2px solid #321b7a"
               _hover={{
                 bg: "transparent",
@@ -131,6 +130,8 @@ const index = () => {
               borderRadius="20px"
               fontWeight={500}
               color="#321b7a"
+              px="5"
+              minW="213px"
               border="2px solid #321b7a"
               _hover={{
                 bg: "#321b7a",
@@ -143,14 +144,29 @@ const index = () => {
             </Button>
           </Flex>
         </Flex>
-        <Box w="full" mt="100px" position="relative" zIndex="2">
-          <Text as="p" color="#321b7a" fontSize="13px" fontWeight={500}>
+        <Box
+          w="full"
+          mt={{ base: "50px", md: "100px" }}
+          position="relative"
+          zIndex="2"
+        >
+          <Text
+            textAlign={{ base: "center", md: "start" }}
+            as="p"
+            color="#321b7a"
+            fontSize="15px"
+            fontWeight={500}
+          >
             Trusted Partners
           </Text>
-          <Grid w="full" py="20px" templateColumns="repeat(7, 1fr)">
+          <Wrap
+            w="full"
+            justify={{ base: "center", lg: "space-between" }}
+            py="20px"
+            spacing="20px"
+          >
             {Partners.map((partner) => (
-              <GridItem alignItems="center" w="full" h="full" key={partner.id}>
-                {" "}
+              <WrapItem key={partner.id}>
                 <Image
                   objectFit="contain"
                   objectPosition="center"
@@ -158,108 +174,15 @@ const index = () => {
                   alt="partner"
                   width={partner.width}
                   height={partner.height}
-                />{" "}
-              </GridItem>
+                />
+              </WrapItem>
             ))}
-          </Grid>
+          </Wrap>
         </Box>
-        <Box w="full" position="relative" zIndex="2">
-          <Grid w="full" gap="20px" templateColumns="repeat(3, 1fr)">
-            <GridItem
-              bgImage="linear-gradient(90deg, #ffffff 0%, #eff0fc 100%) "
-              maxW="350px"
-              borderRadius="25px"
-              px="10px"
-              _hover={{ boxShadow: "0px 3px 6px 4px #e3e1fe" }}
-            >
-              <Flex justifyContent="space-between" alignItems="center" p="20px">
-                <Flex
-                  flexDir="column"
-                  justifyContent="space-between"
-                  color="#321b7a"
-                  fontWeight={500}
-                  h="full"
-                >
-                  <Box>
-                    <Text fontSize="25px">OpenPhron</Text>
-                  </Box>
-                  <Flex alignItems="center" as={Link} href="" fontSize="12px">
-                    Launch <FiArrowUpRight />
-                  </Flex>
-                </Flex>
-                <Box h="full">
-                  <Image
-                    src="/assets/newPartners/atom.png"
-                    width={100}
-                    height={100}
-                    alt=""
-                  />
-                </Box>
-              </Flex>
-            </GridItem>
-            <GridItem
-              bgImage="linear-gradient(90deg, #ffffff 0%, #eff0fc 100%) "
-              maxW="350px"
-              px="10px"
-              borderRadius="25px"
-              _hover={{ boxShadow: "0px 3px 6px 4px #e3e1fe" }}
-            >
-              <Flex justifyContent="space-between" alignItems="center" p="20px">
-                <Flex
-                  flexDir="column"
-                  justifyContent="space-between"
-                  color="#321b7a"
-                  fontWeight={500}
-                >
-                  <Text lineHeight="25px" fontSize="25px">
-                    AI Layer 0
-                    <Box as="br" />
-                    Testnet
-                  </Text>
-                  <Flex alignItems="center" as={Link} href="" fontSize="12px">
-                    Launch <FiArrowUpRight />
-                  </Flex>
-                </Flex>
-                <Image
-                  src="/assets/newPartners/box1.png"
-                  width={100}
-                  height={100}
-                  alt=""
-                />
-              </Flex>
-            </GridItem>
-            <GridItem
-              bgImage="linear-gradient(90deg, #ffffff 0%, #eff0fc 100%) "
-              maxW="350px"
-              px="10px"
-              borderRadius="25px"
-              _hover={{ boxShadow: "0px 3px 6px 4px #e3e1fe" }}
-            >
-              <Flex justifyContent="space-between" alignItems="center" p="20px">
-                <Flex
-                  flexDir="column"
-                  justifyContent="space-between"
-                  color="#321b7a"
-                  fontWeight={500}
-                >
-                  <Text fontSize="25px">Nodes</Text>
-                  <Flex alignItems="center" as={Link} href="" fontSize="12px">
-                    Launch <FiArrowUpRight />
-                  </Flex>
-                </Flex>
-                <Image
-                  src="/assets/newPartners/layerbox1.png"
-                  width={100}
-                  height={100}
-                  alt=""
-                />
-              </Flex>
-            </GridItem>
-          </Grid>
-        </Box>
+        <PartnerCards />
       </Container>
     </Box>
   );
 };
 
-export default index;
+export default Hero;

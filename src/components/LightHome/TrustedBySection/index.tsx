@@ -158,7 +158,7 @@ export default function TrustedBySection() {
           </Text>
         </Fade>
 
-        <Wrap spacing="10" justify="center">
+        <Wrap w="full" spacing="10" justify="center">
           {logos.map((logo, i) => (
             <Fade bottom key={logo.id} delay={i * 100}>
               <WrapItem

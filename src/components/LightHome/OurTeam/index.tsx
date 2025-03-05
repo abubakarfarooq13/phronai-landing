@@ -14,7 +14,13 @@ export default function OurTeam() {
     >
       <Container maxW="1240px">
         <Fade bottom>
-          <Text as="h2" textAlign="center" fontWeight="bold" fontSize="3xl">
+          <Text
+            as="h2"
+            color="#321b7a"
+            textAlign="center"
+            fontWeight="bold"
+            fontSize="3xl"
+          >
             Our Team
           </Text>
 
@@ -23,6 +29,7 @@ export default function OurTeam() {
             as="h3"
             mb="6"
             textAlign="center"
+            color="#321b7a"
           >
             Meet the Minds Behind PhronAI - Innovators, Builders, & AI Experts
           </Text>

@@ -1,4 +1,4 @@
-import { Inter, Plus_Jakarta_Sans } from "next/font/google";
+import { Inter, Plus_Jakarta_Sans, Urbanist } from "next/font/google";
 
 export const interFont = Inter({
   subsets: ["latin"],
@@ -7,6 +7,11 @@ export const interFont = Inter({
 });
 
 export const plusJakartaSans = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  display: "swap",
+});
+
+export const urbanistFont = Urbanist({
   subsets: ["latin"],
   display: "swap",
 });
