@@ -16,6 +16,7 @@ import GalleryCarousel from "../GalleryCaresoul";
 import HackenSection from "../Hacken";
 import TrustedBySection2 from "../TrustedBySection";
 import TestnetStats from "./TestnetStats";
+import Companies from "./Companies";
 
 export default function LightHome() {
   return (
@@ -25,6 +26,7 @@ export default function LightHome() {
       <TestnetStats />
       <PhronAISuite />
       <Simplified />
+      <Companies />
       <GalleryCarousel />
       {/* <EmbracingBlockchain />
       <RoadTowardsTheFuture /> */}

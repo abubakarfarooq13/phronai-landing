@@ -1,5 +1,13 @@
 import React from "react";
-import { Box, Grid, GridItem, Stack, Text, VStack } from "@chakra-ui/react";
+import {
+  Box,
+  Grid,
+  GridItem,
+  Heading,
+  Stack,
+  Text,
+  VStack,
+} from "@chakra-ui/react";
 import Image from "next/image";
 import AnimatedLines from "./AnimatedLines";
 import AnimatedZigzag from "./AnimatedZigzag";
@@ -11,19 +19,19 @@ export default function PhronAISuite() {
     <Box mt="20" px="4">
       {/* <AnimatedZigzag /> */}
 
-      <Text
+      <Heading
         fontSize={{
           base: "2xl",
           lg: "4xl",
         }}
-        fontWeight={700}
+        // fontWeight={700}
         textAlign="center"
-        color="brand.darkGray"
+        color="purple.900"
         mb="10"
-        as='h2'
+        as="h2"
       >
         PhronAI Blockchain Suite
-      </Text>
+      </Heading>
 
       <Fade bottom>
         <VStack

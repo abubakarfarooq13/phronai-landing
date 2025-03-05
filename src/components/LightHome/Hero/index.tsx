@@ -65,31 +65,13 @@ const Hero = () => {
     <Box>
       <Container
         maxW="1240px"
+        overflow="hidden"
         pt={{ base: "50px", md: "160px" }}
         position="relative"
         pb="50px"
       >
         {" "}
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          style={{
-            // display: "flex",
-            // justifyContent: "center",
-
-            position: "absolute",
-            // top: "50%",
-            transform: "translateY(-12%)",
-            // left: "50%",
-            width: "100%",
-            height: "500px",
-            zIndex: 1,
-            objectFit: "contain",
-            // transform: "translate(-50%, -50%)",
-          }}
-        >
+        <video autoPlay loop muted className="hero" playsInline>
           <source src="/assets/holographic.mp4" type="video/mp4" />
         </video>
         <Flex
@@ -97,23 +79,35 @@ const Hero = () => {
           position="relative"
           zIndex="2"
           w="full"
-          mt="80px"
+          mt={{ base: "0px", md: "80px" }}
           textAlign="center"
           color="#321b7a"
         >
-          <Text as="h1" lineHeight="50px" fontSize="50px" fontWeight="500">
+          <Text
+            as="h1"
+            lineHeight="50px"
+            fontSize={{ base: "30px", md: "50px" }}
+            fontWeight="500"
+          >
             AI-Powered for Builders.
             <Box as="br" /> One Prompt for Everyone.
           </Text>
-          <Text mt="10px" fontSize="15px">
+          <Text mt="10px" fontSize={{ base: "13px", md: "15px" }}>
             Train AI models and earn from the network. Launch L1s, deploy smart
             contract,
-            <Box as="br" />
+            <Box as="br" display={{ base: "none", md: "block" }} />
             leverage AI Agents to manage your contract, and create AI-powered
             Oracles.
-            <Box as="br" /> All with just a promt.
+            <Box as="br" display={{ base: "none", md: "block" }} /> All with
+            just a promt.
           </Text>
-          <Flex gap="20px" mt="20px" justifyContent="center">
+          <Flex
+            gap="20px"
+            flexDir={{ base: "column", md: "row" }}
+            mt="20px"
+            justifyContent="center"
+            alignItems="center"
+          >
             <Button
               gap="60px"
               bg="#321b7a"
@@ -137,6 +131,7 @@ const Hero = () => {
               fontWeight={500}
               color="#321b7a"
               px="5"
+              minW="213px"
               border="2px solid #321b7a"
               _hover={{
                 bg: "#321b7a",
@@ -149,8 +144,19 @@ const Hero = () => {
             </Button>
           </Flex>
         </Flex>
-        <Box w="full" mt="100px" position="relative" zIndex="2">
-          <Text as="p" color="#321b7a" fontSize="15px" fontWeight={500}>
+        <Box
+          w="full"
+          mt={{ base: "50px", md: "100px" }}
+          position="relative"
+          zIndex="2"
+        >
+          <Text
+            textAlign={{ base: "center", md: "start" }}
+            as="p"
+            color="#321b7a"
+            fontSize="15px"
+            fontWeight={500}
+          >
             Trusted Partners
           </Text>
           <Wrap
