@@ -151,13 +151,13 @@ const Hero = () => {
           zIndex="2"
         >
           <Text
-            textAlign={{ base: "center", md: "start" }}
+            textAlign={{ base: "center", lg: "left" }}
             as="p"
             color="#321b7a"
             fontSize="15px"
             fontWeight={500}
           >
-            Trusted Partners
+            s Trusted Partners
           </Text>
           <Wrap
             w="full"
