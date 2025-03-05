@@ -180,24 +180,24 @@ export default function ContractsTable() {
       maxW="960px"
       mx="auto"
       px={{ base: 4, xl: 0 }}
-      mb="20"
       position="relative"
     >
-      <Box position="relative" width="100%">
-        <Image
-          src="/assets/simplified/total-contract-bg.png"
+      <Box
+        bgImage="/assets/simplified/total-contract-bg.png"
+        bgSize="cover"
+        width="100%"
+        bgPosition="right"
+        p="6"
+        rounded="35px"
+      >
+        {/* <Image
+          src=""
           alt="total-contract-bg"
           width={600}
           height={300}
-        />
+        /> */}
 
-        <HStack
-          justifyContent="space-between"
-          w="63%"
-          position="absolute"
-          top="24px"
-          left={10}
-        >
+        <HStack justifyContent="space-between" left={10}>
           <Text
             color="#321c75"
             lineHeight="100%"
@@ -209,7 +209,7 @@ export default function ContractsTable() {
           </Text>
 
           <Box>
-            <Text fontSize="base" color="#321c75" mb={2}>
+            <Text fontSize="base" color="#fff" mb={2}>
               Total Contract
             </Text>
             <Box
@@ -218,6 +218,7 @@ export default function ContractsTable() {
               rounded="full"
               textAlign="center"
               fontSize="3xl"
+              color="#fff"
             >
               <Text>{totalContracts}</Text>
             </Box>

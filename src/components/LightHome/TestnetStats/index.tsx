@@ -162,7 +162,7 @@ export default function Testnet() {
   const maxTps = Math.max(...tpsComparisonData.map((item) => item.tps));
 
   return (
-    <Container maxW="6xl" py={10}>
+    <Container maxW="1240px" py={10}>
       <Box color="#321b7a" textAlign="center" mb={10}>
         <Text fontSize="30px" fontWeight={600} as="h1" mb={2}>
           The First AI-Powered Layer 0
@@ -179,7 +179,11 @@ export default function Testnet() {
 
       <Grid
         templateRows={{ base: "1fr", md: "repeat(2, 1fr)" }}
-        templateColumns={{ base: "1fr", md: "repeat(4, 1fr)" }}
+        templateColumns={{
+          base: "1fr",
+          md: "repeat(3, 1fr)",
+          lg: "repeat(4, 1fr)",
+        }}
         gap={4}
         borderRadius="40px"
         shadow="0px 0px 25px 1px #cad2fd"
@@ -187,12 +191,13 @@ export default function Testnet() {
         bg="rgba(202,210,253,0.1)"
       >
         {/* TPS Comparison Card */}
-        <GridItem rowSpan={1} colSpan={2}>
+        <GridItem rowSpan={1} colSpan={{ base: 1, lg: 2 }}>
           <Box
             py="20px"
             px="30px"
             bg="white"
-            shadow="0px 0px 25px 1px #cad2fd"
+            // shadow="0px 0px 25px 1px #cad2fd"
+            boxShadow="md"
             borderRadius="40px"
           >
             <Flex justifyContent="space-between" alignItems="center">
@@ -246,13 +251,14 @@ export default function Testnet() {
           </Box>
         </GridItem>
         {/* Testnet Stats Card */}
-        <GridItem rowSpan={2} colSpan={2}>
+        <GridItem rowSpan={2} colSpan={{ base: 1, md: 2, lg: 2 }}>
           <Box
             color="#321b7a"
             py="20px"
             px="30px"
             bg="white"
-            shadow="0px 0px 25px 1px #cad2fd"
+            // shadow="0px 0px 25px 1px #cad2fd"
+            boxShadow="md"
             borderRadius="40px"
           >
             <Box>
@@ -335,7 +341,8 @@ export default function Testnet() {
             py="20px"
             px="30px"
             bg={cardBg}
-            shadow="0px 0px 25px 1px #cad2fd"
+            // shadow="0px 0px 25px 1px #cad2fd"
+            boxShadow="md"
             borderRadius="40px"
           >
             <Box>
@@ -394,7 +401,8 @@ export default function Testnet() {
             py="20px"
             px="30px"
             bg={cardBg}
-            shadow="0px 0px 25px 1px #cad2fd"
+            // shadow="0px 0px 25px 1px #cad2fd"
+            boxShadow="md"
             borderRadius="40px"
           >
             <Box>

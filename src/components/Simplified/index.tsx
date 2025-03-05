@@ -25,7 +25,7 @@ const data = [
   {
     id: 1,
     imageUrl: "/assets/simplified/check.png",
-    title: "Create Smart Contract on Leading Blockchain",
+    title: "Create Smart Contract on Leading Blockchains",
     description: "No Code needed with openPhron",
     width: 25,
     height: 25,
@@ -99,7 +99,11 @@ export default function SimplifiedSection() {
           </Text>
         </Box>
 
-        <Stack direction={{ base: "row" }} justifyContent="center" gap="50px">
+        <Stack
+          direction={{ base: "column", md: "row" }}
+          justifyContent="center"
+          gap={{ base: "50px", md: "20px", lg: "50px" }}
+        >
           <Box position="relative" borderRadius="lg" overflow="hidden">
             <ContractsTable />
           </Box>
@@ -109,7 +113,7 @@ export default function SimplifiedSection() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            pt="40px"
+            pt={{ base: "0px", md: "40px" }}
           >
             <Stack spacing={6}>
               {data.map((item) => (
