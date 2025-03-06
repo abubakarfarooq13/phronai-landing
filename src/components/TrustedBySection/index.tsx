@@ -173,7 +173,8 @@ export default function TrustedBySection2() {
         right: 0,
         bottom: 0,
       }}
-      mt="20"
+      mt="16"
+      mb="10"
     >
       <Box
         position="relative"

@@ -106,7 +106,7 @@ export default function OurTeam() {
             mb="6"
             textAlign="center"
             mt="16"
-            fontWeight={500}
+            fontWeight={600}
             color="#321b7a"
           >
             Advisors
