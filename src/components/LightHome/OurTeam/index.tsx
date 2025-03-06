@@ -19,13 +19,13 @@ export default function OurTeam() {
             color="#321b7a"
             textAlign="center"
             fontWeight="bold"
-            fontSize="3xl"
+            fontSize={{ base: "30px", md: "40px" }}
           >
             Our Team
           </Text>
 
           <Text
-            fontSize={{ base: "base", "2340px": "base" }}
+            fontSize={{ base: "18px", md: "24px" }}
             as="h3"
             mb="6"
             textAlign="center"
@@ -84,10 +84,11 @@ export default function OurTeam() {
                       textAlign="center"
                       fontWeight={600}
                       pt="4"
+                      color="#321b7a"
                     >
                       {member.name}
                     </Text>
-                    <Text fontSize="14px" textAlign="center" color="#8a8a8a">
+                    <Text fontSize="14px" textAlign="center" color="#321b7a">
                       {member.role}
                     </Text>
                   </Box>
@@ -99,13 +100,14 @@ export default function OurTeam() {
 
         <Fade bottom>
           <Text
-            fontSize={{ base: "lg", "2340px": "30px" }}
+            fontSize={{ base: "18px", md: "24px" }}
             letterSpacing="2px"
             as="h3"
             mb="6"
             textAlign="center"
             mt="16"
-            fontWeight={700}
+            fontWeight={500}
+            color="#321b7a"
           >
             Advisors
           </Text>
@@ -222,10 +224,10 @@ export default function OurTeam() {
                       style={{ width: "100%" }}
                     />
                   </Box>
-                  <Text fontSize="16px" fontWeight={600} pt="4">
+                  <Text fontSize="16px" fontWeight={600} pt="4" color="#321b7a">
                     {member.name}
                   </Text>
-                  <Text fontSize="14px" color="#8a8a8a">
+                  <Text fontSize="14px" color="#321b7a">
                     {member.role}
                   </Text>
                 </Box>
@@ -286,10 +288,11 @@ export default function OurTeam() {
                     fontSize="16px"
                     fontWeight={600}
                     pt="4"
+                    color="#321b7a"
                   >
                     {member.name}
                   </Text>
-                  <Text fontSize="14px" color="#8a8a8a">
+                  <Text fontSize="14px" color="#321b7a">
                     {member.role}
                   </Text>
                 </Box>

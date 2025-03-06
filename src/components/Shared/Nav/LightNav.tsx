@@ -108,7 +108,7 @@ const AlertBanner = React.forwardRef((props, ref: any) => {
                   href="https://nodes.phron.ai "
                   target="_blank"
                 >
-                  Register now
+                  Register now
                 </Text>
                 <FiArrowRight color="#40ffaa" />
               </Box>

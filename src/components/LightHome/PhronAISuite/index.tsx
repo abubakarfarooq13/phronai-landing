@@ -21,12 +21,12 @@ export default function PhronAISuite() {
 
       <Text
         lineHeight="50px"
-        fontSize={{ base: "30px", md: "50px" }}
+        fontSize={{ base: "30px", md: "40px" }}
         fontWeight="500"
         // fontWeight={700}
         textAlign="center"
         color="purple.900"
-        mb="5"
+        mb="3"
         as="h2"
       >
         The AI Contribution Layer
@@ -34,7 +34,7 @@ export default function PhronAISuite() {
         Build, Deploy & Earn Through openPhron
       </Text>
       <Text
-        fontSize={{ base: "13px", md: "15px" }}
+        fontSize={{ base: "18px", md: "24px" }}
         textAlign="center"
         color="purple.900"
         mb="5"

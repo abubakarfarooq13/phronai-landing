@@ -84,14 +84,14 @@ export default function GalleryCarousel() {
       <Box textAlign="center" mb={8}>
         <Text
           as="h1"
-          fontSize={{ base: "4xl", md: "5xl" }}
-          fontWeight={700}
+          fontSize={{ base: "30px", md: "40px" }}
+          fontWeight={500}
           color="#321b7a"
           mb={2}
         >
           Gallery
         </Text>
-        <Text fontSize="lg" color="purple.800">
+        <Text fontSize={{ base: "18px", md: "24px" }} color="#321b7a">
           Phron AI in Action - Events, Innovation & Community
         </Text>
       </Box>

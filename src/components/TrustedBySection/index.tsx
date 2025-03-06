@@ -213,7 +213,7 @@ export default function TrustedBySection2() {
           </Box>
         ))}
         <Text
-          fontSize={{ base: "3xl", sm: "4xl", md: "4xl" }}
+          fontSize={{ base: "30px", md: "40px" }}
           fontWeight={600}
           position="absolute"
           top="50%"

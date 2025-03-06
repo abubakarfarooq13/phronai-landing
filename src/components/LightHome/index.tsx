@@ -28,7 +28,8 @@ export default function LightHome() {
         bgPos="center"
         bgRepeat="no-repeat"
         bgSize="100% 100%"
-        py="100px"
+        pb="50px"
+        pt="50px"
       >
         <TestnetStats />
         <PhronAISuite />
