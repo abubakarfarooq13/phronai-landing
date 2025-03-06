@@ -146,7 +146,7 @@ export default function GalleryCarousel() {
                   transition="all 0.3s"
                   opacity="0"
                   // @ts-ignore
-                  _hover={{ opacity: 1 }}
+                  // _hover={{ opacity: 1 }}
                   display="flex"
                   alignItems="center"
                   justifyContent="center"
