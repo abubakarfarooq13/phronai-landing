@@ -1,24 +1,26 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState } from "react";
 import {
   Box,
-  Flex,
-  Heading,
   Text,
   IconButton,
-  HStack,
-  AspectRatio,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalBody,
+  ModalCloseButton,
+  useDisclosure,
+  Flex,
+  Heading,
 } from "@chakra-ui/react";
-import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons";
+import { ChevronLeftIcon, ChevronRightIcon, ViewIcon } from "@chakra-ui/icons";
 import Image from "next/image";
 
 export default function GalleryCarousel() {
-  const [currentPage, setCurrentPage] = useState(0);
-  const [isHovering, setIsHovering] = useState(false);
-  const carouselRef = useRef<HTMLDivElement>(null);
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const [selectedImage, setSelectedImage] = useState<number>(0);
 
-  // Original images array
   const imageFiles = [
     {
       src: "/assets/gallery/1.png",
@@ -43,7 +45,7 @@ export default function GalleryCarousel() {
     {
       src: "/assets/gallery/5.png",
       alt: "Gallery image 5",
-      aspectRatio: "landscape",
+      aspectRatio: "portrait",
     },
     {
       src: "/assets/gallery/6.png",
@@ -55,200 +57,206 @@ export default function GalleryCarousel() {
       alt: "Gallery image 7",
       aspectRatio: "portrait",
     },
+    {
+      src: "/assets/gallery/8.png",
+      alt: "Gallery image 8",
+      aspectRatio: "landscape",
+    },
   ];
 
-  // Reorganize images into slides
-  const slides = [
-    // Slide 1: Image 1 (portrait)
-    [{ type: "single", image: imageFiles[0] }],
-
-    // Slide 2: Images 2-3 (landscape) in column
-    [
-      {
-        type: "column",
-        images: [imageFiles[1], imageFiles[2]],
-      },
-    ],
-
-    // Slide 3: Image 4 (portrait)
-    [{ type: "single", image: imageFiles[3] }],
-
-    // Slide 4: Images 5-6 (landscape) in column
-    [
-      {
-        type: "column",
-        images: [imageFiles[4], imageFiles[5]],
-      },
-    ],
-
-    // Slide 5: Image 7 (portrait)
-    [{ type: "single", image: imageFiles[6] }],
-  ];
-
-  const totalSlides = slides.length;
-
-  const nextSlide = () => {
-    setCurrentPage((prev) => (prev === totalSlides - 1 ? 0 : prev + 1));
+  const openLightbox = (index: number) => {
+    setSelectedImage(index);
+    onOpen();
   };
 
-  const prevSlide = () => {
-    setCurrentPage((prev) => (prev === 0 ? totalSlides - 1 : prev - 1));
+  const navigateImage = (direction: "next" | "prev") => {
+    if (direction === "next") {
+      setSelectedImage((selectedImage + 1) % imageFiles.length);
+    } else {
+      setSelectedImage(
+        (selectedImage - 1 + imageFiles.length) % imageFiles.length
+      );
+    }
   };
-
-  const goToSlide = (index: number) => {
-    setCurrentPage(index);
-  };
-
-  // Auto-scroll effect
-  //   useEffect(() => {
-  //     if (isHovering) return;
-
-  //     const interval = setInterval(() => {
-  //       nextSlide();
-  //     }, 5000);
-
-  //     return () => clearInterval(interval);
-  //   }, [isHovering]);
 
   return (
     <Box py={12} px={4} maxW="1200px" mx="auto">
       <Box textAlign="center" mb={8}>
-        <Heading as="h1" fontSize="5xl" color="purple.900" mb={2}>
+        <Text
+          as="h1"
+          fontSize={{ base: "4xl", md: "5xl" }}
+          fontWeight={700}
+          color="#321b7a"
+          mb={2}
+        >
           Gallery
-        </Heading>
+        </Text>
         <Text fontSize="lg" color="purple.800">
           Phron AI in Action - Events, Innovation & Community
         </Text>
       </Box>
 
+      {/* CSS Column-based Masonry Layout */}
       <Box
-        position="relative"
-        onMouseEnter={() => setIsHovering(true)}
-        onMouseLeave={() => setIsHovering(false)}
+        sx={{
+          columnCount: { base: 1, sm: 2, md: 3, lg: 4 },
+          columnGap: "16px",
+          width: "100%",
+        }}
       >
-        <Flex
-          ref={carouselRef}
-          overflowX="hidden"
-          width="100%"
-          position="relative"
-          px={2}
-        >
-          <Flex
-            width={`${totalSlides * 100}%`}
-            transition="transform 0.5s ease"
-            style={{
-              transform: `translateX(-${currentPage * (100 / totalSlides)}%)`,
-            }}
-          >
-            {slides.map((slide, slideIndex) => (
-              <Box key={slideIndex} width={`${100 / totalSlides}%`} p={2}>
-                <Flex height="100%" gap={4}>
-                  {slide.map((item, itemIndex) => (
-                    <Box
-                      key={itemIndex}
-                      width="100%"
-                      height="100%"
-                      borderRadius="xl"
-                      overflow="hidden"
-                      //   boxShadow="md"
-                    >
-                      {item.type === "single" ? (
-                        // Single image (portrait)
-                        <AspectRatio ratio={3 / 4} width="100%" height="100%">
-                          <Image
-                            // @ts-ignore
-                            src={item.image.src || "/placeholder.svg"}
-                            // @ts-ignore
-                            alt={item.image.alt}
-                            fill
-                            style={{ objectFit: "cover" }}
-                          />
-                        </AspectRatio>
-                      ) : (
-                        // Column of 2 landscape images
-                        <Flex direction="column" height="100%" gap={4}>
-                          {/* @ts-ignore */}
-                          {item.images.map((image, imgIndex) => (
-                            <Box
-                              key={imgIndex}
-                              height="calc(50% - 8px)"
-                              borderRadius="xl"
-                              overflow="hidden"
-                            >
-                              <AspectRatio
-                                ratio={16 / 9}
-                                width="100%"
-                                height="100%"
-                              >
-                                <Image
-                                  src={image.src || "/placeholder.svg"}
-                                  alt={image.alt}
-                                  fill
-                                  style={{ objectFit: "cover" }}
-                                />
-                              </AspectRatio>
-                            </Box>
-                          ))}
-                        </Flex>
-                      )}
-                    </Box>
-                  ))}
-                </Flex>
-              </Box>
-            ))}
-          </Flex>
-        </Flex>
-
-        {/* Navigation Arrows */}
-        <IconButton
-          aria-label="Previous slide"
-          icon={<ChevronLeftIcon />}
-          position="absolute"
-          left={2}
-          top="50%"
-          transform="translateY(-50%)"
-          zIndex={2}
-          onClick={prevSlide}
-          display={{ base: "none", md: "flex" }}
-          colorScheme="purple"
-          variant="solid"
-          rounded="full"
-          opacity={isHovering ? 0.8 : 0}
-          transition="opacity 0.3s"
-        />
-        <IconButton
-          aria-label="Next slide"
-          icon={<ChevronRightIcon />}
-          position="absolute"
-          right={2}
-          top="50%"
-          transform="translateY(-50%)"
-          zIndex={2}
-          onClick={nextSlide}
-          display={{ base: "none", md: "flex" }}
-          colorScheme="purple"
-          variant="solid"
-          rounded="full"
-          opacity={isHovering ? 0.8 : 0}
-          transition="opacity 0.3s"
-        />
-      </Box>
-
-      {/* Dots Navigation */}
-      <HStack justify="center" mt={6} spacing={1.5}>
-        {Array.from({ length: 1 }).map((_, index) => (
+        {imageFiles.map((image, index) => (
           <Box
             key={index}
-            h="2px"
-            w={currentPage === index ? "24px" : "8px"}
-            bg={currentPage === index ? "purple.700" : "purple.200"}
-            borderRadius="full"
-            cursor="pointer"
-            transition="all 0.3s"
-            onClick={() => goToSlide(index)}
-          />
+            mb="16px"
+            display="inline-block"
+            w="100%"
+            position="relative"
+            overflow="hidden"
+            borderRadius="xl"
+            transition="transform 0.3s"
+            _hover={{ transform: "scale(1.02)" }}
+          >
+            <Box
+              position="relative"
+              width="100%"
+              paddingBottom={
+                image.aspectRatio === "portrait" ? "133.33%" : "56.25%"
+              }
+            >
+              <Box
+                position="absolute"
+                top="0"
+                left="0"
+                width="100%"
+                height="100%"
+                onClick={() => openLightbox(index)}
+              >
+                <Image
+                  src={image.src || "/placeholder.svg"}
+                  alt={image.alt}
+                  fill
+                  style={{ objectFit: "cover", borderRadius: "14px" }}
+                  sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                />
+                <Box
+                  position="absolute"
+                  inset="0"
+                  bg="blackAlpha.0"
+                  _hover={{ bg: "blackAlpha.300" }}
+                  transition="all 0.3s"
+                  opacity="0"
+                  // @ts-ignore
+                  _hover={{ opacity: 1 }}
+                  display="flex"
+                  alignItems="center"
+                  justifyContent="center"
+                  borderRadius="14px"
+                >
+                  <IconButton
+                    aria-label="View image"
+                    icon={<ViewIcon />}
+                    onClick={() => openLightbox(index)}
+                    colorScheme="whiteAlpha"
+                    variant="solid"
+                    rounded="full"
+                    size="md"
+                  />
+                </Box>
+              </Box>
+            </Box>
+          </Box>
         ))}
-      </HStack>
+      </Box>
+
+      {/* Lightbox Modal */}
+      <Modal isOpen={isOpen} onClose={onClose} size="full" isCentered>
+        <ModalOverlay bg="blackAlpha.900" />
+        <ModalContent
+          bg="transparent"
+          boxShadow="none"
+          maxW="100vw"
+          maxH="100vh"
+        >
+          <ModalCloseButton
+            color="white"
+            bg="blackAlpha.200"
+            _hover={{ bg: "blackAlpha.400" }}
+            rounded="full"
+            size="lg"
+            position="absolute"
+            top={4}
+            right={4}
+            zIndex={2}
+          />
+          <ModalBody
+            p={0}
+            display="flex"
+            alignItems="center"
+            justifyContent="center"
+          >
+            <Flex
+              position="relative"
+              w="100%"
+              h="100vh"
+              alignItems="center"
+              justifyContent="center"
+            >
+              {/* Main Image */}
+              <Box position="relative" w="50%" h="80vh" maxW="1600px">
+                {selectedImage !== null && (
+                  <Image
+                    src={imageFiles[selectedImage].src || "/placeholder.svg"}
+                    alt={imageFiles[selectedImage].alt}
+                    fill
+                    style={{ objectFit: "contain" }}
+                    sizes="100vw"
+                  />
+                )}
+              </Box>
+
+              {/* Navigation Controls */}
+              <Flex
+                position="absolute"
+                w="100%"
+                justifyContent="space-between"
+                px={4}
+              >
+                <IconButton
+                  aria-label="Previous image"
+                  icon={<ChevronLeftIcon boxSize={8} />}
+                  onClick={() => navigateImage("prev")}
+                  variant="ghost"
+                  colorScheme="whiteAlpha"
+                  rounded="full"
+                  size="lg"
+                />
+                <IconButton
+                  aria-label="Next image"
+                  icon={<ChevronRightIcon boxSize={8} />}
+                  onClick={() => navigateImage("next")}
+                  variant="ghost"
+                  colorScheme="whiteAlpha"
+                  rounded="full"
+                  size="lg"
+                />
+              </Flex>
+
+              {/* Image Counter */}
+              <Box
+                position="absolute"
+                bottom={4}
+                left={0}
+                right={0}
+                textAlign="center"
+              >
+                <Text color="white" fontWeight="medium">
+                  {`${selectedImage + 1} / ${imageFiles.length}`}
+                </Text>
+              </Box>
+            </Flex>
+          </ModalBody>
+        </ModalContent>
+      </Modal>
     </Box>
   );
 }

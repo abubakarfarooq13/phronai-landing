@@ -276,7 +276,14 @@ export default function Companies() {
             </motion.div>
           ))}
         </Flex> */}
-        <Box position="relative" width="full" overflow="hidden" height="96px">
+        <Box
+          maxW="1200px"
+          mx="auto"
+          position="relative"
+          width="full"
+          overflow="hidden"
+          height="96px"
+        >
           <MotionFlex
             position="absolute"
             whiteSpace="nowrap"
@@ -316,7 +323,14 @@ export default function Companies() {
         </Box>
 
         {/* Second row - moving left to right (opposite direction) */}
-        <Box position="relative" width="full" overflow="hidden" height="96px">
+        <Box
+          maxW="1200px"
+          mx="auto"
+          position="relative"
+          width="full"
+          overflow="hidden"
+          height="96px"
+        >
           <MotionFlex
             position="absolute"
             whiteSpace="nowrap"

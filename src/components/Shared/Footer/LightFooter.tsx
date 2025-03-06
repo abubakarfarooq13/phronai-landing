@@ -150,7 +150,7 @@ export default function FooterLighter() {
           <Grid
             gridTemplateColumns={{
               base: "repeat(2, 1fr)",
-              md: "repeat(3, 1fr)",
+              md: "repeat(4, 1fr)",
             }}
             pb="10"
             display={{ base: "grid", lg: "none" }}
