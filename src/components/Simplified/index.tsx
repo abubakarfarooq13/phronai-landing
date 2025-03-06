@@ -118,7 +118,7 @@ export default function SimplifiedSection() {
           borderRadius="40px"
           shadow="0px 0px 25px 1px #cad2fd"
           py={{ base: "10px", md: "20px" }}
-          // px={{ base: "10px", md: "20px" }}
+          px={{ base: "0px", md: "20px" }}
         >
           <Box position="relative" borderRadius="lg" overflow="hidden">
             <ContractsTable />
@@ -139,7 +139,7 @@ export default function SimplifiedSection() {
                   gap={6}
                   alignItems="flex-start"
                   mx={{ base: "25px", md: "50px", lg: "0px" }}
-                  mb={{ base: "20px" }}
+                  mb={{ base: "20px", md: "0px" }}
                 >
                   <Box pt={2} borderRadius="lg" width="35px" height="40px">
                     <Box>
