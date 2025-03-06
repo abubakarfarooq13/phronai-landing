@@ -234,12 +234,14 @@ export default function Companies() {
       <Container overflow="hidden" px="4" p={{ xl: "10" }} maxW="full">
         <Heading
           as="h1"
+          lineHeight="50px"
+          fontSize={{ base: "30px", md: "50px" }}
+          fontWeight="500"
           textAlign="center"
           textTransform="uppercase"
           mb="20"
           pt="10"
           color="purple.900"
-          fontSize="3rem"
         >
           Deploy On
         </Heading>
