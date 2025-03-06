@@ -27,8 +27,8 @@ const data = [
     imageUrl: "/assets/simplified/check.png",
     title: "Create Smart Contract on Leading Blockchains",
     description: "No Code needed with openPhron",
-    width: 25,
-    height: 25,
+    width: 30,
+    height: 30,
   },
   {
     id: 2,
@@ -36,24 +36,24 @@ const data = [
     title: "Build Trust Instantly",
     description:
       "openPhron Verifies Your Smart Contract On-Chain for full Transparency!",
-    width: 30,
-    height: 25,
+    width: 35,
+    height: 30,
   },
   {
     id: 3,
     imageUrl: "/assets/simplified/audit.png",
     title: "Audit Your Smart Contract for just $495",
     description: "Powered by SolidProof. Exclusively on openPhron's Dashboard!",
-    width: 25,
-    height: 25,
+    width: 30,
+    height: 30,
   },
   {
     id: 4,
     imageUrl: "/assets/simplified/robo-face.png",
     title: "Unlock Smart Contract Success with openPhron's AI Agent",
     description: "Your Personal Guide and Advisor!",
-    width: 30,
-    height: 25,
+    width: 35,
+    height: 30,
   },
 ];
 
@@ -88,21 +88,37 @@ export default function SimplifiedSection() {
   const textColor = useColorModeValue("gray.600", "gray.300");
 
   return (
-    <Box as="section" py={16} bgGradient={bgGradient}>
+    <Box as="section" py={10}>
       <Container maxW="container.xl" px={{ base: 4, md: 6 }}>
         <Box textAlign="center" mb={12}>
-          <Text as="h2" color="#321c75" fontSize="4xl" fontWeight="bold" mb={2}>
-            Simplified
+          <Text
+            as="h2"
+            color="#321c75"
+            lineHeight="50px"
+            fontSize={{ base: "30px", md: "50px" }}
+            fontWeight="500"
+            mb={2}
+          >
+            Smart Contracts, Audits & AI{" "}
+            <Box as="br" display={{ base: "none", md: "block" }} />
+            Simplified with openPhron
           </Text>
-          <Text color="#321c75" fontSize="lg" maxW="md" mx="auto">
-            AI-Powered Smart Contracts, Audit, and Agents
-          </Text>
+          <Text
+            color="#321c75"
+            fontSize={{ base: "13px", md: "15px" }}
+            maxW="md"
+            mx="auto"
+          ></Text>
         </Box>
 
         <Stack
-          direction={{ base: "column", md: "row" }}
-          justifyContent="center"
+          direction={{ base: "column", lg: "row" }}
+          // justifyContent="center"
           gap={{ base: "50px", md: "20px", lg: "50px" }}
+          borderRadius="40px"
+          shadow="0px 0px 25px 1px #cad2fd"
+          py={{ base: "10px", md: "20px" }}
+          px={{ base: "0px", md: "20px" }}
         >
           <Box position="relative" borderRadius="lg" overflow="hidden">
             <ContractsTable />
@@ -115,13 +131,15 @@ export default function SimplifiedSection() {
             viewport={{ once: true }}
             pt={{ base: "0px", md: "40px" }}
           >
-            <Stack spacing={6}>
+            <Stack spacing={9}>
               {data.map((item) => (
                 <MotionFlex
                   key={item.id}
                   variants={itemVariants}
-                  gap={4}
+                  gap={6}
                   alignItems="flex-start"
+                  mx={{ base: "25px", md: "50px", lg: "0px" }}
+                  mb={{ base: "20px", md: "0px" }}
                 >
                   <Box pt={2} borderRadius="lg" width="35px" height="40px">
                     <Box>
@@ -137,14 +155,14 @@ export default function SimplifiedSection() {
                     <Text
                       as="h3"
                       color="#321c75"
-                      fontSize="base"
+                      fontSize="20px"
                       fontWeight="semibold"
                       mb={1}
                       maxW="300px"
                     >
                       {item.title}
                     </Text>
-                    <Text color="#321c75" maxW="400px">
+                    <Text color="#321c75" fontWeight="medium" maxW="400px">
                       {item.description}
                     </Text>
                   </Box>
