@@ -95,7 +95,7 @@ export default function SimplifiedSection() {
             as="h2"
             color="#321c75"
             lineHeight="50px"
-            fontSize={{ base: "30px", md: "50px" }}
+            fontSize={{ base: "30px", md: "40px" }}
             fontWeight="500"
             mb={2}
           >
@@ -129,7 +129,6 @@ export default function SimplifiedSection() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            pt={{ base: "0px", md: "40px" }}
           >
             <Stack spacing={9}>
               {data.map((item) => (
@@ -155,14 +154,19 @@ export default function SimplifiedSection() {
                     <Text
                       as="h3"
                       color="#321c75"
-                      fontSize="20px"
+                      fontSize="22px"
                       fontWeight="semibold"
                       mb={1}
                       maxW="300px"
                     >
                       {item.title}
                     </Text>
-                    <Text color="#321c75" fontWeight="medium" maxW="400px">
+                    <Text
+                      color="#321c75"
+                      fontSize="18px"
+                      fontWeight="medium"
+                      maxW="400px"
+                    >
                       {item.description}
                     </Text>
                   </Box>

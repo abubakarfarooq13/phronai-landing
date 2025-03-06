@@ -19,13 +19,13 @@ export default function OurTeam() {
             color="#321b7a"
             textAlign="center"
             fontWeight="bold"
-            fontSize="3xl"
+            fontSize={{ base: "30px", md: "40px" }}
           >
             Our Team
           </Text>
 
           <Text
-            fontSize={{ base: "base", "2340px": "base" }}
+            fontSize={{ base: "18px", md: "24px" }}
             as="h3"
             mb="6"
             textAlign="center"
@@ -84,10 +84,11 @@ export default function OurTeam() {
                       textAlign="center"
                       fontWeight={600}
                       pt="4"
+                      color="#321b7a"
                     >
                       {member.name}
                     </Text>
-                    <Text fontSize="14px" textAlign="center" color="#8a8a8a">
+                    <Text fontSize="14px" textAlign="center" color="#321b7a">
                       {member.role}
                     </Text>
                   </Box>
@@ -99,19 +100,20 @@ export default function OurTeam() {
 
         <Fade bottom>
           <Text
-            fontSize={{ base: "lg", "2340px": "30px" }}
+            fontSize={{ base: "18px", md: "24px" }}
             letterSpacing="2px"
             as="h3"
             mb="6"
             textAlign="center"
             mt="16"
-            fontWeight={700}
+            fontWeight={600}
+            color="#321b7a"
           >
             Advisors
           </Text>
         </Fade>
 
-        <Fade bottom>
+        {/* <Fade bottom>
           <Wrap justify="center" spacing="6" w="full" pb="10">
             {drMarwan.map((member) => (
               <WrapItem
@@ -171,15 +173,72 @@ export default function OurTeam() {
               </WrapItem>
             ))}
           </Wrap>
-        </Fade>
+        </Fade> */}
         <Fade bottom>
-          <Wrap justify="center" spacing="6" w="full">
+          <Wrap justify="center" spacing="3" w="full">
+            {drMarwan.map((member) => (
+              <WrapItem
+                key={member.id}
+                maxW={{
+                  base: "140px",
+                  xl: "230px",
+                }}
+                w="full"
+                _hover={{
+                  transform: "translateY(-10px)",
+                }}
+                transition="all .3s"
+              >
+                <Box
+                  as={Link}
+                  href={member.linkedinUrl}
+                  display="block"
+                  target="_blank"
+                  w="full"
+                  textAlign="center"
+                >
+                  <Box
+                    // bgColor="#fff"
+                    // px={
+                    //   member.name === "Dyma Budorin"
+                    //     ? { base: "1px", md: "2px" }
+                    //     : ""
+                    // }
+                    rounded="20px"
+                    overflow="hidden"
+                    position="relative"
+                    _after={{
+                      content: `''`,
+                      position: "absolute",
+                      top: "0px",
+                      bottom: "0px",
+                      left: "0px",
+                      right: "0px",
+                    }}
+                  >
+                    <Image
+                      src={member.image}
+                      alt={member.name + " image"}
+                      width={member.imageWidth}
+                      height={member.imageWidth}
+                      style={{ width: "100%" }}
+                    />
+                  </Box>
+                  <Text fontSize="16px" fontWeight={600} pt="4" color="#321b7a">
+                    {member.name}
+                  </Text>
+                  <Text fontSize="14px" color="#321b7a">
+                    {member.role}
+                  </Text>
+                </Box>
+              </WrapItem>
+            ))}
             {advisors.map((member) => (
               <WrapItem
                 key={member.id}
                 maxW={{
                   base: member.maxWidthM ? member.maxWidthM : "140px",
-                  xl: member.maxWidth ? member.maxWidth : "240px",
+                  xl: member.maxWidth ? member.maxWidth : "230px",
                 }}
                 w="full"
                 _hover={{
@@ -229,10 +288,11 @@ export default function OurTeam() {
                     fontSize="16px"
                     fontWeight={600}
                     pt="4"
+                    color="#321b7a"
                   >
                     {member.name}
                   </Text>
-                  <Text fontSize="14px" color="#8a8a8a">
+                  <Text fontSize="14px" color="#321b7a">
                     {member.role}
                   </Text>
                 </Box>

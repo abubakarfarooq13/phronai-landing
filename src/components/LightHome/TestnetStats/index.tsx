@@ -162,18 +162,18 @@ export default function Testnet() {
   const maxTps = Math.max(...tpsComparisonData.map((item) => item.tps));
 
   return (
-    <Container maxW="1240px" py={10}>
+    <Container maxW="1240px" pb={10}>
       <Box color="#321b7a" textAlign="center" mb={10}>
         <Text
           lineHeight="50px"
-          fontSize={{ base: "30px", md: "50px" }}
+          fontSize={{ base: "30px", md: "40px" }}
           fontWeight="500"
           as="h1"
           mb={2}
         >
           The First AI-Powered Layer 0
         </Text>
-        <Text fontSize={{ base: "13px", md: "15px" }}>
+        <Text fontSize={{ base: "18px", md: "24px" }}>
           Testnet Performance & Insights
         </Text>
       </Box>

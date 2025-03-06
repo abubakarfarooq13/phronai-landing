@@ -74,7 +74,7 @@ export default function PartnerCards() {
         {partners.map((partner, index) => (
           <MotionWrapItem
             key={index}
-            maxW="380px"
+            maxW={{ base: "full", md: "40%", lg: "380px" }}
             w="full"
             position="relative"
             initial={{ opacity: 0 }}
@@ -106,9 +106,10 @@ export default function PartnerCards() {
                 <Flex justify="space-between" align="center" h="full" w="full">
                   <Flex flexDir="column" color="#321b7a" fontWeight={500}>
                     <Text
-                      fontSize="20px"
-                      lineHeight="25px"
+                      fontSize="28px"
+                      lineHeight="110%"
                       whiteSpace="pre-line"
+                      fontWeight={600}
                     >
                       {partner.title}
                     </Text>
@@ -116,7 +117,7 @@ export default function PartnerCards() {
                       alignItems="center"
                       as={Link}
                       href={partner.link}
-                      fontSize="12px"
+                      fontSize="18px"
                       mt="10px"
                       _hover={{ textDecoration: "none", color: "#6a4dff" }}
                     >

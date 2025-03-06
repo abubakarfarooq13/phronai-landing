@@ -146,7 +146,7 @@ export default function OurTeam() {
           <Text
             as="h2"
             color="#321b7a"
-            fontSize="3xl"
+            fontSize={{ base: "30px", md: "40px" }}
             textAlign="center"
             pb="50px"
           >

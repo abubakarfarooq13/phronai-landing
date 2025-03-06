@@ -19,43 +19,43 @@ const Partners = [
   {
     id: 1,
     image: "/assets/newPartners/coinmarket.png",
-    width: 120,
+    width: 160,
     height: 40,
   },
   {
     id: 2,
     image: "/assets/newPartners/luna.png",
-    width: 70,
+    width: 85,
     height: 30,
   },
   {
     id: 3,
     image: "/assets/newPartners/hacken.png",
-    width: 90,
+    width: 110,
     height: 40,
   },
   {
     id: 4,
     image: "/assets/newPartners/solidproof.png",
-    width: 100,
+    width: 120,
     height: 40,
   },
   {
     id: 5,
     image: "/assets/newPartners/ibc.png",
-    width: 100,
+    width: 120,
     height: 40,
   },
   {
     id: 6,
     image: "/assets/newPartners/metabrand.png",
-    width: 100,
+    width: 120,
     height: 40,
   },
   {
     id: 7,
     image: "/assets/newPartners/bitmart.png",
-    width: 90,
+    width: 110,
     height: 40,
   },
 ];
@@ -85,14 +85,14 @@ const Hero = () => {
         >
           <Text
             as="h1"
-            lineHeight="50px"
-            fontSize={{ base: "30px", md: "50px" }}
+            lineHeight="110%"
+            fontSize={{ base: "30px", md: "70px" }}
             fontWeight="500"
           >
             AI-Powered for Builders.
             <Box as="br" /> One Prompt for Everyone.
           </Text>
-          <Text mt="10px" fontSize={{ base: "13px", md: "15px" }}>
+          <Text mt="10px" fontSize={{ base: "20px", md: "24px" }}>
             Train AI models and earn from the network. Launch L1s, deploy smart
             contract,
             <Box as="br" display={{ base: "none", md: "block" }} />
@@ -114,7 +114,8 @@ const Hero = () => {
               borderRadius="20px"
               color="#ffffff"
               fontWeight={500}
-              px="5"
+              px="8"
+              py="5"
               border="2px solid #321b7a"
               _hover={{
                 bg: "transparent",
@@ -130,7 +131,8 @@ const Hero = () => {
               borderRadius="20px"
               fontWeight={500}
               color="#321b7a"
-              px="5"
+              px="8"
+              py="5"
               minW="213px"
               border="2px solid #321b7a"
               _hover={{
@@ -151,13 +153,13 @@ const Hero = () => {
           zIndex="2"
         >
           <Text
-            textAlign={{ base: "center", lg: "left" }}
+            textAlign={{ base: "center", xl: "left" }}
             as="p"
             color="#321b7a"
-            fontSize="15px"
+            fontSize="20px"
             fontWeight={500}
           >
-            s Trusted Partners
+            Trusted Partners
           </Text>
           <Wrap
             w="full"
