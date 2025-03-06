@@ -86,13 +86,13 @@ const Hero = () => {
           <Text
             as="h1"
             lineHeight="110%"
-            fontSize={{ base: "30px", md: "70px" }}
+            fontSize={{ base: "32px", md: "70px" }}
             fontWeight="500"
           >
             AI-Powered for Builders.
             <Box as="br" /> One Prompt for Everyone.
           </Text>
-          <Text mt="10px" fontSize={{ base: "20px", md: "24px" }}>
+          <Text mt="10px" fontSize={{ base: "16px", md: "24px" }}>
             Train AI models and earn from the network. Launch L1s, deploy smart
             contract,
             <Box as="br" display={{ base: "none", md: "block" }} />
