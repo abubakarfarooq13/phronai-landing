@@ -164,10 +164,18 @@ export default function Testnet() {
   return (
     <Container maxW="1240px" py={10}>
       <Box color="#321b7a" textAlign="center" mb={10}>
-        <Text fontSize="30px" fontWeight={600} as="h1" mb={2}>
+        <Text
+          lineHeight="50px"
+          fontSize={{ base: "30px", md: "50px" }}
+          fontWeight="500"
+          as="h1"
+          mb={2}
+        >
           The First AI-Powered Layer 0
         </Text>
-        <Text>Testnet Performance & Insights</Text>
+        <Text fontSize={{ base: "13px", md: "15px" }}>
+          Testnet Performance & Insights
+        </Text>
       </Box>
 
       {error && (
@@ -178,10 +186,10 @@ export default function Testnet() {
       )}
 
       <Grid
-        templateRows={{ base: "1fr", md: "repeat(2, 1fr)" }}
+        templateRows={{ base: "1fr", md: "repeat(1, 1fr)" }}
         templateColumns={{
           base: "1fr",
-          md: "repeat(3, 1fr)",
+          md: "repeat(1, 1fr)",
           lg: "repeat(4, 1fr)",
         }}
         gap={4}
@@ -191,7 +199,7 @@ export default function Testnet() {
         bg="rgba(202,210,253,0.1)"
       >
         {/* TPS Comparison Card */}
-        <GridItem rowSpan={1} colSpan={{ base: 1, lg: 2 }}>
+        <GridItem rowSpan={1} colSpan={{ base: 1, md: 2, lg: 2 }}>
           <Box
             py="20px"
             px="30px"
@@ -213,14 +221,14 @@ export default function Testnet() {
                 {tpsComparisonData.map((item) => (
                   <Flex
                     alignItems="center"
-                    // justifyContent="space-between"
+                    // justifyContent="start"
                     key={item.name}
                   >
-                    <Box w="110px" fontSize="sm" mb={1}>
+                    <Flex w={{ base: "70px", md: "70px" }} fontSize="sm" mb={1}>
                       <Text color="#321b7a" whiteSpace="nowrap">
                         {item.name}
                       </Text>
-                    </Box>
+                    </Flex>
                     <Box
                       h="15px"
                       w={item.width}
@@ -360,7 +368,7 @@ export default function Testnet() {
                     key={item.name}
                     direction="column"
                     align="center"
-                    // flex="1"
+                    flex="1"
                   >
                     <Flex w="full" justify="center" mb={2}>
                       <Box
@@ -374,7 +382,7 @@ export default function Testnet() {
                       {item.time}
                     </Text>
                     <Text
-                      fontSize="8px"
+                      fontSize={{ base: "8px", md: "12px", lg: "8px" }}
                       // noOfLines={1}
                       w="full"
                       textAlign="center"
@@ -417,7 +425,7 @@ export default function Testnet() {
                     ${gasusd}
                   </Text>
                 </Flex>
-                <Text fontSize="sm" color="#321b7a" mt={4}>
+                <Text whiteSpace="nowrap" fontSize="sm" color="#321b7a" mt={4}>
                   Time to Finality (Seconds)
                 </Text>
               </Flex>

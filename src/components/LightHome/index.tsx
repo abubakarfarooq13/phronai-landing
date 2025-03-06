@@ -23,9 +23,25 @@ export default function LightHome() {
     <>
       <LightNav />
       <Hero />
-      <TestnetStats />
-      <PhronAISuite />
-      <Simplified />
+      <Box
+        bgImage="/assets/bg-test-contract.png"
+        bgPos="center"
+        bgRepeat="no-repeat"
+        bgSize="100% 100%"
+        py="100px"
+      >
+        <TestnetStats />
+        <PhronAISuite />
+      </Box>
+      <Box
+        bgImage="/assets/bg-simplified.png"
+        bgPos="center"
+        bgRepeat="no-repeat"
+        bgSize="100% 100%"
+        // py="100px"
+      >
+        <Simplified />
+      </Box>
       <Companies />
       <GalleryCarousel />
       {/* <EmbracingBlockchain />

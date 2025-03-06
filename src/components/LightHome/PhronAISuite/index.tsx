@@ -19,20 +19,30 @@ export default function PhronAISuite() {
     <Box mt="20" px="4">
       {/* <AnimatedZigzag /> */}
 
-      <Heading
-        fontSize={{
-          base: "2xl",
-          lg: "4xl",
-        }}
+      <Text
+        lineHeight="50px"
+        fontSize={{ base: "30px", md: "50px" }}
+        fontWeight="500"
         // fontWeight={700}
         textAlign="center"
         color="purple.900"
-        mb="10"
+        mb="5"
         as="h2"
       >
-        PhronAI Blockchain Suite
-      </Heading>
-
+        The AI Contribution Layer
+        <Box as="br" />
+        Build, Deploy & Earn Through openPhron
+      </Text>
+      <Text
+        fontSize={{ base: "13px", md: "15px" }}
+        textAlign="center"
+        color="purple.900"
+        mb="5"
+      >
+        Deploy AI models, launch smart contracts, and interact with AI
+        agents-all while earning a <Box as="br" />
+        share of the supply through openPhron.
+      </Text>
       <Fade bottom>
         <VStack
           mb="6"
@@ -65,7 +75,7 @@ export default function PhronAISuite() {
             </Box>
           </Box>
           <Image
-            src="/assets/light-theme-home/suite-graph-2.png"
+            src="/assets/light-theme-home/suit-graph-2.png"
             alt="open phron graph"
             width={420}
             height={400}
@@ -138,7 +148,7 @@ export default function PhronAISuite() {
         <Fade bottom>
           <Box position="relative" mt={{ base: "0", md: "10" }}>
             <Image
-              src="/assets/light-theme-home/suite-graph-1.png"
+              src="/assets/light-theme-home/suit-graph-1.png"
               alt="open phron graph"
               width={290}
               height={400}
@@ -147,6 +157,23 @@ export default function PhronAISuite() {
                 position: "relative",
               }}
             />
+            {/* <Box
+              zIndex="5"
+              pos="absolute"
+              textAlign="center"
+              color="#321b7a"
+              // transform={{
+              //   md: "translateY(-220px) translateX(60px)",
+              //   lg: "translateY(-266px) translateX(85px)",
+              // }}
+              mt={{ md: "-216px", lg: "-266px" }}
+              ml={{ md: "62px", lg: "90px" }}
+            >
+              <Text fontWeight={700} fontSize="20px">
+                PhronZero
+              </Text>
+              <Text lineHeight="13px">Layer 0</Text>
+            </Box> */}
             <Box position="absolute" bottom="35%" left="10%">
               <AnimatedZigzag height={80} width={60} />
             </Box>
@@ -218,7 +245,7 @@ export default function PhronAISuite() {
               </Box>
             </Box>
             <Image
-              src="/assets/light-theme-home/suite-graph-2.png"
+              src="/assets/light-theme-home/suit-graph-2.png"
               alt="open phron graph"
               width={420}
               height={400}
@@ -300,7 +327,7 @@ export default function PhronAISuite() {
         <Fade bottom>
           <Box position="relative" mt={{ base: "0", md: "10" }}>
             <Image
-              src="/assets/light-theme-home/suite-graph-3.png"
+              src="/assets/light-theme-home/suit-graph-3.png"
               alt="open phron graph"
               width={290}
               height={400}
