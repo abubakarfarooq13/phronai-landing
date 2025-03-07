@@ -72,7 +72,7 @@ export default function PartnerCards() {
     <MotionBox w="full" position="relative" zIndex="2">
       <Wrap justify={{ base: "center", xl: "space-between" }} spacing="20px">
         {partners.map((partner, index) => (
-          <Card partner={partner} index={index} />
+          <Card key={index} partner={partner} index={index} />
         ))}
       </Wrap>
     </MotionBox>
