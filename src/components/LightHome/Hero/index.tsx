@@ -58,6 +58,12 @@ const Partners = [
     width: 110,
     height: 40,
   },
+  {
+    id: 7,
+    image: "/assets/newPartners/masterblox.png",
+    width: 150,
+    height: 10,
+  },
 ];
 
 const Hero = () => {
@@ -72,7 +78,7 @@ const Hero = () => {
       >
         {" "}
         <video autoPlay loop muted className="hero" playsInline>
-          <source src="/assets/holographic.mp4" type="video/mp4" />
+          <source src="/assets/holographic.webm" type="video/webm" />
         </video>
         <Flex
           flexDir="column"
@@ -169,12 +175,12 @@ const Hero = () => {
           </Text>
           <Wrap
             w="full"
-            justify={{ base: "center", lg: "space-between" }}
+            justify={{ base: "center", xl: "space-between" }}
             py="20px"
             spacing="20px"
           >
             {Partners.map((partner) => (
-              <WrapItem key={partner.id}>
+              <WrapItem alignItems="center" key={partner.id}>
                 <Image
                   objectFit="contain"
                   objectPosition="center"
