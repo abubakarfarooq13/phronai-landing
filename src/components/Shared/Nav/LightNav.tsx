@@ -324,7 +324,7 @@ export default function Nav() {
 
       if (currentScroll <= 0 && logoRef.current) {
         logoRef.current.style.maxWidth =
-          router.pathname === "/phronzero" ? "280px" : "266px";
+          router.pathname === "/phronzero" ? "280px" : "170px";
       }
 
       if (currentScroll > 10 && labelsRef.current) {
@@ -360,7 +360,7 @@ export default function Nav() {
       w="full"
       bgColor="#fff"
     >
-      <AlertBanner ref={alertBannerRef} />
+      {/* <AlertBanner ref={alertBannerRef} /> */}
       <Box
         as="nav"
         ref={navRef}
@@ -461,12 +461,12 @@ export default function Nav() {
                   )}
 
                   <Box>
-                    <SubMenu
+                    {/* <SubMenu
                       menu={layerZeroAndLayerOneMenuItems}
                       className="dropdown-1-menu"
                       imageUrl={item.imageUrl}
                       label={item.label}
-                    />
+                    /> */}
                     <SubMenu
                       menu={buildMenuItems}
                       imageUrl={item.imageUrl}

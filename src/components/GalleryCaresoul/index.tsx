@@ -58,10 +58,20 @@ export default function GalleryCarousel() {
       aspectRatio: "portrait",
     },
     {
-      src: "/assets/gallery/8.png",
+      src: "/assets/gallery/-8.png",
       alt: "Gallery image 8",
       aspectRatio: "landscape",
     },
+    // {
+    //   src: "/assets/gallery/9.jpg",
+    //   alt: "Gallery image 9",
+    //   aspectRatio: "landscape",
+    // },
+    // {
+    //   src: "/assets/gallery/10.jpg",
+    //   alt: "Gallery image 10",
+    //   aspectRatio: "landscape",
+    // },
   ];
 
   const openLightbox = (index: number) => {

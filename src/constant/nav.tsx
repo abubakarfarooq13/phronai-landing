@@ -87,12 +87,12 @@ export const networkMenuItems = [
     target: "_blank",
     noStyle: true,
   },
-  {
-    id: 7,
-    label: "PhronAI Wallet",
-    href: "/wallet",
-    icon: <FaWallet color="#000" />,
-  },
+  // {
+  //   id: 7,
+  //   label: "PhronAI Wallet",
+  //   href: "/wallet",
+  //   icon: <FaWallet color="#000" />,
+  // },
   {
     id: 7,
     label: "Bridge",
@@ -163,21 +163,21 @@ export const papersMenuItems = [
 ];
 
 export const navItems = [
-  {
-    id: 2,
-    label: "Layer 0 / Layer 1",
-    href: "",
-    className: "dropdown-1",
-    items: [
-      "/phronzero",
-      "/chain",
-      "/phron",
-      "/ecosystem",
-      "/team",
-      "/roadmap",
-    ],
-    imageUrl: "/assets/phronzero/card-1-img.png",
-  },
+  // {
+  //   id: 2,
+  //   label: "Layer 0 / Layer 1",
+  //   href: "",
+  //   className: "dropdown-1",
+  //   items: [
+  //     "/phronzero",
+  //     "/chain",
+  //     "/phron",
+  //     "/ecosystem",
+  //     "/team",
+  //     "/roadmap",
+  //   ],
+  //   imageUrl: "/assets/phronzero/card-1-img.png",
+  // },
   // {
   //   id: 2,
   //   label: "openPhron",

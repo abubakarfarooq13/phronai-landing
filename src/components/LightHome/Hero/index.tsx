@@ -109,6 +109,9 @@ const Hero = () => {
             alignItems="center"
           >
             <Button
+              as={Link}
+              href="https://openphron.ai"
+              target="_blank"
               gap="60px"
               bg="#321b7a"
               borderRadius="20px"
@@ -126,6 +129,9 @@ const Hero = () => {
               Start Building <LuArrowRight />
             </Button>
             <Button
+              as={Link}
+              href="https://docs.phron.ai"
+              target="_blank"
               gap="60px"
               bg="transparent"
               borderRadius="20px"

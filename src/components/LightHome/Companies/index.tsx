@@ -238,7 +238,7 @@ export default function Companies() {
           fontSize={{ base: "30px", md: "40px" }}
           fontWeight={500}
           textAlign="center"
-          textTransform="uppercase"
+          // textTransform="uppercase"
           mb="20"
           pt="10"
           color="#321c75"
