@@ -69,80 +69,89 @@ export default function PartnerCards() {
   ];
 
   return (
-    <Box w="full" position="relative" zIndex="2">
+    <MotionBox w="full" position="relative" zIndex="2">
       <Wrap justify={{ base: "center", xl: "space-between" }} spacing="20px">
         {partners.map((partner, index) => (
-          <MotionWrapItem
-            key={index}
-            maxW={{ base: "full", md: "40%", lg: "380px" }}
-            w="full"
-            position="relative"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.3 }}
-          >
-            {/* Card Content */}
-            <Box
-              position="relative"
-              borderRadius="25px"
-              overflow="hidden"
-              height="100%"
-              width="full"
-              p="2px"
-              _hover={{
-                transform: "scale(1.01)",
-              }}
-              transition="all .3s"
-            >
-              {/* Inner content with gradient shimmer effect */}
-              <Box
-                borderRadius="25px"
-                p="20px"
-                bgGradient="linear(to-r, #ffffff, #eff0fc)"
-                position="relative"
-                height="100%"
-                shadow="0px 0px 25px 1px #cad2fd"
-              >
-                <Flex justify="space-between" align="center" h="full" w="full">
-                  <Flex flexDir="column" color="#321b7a" fontWeight={500}>
-                    <Text
-                      fontSize="28px"
-                      lineHeight="110%"
-                      whiteSpace="pre-line"
-                      fontWeight={600}
-                    >
-                      {partner.title}
-                    </Text>
-                    <Flex
-                      alignItems="center"
-                      as={Link}
-                      href={partner.link}
-                      fontSize="18px"
-                      mt="10px"
-                      _hover={{ textDecoration: "none", color: "#6a4dff" }}
-                    >
-                      Launch <FiArrowUpRight style={{ marginLeft: "4px" }} />
-                    </Flex>
-                  </Flex>
-                  <IconWithSparkles
-                    imageSrc={partner.imageSrc}
-                    title={partner.title}
-                    width={partner.width}
-                    height={partner.height}
-                  />
-                </Flex>
-              </Box>
-            </Box>
-          </MotionWrapItem>
+          <Card partner={partner} index={index} />
         ))}
       </Wrap>
-    </Box>
+    </MotionBox>
   );
 }
 
-function IconWithSparkles({ imageSrc, title, width, height }: any) {
+const Card = ({ partner, index }: any) => {
   const [isHovered, setIsHovered] = useState(false);
 
+  return (
+    <MotionWrapItem
+      key={index}
+      maxW={{ base: "full", md: "40%", lg: "380px" }}
+      w="full"
+      position="relative"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.3 }}
+      onHoverStart={() => setIsHovered(true)}
+      onHoverEnd={() => setIsHovered(false)}
+    >
+      {/* Card Content */}
+      <Box
+        position="relative"
+        borderRadius="25px"
+        overflow="hidden"
+        height="100%"
+        width="full"
+        _hover={{
+          transform: "scale(1.01)",
+          shadow: "0px 16px 25px 1px #cad2fd",
+        }}
+        transition="all .3s"
+        border="1px solid #cad2fd4a"
+      >
+        {/* Inner content with gradient shimmer effect */}
+        <Box
+          borderRadius="25px"
+          p="20px"
+          bgGradient="linear(to-r, #ffffff, #eff0fc)"
+          position="relative"
+          height="100%"
+        >
+          <Flex justify="space-between" align="center" h="full" w="full">
+            <Flex flexDir="column" color="#321b7a" fontWeight={500}>
+              <Text
+                fontSize="28px"
+                lineHeight="110%"
+                whiteSpace="pre-line"
+                fontWeight={600}
+              >
+                {partner.title}
+              </Text>
+              <Flex
+                alignItems="center"
+                as={Link}
+                href={partner.link}
+                fontSize="18px"
+                mt="10px"
+                _hover={{ textDecoration: "none", color: "#6a4dff" }}
+              >
+                Launch <FiArrowUpRight style={{ marginLeft: "4px" }} />
+              </Flex>
+            </Flex>
+            <IconWithSparkles
+              imageSrc={partner.imageSrc}
+              title={partner.title}
+              width={partner.width}
+              height={partner.height}
+              isHovered={isHovered}
+            />
+          </Flex>
+        </Box>
+      </Box>
+    </MotionWrapItem>
+  );
+};
+
+function IconWithSparkles({ imageSrc, title, width, height, isHovered }: any) {
   const sparkles = [
     { top: 10, left: 20, size: 6, delay: 0 },
     { top: 20, left: 80, size: 5, delay: 0.3 },
@@ -152,11 +161,7 @@ function IconWithSparkles({ imageSrc, title, width, height }: any) {
   ];
 
   return (
-    <MotionBox
-      position="relative"
-      onHoverStart={() => setIsHovered(true)}
-      onHoverEnd={() => setIsHovered(false)}
-    >
+    <MotionBox position="relative">
       {isHovered && sparkles.map((s, i) => <Sparkle key={i} {...s} />)}
 
       <MotionBox
