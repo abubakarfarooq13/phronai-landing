@@ -507,7 +507,7 @@ export default function Nav() {
               <Box
                 ref={connectButtonRef}
                 as="a"
-                href="https://openphron.ai"
+                href="https://app.openphron.ai"
                 // maxW="200px"
                 w="full"
                 target="_blank"
