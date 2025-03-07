@@ -2,6 +2,7 @@ import { Box, Container, Flex, Heading, Text } from "@chakra-ui/react";
 import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
+import Marquee from "react-fast-marquee";
 // import Image from "next/image";
 
 const companiesone = [
@@ -286,20 +287,21 @@ export default function Companies() {
           overflow="hidden"
           height="96px"
         >
-          <MotionFlex
-            position="absolute"
-            whiteSpace="nowrap"
-            animate={{
-              x: [0, -2000],
-            }}
-            transition={{
-              x: {
-                repeat: Number.POSITIVE_INFINITY,
-                repeatType: "loop",
-                duration: 30,
-                ease: "linear",
-              },
-            }}
+          <Marquee
+            speed={70}
+            // position="absolute"
+            // whiteSpace="nowrap"
+            // animate={{
+            //   x: ["0%", "-100%"],
+            // }}
+            // transition={{
+            //   x: {
+            //     repeat: Infinity,
+            //     repeatType: "loop",
+            //     duration: 20,
+            //     ease: "linear",
+            //   },
+            // }}
           >
             {/* Duplicate the logos to create a seamless loop */}
             {[...companiesone, ...companiesone].map((logo, index) => (
@@ -321,7 +323,7 @@ export default function Companies() {
                 </Box>
               </Flex>
             ))}
-          </MotionFlex>
+          </Marquee>
         </Box>
 
         {/* Second row - moving left to right (opposite direction) */}
@@ -333,20 +335,22 @@ export default function Companies() {
           overflow="hidden"
           height="96px"
         >
-          <MotionFlex
-            position="absolute"
-            whiteSpace="nowrap"
-            animate={{
-              x: [-2000, 0],
-            }}
-            transition={{
-              x: {
-                repeat: Number.POSITIVE_INFINITY,
-                repeatType: "loop",
-                duration: 30,
-                ease: "linear",
-              },
-            }}
+          <Marquee
+            speed={70}
+            direction="right"
+            // position="absolute"
+            // whiteSpace="nowrap"
+            // animate={{
+            //   x: ["-100%", "0%"],
+            // }}
+            // transition={{
+            //   x: {
+            //     repeat: Infinity,
+            //     repeatType: "loop",
+            //     duration: 20,
+            //     ease: "linear",
+            //   },
+            // }}
           >
             {/* Duplicate the logos to create a seamless loop */}
             {[...companiestwo, ...companiestwo].map((logo, index) => (
@@ -367,7 +371,7 @@ export default function Companies() {
                 </Box>
               </Flex>
             ))}
-          </MotionFlex>
+          </Marquee>
         </Box>
       </Container>
     </Box>

@@ -56,21 +56,21 @@ export default function PartnerCards() {
       imageSrc: "/assets/newPartners/atom.png",
       width: 100,
       height: 100,
-      link: "#",
+      link: "https://app.openphron.ai ",
     },
     {
       title: "AI Layer 0\nTestnet",
       imageSrc: "/assets/newPartners/box1.png",
       width: 100,
       height: 100,
-      link: "#",
+      link: "https://testnet.phronscan.io",
     },
     {
       title: "Nodes",
       imageSrc: "/assets/newPartners/layerbox1.png",
       width: 85,
       height: 85,
-      link: "#",
+      link: "https://nodes.phron.ai ",
     },
   ];
 
@@ -136,6 +136,7 @@ const Card = ({ partner, index }: any) => {
                 alignItems="center"
                 as={Link}
                 href={partner.link}
+                target="_blank"
                 fontSize="18px"
                 mt="10px"
                 _hover={{ textDecoration: "none", color: "#6a4dff" }}

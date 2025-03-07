@@ -18,8 +18,8 @@ import PartnerCards from "./Cards";
 const Partners = [
   {
     id: 1,
-    image: "/assets/newPartners/coinmarket.png",
-    width: 160,
+    image: "/assets/newPartners/coingecko.png",
+    width: 130,
     height: 40,
   },
   {
@@ -110,7 +110,7 @@ const Hero = () => {
           >
             <Button
               as={Link}
-              href="https://openphron.ai"
+              href="https://app.openphron.ai"
               target="_blank"
               gap="60px"
               bg="#321b7a"

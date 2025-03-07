@@ -96,7 +96,7 @@ export const logos = [
     id: 16,
     name: "Cluster Protocol",
     imageSrc: "/assets/partners/cluster-protocol-logo.jpg",
-    orbitIndex: 0,
+    orbitIndex: 1,
   },
   {
     id: 17,
@@ -276,6 +276,12 @@ export const logos = [
     id: 46,
     name: "DMAIL.AI",
     imageSrc: "/assets/partners/dmail-ai-logo.jpg",
+    orbitIndex: 1,
+  },
+  {
+    id: 47,
+    name: "Masterblox",
+    imageSrc: "/assets/partners/masterblox.png",
     orbitIndex: 1,
   },
 ];
