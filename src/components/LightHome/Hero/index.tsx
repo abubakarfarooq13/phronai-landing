@@ -175,7 +175,7 @@ const Hero = () => {
           </Text>
           <Wrap
             w="full"
-            justify={{ base: "center", lg: "space-between" }}
+            justify={{ base: "center", xl: "space-between" }}
             py="20px"
             spacing="20px"
           >
