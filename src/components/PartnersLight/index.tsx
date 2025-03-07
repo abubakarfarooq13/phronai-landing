@@ -244,6 +244,18 @@ const blockchainSecurity = [
     logoWidth: 50,
     logoHeight: 50,
   },
+  {
+    id: 3,
+    name: "Masterblox",
+    imageSrc: "/assets/partners/masterblox.png",
+    description:
+      "A leading blockchain accelerator with a proven track record of delivering exceptional results.",
+    twitterUrl: "https://twitter.com/MasterBlox_io",
+    websiteUrl: "https://www.masterblox.io/",
+    category: "Blockchain Security",
+    logoWidth: 60,
+    logoHeight: 60,
+  },
 ];
 
 const cloudComputing = [

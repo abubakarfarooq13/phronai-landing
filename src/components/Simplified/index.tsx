@@ -99,9 +99,9 @@ export default function SimplifiedSection() {
             fontWeight="500"
             mb={2}
           >
-            Smart Contracts, Audits & AI{" "}
+            Effortless Smart Contract Creation, Audits & AI Guidance{" "}
             <Box as="br" display={{ base: "none", md: "block" }} />
-            Simplified with openPhron
+            All in One with openPhron
           </Text>
           <Text
             color="#321c75"

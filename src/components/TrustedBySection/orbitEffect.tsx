@@ -27,7 +27,7 @@ export default function TrustedBySection() {
   const isMobile = useBreakpointValue({ base: true, md: false });
 
   // Adjust orbit size based on screen width
-  const orbitRadii = isMobile ? [180, 280] : [250, 380]; // Smaller for mobile
+  const orbitRadii = isMobile ? [170, 270] : [250, 350]; // Smaller for mobile
 
   return (
     <Flex
@@ -87,15 +87,15 @@ export default function TrustedBySection() {
             borderRadius="xl"
             position="absolute"
             p={{ base: 0, md: 3 }}
-            bg="rgba(255,255,255,0.3)"
-            boxShadow="lg"
+            // bg="rgba(255,255,255,0.3)"
+            // boxShadow="lg"
             display="flex"
             alignItems="center"
             justifyContent="center"
             w={isMobile ? "40px" : "60px"} // Smaller logos on mobile
             h={isMobile ? "40px" : "60px"}
             animation={`${orbitIndex === 0 ? antiClockwise : animation} ${
-              40 + orbitIndex * 20
+              48 + orbitIndex * 10
             }s linear infinite`}
             style={{
               animationDelay: `${index * (isMobile ? 1 : 1)}s`, // More delay on mobile
