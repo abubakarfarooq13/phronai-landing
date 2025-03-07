@@ -40,7 +40,8 @@ export default function PhronAISuite() {
         mb="5"
       >
         Deploy AI models, launch smart contracts, and interact with AI
-        agents-all while earning a <Box as="br" />
+        agents-all while earning a{" "}
+        <Box as="br" display={{ base: "none", lg: "block" }} />
         share of the supply through openPhron.
       </Text>
       <Fade bottom>

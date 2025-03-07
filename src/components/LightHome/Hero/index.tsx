@@ -86,7 +86,7 @@ const Hero = () => {
           <Text
             as="h1"
             lineHeight="110%"
-            fontSize={{ base: "32px", md: "70px" }}
+            fontSize={{ base: "32px", md: "60px", lg: "70px" }}
             fontWeight="500"
           >
             AI-Powered for Builders.
@@ -95,10 +95,10 @@ const Hero = () => {
           <Text mt="10px" fontSize={{ base: "16px", md: "24px" }}>
             Train AI models and earn from the network. Launch L1s, deploy smart
             contract,
-            <Box as="br" display={{ base: "none", md: "block" }} />
+            <Box as="br" display={{ base: "none", lg: "block" }} />
             leverage AI Agents to manage your contract, and create AI-powered
             Oracles.
-            <Box as="br" display={{ base: "none", md: "block" }} /> All with
+            <Box as="br" display={{ base: "none", lg: "block" }} /> All with
             just a promt.
           </Text>
           <Flex
