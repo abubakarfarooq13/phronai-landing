@@ -14,6 +14,12 @@ import { FiArrowUpRight } from "react-icons/fi";
 import { motion } from "framer-motion";
 import { useState } from "react";
 
+const rotating = keyframes`
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(45deg); }
+  100% { transform: rotate(0deg); }
+`;
+
 const MotionWrapItem = motion(WrapItem);
 const MotionBox = motion(Box);
 
@@ -62,8 +68,8 @@ export default function PartnerCards() {
     {
       title: "Nodes",
       imageSrc: "/assets/newPartners/layerbox1.png",
-      width: 70,
-      height: 70,
+      width: 85,
+      height: 85,
       link: "#",
     },
   ];
@@ -165,8 +171,13 @@ function IconWithSparkles({ imageSrc, title, width, height, isHovered }: any) {
       {isHovered && sparkles.map((s, i) => <Sparkle key={i} {...s} />)}
 
       <MotionBox
-        animate={{ scale: isHovered ? [1, 1.1, 1] : 1 }}
+        // animate={{ scale: isHovered ? [1, 1.1, 1] : 1 }}
+        animate={{
+          scale: isHovered ? 1.1 : 1,
+          rotate: isHovered ? [0, 45, 0] : 0, // Smooth rotation using an array
+        }}
         transition={{ duration: 0.6 }}
+        animation={`${rotating} 10s ease-in-out infinite`}
       >
         <Image
           src={imageSrc || "/placeholder.svg"}
@@ -176,7 +187,7 @@ function IconWithSparkles({ imageSrc, title, width, height, isHovered }: any) {
           style={{
             filter: isHovered ? "brightness(1.1)" : "brightness(1)",
             transition: "all 0.3s ease",
-            transform: isHovered ? "rotate(45deg)" : "",
+            // transform: isHovered ? "rotate(45deg)" : "",
           }}
         />
       </MotionBox>
