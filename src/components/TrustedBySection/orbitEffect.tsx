@@ -31,6 +31,9 @@ export default function TrustedBySection() {
 
   return (
     <Flex
+      bgImage="/assets/partners/trusted-bg.png"
+      bgPos="center"
+      bgSize="cover"
       justifyContent="center"
       alignItems="center"
       position="relative"
@@ -40,16 +43,16 @@ export default function TrustedBySection() {
       minH="900px"
       mt="16"
       mb="10"
-      _after={{
-        content: `""`,
-        bgGradient: "linear(to-br, #e6f7ff, #f0e6ff)",
-        filter: "blur(8px)",
-        position: "absolute",
-        top: 0,
-        left: 0,
-        right: 0,
-        bottom: 0,
-      }}
+      // _after={{
+      //   content: `""`,
+      //   bgImage: "linear(to-br, #e6f7ff, #f0e6ff)",
+      //   filter: "blur(8px)",
+      //   position: "absolute",
+      //   top: 0,
+      //   left: 0,
+      //   right: 0,
+      //   bottom: 0,
+      // }}
       overflow="hidden"
     >
       {/* Central Trusted By Text */}
