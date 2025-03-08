@@ -30,9 +30,9 @@ const Partners = [
   },
   {
     id: 3,
-    image: "/assets/newPartners/hacken.png",
-    width: 110,
-    height: 40,
+    image: "/assets/newPartners/hacken-new.png",
+    width: 30,
+    height: 30,
   },
   {
     id: 4,

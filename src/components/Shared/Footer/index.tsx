@@ -26,42 +26,42 @@ import { FaYoutube } from "react-icons/fa";
 import TrustedBySection from "@/components/NewHome/TrustedBySection";
 
 export const footerMenu = [
-  {
-    id: 1,
-    title: "Layer 1/Layer 0",
-    menu: [
-      // {
-      //   id: 1,
-      //   label: "Layer 1",
-      //   href: "/chain",
-      // },
-      // {
-      //   id: 2,
-      //   label: "Layer 0",
-      //   href: "/phronzero",
-      // },
-      // {
-      //   id: 3,
-      //   label: "Phron Coin",
-      //   href: "/phron",
-      // },
-      {
-        id: 4,
-        label: "Ecosystem",
-        href: "/ecosystem",
-      },
-      {
-        id: 5,
-        label: "Team",
-        href: "/team",
-      },
-      {
-        id: 5,
-        label: "RoadMap",
-        href: "/roadmap",
-      },
-    ],
-  },
+  // {
+  //   id: 1,
+  //   title: "Layer 1/Layer 0",
+  //   menu: [
+  //     // {
+  //     //   id: 1,
+  //     //   label: "Layer 1",
+  //     //   href: "/chain",
+  //     // },
+  //     // {
+  //     //   id: 2,
+  //     //   label: "Layer 0",
+  //     //   href: "/phronzero",
+  //     // },
+  //     // {
+  //     //   id: 3,
+  //     //   label: "Phron Coin",
+  //     //   href: "/phron",
+  //     // },
+  //     {
+  //       id: 4,
+  //       label: "Ecosystem",
+  //       href: "/ecosystem",
+  //     },
+  //     {
+  //       id: 5,
+  //       label: "Team",
+  //       href: "/team",
+  //     },
+  //     {
+  //       id: 5,
+  //       label: "RoadMap",
+  //       href: "/roadmap",
+  //     },
+  //   ],
+  // },
   {
     id: 2,
     title: "Build",
@@ -99,24 +99,45 @@ export const footerMenu = [
       // },
     ],
   },
+  {
+    id: 4,
+    title: "Community",
+    menu: [
+      {
+        id: 1,
+        label: "Partnerships",
+        href: "/partnerships",
+      },
+      {
+        id: 2,
+        label: "Voyage Airdrop",
+        href: "https://voyage.phron.ai",
+      },
+      {
+        id: 3,
+        label: "Phrony",
+        href: "/phrony",
+      },
+    ],
+  },
   // {
-  //   id: 4,
-  //   title: "Community",
+  //   id: 5,
+  //   title: "Papers",
   //   menu: [
   //     {
   //       id: 1,
-  //       label: "News",
-  //       href: "#",
+  //       label: "Whitepaper",
+  //       href: "https://phron.ai/whitepaper_pure.pdf",
   //     },
   //     {
   //       id: 2,
-  //       label: "Events",
-  //       href: "#",
+  //       label: "Tokenomics",
+  //       href: "https://phron.ai/tokenomics.pdf",
   //     },
   //   ],
   // },
   {
-    id: 4,
+    id: 6,
     title: "Company",
     menu: [
       {
@@ -124,11 +145,11 @@ export const footerMenu = [
         label: "Brand Assets",
         href: "/brand-assets",
       },
-      {
-        id: 1,
-        label: "Partnerships",
-        href: "/partnerships",
-      },
+      // {
+      //   id: 1,
+      //   label: "Partnerships",
+      //   href: "/partnerships",
+      // },
       // {
       //   id: 1,
       //   label: "Partnerships",
