@@ -26,11 +26,11 @@ export default function Home() {
       ></Script>
       {/* <Script defer type="module" src="/canvas.js"></Script> */}
       <Head>
-        <title>Welcome to PhronAI</title>
+        <title>AI-Powered for Builders. One Prompt for Everyone.</title>
         <meta
           name="description"
           // content="One step beyond with artificial intelligence, bringing the first AI Layer 0 Platform. Create your Layer 1 Blockchain in minutes."
-          content="From Static to Dynamic with AI-Powered Consensus."
+          content="Train AI models and earn from the network. Launch L1s, deploy smart contract,leverage AI Agents to manage your contract, and create AI-powered Oracles. All with just a promt."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
