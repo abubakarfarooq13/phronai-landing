@@ -155,7 +155,7 @@ export default function FooterLighter() {
             pb="10"
             display={{ base: "grid", lg: "none" }}
             gap="5"
-            rowGap="16"
+            rowGap={{ base: "25px", md: "16" }}
           >
             {footerMenu.map((menu) => (
               <GridItem key={menu.id}>
@@ -186,7 +186,7 @@ export default function FooterLighter() {
             alignItems={{ base: "center", md: "flex-start" }}
             // flexWrap="wrap"
             spacing="0"
-            pt="10"
+            pt={{ lg: "10" }}
           >
             {footerMenu.map((menu) => (
               <VStack
