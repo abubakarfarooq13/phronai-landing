@@ -20,6 +20,7 @@ import {
   useColorModeValue,
   GridItem,
 } from "@chakra-ui/react";
+import LoadingAnimation from "./Loading";
 
 // Define the types for our blockchain stats
 interface BlockchainStats {
@@ -425,9 +426,11 @@ export default function Testnet() {
                     ${gasusd}
                   </Text>
                 </Flex>
-                <Text whiteSpace="nowrap" fontSize="sm" color="#321b7a" mt={4}>
-                  Time to Finality (Seconds)
-                </Text>
+                {/* <Text whiteSpace="nowrap" fontSize="sm" color="#321b7a" mt={4}>
+                  Time to Finality (Seconds)</Text> */}
+                <Box mt="4">
+                  <LoadingAnimation />
+                </Box>
               </Flex>
             </Box>
           </Flex>

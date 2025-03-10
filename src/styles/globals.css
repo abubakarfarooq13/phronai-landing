@@ -1167,6 +1167,12 @@ nav {
     /* color: #40ffaa; */
      transform: translateX(5px);
   }
+  .loadingfee{
+    width: 8px;
+    height:8px;
+    background-color: #321b7a;
+    border-radius: 99px;
+  }
   .hero{
     /* // display: "flex",
     // justifyContent: "center", */
