@@ -157,7 +157,7 @@ export const papersMenuItems = [
   {
     id: 12,
     label: "Tokenomics",
-    href: "https://phron.ai/tokenomics.pdf",
+    href: "https://docs.google.com/spreadsheets/d/1o8JeuNIF0ndVOQIKgwBqYLGVn5MlJAhGQ7OSbP5uK2s/edit?gid=625571203#gid=625571203 ",
     icon: "/assets/new-home/docs-icon.png",
   },
 ];
