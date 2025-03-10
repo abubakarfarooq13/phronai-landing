@@ -149,7 +149,7 @@ export default function PhronAISuite() {
         <Fade bottom>
           <Box position="relative" mt={{ base: "0", md: "10" }}>
             <Image
-              src="/assets/light-theme-home/suit-graph-1.png"
+              src="/assets/light-theme-home/suite-graph-1-.png"
               alt="open phron graph"
               width={290}
               height={400}
@@ -246,7 +246,7 @@ export default function PhronAISuite() {
               </Box>
             </Box>
             <Image
-              src="/assets/light-theme-home/suit-graph-2.png"
+              src="/assets/light-theme-home/suite-graph-2-.png"
               alt="open phron graph"
               width={420}
               height={400}
@@ -328,7 +328,7 @@ export default function PhronAISuite() {
         <Fade bottom>
           <Box position="relative" mt={{ base: "0", md: "10" }}>
             <Image
-              src="/assets/light-theme-home/suit-graph-3.png"
+              src="/assets/light-theme-home/suite-graph-3-.png"
               alt="open phron graph"
               width={290}
               height={400}
