@@ -279,7 +279,9 @@ export default function Companies() {
             </motion.div>
           ))}
         </Flex> */}
-        <Box
+        <Flex
+          justifyContent="center"
+          alignItems="center"
           maxW="1200px"
           mx="auto"
           position="relative"
@@ -287,22 +289,7 @@ export default function Companies() {
           overflow="hidden"
           height="96px"
         >
-          <Marquee
-            speed={70}
-            // position="absolute"
-            // whiteSpace="nowrap"
-            // animate={{
-            //   x: ["0%", "-100%"],
-            // }}
-            // transition={{
-            //   x: {
-            //     repeat: Infinity,
-            //     repeatType: "loop",
-            //     duration: 20,
-            //     ease: "linear",
-            //   },
-            // }}
-          >
+          <Marquee style={{ overflow: "hidden" }} speed={70}>
             {/* Duplicate the logos to create a seamless loop */}
             {[...companiesone, ...companiesone].map((logo, index) => (
               <Flex
@@ -324,10 +311,12 @@ export default function Companies() {
               </Flex>
             ))}
           </Marquee>
-        </Box>
+        </Flex>
 
         {/* Second row - moving left to right (opposite direction) */}
-        <Box
+        <Flex
+          justifyContent="center"
+          alignItems="center"
           maxW="1200px"
           mx="auto"
           position="relative"
@@ -335,23 +324,7 @@ export default function Companies() {
           overflow="hidden"
           height="96px"
         >
-          <Marquee
-            speed={70}
-            direction="right"
-            // position="absolute"
-            // whiteSpace="nowrap"
-            // animate={{
-            //   x: ["-100%", "0%"],
-            // }}
-            // transition={{
-            //   x: {
-            //     repeat: Infinity,
-            //     repeatType: "loop",
-            //     duration: 20,
-            //     ease: "linear",
-            //   },
-            // }}
-          >
+          <Marquee style={{ overflow: "hidden" }} speed={70} direction="right">
             {/* Duplicate the logos to create a seamless loop */}
             {[...companiestwo, ...companiestwo].map((logo, index) => (
               <Flex
@@ -372,7 +345,7 @@ export default function Companies() {
               </Flex>
             ))}
           </Marquee>
-        </Box>
+        </Flex>
       </Container>
     </Box>
   );

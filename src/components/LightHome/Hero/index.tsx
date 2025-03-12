@@ -105,7 +105,7 @@ const Hero = () => {
             leverage AI Agents to manage your contract, and create AI-powered
             Oracles.
             <Box as="br" display={{ base: "none", lg: "block" }} /> All with
-            just a promt.
+            just a prompt.
           </Text>
           <Flex
             gap="20px"

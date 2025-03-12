@@ -76,7 +76,7 @@ export default function PhronAISuite() {
             </Box>
           </Box>
           <Image
-            src="/assets/light-theme-home/suit-graph-2.png"
+            src="/assets/light-theme-home/suite-graph-2-.png"
             alt="open phron graph"
             width={420}
             height={400}
