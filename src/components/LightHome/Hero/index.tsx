@@ -40,12 +40,12 @@ const Partners = [
     width: 120,
     height: 40,
   },
-  {
-    id: 5,
-    image: "/assets/newPartners/ibc.png",
-    width: 120,
-    height: 40,
-  },
+  // {
+  //   id: 5,
+  //   image: "/assets/newPartners/ibc.png",
+  //   width: 120,
+  //   height: 40,
+  // },
   {
     id: 6,
     image: "/assets/newPartners/metabrand.png",
@@ -99,8 +99,8 @@ const Hero = () => {
             <Box as="br" /> One Prompt for Everyone.
           </Text>
           <Text mt="10px" fontSize={{ base: "16px", md: "24px" }}>
-            Train AI models and earn from the network. Launch L1s, deploy smart
-            contract,
+            Train AI models and earn from the network. Launch dApps, deploy
+            smart contract,
             <Box as="br" display={{ base: "none", lg: "block" }} />
             leverage AI Agents to manage your contract, and create AI-powered
             Oracles.
