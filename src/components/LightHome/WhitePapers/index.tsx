@@ -24,12 +24,12 @@ const whitepapers = [
   //   href: "#",
   //   bgSrc: "/assets/light-theme-home/whitepapers/whitepaper-royal-bg.png",
   // },
-  {
-    id: 3,
-    label: "Tokenomics",
-    href: "https://phron.ai/tokenomics.pdf",
-    bgSrc: "/assets/light-theme-home/whitepapers/tokenomics-bg.png",
-  },
+  // {
+  //   id: 3,
+  //   label: "Tokenomics",
+  //   href: "https://phron.ai/tokenomics.pdf",
+  //   bgSrc: "/assets/light-theme-home/whitepapers/tokenomics-bg.png",
+  // },
 ];
 
 const Fade = require("react-reveal/Fade");

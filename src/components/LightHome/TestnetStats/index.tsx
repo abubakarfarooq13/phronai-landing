@@ -28,7 +28,7 @@ interface BlockchainStats {
   averageBlockTime: number;
   transactionsProcessed: number;
   transactionsPerSecond: number;
-  timeToFinality: number;
+  timeToFinality: string | any;
   gasPerSecond: any;
   transactionsPerDay: number;
 }
@@ -58,13 +58,14 @@ export default function Testnet() {
     averageBlockTime: 0,
     transactionsProcessed: 0,
     transactionsPerSecond: 0,
-    timeToFinality: 0,
+    timeToFinality: "",
     gasPerSecond: "",
     transactionsPerDay: 0,
   });
   const [isConnected, setIsConnected] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [gasusd, setGasusd] = useState<number | null>(null);
+  const [finality, setFinality] = useState<number | null>(null);
   // Chakra UI color mode values
   const cardBg = useColorModeValue("white", "gray.800");
   // const textColor = useColorModeValue("indigo.900", "white");
@@ -73,6 +74,7 @@ export default function Testnet() {
     0.00051, 0.00041, 0.00043, 0.00055, 0.00051, 0.00058, 0.00078, 0.00091,
     0.00047,
   ];
+  const timeToFinality = [0.8, 0.96, 0.68, 0.76, 0.71, 0.9, 0.82, 0.7];
   useEffect(() => {
     let provider: ethers.JsonRpcProvider | null = null;
     let interval: NodeJS.Timeout;
@@ -115,7 +117,7 @@ export default function Testnet() {
         const tps = txCount / blockTime;
 
         // Estimate total transactions (simplified calculation)
-        const totalTx = blockNumber * 3; // Assuming average 2300 tx per block
+        const totalTx = blockNumber * 2; // Assuming average 2300 tx per block
         // const timeToFinality = Math.random();
         const gasPerSecond = latestBlock.gasUsed;
         // const latestTransaction = await latestBlock.getTransaction(0);
@@ -129,13 +131,18 @@ export default function Testnet() {
           setGasusd(sampleValues[randomIndex]);
         };
         showRandomValue();
+        const timeFinality = () => {
+          const randomIndex = Math.floor(Math.random() * timeToFinality.length);
+          setFinality(timeToFinality[randomIndex]);
+        };
+        timeFinality();
         // Update the stats
         setStats({
           blockNumber,
           averageBlockTime: blockTime,
           transactionsProcessed: totalTx,
           transactionsPerSecond: tps,
-          timeToFinality: 0.86,
+          timeToFinality: finality,
           gasPerSecond: gasPerSecond,
           transactionsPerDay: Math.round(tps * 86400), // tps * seconds in a day
         });
@@ -317,9 +324,7 @@ export default function Testnet() {
                   <Text color="#321b7a" fontWeight="medium">
                     Time to finality
                   </Text>
-                  <Text fontWeight="medium">
-                    {stats.timeToFinality.toFixed(2)}s
-                  </Text>
+                  <Text fontWeight="medium">{finality}s</Text>
                 </Flex>
                 <Divider />
                 <Flex justify="space-between">

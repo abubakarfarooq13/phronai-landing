@@ -154,12 +154,12 @@ export const papersMenuItems = [
   //   href: "https://phron.ai/whitepaper_royal.pdf",
   //   icon: "/assets/new-home/docs-icon.png",
   // },
-  {
-    id: 12,
-    label: "Tokenomics",
-    href: "https://docs.google.com/spreadsheets/d/1o8JeuNIF0ndVOQIKgwBqYLGVn5MlJAhGQ7OSbP5uK2s/edit?gid=625571203#gid=625571203 ",
-    icon: "/assets/new-home/docs-icon.png",
-  },
+  // {
+  //   id: 12,
+  //   label: "Tokenomics",
+  //   href: "https://docs.google.com/spreadsheets/d/1o8JeuNIF0ndVOQIKgwBqYLGVn5MlJAhGQ7OSbP5uK2s/edit?gid=625571203#gid=625571203 ",
+  //   icon: "/assets/new-home/docs-icon.png",
+  // },
 ];
 
 export const navItems = [
