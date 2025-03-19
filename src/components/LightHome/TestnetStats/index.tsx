@@ -74,7 +74,7 @@ export default function Testnet() {
     0.00051, 0.00041, 0.00043, 0.00055, 0.00051, 0.00058, 0.00078, 0.00091,
     0.00047,
   ];
-  const timeToFinality = [0.8, 0.96, 0.68, 0.76, 0.71, 0.9, 0.82, 0.7];
+  const timeToFinality = [0.83, 0.83,0.83, 0.83, 0.68, 0.68, 0.68, 0.68, 0.71, 0.71,0.71, 0.71, 0.82, 0.82,0.82, 0.82];
   useEffect(() => {
     let provider: ethers.JsonRpcProvider | null = null;
     let interval: NodeJS.Timeout;
@@ -142,7 +142,7 @@ export default function Testnet() {
           averageBlockTime: blockTime,
           transactionsProcessed: totalTx,
           transactionsPerSecond: tps,
-          timeToFinality: finality,
+          timeToFinality: "0.86",
           gasPerSecond: gasPerSecond,
           transactionsPerDay: Math.round(tps * 86400), // tps * seconds in a day
         });
@@ -324,7 +324,7 @@ export default function Testnet() {
                   <Text color="#321b7a" fontWeight="medium">
                     Time to finality
                   </Text>
-                  <Text fontWeight="medium">{finality}s</Text>
+                  <Text fontWeight="medium">{stats.timeToFinality}s</Text>
                 </Flex>
                 <Divider />
                 <Flex justify="space-between">
