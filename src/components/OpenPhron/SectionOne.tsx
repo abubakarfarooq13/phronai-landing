@@ -7,7 +7,7 @@ const Fade = require("react-reveal/Fade");
 
 const SectionOne = () => {
   return (
-    <Box>
+    <Box mt={{ base: "-20px", md: "-60px" }}>
       <Box
       // bgImage="/assets/open-phron/bg.png" bgPos="center" bgSize="cover"
       >

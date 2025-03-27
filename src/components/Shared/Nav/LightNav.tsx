@@ -243,7 +243,8 @@ export function SubMenu(props: any) {
                         item.noStyle
                           ? {}
                           : {
-                              filter: "invert(1)",
+                              filter:
+                                " brightness(0) saturate(100%) invert(11%) sepia(81%) saturate(2731%) hue-rotate(248deg) brightness(93%) contrast(102%)",
                             }
                       }
                     />
@@ -259,7 +260,7 @@ export function SubMenu(props: any) {
                       boxShadow: "none",
                     }}
                     // bgColor={router.pathname === item.href ? "#0e0023" : "none"}
-                    color="#000"
+                    color="#321b7a"
                     fontSize={{ base: "17px", "3000px": "lg" }}
                     fontWeight={500}
                   >
@@ -308,45 +309,48 @@ export default function Nav() {
     const body = document.body;
     let lastScroll = 0;
 
-    window.addEventListener("scroll", () => {
+    const handleScroll = () => {
       const currentScroll = window.scrollY;
-      if (currentScroll > 0 && navRef.current) {
-        navRef.current.style.backgroundColor = "#fff";
-      }
-      if (currentScroll <= 0 && navRef.current) {
-        navRef.current.style.backgroundColor = "#fff";
+
+      // Navbar background
+      if (navRef.current) {
+        navRef.current.style.backgroundColor = "#fff"; // Always white in your logic
       }
 
-      if (currentScroll > 10 && logoRef.current) {
+      // Logo size
+      if (logoRef.current) {
         logoRef.current.style.maxWidth =
-          router.pathname === "/phronzero" ? "180px" : "166px";
+          router.pathname === "/phronzero"
+            ? currentScroll > 10
+              ? "180px"
+              : "280px"
+            : currentScroll > 10
+            ? "166px"
+            : "170px";
       }
 
-      if (currentScroll <= 0 && logoRef.current) {
-        logoRef.current.style.maxWidth =
-          router.pathname === "/phronzero" ? "280px" : "170px";
+      // Label size
+      if (labelsRef.current) {
+        labelsRef.current.style.fontSize = currentScroll > 10 ? "17px" : "19px";
       }
 
-      if (currentScroll > 10 && labelsRef.current) {
-        labelsRef.current.style.fontSize = "17px";
+      // Connect button
+      if (connectButtonRef.current) {
+        connectButtonRef.current.style.maxWidth =
+          currentScroll > 0 ? "190px" : "240px";
+        connectButtonRef.current.style.fontSize = "16px"; // Same in both conditions
       }
+    };
 
-      if (currentScroll <= 0 && labelsRef.current) {
-        labelsRef.current.style.fontSize = "19px";
-      }
+    window.addEventListener("scroll", handleScroll);
 
-      if (currentScroll > 0 && connectButtonRef.current) {
-        // connectButtonRef.current.style.height = "40px";
-        connectButtonRef.current.style.maxWidth = "190px";
-        connectButtonRef.current.style.fontSize = "16px";
-      }
+    // Trigger once on mount
+    handleScroll();
 
-      if (currentScroll <= 0 && connectButtonRef.current) {
-        // connectButtonRef.current.style.height = "50px";
-        connectButtonRef.current.style.maxWidth = "240px";
-        connectButtonRef.current.style.fontSize = "16px";
-      }
-    });
+    // Clean up on unmount
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   console.log(labelsRef);
@@ -367,7 +371,7 @@ export default function Nav() {
         pt={{ base: "5", xl: "0" }}
         pb={{ base: "5", xl: "0" }}
         mx="auto"
-        color="#000"
+        color="#321b7a"
         w="full"
         transition="all 300ms ease-in-out"
         position="relative"
@@ -413,7 +417,9 @@ export default function Nav() {
                   boxShadow="none"
                   px="3"
                   color={
-                    item.items?.includes(router.pathname) ? "#9e5aff" : "#000"
+                    item.items?.includes(router.pathname)
+                      ? "#9e5aff"
+                      : "#321b7a"
                   }
                   cursor="pointer"
                   // fontSize="2xl"

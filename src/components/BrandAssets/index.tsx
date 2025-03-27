@@ -12,6 +12,7 @@ import {
   Stack,
   Button,
   useClipboard,
+  Flex,
 } from "@chakra-ui/react";
 
 const Fade = require("react-reveal/Fade");
@@ -20,53 +21,53 @@ const logos = [
   {
     id: 1,
     name: "PhronAI Logo White",
-    logoSrc: "/assets/brand-assets/phronai-logo.svg",
+    logoSrc: "/assets/brand-assets/phronai-white.svg",
     isBlack: false,
-    pngDownloadLink: "/assets/brand-assets/phronai-logo.png",
-    svgDownloadLink: "/assets/brand-assets/phronai-logo.svg",
+    pngDownloadLink: "/assets/brand-assets/phronai-white.png",
+    svgDownloadLink: "/assets/brand-assets/phronai-white.svg",
     width: 200,
     height: 200,
   },
 
   {
     id: 3,
-    name: "PhronAI Logo Black",
-    logoSrc: "/assets/brand-assets/phronai-logo-black.svg",
+    name: "PhronAI Logo Blue",
+    logoSrc: "/assets/brand-assets/phronai-blue.svg",
     isBlack: true,
-    pngDownloadLink: "/assets/brand-assets/phronai-logo-black.png",
-    svgDownloadLink: "/assets/brand-assets/phronai-logo-black.svg",
+    pngDownloadLink: "/assets/brand-assets/phronai-blue.png",
+    svgDownloadLink: "/assets/brand-assets/phronai-blue.svg",
     width: 200,
     height: 200,
   },
-  {
-    id: 2,
-    name: "PhronZero Logo White",
-    logoSrc: "/assets/brand-assets/phronzero-white.svg",
-    isBlack: false,
-    pngDownloadLink: "/assets/brand-assets/phronzero-white.png",
-    svgDownloadLink: "/assets/brand-assets/phronzero-white.svg",
-    width: 250,
-    height: 200,
-  },
-  {
-    id: 3,
-    name: "PhronZero Logo Black",
-    logoSrc: "/assets/brand-assets/phronzero-black.svg",
-    isBlack: true,
-    pngDownloadLink: "/assets/brand-assets/phronzero-black.png",
-    svgDownloadLink: "/assets/brand-assets/phronzero-black.svg",
-    width: 250,
-    height: 200,
-  },
+  // {
+  //   id: 2,
+  //   name: "PhronZero Logo White",
+  //   logoSrc: "/assets/brand-assets/phronzero-white.svg",
+  //   isBlack: false,
+  //   pngDownloadLink: "/assets/brand-assets/phronzero-white.png",
+  //   svgDownloadLink: "/assets/brand-assets/phronzero-white.svg",
+  //   width: 250,
+  //   height: 200,
+  // },
+  // {
+  //   id: 3,
+  //   name: "PhronZero Logo Black",
+  //   logoSrc: "/assets/brand-assets/phronzero-black.svg",
+  //   isBlack: true,
+  //   pngDownloadLink: "/assets/brand-assets/phronzero-black.png",
+  //   svgDownloadLink: "/assets/brand-assets/phronzero-black.svg",
+  //   width: 250,
+  //   height: 200,
+  // },
 ];
 
 const tokenIcons = [
   {
     id: 1,
     name: "PhronAI Token",
-    logoSrc: "/assets/brand-assets/logo-icon.svg",
-    pngDownloadLink: "/assets/brand-assets/logo-icon.png",
-    svgDownloadLink: "/assets/brand-assets/logo-icon.svg",
+    logoSrc: "/assets/brand-assets/logo-icon-new.png",
+    pngDownloadLink: "/assets/brand-assets/logo-icon-new.png",
+    svgDownloadLink: "/assets/brand-assets/logo-icon-new.png",
   },
 ];
 
@@ -102,14 +103,15 @@ export default function CBrandAssets() {
             gridTemplateColumns={{
               base: "repeat(1, 1fr)",
               sm: "repeat(2, 1fr)",
-              md: "repeat(3, 1fr)",
+              md: "repeat(2, 1fr)",
             }}
             gap="14"
             mb="16"
           >
             {logos.map((logo) => (
               <GridItem key={logo.id}>
-                <Box
+                <Flex
+                  justifyContent={"center"}
                   bgColor={logo.isBlack ? "#fff" : "#000"}
                   rounded="lg"
                   px="4"
@@ -131,7 +133,7 @@ export default function CBrandAssets() {
                       alt={logo.name + " logo"}
                     />
                   </Box>
-                </Box>
+                </Flex>
                 <HStack alignItems="flex-end" justifyContent="space-between">
                   <Text className="text-center" mt="2">
                     {logo.name}
@@ -257,9 +259,9 @@ export default function CBrandAssets() {
                 rounded="xl"
                 pb="2"
               >
-                <Box bgColor="#5756f4" py="6" w="full" rounded="xl">
+                <Box bgColor="#321b7a" py="6" w="full" rounded="xl">
                   <Text textAlign="center" fontSize="lg" color="#fff">
-                    #5756f4
+                    #321b7a
                   </Text>
                 </Box>
                 <Text
@@ -384,18 +386,21 @@ export default function CBrandAssets() {
               maxW="350px"
             >
               <Text fontSize="2xl" as="h4">
-                Ruberoid
+                Urbanist
               </Text>
               <Text
                 fontSize="sm"
-                style={{ fontFamily: "var(--font-ruberoid)" }}
+                // style={{ fontFamily: "var(--font-ruberoid)" }}
               >
-                Ruberoid is a squarish geometric sans-serif family reminiscent
-                of Italian designs of 1950s and 1960s, but featuring
-                considerably rounder shapes to give it a more contemporary feel.
+                Urbanist is a low-contrast, geometric sans-serif inspired by
+                Modernist typography and design. The project was launched by
+                Corey Hu in 2020 with 9 weights and accompanying italics.
+                Conceived from elementary shapes, Urbanist&apos;s neutrality
+                makes it a versatile display font for print and digital mediums.
+                It is currently available as a variable font with a weight axis.
               </Text>
             </VStack>
-            <VStack
+            {/* <VStack
               align={{ base: "center", sm: "start" }}
               textAlign={{ base: "center", sm: "left" }}
               w="full"
@@ -406,7 +411,7 @@ export default function CBrandAssets() {
                 Inter is a variable font family carefully crafted & designed for
                 computer screens.
               </Text>
-            </VStack>
+            </VStack> */}
           </Stack>
         </Container>
       </Box>

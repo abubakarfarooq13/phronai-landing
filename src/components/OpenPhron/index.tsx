@@ -9,7 +9,10 @@ const OpenPhron = () => {
   return (
     <>
       <LightNav />
-      <Box pb='20' backgroundImage="linear-gradient(180deg,#e5e5f3,#ffffff,#ffffff,#ffffff)">
+      <Box
+        pb="20"
+        backgroundImage="linear-gradient(180deg,#e5e5f3,#ffffff,#ffffff,#ffffff)"
+      >
         <SectionOne />
         <SectionTwo />
         <SectionThree />

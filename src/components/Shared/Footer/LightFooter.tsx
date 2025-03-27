@@ -123,7 +123,7 @@ export default function FooterLighter() {
                 <Text
                   as="span"
                   fontSize={{ base: "22px", md: "34px", lg: "44px" }}
-                  color="#000"
+                  color="#321b7a"
                 >
                   <social.icon />
                 </Text>
@@ -160,14 +160,16 @@ export default function FooterLighter() {
             {footerMenu.map((menu) => (
               <GridItem key={menu.id}>
                 <VStack spacing="4" fontSize="sm" align="center">
-                  <Text fontWeight={500}>{menu.title}</Text>
+                  <Text color="#321b7a" fontWeight={600}>
+                    {menu.title}
+                  </Text>
                   {menu.menu.map((item) => (
                     <Text
                       as={Link}
                       _hover={{
-                        color: "#fff",
+                        color: "#c34bfb",
                       }}
-                      color="#909090"
+                      color="#4c329b"
                       key={item.id}
                       href={item.href}
                     >
@@ -198,14 +200,16 @@ export default function FooterLighter() {
                 w="full"
                 // minW="200px"
               >
-                <Text fontWeight={500}>{menu.title}</Text>
+                <Text color="#321b7a" fontWeight={600}>
+                  {menu.title}
+                </Text>
                 {menu.menu.map((item) => (
                   <Text
                     as={Link}
                     _hover={{
-                      color: "#000",
+                      color: "#c34bfb",
                     }}
-                    color="#909090"
+                    color="#4c329b"
                     key={item.id}
                     href={item.href}
                   >
@@ -248,7 +252,7 @@ export default function FooterLighter() {
           >
             <DarkLogo />
             <Text
-              color="#909090"
+              color="#321b7a"
               textAlign="center"
               fontSize={{ base: "sm", "2340px": "lg" }}
             >

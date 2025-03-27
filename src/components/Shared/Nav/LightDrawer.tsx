@@ -51,7 +51,7 @@ export default function MobileDrawer(props: MobileDrawerProps) {
     <>
       <Drawer isOpen={isOpen} placement="right" onClose={onClose}>
         <DrawerOverlay />
-        <DrawerContent bgColor="#fff" color="#000">
+        <DrawerContent bgColor="#fff" color="#321b7a">
           <DrawerCloseButton
             _focus={{
               boxShadow: "none",
@@ -152,7 +152,8 @@ export default function MobileDrawer(props: MobileDrawerProps) {
                             width={20}
                             height={20}
                             style={{
-                              filter: "invert(1)",
+                              filter:
+                                "brightness(0) saturate(100%) invert(11%) sepia(81%) saturate(2731%) hue-rotate(248deg) brightness(93%) contrast(102%)",
                             }}
                           />
                           <Text
@@ -206,7 +207,8 @@ export default function MobileDrawer(props: MobileDrawerProps) {
                             width={20}
                             height={20}
                             style={{
-                              filter: "invert(1)",
+                              filter:
+                                "brightness(0) saturate(100%) invert(11%) sepia(81%) saturate(2731%) hue-rotate(248deg) brightness(93%) contrast(102%)",
                             }}
                           />
                         ) : (
@@ -266,7 +268,8 @@ export default function MobileDrawer(props: MobileDrawerProps) {
                               item.noStyle
                                 ? {}
                                 : {
-                                    filter: "invert(1)",
+                                    filter:
+                                      "brightness(0) saturate(100%) invert(11%) sepia(81%) saturate(2731%) hue-rotate(248deg) brightness(93%) contrast(102%)",
                                   }
                             }
                             alt="icon"
@@ -325,7 +328,8 @@ export default function MobileDrawer(props: MobileDrawerProps) {
                           width={20}
                           height={20}
                           style={{
-                            filter: "invert(1)",
+                            filter:
+                              "brightness(0) saturate(100%) invert(11%) sepia(81%) saturate(2731%) hue-rotate(248deg) brightness(93%) contrast(102%)",
                           }}
                         />
                         <Text
