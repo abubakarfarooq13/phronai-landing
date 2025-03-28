@@ -59,9 +59,15 @@ const Partners = [
     height: 40,
   },
   {
-    id: 7,
+    id: 8,
     image: "/assets/newPartners/masterblox.png",
     width: 150,
+    height: 10,
+  },
+  {
+    id: 9,
+    image: "/assets/newPartners/aethir.png",
+    width: 100,
     height: 10,
   },
 ];

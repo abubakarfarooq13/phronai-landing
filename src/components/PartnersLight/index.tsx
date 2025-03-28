@@ -778,6 +778,19 @@ const gameFi = [
     },
     category: "GameFi",
   },
+  // {
+  //   id: 39,
+  //   name: "Aethir",
+  //   imageSrc: "/assets/partners/aethir.svg",
+  //   description:
+  //     "Accelerate growth and get closer to the edge with Aethir's distributed cloud compute infrastructure. We provide secure, cost-effective access to enterprise grade GPUs around the world.",
+  //   websiteUrl: "https://aethir.com/",
+  //   twitterUrl: "https://x.com/AethirCloud",
+  //   style: {
+  //     borderRadius: "100%",
+  //   },
+  //   category: "GameFi",
+  // },
 ];
 
 const infrastructure = [

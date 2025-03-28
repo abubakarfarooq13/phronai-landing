@@ -284,4 +284,10 @@ export const logos = [
     imageSrc: "/assets/partners/masterblox.png",
     orbitIndex: 1,
   },
+  // {
+  //   id: 48,
+  //   name: "Aethir",
+  //   imageSrc: "/assets/partners/aethir.svg",
+  //   orbitIndex: 1,
+  // },
 ];

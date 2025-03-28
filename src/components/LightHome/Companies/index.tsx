@@ -22,7 +22,7 @@ const companiesone = [
   },
   {
     id: 24,
-    imageUrl: "/assets/companies/phronai.png",
+    imageUrl: "/assets/companies/phronai-blue.png",
     alt: "phronai logo",
     width: 110,
     height: 70,
