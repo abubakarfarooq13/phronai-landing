@@ -17,6 +17,12 @@ import { LuArrowRight } from "react-icons/lu";
 import PartnerCards from "./Cards";
 const Partners = [
   {
+    id: 9,
+    image: "/assets/newPartners/aethir.png",
+    width: 100,
+    height: 10,
+  },
+  {
     id: 1,
     image: "/assets/newPartners/coingecko.png",
     width: 130,
@@ -62,12 +68,6 @@ const Partners = [
     id: 8,
     image: "/assets/newPartners/masterblox.png",
     width: 150,
-    height: 10,
-  },
-  {
-    id: 9,
-    image: "/assets/newPartners/aethir.png",
-    width: 100,
     height: 10,
   },
 ];
