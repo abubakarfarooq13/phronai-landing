@@ -62,7 +62,7 @@ export default function ContractsTable() {
       setTotalContracts(data.totalContracts);
       setTotalPages(data.totalPages);
       setCurrentPage(data.currentPage);
-      console.log(data);
+      // console.log(data);
     } catch (err) {
       console.log(err);
       setError("Failed to fetch contracts. Please try again later.");
