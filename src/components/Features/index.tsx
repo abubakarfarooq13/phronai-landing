@@ -21,7 +21,7 @@ export default function PhronPadDashboard() {
               imgSrc="/assets/phrone-pad/audit-pad-with-pen.png"
               title="Smart contracts"
               description="The first gaming platform in the world with automated contract auditing."
-              buttonHref="#"
+              buttonHref="/"
               buttonText="Learn more"
               imgHeight={280}
               imgWidth={200}
@@ -33,7 +33,7 @@ export default function PhronPadDashboard() {
               imgSrc="/assets/phrone-pad/ring.png"
               title="ZERO commission"
               description="Deploy your games without any commission costs!"
-              buttonHref="#"
+              buttonHref="/"
               buttonText="Learn more"
               imgHeight={140}
               imgWidth={160}

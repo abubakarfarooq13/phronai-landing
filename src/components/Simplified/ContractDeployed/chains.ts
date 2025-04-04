@@ -97,6 +97,11 @@ const networks: ChainInfoMap = {
     name: "BSC",
     explorer: "https://bscscan.com",
   },
+  "97": {
+    icon: "/open-phron/chains/56.png",
+    name: "BSC Testnet",
+    explorer: "https://bscscan.com",
+  },
   "25": {
     icon: "/open-phron/chains/25.png",
     name: "Cronos Mainnet",

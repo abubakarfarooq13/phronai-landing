@@ -62,6 +62,7 @@ export default function ContractsTable() {
       setTotalContracts(data.totalContracts);
       setTotalPages(data.totalPages);
       setCurrentPage(data.currentPage);
+      console.log(data);
     } catch (err) {
       console.log(err);
       setError("Failed to fetch contracts. Please try again later.");
@@ -274,11 +275,11 @@ export default function ContractsTable() {
                             <IconButton
                               as={Link}
                               href={
-                                networks[contract?.chainId].explorer
+                                networks[contract?.chainId]?.explorer
                                   ? `${
-                                      networks[contract.chainId].explorer
+                                      networks[contract.chainId]?.explorer
                                     }/address/${contract.address}#code`
-                                  : undefined
+                                  : "/"
                               }
                               target="_blank"
                               aria-label="explore address"
@@ -306,14 +307,14 @@ export default function ContractsTable() {
                                 width={15}
                                 height={15}
                                 src={
-                                  networks[contract.chainId].icon
-                                    ? networks[contract.chainId].icon
+                                  networks[contract.chainId]?.icon
+                                    ? networks[contract.chainId]?.icon
                                     : "/circle-help.png"
                                 }
                               />
                             </Box>
                             <Text fontSize="sm" color={textColorAlpha}>
-                              {networks[contract.chainId].name}
+                              {networks[contract.chainId]?.name}
                             </Text>
                           </Flex>
                         </Td>
