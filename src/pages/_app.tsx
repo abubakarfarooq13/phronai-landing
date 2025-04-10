@@ -53,10 +53,12 @@ export default function App({ Component, pageProps, cookies }: MyAppProps) {
     <>
       <Head>
         {/* Basic SEO */}
-        <title>AI-Powered for Builders. One Prompt for Everyone.</title>
+        <title>
+          Phron AI – AI-Powered for Builders. One Prompt for Everyone.
+        </title>
         <meta
           name="description"
-          content="Train AI models and earn from the network. Launch L1s, deploy smart contract,leverage AI Agents to manage your contract, and create AI-powered Oracles. All with&nbsp;just&nbsp;a&nbsp;promt."
+          content="Train AI models and earn from the network. Launch L1s, deploy smart contracts, leverage AI Agents to manage your contracts, and create AI-powered Oracles — all with just a prompt."
         />
         <meta
           name="keywords"
@@ -67,7 +69,8 @@ export default function App({ Component, pageProps, cookies }: MyAppProps) {
 
         {/* Canonical URL */}
         <link rel="canonical" href="https://phron.ai/" />
-        {/* Standard Favicons  */}
+
+        {/* Favicons */}
         <link rel="icon" href="/favicon.ico" />
         <link
           rel="icon"
@@ -81,15 +84,11 @@ export default function App({ Component, pageProps, cookies }: MyAppProps) {
           sizes="16x16"
           href="/favicon-16x16.png"
         />
-
-        {/* Apple Touch Icon  */}
         <link
           rel="apple-touch-icon"
           sizes="180x180"
           href="/apple-touch-icon.png"
         />
-
-        {/* Android Chrome Icons  */}
         <link
           rel="icon"
           type="image/png"
@@ -102,36 +101,38 @@ export default function App({ Component, pageProps, cookies }: MyAppProps) {
           sizes="512x512"
           href="/android-chrome-512x512.png"
         />
-        {/* Open Graph / Facebook */}
+        {/* <link rel="manifest" href="/site.webmanifest" /> */}
+        <meta name="theme-color" content="#000000" />
+
+        {/* Open Graph (Facebook, LinkedIn, Discord) */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://phron.ai/" />
         <meta
           property="og:title"
-          content="AI-Powered for Builders. One Prompt for Everyone."
+          content="Phron AI – AI-Powered for Builders. One Prompt for Everyone."
         />
         <meta
           property="og:description"
-          content="Train AI models and earn from the network. Launch L1s, deploy smart contract,leverage AI Agents to manage your contract, and create AI-powered Oracles. All with&nbsp;just&nbsp;a&nbsp;promt."
+          content="Train AI models and earn from the network. Launch L1s, deploy smart contracts, leverage AI Agents to manage your contracts, and create AI-powered Oracles — all with just a prompt."
         />
-        <meta
-          property="og:image"
-          content="https://phron.ai/assets/cover.jpeg"
-        />
+        <meta property="og:image" content="https://phron.ai/assets/cover.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
 
-        {/* Twitter */}
+        {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content="https://phron.ai/" />
         <meta
           name="twitter:title"
-          content="AI-Powered for Builders. One Prompt for Everyone."
+          content="Phron AI – AI-Powered for Builders. One Prompt for Everyone."
         />
         <meta
           name="twitter:description"
-          content="Train AI models and earn from the network. Launch L1s, deploy smart contract,leverage AI Agents to manage your contract, and create AI-powered Oracles. All with&nbsp;just&nbsp;a&nbsp;promt."
+          content="Train AI models and earn from the network. Launch L1s, deploy smart contracts, leverage AI Agents to manage your contracts, and create AI-powered Oracles — all with just a prompt."
         />
         <meta
           name="twitter:image"
-          content="https://phron.ai/assets/cover.jpeg"
+          content="https://phron.ai/assets/cover.png"
         />
       </Head>
       <div className={`${ruberoidFont.variable}`}>
