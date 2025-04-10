@@ -25,12 +25,12 @@ const openphron = () => {
               `,
           }}
         ></script>
-        <title>Open Phron | AI Web 3.0 Development, made easy.</title>
+        <title>openPhron: Supercharge Web3 with AI</title>
         <meta
           name="description"
-          content="From imagination to implementation The road towards the future"
+          content="Redefining Blockchain Through AI-Driven Enhancements, allowing Smarter Contracts, Powerful AI Oracles, and AI Developer Tools."
         />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="canonical" href="https://app.openphron.ai" />
       </Head>
       <Box pt={{ sm: "180px", md: "150px" }}>
         <main id="openphron-page" style={interFont.style}>

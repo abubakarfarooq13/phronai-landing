@@ -65,9 +65,9 @@ const tokenIcons = [
   {
     id: 1,
     name: "PhronAI Token",
-    logoSrc: "/assets/brand-assets/logo-icon-new.png",
-    pngDownloadLink: "/assets/brand-assets/logo-icon-new.png",
-    svgDownloadLink: "/assets/brand-assets/logo-icon-new.png",
+    logoSrc: "/assets/brand-assets/phronai-logo-white.png",
+    pngDownloadLink: "/assets/brand-assets/phronai-logo-white.png",
+    svgDownloadLink: "/assets/brand-assets/phronai-logo-white.png",
   },
 ];
 
